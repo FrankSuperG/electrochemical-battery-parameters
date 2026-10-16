@@ -1,0 +1,159 @@
+{
+  "record": {
+    "id": "ai2020-lco-ocp",
+    "version": "1",
+    "title": "LCO | Enertech / Ai2020-Rieger2016 | published OCP table",
+    "parameter": "electrode_ocp",
+    "material": "LCO",
+    "material_id": "ai2020-lco-ocp-material",
+    "electrode_role": "positive",
+    "direction": "unspecified",
+    "measurement": "literature_table",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.4,
+        0.998903136
+      ],
+      "definition": "Electrode stoichiometry as supplied by upstream; not full-cell SOC.",
+      "domain_basis": "Retained table endpoints; no extrapolation. Negative synthetic x=0 guard omitted."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/ai2020-lco-ocp.csv",
+      "sha256": "4cbf5429d19e47a42a80a424d441651c30f38a5c71def5cf296ca00799a57de3",
+      "point_count": 482,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "ai-2020",
+      "rieger-2016",
+      "pybamm-25-4-2",
+      "pybamm-data-1-0-2"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "relationship": "same_parameter_set",
+      "evidence": "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved."
+    },
+    "provenance": {
+      "asset_ids": [
+        "pybamm-data-lico2-ocp-ai2020-csv",
+        "pybamm-ai2020-code"
+      ],
+      "derivation": "upstream_published_table_transcription",
+      "location": "lico2_ocp_Ai2020.csv",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "removed_synthetic_guard_points": 0,
+        "changes": "Comment lines omitted; original numeric values and one-based source lines retained; no smoothing or resampling. Source graphite x=0,3.5 V extrapolation guard omitted."
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "published_table_not_instrument_raw",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved.",
+      "Published implementation table, not newly measured OCP or a claim of original instrument points. Positive table attribution is Rieger2016 in source comments; negative table attribution is Ai2020.",
+      "OCP protocol, branch direction and numerical measurement temperature are unresolved. No independent model validation.",
+      "Project evaluation uses linear interpolation by default, with optional PCHIP. Upstream Ai2020 uses cubic interpolation; only retained table nodes, not between-node interpolation, are claimed to match."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "ai-2020": {
+      "kind": "paper",
+      "title": "Electrochemical Thermal-Mechanical Modelling of Stress Inhomogeneity in Lithium-Ion Pouch Cells",
+      "authors": [
+        "Weilong Ai",
+        "Ludwig Kraft",
+        "Johannes Sturm",
+        "Andreas Jossen",
+        "Billy Wu"
+      ],
+      "year": 2020,
+      "doi": "10.1149/2.0122001JES",
+      "url": "https://doi.org/10.1149/2.0122001JES",
+      "role": "Enertech pouch model; validates against Rieger observations. Diffusion/kinetics borrowing remains explicit."
+    },
+    "rieger-2016": {
+      "kind": "paper",
+      "title": "A new method to model the thickness change of a commercial pouch cell during discharge",
+      "authors": [
+        "Bernhard Rieger",
+        "Simon V. Erhard",
+        "Katharina Rumpf",
+        "Andreas Jossen"
+      ],
+      "year": 2016,
+      "doi": "10.1149/2.0441608jes",
+      "url": "https://doi.org/10.1149/2.0441608jes",
+      "role": "Experimental origin named by Ai2020 and official PyBaMM data notes; part number not independently verified."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    },
+    "pybamm-data-1-0-2": {
+      "kind": "dataset",
+      "title": "PyBaMM experimental data release v1.0.2",
+      "authors": [
+        "PyBaMM team; original experimental authors named per study"
+      ],
+      "year": 2026,
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.2",
+      "license": "BSD-3-Clause",
+      "role": "Versioned redistribution. Experimental origins and figure-digitization history are documented in v1.0.0 release notes; v1.0.2 hashes match those files.",
+      "provenance_url": "https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0",
+      "license_url": "https://github.com/pybamm-team/pybamm-data/blob/bed4e1b816afb4ec11e49fabef0d5996ff0a31e5/LICENSE"
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "pybamm-data-lico2-ocp-ai2020-csv": {
+      "filename": "lico2_ocp_Ai2020.csv",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/lico2_ocp_Ai2020.csv",
+      "sha256": "d4c2be795e118fa46fe6cab88d652de92a09e1f2231951f208f92fe0b5e4c426",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2"
+    },
+    "pybamm-ai2020-code": {
+      "filename": "Ai2020-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ai2020.py",
+      "sha256": "02b1c3edb2217154ae0b525a132b12fe8cb2c4718465ff4eecdcf0188830ef20",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-25-4-2"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

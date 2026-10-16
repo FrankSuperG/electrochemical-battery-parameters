@@ -64,6 +64,9 @@ than placing a submission CSV directly into the catalog:
 - Add OCP to `catalog.json`, other inputs to `parameters.json`, and experiments
   to `full_cell_tests.json`, with their referenced files.
 - Update cell coverage and `matching_audit.json`, including unresolved gaps.
+- Run `python scripts/build_data_index.py` to refresh GitHub CSV/JSON exports,
+  per-cell pages and README links. Include the generated `data/` changes in the
+  PR; CI checks that navigation and exports match the authoritative catalog.
 - Add extraction logic under `scripts/` and integrate it into reconstruction
   when generated catalog data are introduced. Never execute downloaded source
   code merely to extract its values.

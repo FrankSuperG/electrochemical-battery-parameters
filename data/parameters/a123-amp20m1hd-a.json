@@ -1,0 +1,1229 @@
+{
+  "cell_id": "a123-amp20m1hd-a",
+  "cell": {
+    "manufacturer": "A123 Systems",
+    "model": "AMP20M1HD-A",
+    "display_name": "A123 AMP20M1HD-A | 20 Ah LFP pouch",
+    "format": "pouch",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": 20,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "lin-2022-paper",
+      "lin-2022-data",
+      "lin-2022-code"
+    ],
+    "model_context": "Thermal DFN-derived reduced model with one lumped diffusion time shared by the two electrodes",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Methods names AMP20M1HD-A; paper links the ORA dataset; archive filename identifies Cell I. Table 1 is for one cell but its letter is not explicitly established here, so a same-specimen parameter claim is withheld.",
+    "coverage": {
+      "ocp": "C/25 full-cell pseudo-OCV reported in Methods; no downloadable electrode-resolved OCP points located in the selected deposit",
+      "diffusion": "Fitted shared diffusion times at three SOCs; effective D derived using the model's assumed radius",
+      "kinetics": "Fitted volumetric exchange-current density and activation energy at three SOCs",
+      "full_cell_tests": "Cell I 4C full-discharge voltage/current/thermal grid available"
+    },
+    "note": "Do not label the full-cell pseudo-OCV as an LFP half-cell OCP, or assign a shared effective diffusion coefficient to a specific material without the model assumptions.",
+    "parameter_ids": [
+      "a123-amp20-volumetric-exchange-current-soc30",
+      "a123-amp20-volumetric-exchange-current-soc50",
+      "a123-amp20-volumetric-exchange-current-soc70",
+      "a123-amp20-reaction-activation-energy-soc30",
+      "a123-amp20-reaction-activation-energy-soc50",
+      "a123-amp20-reaction-activation-energy-soc70",
+      "a123-amp20-effective-ionic-conductivity-soc30",
+      "a123-amp20-effective-ionic-conductivity-soc50",
+      "a123-amp20-effective-ionic-conductivity-soc70",
+      "a123-amp20-ionic-temperature-coefficient-soc30",
+      "a123-amp20-ionic-temperature-coefficient-soc50",
+      "a123-amp20-ionic-temperature-coefficient-soc70",
+      "a123-amp20-ocv-gradient-soc30",
+      "a123-amp20-ocv-gradient-soc50",
+      "a123-amp20-ocv-gradient-soc70",
+      "a123-amp20-shared-diffusion-time-soc30",
+      "a123-amp20-shared-diffusion-time-soc50",
+      "a123-amp20-shared-diffusion-time-soc70",
+      "a123-amp20-reaction-entropy-soc30",
+      "a123-amp20-reaction-entropy-soc50",
+      "a123-amp20-reaction-entropy-soc70",
+      "a123-amp20-heat-transfer-velocity-soc30",
+      "a123-amp20-heat-transfer-velocity-soc50",
+      "a123-amp20-heat-transfer-velocity-soc70",
+      "a123-amp20-effective-thermal-conductivity-soc30",
+      "a123-amp20-effective-thermal-conductivity-soc50",
+      "a123-amp20-effective-thermal-conductivity-soc70",
+      "a123-amp20-effective-diffusivity-soc30",
+      "a123-amp20-effective-diffusivity-soc50",
+      "a123-amp20-effective-diffusivity-soc70"
+    ],
+    "full_cell_test_ids": [
+      "a123-amp20-cell-i-4c"
+    ],
+    "ocp_record_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "C/25 full-cell pseudo-OCV reported in Methods; no downloadable electrode-resolved OCP points located in the selected deposit",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "a123-amp20-shared-diffusion-time-soc30",
+          "a123-amp20-shared-diffusion-time-soc50",
+          "a123-amp20-shared-diffusion-time-soc70",
+          "a123-amp20-effective-diffusivity-soc30",
+          "a123-amp20-effective-diffusivity-soc50",
+          "a123-amp20-effective-diffusivity-soc70"
+        ],
+        "source_ids": [
+          "lin-2022-code",
+          "lin-2022-paper"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Fitted shared diffusion times at three SOCs; effective D derived using the model's assumed radius",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "a123-amp20-volumetric-exchange-current-soc30",
+          "a123-amp20-volumetric-exchange-current-soc50",
+          "a123-amp20-volumetric-exchange-current-soc70",
+          "a123-amp20-reaction-activation-energy-soc30",
+          "a123-amp20-reaction-activation-energy-soc50",
+          "a123-amp20-reaction-activation-energy-soc70"
+        ],
+        "source_ids": [
+          "lin-2022-paper"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Fitted volumetric exchange-current density and activation energy at three SOCs",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "a123-amp20-cell-i-4c"
+        ],
+        "source_ids": [
+          "lin-2022-data"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Cell I 4C full-discharge voltage/current/thermal grid available",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [
+          "a123-amp20-cell-i-4c"
+        ],
+        "source_ids": [
+          "lin-2022-data"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "constant_current_charge",
+        "missing_items": [
+          "Ambient temperature trace"
+        ]
+      }
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed"
+    ]
+  },
+  "parameters": [
+    {
+      "id": "a123-amp20-volumetric-exchange-current-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Volumetric exchange-current density",
+      "category": "kinetics",
+      "unit": "A.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1860000.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: a*i0 (A.cm-3); multiplied by 1e6 to obtain A.m-3. Not surface i0.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-volumetric-exchange-current-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Volumetric exchange-current density",
+      "category": "kinetics",
+      "unit": "A.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1800000.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: a*i0 (A.cm-3); multiplied by 1e6 to obtain A.m-3. Not surface i0.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-volumetric-exchange-current-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Volumetric exchange-current density",
+      "category": "kinetics",
+      "unit": "A.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1860000.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: a*i0 (A.cm-3); multiplied by 1e6 to obtain A.m-3. Not surface i0.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-activation-energy-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Reaction activation energy",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 29500.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: E_theta (kJ.mol-1); multiplied by 1000.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-activation-energy-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Reaction activation energy",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 29200.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: E_theta (kJ.mol-1); multiplied by 1000.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-activation-energy-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Reaction activation energy",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 29700.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: E_theta (kJ.mol-1); multiplied by 1000.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-ionic-conductivity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.046
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: fitted effective kappa; use the paper's homogenization convention.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-ionic-conductivity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.043
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: fitted effective kappa; use the paper's homogenization convention.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-ionic-conductivity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.045
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: fitted effective kappa; use the paper's homogenization convention.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ionic-temperature-coefficient-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Temperature coefficient of effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0024
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: alpha (mS.m-1.K-1); multiplied by 0.001.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ionic-temperature-coefficient-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Temperature coefficient of effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0027
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: alpha (mS.m-1.K-1); multiplied by 0.001.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ionic-temperature-coefficient-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Temperature coefficient of effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0024
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: alpha (mS.m-1.K-1); multiplied by 0.001.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ocv-gradient-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Local full-cell OCV gradient",
+      "category": "thermodynamics",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.35
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: k_U, derivative with respect to fractional cell SOC. Not an electrode OCP curve.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ocv-gradient-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Local full-cell OCV gradient",
+      "category": "thermodynamics",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.24
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: k_U, derivative with respect to fractional cell SOC. Not an electrode OCP curve.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ocv-gradient-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Local full-cell OCV gradient",
+      "category": "thermodynamics",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.18
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: k_U, derivative with respect to fractional cell SOC. Not an electrode OCP curve.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-shared-diffusion-time-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Shared solid diffusion time",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 552.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: t_d=r0^2/D_s; same lumped time for both electrodes.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-shared-diffusion-time-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Shared solid diffusion time",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 590.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: t_d=r0^2/D_s; same lumped time for both electrodes.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-shared-diffusion-time-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Shared solid diffusion time",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 622.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: t_d=r0^2/D_s; same lumped time for both electrodes.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-entropy-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Full-cell reaction entropy change",
+      "category": "thermodynamics",
+      "unit": "J.mol-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": -13.5
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: Delta S at the specified cell SOC.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-entropy-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Full-cell reaction entropy change",
+      "category": "thermodynamics",
+      "unit": "J.mol-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 7.7
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: Delta S at the specified cell SOC.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-entropy-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Full-cell reaction entropy change",
+      "category": "thermodynamics",
+      "unit": "J.mol-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 9.7
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: Delta S at the specified cell SOC.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-heat-transfer-velocity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Heat transfer velocity h/Cp_vol",
+      "category": "thermal",
+      "unit": "m.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.11e-06
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: h/Cp_vol (micrometres.s-1); not h alone.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-heat-transfer-velocity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Heat transfer velocity h/Cp_vol",
+      "category": "thermal",
+      "unit": "m.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.059999999999999e-06
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: h/Cp_vol (micrometres.s-1); not h alone.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-heat-transfer-velocity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Heat transfer velocity h/Cp_vol",
+      "category": "thermal",
+      "unit": "m.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.9999999999999996e-06
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: h/Cp_vol (micrometres.s-1); not h alone.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-thermal-conductivity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective thermal conductivity",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: effective fitted k; not collector or active-material intrinsic conductivity.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-thermal-conductivity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective thermal conductivity",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: effective fitted k; not collector or active-material intrinsic conductivity.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-thermal-conductivity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective thermal conductivity",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: effective fitted k; not collector or active-material intrinsic conductivity.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-diffusivity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective shared solid diffusivity inferred from t_d",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.5289855072463775e-14
+      },
+      "source_ids": [
+        "lin-2022-paper",
+        "lin-2022-code"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-model",
+        "location": "Table 1 t_d + Battery_model.m::rp_pos/rp_neg=5 um",
+        "origin_status": "derived_from_fitted_time_and_assumed_radius"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "assumed_particle_radius_m": 5e-06,
+        "diffusion_time_s": 552
+      },
+      "definition": "Conditional effective coefficient D=(5e-6 m)^2/t_d.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "Derived D=r^2/t_d, conditional on the model's assumed 5 um radius.",
+        "One effective D is shared by both electrodes; this is not an independently measured intrinsic LFP diffusion coefficient.",
+        "Changing radius changes inferred D quadratically; the inverse experiment identifies the time scale."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-diffusivity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective shared solid diffusivity inferred from t_d",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.237288135593221e-14
+      },
+      "source_ids": [
+        "lin-2022-paper",
+        "lin-2022-code"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-model",
+        "location": "Table 1 t_d + Battery_model.m::rp_pos/rp_neg=5 um",
+        "origin_status": "derived_from_fitted_time_and_assumed_radius"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "assumed_particle_radius_m": 5e-06,
+        "diffusion_time_s": 590
+      },
+      "definition": "Conditional effective coefficient D=(5e-6 m)^2/t_d.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "Derived D=r^2/t_d, conditional on the model's assumed 5 um radius.",
+        "One effective D is shared by both electrodes; this is not an independently measured intrinsic LFP diffusion coefficient.",
+        "Changing radius changes inferred D quadratically; the inverse experiment identifies the time scale."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-diffusivity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective shared solid diffusivity inferred from t_d",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.019292604501608e-14
+      },
+      "source_ids": [
+        "lin-2022-paper",
+        "lin-2022-code"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-model",
+        "location": "Table 1 t_d + Battery_model.m::rp_pos/rp_neg=5 um",
+        "origin_status": "derived_from_fitted_time_and_assumed_radius"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "assumed_particle_radius_m": 5e-06,
+        "diffusion_time_s": 622
+      },
+      "definition": "Conditional effective coefficient D=(5e-6 m)^2/t_d.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "Derived D=r^2/t_d, conditional on the model's assumed 5 um radius.",
+        "One effective D is shared by both electrodes; this is not an independently measured intrinsic LFP diffusion coefficient.",
+        "Changing radius changes inferred D quadratically; the inverse experiment identifies the time scale."
+      ]
+    }
+  ],
+  "ocp_records": [],
+  "full_cell_tests": [
+    {
+      "id": "a123-amp20-cell-i-4c",
+      "cell_id": "a123-amp20m1hd-a",
+      "sample_id": "Cell I",
+      "asset_id": "lin2022-full-discharge",
+      "source_id": "lin-2022-data",
+      "path": null,
+      "original_member": null,
+      "normalized_path": "full_cell/a123-amp20-cell-i-4c-normalized.csv",
+      "normalized_sha256": "1a65ec5723d65b1205285cb0c7f703357460faa58ac95a8300e661c1f3dd1413",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Arithmetic mean of every pixel in the deposited calibrated thermal grid A, no additional ROI mask; degrees Celsius in source. Ambient temperature is not available as a separate trace.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "4C full discharge after CCCV charging and 1 h rest; 1 Hz source timebase",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Methods names AMP20M1HD-A; paper links the ORA dataset; archive filename identifies Cell I. Table 1 is for one cell but its letter is not explicitly established here, so a same-specimen parameter claim is withheld.",
+      "independent_validation_by_this_project": false,
+      "row_count": 827,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [
+        {
+          "step": 1,
+          "mean_discharge_current_A": 79.37120485774818,
+          "nominal_C_rate": 4,
+          "initial_preconditioning": false,
+          "points": 826
+        }
+      ],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 827,
+          "total_rows": 827
+        },
+        "current_charge_positive_A": {
+          "present_rows": 827,
+          "total_rows": 827
+        },
+        "cell_temperature_K": {
+          "present_rows": 827,
+          "total_rows": 827
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 827
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "4C full discharge after CCCV charging and 1 h rest; 1 Hz source timebase"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
+    }
+  ],
+  "sources": {
+    "lin-2022-code": {
+      "kind": "software",
+      "title": "Oxford multiscale-coupling COMSOL/MATLAB implementation",
+      "authors": [
+        "University of Oxford",
+        "Multiscale coupling developers"
+      ],
+      "year": 2022,
+      "url": "https://github.com/Battery-Intelligence-Lab/multiscale-coupling/tree/dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4",
+      "version": "dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4",
+      "license": "BSD-2-Clause",
+      "role": "Model geometry and assumed 5 micrometre particle radius. Optimizer initial guesses are not treated as final fitted parameters. Through-plane scaling is model specific."
+    },
+    "lin-2022-data": {
+      "kind": "dataset",
+      "title": "Oxford experimental data for Lin et al. 2022",
+      "authors": [
+        "Jie Lin",
+        "Howie N. Chu",
+        "David A. Howey",
+        "Charles W. Monroe"
+      ],
+      "year": 2022,
+      "doi": "10.5287/bodleian:NGQkq49wG",
+      "url": "https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513",
+      "license": "CC-BY-4.0",
+      "role": "Original Cell I 4C full-discharge voltage, current, and thermal-grid observations. Source README explicitly permits redistribution under CC BY 4.0."
+    },
+    "lin-2022-paper": {
+      "kind": "paper",
+      "title": "Multiscale coupling of surface temperature with solid diffusion in large lithium-ion pouch cells",
+      "authors": [
+        "Jie Lin",
+        "Howie N. Chu",
+        "David A. Howey",
+        "Charles W. Monroe"
+      ],
+      "year": 2022,
+      "doi": "10.1038/s44172-022-00005-8",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/",
+      "license": "CC-BY-4.0",
+      "role": "Table 1 fitted effective parameters at 30/50/70% SOC; Methods explicitly identify AMP20M1HD-A. Lumped diffusion time is shared by both electrodes."
+    }
+  },
+  "upstream_assets": {
+    "lin2022-full-discharge": {
+      "filename": "lin-full-discharge.mat",
+      "url": "https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513/files/d0c483j73t",
+      "source_id": "lin-2022-data",
+      "license": "CC-BY-4.0",
+      "sha256": "12c0bea55787500ac6d59363eedc6d8d18edd28ed24f13de86daac16cb5d07a4",
+      "mirror_url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/download/upstream-lfp-v0.2.0/lin-full-discharge.mat"
+    },
+    "lin2022-model": {
+      "filename": "lin-Battery_model.m",
+      "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/multiscale-coupling/dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4/Battery_model.m",
+      "source_id": "lin-2022-code",
+      "license": "BSD-2-Clause",
+      "sha256": "cdd215a00b9b29514fc91c5607fc3ffd490d2edf9e7640171b585a2ba7cb203f"
+    },
+    "lin2022-table1": {
+      "source_id": "lin-2022-paper",
+      "filename": "lin2022-table1.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/",
+      "sha256": "92c6fdb4d2c5a221020b23542842bf428345877e8a0ceff4989d895e8e705d39",
+      "path": "evidence/lin2022-table1.json",
+      "digest_scope": "local curated Table 1 transcription, not the publisher HTML",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

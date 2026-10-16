@@ -1,0 +1,107 @@
+{
+  "record": {
+    "id": "bpx-lfp18650-lfp-ocp",
+    "version": "1",
+    "title": "LFP | BPX LFP 18650 example | OCP fit",
+    "parameter": "electrode_ocp",
+    "material": "LFP",
+    "material_id": "bpx-lfp18650-lfp",
+    "electrode_role": "positive",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": 298.15,
+      "description": "BPX reference temperature; no independently verified OCP measurement temperature is asserted."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0875,
+        0.95038
+      ],
+      "definition": "Electrode lithium fraction as defined by BPX; not whole-cell SOC.",
+      "domain_basis": "Operating minimum/maximum stoichiometry provided by this exact BPX example. No extrapolation to 0 or 1."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "3.41285712e+00 - 1.49721852e-02 * x + 3.54866018e+14 * exp(-3.95729493e+02 * x) - 1.45998465e+00 * exp(-1.10108622e+02 * (1 - x))",
+      "functions": [
+        "exp",
+        "tanh"
+      ],
+      "source_function": "BPX::Parameterisation::Positive electrode::OCP [V]"
+    },
+    "source_ids": [
+      "bpx-lfp-2022"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "relationship": "same_parameter_set",
+      "evidence": "Same BPX parameter file; manufacturer and commercial part remain undisclosed, so this does not establish a commercial model identity."
+    },
+    "provenance": {
+      "asset_ids": [
+        "bpx-lfp-example"
+      ],
+      "derivation": "verbatim_bpx_expression",
+      "location": "Parameterisation/Positive electrode/OCP [V]",
+      "processing": {
+        "changes": "none",
+        "script": "scripts/seed_lfp.py"
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Fit coefficients from a parameter example; original OCP points are not supplied.",
+      "Commercial model identity and raw full-cell validation match are unresolved.",
+      "This is not an independent validation of BPX or the cell model."
+    ],
+    "license": "MIT"
+  },
+  "sources": {
+    "bpx-lfp-2022": {
+      "kind": "parameter_set",
+      "title": "BPX LFP/graphite 2 Ah 18650 example",
+      "authors": [
+        "About:Energy Limited",
+        "University of Oxford / Faraday Institution"
+      ],
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json",
+      "license": "MIT",
+      "version": "BPX 0.1.0 example, repository commit 0f591336937c2c57509f20ab23f9908e58f7a757",
+      "role": "Parameter example based on cycling and electrode teardown. Manufacturer, commercial part number, and matching raw cycling files are not disclosed in this example. Electrolyte and entropy data include borrowed sources."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "bpx-lfp-example": {
+      "filename": "bpx-lfp18650.json",
+      "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json",
+      "source_id": "bpx-lfp-2022",
+      "license": "MIT",
+      "sha256": "fd6d0c992a641c30edad7a76dd988fac1162434c7f8302961fc8f587da1f62a5"
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

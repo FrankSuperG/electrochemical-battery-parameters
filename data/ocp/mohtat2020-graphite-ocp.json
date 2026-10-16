@@ -1,0 +1,124 @@
+{
+  "record": {
+    "id": "mohtat2020-graphite-ocp",
+    "version": "1",
+    "title": "graphite | graphite_ocp_PeymanMPM | implementation expression",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "mohtat2020-graphite-ocp-material",
+    "electrode_role": "negative",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+      "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "0.063 + 0.8 * exp(-75 * (x + 0.001)) - 0.012 * tanh((x - 0.127) / 0.016) - 0.0118 * tanh((x - 0.155) / 0.016) - 0.0035 * tanh((x - 0.22) / 0.02) - 0.0095 * tanh((x - 0.19) / 0.013) - 0.0145 * tanh((x - 0.49) / 0.02) - 0.08 * tanh((x - 1.03) / 0.055)",
+      "functions": [
+        "exp",
+        "tanh"
+      ],
+      "source_function": "graphite_ocp_PeymanMPM"
+    },
+    "source_ids": [
+      "mohtat-2020",
+      "pybamm-25-4-2"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "relationship": "same_parameter_set",
+      "evidence": "Same Mohtat2020 study design as the retrieved author deposit; this PyBaMM variant differs from the bundled original model. Exact specimen correspondence and raw half-cell points are unresolved."
+    },
+    "provenance": {
+      "asset_ids": [
+        "pybamm-mohtat2020-code"
+      ],
+      "derivation": "upstream_formula_transcription",
+      "location": "graphite_ocp_PeymanMPM",
+      "processing": {
+        "script": "scripts/seed_materials.py",
+        "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "An implementation expression, not original measured points or a newly fitted curve.",
+      "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+      "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+      "Peyman MPM / Mohtat2020 implementation, as attributed by upstream function docstrings; The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+      "v0.5: official UMBL research-pouch charging exports retrieved. NMC532 is an implementation label; the deposit does not establish a commercial model or composition assay. Author graphite offset differs."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "mohtat-2020": {
+      "kind": "paper",
+      "title": "Differential Expansion and Voltage Model for Li-ion Batteries at Practical Charging Rates",
+      "authors": [
+        "Peyman Mohtat",
+        "Suhak Lee",
+        "Valentin Sulzer",
+        "Jason B. Siegel",
+        "Anna G. Stefanopoulou"
+      ],
+      "year": 2020,
+      "doi": "10.1149/1945-7111/aba5d1",
+      "url": "https://doi.org/10.1149/1945-7111/aba5d1",
+      "role": "Same-study electrochemical/mechanical model and charging observations. Original author-code and PyBaMM implementation variants are distinguished; exact specimen and raw OCP/current/time exports remain unresolved."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "pybamm-mohtat2020-code": {
+      "filename": "Mohtat2020-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Mohtat2020.py",
+      "sha256": "89c2acb9533912c54492063dad111c5feeff57402d8130f6b153f9f67d8df835",
+      "source_id": "pybamm-25-4-2",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

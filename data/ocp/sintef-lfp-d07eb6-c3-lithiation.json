@@ -1,0 +1,165 @@
+{
+  "record": {
+    "id": "sintef-lfp-d07eb6-c3-lithiation",
+    "version": "1",
+    "title": "LFP \u00b7 SINTEF d07eb6 \u00b7 cycle 3 \u00b7 lithiation",
+    "parameter": "electrode_ocp",
+    "material": "LFP",
+    "material_id": "lfp-gelon-nmp-1",
+    "electrode_role": "positive",
+    "direction": "lithiation",
+    "measurement": "pseudo_ocp",
+    "temperature": {
+      "value_K": null,
+      "description": "Room temperature (source); numeric setpoint unavailable."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "normalized_branch_capacity",
+      "symbol": "q_branch",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+      "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/sintef-lfp-d07eb6-c3-lithiation.csv",
+      "sha256": "039dc1a22952b4fbb0706baeec87581c200eb8271220c4eee9b2b283f5cfedef",
+      "point_count": 19249,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "sintef-2026-v3"
+    ],
+    "experiment_id": "sintef-lfp-d07eb6-pocv",
+    "cell_link": {
+      "cell_id": null,
+      "relationship": "material_only",
+      "evidence": "No commercial cell identity established for this record."
+    },
+    "provenance": {
+      "asset_ids": [
+        "sintef-lfp-d07eb6",
+        "sintef-metadata"
+      ],
+      "derivation": "constant_current_branch_extraction",
+      "location": "cycle=3; step=4; source_row is zero-based row position in Parquet",
+      "processing": {
+        "script": "scripts/seed_v01.py",
+        "cycle": 3,
+        "step": 4,
+        "input_branch_points": 19249,
+        "retained_points": 19249,
+        "duplicate_capacity_points_removed": 0,
+        "capacity_first_Ah": 3e-10,
+        "capacity_last_Ah": 0.0032934505,
+        "mean_current_A": -6.159877086082393e-05,
+        "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+        "smoothing": "none",
+        "resampling": "none",
+        "potential_changes": "none; native source floating-point values preserved",
+        "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "relative_capacity_only",
+      "raw_data": "external_checksum_pinned",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+      "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+      "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+      "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+      "No commercial full-cell identity or full-cell model validation is established."
+    ],
+    "license": "CC-BY-4.0"
+  },
+  "sources": {
+    "sintef-2026-v3": {
+      "kind": "dataset",
+      "title": "Half-Cell Open-Circuit Voltage of Several Lithium-Ion Battery Active Materials Measured under Various Electrochemical Protocols",
+      "authors": [
+        "Eibar Flores",
+        "Sridevi Krishnamurthi",
+        "Killian Stokes-Rodriguez",
+        "Julie Cathrine Guldahl",
+        "Charifa Hakim",
+        "Simon Clark",
+        "Nils Peter Wagner",
+        "Sergi Obrador",
+        "Andr\u00e9s Bernabeu Santisteban"
+      ],
+      "year": 2026,
+      "doi": "10.5281/zenodo.20086298",
+      "url": "https://zenodo.org/records/20086298",
+      "version": "v3",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Zenodo record API metadata.license.id=cc-by-4.0, checked 2026-10-16",
+      "role": "Raw measured half-cell time series and electrode metadata."
+    }
+  },
+  "experiment": {
+    "source_id": "sintef-2026-v3",
+    "asset_id": "sintef-lfp-d07eb6",
+    "sample_id": "d07eb6",
+    "configuration": "active electrode versus lithium metal, laboratory R2032 half-cell",
+    "protocol": "p-OCV: C/50 constant current; 8 h rest at upper/lower cutoffs",
+    "cycle_selected": 3,
+    "cycle_selection_reason": "Fixed third recorded cycle for all four specimens; not selected by fit quality.",
+    "temperature_K": null,
+    "temperature_description": "Room temperature per source; numeric setpoint not supplied.",
+    "electrode_metadata": {
+      "BDF names": "sintef__sintef-lfp-R2032-gelon-d07eb6__20250602__p-ocv__RT.bdf.parquet",
+      "Active Material type": "LFP",
+      "Start Date YYYYMMDD": 20250602,
+      "Public Labels": "LFP-NMP-1",
+      "Cycling Programme name": "p-OCV",
+      "Mass of Active Material / mg": 20.66812,
+      "Electrode Coating Mass / g": 0.02175599,
+      "Weight percentage of Active Material / %": 95.0,
+      "Theoretical Capacity /  mAh g-1": null,
+      "Electrode Diameter / mm": 14,
+      "Dry Thickness / um": 78,
+      "Nominal Areal Capacity / mAh cm-2": 2.0,
+      "Electrode Loading / g cm-2": 0.0134267,
+      "Known Issues": null
+    },
+    "known_issues": []
+  },
+  "upstream_assets": {
+    "sintef-lfp-d07eb6": {
+      "source_id": "sintef-2026-v3",
+      "filename": "sintef__sintef-lfp-R2032-gelon-d07eb6__20250602__p-ocv__RT.bdf.parquet",
+      "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-lfp-R2032-gelon-d07eb6__20250602__p-ocv__RT.bdf.parquet/content",
+      "md5": "3efea83aa4a59c500bde5723a67e3c3c",
+      "sha256": "dcadc26731c2f1e685e3ae73667ff6041e5d7f349e1c31ebfe90363dd21880d5",
+      "license": "CC-BY-4.0"
+    },
+    "sintef-metadata": {
+      "source_id": "sintef-2026-v3",
+      "filename": "metadata.csv",
+      "url": "https://zenodo.org/api/records/20086298/files/metadata.csv/content",
+      "md5": "daa9d9229c6fbe53cf099ea1a9645a9d",
+      "sha256": "b966c2d7e783f05432f1f9fbb3fa59c7a2fe2aadc1f3a53a124381f835b1efac",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

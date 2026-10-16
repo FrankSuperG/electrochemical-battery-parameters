@@ -1,0 +1,1780 @@
+{
+  "cell_id": "lg-m50",
+  "cell": {
+    "manufacturer": "LG",
+    "model": "M50",
+    "format": "21700",
+    "identity_level": "commercial_model_only",
+    "source_ids": [
+      "chen-2020"
+    ],
+    "note": "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+    "parameter_ids": [
+      "lgm50-negative-current-collector-thickness-m",
+      "lgm50-negative-electrode-thickness-m",
+      "lgm50-separator-thickness-m",
+      "lgm50-positive-electrode-thickness-m",
+      "lgm50-positive-current-collector-thickness-m",
+      "lgm50-electrode-height-m",
+      "lgm50-electrode-width-m",
+      "lgm50-cell-volume-m3",
+      "lgm50-cell-cooling-surface-area-m2",
+      "lgm50-negative-electrode-porosity",
+      "lgm50-negative-electrode-active-material-volume-fraction",
+      "lgm50-negative-particle-radius-m",
+      "lgm50-negative-electrode-conductivity-s-m-1",
+      "lgm50-negative-particle-diffusivity-m2-s-1",
+      "lgm50-positive-electrode-porosity",
+      "lgm50-positive-electrode-active-material-volume-fraction",
+      "lgm50-positive-particle-radius-m",
+      "lgm50-positive-electrode-conductivity-s-m-1",
+      "lgm50-positive-particle-diffusivity-m2-s-1",
+      "lgm50-maximum-concentration-in-negative-electrode-mol-m-3",
+      "lgm50-maximum-concentration-in-positive-electrode-mol-m-3",
+      "lgm50-negative-electrode-density-kg-m-3",
+      "lgm50-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "lgm50-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "lgm50-positive-electrode-density-kg-m-3",
+      "lgm50-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "lgm50-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "lgm50-separator-density-kg-m-3",
+      "lgm50-separator-specific-heat-capacity-j-kg-1-k-1",
+      "lgm50-separator-thermal-conductivity-w-m-1-k-1",
+      "lgm50-nominal-cell-capacity-a-h",
+      "lgm50-lower-voltage-cut-off-v",
+      "lgm50-upper-voltage-cut-off-v",
+      "lgm50-initial-concentration-in-electrolyte-mol-m-3",
+      "lgm50-initial-concentration-in-negative-electrode-mol-m-3",
+      "lgm50-initial-concentration-in-positive-electrode-mol-m-3",
+      "lgm50-negative-exchange-current-density",
+      "lgm50-positive-exchange-current-density"
+    ],
+    "full_cell_test_ids": [
+      "chen-lgm50-cell02",
+      "chen-lgm50-cell03",
+      "chen-lgm50-cell04"
+    ],
+    "ocp_record_ids": [
+      "graphite-chen2020-formula",
+      "nmc811-lgm50-chen2020-formula"
+    ],
+    "display_name": "LG M50 | 5 Ah NMC811/graphite-SiOx",
+    "chemistry": "NMC811/graphite-SiOx",
+    "nominal_capacity_Ah": 5,
+    "match_level": "same_model_same_study",
+    "match_evidence": "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+    "coverage": {
+      "ocp": "Both electrode OCP expressions available; effective graphite-SiOx negative and NMC811 positive",
+      "diffusion": "Two scalar particle diffusivities in upstream implementation",
+      "kinetics": "Two exchange-current density laws",
+      "full_cell_tests": "Three same-model validation samples"
+    },
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "graphite-chen2020-formula",
+          "nmc811-lgm50-chen2020-formula"
+        ],
+        "source_ids": [
+          "chen-2020",
+          "pybamm-25-4-2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Both electrode OCP expressions available; effective graphite-SiOx negative and NMC811 positive",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "lgm50-negative-particle-diffusivity-m2-s-1",
+          "lgm50-positive-particle-diffusivity-m2-s-1"
+        ],
+        "source_ids": [
+          "chen-2020",
+          "pybamm-25-4-2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two scalar particle diffusivities in upstream implementation",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "lgm50-negative-exchange-current-density",
+          "lgm50-positive-exchange-current-density"
+        ],
+        "source_ids": [
+          "chen-2020",
+          "pybamm-25-4-2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two exchange-current density laws",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "chen-lgm50-cell02",
+          "chen-lgm50-cell03",
+          "chen-lgm50-cell04"
+        ],
+        "source_ids": [
+          "chen-validation-2020"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Three same-model validation samples",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [
+          "chen-lgm50-cell02",
+          "chen-lgm50-cell03",
+          "chen-lgm50-cell04"
+        ],
+        "source_ids": [
+          "chen-validation-2020"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "CCCV_charge_and_CC_discharge",
+        "missing_items": []
+      }
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed"
+    ]
+  },
+  "parameters": [
+    {
+      "id": "lgm50-negative-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Negative current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2e-05
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Negative electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 8.52e-05
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-separator-thickness-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Separator thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2e-05
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Separator thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Positive electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 7.56e-05
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Positive current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.6e-05
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-electrode-height-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Electrode height [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.065
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Electrode height [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-electrode-width-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Electrode width [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.58
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Electrode width [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-cell-volume-m3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Cell volume [m3]",
+      "unit": "m3",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.42e-05
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Cell volume [m3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-cell-cooling-surface-area-m2",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "geometry",
+      "name": "Cell cooling surface area [m2]",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.00531
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Cell cooling surface area [m2]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Negative electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.25
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Negative electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.75
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-particle-radius-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Negative particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.86e-06
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Negative electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 215.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-particle-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Negative particle diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.3e-14
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative particle diffusivity [m2.s-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Positive electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.335
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Positive electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.665
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-particle-radius-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Positive particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.22e-06
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Positive electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.18
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-particle-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Positive particle diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4e-15
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive particle diffusivity [m2.s-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-maximum-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Maximum concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 33133.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Maximum concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-maximum-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "electrode",
+      "name": "Maximum concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 63104.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Maximum concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Negative electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1657.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Negative electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Negative electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.7
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Positive electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 3262.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Positive electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Positive electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.1
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-separator-density-kg-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Separator density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 397.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Separator density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-separator-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Separator specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Separator specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-separator-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "thermal",
+      "name": "Separator thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.16
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Separator thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "operating_limits",
+      "name": "Nominal cell capacity [A.h]",
+      "unit": "A.h",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Nominal cell capacity [A.h]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "operating_limits",
+      "name": "Lower voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Lower voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "operating_limits",
+      "name": "Upper voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Upper voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "initial_state",
+      "name": "Initial concentration in electrolyte [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-initial-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "initial_state",
+      "name": "Initial concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 29866.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Initial concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-initial-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "initial_state",
+      "name": "Initial concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 17038.0
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Initial concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowing origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Same-model literature implementation value, not a newly measured parameter.",
+        "Do not assume all values in a named parameter set were directly measured on one specimen.",
+        "This record alone does not form a complete model parameterization."
+      ]
+    },
+    {
+      "id": "lgm50-negative-exchange-current-density",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "kinetics",
+      "name": "Negative electrode exchange-current density [A.m-2]",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "6.48e-7*exp(35000/8.314462618*(1/298.15-1/T))*c_e**0.5*c_s_surf**0.5*(c_s_max-c_s_surf)**0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain: c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max, T>0. Experimental validity range not established here.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::graphite_LGM50_electrolyte_exchange_current_density_Chen2020",
+        "origin_status": "upstream_implementation_function; original equation not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Exchange-current density law, not an interchangeable reaction-rate constant.",
+        "Uses the upstream concentration dependence and area convention; inspect the original model before transferring.",
+        "Gas constant fixed to 8.314462618 J/mol/K for portable numerical evaluation.",
+        "Mathematical input checks do not establish an experimentally validated temperature range."
+      ]
+    },
+    {
+      "id": "lgm50-positive-exchange-current-density",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "category": "kinetics",
+      "name": "Positive electrode exchange-current density [A.m-2]",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "3.42e-6*exp(17800/8.314462618*(1/298.15-1/T))*c_e**0.5*c_s_surf**0.5*(c_s_max-c_s_surf)**0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain: c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max, T>0. Experimental validity range not established here.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::nmc_LGM50_electrolyte_exchange_current_density_Chen2020",
+        "origin_status": "upstream_implementation_function; original equation not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "Exchange-current density law, not an interchangeable reaction-rate constant.",
+        "Uses the upstream concentration dependence and area convention; inspect the original model before transferring.",
+        "Gas constant fixed to 8.314462618 J/mol/K for portable numerical evaluation.",
+        "Mathematical input checks do not establish an experimentally validated temperature range."
+      ]
+    }
+  ],
+  "ocp_records": [
+    {
+      "id": "graphite-chen2020-formula",
+      "version": "1",
+      "title": "graphite \u00b7 chen-2020 \u00b7 analytical formula",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "graphite-chen-lgm50",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max as defined by the upstream implementation; not whole-cell SOC.",
+        "domain_basis": "Mathematical stoichiometry interval; an experimentally validated fitting interval is not established here."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "1.9793*exp(-39.3631*x) + 0.2482 - 0.0909*tanh(29.8538*(x-0.1234)) - 0.04478*tanh(14.9159*(x-0.2769)) - 0.0205*tanh(30.4444*(x-0.6103))",
+        "functions": [
+          "exp",
+          "tanh"
+        ],
+        "source_function": "graphite_LGM50_ocp_Chen2020"
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-m50",
+        "relationship": "same_model",
+        "evidence": "Upstream function docstring identifies LG M50; exact specimen and batch are not established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-prada-code"
+        ],
+        "derivation": "upstream_formula_transcription",
+        "location": "Prada2013.py::graphite_LGM50_ocp_Chen2020",
+        "processing": {
+          "changes": "Renamed sto to x; removed numpy namespace. Coefficients unchanged.",
+          "script": "scripts/seed_v01.py"
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "No raw experimental points are claimed for this expression.",
+        "No separate lithiation/delithiation branch or temperature law is supplied.",
+        "Not a complete or independently validated cell parameter set.",
+        "Effective commercial negative-electrode formula; do not interpret as a universal pure-graphite material law."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "nmc811-lgm50-chen2020-formula",
+      "version": "1",
+      "title": "NMC811 | nmc_LGM50_ocp_Chen2020 | implementation expression",
+      "parameter": "electrode_ocp",
+      "material": "NMC811",
+      "material_id": "nmc811-lgm50-chen2020-formula-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+        "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "-0.809 * x + 4.4875 - 0.0428 * tanh(18.5138 * (x - 0.5542)) - 17.7326 * tanh(15.789 * (x - 0.3117)) + 17.5842 * tanh(15.9308 * (x - 0.312))",
+        "functions": [
+          "tanh"
+        ],
+        "source_function": "nmc_LGM50_ocp_Chen2020"
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-m50",
+        "relationship": "same_model",
+        "evidence": "Same LG M50 model and Chen2020 study as the existing negative OCP and three full-cell test files. Identical characterization/validation specimen not established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-chen-code"
+        ],
+        "derivation": "upstream_formula_transcription",
+        "location": "nmc_LGM50_ocp_Chen2020",
+        "processing": {
+          "script": "scripts/seed_materials.py",
+          "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "An implementation expression, not original measured points or a newly fitted curve.",
+        "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+        "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+        "Same LG M50 model and Chen2020 study as the existing negative OCP and three full-cell test files. Identical characterization/validation specimen not established."
+      ],
+      "license": "BSD-3-Clause"
+    }
+  ],
+  "full_cell_tests": [
+    {
+      "id": "chen-lgm50-cell02",
+      "cell_id": "lg-m50",
+      "sample_id": "cell02",
+      "asset_id": "chen-lgm50-cell02",
+      "source_id": "chen-validation-2020",
+      "path": "full_cell/LGM50_cell02.csv",
+      "normalized_path": "full_cell/LGM50_cell02-normalized.csv",
+      "normalized_sha256": "a887c818a22cf6c5146d740c23f6cf9018e9bb849a5884e2dc95291d17196a34",
+      "current_convention": "normalized: positive=charge, negative=discharge; source current is unsigned magnitude interpreted using Md=C/D",
+      "processing": "Original copied byte-for-byte. Normalized: skip 13 instrument banner lines; derive current sign from Md; temperatures degC+273.15; preserve source record and zero-based source file row; no smoothing or resampling.",
+      "license": "CC-BY-4.0",
+      "protocol": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Dataset is explicitly supplementary validation data for Chen et al. 2020; LG M50 model and individual test sample IDs are given. Exact link to a dissected electrode specimen is not established.",
+      "independent_validation_by_this_project": false,
+      "row_count": 6313,
+      "columns": [
+        "Rec",
+        "Cycle P",
+        "Cycle C",
+        "Step",
+        "Test Time [s]",
+        "Step Time [s]",
+        "Capacity [Ah]",
+        "Energy [Wh]",
+        "Current [A]",
+        "Voltage [V]",
+        "Md",
+        "ES",
+        "DPT Time",
+        "Temperature Cell [degC]",
+        "Temperature Chamber [degC]"
+      ],
+      "discharge_segments": [
+        {
+          "step": 2,
+          "mean_discharge_current_A": 0.5000455806451612,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": true,
+          "points": 62
+        },
+        {
+          "step": 7,
+          "mean_discharge_current_A": 0.49997244929925805,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": false,
+          "points": 1213
+        },
+        {
+          "step": 12,
+          "mean_discharge_current_A": 2.4999939084507043,
+          "nominal_C_rate": 0.5,
+          "initial_preconditioning": false,
+          "points": 284
+        },
+        {
+          "step": 17,
+          "mean_discharge_current_A": 5.000015738636363,
+          "nominal_C_rate": 1.0,
+          "initial_preconditioning": false,
+          "points": 176
+        },
+        {
+          "step": 22,
+          "mean_discharge_current_A": 7.4999371917808215,
+          "nominal_C_rate": 1.5,
+          "initial_preconditioning": false,
+          "points": 146
+        }
+      ],
+      "format": "original CSV + explicitly normalized CSV",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        },
+        "cell_temperature_K": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        },
+        "ambient_temperature_K": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        }
+      },
+      "basic_test": {
+        "type": "CCCV_charge_and_CC_discharge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": []
+    },
+    {
+      "id": "chen-lgm50-cell03",
+      "cell_id": "lg-m50",
+      "sample_id": "cell03",
+      "asset_id": "chen-lgm50-cell03",
+      "source_id": "chen-validation-2020",
+      "path": "full_cell/LGM50_cell03.csv",
+      "normalized_path": "full_cell/LGM50_cell03-normalized.csv",
+      "normalized_sha256": "a7354478140bd12fa77266b51df22f65aaf89ac82e5d3eded78b9071ba50e7b6",
+      "current_convention": "normalized: positive=charge, negative=discharge; source current is unsigned magnitude interpreted using Md=C/D",
+      "processing": "Original copied byte-for-byte. Normalized: skip 13 instrument banner lines; derive current sign from Md; temperatures degC+273.15; preserve source record and zero-based source file row; no smoothing or resampling.",
+      "license": "CC-BY-4.0",
+      "protocol": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Dataset is explicitly supplementary validation data for Chen et al. 2020; LG M50 model and individual test sample IDs are given. Exact link to a dissected electrode specimen is not established.",
+      "independent_validation_by_this_project": false,
+      "row_count": 6315,
+      "columns": [
+        "Rec",
+        "Cycle P",
+        "Cycle C",
+        "Step",
+        "Test Time [s]",
+        "Step Time [s]",
+        "Capacity [Ah]",
+        "Energy [Wh]",
+        "Current [A]",
+        "Voltage [V]",
+        "Md",
+        "ES",
+        "DPT Time",
+        "Temperature Cell [degC]",
+        "Temperature Chamber [degC]"
+      ],
+      "discharge_segments": [
+        {
+          "step": 2,
+          "mean_discharge_current_A": 0.49999568852459014,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": true,
+          "points": 61
+        },
+        {
+          "step": 7,
+          "mean_discharge_current_A": 0.4999831663920922,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": false,
+          "points": 1214
+        },
+        {
+          "step": 12,
+          "mean_discharge_current_A": 2.4999746830985914,
+          "nominal_C_rate": 0.5,
+          "initial_preconditioning": false,
+          "points": 284
+        },
+        {
+          "step": 17,
+          "mean_discharge_current_A": 5.000038977272727,
+          "nominal_C_rate": 1.0,
+          "initial_preconditioning": false,
+          "points": 176
+        },
+        {
+          "step": 22,
+          "mean_discharge_current_A": 7.499922972972974,
+          "nominal_C_rate": 1.5,
+          "initial_preconditioning": false,
+          "points": 148
+        }
+      ],
+      "format": "original CSV + explicitly normalized CSV",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        },
+        "cell_temperature_K": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        },
+        "ambient_temperature_K": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        }
+      },
+      "basic_test": {
+        "type": "CCCV_charge_and_CC_discharge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": []
+    },
+    {
+      "id": "chen-lgm50-cell04",
+      "cell_id": "lg-m50",
+      "sample_id": "cell04",
+      "asset_id": "chen-lgm50-cell04",
+      "source_id": "chen-validation-2020",
+      "path": "full_cell/LGM50_cell04.csv",
+      "normalized_path": "full_cell/LGM50_cell04-normalized.csv",
+      "normalized_sha256": "1d92946f8cb0803084599b3fbdd8d691acd2cebca533f51a76b055b8472d2c7f",
+      "current_convention": "normalized: positive=charge, negative=discharge; source current is unsigned magnitude interpreted using Md=C/D",
+      "processing": "Original copied byte-for-byte. Normalized: skip 13 instrument banner lines; derive current sign from Md; temperatures degC+273.15; preserve source record and zero-based source file row; no smoothing or resampling.",
+      "license": "CC-BY-4.0",
+      "protocol": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Dataset is explicitly supplementary validation data for Chen et al. 2020; LG M50 model and individual test sample IDs are given. Exact link to a dissected electrode specimen is not established.",
+      "independent_validation_by_this_project": false,
+      "row_count": 6307,
+      "columns": [
+        "Rec",
+        "Cycle P",
+        "Cycle C",
+        "Step",
+        "Test Time [s]",
+        "Step Time [s]",
+        "Capacity [Ah]",
+        "Energy [Wh]",
+        "Current [A]",
+        "Voltage [V]",
+        "Md",
+        "ES",
+        "DPT Time",
+        "Temperature Cell [degC]",
+        "Temperature Chamber [degC]"
+      ],
+      "discharge_segments": [
+        {
+          "step": 2,
+          "mean_discharge_current_A": 0.49998653225806455,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": true,
+          "points": 62
+        },
+        {
+          "step": 7,
+          "mean_discharge_current_A": 0.49997905445544555,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": false,
+          "points": 1212
+        },
+        {
+          "step": 12,
+          "mean_discharge_current_A": 2.4999832394366197,
+          "nominal_C_rate": 0.5,
+          "initial_preconditioning": false,
+          "points": 284
+        },
+        {
+          "step": 17,
+          "mean_discharge_current_A": 5.000039830508475,
+          "nominal_C_rate": 1.0,
+          "initial_preconditioning": false,
+          "points": 177
+        },
+        {
+          "step": 22,
+          "mean_discharge_current_A": 7.499936554054054,
+          "nominal_C_rate": 1.5,
+          "initial_preconditioning": false,
+          "points": 148
+        }
+      ],
+      "format": "original CSV + explicitly normalized CSV",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        },
+        "cell_temperature_K": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        },
+        "ambient_temperature_K": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        }
+      },
+      "basic_test": {
+        "type": "CCCV_charge_and_CC_discharge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": []
+    }
+  ],
+  "sources": {
+    "chen-2020": {
+      "kind": "paper",
+      "title": "Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models",
+      "authors": [
+        "Chang-Hui Chen",
+        "Ferran Brosa Planella",
+        "Kieran O'Regan",
+        "Dominika Gastol",
+        "W. Dhammika Widanage",
+        "Emma Kendrick"
+      ],
+      "year": 2020,
+      "doi": "10.1149/1945-7111/ab9050",
+      "url": "https://doi.org/10.1149/1945-7111/ab9050",
+      "role": "Scientific attribution of the LG M50 graphite OCP and non-OCP parameter implementations; individual measurement/fit/borrowing origins not independently audited."
+    },
+    "chen-validation-2020": {
+      "kind": "dataset",
+      "title": "Experimental data for \"Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models\"",
+      "authors": [
+        "Chang-Hui Chen",
+        "Ferran Brosa Planella",
+        "Kieran O'Regan",
+        "Dominika Gastol",
+        "W. Dhammika Widanage",
+        "Emma Kendrick"
+      ],
+      "year": 2020,
+      "doi": "10.5281/zenodo.4032561",
+      "url": "https://zenodo.org/records/4032561",
+      "version": "v1",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Zenodo API metadata.license.id=cc-by-4.0, checked 2026-10-16",
+      "role": "Full-cell validation tests published alongside Chen2020; not proof of identical specimen to the dissected characterization cell."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    }
+  },
+  "upstream_assets": {
+    "chen-lgm50-cell02": {
+      "source_id": "chen-validation-2020",
+      "filename": "LGM50_cell02.csv",
+      "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell02.csv/content",
+      "md5": "0bbf959cbfc367296ec69d7a74d2f5c1",
+      "sha256": "650e7f9ac5217b4db158047e50b6b464100b13f4859002421114edebca629b35",
+      "license": "CC-BY-4.0"
+    },
+    "chen-lgm50-cell03": {
+      "source_id": "chen-validation-2020",
+      "filename": "LGM50_cell03.csv",
+      "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell03.csv/content",
+      "md5": "a09cbd8eff0af55dfe9bc8728fa89908",
+      "sha256": "fcc13423786d6044f3ec41b1b278fb1d42ff55018666be743243f7c34b1b98cb",
+      "license": "CC-BY-4.0"
+    },
+    "chen-lgm50-cell04": {
+      "source_id": "chen-validation-2020",
+      "filename": "LGM50_cell04.csv",
+      "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell04.csv/content",
+      "md5": "f17615476283d2e15087165697ff9d7c",
+      "sha256": "e1cbb60e79911824d5559f12db8e8ecdd4781d077a45f5b1ecbcf103aa271d9e",
+      "license": "CC-BY-4.0"
+    },
+    "pybamm-chen-code": {
+      "source_id": "pybamm-25-4-2",
+      "filename": "Chen2020-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Chen2020.py",
+      "sha256": "eb6a13879cad6ae1bc86d222ce5189f3e3edb400e23f69331779b8aae2437906",
+      "license": "BSD-3-Clause"
+    },
+    "pybamm-prada-code": {
+      "source_id": "pybamm-25-4-2",
+      "filename": "Prada2013-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Prada2013.py",
+      "sha256": "9cec4ad9e6afac112b44c5ea4c73ee2c2c0882a7c6fc5398bd789b78617cb052",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

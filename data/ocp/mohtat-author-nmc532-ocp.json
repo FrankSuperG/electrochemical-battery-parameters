@@ -1,0 +1,125 @@
+{
+  "record": {
+    "id": "mohtat-author-nmc532-ocp",
+    "version": "1",
+    "title": "NMC532 | Mohtat2020 original author model | Up_0",
+    "parameter": "electrode_ocp",
+    "material": "NMC532",
+    "material_id": "mohtat-author-nmc532-ocp-material",
+    "electrode_role": "positive",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0335,
+        0.8907
+      ],
+      "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+      "domain_basis": "Author's full-cell balancing endpoints in main.m; source expression retained. Not a claim of independent electrode characterization."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "4.3452-1.6518*(x)+1.6225*(x)**2-2.0843*(x)**3+3.5146*x**4-2.2166*x**5-0.5623e-4*exp(109.451*(x)-100.006)",
+      "functions": [
+        "exp"
+      ],
+      "source_function": "main.m::CC.Up_0"
+    },
+    "source_ids": [
+      "mohtat-2020-data",
+      "mohtat-2020"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "relationship": "same_parameter_set",
+      "evidence": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given."
+    },
+    "provenance": {
+      "asset_ids": [
+        "mohtat2020-main-m"
+      ],
+      "derivation": "original_author_matlab_expression_transcription",
+      "location": "main.m::CC.Up_0",
+      "processing": {
+        "script": "scripts/seed_mohtat.py",
+        "changes": "MATLAB continuation and element-wise powers transcribed to the restricted expression language; source coefficients unchanged; no MATLAB executed."
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+      "NMC532 label is stated in the pinned PyBaMM implementation; the deposited model/README use NMC without an independent composition assay.",
+      "Original graphite expression uses x+0.007. PyBaMM v25.4.2 uses x+0.001. These are distinct implementation variants; do not mix their OCPs silently."
+    ],
+    "license": "CC-BY-4.0"
+  },
+  "sources": {
+    "mohtat-2020-data": {
+      "kind": "dataset",
+      "title": "UofM pouch cell voltage and expansion dataset and modeling code",
+      "authors": [
+        "Peyman Mohtat",
+        "Jason B. Siegel",
+        "Anna G. Stefanopoulou"
+      ],
+      "year": 2020,
+      "doi": "10.7302/wwma-hx25",
+      "url": "https://deepblue.lib.umich.edu/data/concern/data_sets/kp78gg60j",
+      "license": "CC-BY-4.0",
+      "role": "Official author dataset downloaded through the normal browser on 2026-10-16. Five experimental charging MATs, four MATLAB model/plot files and README reviewed. Earlier automated HTTP 403 was an access-method failure. Packaged originals retain hashes and CC BY 4.0."
+    },
+    "mohtat-2020": {
+      "kind": "paper",
+      "title": "Differential Expansion and Voltage Model for Li-ion Batteries at Practical Charging Rates",
+      "authors": [
+        "Peyman Mohtat",
+        "Suhak Lee",
+        "Valentin Sulzer",
+        "Jason B. Siegel",
+        "Anna G. Stefanopoulou"
+      ],
+      "year": 2020,
+      "doi": "10.1149/1945-7111/aba5d1",
+      "url": "https://doi.org/10.1149/1945-7111/aba5d1",
+      "role": "Same-study electrochemical/mechanical model and charging observations. Original author-code and PyBaMM implementation variants are distinguished; exact specimen and raw OCP/current/time exports remain unresolved."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "mohtat2020-main-m": {
+      "source_id": "mohtat-2020-data",
+      "filename": "main.m",
+      "url": "https://deepblue.lib.umich.edu/data/downloads/mk61rh20x",
+      "sha256": "14572b681269f6a6405250bedbde236433e7d96500619c9aab3f47a6f6c735cc",
+      "license": "CC-BY-4.0",
+      "path": "evidence/mohtat2020-main.m",
+      "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

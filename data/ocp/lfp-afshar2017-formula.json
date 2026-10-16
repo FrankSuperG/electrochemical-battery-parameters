@@ -1,0 +1,119 @@
+{
+  "record": {
+    "id": "lfp-afshar2017-formula",
+    "version": "1",
+    "title": "LFP \u00b7 afshar-2017 \u00b7 analytical formula",
+    "parameter": "electrode_ocp",
+    "material": "LFP",
+    "material_id": "lfp-afshar-formula",
+    "electrode_role": "positive",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Electrode lithium fraction c_s/c_s,max as defined by the upstream implementation; not whole-cell SOC.",
+      "domain_basis": "Mathematical stoichiometry interval; an experimentally validated fitting interval is not established here."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "3.4077 - 0.020269*x + 0.5*exp(-150*x) - 0.9*exp(-30*(1-x))",
+      "functions": [
+        "exp"
+      ],
+      "source_function": "LFP_ocp_Afshar2017"
+    },
+    "source_ids": [
+      "afshar-2017",
+      "pybamm-25-4-2"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": null,
+      "relationship": "material_only",
+      "evidence": "No commercial cell identity established for this record."
+    },
+    "provenance": {
+      "asset_ids": [
+        "pybamm-prada-code"
+      ],
+      "derivation": "upstream_formula_transcription",
+      "location": "Prada2013.py::LFP_ocp_Afshar2017",
+      "processing": {
+        "changes": "Renamed sto to x; removed numpy namespace. Coefficients unchanged.",
+        "script": "scripts/seed_v01.py"
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "No raw experimental points are claimed for this expression.",
+      "No separate lithiation/delithiation branch or temperature law is supplied.",
+      "Not a complete or independently validated cell parameter set."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "afshar-2017": {
+      "kind": "paper",
+      "title": "Efficient electrochemical model for lithium-ion cells",
+      "authors": [
+        "Sepideh Afshar",
+        "Kirsten Morris",
+        "Amir Khajepour"
+      ],
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1709.03970v1",
+      "doi": "10.48550/arXiv.1709.03970",
+      "role": "Scientific attribution supplied by the upstream implementation; original equation not independently checked."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "pybamm-prada-code": {
+      "source_id": "pybamm-25-4-2",
+      "filename": "Prada2013-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Prada2013.py",
+      "sha256": "9cec4ad9e6afac112b44c5ea4c73ee2c2c0882a7c6fc5398bd789b78617cb052",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

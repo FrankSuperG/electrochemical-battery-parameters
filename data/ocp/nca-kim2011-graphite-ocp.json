@@ -1,0 +1,123 @@
+{
+  "record": {
+    "id": "nca-kim2011-graphite-ocp",
+    "version": "1",
+    "title": "graphite | graphite_ocp_Kim2011 | implementation expression",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "nca-kim2011-graphite-ocp-material",
+    "electrode_role": "negative",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+      "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "0.124 + 1.5 * exp(-70 * x) - 0.0351 * tanh((x - 0.286) / 0.083) - 0.0045 * tanh((x - 0.9) / 0.119) - 0.035 * tanh((x - 0.99) / 0.05) - 0.0147 * tanh((x - 0.5) / 0.034) - 0.102 * tanh((x - 0.194) / 0.142) - 0.022 * tanh((x - 0.98) / 0.0164) - 0.011 * tanh((x - 0.124) / 0.0226) + 0.0155 * tanh((x - 0.105) / 0.029)",
+      "functions": [
+        "exp",
+        "tanh"
+      ],
+      "source_function": "graphite_ocp_Kim2011"
+    },
+    "source_ids": [
+      "kim-2011",
+      "pybamm-25-4-2"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "kim2011-nca-nominal-design",
+      "relationship": "same_parameter_set",
+      "evidence": "Kim2011 nominal-design implementation; A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned."
+    },
+    "provenance": {
+      "asset_ids": [
+        "pybamm-nca_kim2011-code"
+      ],
+      "derivation": "upstream_formula_transcription",
+      "location": "graphite_ocp_Kim2011",
+      "processing": {
+        "script": "scripts/seed_materials.py",
+        "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "An implementation expression, not original measured points or a newly fitted curve.",
+      "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+      "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+      "Kim2011 nominal-design implementation; A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "kim-2011": {
+      "kind": "paper",
+      "title": "Multi-domain modeling of lithium-ion batteries encompassing multi-physics in varied length scales",
+      "authors": [
+        "Gi-Heon Kim",
+        "Kandler Smith",
+        "Kyu-Jin Lee",
+        "Shriram Santhanagopalan",
+        "Ahmad Pesaran"
+      ],
+      "year": 2011,
+      "doi": "10.1149/1.3597614",
+      "url": "https://doi.org/10.1149/1.3597614",
+      "role": "Nominal-design graphite/NCA parameter attribution. Commercial identity and matching raw full-cell data are unresolved. Thermal inputs in the implementation include borrowed/scaled Marquis values."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "pybamm-nca_kim2011-code": {
+      "filename": "NCA_Kim2011-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/NCA_Kim2011.py",
+      "sha256": "d0aebb43b776f4804a0d7ad7f0b9dc6b3d1c30ee145e11e7c02b34c0a6f6c37c",
+      "source_id": "pybamm-25-4-2",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

@@ -1,0 +1,2103 @@
+{
+  "cell_id": "enertech-lco-pouch-ai2020",
+  "cell": {
+    "manufacturer": "Enertech",
+    "model": null,
+    "display_name": "Enertech | LCO/graphite | 2.28 Ah model input",
+    "chemistry": "LCO/graphite",
+    "format": "pouch",
+    "nominal_capacity_Ah": 2.28,
+    "implementation_capacity_Ah": 2.28,
+    "identity_level": "study_cell_family; commercial_part_unresolved",
+    "match_level": "same_study_cell_family",
+    "source_ids": [
+      "ai-2020",
+      "rieger-2016",
+      "pybamm-25-4-2",
+      "pybamm-data-1-0-2"
+    ],
+    "model_context": "Partial DFN/SPM/SPMe inputs and source-backed CC discharge observations",
+    "match_evidence": "Enertech observations and Ai2020 implementation share the Ai/Rieger study family. Exact commercial model and specimen remain unresolved; borrowed electrode functions do not become measurements through this link.",
+    "note": "OCP tables have Ai/Rieger attribution. Diffusivity and kinetics functions explicitly use Dualfoil. Separate temperature-rise files are not merged into absolute temperature or assumed synchronized with voltage.",
+    "coverage": {
+      "ocp": "Two published OCP tables; negative synthetic extrapolation guard removed",
+      "diffusion": "Two borrowed Dualfoil Arrhenius diffusivity functions; not same-cell measured D",
+      "kinetics": "Two borrowed Dualfoil exchange-current laws; not same-cell measured kinetics",
+      "full_cell_tests": "Four experimental voltage series: 0.1/0.5/1/2C; three separate temperature-rise sidecars; measured current absent"
+    },
+    "parameter_ids": [
+      "ai2020-negative-current-collector-thickness-m",
+      "ai2020-negative-electrode-thickness-m",
+      "ai2020-separator-thickness-m",
+      "ai2020-positive-electrode-thickness-m",
+      "ai2020-positive-current-collector-thickness-m",
+      "ai2020-electrode-height-m",
+      "ai2020-electrode-width-m",
+      "ai2020-cell-volume-m3",
+      "ai2020-cell-cooling-surface-area-m2",
+      "ai2020-negative-electrode-porosity",
+      "ai2020-negative-electrode-active-material-volume-fraction",
+      "ai2020-negative-particle-radius-m",
+      "ai2020-negative-electrode-conductivity-s-m-1",
+      "ai2020-positive-electrode-porosity",
+      "ai2020-positive-electrode-active-material-volume-fraction",
+      "ai2020-positive-particle-radius-m",
+      "ai2020-positive-electrode-conductivity-s-m-1",
+      "ai2020-maximum-concentration-in-negative-electrode-mol-m-3",
+      "ai2020-maximum-concentration-in-positive-electrode-mol-m-3",
+      "ai2020-negative-electrode-density-kg-m-3",
+      "ai2020-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "ai2020-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "ai2020-positive-electrode-density-kg-m-3",
+      "ai2020-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "ai2020-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "ai2020-separator-density-kg-m-3",
+      "ai2020-separator-specific-heat-capacity-j-kg-1-k-1",
+      "ai2020-separator-thermal-conductivity-w-m-1-k-1",
+      "ai2020-nominal-cell-capacity-a-h",
+      "ai2020-lower-voltage-cut-off-v",
+      "ai2020-upper-voltage-cut-off-v",
+      "ai2020-initial-concentration-in-electrolyte-mol-m-3",
+      "ai2020-initial-concentration-in-negative-electrode-mol-m-3",
+      "ai2020-initial-concentration-in-positive-electrode-mol-m-3",
+      "ai2020-negative-diffusivity",
+      "ai2020-negative-exchange-current-density",
+      "ai2020-positive-diffusivity",
+      "ai2020-positive-exchange-current-density"
+    ],
+    "ocp_record_ids": [
+      "ai2020-graphite-ocp",
+      "ai2020-lco-ocp"
+    ],
+    "full_cell_test_ids": [
+      "enertech-0p1c-discharge",
+      "enertech-0p5c-discharge",
+      "enertech-1c-discharge",
+      "enertech-2c-discharge"
+    ],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "ai2020-graphite-ocp",
+          "ai2020-lco-ocp"
+        ],
+        "source_ids": [
+          "ai-2020",
+          "pybamm-25-4-2",
+          "pybamm-data-1-0-2",
+          "rieger-2016"
+        ],
+        "match_level": "same_study_cell_family",
+        "evidence": "Two published OCP tables; negative synthetic extrapolation guard removed",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "ai2020-negative-diffusivity",
+          "ai2020-positive-diffusivity"
+        ],
+        "source_ids": [
+          "ai-2020",
+          "dualfoil-attribution",
+          "pybamm-25-4-2",
+          "rieger-2016"
+        ],
+        "match_level": "borrowed_model_input",
+        "evidence": "Two borrowed Dualfoil Arrhenius diffusivity functions; not same-cell measured D",
+        "missing_items": [
+          "Same-cell measured values not established; borrowed functions retained"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "ai2020-negative-exchange-current-density",
+          "ai2020-positive-exchange-current-density"
+        ],
+        "source_ids": [
+          "ai-2020",
+          "dualfoil-attribution",
+          "pybamm-25-4-2",
+          "rieger-2016"
+        ],
+        "match_level": "borrowed_model_input",
+        "evidence": "Two borrowed Dualfoil exchange-current laws; not same-cell measured kinetics",
+        "missing_items": [
+          "Same-cell measured values not established; borrowed functions retained"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "enertech-0p1c-discharge",
+          "enertech-0p5c-discharge",
+          "enertech-1c-discharge",
+          "enertech-2c-discharge"
+        ],
+        "source_ids": [
+          "pybamm-data-1-0-2"
+        ],
+        "match_level": "same_study_cell_family",
+        "evidence": "Four experimental voltage series: 0.1/0.5/1/2C; three separate temperature-rise sidecars; measured current absent",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [
+          "enertech-0p1c-discharge",
+          "enertech-0p5c-discharge",
+          "enertech-1c-discharge",
+          "enertech-2c-discharge"
+        ],
+        "source_ids": [
+          "pybamm-data-1-0-2"
+        ],
+        "match_level": "same_study_cell_family",
+        "evidence": "constant_current_discharge",
+        "missing_items": [
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Capacity channel",
+          "Charge trace",
+          "Exact specimen identifier",
+          "Measured current trace"
+        ]
+      }
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Commercial part number unresolved"
+    ]
+  },
+  "parameters": [
+    {
+      "id": "ai2020-negative-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Negative current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-05
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Negative electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 7.65e-05
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-separator-thickness-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Separator thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Separator thickness [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Positive electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.8e-05
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Positive current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5e-05
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-electrode-height-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Electrode height [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.051
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Electrode height [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-electrode-width-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Electrode width [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.047
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Electrode width [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-cell-volume-m3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Cell volume [m3]",
+      "unit": "m3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5341e-05
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Cell volume [m3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-cell-cooling-surface-area-m2",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "geometry",
+      "name": "Cell cooling surface area [m2]",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0060484
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Cell cooling surface area [m2]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Negative electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.33
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative electrode porosity",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Negative electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.61
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-particle-radius-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Negative particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-06
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative particle radius [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Negative electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Positive electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.32
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive electrode porosity",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Positive electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.62
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-particle-radius-m",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Positive particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 3e-06
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive particle radius [m]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Positive electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-maximum-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Maximum concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 28700.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Maximum concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-maximum-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "electrode",
+      "name": "Maximum concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 49943.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Maximum concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Negative electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 2470.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Negative electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1080.2
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Negative electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.04
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Negative electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Positive electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 2470.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Positive electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1080.2
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Positive electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.58
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Positive electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-separator-density-kg-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Separator density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 2470.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Separator density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-separator-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Separator specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1080.2
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Separator specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-separator-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "thermal",
+      "name": "Separator thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.334
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Separator thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "operating_limits",
+      "name": "Nominal cell capacity [A.h]",
+      "unit": "A.h",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.28
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Nominal cell capacity [A.h]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "operating_limits",
+      "name": "Lower voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Lower voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "operating_limits",
+      "name": "Upper voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Upper voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "initial_state",
+      "name": "Initial concentration in electrolyte [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-initial-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "initial_state",
+      "name": "Initial concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 24108.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Initial concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-initial-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "initial_state",
+      "name": "Initial concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 21725.0
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::get_parameter_values::Initial concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; per-value measurement origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "limitations": [
+        "Partial implementation inputs; not a complete independently validated parameter set.",
+        "Commercial Enertech part number and exact parameterization/validation specimen link are unresolved."
+      ]
+    },
+    {
+      "id": "ai2020-negative-diffusivity",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "diffusion",
+      "name": "Negative particle diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "3.9e-14 * exp(601.3617752247136 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain: 0<=sto<=1; c_e>=0; c_s_max>0; 0<=c_s_surf<=c_s_max; T>0. Experimental validity range not established.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2",
+        "dualfoil-attribution"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::graphite_diffusivity_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "conditions": {
+        "gas_constant_J_mol_K": 8.314462618,
+        "faraday_constant_C_mol": 96485.33212331001,
+        "temperature_reference_note": "298.15 K in upstream laws"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative particle diffusivity [m2.s-1]; source concentration and active-area convention retained",
+      "limitations": [
+        "Not a measured current or a newly estimated parameter; source mathematical operations retained by AST substitution.",
+        "Borrowed Dualfoil functions are used in the Enertech model; they are not claimed to be same-cell measurements."
+      ]
+    },
+    {
+      "id": "ai2020-negative-exchange-current-density",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "kinetics",
+      "name": "Negative electrode exchange-current density [A.m-2]",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "9.648533212331001e-07 * exp(601.3617752247136 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain: 0<=sto<=1; c_e>=0; c_s_max>0; 0<=c_s_surf<=c_s_max; T>0. Experimental validity range not established.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2",
+        "dualfoil-attribution"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::graphite_electrolyte_exchange_current_density_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "conditions": {
+        "gas_constant_J_mol_K": 8.314462618,
+        "faraday_constant_C_mol": 96485.33212331001,
+        "temperature_reference_note": "298.15 K in upstream laws"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative electrode exchange-current density [A.m-2]; source concentration and active-area convention retained",
+      "limitations": [
+        "Not a measured current or a newly estimated parameter; source mathematical operations retained by AST substitution.",
+        "Borrowed Dualfoil functions are used in the Enertech model; they are not claimed to be same-cell measurements."
+      ]
+    },
+    {
+      "id": "ai2020-positive-diffusivity",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "diffusion",
+      "name": "Positive particle diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "5.387e-15 * exp(601.3617752247136 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain: 0<=sto<=1; c_e>=0; c_s_max>0; 0<=c_s_surf<=c_s_max; T>0. Experimental validity range not established.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2",
+        "dualfoil-attribution"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::lico2_diffusivity_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "conditions": {
+        "gas_constant_J_mol_K": 8.314462618,
+        "faraday_constant_C_mol": 96485.33212331001,
+        "temperature_reference_note": "298.15 K in upstream laws"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive particle diffusivity [m2.s-1]; source concentration and active-area convention retained",
+      "limitations": [
+        "Not a measured current or a newly estimated parameter; source mathematical operations retained by AST substitution.",
+        "Borrowed Dualfoil functions are used in the Enertech model; they are not claimed to be same-cell measurements."
+      ]
+    },
+    {
+      "id": "ai2020-positive-exchange-current-density",
+      "version": "1",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "category": "kinetics",
+      "name": "Positive electrode exchange-current density [A.m-2]",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "9.648533212331001e-07 * exp(601.3617752247136 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain: 0<=sto<=1; c_e>=0; c_s_max>0; 0<=c_s_surf<=c_s_max; T>0. Experimental validity range not established.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2",
+        "dualfoil-attribution"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-ai2020-code",
+        "location": "Ai2020.py::lico2_electrolyte_exchange_current_density_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "conditions": {
+        "gas_constant_J_mol_K": 8.314462618,
+        "faraday_constant_C_mol": 96485.33212331001,
+        "temperature_reference_note": "298.15 K in upstream laws"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive electrode exchange-current density [A.m-2]; source concentration and active-area convention retained",
+      "limitations": [
+        "Not a measured current or a newly estimated parameter; source mathematical operations retained by AST substitution.",
+        "Borrowed Dualfoil functions are used in the Enertech model; they are not claimed to be same-cell measurements."
+      ]
+    }
+  ],
+  "ocp_records": [
+    {
+      "id": "ai2020-graphite-ocp",
+      "version": "1",
+      "title": "graphite | Enertech / Ai2020-Rieger2016 | published OCP table",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "ai2020-graphite-ocp-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0005,
+          1.0
+        ],
+        "definition": "Electrode stoichiometry as supplied by upstream; not full-cell SOC.",
+        "domain_basis": "Retained table endpoints; no extrapolation. Negative synthetic x=0 guard omitted."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/ai2020-graphite-ocp.csv",
+        "sha256": "b7d5b17509354d9eabb82102e3d3d6a52f129146b34641e7c9c4b8bb32bf20bd",
+        "point_count": 124,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2",
+        "pybamm-data-1-0-2"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "enertech-lco-pouch-ai2020",
+        "relationship": "same_parameter_set",
+        "evidence": "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-data-graphite-ocp-enertech-ai2020-csv",
+          "pybamm-ai2020-code"
+        ],
+        "derivation": "upstream_published_table_transcription",
+        "location": "graphite_ocp_Enertech_Ai2020.csv",
+        "processing": {
+          "script": "scripts/seed_fullcell.py",
+          "removed_synthetic_guard_points": 1,
+          "changes": "Comment lines omitted; original numeric values and one-based source lines retained; no smoothing or resampling. Source graphite x=0,3.5 V extrapolation guard omitted."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved.",
+        "Published implementation table, not newly measured OCP or a claim of original instrument points. Positive table attribution is Rieger2016 in source comments; negative table attribution is Ai2020.",
+        "OCP protocol, branch direction and numerical measurement temperature are unresolved. No independent model validation.",
+        "Project evaluation uses linear interpolation by default, with optional PCHIP. Upstream Ai2020 uses cubic interpolation; only retained table nodes, not between-node interpolation, are claimed to match."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "ai2020-lco-ocp",
+      "version": "1",
+      "title": "LCO | Enertech / Ai2020-Rieger2016 | published OCP table",
+      "parameter": "electrode_ocp",
+      "material": "LCO",
+      "material_id": "ai2020-lco-ocp-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.4,
+          0.998903136
+        ],
+        "definition": "Electrode stoichiometry as supplied by upstream; not full-cell SOC.",
+        "domain_basis": "Retained table endpoints; no extrapolation. Negative synthetic x=0 guard omitted."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/ai2020-lco-ocp.csv",
+        "sha256": "4cbf5429d19e47a42a80a424d441651c30f38a5c71def5cf296ca00799a57de3",
+        "point_count": 482,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "ai-2020",
+        "rieger-2016",
+        "pybamm-25-4-2",
+        "pybamm-data-1-0-2"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "enertech-lco-pouch-ai2020",
+        "relationship": "same_parameter_set",
+        "evidence": "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-data-lico2-ocp-ai2020-csv",
+          "pybamm-ai2020-code"
+        ],
+        "derivation": "upstream_published_table_transcription",
+        "location": "lico2_ocp_Ai2020.csv",
+        "processing": {
+          "script": "scripts/seed_fullcell.py",
+          "removed_synthetic_guard_points": 0,
+          "changes": "Comment lines omitted; original numeric values and one-based source lines retained; no smoothing or resampling. Source graphite x=0,3.5 V extrapolation guard omitted."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved.",
+        "Published implementation table, not newly measured OCP or a claim of original instrument points. Positive table attribution is Rieger2016 in source comments; negative table attribution is Ai2020.",
+        "OCP protocol, branch direction and numerical measurement temperature are unresolved. No independent model validation.",
+        "Project evaluation uses linear interpolation by default, with optional PCHIP. Upstream Ai2020 uses cubic interpolation; only retained table nodes, not between-node interpolation, are claimed to match."
+      ],
+      "license": "BSD-3-Clause"
+    }
+  ],
+  "full_cell_tests": [
+    {
+      "id": "enertech-0p1c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-0-1c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/0.1C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-0p1c-discharge-normalized.csv",
+      "normalized_sha256": "62ae4d196ea12895857be697d2dada159a54fb4a4e40bd42cf623362c707c51a",
+      "row_count": 36880,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "0.1C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 0.1,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 36880,
+        "cell_temperature_K": 36880,
+        "ambient_temperature_K": 36880,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 36880,
+          "total_rows": 36880
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 36880
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 36880
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 36880
+        }
+      }
+    },
+    {
+      "id": "enertech-0p5c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-0-5c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/0.5C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-0p5c-discharge-normalized.csv",
+      "normalized_sha256": "099cd507240ec5782a8af4e4141ee0f1fa50d4f79d3fc74dd6eeecd7fe9e59cd",
+      "row_count": 7310,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "0.5C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 0.5,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 7310,
+        "cell_temperature_K": 7310,
+        "ambient_temperature_K": 7310,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [
+        {
+          "kind": "temperature_rise",
+          "path": "full_cell/enertech-0p5c-discharge-temperature-rise.csv",
+          "sha256": "6ac32c30627964b891a41931b28bf5a52fb8cdee6ff20eea882827f3b0b43256",
+          "asset_id": "pybamm-data-0-5c-discharge-t-txt",
+          "original_download_path": "evidence/0.5C_discharge_T.txt",
+          "row_count": 8910,
+          "unit": "K",
+          "relationship": "same nominal C-rate and study family; identical run and clock synchronization not established",
+          "processing": "Separate native timebase retained; not interpolated, merged or converted to absolute temperature."
+        }
+      ],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 7310,
+          "total_rows": 7310
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 7310
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 7310
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 7310
+        }
+      }
+    },
+    {
+      "id": "enertech-1c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-1c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/1C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-1c-discharge-normalized.csv",
+      "normalized_sha256": "eb6921ae28717b10a819e59b6607c22d2407b37c1e8734e2a296c902a0f1102e",
+      "row_count": 3615,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "1C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 1,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 3615,
+        "cell_temperature_K": 3615,
+        "ambient_temperature_K": 3615,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [
+        {
+          "kind": "temperature_rise",
+          "path": "full_cell/enertech-1c-discharge-temperature-rise.csv",
+          "sha256": "d271145b41652e76037e285cf86b64f3aec856fe5c9230b137ddfc53bc67aa7d",
+          "asset_id": "pybamm-data-1c-discharge-t-txt",
+          "original_download_path": "evidence/1C_discharge_T.txt",
+          "row_count": 7033,
+          "unit": "K",
+          "relationship": "same nominal C-rate and study family; identical run and clock synchronization not established",
+          "processing": "Separate native timebase retained; not interpolated, merged or converted to absolute temperature."
+        }
+      ],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 3615,
+          "total_rows": 3615
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 3615
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3615
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3615
+        }
+      }
+    },
+    {
+      "id": "enertech-2c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-2c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/2C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-2c-discharge-normalized.csv",
+      "normalized_sha256": "f4892233449ddb1cfca1aaa617cac442e7ccd710290b0924ef7c765f8ced2c1b",
+      "row_count": 1773,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "2C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 2,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 1773,
+        "cell_temperature_K": 1773,
+        "ambient_temperature_K": 1773,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [
+        {
+          "kind": "temperature_rise",
+          "path": "full_cell/enertech-2c-discharge-temperature-rise.csv",
+          "sha256": "183a91a7ce2f6342a21f7a6fdd4defabb93d9b250193c36d9d11041fa525230d",
+          "asset_id": "pybamm-data-2c-discharge-t-txt",
+          "original_download_path": "evidence/2C_discharge_T.txt",
+          "row_count": 8732,
+          "unit": "K",
+          "relationship": "same nominal C-rate and study family; identical run and clock synchronization not established",
+          "processing": "Separate native timebase retained; not interpolated, merged or converted to absolute temperature."
+        }
+      ],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1773,
+          "total_rows": 1773
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1773
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1773
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1773
+        }
+      }
+    }
+  ],
+  "sources": {
+    "ai-2020": {
+      "kind": "paper",
+      "title": "Electrochemical Thermal-Mechanical Modelling of Stress Inhomogeneity in Lithium-Ion Pouch Cells",
+      "authors": [
+        "Weilong Ai",
+        "Ludwig Kraft",
+        "Johannes Sturm",
+        "Andreas Jossen",
+        "Billy Wu"
+      ],
+      "year": 2020,
+      "doi": "10.1149/2.0122001JES",
+      "url": "https://doi.org/10.1149/2.0122001JES",
+      "role": "Enertech pouch model; validates against Rieger observations. Diffusion/kinetics borrowing remains explicit."
+    },
+    "dualfoil-attribution": {
+      "kind": "software",
+      "title": "Dualfoil electrode functions, as attributed by PyBaMM Marquis2019 and Ai2020",
+      "authors": [
+        "John Newman / Dualfoil developers"
+      ],
+      "year": 1998,
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
+      "role": "Borrowed mathematical function origin named in upstream modules; no same-cell measurement origin inferred."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    },
+    "pybamm-data-1-0-2": {
+      "kind": "dataset",
+      "title": "PyBaMM experimental data release v1.0.2",
+      "authors": [
+        "PyBaMM team; original experimental authors named per study"
+      ],
+      "year": 2026,
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.2",
+      "license": "BSD-3-Clause",
+      "role": "Versioned redistribution. Experimental origins and figure-digitization history are documented in v1.0.0 release notes; v1.0.2 hashes match those files.",
+      "provenance_url": "https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0",
+      "license_url": "https://github.com/pybamm-team/pybamm-data/blob/bed4e1b816afb4ec11e49fabef0d5996ff0a31e5/LICENSE"
+    },
+    "rieger-2016": {
+      "kind": "paper",
+      "title": "A new method to model the thickness change of a commercial pouch cell during discharge",
+      "authors": [
+        "Bernhard Rieger",
+        "Simon V. Erhard",
+        "Katharina Rumpf",
+        "Andreas Jossen"
+      ],
+      "year": 2016,
+      "doi": "10.1149/2.0441608jes",
+      "url": "https://doi.org/10.1149/2.0441608jes",
+      "role": "Experimental origin named by Ai2020 and official PyBaMM data notes; part number not independently verified."
+    }
+  },
+  "upstream_assets": {
+    "pybamm-ai2020-code": {
+      "filename": "Ai2020-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ai2020.py",
+      "sha256": "02b1c3edb2217154ae0b525a132b12fe8cb2c4718465ff4eecdcf0188830ef20",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-25-4-2"
+    },
+    "pybamm-data-0-1c-discharge-u-txt": {
+      "filename": "0.1C_discharge_U.txt",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/0.1C_discharge_U.txt",
+      "sha256": "7b9fcd137441eea4ab686faee8d57fe242c5544400939ef358ccd99c63c9579d",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2",
+      "path": "evidence/0.1C_discharge_U.txt"
+    },
+    "pybamm-data-0-5c-discharge-t-txt": {
+      "filename": "0.5C_discharge_T.txt",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/0.5C_discharge_T.txt",
+      "sha256": "2140b2f6bd698135d09a25b1f04c271d35a3a02999ace118b10389e01defa2ae",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2",
+      "path": "evidence/0.5C_discharge_T.txt"
+    },
+    "pybamm-data-0-5c-discharge-u-txt": {
+      "filename": "0.5C_discharge_U.txt",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/0.5C_discharge_U.txt",
+      "sha256": "9ed8368b2c6149d2a69218e7df6aaade2511c9f7f6fc7932cda153d9a3a10f39",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2",
+      "path": "evidence/0.5C_discharge_U.txt"
+    },
+    "pybamm-data-1c-discharge-t-txt": {
+      "filename": "1C_discharge_T.txt",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/1C_discharge_T.txt",
+      "sha256": "97308dfd7f7dd6c434e30f6c00fb6707c43c963855bb0800e0336809d5cc3756",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2",
+      "path": "evidence/1C_discharge_T.txt"
+    },
+    "pybamm-data-1c-discharge-u-txt": {
+      "filename": "1C_discharge_U.txt",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/1C_discharge_U.txt",
+      "sha256": "8fc19de45172215d65c56522c224e6fc700ee443db236b814238a829b7a14c3a",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2",
+      "path": "evidence/1C_discharge_U.txt"
+    },
+    "pybamm-data-2c-discharge-t-txt": {
+      "filename": "2C_discharge_T.txt",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/2C_discharge_T.txt",
+      "sha256": "4bd688fb7653539701fe3df61857474b4d54e8b142c84fdc4c8b92b9573fa5d0",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2",
+      "path": "evidence/2C_discharge_T.txt"
+    },
+    "pybamm-data-2c-discharge-u-txt": {
+      "filename": "2C_discharge_U.txt",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/2C_discharge_U.txt",
+      "sha256": "7b3c24b5e6df377075002abc2f62bab7c88b27d826812ba5a4c8385a1a12e723",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2",
+      "path": "evidence/2C_discharge_U.txt"
+    },
+    "pybamm-data-graphite-ocp-enertech-ai2020-csv": {
+      "filename": "graphite_ocp_Enertech_Ai2020.csv",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/graphite_ocp_Enertech_Ai2020.csv",
+      "sha256": "a338d120551d2758532785f2d0a7196ca7df6180060eb47444a22f37e4e1ccda",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2"
+    },
+    "pybamm-data-lico2-ocp-ai2020-csv": {
+      "filename": "lico2_ocp_Ai2020.csv",
+      "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/lico2_ocp_Ai2020.csv",
+      "sha256": "d4c2be795e118fa46fe6cab88d652de92a09e1f2231951f208f92fe0b5e4c426",
+      "license": "BSD-3-Clause",
+      "source_id": "pybamm-data-1-0-2"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

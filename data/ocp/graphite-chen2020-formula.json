@@ -1,0 +1,124 @@
+{
+  "record": {
+    "id": "graphite-chen2020-formula",
+    "version": "1",
+    "title": "graphite \u00b7 chen-2020 \u00b7 analytical formula",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "graphite-chen-lgm50",
+    "electrode_role": "negative",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Electrode lithium fraction c_s/c_s,max as defined by the upstream implementation; not whole-cell SOC.",
+      "domain_basis": "Mathematical stoichiometry interval; an experimentally validated fitting interval is not established here."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "1.9793*exp(-39.3631*x) + 0.2482 - 0.0909*tanh(29.8538*(x-0.1234)) - 0.04478*tanh(14.9159*(x-0.2769)) - 0.0205*tanh(30.4444*(x-0.6103))",
+      "functions": [
+        "exp",
+        "tanh"
+      ],
+      "source_function": "graphite_LGM50_ocp_Chen2020"
+    },
+    "source_ids": [
+      "chen-2020",
+      "pybamm-25-4-2"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "lg-m50",
+      "relationship": "same_model",
+      "evidence": "Upstream function docstring identifies LG M50; exact specimen and batch are not established."
+    },
+    "provenance": {
+      "asset_ids": [
+        "pybamm-prada-code"
+      ],
+      "derivation": "upstream_formula_transcription",
+      "location": "Prada2013.py::graphite_LGM50_ocp_Chen2020",
+      "processing": {
+        "changes": "Renamed sto to x; removed numpy namespace. Coefficients unchanged.",
+        "script": "scripts/seed_v01.py"
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "No raw experimental points are claimed for this expression.",
+      "No separate lithiation/delithiation branch or temperature law is supplied.",
+      "Not a complete or independently validated cell parameter set.",
+      "Effective commercial negative-electrode formula; do not interpret as a universal pure-graphite material law."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "chen-2020": {
+      "kind": "paper",
+      "title": "Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models",
+      "authors": [
+        "Chang-Hui Chen",
+        "Ferran Brosa Planella",
+        "Kieran O'Regan",
+        "Dominika Gastol",
+        "W. Dhammika Widanage",
+        "Emma Kendrick"
+      ],
+      "year": 2020,
+      "doi": "10.1149/1945-7111/ab9050",
+      "url": "https://doi.org/10.1149/1945-7111/ab9050",
+      "role": "Scientific attribution of the LG M50 graphite OCP and non-OCP parameter implementations; individual measurement/fit/borrowing origins not independently audited."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "pybamm-prada-code": {
+      "source_id": "pybamm-25-4-2",
+      "filename": "Prada2013-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Prada2013.py",
+      "sha256": "9cec4ad9e6afac112b44c5ea4c73ee2c2c0882a7c6fc5398bd789b78617cb052",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

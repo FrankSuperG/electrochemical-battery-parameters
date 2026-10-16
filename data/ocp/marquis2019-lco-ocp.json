@@ -1,0 +1,133 @@
+{
+  "record": {
+    "id": "marquis2019-lco-ocp",
+    "version": "1",
+    "title": "LCO | lico2_ocp_Dualfoil1998 | implementation expression",
+    "parameter": "electrode_ocp",
+    "material": "LCO",
+    "material_id": "marquis2019-lco-ocp-material",
+    "electrode_role": "positive",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+      "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "2.16216 + 0.07645 * tanh(30.834 - 54.4806 * (1.062 * x)) + 2.1581 * tanh(52.294 - 50.294 * (1.062 * x)) - 0.14169 * tanh(11.0923 - 19.8543 * (1.062 * x)) + 0.2051 * tanh(1.4684 - 5.4888 * (1.062 * x)) + 0.2531 * tanh((-(1.062 * x) + 0.56478) / 0.1316) - 0.02167 * tanh((1.062 * x - 0.525) / 0.006)",
+      "functions": [
+        "tanh"
+      ],
+      "source_function": "lico2_ocp_Dualfoil1998"
+    },
+    "source_ids": [
+      "dualfoil-attribution",
+      "marquis-2019",
+      "pybamm-25-4-2"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "relationship": "surrogate",
+      "evidence": "Dualfoil1998 borrowed OCP implementation; no same-cell half-cell measurement match established; The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen."
+    },
+    "provenance": {
+      "asset_ids": [
+        "pybamm-marquis2019-code"
+      ],
+      "derivation": "upstream_formula_transcription",
+      "location": "lico2_ocp_Dualfoil1998",
+      "processing": {
+        "script": "scripts/seed_materials.py",
+        "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "An implementation expression, not original measured points or a newly fitted curve.",
+      "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+      "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+      "Dualfoil1998 borrowed OCP implementation; no same-cell half-cell measurement match established; The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "dualfoil-attribution": {
+      "kind": "software",
+      "title": "Dualfoil electrode functions, as attributed by PyBaMM Marquis2019 and Ai2020",
+      "authors": [
+        "John Newman / Dualfoil developers"
+      ],
+      "year": 1998,
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
+      "role": "Borrowed mathematical function origin named in upstream modules; no same-cell measurement origin inferred."
+    },
+    "marquis-2019": {
+      "kind": "paper",
+      "title": "An asymptotic derivation of a single particle model with electrolyte",
+      "authors": [
+        "Scott G. Marquis",
+        "Valentin Sulzer",
+        "Robert Timms",
+        "Colin P. Please",
+        "S. Jon Chapman"
+      ],
+      "year": 2019,
+      "doi": "10.1149/2.0341915jes",
+      "url": "https://doi.org/10.1149/2.0341915jes",
+      "role": "Context of the Kokam SLPB78205130H parameter set. OCP, diffusion and kinetic function docstrings attribute their origin to Dualfoil; no same-cell measurement provenance is inferred."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "pybamm-marquis2019-code": {
+      "filename": "Marquis2019-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
+      "sha256": "f200bede5ece656c0c88d2db9c314646986fb990978ae6b056eb263cd40283b6",
+      "source_id": "pybamm-25-4-2",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

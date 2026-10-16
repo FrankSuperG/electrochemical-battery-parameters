@@ -13,7 +13,34 @@ E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2
 
 **v0.5.0: 49 OCP records · 11 material families · 337 other parameter records · 25 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
 
+## Get the data
+
+**[Browse all data](data/README.md) · [OCP by material](data/ocp/README.md) · [How to download and use](docs/DATA_ACCESS.md)**
+
+No installation is needed to browse or download files from GitHub. Choose a cell below, then click its CSV or JSON links. For LFP and other material-level OCP measurements, use the **OCP by material** index. On a file page, use **Raw / download raw file** to save the complete file; keep its metadata and license. See the [download guide](docs/DATA_ACCESS.md) for examples.
+
+<!-- DATA_QUICKLINKS_START -->
+
+| Cell / study entry | OCP | Other parameters | Full-cell tests | Match level |
+|---|---|---|---|---|
+| [LG M50 &#124; 5 Ah NMC811/graphite-SiOx](data/cells/lg-m50.md) | [2 records](data/cells/lg-m50.md#ocp-curves) | [38 records](data/cells/lg-m50.md#parameters) | [3 files](data/cells/lg-m50.md#full-cell-tests) | `same_model_same_study` |
+| [Undisclosed LFP/graphite 18650, 2 Ah (BPX)](data/cells/bpx-lfp-18650-2ah-undisclosed.md) | [2 records](data/cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [46 records](data/cells/bpx-lfp-18650-2ah-undisclosed.md#parameters) | Not imported | `unmatched` |
+| [A123 AMP20M1HD-A &#124; 20 Ah LFP pouch](data/cells/a123-amp20m1hd-a.md) | Not linked | [30 records](data/cells/a123-amp20m1hd-a.md#parameters) | [1 file](data/cells/a123-amp20m1hd-a.md#full-cell-tests) | `same_model_same_study` |
+| [A123 high-power LFP pouch &#124; 9 Ah &#124; part undisclosed](data/cells/a123-high-power-pouch-9ah.md) | Not linked | Not imported | [10 files](data/cells/a123-high-power-pouch-9ah.md#full-cell-tests) | `same_study_cell_family` |
+| [SLPB78205130H &#124; LCO/graphite &#124; 0.680616 Ah model input](data/cells/kokam-slpb78205130h-marquis2019.md) | [2 records](data/cells/kokam-slpb78205130h-marquis2019.md#ocp-curves) | [38 records](data/cells/kokam-slpb78205130h-marquis2019.md#parameters) | Not imported | `parameter_set_only` |
+| [UMBL Mohtat2020 &#124; 5 Ah NMC/graphite research pouch](data/cells/mohtat2020-nmc532-pouch.md) | [4 records](data/cells/mohtat2020-nmc532-pouch.md#ocp-curves) | [71 records](data/cells/mohtat2020-nmc532-pouch.md#parameters) | [5 files](data/cells/mohtat2020-nmc532-pouch.md#full-cell-tests) | `same_study_cell_family` |
+| [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](data/cells/kim2011-nca-nominal-design.md) | [2 records](data/cells/kim2011-nca-nominal-design.md#ocp-curves) | [38 records](data/cells/kim2011-nca-nominal-design.md#parameters) | Not imported | `unmatched` |
+| [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](data/cells/kokam-slpb75106100-ecker2015.md) | [2 records](data/cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [38 records](data/cells/kokam-slpb75106100-ecker2015.md#parameters) | [2 files](data/cells/kokam-slpb75106100-ecker2015.md#full-cell-tests) | `same_model_same_study` |
+| [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](data/cells/enertech-lco-pouch-ai2020.md) | [2 records](data/cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [38 records](data/cells/enertech-lco-pouch-ai2020.md#parameters) | [4 files](data/cells/enertech-lco-pouch-ai2020.md#full-cell-tests) | `same_study_cell_family` |
+
+<!-- DATA_QUICKLINKS_END -->
+
+Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaMM parameter variants; choose one. Generated formula samples are labeled and are not measurements.
+
 **Get involved:** [Contribute data](templates/README.md) · [Suggest a source](.github/ISSUE_TEMPLATE/source-suggestion.md) · [Research collaboration](#maintainer-and-collaboration)
+
+<details>
+<summary>Detailed material coverage and cell-matching evidence</summary>
 
 ## Material coverage
 
@@ -63,6 +90,8 @@ The [official PyBaMM release notes](https://github.com/pybamm-team/pybamm-data/r
 
 **Mohtat data are now available in the catalog.** The [official open-access page](https://deepblue.lib.umich.edu/data/concern/data_sets/kp78gg60j) was accessible through a normal browser, and all ten original files were downloaded. Earlier HTTP 403 responses described an automated-access failure. The five charging exports contain measured voltage and temperature against capacity, but no exported current or original timestamps. Author/PyBaMM differences and source protocol conflicts are detailed in [the Mohtat audit](docs/MOHTAT2020.md).
 
+</details>
+
 ## Install and browse
 
 Use Python 3.10+; Python 3.12 is recommended.
@@ -72,7 +101,7 @@ git clone https://github.com/FrankSuperG/electrochemical-battery-parameters.git
 cd electrochemical-battery-parameters
 python3.12 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e '.[dev]'
+python -m pip install -e .
 ebp validate
 ebp serve
 ```

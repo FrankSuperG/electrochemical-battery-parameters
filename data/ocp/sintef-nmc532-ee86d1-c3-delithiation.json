@@ -1,0 +1,167 @@
+{
+  "record": {
+    "id": "sintef-nmc532-ee86d1-c3-delithiation",
+    "version": "1",
+    "title": "NMC532 | NMC532-NMP-1 | ee86d1 | cycle 3 | delithiation",
+    "parameter": "electrode_ocp",
+    "material": "NMC532",
+    "material_id": "sintef-nmc532-nmp-1",
+    "electrode_role": "positive",
+    "direction": "delithiation",
+    "measurement": "pseudo_ocp",
+    "temperature": {
+      "value_K": null,
+      "description": "Room temperature (source); numeric setpoint unavailable."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "normalized_branch_capacity",
+      "symbol": "q_branch",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "(Q-Q_first)/(Q_last-Q_first) within this branch, increasing with test progress in both directions. Not absolute stoichiometry or whole-cell SOC.",
+      "domain_basis": "Independent normalization of retained measured branch endpoints."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/sintef-nmc532-ee86d1-c3-delithiation.csv",
+      "sha256": "fe8f9c50694146b7b5facca0e044294fbcca6cb76b3ae8b06453c8caa395fbc4",
+      "point_count": 21334,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "sintef-2026-v3"
+    ],
+    "experiment_id": "sintef-nmc532-ee86d1-pocv",
+    "cell_link": {
+      "cell_id": null,
+      "relationship": "material_only",
+      "evidence": "No commercial cell identity established for this record."
+    },
+    "provenance": {
+      "asset_ids": [
+        "sintef-nmc532-ee86d1",
+        "sintef-metadata"
+      ],
+      "derivation": "constant_current_branch_extraction",
+      "location": "cycle=3; step=2; source_row is the zero-based Parquet row coordinate",
+      "processing": {
+        "script": "scripts/seed_materials.py",
+        "cycle": 3,
+        "step": 2,
+        "input_branch_points": 21334,
+        "retained_points": 21334,
+        "duplicate_capacity_points_removed": 0,
+        "capacity_first_Ah": 5e-10,
+        "capacity_last_Ah": 0.005657752,
+        "mean_current_A": 9.547775914971407e-05,
+        "direction_rule": "Li-metal half-cell: positive current with rising potential = delithiation; negative current with falling potential = lithiation.",
+        "smoothing": "none",
+        "resampling": "none",
+        "potential_changes": "none; source floating-point values preserved",
+        "rest_steps": "excluded; finite-current pseudo-OCP, not GITT equilibrium points"
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "relative_capacity_only",
+      "raw_data": "external_checksum_pinned",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "C/50 pseudo-OCP includes finite-current polarization and is not claimed to be an equilibrium curve.",
+      "Absolute stoichiometry and commercial full-cell association are unresolved.",
+      "Branches are independently normalized; endpoints are not assumed to represent equal lithium content.",
+      "Repeated specimens and branches are from one dataset, not independent literature sources."
+    ],
+    "license": "CC-BY-4.0"
+  },
+  "sources": {
+    "sintef-2026-v3": {
+      "kind": "dataset",
+      "title": "Half-Cell Open-Circuit Voltage of Several Lithium-Ion Battery Active Materials Measured under Various Electrochemical Protocols",
+      "authors": [
+        "Eibar Flores",
+        "Sridevi Krishnamurthi",
+        "Killian Stokes-Rodriguez",
+        "Julie Cathrine Guldahl",
+        "Charifa Hakim",
+        "Simon Clark",
+        "Nils Peter Wagner",
+        "Sergi Obrador",
+        "Andr\u00e9s Bernabeu Santisteban"
+      ],
+      "year": 2026,
+      "doi": "10.5281/zenodo.20086298",
+      "url": "https://zenodo.org/records/20086298",
+      "version": "v3",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Zenodo record API metadata.license.id=cc-by-4.0, checked 2026-10-16",
+      "role": "Raw measured half-cell time series and electrode metadata."
+    }
+  },
+  "experiment": {
+    "source_id": "sintef-2026-v3",
+    "asset_id": "sintef-nmc532-ee86d1",
+    "sample_id": "ee86d1",
+    "configuration": "Active electrode versus lithium metal, laboratory R2032 half-cell",
+    "protocol": "p-OCV: C/50 constant current; 8 h rest at upper/lower cutoffs",
+    "cycle_selected": 3,
+    "cycle_selection_reason": "Fixed third recorded cycle for all selected specimens; not selected by fit quality.",
+    "temperature_K": null,
+    "temperature_description": "Room temperature in source; numeric setpoint unavailable.",
+    "electrode_metadata": {
+      "BDF names": "sintef__sintef-nmc532-R2032-gelon-ee86d1__20250625__p-ocv__RT.bdf.parquet",
+      "Active Material type": "NMC532",
+      "Start Date YYYYMMDD": 20250625,
+      "Public Labels": "NMC532-NMP-1",
+      "Cycling Programme name": "p-OCV",
+      "Mass of Active Material / mg": 31.402434,
+      "Electrode Coating Mass / g": 0.032500967,
+      "Weight percentage of Active Material / %": 96.62,
+      "Theoretical Capacity /  mAh g-1": null,
+      "Electrode Diameter / mm": 14,
+      "Dry Thickness / um": 96,
+      "Nominal Areal Capacity / mAh cm-2": 3.1,
+      "Electrode Loading / g cm-2": 0.0204,
+      "Known Issues": null
+    },
+    "known_issues": []
+  },
+  "upstream_assets": {
+    "sintef-nmc532-ee86d1": {
+      "filename": "sintef__sintef-nmc532-R2032-gelon-ee86d1__20250625__p-ocv__RT.bdf.parquet",
+      "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-nmc532-R2032-gelon-ee86d1__20250625__p-ocv__RT.bdf.parquet/content",
+      "md5": "5d99b4fbaf00fd8729a90e35a29f6588",
+      "source_id": "sintef-2026-v3",
+      "license": "CC-BY-4.0",
+      "material": "NMC532",
+      "public_label": "NMC532-NMP-1",
+      "electrode_role": "positive",
+      "sha256": "5c582ea90ad431f1e34cc4aa30d5c614e706642f50e80385e9c9ac7dfe673ef9"
+    },
+    "sintef-metadata": {
+      "source_id": "sintef-2026-v3",
+      "filename": "metadata.csv",
+      "url": "https://zenodo.org/api/records/20086298/files/metadata.csv/content",
+      "md5": "daa9d9229c6fbe53cf099ea1a9645a9d",
+      "sha256": "b966c2d7e783f05432f1f9fbb3fa59c7a2fe2aadc1f3a53a124381f835b1efac",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}
