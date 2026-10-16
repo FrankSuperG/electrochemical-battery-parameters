@@ -7,9 +7,9 @@ third-party experimental observations or formula implementations.
 |---|---|---|
 | `src/ebp/data/curves/sintef-*.csv` | Eibar Flores, Sridevi Krishnamurthi, Killian Stokes-Rodriguez, Julie Cathrine Guldahl, Charifa Hakim, Simon Clark, Nils Peter Wagner, Sergi Obrador, Andrés Bernabeu Santisteban; SINTEF and collaborators; Zenodo record 20086298 v3 | CC BY 4.0 |
 | SINTEF experimental and electrode metadata | Same dataset and authors | CC BY 4.0 |
-| `src/ebp/data/full_cell/*.csv`, originals and normalized derivatives | Chang-Hui Chen, Ferran Brosa Planella, Kieran O'Regan, Dominika Gastol, W. Dhammika Widanage, Emma Kendrick; Zenodo record 4032561 | CC BY 4.0 |
+| `src/ebp/data/full_cell/lg-m50-*.csv`, originals and normalized derivatives | Chang-Hui Chen, Ferran Brosa Planella, Kieran O'Regan, Dominika Gastol, W. Dhammika Widanage, Emma Kendrick; Zenodo record 4032561 | CC BY 4.0 |
 | Two formula expressions and their generated samples | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 `Prada2013.py` | BSD-3-Clause |
-| Non-OCP numeric parameters and kinetics expressions | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 `Chen2020.py`; Chen et al. 2020 and references therein | BSD-3-Clause |
+| LG M50 non-OCP numeric parameters and kinetics expressions | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 `Chen2020.py`; Chen et al. 2020 and references therein | BSD-3-Clause |
 | Original software, schemas and explanatory documentation | FrankSuperG | MIT |
 
 SINTEF dataset: https://doi.org/10.5281/zenodo.20086298
@@ -27,7 +27,7 @@ Formula implementation: https://github.com/pybamm-team/PyBaMM/blob/v25.4.2/src/p
 Formula changes: renamed `sto` to `x`, removed the NumPy namespace, and retained
 the original coefficients. Scientific attribution is Afshar et al. (2017) for LFP
 and Chen et al. (2020) for graphite, as stated in that upstream file. The original
-papers' formula equations have not been independently audited in v0.1.
+papers' formula equations have not been independently audited in this release.
 
 LG M50 full-cell data: https://doi.org/10.5281/zenodo.4032561
 
@@ -47,3 +47,42 @@ entry is a directly measured property of the same physical specimen.
 License texts are distributed in `src/ebp/licenses/` and copied into the local
 viewer. Keep attribution, source links and change notices when redistributing
 data or generated exports. Each record carries its own license identifier.
+
+## LFP expansion in v0.2
+
+| Content | Attribution / source | License |
+|---|---|---|
+| `a123-amp20-*.csv` and Table 1 evidence / parameters | Jie Lin, Howie N. Chu, David A. Howey, Charles W. Monroe; 2022 paper and Oxford ORA deposit, DOI 10.5287/bodleian:NGQkq49wG | CC BY 4.0 |
+| Model radius provenance | University of Oxford and multiscale-coupling developers; pinned `Battery_model.m` | BSD-2-Clause |
+| `a123-9ah-*.csv` | Oxford high-power pouch-cell researchers; ORA deposit, DOI 10.5287/ora-eonzaxjpm | CC BY 4.0 |
+| BPX LFP example OCP expressions, scalar inputs and generated samples | Copyright (c) 2022 University of Oxford; About:Energy parameterization; pinned FaradayInstitution/BPX example | MIT |
+| E-BatP companion logo | Original project identity generated with ImageGen; generation brief in `assets/README.md` | MIT |
+
+The earlier full-cell CSV attribution to Chen applies specifically to `lg-m50-*`
+files, not to the Oxford additions above. Likewise, the PyBaMM parameter license
+applies to LG M50 inputs, not every scalar in the expanded catalog.
+
+Oxford changes: selected one AMP20 full-discharge MAT and ten 9 Ah CC MAT members;
+retained signed current, voltage and all source time rows; converted temperatures
+from Celsius to kelvin; expressed documented 1 Hz sample indices as relative
+seconds; left absent ambient temperatures empty. Source NaNs become empty CSV
+fields with missing counts. For AMP20, temperature is the arithmetic mean of the
+provided thermal grid without an additional ROI. For the 9 Ah data, ambiguity in
+the fourth column's sensor/ROI description is retained. Large MAT/ZIP originals
+remain external, checksum-pinned downloads. No smoothing or imputation is applied.
+The dataset copyright notices are preserved verbatim in
+`Oxford-Lin2022-data-notice.txt` and `Oxford-9Ah-data-notice.txt`.
+
+Table 1 changes: transcribed the nine This work rows at three SOCs, converted
+units explicitly, and derived three conditional diffusivities from a fitted time
+and the source model's assumed radius. The local transcription hash identifies
+our evidence JSON, not the publisher HTML. These are effective model parameters,
+not new independent measurements.
+
+BPX changes: copied two expressions verbatim, limited them to supplied operating
+stoichiometry bounds, and transcribed numeric scalar fields. Estimated thermal
+properties and borrowed sources are disclosed. Other functional fields are not
+imported. `BPX-MIT.txt` preserves its license; `Oxford-BSD-2-Clause.txt` preserves
+the multiscale model license. Related 9 Ah OCP workbooks with unresolved reuse
+licensing are linked as external references only. Source authors have not
+endorsed this project.

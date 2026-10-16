@@ -1,0 +1,76 @@
+# Data repository for 'Electrochemical-thermal modelling of high power Li-ion pouch cells'
+
+## Description
+This dataset contains experimental results from comprehensive lock-in thermography performed on a large-format Li-ion (LFP/Gr) pouch cell across a wide range of operating conditions. Measurements include constant-current charge/discharge tests and pulse-testing protocols conducted at multiple states of charge and C-rates from 1C to 10C. These experiments were designed to characterise the cell’s thermal behaviour and electrochemical performance under high-power operation. The dataset accompanies our publication, “Electrochemical-thermal modelling of high power Li-ion pouch cells” (Journal of Power Sources, 2026; DOI: 10.1016/j.jpowsour.2025.238764), and the PhD thesis by M. E. Wojtala (2023), Degradation and thermal performance of Li-ion batteries: implications for electric vehicles (University of Oxford; DOI: 10.5287/ora-vj4g0a82q).
+
+## Authors
+Volkan Kumtepeli^1, Malgorzata E. Wojtala^1, Eloise C. Tredenick^{1,2,3}, Charles W. Monroe^{1,2}, David A. Howey^{1,2,‡}  
+
+1 Department of Engineering Science, University of Oxford, OX1 3PJ, UK
+2 The Faraday Institution, Harwell Campus, Didcot, OX11 0RA, UK
+3 Faculty of Science and Technology, University of Canberra, 2617, Bruce, Australia
+‡ Corresponding author
+
+## Date of data collection
+October 2022
+
+## Methodology
+The experimental setup combined lock-in thermoghraphy and electrical testing to capture the electrical and thermal responses simultaneously. Data collection involved:
+- Constant-current charge/discharge experiments at various C-rates (2C, 4C, 6C, 8C, 10C)
+- Pulse testing protocols at different SOC levels (30%, 50%, 70%) with varying C-rates and durations
+- Synchronised measurement of voltage, current, reference temperature and thermal imaging data
+- Data acquisition at 1 Hz sampling rate for temporal synchronisation
+
+## File overview
+The dataset comprises 19 MATLAB files organized into two main categories:
+
+### Constant current (CC) experiments (10 files):
+- **CC2Cch.mat**: 2C constant current charge experiment
+- **CC2Cdch.mat**: 2C constant current discharge experiment
+- **CC4Cch.mat**: 4C constant current charge experiment
+- **CC4Cdch.mat**: 4C constant current discharge experiment
+- **CC6Cch.mat**: 6C constant current charge experiment
+- **CC6Cdch.mat**: 6C constant current discharge experiment
+- **CC8Cch.mat**: 8C constant current charge experiment
+- **CC8Cdch.mat**: 8C constant current discharge experiment
+- **CC10Cch.mat**: 10C constant current charge experiment
+- **CC10Cdch.mat**: 10C constant current discharge experiment
+
+### Pulse testing experiments (9 files):
+- **Pulse30SOC2C100s.mat**: 30% SOC, 2C rate, 100-second pulse
+- **Pulse30SOC4C100s.mat**: 30% SOC, 4C rate, 100-second pulse
+- **Pulse30SOC8C50s.mat**: 30% SOC, 8C rate, 50-second pulse
+- **Pulse50SOC2C100s.mat**: 50% SOC, 2C rate, 100-second pulse
+- **Pulse50SOC4C100s.mat**: 50% SOC, 4C rate, 100-second pulse
+- **Pulse50SOC8C50s.mat**: 50% SOC, 8C rate, 50-second pulse
+- **Pulse70SOC2C100s.mat**: 70% SOC, 2C rate, 100-second pulse
+- **Pulse70SOC4C100s.mat**: 70% SOC, 4C rate, 100-second pulse
+- **Pulse70SOC8C50s.mat**: 70% SOC, 8C rate, 50-second pulse
+
+## Data format
+All data files are in MATLAB `.mat` binary format. Each file contains two variables:
+- **ExpIR**: Infrared thermal imaging data (x × y × t matrix where x, y are spatial dimensions and t is time)
+- **Expivium**: Electrical data containing columns: index, voltage, current, reference temperature measurements synchronised to 1 Hz timebase.
+
+## Keywords
+Large-format Li-ion battery data, lock-in thermography, thermal imaging, constant current, pulse testing, high C-rate, infrared imaging
+
+## Contact information
+For questions about this dataset, please contact:
+David Howey
+david.howey@eng.ox.ac.uk
+Department of Engineering Science
+University of Oxford
+
+## Acknowledgements
+VK was funded by the EPSRC DIGEST project (ref. EP/W027321/1), UKRI's Horizon Europe Guarantee (ref. 10107050), and the Horizon EU DigiBatt project (ref. 101103997). ET acknowledges funding for this work that was partially provided for by the Faraday Institution project `Nextrode - next generation electrodes` (grant number FIRG015 and FIRG066).
+
+## License and copyright
+These data are copyright (c) 2022, 2025 The Chancellor, Masters and Scholars of the University of Oxford and the authors named in this document. All rights reserved.
+
+This dataset is made available under the Creative Commons Attribution 4.0 (CC BY 4.0) International License (https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt the data but you must give appropriate credit to the authors, linking to this repository and their related publications.
+
+THIS DATA IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DATA, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+## Version history
+- v1.0: Initial dataset release

@@ -1,39 +1,263 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "title":"Non-OCP parameters and linked full-cell tests v0.1",
-  "type":"object", "required":["parameters","full_cell_tests"], "additionalProperties":false,
-  "properties":{
-    "parameters":{"type":"array","items":{"$ref":"#/$defs/parameter"}},
-    "full_cell_tests":{"type":"array","items":{"$ref":"#/$defs/test"}}
-  },
-  "$defs":{
-    "parameter":{
-      "type":"object","additionalProperties":false,
-      "required":["id","version","cell_id","category","name","unit","representation","source_ids","provenance","license","independent_validation","limitations"],
-      "properties":{
-        "id":{"type":"string","pattern":"^[a-z][a-z0-9-]+$"},"version":{"type":"string"},"cell_id":{"type":"string"},
-        "category":{"enum":["geometry","electrode","thermal","operating_limits","initial_state","kinetics"]},
-        "name":{"type":"string"},"unit":{"type":"string"},
-        "representation":{"oneOf":[
-          {"type":"object","additionalProperties":false,"required":["kind","value"],"properties":{"kind":{"const":"scalar"},"value":{"type":"number"}}},
-          {"type":"object","additionalProperties":false,"required":["kind","expression","variables","domain","gas_constant_J_mol_K"],"properties":{"kind":{"const":"expression"},"expression":{"type":"string"},"variables":{"type":"object","required":["c_e","c_s_surf","c_s_max","T"],"additionalProperties":{"type":"string"}},"domain":{"type":"string"},"gas_constant_J_mol_K":{"type":"number"}}}
-        ]},
-        "source_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string"}},
-        "provenance":{"type":"object","additionalProperties":false,"required":["asset_id","location","origin_status"],"properties":{"asset_id":{"type":"string"},"location":{"type":"string"},"origin_status":{"type":"string"}}},
-        "license":{"const":"BSD-3-Clause"},"independent_validation":{"const":false},"limitations":{"type":"array","minItems":1,"items":{"type":"string"}}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Non-OCP parameters and linked full-cell tests v0.2",
+  "type": "object",
+  "required": [
+    "parameters",
+    "full_cell_tests"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/parameter"
       }
     },
-    "test":{
-      "type":"object",
-      "required":["id","cell_id","sample_id","asset_id","source_id","path","normalized_path","normalized_sha256","current_convention","processing","license","protocol","relationship_to_parameters","evidence","independent_validation_by_this_project","row_count","columns","discharge_segments","format"],
-      "properties":{
-        "id":{"type":"string"},"cell_id":{"type":"string"},"sample_id":{"type":"string"},"asset_id":{"type":"string"},"source_id":{"type":"string"},
-        "path":{"type":"string","pattern":"^full_cell/LGM50_cell0[234]\\.csv$"},
-        "normalized_path":{"type":"string","pattern":"^full_cell/LGM50_cell0[234]-normalized\\.csv$"},
-        "normalized_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},
-        "license":{"const":"CC-BY-4.0"},"relationship_to_parameters":{"const":"same_model_same_study"},
-        "independent_validation_by_this_project":{"const":false},"row_count":{"type":"integer","minimum":1},
-        "columns":{"type":"array","minItems":1},"discharge_segments":{"type":"array","minItems":1}
+    "full_cell_tests": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/test"
+      }
+    }
+  },
+  "$defs": {
+    "parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "cell_id",
+        "category",
+        "name",
+        "unit",
+        "representation",
+        "source_ids",
+        "provenance",
+        "license",
+        "independent_validation",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "version": {
+          "type": "string"
+        },
+        "cell_id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "geometry",
+            "electrode",
+            "thermal",
+            "operating_limits",
+            "initial_state",
+            "kinetics",
+            "diffusion",
+            "transport",
+            "thermodynamics"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "representation": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "value"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "scalar"
+                },
+                "value": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "expression",
+                "variables",
+                "domain",
+                "gas_constant_J_mol_K"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "expression"
+                },
+                "expression": {
+                  "type": "string"
+                },
+                "variables": {
+                  "type": "object",
+                  "required": [
+                    "c_e",
+                    "c_s_surf",
+                    "c_s_max",
+                    "T"
+                  ],
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "domain": {
+                  "type": "string"
+                },
+                "gas_constant_J_mol_K": {
+                  "type": "number"
+                }
+              }
+            }
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "asset_id",
+            "location",
+            "origin_status"
+          ],
+          "properties": {
+            "asset_id": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "origin_status": {
+              "type": "string"
+            }
+          }
+        },
+        "license": {
+          "enum": [
+            "BSD-3-Clause",
+            "BSD-2-Clause",
+            "MIT",
+            "CC-BY-4.0"
+          ]
+        },
+        "independent_validation": {
+          "const": false
+        },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditions": {
+          "type": "object"
+        },
+        "definition": {
+          "type": "string"
+        }
+      }
+    },
+    "test": {
+      "type": "object",
+      "required": [
+        "id",
+        "cell_id",
+        "sample_id",
+        "asset_id",
+        "source_id",
+        "path",
+        "normalized_path",
+        "normalized_sha256",
+        "current_convention",
+        "processing",
+        "license",
+        "protocol",
+        "relationship_to_parameters",
+        "evidence",
+        "independent_validation_by_this_project",
+        "row_count",
+        "columns",
+        "discharge_segments",
+        "format"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "cell_id": {
+          "type": "string"
+        },
+        "sample_id": {
+          "type": "string"
+        },
+        "asset_id": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        },
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^full_cell/[A-Za-z0-9._-]+\\.csv$"
+        },
+        "normalized_path": {
+          "type": "string",
+          "pattern": "^full_cell/[A-Za-z0-9._-]+\\.csv$"
+        },
+        "normalized_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "license": {
+          "const": "CC-BY-4.0"
+        },
+        "relationship_to_parameters": {
+          "enum": [
+            "same_model_same_study",
+            "same_study_cell_family"
+          ]
+        },
+        "independent_validation_by_this_project": {
+          "const": false
+        },
+        "row_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "columns": {
+          "type": "array",
+          "minItems": 1
+        },
+        "discharge_segments": {
+          "type": "array",
+          "minItems": 0
+        }
       }
     }
   }

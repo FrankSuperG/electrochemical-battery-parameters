@@ -1,71 +1,47 @@
-# v0.1 整理与来源审计
+# Curation and evidence decisions
 
-审查日期：2026-10-16。原始资产 URL、来源版本、MD5 和 SHA-256 见
-`src/ebp/data/assets.json`；所有操作由 `scripts/seed_v01.py` 复现。
+All source assets are pinned by URL/version and SHA-256. Reconstruct the complete catalog with `python scripts/seed_v01.py --download`. This runs the base extraction, LG M50 importer and LFP expansion. Cached originals are excluded from Git. Published facts, implementation values and generated observations retain distinct provenance.
 
-## SINTEF 半电池
+## SINTEF half-cell branches
 
-- 固定 Zenodo record **20086298 / v3**；通过 API 元数据确认 CC BY 4.0。
-- LFP 样品：`d07eb6`、`178617`；石墨样品：`1d5628`、`4ccc47`。
-- 协议：p-OCV，C/50，电压上下限处静置 8 小时。选择第 3 个记录循环，
-  Step 2 和 Step 4 的连续恒流段，排除静置段。没有使用数据质量或拟合误差
-  挑选循环。这四个样品的来源元数据均未列出 known issues。
-- Li 金属半电池中，这些分支的正电流对应工作电极电位上升／脱锂，负电流
-  对应电位下降／嵌锂；逐分支检查电流符号与电位起止趋势一致。
-- 完整保留所有唯一容量点、电压、电流、测试时间和原始行位置。没有平滑、
-  拟合或稀疏化；重复容量值保留首点，计数写入每条记录。
-- 只生成分支相对容量轴，不以理论比容量、质量或简单归一化声称获得绝对 θ。
-- 温度仅记为“室温”，数值为空。商业电极供应商不是商业全电池型号。
-- 两个样品用于展示重复性，但本版不估计总体分布、误差带或置信区间。
+Zenodo record 20086298 v3 supplies CC BY 4.0 measurements and electrode metadata. Four p-OCV Parquet files cover two LFP and two graphite specimens. The importer selects cycle 3 and its two constant-current branches, excludes rest, and retains the first occurrence of repeated capacity coordinates. It creates a branch-relative throughput coordinate without claiming absolute stoichiometry. Source row positions, voltages, current, time and capacity are retained; no voltage smoothing is applied.
 
-上游全数据集包括 GITT 等其他协议；本版只导入四个 p-OCV 文件，未声称
-已整理其全部 95 个文件或全量电化学表征。
+Room temperature is recorded without inventing a numeric value. Commercial electrode suppliers do not establish commercial full-cell models. The two specimens support inspection of repeatability, not an inferred population distribution. Other protocols in the upstream deposit, including GITT, have not been imported.
 
-## 文献公式
+## PyBaMM formulas and LG M50
 
-固定 PyBaMM **v25.4.2** `Prada2013.py` 源码，通过 SHA-256 锁定。
+Fixed PyBaMM v25.4.2 `Prada2013.py` explicitly borrows `LFP_ocp_Afshar2017` and `graphite_LGM50_ocp_Chen2020`. Scientific attribution is per function. Transcription changes variable naming and NumPy prefixes while preserving coefficients. These implementations are compared numerically to the pinned code; the original papers' fit points and equations have not been independently audited.
 
-- `LFP_ocp_Afshar2017`：LFP OCP 科学归属 Afshar2017。
-- `graphite_LGM50_ocp_Chen2020`：LG M50 负极 OCP 科学归属 Chen2020。
+The fixed `Chen2020.py` contributes 36 numeric scalars and two exchange-current functions. The dictionary is inspected with AST rather than executed by the importer. Values are labeled upstream implementation inputs; individual measurement/fit/borrowing origins remain unaudited. SEI examples and borrowed Nyman electrolyte functions are excluded. The gas constant used for kinetics is explicitly 8.314462618 J/(mol·K).
 
-上游明确说明 Prada2013 没有提供这两条 OCP，因而借用其他来源。转录仅改动
-自变量名称和 NumPy 函数前缀。数值测试与固定源码中的两条函数对照。
-本版没有独立审计原论文的公式或拟合点，也不为函数补写温度和拟合有效区间。
+Zenodo 4032561 v1 provides the three LG M50 validation CSVs under CC BY 4.0. Originals are byte-preserved. Normalization skips 13 instrument-banner lines, interprets magnitude current using `Md=C/D`, converts Celsius to K, and retains source coordinates. Duplicate timestamps remain. The viewer selects steps 7/12/17/22, excluding initial preconditioning step 2, and decimates only for display. The paper and deposit establish same model / same study, not same specimen.
 
-公式是模型函数，不是新实测数据。即使采样为 CSV，也继续保留此来源与表示类型。
+## A123 AMP20M1HD-A: fitted parameters and full discharge
 
-## 候选来源与暂缓项
+[Lin et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/) explicitly names the A123 AMP20M1HD-A 20 Ah LFP/graphite pouch cell. Its [ORA deposit](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513) and source notice permit reuse under CC BY 4.0. The selected full-discharge MAT contains synchronized voltage, signed current and a calibrated thermal grid on a documented 1 Hz timebase. Relative time starts at zero. The normalized temperature is the arithmetic mean of the entire supplied grid, with no additional ROI mask. It is not labeled as a thermocouple or separate ambient trace.
 
-- [ISU–UConn LFP/Graphite](https://digitalcommons.lib.uconn.edu/reil_datasets/6/)
-  公开页面标注 CC BY 4.0，但本次工作簿及 README 下载端点返回 HTTP 403。
-  因此没有将未读取的工作簿编造成曲线或已入库数据。后续可由可访问的原始
-  文件补充，保持实验室扣式电池身份。
-- Chen2020 验证数据 [Zenodo 4032561](https://zenodo.org/records/4032561)
-  已按同研究、同型号关联入库，见下文。该记录仅说明三只 LG M50 的全电池
-  验证测试，不能据此认为论文中所有半电池与材料表征原始数据均已公开。
-- LiionDB 是后续文献发现入口；尚未批量导入其内容，避免重复统计及来源链丢失。
+The importer transcribes the nine rows in Table 1's **This work** columns at 30/50/70% initial SOC into 27 records. Units are converted explicitly, including A/cm³ → A/m³, kJ/mol → J/mol and µm/s → m/s. The local JSON transcription, location and SHA-256 are separate evidence. The model's effective conductivity scaling and kinetics definitions remain attached. Table 1 results correspond to one cell; its letter is not established here, so matching to deposited Cell I stops at same-model/same-study.
 
-## 提交前检查
+Three derived diffusivities use the fitted shared time and the pinned implementation's assumed radius: `D = (5e-6 m)^2 / t_d`. They are conditional effective values shared by both electrodes, not three new measurements or independently identified intrinsic LFP coefficients. Radius and diffusivity are not independently identifiable from that time alone. `Main_Opt.m` starting guesses are deliberately excluded.
 
-检查来源、许可、轴定义、样品身份、数据变换、数据哈希和独立验证状态。
-自动测试可证实数据与实现的一致性，不能替代电化学合理性评审。
+C/25 full-cell pseudo-OCV is described in Methods, but measured electrode OCP points were not located in the selected deposit. The model convention assigns full-cell OCV to one electrode and zero to the other; that does not turn full-cell observations into measured half-cell OCPs. Local OCV gradients in Table 1 are scalar slopes, not a complete curve. The full-discharge experiment requires SOC-dependent OCV/entropy inputs beyond those local fits; this release does not reproduce the paper's model validation.
 
-## LG M50 其他参数与全电池测试
+## A123 high-power 9 Ah study family
 
-固定 PyBaMM v25.4.2 `Chen2020.py` 及其 SHA-256。使用 AST 读取返回字典中的
-36 项明确标量，避免执行远程源码；转录两条交换电流密度函数。逐条说明来源
-为上游实现值，原论文的直接测量／拟合／借用归属尚未逐项审计。暂不导入 SEI
-示例参数和源自 Nyman2008 的电解液函数，避免将它们误标成 Chen 的电芯实测。
+[Kumtepeli et al. (2026)](https://doi.org/10.1016/j.jpowsour.2025.238764) identifies a 9 Ah A123 LFP/graphite power pouch. The [linked ORA archive](https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758) provides ten CC charge/discharge MAT files at 2/4/6/8/10C under CC BY 4.0. Exact part number and per-file cell serial are unresolved: match level is same-study cell family. It is a different entry from AMP20 and the BPX example.
 
-固定 Zenodo record 4032561 / v1，API 确认 CC BY 4.0，下载 cell02、cell03、cell04
-三份 CSV，校验来源 MD5 并记录 SHA-256。原始文件原样分发。仪器文件前 13 行
-为说明，第 14 行为表头。`Current [A]` 是正幅值，`Md=C` 为充电、`Md=D` 为
-放电，其余模式必须为零电流；标准化输出显式采用充电正、放电负。温度由 °C
-转为 K，保留源文件零基行位置与 Rec 编号。测试时间非递减，重复时间点保留。
+`Expivium` supplies sample index, voltage, signed current and reported temperature. Time is the index minus its first value on the documented 1 Hz timebase. Current sign is checked against charge/discharge protocol. The fourth column is called reference temperature in the archived README and mean temperature in the related code README. Its exact sensor/ROI identity remains unresolved. Source NaNs, including trailing voltage/current gaps in two discharge files, become empty fields; every row is retained and missing values are counted. Browser previews use only valid voltage points; CSVs preserve missing rows.
 
-原始 Step 2 是初始预处理放电；网页展示 Step 7、12、17、22 的四段后续放电。
-倍率由该段平均电流除以 5 Ah 得到并保留两位小数，与来源说明核对。
-网页是实测数据展示，没有运行拟合、DFN 或独立验证。
+This model assumes fast diffusion; no finite fitted diffusivity is invented. The code's pseudo-OCV workbooks are indexed at a pinned commit but not redistributed because an explicit reuse license was not located. Electrode potentials allocated conventionally from full-cell pseudo-OCV are not electrode-resolved measurements. Kinetic fits are not transcribed in this release.
 
-关联证据来自数据集对 Chen2020 论文的显式补充关系和准确 LG M50 型号。
-关联级别为 `same_model_same_study`，不是 `same_sample` 或 `same_batch`。
+## Official BPX LFP 18650 example
+
+The [pinned BPX file](https://github.com/FaradayInstitution/BPX/blob/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json) is MIT licensed. Its header describes an About:Energy December 2022 parameterization based on cycling and electrode teardown. It identifies chemistry, format and 2 Ah capacity but no commercial part number or matching raw test files. Match status is explicitly unmatched.
+
+Two OCP expressions are transcribed verbatim and evaluated only inside the file's supplied operating stoichiometry limits. The positive expression has a large exponential coefficient; extrapolating it to θ=0 would be misleading. Forty-six numeric fields are imported with their BPX units and reference-temperature context. Rate constants in mol/(m²·s) keep the BPX definition and are not relabeled as exchange-current density. Thermal properties described as estimated remain marked. The header's borrowed electrolyte and entropy attributions are retained; non-OCP expressions and the entropy table are not yet imported. No complete BPX round-trip or full-cell prediction is claimed.
+
+## Deferred sources and validation
+
+The ISU–UConn LFP/graphite deposit was discovered previously, but its workbook/README endpoints returned HTTP 403. Unread files were not turned into records. LiionDB remains a discovery route rather than an imported source. Follow-up work should favor same-model LFP half-cell OCP, diffusion/kinetic experiments and reusable full-cell tests, recording licensing and exact identity before joining them.
+
+Automated checks establish source-value fidelity, checksums, reference integrity, scoped downloads and adapter behavior. They do not replace electrochemical review or an independent prediction experiment.

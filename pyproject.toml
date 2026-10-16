@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "electrochemical-battery-parameters"
-version = "0.1.0"
+version = "0.2.0"
 description = "Traceable electrode OCP curves and electrochemical battery parameters"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,7 +27,7 @@ Repository = "https://github.com/FrankSuperG/electrochemical-battery-parameters"
 where = ["src"]
 
 [tool.setuptools.package-data]
-ebp = ["data/*.json", "data/curves/*.csv", "data/full_cell/*.csv", "data/schema/*.json", "web/*", "licenses/*"]
+ebp = ["data/*.json", "data/curves/*.csv", "data/full_cell/*.csv", "data/evidence/*.json", "data/schema/*.json", "web/*", "licenses/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

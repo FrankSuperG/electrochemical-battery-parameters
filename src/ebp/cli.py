@@ -16,8 +16,13 @@ def main(argv=None):
     search.add_argument("query", nargs="?", default="")
     search.add_argument("--material")
     search.add_argument("--representation", choices=["table", "expression"])
-    search.add_argument("--direction", choices=["lithiation", "delithiation", "unspecified"])
+    search.add_argument(
+        "--direction", choices=["lithiation", "delithiation", "unspecified"]
+    )
     search.add_argument("--source")
+    search.add_argument(
+        "--cell", help="Filter by explicitly linked cell or parameter-example ID"
+    )
     search.add_argument("--json", action="store_true")
     show = sub.add_parser("show")
     show.add_argument("id")
@@ -52,9 +57,16 @@ def main(argv=None):
                 representation=args.representation,
                 direction=args.direction,
                 source=args.source,
+                cell_id=args.cell,
             )
             if args.json:
-                print(json.dumps([curve.record for curve in results], ensure_ascii=False, indent=2))
+                print(
+                    json.dumps(
+                        [curve.record for curve in results],
+                        ensure_ascii=False,
+                        indent=2,
+                    )
+                )
             else:
                 for curve in results:
                     record = curve.record
@@ -72,27 +84,43 @@ def main(argv=None):
                 args.query, cell_id=args.cell, category=args.category
             )
             if args.json:
-                print(json.dumps([p.record for p in parameters], ensure_ascii=False, indent=2))
+                print(
+                    json.dumps(
+                        [p.record for p in parameters], ensure_ascii=False, indent=2
+                    )
+                )
             else:
                 for p in parameters:
                     rep = p.record["representation"]
                     value = rep["value"] if rep["kind"] == "scalar" else "function"
-                    print(f"{p.record['name']:65} {str(value):15} {p.record['category']}")
+                    print(
+                        f"{p.record['name']:65} {str(value):15} {p.record['category']}"
+                    )
         elif args.command == "tests":
-            print(json.dumps(catalog.linked_tests(args.cell), ensure_ascii=False, indent=2))
+            print(
+                json.dumps(
+                    catalog.linked_tests(args.cell), ensure_ascii=False, indent=2
+                )
+            )
         elif args.command == "export":
             curve = catalog.get(args.id)
             if args.format == "json":
                 package = {
                     "record": curve.record,
-                    "sources": {sid: catalog.sources[sid] for sid in curve.record["source_ids"]},
-                    "experiment": catalog.experiments.get(curve.record["experiment_id"]),
+                    "sources": {
+                        sid: catalog.sources[sid] for sid in curve.record["source_ids"]
+                    },
+                    "experiment": catalog.experiments.get(
+                        curve.record["experiment_id"]
+                    ),
                     "upstream_assets": {
-                        aid: catalog.assets[aid] for aid in curve.record["provenance"]["asset_ids"]
+                        aid: catalog.assets[aid]
+                        for aid in curve.record["provenance"]["asset_ids"]
                     },
                 }
                 args.output.write_text(
-                    json.dumps(package, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                    json.dumps(package, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
                 )
             else:
                 curve.export_csv(args.output, count=args.count, method=args.method)
@@ -113,8 +141,12 @@ def main(argv=None):
             if args.command == "build-site":
                 print(args.output.resolve() / "index.html")
             else:
-                handler = partial(SimpleHTTPRequestHandler, directory=str(args.output.resolve()))
-                print(f"Private local preview: http://127.0.0.1:{args.port}", flush=True)
+                handler = partial(
+                    SimpleHTTPRequestHandler, directory=str(args.output.resolve())
+                )
+                print(
+                    f"Private local preview: http://127.0.0.1:{args.port}", flush=True
+                )
                 with ThreadingHTTPServer(("127.0.0.1", args.port), handler) as server:
                     try:
                         server.serve_forever()

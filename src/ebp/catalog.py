@@ -117,7 +117,9 @@ class Curve:
             if (direction == "lithiation" and delta <= 0) or (
                 direction == "delithiation" and delta >= 0
             ):
-                raise ValueError("Stoichiometry mapping disagrees with the electrode direction")
+                raise ValueError(
+                    "Stoichiometry mapping disagrees with the electrode direction"
+                )
         import pybamm
 
         if self.record["representation"]["kind"] == "table":
@@ -130,7 +132,9 @@ class Curve:
             x, y = x[order], y[order]
 
         def ocp(sto):
-            return pybamm.Interpolant(x, y, sto, interpolator="linear", extrapolate=False)
+            return pybamm.Interpolant(
+                x, y, sto, interpolator="linear", extrapolate=False
+            )
 
         ocp.ebp_metadata = {
             "record_id": self.id,
@@ -145,7 +149,9 @@ class Curve:
 
 class Catalog:
     def __init__(self, root=None):
-        self.root = Path(root) if root is not None else Path(str(files("ebp").joinpath("data")))
+        self.root = (
+            Path(root) if root is not None else Path(str(files("ebp").joinpath("data")))
+        )
         self.document = self._load("catalog.json")
         self.sources = self._load("sources.json")
         self.materials = self._load("materials.json")
@@ -165,9 +171,19 @@ class Catalog:
                 return Curve(record, self.root)
         raise KeyError(f"Unknown curve: {record_id}")
 
-    def search(self, query="", material=None, representation=None, direction=None, source=None):
+    def search(
+        self,
+        query="",
+        material=None,
+        representation=None,
+        direction=None,
+        source=None,
+        cell_id=None,
+    ):
         matches = []
         for record in self._records:
+            if cell_id and record["cell_link"]["cell_id"] != cell_id:
+                continue
             if material and record["material"].casefold() != material.casefold():
                 continue
             if representation and record["representation"]["kind"] != representation:
@@ -199,19 +215,25 @@ class Catalog:
     def linked_tests(self, cell_id):
         return [test for test in self.full_cell_tests if test["cell_id"] == cell_id]
 
-    def full_cell_data(self, test_id):
-        """Read the unchanged source CSV as rows, skipping the 13-line instrument banner.
+    def full_cell_data(self, test_id, normalized=False):
+        """Read CSV rows, retaining source or explicitly normalized column names.
 
-        Source current is magnitude plus Md=C/D mode, not signed current. Use
-        the explicit normalized CSV for a documented signed-current convention.
+        Maccor originals have an instrument banner. MAT/ZIP experiments expose
+        normalized CSV rows; their originals remain external checksum-pinned assets.
+        Pass normalized=True for the documented charge-positive current convention.
         """
         for test in self.full_cell_tests:
             if test["id"] == test_id:
-                path = (self.root / test["path"]).resolve()
+                use_normalized = normalized or test["path"] is None
+                path = (
+                    self.root / test["normalized_path" if use_normalized else "path"]
+                ).resolve()
                 if not path.is_relative_to(self.root.resolve()):
                     raise ValueError("Test path escapes the catalog")
                 with path.open(encoding="utf-8", newline="") as handle:
-                    for _ in range(13):
+                    for _ in range(
+                        0 if use_normalized else test.get("csv_header_rows", 13)
+                    ):
                         next(handle)
                     return list(csv.DictReader(handle))
         raise KeyError(f"Unknown full-cell test: {test_id}")
@@ -241,8 +263,16 @@ class Catalog:
         for aid, asset in self.assets.items():
             if asset.get("source_id") not in self.sources:
                 errors.append(f"asset {aid}: unknown source")
-            if not asset.get("sha256") or not asset.get("url", "").startswith("https://"):
+            if not asset.get("sha256") or not asset.get("url", "").startswith(
+                "https://"
+            ):
                 errors.append(f"asset {aid}: missing checksum or HTTPS URL")
+            if asset.get("path"):
+                local = (self.root / asset["path"]).resolve()
+                if not local.is_relative_to(self.root.resolve()) or not local.is_file():
+                    errors.append(f"asset {aid}: invalid local evidence path")
+                elif hashlib.sha256(local.read_bytes()).hexdigest() != asset["sha256"]:
+                    errors.append(f"asset {aid}: local evidence SHA-256 mismatch")
         for eid, experiment in self.experiments.items():
             if (
                 experiment.get("source_id") not in self.sources
@@ -270,24 +300,58 @@ class Catalog:
                     raise ValueError("Unknown parameter representation")
             except (ValueError, KeyError, SyntaxError, FloatingPointError) as exc:
                 errors.append(f"{p['id']}: {exc}")
+        test_ids = [t["id"] for t in self.full_cell_tests]
+        if len(test_ids) != len(set(test_ids)):
+            errors.append("Duplicate full-cell test IDs")
         for test in self.full_cell_tests:
             try:
-                if test["cell_id"] not in self.cells or test["source_id"] not in self.sources:
-                    raise ValueError("Unknown cell or source")
-                path = (self.root / test["path"]).resolve()
-                if not path.is_relative_to(self.root.resolve()):
-                    raise ValueError("Test path escapes the catalog")
                 if (
-                    hashlib.sha256(path.read_bytes()).hexdigest()
-                    != self.assets[test["asset_id"]]["sha256"]
+                    test["cell_id"] not in self.cells
+                    or test["source_id"] not in self.sources
+                    or test["asset_id"] not in self.assets
                 ):
-                    raise ValueError("Original full-cell file SHA-256 mismatch")
+                    raise ValueError("Unknown cell, source or asset")
+                if test["path"] is not None:
+                    path = (self.root / test["path"]).resolve()
+                    if not path.is_relative_to(self.root.resolve()):
+                        raise ValueError("Test path escapes the catalog")
+                    if (
+                        hashlib.sha256(path.read_bytes()).hexdigest()
+                        != self.assets[test["asset_id"]]["sha256"]
+                    ):
+                        raise ValueError("Original full-cell file SHA-256 mismatch")
                 if len(self.full_cell_data(test["id"])) != test["row_count"]:
                     raise ValueError("Full-cell row count mismatch")
+                rows = self.full_cell_data(test["id"], normalized=True)
+                if len(rows) != test["row_count"]:
+                    raise ValueError("Normalized row count mismatch")
+                time = np.array([float(r["time_s"]) for r in rows])
+                if not np.isfinite(time).all() or np.any(np.diff(time) < 0):
+                    raise ValueError("Invalid normalized timebase")
+                for column in (
+                    "voltage_V",
+                    "current_charge_positive_A",
+                    "cell_temperature_K",
+                ):
+                    if any(
+                        r[column] and not np.isfinite(float(r[column])) for r in rows
+                    ):
+                        raise ValueError(
+                            f"Invalid normalized {column}; missing values must be empty"
+                        )
+                    if (
+                        column in test.get("missing_values", {})
+                        and sum(not r[column] for r in rows)
+                        != test["missing_values"][column]
+                    ):
+                        raise ValueError(f"Missing count mismatch for {column}")
                 normalized = (self.root / test["normalized_path"]).resolve()
                 if not normalized.is_relative_to(self.root.resolve()):
                     raise ValueError("Normalized test path escapes the catalog")
-                if hashlib.sha256(normalized.read_bytes()).hexdigest() != test["normalized_sha256"]:
+                if (
+                    hashlib.sha256(normalized.read_bytes()).hexdigest()
+                    != test["normalized_sha256"]
+                ):
                     raise ValueError("Normalized full-cell SHA-256 mismatch")
             except (ValueError, KeyError, OSError) as exc:
                 errors.append(f"{test['id']}: {exc}")
@@ -299,6 +363,26 @@ class Catalog:
                 for tid in cell.get("full_cell_test_ids", [])
             ):
                 errors.append(f"cell {cid}: unknown linked full-cell test")
+            for key, expected in (
+                (
+                    "parameter_ids",
+                    {p["id"] for p in self.parameters if p["cell_id"] == cid},
+                ),
+                (
+                    "full_cell_test_ids",
+                    {t["id"] for t in self.full_cell_tests if t["cell_id"] == cid},
+                ),
+                (
+                    "ocp_record_ids",
+                    {
+                        r["id"]
+                        for r in self._records
+                        if r["cell_link"]["cell_id"] == cid
+                    },
+                ),
+            ):
+                if key in cell and set(cell[key]) != expected:
+                    errors.append(f"cell {cid}: {key} disagrees with record ownership")
         for record in self._records:
             rid = record["id"]
             for sid in record["source_ids"]:
@@ -324,7 +408,11 @@ class Catalog:
                     raise ValueError("Invalid domain")
                 if record["representation"]["kind"] == "table":
                     x, y = curve.points()
-                    if len(x) < 2 or not np.all(np.isfinite(x)) or not np.all(np.isfinite(y)):
+                    if (
+                        len(x) < 2
+                        or not np.all(np.isfinite(x))
+                        or not np.all(np.isfinite(y))
+                    ):
                         raise ValueError("Non-finite or insufficient table points")
                     if not np.all(np.diff(x) > 0):
                         raise ValueError("Table coordinates must strictly increase")
@@ -336,6 +424,12 @@ class Catalog:
                     if len(x) != record["representation"]["point_count"]:
                         raise ValueError("Point count mismatch")
                 curve.sample(101)
-            except (ValueError, OSError, KeyError, SyntaxError, FloatingPointError) as exc:
+            except (
+                ValueError,
+                OSError,
+                KeyError,
+                SyntaxError,
+                FloatingPointError,
+            ) as exc:
                 errors.append(f"{rid}: {exc}")
         return errors

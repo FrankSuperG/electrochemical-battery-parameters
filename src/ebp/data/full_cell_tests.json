@@ -219,6 +219,428 @@
         }
       ],
       "format": "original CSV + explicitly normalized CSV"
+    },
+    {
+      "id": "a123-amp20-cell-i-4c",
+      "cell_id": "a123-amp20m1hd-a",
+      "sample_id": "Cell I",
+      "asset_id": "lin2022-full-discharge",
+      "source_id": "lin-2022-data",
+      "path": null,
+      "original_member": null,
+      "normalized_path": "full_cell/a123-amp20-cell-i-4c-normalized.csv",
+      "normalized_sha256": "1a65ec5723d65b1205285cb0c7f703357460faa58ac95a8300e661c1f3dd1413",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Arithmetic mean of every pixel in the deposited calibrated thermal grid A, no additional ROI mask; degrees Celsius in source. Ambient temperature is not available as a separate trace.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "4C full discharge after CCCV charging and 1 h rest; 1 Hz source timebase",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Methods names AMP20M1HD-A; paper links the ORA dataset; archive filename identifies Cell I. Table 1 is for one cell but its letter is not explicitly established here, so a same-specimen parameter claim is withheld.",
+      "independent_validation_by_this_project": false,
+      "row_count": 827,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [
+        {
+          "step": 1,
+          "mean_discharge_current_A": 79.37120485774818,
+          "nominal_C_rate": 4,
+          "initial_preconditioning": false,
+          "points": 826
+        }
+      ],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-2c-ch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC2Cch.mat",
+      "normalized_path": "full_cell/a123-9ah-2c-ch-normalized.csv",
+      "normalized_sha256": "f2151c020d0523c2d0a739842e8a6540ce00f14cca01184184ceb60dd8d19a4d",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "2C constant-current charge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 1810,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-2c-dch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC2Cdch.mat",
+      "normalized_path": "full_cell/a123-9ah-2c-dch-normalized.csv",
+      "normalized_sha256": "c274254c5e40bcd593fc3edcdd73973536565066576bc0da3733b9cc2cf99696",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 1,
+        "voltage_V": 1,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "2C constant-current discharge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 1817,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [
+        {
+          "step": 1,
+          "mean_discharge_current_A": 17.39412441873278,
+          "nominal_C_rate": 2,
+          "initial_preconditioning": false,
+          "points": 1815
+        }
+      ],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-4c-ch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC4Cch.mat",
+      "normalized_path": "full_cell/a123-9ah-4c-ch-normalized.csv",
+      "normalized_sha256": "6e414ec02c70289db2a4465b64b40af42522829f0cb8cac6540b4b827b3089d8",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "4C constant-current charge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 892,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-4c-dch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC4Cdch.mat",
+      "normalized_path": "full_cell/a123-9ah-4c-dch-normalized.csv",
+      "normalized_sha256": "778dd868bc1f6d31e0f2842e2dae14cf2910fdf711a4c67b69f9c8c52e816bec",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "4C constant-current discharge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 911,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [
+        {
+          "step": 1,
+          "mean_discharge_current_A": 36.00634540266876,
+          "nominal_C_rate": 4,
+          "initial_preconditioning": false,
+          "points": 910
+        }
+      ],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-6c-ch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC6Cch.mat",
+      "normalized_path": "full_cell/a123-9ah-6c-ch-normalized.csv",
+      "normalized_sha256": "75ec0696892707e9c56f22b23a9076afdb3a78ec1d7bcd899db536f5863197a8",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "6C constant-current charge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 587,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-6c-dch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC6Cdch.mat",
+      "normalized_path": "full_cell/a123-9ah-6c-dch-normalized.csv",
+      "normalized_sha256": "1bc89f429112195de4c4eed77b11b3bb4186bb95eb48159eeb178de0cbd03c2e",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "6C constant-current discharge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 607,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [
+        {
+          "step": 1,
+          "mean_discharge_current_A": 53.998951097359736,
+          "nominal_C_rate": 6,
+          "initial_preconditioning": false,
+          "points": 606
+        }
+      ],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-8c-ch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC8Cch.mat",
+      "normalized_path": "full_cell/a123-9ah-8c-ch-normalized.csv",
+      "normalized_sha256": "b5b2d2a6ae2a22603d04ea5ea89d76cdb05a7266873590c9ddb0fed426b2ad3c",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "8C constant-current charge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 436,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-8c-dch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC8Cdch.mat",
+      "normalized_path": "full_cell/a123-9ah-8c-dch-normalized.csv",
+      "normalized_sha256": "27054621fd539fdb1e372203fa8f4ba8b181480f60b0d1c3900a7c1ccc5facc6",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "8C constant-current discharge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 455,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [
+        {
+          "step": 1,
+          "mean_discharge_current_A": 72.00309218993561,
+          "nominal_C_rate": 8,
+          "initial_preconditioning": false,
+          "points": 454
+        }
+      ],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-10c-ch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC10Cch.mat",
+      "normalized_path": "full_cell/a123-9ah-10c-ch-normalized.csv",
+      "normalized_sha256": "47c0cef9bc9f96505b1d46ca2260ebf33b01e589183504e5bd38b107f346f3dc",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "10C constant-current charge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 348,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+    },
+    {
+      "id": "a123-9ah-10c-dch",
+      "cell_id": "a123-high-power-pouch-9ah",
+      "sample_id": "not supplied per file",
+      "asset_id": "oxford9ah-cc",
+      "source_id": "oxford-9ah-data",
+      "path": null,
+      "original_member": "CC10Cdch.mat",
+      "normalized_path": "full_cell/a123-9ah-10c-dch-normalized.csv",
+      "normalized_sha256": "08d1fd87d8e9d946a77de363aebf669a04faeca80f4b2e64f154f3a4a88ce185",
+      "current_convention": "Source signed current retained: charge positive, discharge negative; checked against protocol and voltage trend.",
+      "processing": "No voltage/current smoothing, resampling, or row deletion. Source NaNs become empty CSV fields; U denotes unknown current mode. Time is relative sample index on the documented 1 Hz timebase. Celsius temperatures converted to kelvin. Full MAT/ZIP originals remain checksum-pinned at the source.",
+      "missing_values": {
+        "current_charge_positive_A": 1,
+        "voltage_V": 1,
+        "cell_temperature_K": 0
+      },
+      "temperature_definition": "Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "10C constant-current discharge; source index at 1 Hz",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+      "independent_validation_by_this_project": false,
+      "row_count": 362,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K"
+      ],
+      "discharge_segments": [
+        {
+          "step": 1,
+          "mean_discharge_current_A": 89.99888972222222,
+          "nominal_C_rate": 10,
+          "initial_preconditioning": false,
+          "points": 360
+        }
+      ],
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
     }
   ]
 }

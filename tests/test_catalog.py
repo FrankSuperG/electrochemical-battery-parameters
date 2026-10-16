@@ -18,12 +18,14 @@ def catalog():
 
 def test_complete_catalog_and_link_integrity(catalog):
     assert catalog.validate() == []
-    assert len(catalog.search(material="LFP")) == 5
-    assert len(catalog.search(material="graphite")) == 5
+    assert len(catalog.search(material="LFP")) == 6
+    assert len(catalog.search(material="graphite")) == 6
     assert len(catalog.search(representation="table")) == 8
     assert len(catalog.search_parameters(cell_id="lg-m50")) == 38
     assert len(catalog.linked_tests("lg-m50")) == 3
-    assert all(not c.record["quality"]["independent_validation"] for c in catalog.search())
+    assert all(
+        not c.record["quality"]["independent_validation"] for c in catalog.search()
+    )
 
 
 def test_provenance_does_not_conflate_paper_software_or_cell(catalog):
@@ -55,7 +57,14 @@ def test_no_silent_extrapolation_or_nonfinite_input(catalog, bad):
 
 @pytest.mark.parametrize(
     "malicious",
-    ["__import__('os').system('id')", "x.__class__", "[x][0]", "exp(x, x)", "x**9999", "x**x"],
+    [
+        "__import__('os').system('id')",
+        "x.__class__",
+        "[x][0]",
+        "exp(x, x)",
+        "x**9999",
+        "x**x",
+    ],
 )
 def test_formula_language_rejects_executable_syntax(malicious):
     with pytest.raises(ValueError):
@@ -90,13 +99,18 @@ def test_export_preserves_native_table_and_json_cli(catalog, tmp_path, capsys):
     target = tmp_path / "curve.csv"
     curve.export_csv(target)
     assert (
-        hashlib.sha256(target.read_bytes()).hexdigest() == curve.record["representation"]["sha256"]
+        hashlib.sha256(target.read_bytes()).hexdigest()
+        == curve.record["representation"]["sha256"]
     )
     metadata = tmp_path / "curve.json"
-    assert main(["export", curve.id, "--output", str(metadata), "--format", "json"]) == 0
+    assert (
+        main(["export", curve.id, "--output", str(metadata), "--format", "json"]) == 0
+    )
     document = json.loads(metadata.read_text())
     assert document["experiment"]["sample_id"] == "d07eb6"
-    assert set(document["upstream_assets"]) == set(curve.record["provenance"]["asset_ids"])
+    assert set(document["upstream_assets"]) == set(
+        curve.record["provenance"]["asset_ids"]
+    )
 
 
 def test_nonocp_scalar_and_kinetic_function(catalog):
@@ -104,7 +118,9 @@ def test_nonocp_scalar_and_kinetic_function(catalog):
     assert parameter.value == 3.3e-14
     negative = catalog.get_parameter("lgm50-negative-exchange-current-density")
     expected = 6.48e-7 * np.sqrt(1000 * 10000 * 20000)
-    assert negative(c_e=1000, c_s_surf=10000, c_s_max=30000, T=298.15) == pytest.approx(expected)
+    assert negative(c_e=1000, c_s_surf=10000, c_s_max=30000, T=298.15) == pytest.approx(
+        expected
+    )
     with pytest.raises(ValueError):
         negative(c_e=1000, c_s_surf=31000, c_s_max=30000, T=298.15)
     with pytest.raises(ValueError):

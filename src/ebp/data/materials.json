@@ -17,5 +17,13 @@
     "chemistry": "graphite",
     "public_label": "Gr-AQ-1",
     "description": "Aqueous-processed graphite electrode tested in laboratory Li-metal half-cells."
+  },
+  "bpx-lfp18650-lfp": {
+    "chemistry": "LFP",
+    "description": "Electrode fit in the BPX example; supplier, batch, and commercial cell part number undisclosed."
+  },
+  "bpx-lfp18650-graphite": {
+    "chemistry": "graphite",
+    "description": "Electrode fit in the BPX example; supplier, batch, and commercial cell part number undisclosed."
   }
 }

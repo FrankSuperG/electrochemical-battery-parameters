@@ -5,15 +5,27 @@ pybamm = pytest.importorskip("pybamm")
 from ebp import Catalog, StoichiometryMapping
 
 
-@pytest.mark.parametrize("rid", ["lfp-afshar2017-formula", "graphite-chen2020-formula"])
+@pytest.mark.parametrize(
+    "rid",
+    [
+        "lfp-afshar2017-formula",
+        "graphite-chen2020-formula",
+        "bpx-lfp18650-lfp-ocp",
+        "bpx-lfp18650-graphite-ocp",
+    ],
+)
 def test_actual_pybamm_component_with_off_grid_stoichiometry(rid):
     curve = Catalog().get(rid)
     ocp = curve.to_pybamm(count=10001)
     parameter = pybamm.InputParameter("sto")
     symbolic = ocp(parameter)
-    x = np.array([0.01503, 0.10607, 0.49993, 0.90003, 0.98607])
+    lo, hi = curve.record["x"]["domain"]
+    x = lo + (hi - lo) * np.array([0.01503, 0.10607, 0.49993, 0.90003, 0.98607])
     actual = np.array(
-        [float(np.asarray(symbolic.evaluate(inputs={"sto": float(value)})).item()) for value in x]
+        [
+            float(np.asarray(symbolic.evaluate(inputs={"sto": float(value)})).item())
+            for value in x
+        ]
     )
     np.testing.assert_allclose(actual, curve(x), atol=1e-5, rtol=0)
     assert not ocp.ebp_metadata["independently_validated"]

@@ -55,6 +55,201 @@
     ],
     "ocp_record_ids": [
       "graphite-chen2020-formula"
+    ],
+    "display_name": "LG M50 | 5 Ah NMC811/graphite-SiOx",
+    "chemistry": "NMC811/graphite-SiOx",
+    "nominal_capacity_Ah": 5,
+    "match_level": "same_model_same_study",
+    "match_evidence": "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+    "coverage": {
+      "ocp": "Graphite effective fit available",
+      "diffusion": "Two scalar particle diffusivities in upstream implementation",
+      "kinetics": "Two exchange-current density laws",
+      "full_cell_tests": "Three same-model validation samples"
+    }
+  },
+  "bpx-lfp-18650-2ah-undisclosed": {
+    "manufacturer": null,
+    "model": null,
+    "display_name": "Undisclosed LFP/graphite 18650, 2 Ah (BPX)",
+    "format": "18650",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": 2,
+    "identity_level": "commercial_part_undisclosed",
+    "source_ids": [
+      "bpx-lfp-2022"
+    ],
+    "model_context": "DFN BPX example; not a uniquely identified commercial cell",
+    "coverage": {
+      "ocp": "Two electrode OCP fits available",
+      "diffusion": "Two particle diffusivities and activation energies available",
+      "kinetics": "BPX-defined rate constants; not exchange-current densities",
+      "full_cell_tests": "No matching raw full-cell tests supplied in the example"
+    },
+    "match_level": "unmatched",
+    "match_evidence": "The example title specifies chemistry, capacity and format only. No raw tests can be assigned to an exact commercial model.",
+    "note": "Do not match this example to another 2 Ah LFP cell using nominal capacity alone.",
+    "parameter_ids": [
+      "bpx-lfp18650-cell-ambient-temperature-k",
+      "bpx-lfp18650-cell-initial-temperature-k",
+      "bpx-lfp18650-cell-reference-temperature-k",
+      "bpx-lfp18650-cell-lower-voltage-cut-off-v",
+      "bpx-lfp18650-cell-upper-voltage-cut-off-v",
+      "bpx-lfp18650-cell-nominal-cell-capacity-a-h",
+      "bpx-lfp18650-cell-specific-heat-capacity-j-k-1-kg-1",
+      "bpx-lfp18650-cell-thermal-conductivity-w-m-1-k-1",
+      "bpx-lfp18650-cell-density-kg-m-3",
+      "bpx-lfp18650-cell-electrode-area-m2",
+      "bpx-lfp18650-cell-number-of-electrode-pairs-connected-in-parallel-to-make-a-cell",
+      "bpx-lfp18650-cell-external-surface-area-m2",
+      "bpx-lfp18650-cell-volume-m3",
+      "bpx-lfp18650-electrolyte-initial-concentration-mol-m-3",
+      "bpx-lfp18650-electrolyte-cation-transference-number",
+      "bpx-lfp18650-electrolyte-conductivity-activation-energy-j-mol-1",
+      "bpx-lfp18650-electrolyte-diffusivity-activation-energy-j-mol-1",
+      "bpx-lfp18650-negative-electrode-particle-radius-m",
+      "bpx-lfp18650-negative-electrode-thickness-m",
+      "bpx-lfp18650-negative-electrode-diffusivity-m2-s-1",
+      "bpx-lfp18650-negative-electrode-conductivity-s-m-1",
+      "bpx-lfp18650-negative-electrode-surface-area-per-unit-volume-m-1",
+      "bpx-lfp18650-negative-electrode-porosity",
+      "bpx-lfp18650-negative-electrode-transport-efficiency",
+      "bpx-lfp18650-negative-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "bpx-lfp18650-negative-electrode-minimum-stoichiometry",
+      "bpx-lfp18650-negative-electrode-maximum-stoichiometry",
+      "bpx-lfp18650-negative-electrode-maximum-concentration-mol-m-3",
+      "bpx-lfp18650-negative-electrode-diffusivity-activation-energy-j-mol-1",
+      "bpx-lfp18650-negative-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "bpx-lfp18650-positive-electrode-particle-radius-m",
+      "bpx-lfp18650-positive-electrode-thickness-m",
+      "bpx-lfp18650-positive-electrode-diffusivity-m2-s-1",
+      "bpx-lfp18650-positive-electrode-conductivity-s-m-1",
+      "bpx-lfp18650-positive-electrode-surface-area-per-unit-volume-m-1",
+      "bpx-lfp18650-positive-electrode-porosity",
+      "bpx-lfp18650-positive-electrode-transport-efficiency",
+      "bpx-lfp18650-positive-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "bpx-lfp18650-positive-electrode-minimum-stoichiometry",
+      "bpx-lfp18650-positive-electrode-maximum-stoichiometry",
+      "bpx-lfp18650-positive-electrode-maximum-concentration-mol-m-3",
+      "bpx-lfp18650-positive-electrode-diffusivity-activation-energy-j-mol-1",
+      "bpx-lfp18650-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "bpx-lfp18650-separator-thickness-m",
+      "bpx-lfp18650-separator-porosity",
+      "bpx-lfp18650-separator-transport-efficiency"
+    ],
+    "full_cell_test_ids": [],
+    "ocp_record_ids": [
+      "bpx-lfp18650-lfp-ocp",
+      "bpx-lfp18650-graphite-ocp"
     ]
+  },
+  "a123-amp20m1hd-a": {
+    "manufacturer": "A123 Systems",
+    "model": "AMP20M1HD-A",
+    "display_name": "A123 AMP20M1HD-A | 20 Ah LFP pouch",
+    "format": "pouch",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": 20,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "lin-2022-paper",
+      "lin-2022-data",
+      "lin-2022-code"
+    ],
+    "model_context": "Thermal DFN-derived reduced model with one lumped diffusion time shared by the two electrodes",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Methods names AMP20M1HD-A; paper links the ORA dataset; archive filename identifies Cell I. Table 1 is for one cell but its letter is not explicitly established here, so a same-specimen parameter claim is withheld.",
+    "coverage": {
+      "ocp": "C/25 full-cell pseudo-OCV reported in Methods; no downloadable electrode-resolved OCP points located in the selected deposit",
+      "diffusion": "Fitted shared diffusion times at three SOCs; effective D derived using the model's assumed radius",
+      "kinetics": "Fitted volumetric exchange-current density and activation energy at three SOCs",
+      "full_cell_tests": "Cell I 4C full-discharge voltage/current/thermal grid available"
+    },
+    "note": "Do not label the full-cell pseudo-OCV as an LFP half-cell OCP, or assign a shared effective diffusion coefficient to a specific material without the model assumptions.",
+    "parameter_ids": [
+      "a123-amp20-volumetric-exchange-current-soc30",
+      "a123-amp20-volumetric-exchange-current-soc50",
+      "a123-amp20-volumetric-exchange-current-soc70",
+      "a123-amp20-reaction-activation-energy-soc30",
+      "a123-amp20-reaction-activation-energy-soc50",
+      "a123-amp20-reaction-activation-energy-soc70",
+      "a123-amp20-effective-ionic-conductivity-soc30",
+      "a123-amp20-effective-ionic-conductivity-soc50",
+      "a123-amp20-effective-ionic-conductivity-soc70",
+      "a123-amp20-ionic-temperature-coefficient-soc30",
+      "a123-amp20-ionic-temperature-coefficient-soc50",
+      "a123-amp20-ionic-temperature-coefficient-soc70",
+      "a123-amp20-ocv-gradient-soc30",
+      "a123-amp20-ocv-gradient-soc50",
+      "a123-amp20-ocv-gradient-soc70",
+      "a123-amp20-shared-diffusion-time-soc30",
+      "a123-amp20-shared-diffusion-time-soc50",
+      "a123-amp20-shared-diffusion-time-soc70",
+      "a123-amp20-reaction-entropy-soc30",
+      "a123-amp20-reaction-entropy-soc50",
+      "a123-amp20-reaction-entropy-soc70",
+      "a123-amp20-heat-transfer-velocity-soc30",
+      "a123-amp20-heat-transfer-velocity-soc50",
+      "a123-amp20-heat-transfer-velocity-soc70",
+      "a123-amp20-effective-thermal-conductivity-soc30",
+      "a123-amp20-effective-thermal-conductivity-soc50",
+      "a123-amp20-effective-thermal-conductivity-soc70",
+      "a123-amp20-effective-diffusivity-soc30",
+      "a123-amp20-effective-diffusivity-soc50",
+      "a123-amp20-effective-diffusivity-soc70"
+    ],
+    "full_cell_test_ids": [
+      "a123-amp20-cell-i-4c"
+    ],
+    "ocp_record_ids": []
+  },
+  "a123-high-power-pouch-9ah": {
+    "manufacturer": "A123 Systems",
+    "model": null,
+    "display_name": "A123 high-power LFP pouch | 9 Ah | part undisclosed",
+    "format": "pouch",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": 9,
+    "identity_level": "manufacturer_capacity_format_only",
+    "source_ids": [
+      "oxford-9ah-paper",
+      "oxford-9ah-data"
+    ],
+    "model_context": "High-power thermal model assumes fast solid and electrolyte diffusion",
+    "match_level": "same_study_cell_family",
+    "match_evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
+    "coverage": {
+      "ocp": "Full-cell pseudo-OCP referenced in the paper; electrode potentials are conventionally allocated, not electrode-resolved measurements",
+      "diffusion": "Fast-diffusion model assumption; no finite fitted diffusivity imported",
+      "kinetics": "Not transcribed in this release; raw tests do not uniquely identify electrode kinetic laws",
+      "full_cell_tests": "Ten CC charge/discharge files at 2, 4, 6, 8 and 10C"
+    },
+    "note": "OCP workbooks in the related GitHub code repository have no explicit file-level reuse license located here; indexed as references rather than silently redistributed. Never substitute AMP20M1HD-A parameters.",
+    "external_ocp_references": [
+      {
+        "url": "https://github.com/Battery-Intelligence-Lab/pouch-cell-thermal/blob/83054d013b288f01e1afa2da7935e0a6a67c6bc6/data/param/ch/U_OCP_ch.xlsx",
+        "status": "reference_only; redistribution license not established",
+        "quantity": "full_cell_pseudo_ocv"
+      },
+      {
+        "url": "https://github.com/Battery-Intelligence-Lab/pouch-cell-thermal/blob/83054d013b288f01e1afa2da7935e0a6a67c6bc6/data/param/dch/U_OCP_dch.xlsx",
+        "status": "reference_only; redistribution license not established",
+        "quantity": "full_cell_pseudo_ocv"
+      }
+    ],
+    "parameter_ids": [],
+    "full_cell_test_ids": [
+      "a123-9ah-2c-ch",
+      "a123-9ah-2c-dch",
+      "a123-9ah-4c-ch",
+      "a123-9ah-4c-dch",
+      "a123-9ah-6c-ch",
+      "a123-9ah-6c-dch",
+      "a123-9ah-8c-ch",
+      "a123-9ah-8c-dch",
+      "a123-9ah-10c-ch",
+      "a123-9ah-10c-dch"
+    ],
+    "ocp_record_ids": []
   }
 }

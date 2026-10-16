@@ -1,0 +1,58 @@
+{
+  "lin2022-model": {
+    "filename": "lin-Battery_model.m",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/multiscale-coupling/dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4/Battery_model.m",
+    "source_id": "lin-2022-code",
+    "license": "BSD-2-Clause",
+    "sha256": "cdd215a00b9b29514fc91c5607fc3ffd490d2edf9e7640171b585a2ba7cb203f"
+  },
+  "lin2022-full-discharge": {
+    "filename": "lin-full-discharge.mat",
+    "url": "https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513/files/d0c483j73t",
+    "source_id": "lin-2022-data",
+    "license": "CC-BY-4.0",
+    "sha256": "12c0bea55787500ac6d59363eedc6d8d18edd28ed24f13de86daac16cb5d07a4"
+  },
+  "lin2022-readme": {
+    "filename": "lin-readme.txt",
+    "url": "https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513/files/dfq977v10p",
+    "source_id": "lin-2022-data",
+    "license": "CC-BY-4.0",
+    "sha256": "d00e19391bf10c99db8ff9aff393e90568d4d623d65742bbb9c2ca04dff70dff"
+  },
+  "lin2022-license": {
+    "filename": "lin-license.txt",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/multiscale-coupling/dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4/LICENSE",
+    "source_id": "lin-2022-code",
+    "license": "BSD-2-Clause",
+    "sha256": "e4b3eb232e8cce475937a19b5bbaf5c2f43ea209e45111b932b38d0aece36b50"
+  },
+  "oxford9ah-cc": {
+    "filename": "pouch-cc.zip",
+    "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758/files/s47429c42x",
+    "source_id": "oxford-9ah-data",
+    "license": "CC-BY-4.0",
+    "sha256": "8684ea15ec06166bd95d218b521010e933e8d45100d6d22e292e7cff5739883e"
+  },
+  "oxford9ah-readme": {
+    "filename": "pouch-ora-readme.md",
+    "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758/files/r44558g94r",
+    "source_id": "oxford-9ah-data",
+    "license": "CC-BY-4.0",
+    "sha256": "da27c2107f4ba4fd0f79a6a7c465b8fdcc1008c0e8fbce786574ee063d9a4f5f"
+  },
+  "bpx-lfp-example": {
+    "filename": "bpx-lfp18650.json",
+    "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json",
+    "source_id": "bpx-lfp-2022",
+    "license": "MIT",
+    "sha256": "fd6d0c992a641c30edad7a76dd988fac1162434c7f8302961fc8f587da1f62a5"
+  },
+  "bpx-license": {
+    "filename": "bpx-license.txt",
+    "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/LICENSE.txt",
+    "source_id": "bpx-lfp-2022",
+    "license": "MIT",
+    "sha256": "5fd4927b00cec7148fa0ccc9ff413fbc3502dcf617ddc696ef281ff9d181a97c"
+  }
+}

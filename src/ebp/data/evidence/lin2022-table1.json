@@ -1,0 +1,96 @@
+{
+  "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/",
+  "location": "Table 1, This work columns at 30/50/70% SOC",
+  "rows": [
+    {
+      "name": "Volumetric exchange-current density",
+      "source_values": [
+        1.86,
+        1.8,
+        1.86
+      ],
+      "SI_multiplier": 1000000.0,
+      "SI_unit": "A.m-3"
+    },
+    {
+      "name": "Reaction activation energy",
+      "source_values": [
+        29.5,
+        29.2,
+        29.7
+      ],
+      "SI_multiplier": 1000,
+      "SI_unit": "J.mol-1"
+    },
+    {
+      "name": "Effective ionic conductivity",
+      "source_values": [
+        0.046,
+        0.043,
+        0.045
+      ],
+      "SI_multiplier": 1,
+      "SI_unit": "S.m-1"
+    },
+    {
+      "name": "Temperature coefficient of effective ionic conductivity",
+      "source_values": [
+        2.4,
+        2.7,
+        2.4
+      ],
+      "SI_multiplier": 0.001,
+      "SI_unit": "S.m-1.K-1"
+    },
+    {
+      "name": "Local full-cell OCV gradient",
+      "source_values": [
+        0.35,
+        0.24,
+        0.18
+      ],
+      "SI_multiplier": 1,
+      "SI_unit": "V"
+    },
+    {
+      "name": "Shared solid diffusion time",
+      "source_values": [
+        552,
+        590,
+        622
+      ],
+      "SI_multiplier": 1,
+      "SI_unit": "s"
+    },
+    {
+      "name": "Full-cell reaction entropy change",
+      "source_values": [
+        -13.5,
+        7.7,
+        9.7
+      ],
+      "SI_multiplier": 1,
+      "SI_unit": "J.mol-1.K-1"
+    },
+    {
+      "name": "Heat transfer velocity h/Cp_vol",
+      "source_values": [
+        5.11,
+        5.06,
+        5
+      ],
+      "SI_multiplier": 1e-06,
+      "SI_unit": "m.s-1"
+    },
+    {
+      "name": "Effective thermal conductivity",
+      "source_values": [
+        1.1,
+        1.2,
+        1.1
+      ],
+      "SI_multiplier": 1,
+      "SI_unit": "W.m-1.K-1"
+    }
+  ]
+}

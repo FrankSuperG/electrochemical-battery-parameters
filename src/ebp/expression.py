@@ -24,7 +24,7 @@ def parse(expression, variables=("x",)):
 
     def check(node):
         if isinstance(node, ast.Constant) and type(node.value) in (int, float):
-            if not np.isfinite(node.value) or abs(node.value) > 1e9:
+            if not np.isfinite(node.value) or abs(node.value) > 1e100:
                 raise ValueError("Invalid numeric constant")
         elif isinstance(node, ast.Name) and node.id in variables:
             pass

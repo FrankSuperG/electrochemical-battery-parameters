@@ -1,30 +1,27 @@
-# 路线图
+# Roadmap
 
-## v0.1.0：LFP／石墨 OCP
+## Completed in v0.1
 
-- [x] 10 条带许可和追溯信息的记录：8 条实测分支、2 条文献公式。
-- [x] 区分电极 θ、相对分支容量、材料和商业型号关联。
-- [x] Python／CLI 检索、元数据查看、线性与 PCHIP 插值、禁止默认外推。
-- [x] 静态曲线浏览、筛选、分组对比和 CSV／JSON 下载。
-- [x] 可选 PyBaMM OCP 适配；容量轴必须由用户提供有依据的映射。
-- [x] 固定上游资产、复现脚本、JSON Schema 和自动检查。
-- [x] 38 项 LG M50 非 OCP 参数：几何、电极、扩散、动力学、热学、状态与运行边界。
-- [x] 同研究、同型号关联 3 只全电池的实测数据，提供原始及标准化 CSV。
-- [x] 私有 GitHub 仓库；本机网页预览，无公开部署工作流。
+- Eight measured LFP/graphite pseudo-OCP branches and two attributed expressions.
+- Explicit coordinate semantics, conservative cell matching and provenance.
+- Thirty-eight LG M50 parameters and three same-model full-cell files.
+- Python/CLI, interpolation, PyBaMM OCP components, local viewer, packaging and CI.
 
-## v0.2：完整电芯参数与验证
+## Completed in v0.2
 
-- 在已有 LG M50 资料关联上补全模型参数、输入工况、初始化与可复现误差计算。
-- 逐项区分实测、辨识、借用和假设参数，标明缺失项。
-- 分别维护 DFN、SPMe、SPM 的模型选项、版本和验证范围。
-- 有完整且可映射的参数集后支持 BPX 导出。
-- 分开登记拟合与独立验证数据。
+- LFP-first expansion: AMP20 fitted diffusion/kinetics/transport/thermal parameters linked to the full-discharge experiment.
+- Ten 9 Ah A123 study-family CC tests with explicit identity and parameter gaps.
+- Official BPX LFP example OCP fits and scalar parameters, with unresolved commercial identity.
+- Cell-scoped exports, match/coverage inspection, English documentation/viewer and Atlas companion logo.
+- Preserved missing measurements, pinned originals, source-value audit and per-source notices.
 
-## v0.3：其他电化学参数与实验
+## Next priorities
 
-- GITT/EIS 原始数据及处理过程，扩散与动力学的定义和辨识假设。
-- 电解液传输参数、几何结构与热参数；支持多变量函数与温度依赖。
-- 明确区分有效参数与材料本征性质，保留面积和浓度约定。
-- 逐步扩展 LFP 来源、温度、老化状态及其他化学体系。
+1. Locate reusable electrode-resolved OCP and characterization data for an exactly identified commercial LFP model with matching full-cell experiments.
+2. Extend the AMP20 experiment collection to fitting and held-out pulse tests; establish specimen mapping using supplementary evidence.
+3. Audit BPX per-field origins and support electrolyte/entropy functions without changing their independent variables or units.
+4. Curate GITT/EIS processing with geometry, concentration, electrode-area and identifiability assumptions.
+5. Reproduce one complete DFN/SPMe/SPM case with versioned model options, initialization, sign conventions, fit/validation separation and voltage/temperature errors.
+6. Add uncertainty only when supported by repeated observations or published estimates.
 
-网站公开发布、PyPI 发布、扩大数据抓取或自动辨识不属于当前版本默认行为。
+Public hosting, PyPI publication and automated parameter identification remain separate future decisions. Current cell packages are partial data collections, not validated plug-and-play models.

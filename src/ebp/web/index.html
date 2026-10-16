@@ -1,43 +1,52 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Electrochemical Battery Parameters · OCP Library</title>
-  <meta name="description" content="带来源、测试条件和坐标定义的 LFP 与石墨电极 OCP 曲线库。">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23193b34'/%3E%3Ctext x='8' y='24' fill='white' font-size='24'%3EE%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="catalog.js"></script><script defer src="app.js"></script>
+  <title>E-BatP · Electrochemical Battery Parameters</title>
+  <meta name="description" content="Electrode OCP, diffusion and kinetic parameters linked to identifiable battery cells, full-cell experiments and primary sources.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b3547'/%3E%3Ctext x='8' y='24' fill='white' font-size='24'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><script defer src="catalog.js"></script><script defer src="app.js"></script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#library"><span class="brand-mark">E<span>+</span></span><span>Electrochemical<br><b>Battery Parameters</b></span></a>
-    <nav aria-label="主导航"><a href="#library" class="active">曲线库</a><a href="#cell-package">电芯与参数</a><a href="#sources">数据来源</a><a href="#guide">使用说明</a></nav>
-    <span class="version">本地浏览 <i></i> v0.1</span>
+    <a class="brand" href="#library"><img src="logo.png" alt="E-BatP — Electrochemical Battery Parameters"></a>
+    <nav aria-label="Main navigation"><a href="#library" class="active">OCP curves</a><a href="#cell-package">Cell packages</a><a href="#sources">Sources</a><a href="#guide">Guide</a></nav>
+    <span class="version">Local viewer <i></i> v0.2</span>
   </header>
   <main>
-    <section class="intro"><div><div class="eyebrow">ELECTROCHEMICAL PARAMETERS / 001</div><h1>从电极参数，连接到电芯测试。</h1><p>LFP 与石墨 OCP，以及 LG M50 的模型参数和配套全电池数据。保留来源、测试条件与关联证据。</p></div><div class="intro-aside"><span class="large-number" id="total">—</span><span>条 OCP 曲线与公式<br><small>可查询 · 可比较 · 可下载</small></span></div></section>
+    <section class="intro"><div><div class="eyebrow">ELECTRODES → PARAMETERS → FULL-CELL TESTS</div><h1>Find the parameter.<br>Know the cell behind it.</h1><p>Explore LFP-first electrochemical data with source definitions, model assumptions and explicit evidence for every cell match.</p></div><div class="intro-aside"><span class="large-number" id="total">—</span><span>OCP records<br><small>Inspect · compare · download</small></span></div></section>
     <div class="stats" id="stats"></div>
     <section class="workspace" id="library">
-      <aside class="filters"><div class="section-label">检索曲线 <span>01</span></div>
-        <label for="query">关键词</label><input id="query" type="search" placeholder="作者、样品 ID、公式…">
-        <label for="material">材料体系</label><select id="material"><option value="LFP">LFP · 磷酸铁锂</option><option value="graphite">Graphite · 石墨</option><option value="">全部材料</option></select>
-        <label for="representation">数据形式</label><select id="representation"><option value="">全部形式</option><option value="table">实测离散点</option><option value="expression">解析公式</option></select>
-        <label for="direction">电极方向</label><select id="direction"><option value="">全部方向</option><option value="lithiation">嵌锂</option><option value="delithiation">脱锂</option><option value="unspecified">未区分方向</option></select>
-        <button id="reset" class="secondary">重置筛选</button>
-        <div class="filter-note"><b>先看横坐标，再比较曲线。</b><p>实测分支内的归一化容量，不等于绝对化学计量比 θ，也不等于全电池 SOC。</p></div>
+      <aside class="filters"><div class="section-label">Find OCP curves <span>01</span></div>
+        <label for="query">Search</label><input id="query" type="search" placeholder="Author, specimen, cell…">
+        <label for="material">Material</label><select id="material"><option value="LFP">LFP</option><option value="graphite">Graphite</option><option value="">All materials</option></select>
+        <label for="representation">Representation</label><select id="representation"><option value="">All types</option><option value="table">Measured points</option><option value="expression">Analytical expression</option></select>
+        <label for="direction">Electrode direction</label><select id="direction"><option value="">All directions</option><option value="lithiation">Lithiation</option><option value="delithiation">Delithiation</option><option value="unspecified">Unspecified</option></select>
+        <button id="reset" class="secondary">Reset filters</button><div class="filter-note"><b>Check the coordinate first.</b><p>Normalized branch throughput, electrode stoichiometry and whole-cell SOC are different quantities.</p></div>
       </aside>
-      <div class="results"><div class="section-label">参数记录 <span id="result-count"></span></div><div id="records" class="records" aria-live="polite"></div></div>
-      <div class="comparison"><div class="section-label">曲线对比 <span id="selected-count"></span></div><p class="muted compact">勾选记录进行对比。不同坐标或电极方向分别绘图；曲线显示经过采样，下载保留原始提取点。</p><button class="text-button" id="clear-selection">清空对比</button><div id="charts"></div></div>
+      <div class="results"><div class="section-label">OCP records <span id="result-count"></span></div><div id="records" class="records" aria-live="polite"></div></div>
+      <div class="comparison"><div class="section-label">Compare curves <span id="selected-count"></span></div><p class="muted compact">Select records to compare. Material, coordinate type and electrode direction define separate plots. Downloads preserve the retained measurements.</p><button class="text-button" id="clear-selection">Clear selection</button><div id="charts"></div></div>
     </section>
     <section class="detail" id="detail" aria-live="polite"></section>
-    <section id="cell-package" class="cell-package"><div class="section-label">电芯 · 参数 · 全电池测试 <span>02</span></div><div class="detail-top"><div><h2>LG M50 / Chen2020</h2><p class="muted compact">NMC811 / Graphite–SiOx · 21700 · 5 Ah · 参数与测试来自同一研究、同一型号。</p></div><div class="actions"><a class="button" href="downloads/lg-m50-parameters.csv" download>参数 CSV</a><a class="button" href="downloads/lg-m50-parameters.json" download>完整资料包 JSON</a></div></div><p class="link-note">关联级别：同型号、同研究。尚无证据确认测试电芯就是被拆解表征的那一只；未完成本项目的独立模型验证。</p><div class="cell-grid"><div><div class="parameter-toolbar"><label for="parameter-category">参数类别</label><select id="parameter-category"><option value="">全部参数</option><option value="geometry">几何结构</option><option value="electrode">电极与扩散</option><option value="kinetics">反应动力学</option><option value="thermal">热学参数</option><option value="operating_limits">容量与电压边界</option><option value="initial_state">初始状态</option></select><span id="parameter-count"></span></div><div class="parameter-scroll"><table class="parameter-table"><thead><tr><th>参数 / 上游定义</th><th>数值或形式</th><th>单位</th></tr></thead><tbody id="parameter-rows"></tbody></table></div><div id="parameter-detail" class="parameter-detail"></div></div><div><div class="test-toolbar"><label for="test-sample">全电池样品</label><select id="test-sample"></select></div><p class="muted compact">下图为实测放电电压。不同倍率来自同一电芯的不同测试段，没有叠加模型预测。</p><div id="fullcell-chart"></div><div id="test-downloads" class="actions"></div><p class="axis-note">原始文件包含电流幅值与模式。标准化文件显式转换为充电正、放电负，并保留温度及源文件行号。</p></div></div></section>
-    <section class="sources-section" id="sources"><div class="section-label">数据来源与归属 <span>03</span></div><h2>科学来源与代码分发，分别记录。</h2><p class="muted">同一研究的论文、配套数据、重复样品和分支不重复计为独立研究。公式采样点不计为实测数据。</p><div id="source-cards" class="source-cards"></div></section>
-    <section id="guide" class="guide"><div class="section-label">开始使用 <span>04</span></div><div class="guide-grid"><div><h2>在 Python 中读取。</h2><pre><code>from ebp import Catalog
+    <section id="cell-package" class="cell-package"><div class="section-label">Cells · parameters · experiments <span>02</span></div>
+      <label for="cell-select">Cell or study family</label><select id="cell-select"></select>
+      <div class="detail-top"><div><h2 id="cell-title"></h2><p class="muted compact" id="cell-context"></p></div><div class="actions" id="cell-downloads"></div></div>
+      <p class="link-note" id="cell-match"></p><div id="cell-coverage" class="coverage"></div><p class="muted compact" id="cell-note"></p>
+      <div class="cell-grid"><div><div class="parameter-toolbar"><label for="parameter-category">Category</label><select id="parameter-category"><option value="">All parameters</option></select><span id="parameter-count"></span></div>
+      <div class="parameter-scroll"><table class="parameter-table"><thead><tr><th>Parameter / upstream definition</th><th>Value</th><th>Unit</th></tr></thead><tbody id="parameter-rows"></tbody></table></div><div id="parameter-detail" class="parameter-detail"></div></div>
+      <div><div class="test-toolbar"><label for="test-sample">Full-cell test</label><select id="test-sample"></select></div><p class="muted compact" id="test-description"></p><div id="fullcell-chart"></div><div id="test-downloads" class="actions"></div><p class="axis-note" id="test-note"></p></div></div>
+    </section>
+    <section class="sources-section" id="sources"><div class="section-label">Sources & attribution <span>03</span></div><h2>Every value has a traceable origin.</h2><p class="muted">Papers, deposited observations and software distributions have distinct roles. Repeated specimens and branches are not independent studies; sampled formulas are not measurements.</p><div id="source-cards" class="source-cards"></div></section>
+    <section id="guide" class="guide"><div class="section-label">Start using the data <span>04</span></div><div class="guide-grid"><div><h2>Read it in Python.</h2><pre><code>from ebp import Catalog
 
 catalog = Catalog()
-curve = catalog.get("lfp-afshar2017-formula")
+curve = catalog.get("bpx-lfp18650-lfp-ocp")
 voltage = curve(0.5)
-records = catalog.search(material="LFP")</code></pre></div><div><h2>理解数据的适用范围。</h2><ul><li>C/50 实测分支是伪 OCP，仍包含有限电流极化。</li><li>分支归一化容量从 0 到 1 表示该分支的测试进程；嵌锂和脱锂方向未强制反转或配平。</li><li>室温没有被补写为 25°C；未知温度保留为空。</li><li>导入 PyBaMM 时，容量轴曲线需要用户提供有依据的化学计量比映射。</li><li>v0.1 提供 OCP 组件，尚无完整电芯参数集及独立全电池验证。</li></ul></div></div></section>
+parameters = catalog.search_parameters(
+    cell_id="a123-amp20m1hd-a",
+    category="diffusion",
+)
+tests = catalog.linked_tests("a123-amp20m1hd-a")</code></pre></div><div><h2>Use the right assumptions.</h2><ul><li>C/50 measurements are pseudo-OCP branches with finite-current polarization.</li><li>BPX OCP fits retain their supplied operating stoichiometry bounds.</li><li>The AMP20 diffusivity is derived from a fitted time and an assumed radius; both electrodes share that effective time.</li><li>Volumetric kinetics, surface exchange-current densities and BPX rate constants have different definitions.</li><li>Model matches do not establish identical specimens or independent model validation.</li><li>Missing measurements remain empty; unknown identities, conditions and licenses remain explicit gaps.</li></ul></div></div></section>
   </main>
-  <footer><span>Electrochemical Battery Parameters <b>v0.1.0</b></span><span>原始项目代码 MIT · 实测数据 CC BY 4.0 · 上游公式实现 BSD-3-Clause</span></footer>
+  <footer><span>E-BatP · Electrochemical Battery Parameters <b>v0.2.0</b></span><span>Project code MIT · upstream data and implementations retain their own licenses</span></footer>
 </body></html>

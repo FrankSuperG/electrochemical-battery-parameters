@@ -1,28 +1,57 @@
 import json
+import re
 
 from ebp import Catalog
 from ebp.site import build_site
 
 
-def test_viewer_downloads_and_embedded_data_are_consistent(tmp_path):
-    catalog = Catalog()
-    build_site(catalog, tmp_path)
+def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
+    c = Catalog()
+    build_site(c, tmp_path)
     script = (tmp_path / "catalog.js").read_text()
     data = json.loads(script.removeprefix("window.EBP_DATA = ").removesuffix(";\n"))
-    assert len(data["records"]) == 10
-    assert len(data["parameters"]) == 38
-    assert len(data["full_cell_tests"]) == 3
+    assert len(data["records"]) == 12
+    assert len(data["parameters"]) == 114
+    assert len(data["full_cell_tests"]) == 14
     for record in data["records"]:
-        downloaded = json.loads((tmp_path / "downloads" / f"{record['id']}.json").read_text())
+        downloaded = json.loads(
+            (tmp_path / "downloads" / f"{record['id']}.json").read_text()
+        )
         assert downloaded["record"]["id"] == record["id"]
         assert (tmp_path / "downloads" / f"{record['id']}.csv").exists()
+    for cid in c.cells:
+        package = json.loads(
+            (tmp_path / "downloads" / f"{cid}-parameters.json").read_text()
+        )
+        assert package["cell_id"] == cid
+        assert all(p["cell_id"] == cid for p in package["parameters"])
+        assert all(t["cell_id"] == cid for t in package["full_cell_tests"])
+        assert all(r["cell_link"]["cell_id"] == cid for r in package["ocp_records"])
+        assert not package["independent_full_cell_validation"]
     for test in data["full_cell_tests"]:
-        assert len(test["preview_segments"]) == 4
-        assert {s["C_rate"] for s in test["preview_segments"]} == {0.1, 0.5, 1.0, 1.5}
-        assert (tmp_path / "downloads" / test["path"].split("/")[-1]).read_bytes() == (
-            catalog.root / test["path"]
-        ).read_bytes()
+        assert len(test["preview_segments"]) == (
+            4 if test["cell_id"] == "lg-m50" else 1
+        )
+        for key in ("path", "normalized_path"):
+            if test[key]:
+                assert (
+                    tmp_path / "downloads" / test[key].split("/")[-1]
+                ).read_bytes() == (c.root / test[key]).read_bytes()
+        if test["id"] == "a123-9ah-2c-ch":
+            points = test["preview_segments"][0]["points"]
+            assert points[-1][1] > points[0][1]
     for filename in ["index.html", "app.js", "style.css"]:
-        assert "cdn." not in (tmp_path / filename).read_text()
-    assert (tmp_path / "licenses/PyBaMM-BSD-3-Clause.txt").exists()
-    assert (tmp_path / "licenses/CC-BY-4.0.txt").exists()
+        source = (tmp_path / filename).read_text()
+        assert "cdn." not in source
+        assert not re.search(r"[\u4e00-\u9fff]", source)
+    assert '<html lang="en">' in (tmp_path / "index.html").read_text()
+    for name in [
+        "PyBaMM-BSD-3-Clause.txt",
+        "CC-BY-4.0.txt",
+        "BPX-MIT.txt",
+        "Oxford-BSD-2-Clause.txt",
+    ]:
+        assert (tmp_path / "licenses" / name).exists()
+    assert (tmp_path / "logo.png").read_bytes() == (
+        c.root.parent / "web/logo.png"
+    ).read_bytes()

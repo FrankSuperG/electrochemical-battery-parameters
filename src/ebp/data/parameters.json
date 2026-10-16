@@ -1082,6 +1082,2328 @@
         "Gas constant fixed to 8.314462618 J/mol/K for portable numerical evaluation.",
         "Mathematical input checks do not establish an experimentally validated temperature range."
       ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Ambient temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Ambient temperature [K]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Ambient temperature [K]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-initial-temperature-k",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Initial temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Initial temperature [K]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Initial temperature [K]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-reference-temperature-k",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Reference temperature [K]",
+      "category": "geometry",
+      "unit": "K",
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Reference temperature [K]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Reference temperature [K]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Lower voltage cut-off [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Lower voltage cut-off [V]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Lower voltage cut-off [V]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Upper voltage cut-off [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.65
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Upper voltage cut-off [V]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Upper voltage cut-off [V]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Nominal cell capacity [A.h]",
+      "category": "operating_limits",
+      "unit": "A.h",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Nominal cell capacity [A.h]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Nominal cell capacity [A.h]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-specific-heat-capacity-j-k-1-kg-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Specific heat capacity [J.K-1.kg-1]",
+      "category": "thermal",
+      "unit": "J.K-1.kg-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 999.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Specific heat capacity [J.K-1.kg-1]",
+        "origin_status": "estimated_thermal_property"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Specific heat capacity [J.K-1.kg-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities.",
+        "Header explicitly states other thermal properties are estimated."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.89
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Thermal conductivity [W.m-1.K-1]",
+        "origin_status": "estimated_thermal_property"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Thermal conductivity [W.m-1.K-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities.",
+        "Header explicitly states other thermal properties are estimated."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-density-kg-m-3",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1940.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Density [kg.m-3]",
+        "origin_status": "estimated_thermal_property"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Density [kg.m-3]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities.",
+        "Header explicitly states other thermal properties are estimated."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-electrode-area-m2",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Electrode area [m2]",
+      "category": "geometry",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.08959998
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Electrode area [m2]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Electrode area [m2]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-number-of-electrode-pairs-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Number of electrode pairs connected in parallel to make a cell",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Number of electrode pairs connected in parallel to make a cell",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Number of electrode pairs connected in parallel to make a cell",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-external-surface-area-m2",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: External surface area [m2]",
+      "category": "geometry",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.00431
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/External surface area [m2]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: External surface area [m2]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-cell-volume-m3",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Cell: Volume [m3]",
+      "category": "geometry",
+      "unit": "m3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.7e-05
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Cell/Volume [m3]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cell: Volume [m3]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-electrolyte-initial-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Electrolyte: Initial concentration [mol.m-3]",
+      "category": "initial_state",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Electrolyte/Initial concentration [mol.m-3]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Electrolyte: Initial concentration [mol.m-3]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-electrolyte-cation-transference-number",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Electrolyte: Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.259
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Electrolyte/Cation transference number",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Electrolyte: Cation transference number",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-electrolyte-conductivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Electrolyte: Conductivity activation energy [J.mol-1]",
+      "category": "transport",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 17100.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Electrolyte/Conductivity activation energy [J.mol-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Electrolyte: Conductivity activation energy [J.mol-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-electrolyte-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Electrolyte: Diffusivity activation energy [J.mol-1]",
+      "category": "diffusion",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 17100.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Electrolyte/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Electrolyte: Diffusivity activation energy [J.mol-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-particle-radius-m",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Particle radius [m]",
+      "category": "geometry",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.8e-06
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Particle radius [m]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Particle radius [m]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Thickness [m]",
+      "category": "geometry",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.44e-05
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Thickness [m]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Thickness [m]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 9.6e-15
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Diffusivity [m2.s-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Diffusivity [m2.s-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Conductivity [S.m-1]",
+      "category": "geometry",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 7.46
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Conductivity [S.m-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Conductivity [S.m-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Surface area per unit volume [m-1]",
+      "category": "geometry",
+      "unit": "m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 473004.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Surface area per unit volume [m-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Surface area per unit volume [m-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Porosity",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.20666
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Porosity",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Porosity",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Transport efficiency",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.09395
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Transport efficiency",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Transport efficiency",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Reaction rate constant [mol.m-2.s-1]",
+      "category": "kinetics",
+      "unit": "mol.m-2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.872e-06
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Reaction rate constant [mol.m-2.s-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Minimum stoichiometry",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0016261
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Minimum stoichiometry",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Minimum stoichiometry",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Maximum stoichiometry",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.82258
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Maximum stoichiometry",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Maximum stoichiometry",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Maximum concentration [mol.m-3]",
+      "category": "geometry",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 31400.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Maximum concentration [mol.m-3]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Maximum concentration [mol.m-3]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Diffusivity activation energy [J.mol-1]",
+      "category": "diffusion",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 30000.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Diffusivity activation energy [J.mol-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-negative-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Reaction rate constant activation energy [J.mol-1]",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 55000.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode: Reaction rate constant activation energy [J.mol-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-particle-radius-m",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Particle radius [m]",
+      "category": "geometry",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-07
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Particle radius [m]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Particle radius [m]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Thickness [m]",
+      "category": "geometry",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.43e-05
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Thickness [m]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Thickness [m]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.873e-17
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Diffusivity [m2.s-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Diffusivity [m2.s-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Conductivity [S.m-1]",
+      "category": "geometry",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.8
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Conductivity [S.m-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Conductivity [S.m-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Surface area per unit volume [m-1]",
+      "category": "geometry",
+      "unit": "m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4418460.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Surface area per unit volume [m-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Surface area per unit volume [m-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Porosity",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.20359
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Porosity",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Porosity",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Transport efficiency",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.09186
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Transport efficiency",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Transport efficiency",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Reaction rate constant [mol.m-2.s-1]",
+      "category": "kinetics",
+      "unit": "mol.m-2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 9.736e-07
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Reaction rate constant [mol.m-2.s-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Minimum stoichiometry",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0875
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Minimum stoichiometry",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Minimum stoichiometry",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Maximum stoichiometry",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.95038
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Maximum stoichiometry",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Maximum stoichiometry",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Maximum concentration [mol.m-3]",
+      "category": "geometry",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 21200.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Maximum concentration [mol.m-3]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Maximum concentration [mol.m-3]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Diffusivity activation energy [J.mol-1]",
+      "category": "diffusion",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 80000.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Diffusivity activation energy [J.mol-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Positive electrode: Reaction rate constant activation energy [J.mol-1]",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 35000.0
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Positive electrode/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode: Reaction rate constant activation energy [J.mol-1]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-separator-thickness-m",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Separator: Thickness [m]",
+      "category": "geometry",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-05
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Separator/Thickness [m]",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Separator: Thickness [m]",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-separator-porosity",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Separator: Porosity",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.47
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Separator/Porosity",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Separator: Porosity",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "bpx-lfp18650-separator-transport-efficiency",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Separator: Transport efficiency",
+      "category": "geometry",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3222
+      },
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Separator/Transport efficiency",
+        "origin_status": "bpx_parameter_value; individual measurement/fit/borrowed origin not independently audited"
+      },
+      "conditions": {
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Separator: Transport efficiency",
+      "license": "MIT",
+      "independent_validation": false,
+      "limitations": [
+        "Commercial part number and matching experimental files are undisclosed.",
+        "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
+      ]
+    },
+    {
+      "id": "a123-amp20-volumetric-exchange-current-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Volumetric exchange-current density",
+      "category": "kinetics",
+      "unit": "A.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1860000.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: a*i0 (A.cm-3); multiplied by 1e6 to obtain A.m-3. Not surface i0.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-volumetric-exchange-current-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Volumetric exchange-current density",
+      "category": "kinetics",
+      "unit": "A.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1800000.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: a*i0 (A.cm-3); multiplied by 1e6 to obtain A.m-3. Not surface i0.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-volumetric-exchange-current-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Volumetric exchange-current density",
+      "category": "kinetics",
+      "unit": "A.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1860000.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: a*i0 (A.cm-3); multiplied by 1e6 to obtain A.m-3. Not surface i0.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-activation-energy-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Reaction activation energy",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 29500.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: E_theta (kJ.mol-1); multiplied by 1000.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-activation-energy-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Reaction activation energy",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 29200.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: E_theta (kJ.mol-1); multiplied by 1000.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-activation-energy-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Reaction activation energy",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 29700.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: E_theta (kJ.mol-1); multiplied by 1000.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-ionic-conductivity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.046
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: fitted effective kappa; use the paper's homogenization convention.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-ionic-conductivity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.043
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: fitted effective kappa; use the paper's homogenization convention.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-ionic-conductivity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.045
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: fitted effective kappa; use the paper's homogenization convention.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ionic-temperature-coefficient-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Temperature coefficient of effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0024
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: alpha (mS.m-1.K-1); multiplied by 0.001.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ionic-temperature-coefficient-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Temperature coefficient of effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0027
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: alpha (mS.m-1.K-1); multiplied by 0.001.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ionic-temperature-coefficient-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Temperature coefficient of effective ionic conductivity",
+      "category": "transport",
+      "unit": "S.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0024
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: alpha (mS.m-1.K-1); multiplied by 0.001.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ocv-gradient-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Local full-cell OCV gradient",
+      "category": "thermodynamics",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.35
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: k_U, derivative with respect to fractional cell SOC. Not an electrode OCP curve.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ocv-gradient-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Local full-cell OCV gradient",
+      "category": "thermodynamics",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.24
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: k_U, derivative with respect to fractional cell SOC. Not an electrode OCP curve.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-ocv-gradient-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Local full-cell OCV gradient",
+      "category": "thermodynamics",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.18
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: k_U, derivative with respect to fractional cell SOC. Not an electrode OCP curve.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-shared-diffusion-time-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Shared solid diffusion time",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 552.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: t_d=r0^2/D_s; same lumped time for both electrodes.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-shared-diffusion-time-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Shared solid diffusion time",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 590.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: t_d=r0^2/D_s; same lumped time for both electrodes.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-shared-diffusion-time-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Shared solid diffusion time",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 622.0
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: t_d=r0^2/D_s; same lumped time for both electrodes.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-entropy-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Full-cell reaction entropy change",
+      "category": "thermodynamics",
+      "unit": "J.mol-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": -13.5
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: Delta S at the specified cell SOC.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-entropy-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Full-cell reaction entropy change",
+      "category": "thermodynamics",
+      "unit": "J.mol-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 7.7
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: Delta S at the specified cell SOC.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-reaction-entropy-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Full-cell reaction entropy change",
+      "category": "thermodynamics",
+      "unit": "J.mol-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 9.7
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: Delta S at the specified cell SOC.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-heat-transfer-velocity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Heat transfer velocity h/Cp_vol",
+      "category": "thermal",
+      "unit": "m.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.11e-06
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: h/Cp_vol (micrometres.s-1); not h alone.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-heat-transfer-velocity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Heat transfer velocity h/Cp_vol",
+      "category": "thermal",
+      "unit": "m.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.059999999999999e-06
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: h/Cp_vol (micrometres.s-1); not h alone.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-heat-transfer-velocity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Heat transfer velocity h/Cp_vol",
+      "category": "thermal",
+      "unit": "m.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.9999999999999996e-06
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: h/Cp_vol (micrometres.s-1); not h alone.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-thermal-conductivity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective thermal conductivity",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 30% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: effective fitted k; not collector or active-material intrinsic conductivity.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-thermal-conductivity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective thermal conductivity",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 50% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: effective fitted k; not collector or active-material intrinsic conductivity.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-thermal-conductivity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective thermal conductivity",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1
+      },
+      "source_ids": [
+        "lin-2022-paper"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-table1",
+        "location": "Table 1 / This work / 70% SOC",
+        "origin_status": "fitted_effective_parameter"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "fit_protocol": "4C, 100 s period square wave",
+        "temperature_K": null
+      },
+      "definition": "Table 1: effective fitted k; not collector or active-material intrinsic conductivity.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "A model-specific parameter; transferability to another cell or formulation is not established."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-diffusivity-soc30",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective shared solid diffusivity inferred from t_d",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.5289855072463775e-14
+      },
+      "source_ids": [
+        "lin-2022-paper",
+        "lin-2022-code"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-model",
+        "location": "Table 1 t_d + Battery_model.m::rp_pos/rp_neg=5 um",
+        "origin_status": "derived_from_fitted_time_and_assumed_radius"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.3,
+        "assumed_particle_radius_m": 5e-06,
+        "diffusion_time_s": 552
+      },
+      "definition": "Conditional effective coefficient D=(5e-6 m)^2/t_d.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "Derived D=r^2/t_d, conditional on the model's assumed 5 um radius.",
+        "One effective D is shared by both electrodes; this is not an independently measured intrinsic LFP diffusion coefficient.",
+        "Changing radius changes inferred D quadratically; the inverse experiment identifies the time scale."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-diffusivity-soc50",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective shared solid diffusivity inferred from t_d",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.237288135593221e-14
+      },
+      "source_ids": [
+        "lin-2022-paper",
+        "lin-2022-code"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-model",
+        "location": "Table 1 t_d + Battery_model.m::rp_pos/rp_neg=5 um",
+        "origin_status": "derived_from_fitted_time_and_assumed_radius"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.5,
+        "assumed_particle_radius_m": 5e-06,
+        "diffusion_time_s": 590
+      },
+      "definition": "Conditional effective coefficient D=(5e-6 m)^2/t_d.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "Derived D=r^2/t_d, conditional on the model's assumed 5 um radius.",
+        "One effective D is shared by both electrodes; this is not an independently measured intrinsic LFP diffusion coefficient.",
+        "Changing radius changes inferred D quadratically; the inverse experiment identifies the time scale."
+      ]
+    },
+    {
+      "id": "a123-amp20-effective-diffusivity-soc70",
+      "version": "1",
+      "cell_id": "a123-amp20m1hd-a",
+      "name": "Effective shared solid diffusivity inferred from t_d",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.019292604501608e-14
+      },
+      "source_ids": [
+        "lin-2022-paper",
+        "lin-2022-code"
+      ],
+      "provenance": {
+        "asset_id": "lin2022-model",
+        "location": "Table 1 t_d + Battery_model.m::rp_pos/rp_neg=5 um",
+        "origin_status": "derived_from_fitted_time_and_assumed_radius"
+      },
+      "conditions": {
+        "cell_SOC_fraction": 0.7,
+        "assumed_particle_radius_m": 5e-06,
+        "diffusion_time_s": 622
+      },
+      "definition": "Conditional effective coefficient D=(5e-6 m)^2/t_d.",
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "limitations": [
+        "Derived D=r^2/t_d, conditional on the model's assumed 5 um radius.",
+        "One effective D is shared by both electrodes; this is not an independently measured intrinsic LFP diffusion coefficient.",
+        "Changing radius changes inferred D quadratically; the inverse experiment identifies the time scale."
+      ]
     }
   ]
 }

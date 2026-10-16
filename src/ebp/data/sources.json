@@ -80,5 +80,92 @@
     "license": "CC-BY-4.0",
     "license_evidence": "Zenodo API metadata.license.id=cc-by-4.0, checked 2026-10-16",
     "role": "Full-cell validation tests published alongside Chen2020; not proof of identical specimen to the dissected characterization cell."
+  },
+  "bpx-lfp-2022": {
+    "kind": "parameter_set",
+    "title": "BPX LFP/graphite 2 Ah 18650 example",
+    "authors": [
+      "About:Energy Limited",
+      "University of Oxford / Faraday Institution"
+    ],
+    "year": 2022,
+    "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json",
+    "license": "MIT",
+    "version": "BPX 0.1.0 example, repository commit 0f591336937c2c57509f20ab23f9908e58f7a757",
+    "role": "Parameter example based on cycling and electrode teardown. Manufacturer, commercial part number, and matching raw cycling files are not disclosed in this example. Electrolyte and entropy data include borrowed sources."
+  },
+  "lin-2022-paper": {
+    "kind": "paper",
+    "title": "Multiscale coupling of surface temperature with solid diffusion in large lithium-ion pouch cells",
+    "authors": [
+      "Jie Lin",
+      "Howie N. Chu",
+      "David A. Howey",
+      "Charles W. Monroe"
+    ],
+    "year": 2022,
+    "doi": "10.1038/s44172-022-00005-8",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/",
+    "license": "CC-BY-4.0",
+    "role": "Table 1 fitted effective parameters at 30/50/70% SOC; Methods explicitly identify AMP20M1HD-A. Lumped diffusion time is shared by both electrodes."
+  },
+  "lin-2022-data": {
+    "kind": "dataset",
+    "title": "Oxford experimental data for Lin et al. 2022",
+    "authors": [
+      "Jie Lin",
+      "Howie N. Chu",
+      "David A. Howey",
+      "Charles W. Monroe"
+    ],
+    "year": 2022,
+    "doi": "10.5287/bodleian:NGQkq49wG",
+    "url": "https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513",
+    "license": "CC-BY-4.0",
+    "role": "Original Cell I 4C full-discharge voltage, current, and thermal-grid observations. Source README explicitly permits redistribution under CC BY 4.0."
+  },
+  "lin-2022-code": {
+    "kind": "software",
+    "title": "Oxford multiscale-coupling COMSOL/MATLAB implementation",
+    "authors": [
+      "University of Oxford",
+      "Multiscale coupling developers"
+    ],
+    "year": 2022,
+    "url": "https://github.com/Battery-Intelligence-Lab/multiscale-coupling/tree/dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4",
+    "version": "dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4",
+    "license": "BSD-2-Clause",
+    "role": "Model geometry and assumed 5 micrometre particle radius. Optimizer initial guesses are not treated as final fitted parameters. Through-plane scaling is model specific."
+  },
+  "oxford-9ah-data": {
+    "kind": "dataset",
+    "title": "Oxford high-power A123 LFP/graphite pouch-cell experiments",
+    "authors": [
+      "Malgorzata E. Wojtala",
+      "Volkan Kumtepeli",
+      "Eloise C. Tredenick",
+      "Charles W. Monroe",
+      "David A. Howey"
+    ],
+    "year": 2025,
+    "doi": "10.5287/ora-eonzaxjpm",
+    "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758",
+    "license": "CC-BY-4.0",
+    "role": "Ten CC charge/discharge experiments at 2/4/6/8/10C. The archive README supplies the 1 Hz timebase and license. The paper identifies A123 9 Ah; no part number is established."
+  },
+  "oxford-9ah-paper": {
+    "kind": "paper",
+    "title": "Electrochemical-thermal modelling of high power Li-ion pouch cells",
+    "authors": [
+      "Volkan Kumtepeli",
+      "Malgorzata E. Wojtala",
+      "Eloise C. Tredenick",
+      "Charles W. Monroe",
+      "David A. Howey"
+    ],
+    "year": 2026,
+    "doi": "10.1016/j.jpowsour.2025.238764",
+    "url": "https://doi.org/10.1016/j.jpowsour.2025.238764",
+    "role": "A123 9 Ah power pouch cell; the model assumes fast diffusion rather than identifying a finite diffusion coefficient. Its full-cell pseudo-OCP is allocated between electrodes as a modeling convention, not measured electrode OCPs."
   }
 }

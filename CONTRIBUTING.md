@@ -1,17 +1,14 @@
-# 贡献数据或代码
+# Contributing
 
-目前在私有仓库内通过 Issue 或 PR 讨论修改。每次新增数据请提交：
+Discuss changes through issues or pull requests in the private repository. Each data addition should include:
 
-1. 可访问的原始来源、稳定版本、许可和引用。
-2. 材料／电极／电芯身份；区分型号、批次、样品和材料级数据。
-3. 测试协议、参比、方向、温度和状态；未提供的信息保持未知。
-4. 横纵坐标、单位、定义域，以及原始数据到参数的所有处理步骤。
-5. 原始文件校验值、提取数据、可重运行的处理脚本。
-6. 参数局限及验证范围；注明拟合、借用、假设或直接测量。
+1. Accessible original sources, stable versions, reuse licenses and citations.
+2. Material, electrode and cell identities, distinguishing commercial model, lot, specimen and study family.
+3. Protocol, reference electrode, direction, temperature and state; leave undisclosed information unknown.
+4. Coordinates, units, validity domains, parameter definitions and all processing steps.
+5. Original checksums, retained observations and a reproducible extraction script.
+6. Measured/fitted/derived/borrowed/assumed origin, limitations and validation status.
 
-公式、论文图片数字化点和仪器原始点必须分别标记。来自同一数据源的多次
-表示不能视为独立证据。修改数据需更新记录版本、哈希、来源及变更说明。
+Treat original instrument points, digitized plots and formula samples as distinct representations. Do not count multiple representations or branches from one source as independent evidence. Never join cells by chemistry or nominal capacity alone. Keep source NaNs or other gaps visible instead of silently imputing or deleting them. Preserve per-source attribution and notices.
 
-运行 `ebp validate`、`python -m pytest -q` 和 `ebp build-site`。涉及来源转换时，
-还应运行种子或相应处理脚本，确认生成文件可复现。PR 说明新增数据改变了
-什么、适用于什么、不足是什么。自动工具可辅助提取，但不替代人工来源核对。
+Run `ebp validate`, `python -m pytest -q` and `ebp build-site`. When extraction changes, also run `python scripts/seed_v01.py --download` and verify deterministic generated data. Update record versions, hashes and changelog when values or interpretation change. Explain what was added, its cell-match evidence and its practical limits. Automated extraction does not replace source review.

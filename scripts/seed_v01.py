@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce v0.1 from checksum-pinned assets; no fabricated or digitized points.
+"""Reproduce the base catalog and LFP expansion from checksum-pinned assets; no fabricated or digitized points.
 
 Run from the repository root after installing .[dev]. Cached raw data are excluded
 from Git. Use --download to retrieve missing assets from the public source.
@@ -472,6 +472,9 @@ def main(download=False):
     from seed_lgm50 import extend
 
     extend(download=download)
+    from seed_lfp import extend as extend_lfp
+
+    extend_lfp(download=download)
 
 
 if __name__ == "__main__":
