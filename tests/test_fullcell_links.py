@@ -31,10 +31,10 @@ def test_matching_preserves_identity_borrowing_and_capacity_scale():
         assert "dualfoil-attribution" in row["source_ids"]
     assert c.cells[ENERTECH]["match_level"] == "same_study_cell_family"
     assert not c.linked_tests("kokam-slpb78205130h-marquis2019")
-    assert not c.linked_tests("mohtat2020-nmc532-pouch")
+    assert len(c.linked_tests("mohtat2020-nmc532-pouch")) == 5
     lead = c.matching_audit["research_leads"][0]
     assert lead["doi"] == "10.7302/wwma-hx25"
-    assert "files_not_imported" in lead["status"]
+    assert "official_files_imported" in lead["status"]
     unlinked = {
         rid
         for row in c.matching_audit["unmatched_material_records"]

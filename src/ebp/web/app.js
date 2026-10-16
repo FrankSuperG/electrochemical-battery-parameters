@@ -9,7 +9,7 @@ const colors = ["#287b78","#c39042","#718db0","#ab7489","#5a9c91","#889a51","#bc
 const selected = new Set(["bpx-lfp18650-lfp-ocp", "lfp-afshar2017-formula", "sintef-lfp-d07eb6-c3-delithiation"]);
 let detailId = "bpx-lfp18650-lfp-ocp";
 const sourceLinks = ids => ids.map(id => `<a href="${safeUrl(data.sources[id].url)}" target="_blank" rel="noopener noreferrer">${esc(id)} ↗</a>`).join(" · ");
-const channelLabels={voltage_V:"Voltage",current_charge_positive_A:"Measured current",cell_temperature_K:"Absolute cell temperature",ambient_temperature_K:"Ambient temperature"};
+const channelLabels={time_s:"Original time coordinate",voltage_V:"Voltage",current_charge_positive_A:"Measured current",cell_temperature_K:"Absolute cell temperature",ambient_temperature_K:"Ambient temperature"};
 const number = value => Math.abs(value) !== 0 && (Math.abs(value) < .001 || Math.abs(value) >= 1e5) ? value.toExponential(5) : String(value);
 
 $("total").textContent = data.records.length;
@@ -76,15 +76,17 @@ function renderCell() {
   $("cell-note").innerHTML=esc(cell.note)+(cell.external_ocp_references?'<br>'+cell.external_ocp_references.map(r=>`<a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">External pseudo-OCV workbook ↗</a> · ${esc(r.status)}`).join("<br>"):"");
   $("cell-coverage").innerHTML=Object.entries(cell.coverage).map(([k,v])=>`<div><b>${esc(k==="ocp"?"OCP":words(k))}</b><span>${esc(v)}</span></div>`).join("");
   $("cell-evidence").innerHTML=`<details open><summary>Evidence and missing items</summary><div class="evidence-scroll"><table class="parameter-table"><thead><tr><th>Component</th><th>Match / origin</th><th>Sources and gaps</th></tr></thead><tbody>${Object.entries(cell.evidence_matrix||{}).map(([key,row])=>`<tr><td>${esc(words(key))}<small class="condition">${row.record_ids.length} records</small></td><td><b>${esc(words(row.match_level))}</b><br>${esc(row.evidence)}</td><td>${sourceLinks(row.source_ids)}<br>${row.missing_items.map(esc).join("<br>")}</td></tr>`).join("")}</tbody></table></div><p class="compact">Cell gaps: ${(cell.missing_items||[]).map(esc).join(" · ")}</p></details>`;
-  $("cell-downloads").innerHTML=`<a class="button" href="downloads/${id}-parameters.csv" download>Parameters CSV</a><a class="button" href="downloads/${id}-parameters.json" download>Cell package JSON</a>`;
+  $("cell-downloads").innerHTML=`<a class="button" href="downloads/${id}-parameters.csv" download>Parameters CSV · all variants</a><a class="button" href="downloads/${id}-parameters.json" download>Cell package JSON</a><a class="button" href="downloads/${id}-bundle.zip" download>Offline bundle ZIP</a>`;
   $("parameter-category").innerHTML='<option value="">All parameters</option>'+[...new Set(parameters.map(p=>p.category))].sort().map(c=>`<option value="${esc(c)}">${esc(words(c))}</option>`).join("");
+  $("parameter-variant").innerHTML='<option value="">All variants</option>'+[...new Set(parameters.map(p=>p.conditions?.parameterization_variant).filter(Boolean))].map(v=>`<option value="${esc(v)}">${esc(words(v))}</option>`).join("");
+  if(parameters.some(p=>p.conditions?.parameterization_variant==="original_author_mpm")) $("parameter-variant").value="original_author_mpm";
   $("parameter-detail").innerHTML="";
   $("test-sample").innerHTML=tests.map(t=>`<option value="${esc(t.id)}">${esc(t.id)}</option>`).join("");
   $("test-sample").disabled=!tests.length;
   renderParameters();renderFullCell();
 }
 function renderParameters() {
-  const rows=data.parameters.filter(p=>p.cell_id===$("cell-select").value&&(!$("parameter-category").value||p.category===$("parameter-category").value));
+  const rows=data.parameters.filter(p=>p.cell_id===$("cell-select").value&&(!$("parameter-variant").value||p.conditions?.parameterization_variant===$("parameter-variant").value)&&(!$("parameter-category").value||p.category===$("parameter-category").value));
   $("parameter-count").textContent=`${rows.length} records`;
   $("parameter-rows").innerHTML=rows.map(p=>`<tr><td><button data-parameter="${esc(p.id)}">${esc(p.name)}</button>${p.conditions?.cell_SOC_fraction!==undefined?`<small class="condition">Cell SOC ${(p.conditions.cell_SOC_fraction*100).toFixed(0)}%</small>`:""}</td><td>${p.representation.kind==="scalar"?esc(number(p.representation.value)):"Function"}</td><td>${esc(p.unit)}</td></tr>`).join("")||'<tr><td colspan="3">No parameter values imported for this family. See coverage gaps above.</td></tr>';
 }
@@ -93,12 +95,13 @@ function renderFullCell() {
   const test=data.full_cell_tests.find(t=>t.id===$("test-sample").value);
   if(!test){$("test-description").textContent="No matching raw full-cell experiments imported for this cell or parameter set.";$("fullcell-chart").innerHTML='<p class="empty">Full-cell test coverage gap</p>';$("test-downloads").innerHTML="";$("test-note").textContent="This package retains an explicit test coverage gap.";return;}
   $("test-description").textContent=test.protocol+". "+words(test.observation_kind)+". Voltage observations; no model prediction overlay.";
-  $("fullcell-chart").innerHTML=plot(test.preview_segments,"Time from trace / segment start / h","Full-cell voltage / V");
+  $("fullcell-chart").innerHTML=plot(test.preview_segments,test.independent_variable?.label||"Time from trace / segment start / h","Full-cell voltage / V");
   const asset=data.assets[test.asset_id];
   $("test-downloads").innerHTML=(test.original_download_path?`<a class="button" href="downloads/${esc(test.original_download_path.split("/").pop())}" download>Original ${esc(test.original_format)}</a>`:test.path?`<a class="button" href="downloads/${esc(test.path.split("/").pop())}" download>Original CSV</a>`:`<a class="button" href="${safeUrl(asset.url)}" target="_blank" rel="noopener noreferrer">Original ${test.original_member?"ZIP":"MAT"} ↗</a>`)+`<a class="button" href="downloads/${esc(test.normalized_path.split("/").pop())}" download>Normalized CSV</a>`+(test.sidecars||[]).map(side=>`<a class="button" href="downloads/${esc(side.path.split("/").pop())}" download>Temperature rise CSV</a><a class="button" href="downloads/${esc(side.original_download_path.split("/").pop())}" download>Original rise TXT</a>`).join("");
-  $("test-note").innerHTML=`${test.row_count.toLocaleString()} source rows retained. Display is decimated; valid voltage points only. Current: ${esc(words(test.basic_test.current_measurement))}. ${esc(test.temperature_definition||"Cell and ambient temperature retained from the instrument file.")}<br>${esc(test.missing_values?"Missing rows: "+Object.entries(test.missing_values).map(([key,value])=>(channelLabels[key]||words(key))+": "+value.toLocaleString()).join(" · "):"No missing values introduced.")}<br>Missing items: ${(test.missing_items||[]).map(esc).join(" · ")||"See cell evidence matrix"}<br>Channels: ${Object.entries(test.channel_availability).map(([key,value])=>esc((channelLabels[key]||words(key))+": "+value.present_rows.toLocaleString()+"/"+value.total_rows.toLocaleString()+" rows")).join(" · ")}<br>${sourceLinks([test.source_id,...(test.scientific_source_ids||[])])}${test.source_id==="pybamm-data-1-0-2"?' · <a href="licenses/PyBaMM-data-BSD-3-Clause.txt">Data license notice</a>':""} · Original SHA-256: <code>${esc(asset.sha256)}</code>`;
+  $("test-note").innerHTML=`${test.row_count.toLocaleString()} source rows retained. Display is decimated; valid voltage points only. Current: ${esc(words(test.basic_test.current_measurement))}. ${esc(test.temperature_definition||"Cell and ambient temperature retained from the instrument file.")}<br>${esc(test.missing_values?"Missing rows: "+Object.entries(test.missing_values).map(([key,value])=>(channelLabels[key]||words(key))+": "+value.toLocaleString()).join(" · "):"No missing values introduced.")}<br>${(test.source_issues||[]).map(esc).join("<br>")}<br>Missing items: ${(test.missing_items||[]).map(esc).join(" · ")||"See cell evidence matrix"}<br>Channels: ${Object.entries(test.channel_availability).map(([key,value])=>esc((channelLabels[key]||words(key))+": "+value.present_rows.toLocaleString()+"/"+value.total_rows.toLocaleString()+" rows")).join(" · ")}<br>${sourceLinks([test.source_id,...(test.scientific_source_ids||[])])}${test.source_id==="pybamm-data-1-0-2"?' · <a href="licenses/PyBaMM-data-BSD-3-Clause.txt">Data license notice</a>':""} · Original SHA-256: <code>${esc(asset.sha256)}</code>`;
 }
 $("cell-select").addEventListener("change",renderCell);
 $("parameter-category").addEventListener("change",renderParameters);
+$("parameter-variant").addEventListener("change",renderParameters);
 $("test-sample").addEventListener("change",renderFullCell);
 render();renderDetail();renderCell();

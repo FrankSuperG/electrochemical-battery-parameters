@@ -704,27 +704,27 @@
     ]
   },
   "mohtat2020-nmc532-pouch": {
-    "manufacturer": null,
+    "manufacturer": "University of Michigan Battery Lab",
     "model": null,
-    "display_name": "Mohtat2020 | NMC532/graphite | 5 Ah model input",
+    "display_name": "UMBL Mohtat2020 | 5 Ah NMC/graphite research pouch",
     "format": "pouch",
     "chemistry": "NMC532/graphite",
     "nominal_capacity_Ah": 5.0,
-    "identity_level": "study_cell_family; commercial_part_undisclosed",
-    "match_level": "parameter_set_only",
-    "match_evidence": "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+    "identity_level": "study_defined_laboratory_cell; commercial_part_not_applicable",
+    "match_level": "same_study_cell_family",
+    "match_evidence": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
     "source_ids": [
       "mohtat-2020",
       "mohtat-2020-data",
       "pybamm-25-4-2"
     ],
-    "model_context": "Partial Mohtat2020 DFN/SPM/SPMe implementation inputs; model options and initialization still require review",
-    "note": "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+    "model_context": "Author MPMe model and PyBaMM Mohtat2020 variant; selectable parameter origins",
+    "note": "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
     "coverage": {
-      "ocp": "Peyman MPM / Mohtat2020 implementation, as attributed by upstream function docstrings",
-      "diffusion": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
-      "kinetics": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
-      "full_cell_tests": "Same-paper dataset DOI 10.7302/wwma-hx25 located; file access returned HTTP 403, so contents and model/protocol correspondence remain unverified. No trace imported."
+      "ocp": "Two original author OCP expressions plus two PyBaMM variants; graphite x-offset differs (0.007 versus 0.001). Raw half-cell points absent.",
+      "diffusion": "Original author D_n=5e-15 and D_p=8e-15 m2/s; PyBaMM same reference values with added Arrhenius dependence.",
+      "kinetics": "Original k0_n=1.1e-11 and k0_p=5e-11 with source i0 definition; PyBaMM exchange-current prefactors are rounded/unit-converted and have added temperature dependence.",
+      "full_cell_tests": "Five original charging MAT files, 0.1/0.2/0.5/1/2C by code/inventory. Measured voltage and temperature versus capacity; current, timestamps, discharge and C/20 files absent."
     },
     "parameter_ids": [
       "mohtat2020-negative-current-collector-thickness-m",
@@ -764,86 +764,209 @@
       "mohtat2020-negative-diffusivity",
       "mohtat2020-negative-exchange-current-density",
       "mohtat2020-positive-diffusivity",
-      "mohtat2020-positive-exchange-current-density"
+      "mohtat2020-positive-exchange-current-density",
+      "mohtat-author-ds-n",
+      "mohtat-author-ds-p",
+      "mohtat-author-k0-n",
+      "mohtat-author-k0-p",
+      "mohtat-author-cs-max-n",
+      "mohtat-author-cs-max-p",
+      "mohtat-author-es-n",
+      "mohtat-author-es-p",
+      "mohtat-author-del-n",
+      "mohtat-author-del-s",
+      "mohtat-author-del-p",
+      "mohtat-author-epsilon-e-n",
+      "mohtat-author-epsilon-e-s",
+      "mohtat-author-epsilon-e-p",
+      "mohtat-author-a",
+      "mohtat-author-ce-init",
+      "mohtat-author-kappa",
+      "mohtat-author-d-e",
+      "mohtat-author-t-plus",
+      "mohtat-author-rho",
+      "mohtat-author-cp",
+      "mohtat-author-h",
+      "mohtat-author-rn-0",
+      "mohtat-author-rn-1",
+      "mohtat-author-rn-2",
+      "mohtat-author-rn-3",
+      "mohtat-author-rn-4",
+      "mohtat-author-rp-0",
+      "mohtat-author-zeta-n-0",
+      "mohtat-author-zeta-n-1",
+      "mohtat-author-zeta-n-2",
+      "mohtat-author-zeta-n-3",
+      "mohtat-author-zeta-n-4"
     ],
     "ocp_record_ids": [
       "mohtat2020-graphite-ocp",
-      "mohtat2020-nmc532-ocp"
+      "mohtat2020-nmc532-ocp",
+      "mohtat-author-graphite-ocp",
+      "mohtat-author-nmc532-ocp"
     ],
-    "full_cell_test_ids": [],
+    "full_cell_test_ids": [
+      "mohtat-charge-0p1c",
+      "mohtat-charge-0p2c",
+      "mohtat-charge-0p5c",
+      "mohtat-charge-1c",
+      "mohtat-charge-2c"
+    ],
     "evidence_matrix": {
       "ocp": {
         "record_ids": [
           "mohtat2020-graphite-ocp",
-          "mohtat2020-nmc532-ocp"
+          "mohtat2020-nmc532-ocp",
+          "mohtat-author-graphite-ocp",
+          "mohtat-author-nmc532-ocp"
         ],
         "source_ids": [
           "mohtat-2020",
+          "mohtat-2020-data",
           "pybamm-25-4-2"
         ],
-        "match_level": "parameter_set_only",
-        "evidence": "Peyman MPM / Mohtat2020 implementation, as attributed by upstream function docstrings",
+        "match_level": "same_study_cell_family",
+        "evidence": "Two original author OCP expressions plus two PyBaMM variants; graphite x-offset differs (0.007 versus 0.001). Raw half-cell points absent.",
         "missing_items": [
-          "Same-specimen measurement provenance unresolved"
+          "Same-specimen measurement provenance unresolved",
+          "Author and PyBaMM variants require explicit selection; not identical parameterizations"
         ]
       },
       "diffusion": {
         "record_ids": [
           "mohtat2020-negative-diffusivity",
-          "mohtat2020-positive-diffusivity"
+          "mohtat2020-positive-diffusivity",
+          "mohtat-author-ds-n",
+          "mohtat-author-ds-p"
         ],
         "source_ids": [
           "mohtat-2020",
+          "mohtat-2020-data",
           "pybamm-25-4-2"
         ],
-        "match_level": "parameter_set_only",
-        "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
+        "match_level": "same_study_cell_family",
+        "evidence": "Original author D_n=5e-15 and D_p=8e-15 m2/s; PyBaMM same reference values with added Arrhenius dependence.",
         "missing_items": [
-          "Same-specimen measurement provenance unresolved"
+          "Same-specimen measurement provenance unresolved",
+          "Author and PyBaMM variants require explicit selection; not identical parameterizations"
         ]
       },
       "kinetics": {
         "record_ids": [
           "mohtat2020-negative-exchange-current-density",
-          "mohtat2020-positive-exchange-current-density"
+          "mohtat2020-positive-exchange-current-density",
+          "mohtat-author-k0-n",
+          "mohtat-author-k0-p"
         ],
         "source_ids": [
           "mohtat-2020",
+          "mohtat-2020-data",
           "pybamm-25-4-2"
         ],
-        "match_level": "parameter_set_only",
-        "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
+        "match_level": "same_study_cell_family",
+        "evidence": "Original k0_n=1.1e-11 and k0_p=5e-11 with source i0 definition; PyBaMM exchange-current prefactors are rounded/unit-converted and have added temperature dependence.",
         "missing_items": [
-          "Same-specimen measurement provenance unresolved"
+          "Same-specimen measurement provenance unresolved",
+          "Author and PyBaMM variants require explicit selection; not identical parameterizations"
         ]
       },
       "full_cell_tests": {
-        "record_ids": [],
+        "record_ids": [
+          "mohtat-charge-0p1c",
+          "mohtat-charge-0p2c",
+          "mohtat-charge-0p5c",
+          "mohtat-charge-1c",
+          "mohtat-charge-2c"
+        ],
         "source_ids": [
           "mohtat-2020-data"
         ],
-        "match_level": "missing",
-        "evidence": "Same-paper dataset DOI 10.7302/wwma-hx25 located; file access returned HTTP 403, so contents and model/protocol correspondence remain unverified. No trace imported.",
+        "match_level": "same_study_cell_family",
+        "evidence": "Five original charging MAT files, 0.1/0.2/0.5/1/2C by code/inventory. Measured voltage and temperature versus capacity; current, timestamps, discharge and C/20 files absent.",
         "missing_items": [
-          "No matching imported records"
+          "Same-specimen measurement provenance unresolved",
+          "Author and PyBaMM variants require explicit selection; not identical parameterizations"
         ]
       },
       "basic_charge_discharge": {
-        "record_ids": [],
-        "source_ids": [],
-        "match_level": "missing",
-        "evidence": "No matching imported basic test",
+        "record_ids": [
+          "mohtat-charge-0p1c",
+          "mohtat-charge-0p2c",
+          "mohtat-charge-0p5c",
+          "mohtat-charge-1c",
+          "mohtat-charge-2c"
+        ],
+        "source_ids": [
+          "mohtat-2020-data"
+        ],
+        "match_level": "same_study_cell_family",
+        "evidence": "constant_current_charge",
         "missing_items": [
-          "Matching CC charge/discharge observations"
+          "Ambient temperature trace",
+          "C/20 OCV test",
+          "Discharge trace",
+          "Exact specimen identifier",
+          "Full CV/rest trace",
+          "Measured current trace",
+          "Original half-cell OCP points",
+          "Original timestamps",
+          "Author and PyBaMM variants require explicit selection; not identical parameterizations"
         ]
       }
     },
     "missing_items": [
-      "Identical characterization/validation specimen not established",
-      "Independent full-cell model reproduction not performed",
-      "Commercial part number unresolved",
-      "Matching full-cell charge/discharge observations not imported"
-    ]
+      "Exact specimen identifier",
+      "Measured current trace",
+      "Original timestamps",
+      "Discharge/CV/rest and C/20 files",
+      "Raw electrode OCP points",
+      "Independent full-cell model reproduction"
+    ],
+    "parameter_crosswalk": {
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "author_asset_id": "mohtat2020-main-m",
+      "pybamm_asset_id": "pybamm-mohtat2020-code",
+      "same_study": true,
+      "identical_parameterization": false,
+      "differences": [
+        {
+          "component": "graphite_ocp",
+          "author": "exp(-75*(x+0.007))",
+          "pybamm": "exp(-75*(x+0.001))",
+          "status": "different"
+        },
+        {
+          "component": "positive_ocp",
+          "status": "same_coefficients"
+        },
+        {
+          "component": "particle_diffusion",
+          "author_reference_m2_s": [
+            5e-15,
+            8e-15
+          ],
+          "status": "same_reference_values; PyBaMM temperature extension absent from author code"
+        },
+        {
+          "component": "kinetics",
+          "author_k0": [
+            1.1e-11,
+            5e-11
+          ],
+          "author_F_C_mol": 96485.0,
+          "pybamm_i0_prefactors": [
+            1.061e-06,
+            4.824e-06
+          ],
+          "status": "unit conversion with rounding and PyBaMM temperature extension"
+        },
+        {
+          "component": "thermal_geometry",
+          "status": "different; author cell dimensions/outer cooling area must not be replaced by PyBaMM model geometry silently"
+        }
+      ],
+      "source_review": "main.m, Battery_MPM_Electrolyte_DAE.m, Plot_data_only.m, README; no upstream code executed"
+    }
   },
   "kim2011-nca-nominal-design": {
     "manufacturer": null,

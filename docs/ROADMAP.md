@@ -28,15 +28,15 @@
 2. Extend the AMP20 experiment collection to fitting and held-out pulse tests; establish specimen mapping using supplementary evidence.
 3. Audit BPX per-field origins and support electrolyte/entropy functions without changing their independent variables or units.
 4. Curate GITT/EIS processing with geometry, concentration, electrode-area and identifiability assumptions.
-5. Reproduce one complete DFN/SPMe/SPM case with versioned model options, initialization, sign conventions, fit/validation separation and voltage/temperature errors.
+5. Build the audited [CPG-SPMT adapter](CPG_SPMT_VALIDATION.md), starting with a no-refit LG M50 voltage comparison. Resolve OCP injection, timing, voltage clipping, kinetic signs and parameter grouping first; preserve fit/validation separation. Supplied temperature is an input, not an independently predicted output.
 6. Add uncertainty only when supported by repeated observations or published estimates.
 
 Public hosting, PyPI publication and automated parameter identification remain separate future decisions. Current cell packages are partial data collections, not validated plug-and-play models.
 
 ## v0.4 follow-up gaps
 
-- Retrieve and inspect the explicitly same-paper Mohtat voltage/expansion deposit
-  when public file access works; verify each file's units, protocol and specimen.
+- Mohtat2020 originals retrieved in v0.5. Remaining work is original current/time,
+  discharge/CV/rest/C20 files, exact specimen and raw electrode OCP exports.
 - Seek electrode-specific OCP and current-resolved baseline tests for the existing
   LFP entries without converting fitted/assumed quantities into measurements.
 - Resolve Enertech commercial identity and seek original current/charge records;

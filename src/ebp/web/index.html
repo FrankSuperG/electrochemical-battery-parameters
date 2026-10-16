@@ -11,7 +11,7 @@
   <header class="topbar">
     <a class="brand" href="#library"><img src="logo.png" alt="E-BatP — Electrochemical Battery Parameters"></a>
     <nav aria-label="Main navigation"><a href="#library" class="active">OCP curves</a><a href="#cell-package">Cell packages</a><a href="#sources">Sources</a><a href="#guide">Guide</a></nav>
-    <span class="version">Local viewer <i></i> v0.4</span>
+    <span class="version">Local viewer <i></i> v0.5</span>
   </header>
   <main>
     <section class="intro"><div><div class="eyebrow">ELECTRODES → PARAMETERS → FULL-CELL TESTS</div><h1>Find the parameter.<br>Know the cell behind it.</h1><p>Explore electrochemical data across LFP, layered oxides, spinels and silicon-based anodes with source definitions, model assumptions and explicit evidence for every cell match.</p></div><div class="intro-aside"><span class="large-number" id="total">—</span><span>OCP records<br><small>Inspect · compare · download</small></span></div></section>
@@ -32,7 +32,7 @@
       <label for="cell-select">Cell or study family</label><select id="cell-select"></select>
       <div class="detail-top"><div><h2 id="cell-title"></h2><p class="muted compact" id="cell-context"></p></div><div class="actions" id="cell-downloads"></div></div>
       <p class="link-note" id="cell-match"></p><div id="cell-coverage" class="coverage"></div><div id="cell-evidence"></div><p class="muted compact" id="cell-note"></p>
-      <div class="cell-grid"><div><div class="parameter-toolbar"><label for="parameter-category">Category</label><select id="parameter-category"><option value="">All parameters</option></select><span id="parameter-count"></span></div>
+      <div class="cell-grid"><div><div class="parameter-toolbar"><label for="parameter-category">Category</label><select id="parameter-category"><option value="">All parameters</option></select><label for="parameter-variant">Variant</label><select id="parameter-variant"><option value="">All variants</option></select><span id="parameter-count"></span></div>
       <div class="parameter-scroll"><table class="parameter-table"><thead><tr><th>Parameter / upstream definition</th><th>Value</th><th>Unit</th></tr></thead><tbody id="parameter-rows"></tbody></table></div><div id="parameter-detail" class="parameter-detail"></div></div>
       <div><div class="test-toolbar"><label for="test-sample">Full-cell test</label><select id="test-sample"></select></div><p class="muted compact" id="test-description"></p><div id="fullcell-chart"></div><div id="test-downloads" class="actions"></div><p class="axis-note" id="test-note"></p></div></div>
     </section>
@@ -48,5 +48,5 @@ parameters = catalog.search_parameters(
 )
 tests = catalog.linked_tests("a123-amp20m1hd-a")</code></pre></div><div><h2>Use the right assumptions.</h2><ul><li>C/50 measurements are pseudo-OCP branches with finite-current polarization.</li><li>BPX OCP fits retain their supplied operating stoichiometry bounds.</li><li>The AMP20 diffusivity is derived from a fitted time and an assumed radius; both electrodes share that effective time.</li><li>Volumetric kinetics, surface exchange-current densities and BPX rate constants have different definitions.</li><li>Model matches do not establish identical specimens or independent model validation.</li><li>Missing measurements remain empty; unknown identities, conditions and licenses remain explicit gaps.</li></ul></div></div></section>
   </main>
-  <footer><span>E-BatP · Electrochemical Battery Parameters <b>v0.4.0</b></span><span>Project code MIT · upstream data and implementations retain their own licenses</span></footer>
+  <footer><span>E-BatP · Electrochemical Battery Parameters <b>v0.5.0</b></span><span>Project code MIT · upstream data and implementations retain their own licenses</span></footer>
 </body></html>

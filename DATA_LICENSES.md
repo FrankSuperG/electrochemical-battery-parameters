@@ -135,6 +135,25 @@ upstream figure digitizations, not instrument raw. Enertech tables omit comments
 and the explicitly synthetic negative-OCP `(0,3.5)` guard; all other numeric points
 and source line references are retained. No smoothing or extrapolation is added.
 
-The Mohtat DOI is indexed as a lead only. DataCite declares CC BY 4.0; no dataset
-files are redistributed because access was unavailable. Source authors have not
-endorsed this project.
+At v0.4 the Mohtat DOI was indexed as a lead only after automated access failed.
+The v0.5 retrieval and attribution below supersede that no-import status.
+Source authors have not endorsed this project.
+
+## Official Mohtat2020 deposit in v0.5
+
+Ten original files (five MATs, four MATLAB files and READ_ME.pdf), author-model
+OCP expressions and scalar inputs are from Peyman Mohtat, Jason B. Siegel and
+Anna G. Stefanopoulou, University of Michigan, dataset DOI 10.7302/wwma-hx25,
+related paper DOI 10.1149/1945-7111/aba5d1. They retain CC BY 4.0; original author
+copyright/license headers are preserved byte-for-byte in the packaged source
+files. Source URLs and SHA-256 values are in scripts/mohtat_assets.json.
+
+Changes: all paired Q_data/Vt_data/Temp_data observations retained; temperature
+converted from Celsius to kelvin; one-based source row references added; no
+smoothing or resampling. Missing current and time remain empty. Protocol current
+and 10-second acquisition metadata are not fabricated measurements. MATLAB scalar
+assignments and two OCP expressions were transcribed without execution; source
+balancing limits are retained. PyBaMM variants keep their separate BSD license.
+The author/PyBaMM crosswalk is original project documentation. Source authors
+have not endorsed this project. The v0.4 no-import status is superseded by the
+verified v0.5 official retrieval; no third-party paper-download link is included.

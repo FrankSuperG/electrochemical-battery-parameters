@@ -6,6 +6,7 @@ import json
 import csv
 import copy
 import math
+import zipfile
 
 
 def _preview(test, samples):
@@ -32,7 +33,9 @@ def _preview(test, samples):
         ]
         if not valid:
             continue
-        start = float(points[0]["time_s"])
+        coordinate = test.get("independent_variable", {}).get("column", "time_s")
+        start = float(points[0][coordinate]) if coordinate == "time_s" else 0
+        scale = 3600 if coordinate == "time_s" else 1
         # Include valid endpoints; source missing counts are shown beside the plot.
         stride = max(1, math.ceil(len(valid) / 300))
         selected = valid[::stride]
@@ -42,7 +45,7 @@ def _preview(test, samples):
             {
                 "label": label,
                 "points": [
-                    [(float(r["time_s"]) - start) / 3600, float(r["voltage_V"])]
+                    [(float(r[coordinate]) - start) / scale, float(r["voltage_V"])]
                     for r in selected
                 ],
                 "valid_voltage_rows": len(valid),
@@ -106,6 +109,9 @@ def build_site(catalog, output):
         asset_ids.update(aid for r in ocp for aid in r["provenance"]["asset_ids"])
         asset_ids.update(t["asset_id"] for t in tests)
         asset_ids.update(s["asset_id"] for t in tests for s in t.get("sidecars", []))
+        asset_ids.update(
+            aid for t in tests for aid in t.get("supporting_asset_ids", [])
+        )
         write_json(
             f"{cid}-parameters.json",
             {
@@ -137,6 +143,7 @@ def build_site(catalog, output):
                     "definition",
                     "source_ids",
                     "origin_status",
+                    "parameterization_variant",
                 ]
             )
             for p in parameters:
@@ -153,6 +160,7 @@ def build_site(catalog, output):
                         p.get("definition", p["name"]),
                         ";".join(p["source_ids"]),
                         p["provenance"]["origin_status"],
+                        p.get("conditions", {}).get("parameterization_variant", ""),
                     ]
                 )
     data = {
@@ -196,4 +204,41 @@ def build_site(catalog, output):
     license_dir.mkdir(exist_ok=True)
     for item in files("ebp").joinpath("licenses").iterdir():
         (license_dir / item.name).write_bytes(item.read_bytes())
+    # Offline bundles keep one cell's records, sources and notices together.
+    for cid, cell in catalog.cells.items():
+        names = {f"{cid}-parameters.json", f"{cid}-parameters.csv"}
+        for curve in catalog.search(cell_id=cid):
+            names.update([f"{curve.id}.json", f"{curve.id}.csv"])
+        for test in catalog.linked_tests(cid):
+            names.update(
+                Path(p).name
+                for p in [
+                    test.get("path"),
+                    test["normalized_path"],
+                    test.get("original_download_path"),
+                ]
+                if p
+            )
+            for side in test.get("sidecars", []):
+                names.update(
+                    Path(side[k]).name for k in ["path", "original_download_path"]
+                )
+        with zipfile.ZipFile(
+            downloads / f"{cid}-bundle.zip", "w", compression=zipfile.ZIP_DEFLATED
+        ) as archive:
+            for name in sorted(names):
+                archive.writestr(name, (downloads / name).read_bytes())
+            package = json.loads((downloads / f"{cid}-parameters.json").read_text())
+            for aid, asset in package["upstream_assets"].items():
+                if asset.get("path"):
+                    archive.writestr(
+                        "sources/" + Path(asset.get("filename", asset["path"])).name,
+                        (catalog.root / asset["path"]).read_bytes(),
+                    )
+            for notice in license_dir.iterdir():
+                archive.writestr("licenses/" + notice.name, notice.read_bytes())
+            archive.writestr(
+                "README.txt",
+                f"{cell['display_name']}\n\nRead {cid}-parameters.json for source links, evidence and missing items.\nBlank measurements are unavailable, not zero. Check each test's independent_variable before plotting.\nParameter variants must be selected explicitly; partial collections are not complete validated parameter sets.\nOriginal MATLAB/source files are supplied for provenance and are not executed by E-BatP.\n",
+            )
     return output

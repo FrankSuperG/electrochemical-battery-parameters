@@ -58,3 +58,13 @@ For time/voltage-only files, `path=null` selects the normalized reader; `origina
 The v0.3 families are LFP, graphite, NMC111, NMC532, NMC811, LNMO, silicon, silicon-graphite, LCO and NCA. Positive/negative electrode roles are explicit per record; material names alone do not determine the role. Different SiGr formulations retain separate material IDs and source labels.
 
 A shared family such as NMC532 does not join a SINTEF half-cell to the Mohtat pouch model. Marquis2019 OCPs use `relationship=surrogate` because their function origin is borrowed Dualfoil data. The named Kokam model remains the implementation's model association, not proof of same-cell characterization. NCA is a nominal design with no commercial model assigned. The NCA source's positive-OCP docstring says Graphite; classification follows the positive dictionary entry and NCA set context, with that source issue retained in limitations.
+
+## Capacity-coordinate exports and variants in v0.5
+
+`independent_variable.column=charge_capacity_Ah` selects native capacity for the
+Mohtat charge exports. `time_s` stays empty and is never reconstructed from Q/I or
+a reported sampling interval. Measured V/T retain paired source rows. Nominal
+charge-current magnitudes are protocol metadata only. Parameter conditions use
+`parameterization_variant` to separate author MPM inputs from the pinned PyBaMM
+implementation; same-study association does not mean identical coefficients.
+Offline cell ZIPs include scoped data, available source bytes, metadata and notices.

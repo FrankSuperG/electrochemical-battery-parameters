@@ -76,3 +76,13 @@ The Mohtat same-paper dataset DOI is a verified metadata lead, not imported data
 HTTP 403 prevented file inspection. The component evidence matrix records missing
 items and source IDs. Full decisions and citations are in
 [FULL_CELL_MATCHING.md](FULL_CELL_MATCHING.md).
+
+## Mohtat retrieval correction in v0.5
+
+Normal-browser access succeeded on 2026-10-16 and retrieved the original author
+bundle. Earlier 403 observations apply to automated access, not dataset availability.
+The v0.5 importer uses committed, hash-pinned originals and requires no repeated
+browser download in CI. Five capacity-coordinate charging series and 33 author
+scalar inputs were curated without executing MATLAB. See [MOHTAT2020.md](MOHTAT2020.md)
+for missing current/time/discharge channels, a source rate conflict and the
+non-identical PyBaMM graphite OCP. The NMC532 label remains implementation-attributed.

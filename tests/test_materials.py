@@ -27,7 +27,7 @@ def test_material_families_specimens_and_cell_associations():
         "NCA",
         "NCO",
     }
-    assert len(c.search()) == 47
+    assert len(c.search()) == 49
     assert len(c.experiments) == 16
     assert len(c.search(representation="table")) == 34
     for material, role in [
@@ -64,10 +64,9 @@ def test_material_families_specimens_and_cell_associations():
     assert (
         c.cells["kim2011-nca-nominal-design"]["identity_level"] == "nominal_design_only"
     )
-    assert c.cells["mohtat2020-nmc532-pouch"]["match_level"] == "parameter_set_only"
+    assert c.cells["mohtat2020-nmc532-pouch"]["match_level"] == "same_study_cell_family"
     for cid in [
         "kim2011-nca-nominal-design",
-        "mohtat2020-nmc532-pouch",
         "kokam-slpb78205130h-marquis2019",
     ]:
         assert len(c.search_parameters(cell_id=cid)) == 38
@@ -115,6 +114,8 @@ def test_transcribed_ocp_and_functions_match_pinned_implementation(name, cid):
     bindings = pybamm.ParameterValues(upstream)
     x = np.array([0.0037, 0.1231, 0.4997, 0.8103, 0.9971])
     for curve in c.search(cell_id=cid):
+        if curve.id.startswith("mohtat-author-"):
+            continue
         if curve.record["material"] == "graphite" and cid == "lg-m50":
             continue  # Existing Prada distribution is covered by test_sources.
         function = curve.record["representation"]["source_function"]
@@ -122,6 +123,8 @@ def test_transcribed_ocp_and_functions_match_pinned_implementation(name, cid):
             curve(x), getattr(module, function)(x), rtol=2e-13, atol=2e-13
         )
     for p in c.search_parameters(cell_id=cid):
+        if p.record["id"].startswith("mohtat-author-"):
+            continue
         r = p.record
         if r["representation"]["kind"] == "scalar":
             assert p.value == upstream[r["name"]]

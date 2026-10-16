@@ -4,23 +4,23 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.4.0-287b78" alt="Version 0.4.0">
+  <img src="https://img.shields.io/badge/version-0.5.0-287b78" alt="Version 0.5.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
 
 E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
-**v0.4.0: 47 OCP records · 11 material families · 304 other parameter records · 20 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
+**v0.5.0: 49 OCP records · 11 material families · 337 other parameter records · 25 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
 
 ## Material coverage
 
 | Material family | Measured branches | Published tables | Expressions | Identity / interpretation |
 |---|---:|---:|---:|---|
 | LFP | 4 | 0 | 2 | SINTEF laboratory electrodes; Afshar and BPX expressions |
-| Graphite | 4 | 1 | 6 | Distinct effective, figure-fitted or borrowed inputs; no universal graphite curve |
+| Graphite | 4 | 1 | 7 | Distinct effective, figure-fitted or borrowed inputs; no universal graphite curve |
 | NMC111 | 4 | 0 | 0 | SINTEF specimens; commercial full-cell identity unresolved |
-| NMC532 | 4 | 0 | 1 | SINTEF electrodes and Mohtat pouch remain separate sources |
+| NMC532 | 4 | 0 | 2 | SINTEF electrodes and Mohtat pouch remain separate sources |
 | NMC811 | 0 | 0 | 1 | LG M50 positive OCP linked to Chen2020 tests |
 | LNMO | 4 | 0 | 0 | High-voltage spinel specimens; distinct from LMO |
 | Silicon | 4 | 0 | 0 | Si-AQ-1 laboratory specimens |
@@ -39,7 +39,7 @@ LMO and LTO are deferred until a reusable source and its definitions can be veri
 | **A123 high-power 9 Ah LFP pouch** | External full-cell pseudo-OCV workbooks indexed; redistribution license unresolved | Model assumes fast diffusion; no finite diffusivity or kinetic fit imported | 10 CC charge/discharge files at 2/4/6/8/10C | **Same study family.** Exact part number and per-file serial undisclosed |
 | **BPX LFP/graphite 2 Ah 18650 example** | 2 electrode expressions with supplied stoichiometry bounds | 46 scalar values, including two diffusivities, BPX rate constants and activation energies | No matching raw tests supplied | **Unmatched commercial identity.** Chemistry, capacity and format do not identify a cell model |
 | **LG M50, 5 Ah NMC811/graphite–SiOx** | 2 electrode expressions: effective negative and NMC811 positive | 36 scalars + 2 exchange-current functions from pinned Chen2020 implementation | 3 original Maccor CSVs and normalized derivatives | **Same model, same study.** Characterization and validation specimens not proven identical |
-| **Mohtat2020 NMC532/graphite, 5 Ah model input** | 2 expressions | 34 scalars + 2 diffusivity functions + 2 kinetic laws | [Same-paper dataset DOI located](https://doi.org/10.7302/wwma-hx25); downloads returned HTTP 403, no trace imported | **Parameter-set association only.** File contents and part / specimen mapping unresolved |
+| **UMBL / Mohtat2020, 5 Ah NMC/graphite research pouch** | 2 original-author expressions + 2 PyBaMM variants; graphite offset differs | 33 original-author inputs + 38 PyBaMM inputs; explicit variant labels | 5 charging MATs, 6,474 capacity/voltage/temperature rows at nominal 0.1/0.2/0.5/1/2C | **Same study family.** No exact specimen; NMC532 follows PyBaMM. Current, original time, discharge and C/20 exports absent; Cover2 rate conflict retained |
 | **Kokam SLPB78205130H / Marquis2019** | 2 borrowed Dualfoil expressions | 34 scalars + 2 borrowed diffusivity functions + 2 borrowed kinetic laws | No matching raw trace imported | **Parameter-set association only.** Named cell does not establish same-cell OCP characterization |
 | **Kim2011 NCA/graphite nominal design** | 2 expressions | 34 scalars + 2 diffusivity functions + 2 kinetic laws | No commercial cell / test assignment | **Nominal design, unmatched.** Thermal inputs include borrowed/scaled properties |
 | **Kokam SLPB75106100 / Ecker2015** | 2 figure-fitted expressions | 34 scalars + 2 D(sto,T) + 2 exchange-current laws | 1C and 5C CC discharge time/voltage pairs, digitized upstream from Richardson2020 Fig. 8 | **Same model and study lineage.** No measured current; 7.5 Ah commercial vs 0.15625 Ah implementation scaling is explicit |
@@ -57,9 +57,9 @@ Each cell package now includes an **evidence matrix** for OCP, diffusion, kineti
 
 Existing **A123 9 Ah** files cover CC charge and discharge at 2/4/6/8/10C. **LG M50** files include CCCV charging and C/10, C/2, 1C and 1.5C CC discharge; preconditioning remains labeled. These measured-current files remain distinct from the new time/voltage-only files. A nominal C-rate never becomes a manufactured measured-current trace.
 
-The [official PyBaMM release notes](https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0) establish the experimental attribution and Ecker digitization history. Enertech temperature files contain **temperature rise**, not absolute temperature. Their own timebases are retained in sidecars; no alignment, interpolation or addition of an assumed ambient temperature is performed. The 20 test files are not 20 independently identified specimens.
+The [official PyBaMM release notes](https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0) establish the experimental attribution and Ecker digitization history. Enertech temperature files contain **temperature rise**, not absolute temperature. Their own timebases are retained in sidecars; no alignment, interpolation or addition of an assumed ambient temperature is performed. The 25 test files are not 25 independently identified specimens.
 
-The Mohtat dataset [10.7302/wwma-hx25](https://doi.org/10.7302/wwma-hx25) is explicitly linked to the same paper by [DataCite metadata](https://api.datacite.org/dois/10.7302/wwma-hx25), with CC BY 4.0 and recorded voltage/current/temperature/expansion described. Landing/file access returned HTTP 403 during this audit. It remains a traceable research lead, with no imported bytes or inferred protocol/model join.
+**Mohtat data are now available in the catalog.** The [official open-access page](https://deepblue.lib.umich.edu/data/concern/data_sets/kp78gg60j) was accessible through a normal browser, and all ten original files were downloaded. Earlier HTTP 403 responses described an automated-access failure. The five charging exports contain measured voltage and temperature against capacity, but no exported current or original timestamps. Author/PyBaMM differences and source protocol conflicts are detailed in [the Mohtat audit](docs/MOHTAT2020.md).
 
 ## Install and browse
 
@@ -75,7 +75,9 @@ ebp validate
 ebp serve
 ```
 
-Open [the local viewer](http://127.0.0.1:8765). Filter and compare OCPs, switch between cell packages, inspect coverage and parameter origins, and download data with metadata. The viewer uses local assets, without CDNs, analytics or remote fonts. `ebp serve` binds to `127.0.0.1`; `ebp build-site --output site` only writes static files.
+Run `ebp cells` to find stable cell IDs. Open [the local viewer](http://127.0.0.1:8765). Filter and compare OCPs, switch between cell packages, inspect coverage and parameter origins, and download data with metadata. Choose **Offline bundle ZIP** to download a cell's data, metadata, available originals and licenses together. Use the **Variant** filter to distinguish the Mohtat author model from PyBaMM inputs. The viewer uses local assets, without CDNs, analytics or remote fonts. `ebp serve` binds to `127.0.0.1`; `ebp build-site --output site` only writes static files.
+
+Hosting is optional. Your existing personal GitHub site can coexist with a separate project site. For a private source repository, see [local/offline use and free hosting choices](docs/HOSTING.md); no public deployment has been enabled.
 
 ## Python and CLI
 
@@ -131,6 +133,8 @@ PYBAMM_DISABLE_TELEMETRY=true python examples/pybamm_ocp.py
 
 ## Scientific boundaries
 
+CPG-SPMT is the planned first full-cell benchmark. The [integration audit](docs/CPG_SPMT_VALIDATION.md) records the reviewed implementation, conditional parameter-group mappings, dataset readiness, equation checks and fit/holdout policy. No new model-accuracy result is claimed.
+
 - **Electrode OCP, full-cell pseudo-OCV and loaded terminal voltage remain distinct.** Neither Oxford study's conventional allocation of full-cell OCV establishes measured half-cell OCPs.
 - **Electrode lithium fraction, normalized branch throughput and whole-cell SOC remain distinct.** Plots group different coordinate types and directions separately.
 - **Kinetic definitions travel with values.** AMP20 volumetric exchange current in A/m³, LG surface exchange-current laws, and BPX rate constants in mol/(m²·s) cannot be substituted directly.
@@ -151,7 +155,7 @@ ebp build-site
 python -m build
 ```
 
-Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Cached Parquet/MAT/ZIP inputs are ignored by Git. ORA returns HTTP 403 to GitHub-hosted runners, so CI restores the four Oxford inputs from an attributed [private source-cache release](https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/tag/upstream-lfp-v0.2.0) and verifies the same primary-source SHA-256 pins. Primary URLs remain authoritative. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
+Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Working source caches are ignored by Git; the small Mohtat author originals are committed and hash-pinned for reliable offline reconstruction. ORA returns HTTP 403 to GitHub-hosted runners, so CI restores the four Oxford inputs from an attributed [private source-cache release](https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/tag/upstream-lfp-v0.2.0) and verifies the same primary-source SHA-256 pins. Primary URLs remain authoritative. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
 
 ```text
 src/ebp/data/             Authoritative packaged catalog
@@ -171,6 +175,8 @@ src/ebp/licenses/         Upstream licenses and dataset notices
 scripts/seed_lfp.py       LFP extraction and normalization
 scripts/seed_materials.py Multi-material measurements and model functions
 scripts/seed_fullcell.py  Ecker/Enertech links, basic tests and missing-item audit
+scripts/seed_mohtat.py    Official author MATs, original parameters and crosswalk
+scripts/mohtat_assets.json Original-author source URLs and SHA-256 pins
 scripts/fullcell_assets.json Pinned parameter and experiment assets
 scripts/material_assets.json Pinned multi-material source assets
 scripts/lfp_assets.json   Pinned LFP source assets

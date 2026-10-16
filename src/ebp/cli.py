@@ -30,7 +30,9 @@ def main(argv=None):
     parameters.add_argument("query", nargs="?", default="")
     parameters.add_argument("--cell", default=None)
     parameters.add_argument("--category", default=None)
+    parameters.add_argument("--variant", default=None)
     parameters.add_argument("--json", action="store_true")
+    sub.add_parser("cells", help="List cell IDs, chemistry and match levels")
     tests = sub.add_parser("tests", help="List full-cell tests linked to a cell model")
     tests.add_argument("--cell", default="lg-m50")
     export = sub.add_parser("export")
@@ -81,7 +83,10 @@ def main(argv=None):
             print(json.dumps(record, ensure_ascii=False, indent=2))
         elif args.command == "parameters":
             parameters = catalog.search_parameters(
-                args.query, cell_id=args.cell, category=args.category
+                args.query,
+                cell_id=args.cell,
+                category=args.category,
+                variant=args.variant,
             )
             if args.json:
                 print(
@@ -96,6 +101,9 @@ def main(argv=None):
                     print(
                         f"{p.record['name']:65} {str(value):15} {p.record['category']}"
                     )
+        elif args.command == "cells":
+            for cid, cell in catalog.cells.items():
+                print(f"{cid:44} {cell['match_level']:24} {cell['display_name']}")
         elif args.command == "tests":
             print(
                 json.dumps(

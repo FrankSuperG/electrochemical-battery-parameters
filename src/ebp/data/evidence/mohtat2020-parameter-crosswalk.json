@@ -1,0 +1,45 @@
+{
+  "cell_id": "mohtat2020-nmc532-pouch",
+  "author_asset_id": "mohtat2020-main-m",
+  "pybamm_asset_id": "pybamm-mohtat2020-code",
+  "same_study": true,
+  "identical_parameterization": false,
+  "differences": [
+    {
+      "component": "graphite_ocp",
+      "author": "exp(-75*(x+0.007))",
+      "pybamm": "exp(-75*(x+0.001))",
+      "status": "different"
+    },
+    {
+      "component": "positive_ocp",
+      "status": "same_coefficients"
+    },
+    {
+      "component": "particle_diffusion",
+      "author_reference_m2_s": [
+        5e-15,
+        8e-15
+      ],
+      "status": "same_reference_values; PyBaMM temperature extension absent from author code"
+    },
+    {
+      "component": "kinetics",
+      "author_k0": [
+        1.1e-11,
+        5e-11
+      ],
+      "author_F_C_mol": 96485.0,
+      "pybamm_i0_prefactors": [
+        1.061e-06,
+        4.824e-06
+      ],
+      "status": "unit conversion with rounding and PyBaMM temperature extension"
+    },
+    {
+      "component": "thermal_geometry",
+      "status": "different; author cell dimensions/outer cooling area must not be replaced by PyBaMM model geometry silently"
+    }
+  ],
+  "source_review": "main.m, Battery_MPM_Electrolyte_DAE.m, Plot_data_only.m, README; no upstream code executed"
+}

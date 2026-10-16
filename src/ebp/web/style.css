@@ -6,3 +6,5 @@
 .guide-grid>*{min-width:0}
 
 .evidence-scroll{overflow-x:auto;margin:12px 0}.evidence-scroll table{min-width:640px}#cell-evidence{margin:18px 0}#cell-evidence summary{cursor:pointer;font-size:12px;font-weight:600}#cell-evidence td{vertical-align:top;white-space:normal;overflow-wrap:anywhere}.test-toolbar select{max-width:100%}#test-downloads{flex-wrap:wrap}
+
+.parameter-toolbar{flex-wrap:wrap}.parameter-toolbar select{max-width:100%}

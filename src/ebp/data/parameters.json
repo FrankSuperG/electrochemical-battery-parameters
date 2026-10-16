@@ -4650,7 +4650,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4680,7 +4681,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4710,7 +4712,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4740,7 +4743,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4770,7 +4774,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4800,7 +4805,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4830,7 +4836,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4860,7 +4867,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4890,7 +4898,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4920,7 +4929,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4950,7 +4960,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -4980,7 +4991,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5010,7 +5022,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5040,7 +5053,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5070,7 +5084,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5100,7 +5115,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5130,7 +5146,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5160,7 +5177,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5190,7 +5208,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5220,7 +5239,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5250,7 +5270,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5280,7 +5301,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5310,7 +5332,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5340,7 +5363,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5370,7 +5394,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5400,7 +5425,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5430,7 +5456,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5460,7 +5487,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5490,7 +5518,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5520,7 +5549,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5550,7 +5580,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5580,7 +5611,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5610,7 +5642,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5640,7 +5673,8 @@
         "A partial model input collection, not a validated complete parameter set."
       ],
       "conditions": {
-        "reference_temperature_K": 298.15
+        "reference_temperature_K": 298.15,
+        "parameterization_variant": "pybamm_v25_4_2"
       }
     },
     {
@@ -5674,7 +5708,8 @@
       "definition": "Negative particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
       "conditions": {
         "reference_temperature_K": 298.15,
-        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null,
+        "parameterization_variant": "pybamm_v25_4_2"
       },
       "limitations": [
         "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
@@ -5715,7 +5750,8 @@
       "definition": "Negative electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
       "conditions": {
         "reference_temperature_K": 298.15,
-        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null,
+        "parameterization_variant": "pybamm_v25_4_2"
       },
       "limitations": [
         "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
@@ -5754,7 +5790,8 @@
       "definition": "Positive particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
       "conditions": {
         "reference_temperature_K": 298.15,
-        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null,
+        "parameterization_variant": "pybamm_v25_4_2"
       },
       "limitations": [
         "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
@@ -5795,7 +5832,8 @@
       "definition": "Positive electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
       "conditions": {
         "reference_temperature_K": 298.15,
-        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null,
+        "parameterization_variant": "pybamm_v25_4_2"
       },
       "limitations": [
         "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
@@ -9459,6 +9497,1095 @@
       "limitations": [
         "Not a measured current or a newly estimated parameter; source mathematical operations retained by AST substitution.",
         "Borrowed Dualfoil functions are used in the Enertech model; they are not claimed to be same-cell measurements."
+      ]
+    },
+    {
+      "id": "mohtat-author-ds-n",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "diffusion",
+      "name": "Negative particle diffusivity",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-15
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Ds_n",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative particle diffusivity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-ds-p",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "diffusion",
+      "name": "Positive particle diffusivity",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 8e-15
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Ds_p",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive particle diffusivity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-k0-n",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "kinetics",
+      "name": "Negative reaction-rate coefficient k0",
+      "unit": "mol.m-2.s-1.(mol.m-3)^-1.5",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1e-11
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.k0_n",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Source DAE uses i0=F*k0*sqrt(c_e)*c_s,max*sqrt(theta*(1-theta)); unit follows this equation. Source inline k0 unit comment is incomplete. Not interchangeable with exchange-current density.",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-k0-p",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "kinetics",
+      "name": "Positive reaction-rate coefficient k0",
+      "unit": "mol.m-2.s-1.(mol.m-3)^-1.5",
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-11
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.k0_p",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Source DAE uses i0=F*k0*sqrt(c_e)*c_s,max*sqrt(theta*(1-theta)); unit follows this equation. Source inline k0 unit comment is incomplete. Not interchangeable with exchange-current density.",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-cs-max-n",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative maximum concentration",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 28746.0
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.cs_max_n",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative maximum concentration",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-cs-max-p",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Positive maximum concentration",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 35380.0
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.cs_max_p",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive maximum concentration",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-es-n",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative active material fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.61
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.es_n",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative active material fraction",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-es-p",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Positive active material fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.445
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.es_p",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive active material fraction",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-del-n",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Negative electrode thickness",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.2e-05
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.del_n",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrode thickness",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-del-s",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Separator thickness",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2e-05
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.del_s",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Separator thickness",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-del-p",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Positive electrode thickness",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.7e-05
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.del_p",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrode thickness",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-epsilon-e-n",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative electrolyte porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.epsilon_e_n",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative electrolyte porosity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-epsilon-e-s",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Separator electrolyte porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.epsilon_e_s",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Separator electrolyte porosity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-epsilon-e-p",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Positive electrolyte porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.epsilon_e_p",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Positive electrolyte porosity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-a",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Electrode area in original author model",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.205
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.A",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Electrode area in original author model",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-ce-init",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "initial_state",
+      "name": "Initial electrolyte concentration",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.ce_init",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Initial electrolyte concentration",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-kappa",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "transport",
+      "name": "Electrolyte ionic conductivity",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.3
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.kappa",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Electrolyte ionic conductivity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-d-e",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "transport",
+      "name": "Electrolyte diffusivity",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.35e-10
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.D_e",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Electrolyte diffusivity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-t-plus",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "transport",
+      "name": "Cation transference number",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.38
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.t_plus",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Cation transference number",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-rho",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Lumped cell density",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 3100.0
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.rho",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Lumped cell density",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-cp",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Lumped cell specific heat capacity",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1100.0
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Cp",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Lumped cell specific heat capacity",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-h",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Lumped convective heat-transfer coefficient",
+      "unit": "W.m-2.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.0
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.h",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Lumped convective heat-transfer coefficient",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-rn-0",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Rn_0 particle radius in author multiparticle model",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5e-06
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Rn_0",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Rn_0 particle radius in author multiparticle model",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-rn-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Rn_1 particle radius in author multiparticle model",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-06
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Rn_1",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Rn_1 particle radius in author multiparticle model",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-rn-2",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Rn_2 particle radius in author multiparticle model",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-06
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Rn_2",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Rn_2 particle radius in author multiparticle model",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-rn-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Rn_3 particle radius in author multiparticle model",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 3e-06
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Rn_3",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Rn_3 particle radius in author multiparticle model",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-rn-4",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Rn_4 particle radius in author multiparticle model",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.7e-06
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Rn_4",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Rn_4 particle radius in author multiparticle model",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-rp-0",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Rp_0 particle radius in author multiparticle model",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.5e-06
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.Rp_0",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Rp_0 particle radius in author multiparticle model",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-zeta-n-0",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative particle population fraction 0",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.1
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.zeta_n_0",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative particle population fraction 0",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-zeta-n-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative particle population fraction 1",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.22
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.zeta_n_1",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative particle population fraction 1",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-zeta-n-2",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative particle population fraction 2",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.zeta_n_2",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative particle population fraction 2",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-zeta-n-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative particle population fraction 3",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.25
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.zeta_n_3",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative particle population fraction 3",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
+      ]
+    },
+    {
+      "id": "mohtat-author-zeta-n-4",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative particle population fraction 4",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.13
+      },
+      "source_ids": [
+        "mohtat-2020-data",
+        "mohtat-2020"
+      ],
+      "provenance": {
+        "asset_id": "mohtat2020-main-m",
+        "location": "main.m::CC.zeta_n_4",
+        "origin_status": "original_author_model_input; individual measurement/fit/assumption origin not fully audited"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "conditions": {
+        "parameterization_variant": "original_author_mpm",
+        "reference_temperature_K": 298.15
+      },
+      "definition": "Negative particle population fraction 4",
+      "limitations": [
+        "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+        "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
+        "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
       ]
     }
   ]

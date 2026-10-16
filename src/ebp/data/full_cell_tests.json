@@ -1623,6 +1623,587 @@
           "total_rows": 1773
         }
       }
+    },
+    {
+      "id": "mohtat-charge-0p1c",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "sample_id": "not_disclosed",
+      "asset_id": "mohtat2020-cover10-mat",
+      "source_id": "mohtat-2020-data",
+      "scientific_source_ids": [
+        "mohtat-2020"
+      ],
+      "path": null,
+      "original_download_path": "evidence/mohtat2020-Cover10.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/mohtat-charge-0p1c-normalized.csv",
+      "normalized_sha256": "853a0e30fce1139abb2ef6b958341cd54d91b18661fe86a6ebc45a05d6e96cfe",
+      "format": "capacity_voltage_temperature; original current and time not exported",
+      "license": "CC-BY-4.0",
+      "row_count": 3561,
+      "columns": [
+        "time_s",
+        "charge_capacity_Ah",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "discharge_segments": [],
+      "protocol": "Nominal 0.1C charge to 4.2 V; capacity-coordinate experimental export",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+      "observation_kind": "published_experimental_series",
+      "independent_validation_by_this_project": false,
+      "independent_variable": {
+        "column": "charge_capacity_Ah",
+        "unit": "Ah",
+        "label": "Charge capacity / Ah",
+        "definition": "Q_data paired with Vt_data and Temp_data in the source MAT; not whole-cell SOC or inferred time."
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "nominal_C_rate": 0.1,
+        "nominal_current_charge_positive_A": 0.5,
+        "current_measurement": "not_supplied; current magnitude is protocol metadata from main.m",
+        "charge_trace": "available",
+        "discharge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "reported_sampling_interval_s": 10,
+        "sampling_interval_applied_to_time": false,
+        "protocol_temperature_K": 298.15
+      },
+      "current_convention": "Charge-positive convention; measured current column stays empty. main.m uses negative current for charging, only retained as protocol provenance.",
+      "temperature_definition": "Source Temp_data is cell surface temperature in degC per Plot_data_only.m; converted to kelvin without the movmean smoothing used by main.m.",
+      "missing_values": {
+        "time_s": 3561,
+        "current_charge_positive_A": 3561,
+        "ambient_temperature_K": 3561,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "missing_items": [
+        "Ambient temperature trace",
+        "C/20 OCV test",
+        "Discharge trace",
+        "Exact specimen identifier",
+        "Full CV/rest trace",
+        "Measured current trace",
+        "Original half-cell OCP points",
+        "Original timestamps"
+      ],
+      "source_issues": [
+        "No measured current or original timestamps in the deposited MAT arrays.",
+        "README states 10 s acquisition, but the exported arrays contain no timestamps. No 10 s or Q/I time reconstruction is applied.",
+        "Only charging files are deposited. C/20, discharge, complete CV/rest and original cycler records are not separately supplied."
+      ],
+      "source_variable_mapping": {
+        "charge_capacity_Ah": "Q_data",
+        "voltage_V": "Vt_data",
+        "cell_temperature_K": "Temp_data+273.15"
+      },
+      "supporting_asset_ids": [
+        "mohtat2020-main-m",
+        "mohtat2020-read-me-pdf",
+        "mohtat2020-plot-data-only-m",
+        "mohtat2020-battery-mpm-electrolyte-dae-m",
+        "mohtat2020-daeeventsfcn-m"
+      ],
+      "processing": {
+        "script": "scripts/seed_mohtat.py",
+        "changes": "All Q/V/T source rows retained, no smoothing/resampling. No timestamps, current or phase markers invented. Mode C is protocol-derived. Other expansion/derivative arrays remain in the original MAT."
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 3561,
+          "total_rows": 3561
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 3561
+        },
+        "cell_temperature_K": {
+          "present_rows": 3561,
+          "total_rows": 3561
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3561
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 3561
+        }
+      }
+    },
+    {
+      "id": "mohtat-charge-0p2c",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "sample_id": "not_disclosed",
+      "asset_id": "mohtat2020-cover5-mat",
+      "source_id": "mohtat-2020-data",
+      "scientific_source_ids": [
+        "mohtat-2020"
+      ],
+      "path": null,
+      "original_download_path": "evidence/mohtat2020-Cover5.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/mohtat-charge-0p2c-normalized.csv",
+      "normalized_sha256": "0b89a863d02962dde0082386a93a29389cf6db0d4f4dd91956e4f947de10f6a4",
+      "format": "capacity_voltage_temperature; original current and time not exported",
+      "license": "CC-BY-4.0",
+      "row_count": 1745,
+      "columns": [
+        "time_s",
+        "charge_capacity_Ah",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "discharge_segments": [],
+      "protocol": "Nominal 0.2C charge to 4.2 V; capacity-coordinate experimental export",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+      "observation_kind": "published_experimental_series",
+      "independent_validation_by_this_project": false,
+      "independent_variable": {
+        "column": "charge_capacity_Ah",
+        "unit": "Ah",
+        "label": "Charge capacity / Ah",
+        "definition": "Q_data paired with Vt_data and Temp_data in the source MAT; not whole-cell SOC or inferred time."
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "nominal_C_rate": 0.2,
+        "nominal_current_charge_positive_A": 1,
+        "current_measurement": "not_supplied; current magnitude is protocol metadata from main.m",
+        "charge_trace": "available",
+        "discharge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "reported_sampling_interval_s": 10,
+        "sampling_interval_applied_to_time": false,
+        "protocol_temperature_K": 298.15
+      },
+      "current_convention": "Charge-positive convention; measured current column stays empty. main.m uses negative current for charging, only retained as protocol provenance.",
+      "temperature_definition": "Source Temp_data is cell surface temperature in degC per Plot_data_only.m; converted to kelvin without the movmean smoothing used by main.m.",
+      "missing_values": {
+        "time_s": 1745,
+        "current_charge_positive_A": 1745,
+        "ambient_temperature_K": 1745,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "missing_items": [
+        "Ambient temperature trace",
+        "C/20 OCV test",
+        "Discharge trace",
+        "Exact specimen identifier",
+        "Full CV/rest trace",
+        "Measured current trace",
+        "Original half-cell OCP points",
+        "Original timestamps"
+      ],
+      "source_issues": [
+        "No measured current or original timestamps in the deposited MAT arrays.",
+        "README states 10 s acquisition, but the exported arrays contain no timestamps. No 10 s or Q/I time reconstruction is applied.",
+        "Only charging files are deposited. C/20, discharge, complete CV/rest and original cycler records are not separately supplied."
+      ],
+      "source_variable_mapping": {
+        "charge_capacity_Ah": "Q_data",
+        "voltage_V": "Vt_data",
+        "cell_temperature_K": "Temp_data+273.15"
+      },
+      "supporting_asset_ids": [
+        "mohtat2020-main-m",
+        "mohtat2020-read-me-pdf",
+        "mohtat2020-plot-data-only-m",
+        "mohtat2020-battery-mpm-electrolyte-dae-m",
+        "mohtat2020-daeeventsfcn-m"
+      ],
+      "processing": {
+        "script": "scripts/seed_mohtat.py",
+        "changes": "All Q/V/T source rows retained, no smoothing/resampling. No timestamps, current or phase markers invented. Mode C is protocol-derived. Other expansion/derivative arrays remain in the original MAT."
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1745,
+          "total_rows": 1745
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1745
+        },
+        "cell_temperature_K": {
+          "present_rows": 1745,
+          "total_rows": 1745
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1745
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1745
+        }
+      }
+    },
+    {
+      "id": "mohtat-charge-0p5c",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "sample_id": "not_disclosed",
+      "asset_id": "mohtat2020-cover2-mat",
+      "source_id": "mohtat-2020-data",
+      "scientific_source_ids": [
+        "mohtat-2020"
+      ],
+      "path": null,
+      "original_download_path": "evidence/mohtat2020-Cover2.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/mohtat-charge-0p5c-normalized.csv",
+      "normalized_sha256": "2684eb61930defc41522ca9f89ad79b5e570bbe6acaf6d46c0903ba3bfb92fb9",
+      "format": "capacity_voltage_temperature; original current and time not exported",
+      "license": "CC-BY-4.0",
+      "row_count": 682,
+      "columns": [
+        "time_s",
+        "charge_capacity_Ah",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "discharge_segments": [],
+      "protocol": "Nominal 0.5C charge to 4.2 V; capacity-coordinate experimental export",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+      "observation_kind": "published_experimental_series",
+      "independent_validation_by_this_project": false,
+      "independent_variable": {
+        "column": "charge_capacity_Ah",
+        "unit": "Ah",
+        "label": "Charge capacity / Ah",
+        "definition": "Q_data paired with Vt_data and Temp_data in the source MAT; not whole-cell SOC or inferred time."
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "nominal_C_rate": 0.5,
+        "nominal_current_charge_positive_A": 2.5,
+        "current_measurement": "not_supplied; current magnitude is protocol metadata from main.m",
+        "charge_trace": "available",
+        "discharge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "reported_sampling_interval_s": 10,
+        "sampling_interval_applied_to_time": false,
+        "protocol_temperature_K": 298.15
+      },
+      "current_convention": "Charge-positive convention; measured current column stays empty. main.m uses negative current for charging, only retained as protocol provenance.",
+      "temperature_definition": "Source Temp_data is cell surface temperature in degC per Plot_data_only.m; converted to kelvin without the movmean smoothing used by main.m.",
+      "missing_values": {
+        "time_s": 682,
+        "current_charge_positive_A": 682,
+        "ambient_temperature_K": 682,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "missing_items": [
+        "Ambient temperature trace",
+        "C/20 OCV test",
+        "Discharge trace",
+        "Exact specimen identifier",
+        "Full CV/rest trace",
+        "Measured current trace",
+        "Original half-cell OCP points",
+        "Original timestamps"
+      ],
+      "source_issues": [
+        "No measured current or original timestamps in the deposited MAT arrays.",
+        "README states 10 s acquisition, but the exported arrays contain no timestamps. No 10 s or Q/I time reconstruction is applied.",
+        "Only charging files are deposited. C/20, discharge, complete CV/rest and original cycler records are not separately supplied.",
+        "README Methods says C/2.5, while its inventory says C/2 and main.m assigns -2.5 A to Cover2. This record uses nominal 0.5C / 2.5 A per inventory and code; actual current trace is unavailable."
+      ],
+      "source_variable_mapping": {
+        "charge_capacity_Ah": "Q_data",
+        "voltage_V": "Vt_data",
+        "cell_temperature_K": "Temp_data+273.15"
+      },
+      "supporting_asset_ids": [
+        "mohtat2020-main-m",
+        "mohtat2020-read-me-pdf",
+        "mohtat2020-plot-data-only-m",
+        "mohtat2020-battery-mpm-electrolyte-dae-m",
+        "mohtat2020-daeeventsfcn-m"
+      ],
+      "processing": {
+        "script": "scripts/seed_mohtat.py",
+        "changes": "All Q/V/T source rows retained, no smoothing/resampling. No timestamps, current or phase markers invented. Mode C is protocol-derived. Other expansion/derivative arrays remain in the original MAT."
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 682,
+          "total_rows": 682
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 682
+        },
+        "cell_temperature_K": {
+          "present_rows": 682,
+          "total_rows": 682
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 682
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 682
+        }
+      }
+    },
+    {
+      "id": "mohtat-charge-1c",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "sample_id": "not_disclosed",
+      "asset_id": "mohtat2020-cover1-mat",
+      "source_id": "mohtat-2020-data",
+      "scientific_source_ids": [
+        "mohtat-2020"
+      ],
+      "path": null,
+      "original_download_path": "evidence/mohtat2020-Cover1.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/mohtat-charge-1c-normalized.csv",
+      "normalized_sha256": "32ed902e379ccaa373e7faeda2f0b13dab7e4706705165bcc28b5ec48499b3a6",
+      "format": "capacity_voltage_temperature; original current and time not exported",
+      "license": "CC-BY-4.0",
+      "row_count": 330,
+      "columns": [
+        "time_s",
+        "charge_capacity_Ah",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "discharge_segments": [],
+      "protocol": "Nominal 1C charge to 4.2 V; capacity-coordinate experimental export",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+      "observation_kind": "published_experimental_series",
+      "independent_validation_by_this_project": false,
+      "independent_variable": {
+        "column": "charge_capacity_Ah",
+        "unit": "Ah",
+        "label": "Charge capacity / Ah",
+        "definition": "Q_data paired with Vt_data and Temp_data in the source MAT; not whole-cell SOC or inferred time."
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "nominal_C_rate": 1,
+        "nominal_current_charge_positive_A": 5,
+        "current_measurement": "not_supplied; current magnitude is protocol metadata from main.m",
+        "charge_trace": "available",
+        "discharge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "reported_sampling_interval_s": 10,
+        "sampling_interval_applied_to_time": false,
+        "protocol_temperature_K": 298.15
+      },
+      "current_convention": "Charge-positive convention; measured current column stays empty. main.m uses negative current for charging, only retained as protocol provenance.",
+      "temperature_definition": "Source Temp_data is cell surface temperature in degC per Plot_data_only.m; converted to kelvin without the movmean smoothing used by main.m.",
+      "missing_values": {
+        "time_s": 330,
+        "current_charge_positive_A": 330,
+        "ambient_temperature_K": 330,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "missing_items": [
+        "Ambient temperature trace",
+        "C/20 OCV test",
+        "Discharge trace",
+        "Exact specimen identifier",
+        "Full CV/rest trace",
+        "Measured current trace",
+        "Original half-cell OCP points",
+        "Original timestamps"
+      ],
+      "source_issues": [
+        "No measured current or original timestamps in the deposited MAT arrays.",
+        "README states 10 s acquisition, but the exported arrays contain no timestamps. No 10 s or Q/I time reconstruction is applied.",
+        "Only charging files are deposited. C/20, discharge, complete CV/rest and original cycler records are not separately supplied."
+      ],
+      "source_variable_mapping": {
+        "charge_capacity_Ah": "Q_data",
+        "voltage_V": "Vt_data",
+        "cell_temperature_K": "Temp_data+273.15"
+      },
+      "supporting_asset_ids": [
+        "mohtat2020-main-m",
+        "mohtat2020-read-me-pdf",
+        "mohtat2020-plot-data-only-m",
+        "mohtat2020-battery-mpm-electrolyte-dae-m",
+        "mohtat2020-daeeventsfcn-m"
+      ],
+      "processing": {
+        "script": "scripts/seed_mohtat.py",
+        "changes": "All Q/V/T source rows retained, no smoothing/resampling. No timestamps, current or phase markers invented. Mode C is protocol-derived. Other expansion/derivative arrays remain in the original MAT."
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 330,
+          "total_rows": 330
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 330
+        },
+        "cell_temperature_K": {
+          "present_rows": 330,
+          "total_rows": 330
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 330
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 330
+        }
+      }
+    },
+    {
+      "id": "mohtat-charge-2c",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "sample_id": "not_disclosed",
+      "asset_id": "mohtat2020-2c-mat",
+      "source_id": "mohtat-2020-data",
+      "scientific_source_ids": [
+        "mohtat-2020"
+      ],
+      "path": null,
+      "original_download_path": "evidence/mohtat2020-2C.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/mohtat-charge-2c-normalized.csv",
+      "normalized_sha256": "eb6b79d83454b43a17100776e50b76f55943fdd28e4e8676f31ff397d4373ab6",
+      "format": "capacity_voltage_temperature; original current and time not exported",
+      "license": "CC-BY-4.0",
+      "row_count": 156,
+      "columns": [
+        "time_s",
+        "charge_capacity_Ah",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "discharge_segments": [],
+      "protocol": "Nominal 2C charge to 4.2 V; capacity-coordinate experimental export",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
+      "observation_kind": "published_experimental_series",
+      "independent_validation_by_this_project": false,
+      "independent_variable": {
+        "column": "charge_capacity_Ah",
+        "unit": "Ah",
+        "label": "Charge capacity / Ah",
+        "definition": "Q_data paired with Vt_data and Temp_data in the source MAT; not whole-cell SOC or inferred time."
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "nominal_C_rate": 2,
+        "nominal_current_charge_positive_A": 10,
+        "current_measurement": "not_supplied; current magnitude is protocol metadata from main.m",
+        "charge_trace": "available",
+        "discharge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "reported_sampling_interval_s": 10,
+        "sampling_interval_applied_to_time": false,
+        "protocol_temperature_K": 298.15
+      },
+      "current_convention": "Charge-positive convention; measured current column stays empty. main.m uses negative current for charging, only retained as protocol provenance.",
+      "temperature_definition": "Source Temp_data is cell surface temperature in degC per Plot_data_only.m; converted to kelvin without the movmean smoothing used by main.m.",
+      "missing_values": {
+        "time_s": 156,
+        "current_charge_positive_A": 156,
+        "ambient_temperature_K": 156,
+        "voltage_V": 0,
+        "cell_temperature_K": 0
+      },
+      "missing_items": [
+        "Ambient temperature trace",
+        "C/20 OCV test",
+        "Discharge trace",
+        "Exact specimen identifier",
+        "Full CV/rest trace",
+        "Measured current trace",
+        "Original half-cell OCP points",
+        "Original timestamps"
+      ],
+      "source_issues": [
+        "No measured current or original timestamps in the deposited MAT arrays.",
+        "README states 10 s acquisition, but the exported arrays contain no timestamps. No 10 s or Q/I time reconstruction is applied.",
+        "Only charging files are deposited. C/20, discharge, complete CV/rest and original cycler records are not separately supplied."
+      ],
+      "source_variable_mapping": {
+        "charge_capacity_Ah": "Q_data",
+        "voltage_V": "Vt_data",
+        "cell_temperature_K": "Temp_data+273.15"
+      },
+      "supporting_asset_ids": [
+        "mohtat2020-main-m",
+        "mohtat2020-read-me-pdf",
+        "mohtat2020-plot-data-only-m",
+        "mohtat2020-battery-mpm-electrolyte-dae-m",
+        "mohtat2020-daeeventsfcn-m"
+      ],
+      "processing": {
+        "script": "scripts/seed_mohtat.py",
+        "changes": "All Q/V/T source rows retained, no smoothing/resampling. No timestamps, current or phase markers invented. Mode C is protocol-derived. Other expansion/derivative arrays remain in the original MAT."
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 156,
+          "total_rows": 156
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 156
+        },
+        "cell_temperature_K": {
+          "present_rows": 156,
+          "total_rows": 156
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 156
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 156
+        }
+      }
     }
   ]
 }

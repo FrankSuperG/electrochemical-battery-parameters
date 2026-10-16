@@ -405,5 +405,95 @@
     "sha256": "30a183d0bc4e024522fb5018762d93995f6ed7a9ff4540941fca460157ea9424",
     "license": "BSD-3-Clause",
     "source_id": "pybamm-data-1-0-2"
+  },
+  "mohtat2020-read-me-pdf": {
+    "source_id": "mohtat-2020-data",
+    "filename": "READ_ME.pdf",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/3197xm284",
+    "sha256": "41f8dd4dbcb68c53d2164eaee1e5e1c69799c16fa0f7d11246d522b9c0053e63",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-READ_ME.pdf",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-cover10-mat": {
+    "source_id": "mohtat-2020-data",
+    "filename": "Cover10.mat",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/1j92g757b",
+    "sha256": "2e54d3fe45f887d8d353f2798cf94fe3aa3f45f44d1faefc4e05ac09e8ce479f",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-Cover10.mat",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-cover5-mat": {
+    "source_id": "mohtat-2020-data",
+    "filename": "Cover5.mat",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/9g54xh844",
+    "sha256": "b5cc466623ecf3ab50f37d265e32c99d6078f0857b5439ae55fe24b67cec65e8",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-Cover5.mat",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-cover2-mat": {
+    "source_id": "mohtat-2020-data",
+    "filename": "Cover2.mat",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/gx41mj09s",
+    "sha256": "8b9a2e6fe1c369bac8f75e8237111a5b1a03559ec052eacb2e09e1d5437ed8af",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-Cover2.mat",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-cover1-mat": {
+    "source_id": "mohtat-2020-data",
+    "filename": "Cover1.mat",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/j6731411m",
+    "sha256": "94815d2e00d0d4b9f3ca6b0687ea676cad0e2483f93a2bee5c3dc5967fb5b522",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-Cover1.mat",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-2c-mat": {
+    "source_id": "mohtat-2020-data",
+    "filename": "2C.mat",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/707957927",
+    "sha256": "95b5da6d76f82ac1fd2e7a9d4e928cefdf84df7ae58b31a4e6a42e25cc8810be",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-2C.mat",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-main-m": {
+    "source_id": "mohtat-2020-data",
+    "filename": "main.m",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/mk61rh20x",
+    "sha256": "14572b681269f6a6405250bedbde236433e7d96500619c9aab3f47a6f6c735cc",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-main.m",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-battery-mpm-electrolyte-dae-m": {
+    "source_id": "mohtat-2020-data",
+    "filename": "Battery_MPM_Electrolyte_DAE.m",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/wm117p21g",
+    "sha256": "c8226caf11d955f648f65a563068faca011628ea4bbdbeeab3873df89f5829b4",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-Battery_MPM_Electrolyte_DAE.m",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-daeeventsfcn-m": {
+    "source_id": "mohtat-2020-data",
+    "filename": "DAEEventsFcn.m",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/g732d913j",
+    "sha256": "01a36e778bc9d7c7cb297af959ee85abd08f33370798a1fc69bf9a297cb387e4",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-DAEEventsFcn.m",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "mohtat2020-plot-data-only-m": {
+    "source_id": "mohtat-2020-data",
+    "filename": "Plot_data_only.m",
+    "url": "https://deepblue.lib.umich.edu/data/downloads/v405s969k",
+    "sha256": "b15983538832cb61357e918c2bffddd36a01af25329a4d7a2daea60287938c7e",
+    "license": "CC-BY-4.0",
+    "path": "evidence/mohtat2020-Plot_data_only.m",
+    "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
   }
 }

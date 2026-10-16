@@ -93,5 +93,13 @@
   "ai2020-lco-ocp-material": {
     "chemistry": "LCO",
     "description": "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved."
+  },
+  "mohtat-author-graphite-ocp-material": {
+    "chemistry": "graphite",
+    "description": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given."
+  },
+  "mohtat-author-nmc532-ocp-material": {
+    "chemistry": "NMC532",
+    "description": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given."
   }
 }

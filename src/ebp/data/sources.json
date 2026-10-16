@@ -206,7 +206,7 @@
     "year": 2020,
     "doi": "10.1149/1945-7111/aba5d1",
     "url": "https://doi.org/10.1149/1945-7111/aba5d1",
-    "role": "Graphite/NMC532 pouch parameter attribution via the pinned Mohtat2020 implementation; per-value original measurement/fit/borrowing origins and matching raw tests are not independently audited."
+    "role": "Same-study electrochemical/mechanical model and charging observations. Original author-code and PyBaMM implementation variants are distinguished; exact specimen and raw OCP/current/time exports remain unresolved."
   },
   "kim-2011": {
     "kind": "paper",
@@ -320,8 +320,8 @@
     ],
     "year": 2020,
     "doi": "10.7302/wwma-hx25",
-    "url": "https://doi.org/10.7302/wwma-hx25",
+    "url": "https://deepblue.lib.umich.edu/data/concern/data_sets/kp78gg60j",
     "license": "CC-BY-4.0",
-    "role": "DataCite explicitly links the Mohtat2020 paper. Public landing page and listed file downloads returned HTTP 403 during this audit; file contents and cell/protocol mapping unverified, so no test imported."
+    "role": "Official author dataset downloaded through the normal browser on 2026-10-16. Five experimental charging MATs, four MATLAB model/plot files and README reviewed. Earlier automated HTTP 403 was an access-method failure. Packaged originals retain hashes and CC BY 4.0."
   }
 }

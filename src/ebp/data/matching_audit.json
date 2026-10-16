@@ -404,80 +404,117 @@
       ]
     },
     "mohtat2020-nmc532-pouch": {
-      "display_name": "Mohtat2020 | NMC532/graphite | 5 Ah model input",
-      "match_level": "parameter_set_only",
+      "display_name": "UMBL Mohtat2020 | 5 Ah NMC/graphite research pouch",
+      "match_level": "same_study_cell_family",
       "components": {
         "ocp": {
           "record_ids": [
             "mohtat2020-graphite-ocp",
-            "mohtat2020-nmc532-ocp"
+            "mohtat2020-nmc532-ocp",
+            "mohtat-author-graphite-ocp",
+            "mohtat-author-nmc532-ocp"
           ],
           "source_ids": [
             "mohtat-2020",
+            "mohtat-2020-data",
             "pybamm-25-4-2"
           ],
-          "match_level": "parameter_set_only",
-          "evidence": "Peyman MPM / Mohtat2020 implementation, as attributed by upstream function docstrings",
+          "match_level": "same_study_cell_family",
+          "evidence": "Two original author OCP expressions plus two PyBaMM variants; graphite x-offset differs (0.007 versus 0.001). Raw half-cell points absent.",
           "missing_items": [
-            "Same-specimen measurement provenance unresolved"
+            "Same-specimen measurement provenance unresolved",
+            "Author and PyBaMM variants require explicit selection; not identical parameterizations"
           ]
         },
         "diffusion": {
           "record_ids": [
             "mohtat2020-negative-diffusivity",
-            "mohtat2020-positive-diffusivity"
+            "mohtat2020-positive-diffusivity",
+            "mohtat-author-ds-n",
+            "mohtat-author-ds-p"
           ],
           "source_ids": [
             "mohtat-2020",
+            "mohtat-2020-data",
             "pybamm-25-4-2"
           ],
-          "match_level": "parameter_set_only",
-          "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
+          "match_level": "same_study_cell_family",
+          "evidence": "Original author D_n=5e-15 and D_p=8e-15 m2/s; PyBaMM same reference values with added Arrhenius dependence.",
           "missing_items": [
-            "Same-specimen measurement provenance unresolved"
+            "Same-specimen measurement provenance unresolved",
+            "Author and PyBaMM variants require explicit selection; not identical parameterizations"
           ]
         },
         "kinetics": {
           "record_ids": [
             "mohtat2020-negative-exchange-current-density",
-            "mohtat2020-positive-exchange-current-density"
+            "mohtat2020-positive-exchange-current-density",
+            "mohtat-author-k0-n",
+            "mohtat-author-k0-p"
           ],
           "source_ids": [
             "mohtat-2020",
+            "mohtat-2020-data",
             "pybamm-25-4-2"
           ],
-          "match_level": "parameter_set_only",
-          "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
+          "match_level": "same_study_cell_family",
+          "evidence": "Original k0_n=1.1e-11 and k0_p=5e-11 with source i0 definition; PyBaMM exchange-current prefactors are rounded/unit-converted and have added temperature dependence.",
           "missing_items": [
-            "Same-specimen measurement provenance unresolved"
+            "Same-specimen measurement provenance unresolved",
+            "Author and PyBaMM variants require explicit selection; not identical parameterizations"
           ]
         },
         "full_cell_tests": {
-          "record_ids": [],
+          "record_ids": [
+            "mohtat-charge-0p1c",
+            "mohtat-charge-0p2c",
+            "mohtat-charge-0p5c",
+            "mohtat-charge-1c",
+            "mohtat-charge-2c"
+          ],
           "source_ids": [
             "mohtat-2020-data"
           ],
-          "match_level": "missing",
-          "evidence": "Same-paper dataset DOI 10.7302/wwma-hx25 located; file access returned HTTP 403, so contents and model/protocol correspondence remain unverified. No trace imported.",
+          "match_level": "same_study_cell_family",
+          "evidence": "Five original charging MAT files, 0.1/0.2/0.5/1/2C by code/inventory. Measured voltage and temperature versus capacity; current, timestamps, discharge and C/20 files absent.",
           "missing_items": [
-            "No matching imported records"
+            "Same-specimen measurement provenance unresolved",
+            "Author and PyBaMM variants require explicit selection; not identical parameterizations"
           ]
         },
         "basic_charge_discharge": {
-          "record_ids": [],
-          "source_ids": [],
-          "match_level": "missing",
-          "evidence": "No matching imported basic test",
+          "record_ids": [
+            "mohtat-charge-0p1c",
+            "mohtat-charge-0p2c",
+            "mohtat-charge-0p5c",
+            "mohtat-charge-1c",
+            "mohtat-charge-2c"
+          ],
+          "source_ids": [
+            "mohtat-2020-data"
+          ],
+          "match_level": "same_study_cell_family",
+          "evidence": "constant_current_charge",
           "missing_items": [
-            "Matching CC charge/discharge observations"
+            "Ambient temperature trace",
+            "C/20 OCV test",
+            "Discharge trace",
+            "Exact specimen identifier",
+            "Full CV/rest trace",
+            "Measured current trace",
+            "Original half-cell OCP points",
+            "Original timestamps",
+            "Author and PyBaMM variants require explicit selection; not identical parameterizations"
           ]
         }
       },
       "missing_items": [
-        "Identical characterization/validation specimen not established",
-        "Independent full-cell model reproduction not performed",
-        "Commercial part number unresolved",
-        "Matching full-cell charge/discharge observations not imported"
+        "Exact specimen identifier",
+        "Measured current trace",
+        "Original timestamps",
+        "Discharge/CV/rest and C/20 files",
+        "Raw electrode OCP points",
+        "Independent full-cell model reproduction"
       ]
     },
     "kim2011-nca-nominal-design": {
@@ -865,16 +902,16 @@
     {
       "source_id": "mohtat-2020-data",
       "cell_id": "mohtat2020-nmc532-pouch",
-      "status": "same_paper_dataset_located; files_not_imported",
+      "status": "official_files_imported; partial_channels_only",
       "doi": "10.7302/wwma-hx25",
-      "metadata_url": "https://api.datacite.org/dois/10.7302/wwma-hx25",
-      "evidence": "DataCite lists paper DOI 10.1149/1945-7111/aba5d1 as IsReferencedBy and CC BY 4.0. It describes recorded voltage, current, temperature and expansion.",
-      "access_result": "HTTP 403 from landing page and two public file endpoints on 2026-10-16",
+      "access_result": "Normal browser downloaded official ZIP. Earlier automated 403 does not imply dataset unavailability.",
       "missing_items": [
-        "File bytes and checksums",
-        "Per-file protocol",
-        "Column units/current convention",
-        "Commercial part and specimen mapping"
+        "Exact specimen identifier",
+        "Measured current trace",
+        "Original timestamps",
+        "Discharge/CV/rest and C/20 files",
+        "Raw electrode OCP points",
+        "Independent full-cell model reproduction"
       ]
     }
   ],
@@ -882,6 +919,7 @@
     "SINTEF NMC532 half-cells are not assigned to the Mohtat pouch based on chemistry.",
     "Enertech LCO observations are not assigned to Kokam SLPB78205130H / Marquis2019.",
     "Kokam SLPB75106100 / Ecker2015 and SLPB78205130H / Marquis2019 are distinct models.",
-    "COMSOL outputs and drive-cycle input profiles are not counted as measured full-cell observations."
+    "COMSOL outputs and drive-cycle input profiles are not counted as measured full-cell observations.",
+    "Mohtat2021 cyclic-aging dataset is a different study; not silently substituted for the Mohtat2020 charging deposit."
   ]
 }

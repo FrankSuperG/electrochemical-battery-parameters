@@ -481,6 +481,9 @@ def main(download=False):
     from seed_fullcell import extend as extend_fullcell
 
     extend_fullcell(download=download)
+    from seed_mohtat import extend as extend_mohtat
+
+    extend_mohtat()
 
 
 if __name__ == "__main__":

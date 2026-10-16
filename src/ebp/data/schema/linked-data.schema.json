@@ -337,7 +337,7 @@
         },
         "original_download_path": {
           "type": "string",
-          "pattern": "^evidence/[A-Za-z0-9._-]+\\.(csv|txt)$"
+          "pattern": "^evidence/[A-Za-z0-9._-]+\\.(csv|txt|mat)$"
         },
         "sidecars": {
           "type": "array",
@@ -373,6 +373,29 @@
               "unit": {
                 "const": "K"
               }
+            }
+          }
+        },
+        "independent_variable": {
+          "type": "object",
+          "required": [
+            "column",
+            "unit",
+            "label",
+            "definition"
+          ],
+          "properties": {
+            "column": {
+              "const": "charge_capacity_Ah"
+            },
+            "unit": {
+              "const": "Ah"
+            },
+            "label": {
+              "type": "string"
+            },
+            "definition": {
+              "type": "string"
             }
           }
         }

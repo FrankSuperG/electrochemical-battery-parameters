@@ -198,12 +198,16 @@ class Catalog:
                 matches.append(Curve(record, self.root))
         return matches
 
-    def search_parameters(self, query="", cell_id=None, category=None):
+    def search_parameters(self, query="", cell_id=None, category=None, variant=None):
         return [
             Parameter(p)
             for p in self.parameters
             if (not cell_id or p["cell_id"] == cell_id)
             and (not category or p["category"] == category)
+            and (
+                not variant
+                or p.get("conditions", {}).get("parameterization_variant") == variant
+            )
             and query.casefold() in json.dumps(p).casefold()
         ]
 
@@ -345,9 +349,16 @@ class Catalog:
                 rows = self.full_cell_data(test["id"], normalized=True)
                 if len(rows) != test["row_count"]:
                     raise ValueError("Normalized row count mismatch")
-                time = np.array([float(r["time_s"]) for r in rows])
-                if not np.isfinite(time).all() or np.any(np.diff(time) < 0):
-                    raise ValueError("Invalid normalized timebase")
+                coordinate = test.get("independent_variable", {}).get(
+                    "column", "time_s"
+                )
+                axis = np.array([float(r[coordinate]) for r in rows])
+                if not np.isfinite(axis).all() or np.any(np.diff(axis) < 0):
+                    raise ValueError("Invalid normalized independent coordinate")
+                if coordinate != "time_s" and any(r["time_s"] for r in rows):
+                    raise ValueError(
+                        "Capacity-only observations must not invent timestamps"
+                    )
                 for column in (
                     "voltage_V",
                     "current_charge_positive_A",
