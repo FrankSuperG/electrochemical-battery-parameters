@@ -86,3 +86,9 @@ imported. `BPX-MIT.txt` preserves its license; `Oxford-BSD-2-Clause.txt` preserv
 the multiscale model license. Related 9 Ah OCP workbooks with unresolved reuse
 licensing are linked as external references only. Source authors have not
 endorsed this project.
+
+The private `upstream-lfp-v0.2.0` release mirrors four original Oxford files for CI
+reproduction because ORA rejects hosted-runner downloads with HTTP 403. The files
+are byte-identical, retain CC BY 4.0, and include both original dataset notices.
+Release notes preserve authors, primary URLs, DOIs, license and SHA-256 values.
+The source-cache release does not change the scientific attribution or license.

@@ -110,7 +110,7 @@ ebp build-site
 python -m build
 ```
 
-Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Cached Parquet/MAT/ZIP inputs are ignored by Git. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
+Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Cached Parquet/MAT/ZIP inputs are ignored by Git. ORA returns HTTP 403 to GitHub-hosted runners, so CI restores the four Oxford inputs from an attributed [private source-cache release](https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/tag/upstream-lfp-v0.2.0) and verifies the same primary-source SHA-256 pins. Primary URLs remain authoritative. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
 
 ```text
 src/ebp/data/             Authoritative packaged catalog

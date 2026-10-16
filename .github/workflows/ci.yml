@@ -32,6 +32,16 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -e '.[dev,pybamm]'
+      # ORA returns HTTP 403 to hosted runners. These attributed release copies
+      # are verified against the primary-source SHA-256 pins by the importer.
+      - name: Restore pinned Oxford source assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .cache/upstream
+          gh release download upstream-lfp-v0.2.0 --repo "$GITHUB_REPOSITORY" \
+            --dir .cache/upstream --pattern lin-full-discharge.mat \
+            --pattern lin-readme.txt --pattern pouch-cc.zip --pattern pouch-ora-readme.md
       - run: python scripts/seed_v01.py --download
       - run: git diff --exit-code -- src/ebp/data
       - run: python -m pytest -q

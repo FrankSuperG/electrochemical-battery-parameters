@@ -1,6 +1,6 @@
 # Curation and evidence decisions
 
-All source assets are pinned by URL/version and SHA-256. Reconstruct the complete catalog with `python scripts/seed_v01.py --download`. This runs the base extraction, LG M50 importer and LFP expansion. Cached originals are excluded from Git. Published facts, implementation values and generated observations retain distinct provenance.
+All source assets are pinned by URL/version and SHA-256. Reconstruct the complete catalog with `python scripts/seed_v01.py --download`. This runs the base extraction, LG M50 importer and LFP expansion. Cached originals are excluded from Git. Four openly licensed Oxford inputs also have byte-identical, attributed copies in the private `upstream-lfp-v0.2.0` source-cache release because ORA returns HTTP 403 to hosted CI runners. CI verifies those copies using the same primary-source SHA-256 values; mirror URLs are explicit in asset metadata. Published facts, implementation values and generated observations retain distinct provenance.
 
 ## SINTEF half-cell branches
 
