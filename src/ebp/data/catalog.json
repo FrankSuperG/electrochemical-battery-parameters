@@ -1,0 +1,842 @@
+{
+  "schema_version": "0.1",
+  "release": "0.1.0",
+  "records": [
+    {
+      "id": "lfp-afshar2017-formula",
+      "version": "1",
+      "title": "LFP · afshar-2017 · analytical formula",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "lfp-afshar-formula",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max as defined by the upstream implementation; not whole-cell SOC.",
+        "domain_basis": "Mathematical stoichiometry interval; an experimentally validated fitting interval is not established here."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "3.4077 - 0.020269*x + 0.5*exp(-150*x) - 0.9*exp(-30*(1-x))",
+        "functions": [
+          "exp"
+        ],
+        "source_function": "LFP_ocp_Afshar2017"
+      },
+      "source_ids": [
+        "afshar-2017",
+        "pybamm-25-4-2"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-prada-code"
+        ],
+        "derivation": "upstream_formula_transcription",
+        "location": "Prada2013.py::LFP_ocp_Afshar2017",
+        "processing": {
+          "changes": "Renamed sto to x; removed numpy namespace. Coefficients unchanged.",
+          "script": "scripts/seed_v01.py"
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "No raw experimental points are claimed for this expression.",
+        "No separate lithiation/delithiation branch or temperature law is supplied.",
+        "Not a complete or independently validated cell parameter set."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "graphite-chen2020-formula",
+      "version": "1",
+      "title": "graphite · chen-2020 · analytical formula",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "graphite-chen-lgm50",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max as defined by the upstream implementation; not whole-cell SOC.",
+        "domain_basis": "Mathematical stoichiometry interval; an experimentally validated fitting interval is not established here."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "1.9793*exp(-39.3631*x) + 0.2482 - 0.0909*tanh(29.8538*(x-0.1234)) - 0.04478*tanh(14.9159*(x-0.2769)) - 0.0205*tanh(30.4444*(x-0.6103))",
+        "functions": [
+          "exp",
+          "tanh"
+        ],
+        "source_function": "graphite_LGM50_ocp_Chen2020"
+      },
+      "source_ids": [
+        "chen-2020",
+        "pybamm-25-4-2"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-m50",
+        "relationship": "same_model",
+        "evidence": "Upstream function docstring identifies LG M50; exact specimen and batch are not established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-prada-code"
+        ],
+        "derivation": "upstream_formula_transcription",
+        "location": "Prada2013.py::graphite_LGM50_ocp_Chen2020",
+        "processing": {
+          "changes": "Renamed sto to x; removed numpy namespace. Coefficients unchanged.",
+          "script": "scripts/seed_v01.py"
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "No raw experimental points are claimed for this expression.",
+        "No separate lithiation/delithiation branch or temperature law is supplied.",
+        "Not a complete or independently validated cell parameter set.",
+        "Effective commercial negative-electrode formula; do not interpret as a universal pure-graphite material law."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "sintef-lfp-d07eb6-c3-delithiation",
+      "version": "1",
+      "title": "LFP · SINTEF d07eb6 · cycle 3 · delithiation",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "lfp-gelon-nmp-1",
+      "electrode_role": "positive",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-lfp-d07eb6-c3-delithiation.csv",
+        "sha256": "5d5cc2c55a4848e3e75f6f48b14d002f381b05f3360f498304928ba87619a8ec",
+        "point_count": 19293,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-lfp-d07eb6-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-lfp-d07eb6",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=2; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 2,
+          "input_branch_points": 19293,
+          "retained_points": 19293,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 3e-10,
+          "capacity_last_Ah": 0.0033009001,
+          "mean_current_A": 6.159867227491837e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "sintef-lfp-d07eb6-c3-lithiation",
+      "version": "1",
+      "title": "LFP · SINTEF d07eb6 · cycle 3 · lithiation",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "lfp-gelon-nmp-1",
+      "electrode_role": "positive",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-lfp-d07eb6-c3-lithiation.csv",
+        "sha256": "039dc1a22952b4fbb0706baeec87581c200eb8271220c4eee9b2b283f5cfedef",
+        "point_count": 19249,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-lfp-d07eb6-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-lfp-d07eb6",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=4; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 4,
+          "input_branch_points": 19249,
+          "retained_points": 19249,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 3e-10,
+          "capacity_last_Ah": 0.0032934505,
+          "mean_current_A": -6.159877086082393e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "sintef-lfp-178617-c3-delithiation",
+      "version": "1",
+      "title": "LFP · SINTEF 178617 · cycle 3 · delithiation",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "lfp-gelon-nmp-1",
+      "electrode_role": "positive",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-lfp-178617-c3-delithiation.csv",
+        "sha256": "b89df7231a78fe5af1e66edd0f76f9d5bd97f04935f47beaf1178486df03f238",
+        "point_count": 19445,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-lfp-178617-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-lfp-178617",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=2; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 2,
+          "input_branch_points": 19445,
+          "retained_points": 19445,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 3e-10,
+          "capacity_last_Ah": 0.0033267778,
+          "mean_current_A": 6.159550381074827e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "sintef-lfp-178617-c3-lithiation",
+      "version": "1",
+      "title": "LFP · SINTEF 178617 · cycle 3 · lithiation",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "lfp-gelon-nmp-1",
+      "electrode_role": "positive",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-lfp-178617-c3-lithiation.csv",
+        "sha256": "9aa59ea8f00f4249d906fb0821b6c0482b14a09923e2495aae39380b7af1434f",
+        "point_count": 19164,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-lfp-178617-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-lfp-178617",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=4; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 4,
+          "input_branch_points": 19164,
+          "retained_points": 19164,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 3e-10,
+          "capacity_last_Ah": 0.0032786045,
+          "mean_current_A": -6.159554266332707e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "sintef-graphite-1d5628-c3-lithiation",
+      "version": "1",
+      "title": "graphite · SINTEF 1d5628 · cycle 3 · lithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "graphite-aq-1",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-graphite-1d5628-c3-lithiation.csv",
+        "sha256": "6392468b218040e3e4b03fab512cd7de223e2189d46ee48297e6a05462803713",
+        "point_count": 16605,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-graphite-1d5628-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-graphite-1d5628",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=2; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 2,
+          "input_branch_points": 16605,
+          "retained_points": 16605,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 3e-10,
+          "capacity_last_Ah": 0.0020892671,
+          "mean_current_A": -4.530115035230352e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "sintef-graphite-1d5628-c3-delithiation",
+      "version": "1",
+      "title": "graphite · SINTEF 1d5628 · cycle 3 · delithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "graphite-aq-1",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-graphite-1d5628-c3-delithiation.csv",
+        "sha256": "325315cbf404eab58818c68af31ee38878621ad4f230d998e6ecc81010f4ad6b",
+        "point_count": 16482,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-graphite-1d5628-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-graphite-1d5628",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=4; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 4,
+          "input_branch_points": 16482,
+          "retained_points": 16482,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 3e-10,
+          "capacity_last_Ah": 0.0020738849,
+          "mean_current_A": 4.5301483836913e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "sintef-graphite-4ccc47-c3-lithiation",
+      "version": "1",
+      "title": "graphite · SINTEF 4ccc47 · cycle 3 · lithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "graphite-aq-1",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-graphite-4ccc47-c3-lithiation.csv",
+        "sha256": "a52d3debb167d9e293bd3826b9191694f8b8c2190de511e274fa248f8cb4cad6",
+        "point_count": 16177,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-graphite-4ccc47-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-graphite-4ccc47",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=2; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 2,
+          "input_branch_points": 16177,
+          "retained_points": 16177,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 2e-10,
+          "capacity_last_Ah": 0.0019444942,
+          "mean_current_A": -4.3275168634481055e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "sintef-graphite-4ccc47-c3-delithiation",
+      "version": "1",
+      "title": "graphite · SINTEF 4ccc47 · cycle 3 · delithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "graphite-aq-1",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Room temperature (source); numeric setpoint unavailable."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "q_branch",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "(Q - Q_first)/(Q_last - Q_first), from first to last retained point of this branch. Increases with passed capacity in BOTH directions. Not absolute stoichiometry or whole-cell SOC.",
+        "domain_basis": "Measured branch endpoints, independently normalized for each specimen and direction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/sintef-graphite-4ccc47-c3-delithiation.csv",
+        "sha256": "358dbd0ba38015f9b62a67b0b56d57734288dbec86f3953450723de1f78a6688",
+        "point_count": 16087,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "sintef-2026-v3"
+      ],
+      "experiment_id": "sintef-graphite-4ccc47-pocv",
+      "cell_link": {
+        "cell_id": null,
+        "relationship": "material_only",
+        "evidence": "No commercial cell identity established for this record."
+      },
+      "provenance": {
+        "asset_ids": [
+          "sintef-graphite-4ccc47",
+          "sintef-metadata"
+        ],
+        "derivation": "constant_current_branch_extraction",
+        "location": "cycle=3; step=4; source_row is zero-based row position in Parquet",
+        "processing": {
+          "script": "scripts/seed_v01.py",
+          "cycle": 3,
+          "step": 4,
+          "input_branch_points": 16087,
+          "retained_points": 16087,
+          "duplicate_capacity_points_removed": 0,
+          "capacity_first_Ah": 2e-10,
+          "capacity_last_Ah": 0.0019336741,
+          "mean_current_A": 4.32753393298937e-05,
+          "direction_rule": "Li-metal half-cell: positive current and increasing working-electrode potential = delithiation; negative current and decreasing potential = lithiation; verified for this branch.",
+          "smoothing": "none",
+          "resampling": "none",
+          "potential_changes": "none; native source floating-point values preserved",
+          "rest_steps": "excluded; these are finite-current pseudo-OCP points, not GITT equilibrium points"
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "C/50 pseudo-OCP retains finite-current polarization; not a claimed equilibrium OCP.",
+        "Absolute stoichiometric endpoints are unknown and require external balancing evidence.",
+        "Each branch is normalized separately; branch endpoints are not assumed to represent identical lithium fractions.",
+        "Two specimens and their branches are replicates from ONE dataset, not independent literature sources.",
+        "No commercial full-cell identity or full-cell model validation is established."
+      ],
+      "license": "CC-BY-4.0"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "electrochemical-battery-parameters"
+version = "0.1.0"
+description = "Traceable electrode OCP curves and electrochemical battery parameters"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "DATA_LICENSES.md", "src/ebp/licenses/*.txt"]
+authors = [{name = "FrankSuperG"}]
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2", "jsonschema>=4.18,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1.2", "pandas>=2.2,<4", "pyarrow>=18,<27"]
+pybamm = ["pybamm>=25.4,<27"]
+
+[project.scripts]
+ebp = "ebp.cli:main"
+
+[project.urls]
+Repository = "https://github.com/FrankSuperG/electrochemical-battery-parameters"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ebp = ["data/*.json", "data/curves/*.csv", "data/full_cell/*.csv", "data/schema/*.json", "web/*", "licenses/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

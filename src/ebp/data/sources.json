@@ -1,0 +1,84 @@
+{
+  "afshar-2017": {
+    "kind": "paper",
+    "title": "Efficient electrochemical model for lithium-ion cells",
+    "authors": [
+      "Sepideh Afshar",
+      "Kirsten Morris",
+      "Amir Khajepour"
+    ],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1709.03970v1",
+    "doi": "10.48550/arXiv.1709.03970",
+    "role": "Scientific attribution supplied by the upstream implementation; original equation not independently checked."
+  },
+  "chen-2020": {
+    "kind": "paper",
+    "title": "Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models",
+    "authors": [
+      "Chang-Hui Chen",
+      "Ferran Brosa Planella",
+      "Kieran O'Regan",
+      "Dominika Gastol",
+      "W. Dhammika Widanage",
+      "Emma Kendrick"
+    ],
+    "year": 2020,
+    "doi": "10.1149/1945-7111/ab9050",
+    "url": "https://doi.org/10.1149/1945-7111/ab9050",
+    "role": "Scientific attribution of the LG M50 graphite OCP and non-OCP parameter implementations; individual measurement/fit/borrowing origins not independently audited."
+  },
+  "pybamm-25-4-2": {
+    "kind": "software",
+    "title": "PyBaMM v25.4.2: Prada2013.py and Chen2020.py",
+    "authors": [
+      "The PyBaMM team"
+    ],
+    "year": 2025,
+    "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+    "version": "v25.4.2",
+    "license": "BSD-3-Clause",
+    "role": "Redistributable implementation source. OCPs are borrowed from Afshar2017 and Chen2020, not measured by Prada2013."
+  },
+  "sintef-2026-v3": {
+    "kind": "dataset",
+    "title": "Half-Cell Open-Circuit Voltage of Several Lithium-Ion Battery Active Materials Measured under Various Electrochemical Protocols",
+    "authors": [
+      "Eibar Flores",
+      "Sridevi Krishnamurthi",
+      "Killian Stokes-Rodriguez",
+      "Julie Cathrine Guldahl",
+      "Charifa Hakim",
+      "Simon Clark",
+      "Nils Peter Wagner",
+      "Sergi Obrador",
+      "Andrés Bernabeu Santisteban"
+    ],
+    "year": 2026,
+    "doi": "10.5281/zenodo.20086298",
+    "url": "https://zenodo.org/records/20086298",
+    "version": "v3",
+    "license": "CC-BY-4.0",
+    "license_evidence": "Zenodo record API metadata.license.id=cc-by-4.0, checked 2026-10-16",
+    "role": "Raw measured half-cell time series and electrode metadata."
+  },
+  "chen-validation-2020": {
+    "kind": "dataset",
+    "title": "Experimental data for \"Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models\"",
+    "authors": [
+      "Chang-Hui Chen",
+      "Ferran Brosa Planella",
+      "Kieran O'Regan",
+      "Dominika Gastol",
+      "W. Dhammika Widanage",
+      "Emma Kendrick"
+    ],
+    "year": 2020,
+    "doi": "10.5281/zenodo.4032561",
+    "url": "https://zenodo.org/records/4032561",
+    "version": "v1",
+    "license": "CC-BY-4.0",
+    "license_evidence": "Zenodo API metadata.license.id=cc-by-4.0, checked 2026-10-16",
+    "role": "Full-cell validation tests published alongside Chen2020; not proof of identical specimen to the dissected characterization cell."
+  }
+}

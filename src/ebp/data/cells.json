@@ -1,0 +1,60 @@
+{
+  "lg-m50": {
+    "manufacturer": "LG",
+    "model": "M50",
+    "format": "21700",
+    "identity_level": "commercial_model_only",
+    "source_ids": [
+      "chen-2020"
+    ],
+    "note": "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+    "parameter_ids": [
+      "lgm50-negative-current-collector-thickness-m",
+      "lgm50-negative-electrode-thickness-m",
+      "lgm50-separator-thickness-m",
+      "lgm50-positive-electrode-thickness-m",
+      "lgm50-positive-current-collector-thickness-m",
+      "lgm50-electrode-height-m",
+      "lgm50-electrode-width-m",
+      "lgm50-cell-volume-m3",
+      "lgm50-cell-cooling-surface-area-m2",
+      "lgm50-negative-electrode-porosity",
+      "lgm50-negative-electrode-active-material-volume-fraction",
+      "lgm50-negative-particle-radius-m",
+      "lgm50-negative-electrode-conductivity-s-m-1",
+      "lgm50-negative-particle-diffusivity-m2-s-1",
+      "lgm50-positive-electrode-porosity",
+      "lgm50-positive-electrode-active-material-volume-fraction",
+      "lgm50-positive-particle-radius-m",
+      "lgm50-positive-electrode-conductivity-s-m-1",
+      "lgm50-positive-particle-diffusivity-m2-s-1",
+      "lgm50-maximum-concentration-in-negative-electrode-mol-m-3",
+      "lgm50-maximum-concentration-in-positive-electrode-mol-m-3",
+      "lgm50-negative-electrode-density-kg-m-3",
+      "lgm50-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "lgm50-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "lgm50-positive-electrode-density-kg-m-3",
+      "lgm50-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "lgm50-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "lgm50-separator-density-kg-m-3",
+      "lgm50-separator-specific-heat-capacity-j-kg-1-k-1",
+      "lgm50-separator-thermal-conductivity-w-m-1-k-1",
+      "lgm50-nominal-cell-capacity-a-h",
+      "lgm50-lower-voltage-cut-off-v",
+      "lgm50-upper-voltage-cut-off-v",
+      "lgm50-initial-concentration-in-electrolyte-mol-m-3",
+      "lgm50-initial-concentration-in-negative-electrode-mol-m-3",
+      "lgm50-initial-concentration-in-positive-electrode-mol-m-3",
+      "lgm50-negative-exchange-current-density",
+      "lgm50-positive-exchange-current-density"
+    ],
+    "full_cell_test_ids": [
+      "chen-lgm50-cell02",
+      "chen-lgm50-cell03",
+      "chen-lgm50-cell04"
+    ],
+    "ocp_record_ids": [
+      "graphite-chen2020-formula"
+    ]
+  }
+}

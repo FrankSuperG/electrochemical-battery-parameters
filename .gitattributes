@@ -1,0 +1,12 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+# Preserve experimental files byte-for-byte, including source line endings.
+*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Keep the publisher's license text as obtained.
+src/ebp/licenses/* -whitespace

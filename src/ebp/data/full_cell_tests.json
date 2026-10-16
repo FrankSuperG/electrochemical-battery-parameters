@@ -1,0 +1,224 @@
+{
+  "schema_version": "0.1",
+  "records": [
+    {
+      "id": "chen-lgm50-cell02",
+      "cell_id": "lg-m50",
+      "sample_id": "cell02",
+      "asset_id": "chen-lgm50-cell02",
+      "source_id": "chen-validation-2020",
+      "path": "full_cell/LGM50_cell02.csv",
+      "normalized_path": "full_cell/LGM50_cell02-normalized.csv",
+      "normalized_sha256": "a887c818a22cf6c5146d740c23f6cf9018e9bb849a5884e2dc95291d17196a34",
+      "current_convention": "normalized: positive=charge, negative=discharge; source current is unsigned magnitude interpreted using Md=C/D",
+      "processing": "Original copied byte-for-byte. Normalized: skip 13 instrument banner lines; derive current sign from Md; temperatures degC+273.15; preserve source record and zero-based source file row; no smoothing or resampling.",
+      "license": "CC-BY-4.0",
+      "protocol": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Dataset is explicitly supplementary validation data for Chen et al. 2020; LG M50 model and individual test sample IDs are given. Exact link to a dissected electrode specimen is not established.",
+      "independent_validation_by_this_project": false,
+      "row_count": 6313,
+      "columns": [
+        "Rec",
+        "Cycle P",
+        "Cycle C",
+        "Step",
+        "Test Time [s]",
+        "Step Time [s]",
+        "Capacity [Ah]",
+        "Energy [Wh]",
+        "Current [A]",
+        "Voltage [V]",
+        "Md",
+        "ES",
+        "DPT Time",
+        "Temperature Cell [degC]",
+        "Temperature Chamber [degC]"
+      ],
+      "discharge_segments": [
+        {
+          "step": 2,
+          "mean_discharge_current_A": 0.5000455806451612,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": true,
+          "points": 62
+        },
+        {
+          "step": 7,
+          "mean_discharge_current_A": 0.49997244929925805,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": false,
+          "points": 1213
+        },
+        {
+          "step": 12,
+          "mean_discharge_current_A": 2.4999939084507043,
+          "nominal_C_rate": 0.5,
+          "initial_preconditioning": false,
+          "points": 284
+        },
+        {
+          "step": 17,
+          "mean_discharge_current_A": 5.000015738636363,
+          "nominal_C_rate": 1.0,
+          "initial_preconditioning": false,
+          "points": 176
+        },
+        {
+          "step": 22,
+          "mean_discharge_current_A": 7.4999371917808215,
+          "nominal_C_rate": 1.5,
+          "initial_preconditioning": false,
+          "points": 146
+        }
+      ],
+      "format": "original CSV + explicitly normalized CSV"
+    },
+    {
+      "id": "chen-lgm50-cell03",
+      "cell_id": "lg-m50",
+      "sample_id": "cell03",
+      "asset_id": "chen-lgm50-cell03",
+      "source_id": "chen-validation-2020",
+      "path": "full_cell/LGM50_cell03.csv",
+      "normalized_path": "full_cell/LGM50_cell03-normalized.csv",
+      "normalized_sha256": "a7354478140bd12fa77266b51df22f65aaf89ac82e5d3eded78b9071ba50e7b6",
+      "current_convention": "normalized: positive=charge, negative=discharge; source current is unsigned magnitude interpreted using Md=C/D",
+      "processing": "Original copied byte-for-byte. Normalized: skip 13 instrument banner lines; derive current sign from Md; temperatures degC+273.15; preserve source record and zero-based source file row; no smoothing or resampling.",
+      "license": "CC-BY-4.0",
+      "protocol": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Dataset is explicitly supplementary validation data for Chen et al. 2020; LG M50 model and individual test sample IDs are given. Exact link to a dissected electrode specimen is not established.",
+      "independent_validation_by_this_project": false,
+      "row_count": 6315,
+      "columns": [
+        "Rec",
+        "Cycle P",
+        "Cycle C",
+        "Step",
+        "Test Time [s]",
+        "Step Time [s]",
+        "Capacity [Ah]",
+        "Energy [Wh]",
+        "Current [A]",
+        "Voltage [V]",
+        "Md",
+        "ES",
+        "DPT Time",
+        "Temperature Cell [degC]",
+        "Temperature Chamber [degC]"
+      ],
+      "discharge_segments": [
+        {
+          "step": 2,
+          "mean_discharge_current_A": 0.49999568852459014,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": true,
+          "points": 61
+        },
+        {
+          "step": 7,
+          "mean_discharge_current_A": 0.4999831663920922,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": false,
+          "points": 1214
+        },
+        {
+          "step": 12,
+          "mean_discharge_current_A": 2.4999746830985914,
+          "nominal_C_rate": 0.5,
+          "initial_preconditioning": false,
+          "points": 284
+        },
+        {
+          "step": 17,
+          "mean_discharge_current_A": 5.000038977272727,
+          "nominal_C_rate": 1.0,
+          "initial_preconditioning": false,
+          "points": 176
+        },
+        {
+          "step": 22,
+          "mean_discharge_current_A": 7.499922972972974,
+          "nominal_C_rate": 1.5,
+          "initial_preconditioning": false,
+          "points": 148
+        }
+      ],
+      "format": "original CSV + explicitly normalized CSV"
+    },
+    {
+      "id": "chen-lgm50-cell04",
+      "cell_id": "lg-m50",
+      "sample_id": "cell04",
+      "asset_id": "chen-lgm50-cell04",
+      "source_id": "chen-validation-2020",
+      "path": "full_cell/LGM50_cell04.csv",
+      "normalized_path": "full_cell/LGM50_cell04-normalized.csv",
+      "normalized_sha256": "1d92946f8cb0803084599b3fbdd8d691acd2cebca533f51a76b055b8472d2c7f",
+      "current_convention": "normalized: positive=charge, negative=discharge; source current is unsigned magnitude interpreted using Md=C/D",
+      "processing": "Original copied byte-for-byte. Normalized: skip 13 instrument banner lines; derive current sign from Md; temperatures degC+273.15; preserve source record and zero-based source file row; no smoothing or resampling.",
+      "license": "CC-BY-4.0",
+      "protocol": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Dataset is explicitly supplementary validation data for Chen et al. 2020; LG M50 model and individual test sample IDs are given. Exact link to a dissected electrode specimen is not established.",
+      "independent_validation_by_this_project": false,
+      "row_count": 6307,
+      "columns": [
+        "Rec",
+        "Cycle P",
+        "Cycle C",
+        "Step",
+        "Test Time [s]",
+        "Step Time [s]",
+        "Capacity [Ah]",
+        "Energy [Wh]",
+        "Current [A]",
+        "Voltage [V]",
+        "Md",
+        "ES",
+        "DPT Time",
+        "Temperature Cell [degC]",
+        "Temperature Chamber [degC]"
+      ],
+      "discharge_segments": [
+        {
+          "step": 2,
+          "mean_discharge_current_A": 0.49998653225806455,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": true,
+          "points": 62
+        },
+        {
+          "step": 7,
+          "mean_discharge_current_A": 0.49997905445544555,
+          "nominal_C_rate": 0.1,
+          "initial_preconditioning": false,
+          "points": 1212
+        },
+        {
+          "step": 12,
+          "mean_discharge_current_A": 2.4999832394366197,
+          "nominal_C_rate": 0.5,
+          "initial_preconditioning": false,
+          "points": 284
+        },
+        {
+          "step": 17,
+          "mean_discharge_current_A": 5.000039830508475,
+          "nominal_C_rate": 1.0,
+          "initial_preconditioning": false,
+          "points": 177
+        },
+        {
+          "step": 22,
+          "mean_discharge_current_A": 7.499936554054054,
+          "nominal_C_rate": 1.5,
+          "initial_preconditioning": false,
+          "points": 148
+        }
+      ],
+      "format": "original CSV + explicitly normalized CSV"
+    }
+  ]
+}

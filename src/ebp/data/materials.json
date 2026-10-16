@@ -1,0 +1,21 @@
+{
+  "lfp-afshar-formula": {
+    "chemistry": "LFP",
+    "description": "LFP formula attributed to Afshar2017 by PyBaMM; material supplier and batch not established."
+  },
+  "graphite-chen-lgm50": {
+    "chemistry": "graphite",
+    "description": "LG M50 negative-electrode effective OCP formula, labeled graphite by upstream; the original commercial electrode contains graphite/SiOx."
+  },
+  "lfp-gelon-nmp-1": {
+    "chemistry": "LFP",
+    "supplier": "Gelon",
+    "public_label": "LFP-NMP-1",
+    "description": "Commercial LFP electrode tested in laboratory Li-metal half-cells; no commercial full-cell model assigned."
+  },
+  "graphite-aq-1": {
+    "chemistry": "graphite",
+    "public_label": "Gr-AQ-1",
+    "description": "Aqueous-processed graphite electrode tested in laboratory Li-metal half-cells."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/FrankSuperG/electrochemical-battery-parameters/schema/catalog-v0.1.json",
+  "title": "Electrode OCP catalog v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "release", "records"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "release": {"type": "string"},
+    "records": {"type": "array", "items": {"$ref": "#/$defs/record"}}
+  },
+  "$defs": {
+    "record": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "version", "title", "parameter", "material", "material_id", "electrode_role", "direction", "measurement", "temperature", "reference", "x", "y", "representation", "source_ids", "experiment_id", "cell_link", "provenance", "quality", "limitations", "license"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]+$"},
+        "version": {"type": "string"},
+        "title": {"type": "string"},
+        "parameter": {"const": "electrode_ocp"},
+        "material": {"enum": ["LFP", "graphite"]},
+        "material_id": {"type": "string"},
+        "electrode_role": {"enum": ["positive", "negative"]},
+        "direction": {"enum": ["lithiation", "delithiation", "unspecified"]},
+        "measurement": {"enum": ["pseudo_ocp", "literature_formula"]},
+        "temperature": {
+          "type": "object", "additionalProperties": false,
+          "required": ["value_K", "description"],
+          "properties": {"value_K": {"type": ["number", "null"]}, "description": {"type": "string"}}
+        },
+        "reference": {"const": "Li/Li+"},
+        "x": {
+          "type": "object", "additionalProperties": false,
+          "required": ["kind", "symbol", "unit", "domain", "definition", "domain_basis"],
+          "properties": {
+            "kind": {"enum": ["stoichiometry", "normalized_branch_capacity"]},
+            "symbol": {"type": "string"}, "unit": {"const": "1"},
+            "domain": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "definition": {"type": "string"}, "domain_basis": {"type": "string"}
+          }
+        },
+        "y": {"type": "object", "additionalProperties": false,
+          "required": ["unit", "definition"],
+          "properties": {"unit": {"const": "V"}, "definition": {"type": "string"}}
+        },
+        "representation": {
+          "oneOf": [
+            {"type": "object", "additionalProperties": false,
+             "required": ["kind", "expression", "functions", "source_function"],
+             "properties": {"kind": {"const": "expression"}, "expression": {"type": "string"}, "functions": {"type": "array", "items": {"type": "string"}}, "source_function": {"type": "string"}}},
+            {"type": "object", "additionalProperties": false,
+             "required": ["kind", "path", "sha256", "point_count", "default_interpolation"],
+             "properties": {"kind": {"const": "table"}, "path": {"type": "string", "pattern": "^curves/[a-z0-9-]+\\.csv$"}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "point_count": {"type": "integer", "minimum": 2}, "default_interpolation": {"enum": ["linear", "pchip"]}}}
+          ]
+        },
+        "source_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "experiment_id": {"type": ["string", "null"]},
+        "cell_link": {
+          "type": "object", "additionalProperties": false,
+          "required": ["cell_id", "relationship", "evidence"],
+          "properties": {"cell_id": {"type": ["string", "null"]}, "relationship": {"enum": ["same_sample", "same_batch", "same_model", "material_only", "surrogate"]}, "evidence": {"type": "string"}}
+        },
+        "provenance": {
+          "type": "object", "additionalProperties": false,
+          "required": ["asset_ids", "derivation", "location", "processing"],
+          "properties": {"asset_ids": {"type": "array", "items": {"type": "string"}}, "derivation": {"type": "string"}, "location": {"type": "string"}, "processing": {"type": "object"}}
+        },
+        "quality": {
+          "type": "object", "additionalProperties": false,
+          "required": ["source_review", "axis_status", "raw_data", "model_status", "independent_validation"],
+          "properties": {
+            "source_review": {"enum": ["upstream_code_checked", "raw_file_checked"]},
+            "axis_status": {"enum": ["upstream_stoichiometry", "relative_capacity_only"]},
+            "raw_data": {"enum": ["not_deposited_with_formula", "external_checksum_pinned"]},
+            "model_status": {"enum": ["ocp_component_only", "requires_stoichiometry_mapping"]},
+            "independent_validation": {"const": false}
+          }
+        },
+        "limitations": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "license": {"enum": ["BSD-3-Clause", "CC-BY-4.0"]}
+      }
+    }
+  }
+}

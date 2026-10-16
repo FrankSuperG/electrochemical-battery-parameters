@@ -1,0 +1,38 @@
+name: Verify catalog and package
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    env:
+      PYBAMM_DISABLE_TELEMETRY: 'true'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -e '.[dev]'
+      - run: ebp validate
+      - run: python -m pytest -q
+      - run: ebp build-site
+      - run: python -m build
+  provenance-and-adapter:
+    runs-on: ubuntu-latest
+    env:
+      PYBAMM_DISABLE_TELEMETRY: 'true'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e '.[dev,pybamm]'
+      - run: python scripts/seed_v01.py --download
+      - run: git diff --exit-code -- src/ebp/data
+      - run: python -m pytest -q
+      - run: python examples/pybamm_ocp.py

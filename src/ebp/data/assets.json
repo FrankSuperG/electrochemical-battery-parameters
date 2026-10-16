@@ -1,0 +1,80 @@
+{
+  "pybamm-prada-code": {
+    "source_id": "pybamm-25-4-2",
+    "filename": "Prada2013-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Prada2013.py",
+    "sha256": "9cec4ad9e6afac112b44c5ea4c73ee2c2c0882a7c6fc5398bd789b78617cb052",
+    "license": "BSD-3-Clause"
+  },
+  "sintef-metadata": {
+    "source_id": "sintef-2026-v3",
+    "filename": "metadata.csv",
+    "url": "https://zenodo.org/api/records/20086298/files/metadata.csv/content",
+    "md5": "daa9d9229c6fbe53cf099ea1a9645a9d",
+    "sha256": "b966c2d7e783f05432f1f9fbb3fa59c7a2fe2aadc1f3a53a124381f835b1efac",
+    "license": "CC-BY-4.0"
+  },
+  "sintef-lfp-d07eb6": {
+    "source_id": "sintef-2026-v3",
+    "filename": "sintef__sintef-lfp-R2032-gelon-d07eb6__20250602__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-lfp-R2032-gelon-d07eb6__20250602__p-ocv__RT.bdf.parquet/content",
+    "md5": "3efea83aa4a59c500bde5723a67e3c3c",
+    "sha256": "dcadc26731c2f1e685e3ae73667ff6041e5d7f349e1c31ebfe90363dd21880d5",
+    "license": "CC-BY-4.0"
+  },
+  "sintef-lfp-178617": {
+    "source_id": "sintef-2026-v3",
+    "filename": "sintef__sintef-lfp-R2032-gelon-178617__20250706__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-lfp-R2032-gelon-178617__20250706__p-ocv__RT.bdf.parquet/content",
+    "md5": "20e8f367ef71c570c1d5a172b5c321d7",
+    "sha256": "384724a7fdea137431054bf302849a91e3590682eaa7be73400a7c197c347516",
+    "license": "CC-BY-4.0"
+  },
+  "sintef-graphite-1d5628": {
+    "source_id": "sintef-2026-v3",
+    "filename": "sintef__sintef-graphite-R2032-intelligent-1d5628__20250528__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-graphite-R2032-intelligent-1d5628__20250528__p-ocv__RT.bdf.parquet/content",
+    "md5": "22cddf70cdf1a4432440cf94c19e3e6a",
+    "sha256": "bc94be7b3836fc01e3ac41d481e566791f775abb6113cf905fa11c55f85ca14b",
+    "license": "CC-BY-4.0"
+  },
+  "sintef-graphite-4ccc47": {
+    "source_id": "sintef-2026-v3",
+    "filename": "sintef__sintef-graphite-R2032-intelligent-4ccc47__20250514__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-graphite-R2032-intelligent-4ccc47__20250514__p-ocv__RT.bdf.parquet/content",
+    "md5": "251c6977b9606e6791c871b9bffe7595",
+    "sha256": "72f208de682a205f6053969d3958fa55d889a326218cc963bad5510e3447b369",
+    "license": "CC-BY-4.0"
+  },
+  "pybamm-chen-code": {
+    "source_id": "pybamm-25-4-2",
+    "filename": "Chen2020-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Chen2020.py",
+    "sha256": "eb6a13879cad6ae1bc86d222ce5189f3e3edb400e23f69331779b8aae2437906",
+    "license": "BSD-3-Clause"
+  },
+  "chen-lgm50-cell02": {
+    "source_id": "chen-validation-2020",
+    "filename": "LGM50_cell02.csv",
+    "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell02.csv/content",
+    "md5": "0bbf959cbfc367296ec69d7a74d2f5c1",
+    "sha256": "650e7f9ac5217b4db158047e50b6b464100b13f4859002421114edebca629b35",
+    "license": "CC-BY-4.0"
+  },
+  "chen-lgm50-cell03": {
+    "source_id": "chen-validation-2020",
+    "filename": "LGM50_cell03.csv",
+    "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell03.csv/content",
+    "md5": "a09cbd8eff0af55dfe9bc8728fa89908",
+    "sha256": "fcc13423786d6044f3ec41b1b278fb1d42ff55018666be743243f7c34b1b98cb",
+    "license": "CC-BY-4.0"
+  },
+  "chen-lgm50-cell04": {
+    "source_id": "chen-validation-2020",
+    "filename": "LGM50_cell04.csv",
+    "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell04.csv/content",
+    "md5": "f17615476283d2e15087165697ff9d7c",
+    "sha256": "e1cbb60e79911824d5559f12db8e8ecdd4781d077a45f5b1ecbcf103aa271d9e",
+    "license": "CC-BY-4.0"
+  }
+}
