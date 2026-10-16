@@ -486,6 +486,10 @@ def extend(download=False):
             },
         }
     )
+    sources["pybamm-25-4-2"].update(
+        title="PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+        role="Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020.",
+    )
     # Complete the existing LG M50 electrode pair with its own positive OCP.
     functions, values, scalars = read_module(CACHE / "Chen2020-v25.4.2.py")
     name = "nmc_LGM50_ocp_Chen2020"

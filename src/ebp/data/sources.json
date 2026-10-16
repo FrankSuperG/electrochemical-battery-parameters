@@ -30,7 +30,7 @@
   },
   "pybamm-25-4-2": {
     "kind": "software",
-    "title": "PyBaMM v25.4.2: Prada2013.py and Chen2020.py",
+    "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
     "authors": [
       "The PyBaMM team"
     ],
@@ -38,7 +38,7 @@
     "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
     "version": "v25.4.2",
     "license": "BSD-3-Clause",
-    "role": "Redistributable implementation source. OCPs are borrowed from Afshar2017 and Chen2020, not measured by Prada2013."
+    "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020."
   },
   "sintef-2026-v3": {
     "kind": "dataset",

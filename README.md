@@ -171,7 +171,7 @@ Cite the scientific sources for the records you use and retain upstream notices.
 | [SINTEF / Zenodo v3](https://zenodo.org/records/20086298) | Half-cell measurements · CC BY 4.0 |
 | [Afshar et al., 2017](https://arxiv.org/abs/1709.03970v1) | LFP OCP scientific attribution |
 | [Chen et al., 2020](https://doi.org/10.1149/1945-7111/ab9050), [full-cell data](https://zenodo.org/records/4032561) | LG M50 parameter attribution / observations · CC BY 4.0 data |
-| [PyBaMM v25.4.2](https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion) | Pinned OCP / Chen2020 implementations · BSD-3-Clause |
+| [PyBaMM v25.4.2](https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion) | Pinned OCP, diffusion and kinetic implementations · BSD-3-Clause |
 | [Marquis et al., 2019](https://doi.org/10.1149/2.0341915jes) | LCO/graphite model context; electrode functions attributed to Dualfoil by upstream |
 | [Mohtat et al., 2020](https://doi.org/10.1149/1945-7111/aba5d1) | NMC532/graphite parameter attribution via pinned implementation |
 | [Kim et al., 2011](https://doi.org/10.1149/1.3597614) | NCA/graphite nominal-design parameter attribution via pinned implementation |
