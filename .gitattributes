@@ -9,4 +9,4 @@
 # Preserve experimental files byte-for-byte, including source line endings.
 *.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 # Keep the publisher's license text as obtained.
-src/ebp/licenses/* -whitespace
+src/ebp/licenses/* -text -whitespace
