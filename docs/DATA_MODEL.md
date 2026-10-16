@@ -14,6 +14,7 @@ The authoritative catalog is `src/ebp/data/`, distributed inside the Python pack
 | Source | `sources.json` | A paper, data deposit or software distribution with its particular role |
 | Asset | `assets.json` | A versioned source URL and SHA-256; optional packaged evidence path |
 | Material | `materials.json` | Electrode composition and supplier information without inventing a commercial full-cell identity |
+| Matching audit | `matching_audit.json` | Component matches, missing items, unmatched records and unimported leads |
 
 ## Coordinates and representations
 
@@ -45,6 +46,12 @@ Current is charge positive. LG originals contain magnitude + mode, so normalizat
 For external MAT/ZIP originals, `path=null`; `asset_id` identifies the source download and checksum. `normalized_path` identifies the packaged CSV and `normalized_sha256` verifies it. For packaged Maccor originals, `path` and the asset checksum verify the original bytes as well. A local curated evidence asset's `digest_scope` explicitly names the transcription; its hash does not claim to hash publisher HTML.
 
 Cell package downloads are scoped by `cell_id`. They contain that cell's OCP metadata, parameters and test links, their source records and relevant assets. Empty packages expose gaps rather than silently substituting another model's data.
+
+In v0.4, `basic_test` distinguishes CC discharge, CC charge and CCCV-charge/CC-discharge protocols. `channel_availability` counts observed rows. `observation_kind` distinguishes instrument series, published experimental series with unresolved raw status, and figure digitizations. `missing_items` appears at test, cell and component level. `borrowed_model_input` and `missing` are component evidence statuses, not commercial identity levels.
+
+For time/voltage-only files, `path=null` selects the normalized reader; `original_download_path` identifies a byte-identical packaged CSV/TXT verified by its asset hash. Blank current is unavailable, not zero. C-rate never populates a measured-current column. Source-row references are one-based and documented. Temperature-rise `sidecars` retain separate timebases, row counts, hashes and source assets; they never populate `cell_temperature_K` or increase the test-file count.
+
+`literature_table` distinguishes published OCP tables from C/50 measured branches. Coordinates/domains follow supplied stoichiometry; the explicitly synthetic graphite guard is omitted. Instrument protocol and numerical measurement temperature remain unknown. NCO follows the upstream label without an inferred composition ratio. Ecker commercial and implementation capacities remain separate fields requiring scaling review.
 
 ## Material families and cell joins
 

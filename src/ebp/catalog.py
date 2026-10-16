@@ -160,6 +160,7 @@ class Catalog:
         self.cells = self._load("cells.json")
         self.parameters = self._load("parameters.json")["records"]
         self.full_cell_tests = self._load("full_cell_tests.json")["records"]
+        self.matching_audit = self._load("matching_audit.json")
         self._records = self.document.get("records", [])
 
     def _load(self, name):
@@ -320,8 +321,16 @@ class Catalog:
                     test["cell_id"] not in self.cells
                     or test["source_id"] not in self.sources
                     or test["asset_id"] not in self.assets
+                    or any(
+                        sid not in self.sources
+                        for sid in test.get("scientific_source_ids", [])
+                    )
                 ):
                     raise ValueError("Unknown cell, source or asset")
+                if test.get("original_download_path") and test[
+                    "original_download_path"
+                ] != self.assets[test["asset_id"]].get("path"):
+                    raise ValueError("Original download asset mismatch")
                 if test["path"] is not None:
                     path = (self.root / test["path"]).resolve()
                     if not path.is_relative_to(self.root.resolve()):
@@ -364,9 +373,64 @@ class Catalog:
                     != test["normalized_sha256"]
                 ):
                     raise ValueError("Normalized full-cell SHA-256 mismatch")
+                for column, availability in test.get(
+                    "channel_availability", {}
+                ).items():
+                    if availability != {
+                        "present_rows": sum(bool(r.get(column)) for r in rows),
+                        "total_rows": len(rows),
+                    }:
+                        raise ValueError(f"Channel availability mismatch for {column}")
+                for sidecar in test.get("sidecars", []):
+                    if sidecar["asset_id"] not in self.assets or sidecar[
+                        "original_download_path"
+                    ] != self.assets[sidecar["asset_id"]].get("path"):
+                        raise ValueError("Sidecar original asset mismatch")
+                    path = (self.root / sidecar["path"]).resolve()
+                    if not path.is_relative_to(self.root.resolve()):
+                        raise ValueError("Sidecar path escapes the catalog")
+                    if (
+                        hashlib.sha256(path.read_bytes()).hexdigest()
+                        != sidecar["sha256"]
+                    ):
+                        raise ValueError("Sidecar SHA-256 mismatch")
+                    with path.open(newline="") as handle:
+                        side_rows = list(csv.DictReader(handle))
+                    if len(side_rows) != sidecar["row_count"]:
+                        raise ValueError("Sidecar row count mismatch")
+                    times = np.array([float(r["time_s"]) for r in side_rows])
+                    rise = np.array([float(r["temperature_rise_K"]) for r in side_rows])
+                    if (
+                        not np.isfinite(times).all()
+                        or not np.isfinite(rise).all()
+                        or np.any(np.diff(times) < 0)
+                    ):
+                        raise ValueError("Invalid sidecar measurements or timebase")
             except (ValueError, KeyError, OSError) as exc:
                 errors.append(f"{test['id']}: {exc}")
         for cid, cell in self.cells.items():
+            owned = set(
+                cell.get("ocp_record_ids", [])
+                + cell.get("parameter_ids", [])
+                + cell.get("full_cell_test_ids", [])
+            )
+            for component in cell.get("evidence_matrix", {}).values():
+                if any(sid not in self.sources for sid in component["source_ids"]):
+                    errors.append(f"cell {cid}: evidence matrix has unknown source")
+                if any(
+                    rid not in set(ids + parameter_ids + test_ids)
+                    for rid in component["record_ids"]
+                ):
+                    errors.append(f"cell {cid}: evidence matrix has unknown record")
+                elif not set(component["record_ids"]).issubset(owned):
+                    errors.append(f"cell {cid}: evidence matrix crosses cell ownership")
+            audit = self.matching_audit.get("cell_matches", {}).get(cid, {})
+            if audit.get("components") != cell.get("evidence_matrix") or audit.get(
+                "missing_items"
+            ) != cell.get("missing_items"):
+                errors.append(
+                    f"cell {cid}: matching audit disagrees with cell evidence"
+                )
             if any(pid not in parameter_ids for pid in cell.get("parameter_ids", [])):
                 errors.append(f"cell {cid}: unknown linked parameter")
             if any(

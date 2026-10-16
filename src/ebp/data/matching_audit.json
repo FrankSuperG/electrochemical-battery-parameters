@@ -1,0 +1,887 @@
+{
+  "checked_date": "2026-10-16",
+  "scope": "Imported sources and investigated leads; not an exhaustive claim about all available literature",
+  "cell_matches": {
+    "lg-m50": {
+      "display_name": "LG M50 | 5 Ah NMC811/graphite-SiOx",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "graphite-chen2020-formula",
+            "nmc811-lgm50-chen2020-formula"
+          ],
+          "source_ids": [
+            "chen-2020",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Both electrode OCP expressions available; effective graphite-SiOx negative and NMC811 positive",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "lgm50-negative-particle-diffusivity-m2-s-1",
+            "lgm50-positive-particle-diffusivity-m2-s-1"
+          ],
+          "source_ids": [
+            "chen-2020",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Two scalar particle diffusivities in upstream implementation",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "lgm50-negative-exchange-current-density",
+            "lgm50-positive-exchange-current-density"
+          ],
+          "source_ids": [
+            "chen-2020",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Two exchange-current density laws",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [
+            "chen-lgm50-cell02",
+            "chen-lgm50-cell03",
+            "chen-lgm50-cell04"
+          ],
+          "source_ids": [
+            "chen-validation-2020"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Three same-model validation samples",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [
+            "chen-lgm50-cell02",
+            "chen-lgm50-cell03",
+            "chen-lgm50-cell04"
+          ],
+          "source_ids": [
+            "chen-validation-2020"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "CCCV_charge_and_CC_discharge",
+          "missing_items": []
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed"
+      ]
+    },
+    "bpx-lfp-18650-2ah-undisclosed": {
+      "display_name": "Undisclosed LFP/graphite 18650, 2 Ah (BPX)",
+      "match_level": "unmatched",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "bpx-lfp18650-lfp-ocp",
+            "bpx-lfp18650-graphite-ocp"
+          ],
+          "source_ids": [
+            "bpx-lfp-2022"
+          ],
+          "match_level": "unmatched",
+          "evidence": "Two electrode OCP fits available",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "bpx-lfp18650-electrolyte-diffusivity-activation-energy-j-mol-1",
+            "bpx-lfp18650-negative-electrode-diffusivity-m2-s-1",
+            "bpx-lfp18650-negative-electrode-diffusivity-activation-energy-j-mol-1",
+            "bpx-lfp18650-positive-electrode-diffusivity-m2-s-1",
+            "bpx-lfp18650-positive-electrode-diffusivity-activation-energy-j-mol-1"
+          ],
+          "source_ids": [
+            "bpx-lfp-2022"
+          ],
+          "match_level": "unmatched",
+          "evidence": "Two particle diffusivities and activation energies available",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "bpx-lfp18650-negative-electrode-reaction-rate-constant-mol-m-2-s-1",
+            "bpx-lfp18650-negative-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+            "bpx-lfp18650-positive-electrode-reaction-rate-constant-mol-m-2-s-1",
+            "bpx-lfp18650-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1"
+          ],
+          "source_ids": [
+            "bpx-lfp-2022"
+          ],
+          "match_level": "unmatched",
+          "evidence": "BPX-defined rate constants; not exchange-current densities",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching raw full-cell tests supplied in the example",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Commercial part number unresolved",
+        "Matching full-cell charge/discharge observations not imported"
+      ]
+    },
+    "a123-amp20m1hd-a": {
+      "display_name": "A123 AMP20M1HD-A | 20 Ah LFP pouch",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "C/25 full-cell pseudo-OCV reported in Methods; no downloadable electrode-resolved OCP points located in the selected deposit",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "a123-amp20-shared-diffusion-time-soc30",
+            "a123-amp20-shared-diffusion-time-soc50",
+            "a123-amp20-shared-diffusion-time-soc70",
+            "a123-amp20-effective-diffusivity-soc30",
+            "a123-amp20-effective-diffusivity-soc50",
+            "a123-amp20-effective-diffusivity-soc70"
+          ],
+          "source_ids": [
+            "lin-2022-code",
+            "lin-2022-paper"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Fitted shared diffusion times at three SOCs; effective D derived using the model's assumed radius",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "a123-amp20-volumetric-exchange-current-soc30",
+            "a123-amp20-volumetric-exchange-current-soc50",
+            "a123-amp20-volumetric-exchange-current-soc70",
+            "a123-amp20-reaction-activation-energy-soc30",
+            "a123-amp20-reaction-activation-energy-soc50",
+            "a123-amp20-reaction-activation-energy-soc70"
+          ],
+          "source_ids": [
+            "lin-2022-paper"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Fitted volumetric exchange-current density and activation energy at three SOCs",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [
+            "a123-amp20-cell-i-4c"
+          ],
+          "source_ids": [
+            "lin-2022-data"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Cell I 4C full-discharge voltage/current/thermal grid available",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [
+            "a123-amp20-cell-i-4c"
+          ],
+          "source_ids": [
+            "lin-2022-data"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "constant_current_charge",
+          "missing_items": [
+            "Ambient temperature trace"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed"
+      ]
+    },
+    "a123-high-power-pouch-9ah": {
+      "display_name": "A123 high-power LFP pouch | 9 Ah | part undisclosed",
+      "match_level": "same_study_cell_family",
+      "components": {
+        "ocp": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "Full-cell pseudo-OCP referenced in the paper; electrode potentials are conventionally allocated, not electrode-resolved measurements",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "Fast-diffusion model assumption; no finite fitted diffusivity imported",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "Not transcribed in this release; raw tests do not uniquely identify electrode kinetic laws",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [
+            "a123-9ah-2c-ch",
+            "a123-9ah-2c-dch",
+            "a123-9ah-4c-ch",
+            "a123-9ah-4c-dch",
+            "a123-9ah-6c-ch",
+            "a123-9ah-6c-dch",
+            "a123-9ah-8c-ch",
+            "a123-9ah-8c-dch",
+            "a123-9ah-10c-ch",
+            "a123-9ah-10c-dch"
+          ],
+          "source_ids": [
+            "oxford-9ah-data"
+          ],
+          "match_level": "same_study_cell_family",
+          "evidence": "Ten CC charge/discharge files at 2, 4, 6, 8 and 10C",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [
+            "a123-9ah-2c-ch",
+            "a123-9ah-2c-dch",
+            "a123-9ah-4c-ch",
+            "a123-9ah-4c-dch",
+            "a123-9ah-6c-ch",
+            "a123-9ah-6c-dch",
+            "a123-9ah-8c-ch",
+            "a123-9ah-8c-dch",
+            "a123-9ah-10c-ch",
+            "a123-9ah-10c-dch"
+          ],
+          "source_ids": [
+            "oxford-9ah-data"
+          ],
+          "match_level": "same_study_cell_family",
+          "evidence": "constant_current_charge",
+          "missing_items": [
+            "Ambient temperature trace"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Commercial part number unresolved"
+      ]
+    },
+    "kokam-slpb78205130h-marquis2019": {
+      "display_name": "SLPB78205130H | LCO/graphite | 0.680616 Ah model input",
+      "match_level": "parameter_set_only",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "marquis2019-graphite-ocp",
+            "marquis2019-lco-ocp"
+          ],
+          "source_ids": [
+            "dualfoil-attribution",
+            "marquis-2019",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "borrowed_model_input",
+          "evidence": "Dualfoil1998 borrowed OCP implementation; no same-cell half-cell measurement match established",
+          "missing_items": [
+            "Same-cell measured values not established; borrowed functions retained"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "marquis2019-negative-diffusivity",
+            "marquis2019-positive-diffusivity"
+          ],
+          "source_ids": [
+            "dualfoil-attribution",
+            "marquis-2019",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "borrowed_model_input",
+          "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
+          "missing_items": [
+            "Same-cell measured values not established; borrowed functions retained"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "marquis2019-negative-exchange-current-density",
+            "marquis2019-positive-exchange-current-density"
+          ],
+          "source_ids": [
+            "dualfoil-attribution",
+            "marquis-2019",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "borrowed_model_input",
+          "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
+          "missing_items": [
+            "Same-cell measured values not established; borrowed functions retained"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching raw full-cell trace imported for this parameter set",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Matching full-cell charge/discharge observations not imported"
+      ]
+    },
+    "mohtat2020-nmc532-pouch": {
+      "display_name": "Mohtat2020 | NMC532/graphite | 5 Ah model input",
+      "match_level": "parameter_set_only",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "mohtat2020-graphite-ocp",
+            "mohtat2020-nmc532-ocp"
+          ],
+          "source_ids": [
+            "mohtat-2020",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "parameter_set_only",
+          "evidence": "Peyman MPM / Mohtat2020 implementation, as attributed by upstream function docstrings",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "mohtat2020-negative-diffusivity",
+            "mohtat2020-positive-diffusivity"
+          ],
+          "source_ids": [
+            "mohtat-2020",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "parameter_set_only",
+          "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "mohtat2020-negative-exchange-current-density",
+            "mohtat2020-positive-exchange-current-density"
+          ],
+          "source_ids": [
+            "mohtat-2020",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "parameter_set_only",
+          "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [
+            "mohtat-2020-data"
+          ],
+          "match_level": "missing",
+          "evidence": "Same-paper dataset DOI 10.7302/wwma-hx25 located; file access returned HTTP 403, so contents and model/protocol correspondence remain unverified. No trace imported.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Commercial part number unresolved",
+        "Matching full-cell charge/discharge observations not imported"
+      ]
+    },
+    "kim2011-nca-nominal-design": {
+      "display_name": "NCA_Kim2011 | NCA/graphite | 0.43 Ah model input",
+      "match_level": "unmatched",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "nca-kim2011-graphite-ocp",
+            "nca-kim2011-nca-ocp"
+          ],
+          "source_ids": [
+            "kim-2011",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "unmatched",
+          "evidence": "Kim2011 nominal-design implementation",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "nca-kim2011-negative-diffusivity",
+            "nca-kim2011-positive-diffusivity"
+          ],
+          "source_ids": [
+            "kim-2011",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "unmatched",
+          "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "nca-kim2011-negative-exchange-current-density",
+            "nca-kim2011-positive-exchange-current-density"
+          ],
+          "source_ids": [
+            "kim-2011",
+            "pybamm-25-4-2"
+          ],
+          "match_level": "unmatched",
+          "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching raw full-cell trace imported for this parameter set",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Commercial part number unresolved",
+        "Matching full-cell charge/discharge observations not imported"
+      ]
+    },
+    "kokam-slpb75106100-ecker2015": {
+      "display_name": "Kokam SLPB75106100 | 7.5 Ah NCO/graphite",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "ecker2015-graphite-ocp",
+            "ecker2015-nco-ocp"
+          ],
+          "source_ids": [
+            "ecker-2015-i",
+            "ecker-2015-ii",
+            "pybamm-25-4-2",
+            "richardson-2020"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Two upstream figure-fitted expressions; same model/study lineage",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "ecker2015-negative-diffusivity",
+            "ecker2015-positive-diffusivity"
+          ],
+          "source_ids": [
+            "ecker-2015-i",
+            "ecker-2015-ii",
+            "pybamm-25-4-2",
+            "richardson-2020"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Two stoichiometry/temperature diffusivity fits; Ecker/Richardson lineage",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "ecker2015-negative-exchange-current-density",
+            "ecker2015-positive-exchange-current-density"
+          ],
+          "source_ids": [
+            "ecker-2015-i",
+            "ecker-2015-ii",
+            "pybamm-25-4-2",
+            "richardson-2020"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Two concentration/temperature exchange-current laws; Ecker/Richardson lineage",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [
+            "ecker-kokam-1c-discharge",
+            "ecker-kokam-5c-discharge"
+          ],
+          "source_ids": [
+            "pybamm-data-1-0-2"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Two digitized CC discharges: 1C and 5C; time/voltage only",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [
+            "ecker-kokam-1c-discharge",
+            "ecker-kokam-5c-discharge"
+          ],
+          "source_ids": [
+            "pybamm-data-1-0-2"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "constant_current_discharge",
+          "missing_items": [
+            "Absolute measured temperature",
+            "Ambient temperature trace",
+            "Capacity channel",
+            "Charge trace",
+            "Exact specimen identifier",
+            "Measured current trace"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed"
+      ]
+    },
+    "enertech-lco-pouch-ai2020": {
+      "display_name": "Enertech | LCO/graphite | 2.28 Ah model input",
+      "match_level": "same_study_cell_family",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "ai2020-graphite-ocp",
+            "ai2020-lco-ocp"
+          ],
+          "source_ids": [
+            "ai-2020",
+            "pybamm-25-4-2",
+            "pybamm-data-1-0-2",
+            "rieger-2016"
+          ],
+          "match_level": "same_study_cell_family",
+          "evidence": "Two published OCP tables; negative synthetic extrapolation guard removed",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "ai2020-negative-diffusivity",
+            "ai2020-positive-diffusivity"
+          ],
+          "source_ids": [
+            "ai-2020",
+            "dualfoil-attribution",
+            "pybamm-25-4-2",
+            "rieger-2016"
+          ],
+          "match_level": "borrowed_model_input",
+          "evidence": "Two borrowed Dualfoil Arrhenius diffusivity functions; not same-cell measured D",
+          "missing_items": [
+            "Same-cell measured values not established; borrowed functions retained"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "ai2020-negative-exchange-current-density",
+            "ai2020-positive-exchange-current-density"
+          ],
+          "source_ids": [
+            "ai-2020",
+            "dualfoil-attribution",
+            "pybamm-25-4-2",
+            "rieger-2016"
+          ],
+          "match_level": "borrowed_model_input",
+          "evidence": "Two borrowed Dualfoil exchange-current laws; not same-cell measured kinetics",
+          "missing_items": [
+            "Same-cell measured values not established; borrowed functions retained"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [
+            "enertech-0p1c-discharge",
+            "enertech-0p5c-discharge",
+            "enertech-1c-discharge",
+            "enertech-2c-discharge"
+          ],
+          "source_ids": [
+            "pybamm-data-1-0-2"
+          ],
+          "match_level": "same_study_cell_family",
+          "evidence": "Four experimental voltage series: 0.1/0.5/1/2C; three separate temperature-rise sidecars; measured current absent",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [
+            "enertech-0p1c-discharge",
+            "enertech-0p5c-discharge",
+            "enertech-1c-discharge",
+            "enertech-2c-discharge"
+          ],
+          "source_ids": [
+            "pybamm-data-1-0-2"
+          ],
+          "match_level": "same_study_cell_family",
+          "evidence": "constant_current_discharge",
+          "missing_items": [
+            "Absolute measured temperature",
+            "Ambient temperature trace",
+            "Capacity channel",
+            "Charge trace",
+            "Exact specimen identifier",
+            "Measured current trace"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Commercial part number unresolved"
+      ]
+    }
+  },
+  "unmatched_material_records": [
+    {
+      "material": "LFP",
+      "record_ids": [
+        "lfp-afshar2017-formula",
+        "sintef-lfp-d07eb6-c3-delithiation",
+        "sintef-lfp-d07eb6-c3-lithiation",
+        "sintef-lfp-178617-c3-delithiation",
+        "sintef-lfp-178617-c3-lithiation"
+      ],
+      "match_level": "material_only",
+      "missing_items": [
+        "Commercial full-cell identity",
+        "Same-cell full-cell CC charge/discharge trace",
+        "Same-cell diffusion and kinetic measurements"
+      ]
+    },
+    {
+      "material": "LNMO",
+      "record_ids": [
+        "sintef-lnmo-59ceaa-c3-delithiation",
+        "sintef-lnmo-59ceaa-c3-lithiation",
+        "sintef-lnmo-f9bf3e-c3-delithiation",
+        "sintef-lnmo-f9bf3e-c3-lithiation"
+      ],
+      "match_level": "material_only",
+      "missing_items": [
+        "Commercial full-cell identity",
+        "Same-cell full-cell CC charge/discharge trace",
+        "Same-cell diffusion and kinetic measurements"
+      ]
+    },
+    {
+      "material": "NMC111",
+      "record_ids": [
+        "sintef-nmc111-9d3ce5-c3-delithiation",
+        "sintef-nmc111-9d3ce5-c3-lithiation",
+        "sintef-nmc111-6115bb-c3-delithiation",
+        "sintef-nmc111-6115bb-c3-lithiation"
+      ],
+      "match_level": "material_only",
+      "missing_items": [
+        "Commercial full-cell identity",
+        "Same-cell full-cell CC charge/discharge trace",
+        "Same-cell diffusion and kinetic measurements"
+      ]
+    },
+    {
+      "material": "NMC532",
+      "record_ids": [
+        "sintef-nmc532-2a2be3-c3-delithiation",
+        "sintef-nmc532-2a2be3-c3-lithiation",
+        "sintef-nmc532-ee86d1-c3-delithiation",
+        "sintef-nmc532-ee86d1-c3-lithiation"
+      ],
+      "match_level": "material_only",
+      "missing_items": [
+        "Commercial full-cell identity",
+        "Same-cell full-cell CC charge/discharge trace",
+        "Same-cell diffusion and kinetic measurements"
+      ]
+    },
+    {
+      "material": "graphite",
+      "record_ids": [
+        "sintef-graphite-1d5628-c3-lithiation",
+        "sintef-graphite-1d5628-c3-delithiation",
+        "sintef-graphite-4ccc47-c3-lithiation",
+        "sintef-graphite-4ccc47-c3-delithiation"
+      ],
+      "match_level": "material_only",
+      "missing_items": [
+        "Commercial full-cell identity",
+        "Same-cell full-cell CC charge/discharge trace",
+        "Same-cell diffusion and kinetic measurements"
+      ]
+    },
+    {
+      "material": "silicon",
+      "record_ids": [
+        "sintef-silicon-931301-c3-lithiation",
+        "sintef-silicon-931301-c3-delithiation",
+        "sintef-silicon-2c4b6a-c3-lithiation",
+        "sintef-silicon-2c4b6a-c3-delithiation"
+      ],
+      "match_level": "material_only",
+      "missing_items": [
+        "Commercial full-cell identity",
+        "Same-cell full-cell CC charge/discharge trace",
+        "Same-cell diffusion and kinetic measurements"
+      ]
+    },
+    {
+      "material": "silicon-graphite",
+      "record_ids": [
+        "sintef-silicon-graphite-70e745-c3-lithiation",
+        "sintef-silicon-graphite-70e745-c3-delithiation",
+        "sintef-silicon-graphite-1c492a-c3-lithiation",
+        "sintef-silicon-graphite-1c492a-c3-delithiation",
+        "sintef-silicon-graphite-f4569b-c3-lithiation",
+        "sintef-silicon-graphite-f4569b-c3-delithiation",
+        "sintef-silicon-graphite-0cf06a-c3-lithiation",
+        "sintef-silicon-graphite-0cf06a-c3-delithiation"
+      ],
+      "match_level": "material_only",
+      "missing_items": [
+        "Commercial full-cell identity",
+        "Same-cell full-cell CC charge/discharge trace",
+        "Same-cell diffusion and kinetic measurements"
+      ]
+    }
+  ],
+  "research_leads": [
+    {
+      "source_id": "mohtat-2020-data",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "status": "same_paper_dataset_located; files_not_imported",
+      "doi": "10.7302/wwma-hx25",
+      "metadata_url": "https://api.datacite.org/dois/10.7302/wwma-hx25",
+      "evidence": "DataCite lists paper DOI 10.1149/1945-7111/aba5d1 as IsReferencedBy and CC BY 4.0. It describes recorded voltage, current, temperature and expansion.",
+      "access_result": "HTTP 403 from landing page and two public file endpoints on 2026-10-16",
+      "missing_items": [
+        "File bytes and checksums",
+        "Per-file protocol",
+        "Column units/current convention",
+        "Commercial part and specimen mapping"
+      ]
+    }
+  ],
+  "rejected_joins": [
+    "SINTEF NMC532 half-cells are not assigned to the Mohtat pouch based on chemistry.",
+    "Enertech LCO observations are not assigned to Kokam SLPB78205130H / Marquis2019.",
+    "Kokam SLPB75106100 / Ecker2015 and SLPB78205130H / Marquis2019 are distinct models.",
+    "COMSOL outputs and drive-cycle input profiles are not counted as measured full-cell observations."
+  ]
+}

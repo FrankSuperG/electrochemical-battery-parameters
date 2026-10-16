@@ -10,3 +10,6 @@ site/
 .DS_Store
 .playwright-cli/
 output/playwright/
+
+# Temporary source tree created while building the sdist/wheel.
+/electrochemical_battery_parameters-*/

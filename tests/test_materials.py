@@ -25,10 +25,11 @@ def test_material_families_specimens_and_cell_associations():
         "silicon-graphite",
         "LCO",
         "NCA",
+        "NCO",
     }
-    assert len(c.search()) == 43
+    assert len(c.search()) == 47
     assert len(c.experiments) == 16
-    assert len(c.search(representation="table")) == 32
+    assert len(c.search(representation="table")) == 34
     for material, role in [
         ("NMC111", "positive"),
         ("NMC532", "positive"),

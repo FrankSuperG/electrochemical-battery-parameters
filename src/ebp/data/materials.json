@@ -77,5 +77,21 @@
   "nca-kim2011-nca-ocp-material": {
     "chemistry": "NCA",
     "description": "Kim2011 nominal-design implementation; A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned."
+  },
+  "ecker2015-graphite-ocp-material": {
+    "chemistry": "graphite",
+    "description": "Kokam SLPB75106100, Ecker2015 study; electrode fits and digitized whole-cell curves share a model/study lineage, not a proven identical specimen."
+  },
+  "ecker2015-nco-ocp-material": {
+    "chemistry": "NCO",
+    "description": "Kokam SLPB75106100, Ecker2015 study; electrode fits and digitized whole-cell curves share a model/study lineage, not a proven identical specimen."
+  },
+  "ai2020-graphite-ocp-material": {
+    "chemistry": "graphite",
+    "description": "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved."
+  },
+  "ai2020-lco-ocp-material": {
+    "chemistry": "LCO",
+    "description": "Enertech pouch family in Ai2020/Rieger2016; commercial part number and exact specimen correspondence unresolved."
   }
 }

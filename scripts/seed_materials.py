@@ -20,6 +20,7 @@ from seed_v01 import CACHE, DATA, ROOT, base_record, obtain, write_json
 from seed_lgm50 import KEYS
 
 R = 8.314462618
+F = 96485.33212331001
 SETS = [
     {
         "name": "Marquis2019",
@@ -82,6 +83,11 @@ class MathTranscriber:
             and ast.unparse(node) == "pybamm.constants.R"
         ):
             return ast.Constant(R)
+        if (
+            isinstance(node, ast.Attribute)
+            and ast.unparse(node) == "pybamm.constants.F"
+        ):
+            return ast.Constant(F)
         if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.USub, ast.UAdd)):
             operand = self.resolve(node.operand)
             if isinstance(operand, ast.Constant):

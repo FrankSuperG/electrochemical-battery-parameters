@@ -213,7 +213,11 @@
         "row_count",
         "columns",
         "discharge_segments",
-        "format"
+        "format",
+        "basic_test",
+        "channel_availability",
+        "observation_kind",
+        "missing_items"
       ],
       "properties": {
         "id": {
@@ -247,7 +251,10 @@
           "pattern": "^[a-f0-9]{64}$"
         },
         "license": {
-          "const": "CC-BY-4.0"
+          "enum": [
+            "CC-BY-4.0",
+            "BSD-3-Clause"
+          ]
         },
         "relationship_to_parameters": {
           "enum": [
@@ -269,6 +276,105 @@
         "discharge_segments": {
           "type": "array",
           "minItems": 0
+        },
+        "observation_kind": {
+          "enum": [
+            "instrument_series",
+            "published_figure_digitization",
+            "published_experimental_series"
+          ]
+        },
+        "basic_test": {
+          "type": "object",
+          "required": [
+            "type",
+            "current_measurement",
+            "charge_trace",
+            "voltage_trace"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "constant_current_discharge",
+                "constant_current_charge",
+                "CCCV_charge_and_CC_discharge"
+              ]
+            },
+            "nominal_C_rate": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "current_measurement": {
+              "type": "string"
+            }
+          }
+        },
+        "channel_availability": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "present_rows",
+              "total_rows"
+            ],
+            "properties": {
+              "present_rows": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "total_rows": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        },
+        "missing_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "original_download_path": {
+          "type": "string",
+          "pattern": "^evidence/[A-Za-z0-9._-]+\\.(csv|txt)$"
+        },
+        "sidecars": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "kind",
+              "path",
+              "sha256",
+              "asset_id",
+              "original_download_path",
+              "row_count",
+              "unit",
+              "relationship",
+              "processing"
+            ],
+            "properties": {
+              "kind": {
+                "const": "temperature_rise"
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^full_cell/[A-Za-z0-9._-]+\\.csv$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "row_count": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "unit": {
+                "const": "K"
+              }
+            }
+          }
         }
       }
     }

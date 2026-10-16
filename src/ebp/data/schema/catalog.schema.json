@@ -75,7 +75,8 @@
             "silicon",
             "silicon-graphite",
             "LCO",
-            "NCA"
+            "NCA",
+            "NCO"
           ]
         },
         "material_id": {
@@ -97,7 +98,8 @@
         "measurement": {
           "enum": [
             "pseudo_ocp",
-            "literature_formula"
+            "literature_formula",
+            "literature_table"
           ]
         },
         "temperature": {
@@ -340,7 +342,8 @@
             "raw_data": {
               "enum": [
                 "not_deposited_with_formula",
-                "external_checksum_pinned"
+                "external_checksum_pinned",
+                "published_table_not_instrument_raw"
               ]
             },
             "model_status": {

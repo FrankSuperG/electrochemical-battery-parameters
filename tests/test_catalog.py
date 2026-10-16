@@ -19,8 +19,8 @@ def catalog():
 def test_complete_catalog_and_link_integrity(catalog):
     assert catalog.validate() == []
     assert len(catalog.search(material="LFP")) == 6
-    assert len(catalog.search(material="graphite")) == 9
-    assert len(catalog.search(representation="table")) == 32
+    assert len(catalog.search(material="graphite")) == 11
+    assert len(catalog.search(representation="table")) == 34
     assert len(catalog.search_parameters(cell_id="lg-m50")) == 38
     assert len(catalog.linked_tests("lg-m50")) == 3
     assert all(
@@ -33,6 +33,8 @@ def test_provenance_does_not_conflate_paper_software_or_cell(catalog):
     assert lfp["source_ids"] == ["afshar-2017", "pybamm-25-4-2"]
     assert lfp["cell_link"]["cell_id"] is None
     for curve in catalog.search(representation="table"):
+        if not curve.id.startswith("sintef-"):
+            continue
         assert curve.record["x"]["kind"] == "normalized_branch_capacity"
         assert curve.record["temperature"]["value_K"] is None
         assert curve.record["cell_link"]["relationship"] == "material_only"

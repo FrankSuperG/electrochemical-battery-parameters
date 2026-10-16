@@ -67,6 +67,7 @@ def build_site(catalog, output):
         )
 
     records = []
+    write_json("matching-audit.json", catalog.matching_audit)
     for curve in catalog.search():
         record = copy.deepcopy(curve.record)
         x, y = curve.sample(801)
@@ -104,6 +105,7 @@ def build_site(catalog, output):
         asset_ids = {p["provenance"]["asset_id"] for p in parameters}
         asset_ids.update(aid for r in ocp for aid in r["provenance"]["asset_ids"])
         asset_ids.update(t["asset_id"] for t in tests)
+        asset_ids.update(s["asset_id"] for t in tests for s in t.get("sidecars", []))
         write_json(
             f"{cid}-parameters.json",
             {
@@ -171,6 +173,16 @@ def build_site(catalog, output):
                 (downloads / Path(relative).name).write_bytes(
                     (catalog.root / relative).read_bytes()
                 )
+        extra = [test.get("original_download_path")]
+        extra.extend(
+            p
+            for s in test.get("sidecars", [])
+            for p in [s["path"], s["original_download_path"]]
+        )
+        for relative in filter(None, extra):
+            (downloads / Path(relative).name).write_bytes(
+                (catalog.root / relative).read_bytes()
+            )
         test["preview_segments"] = _preview(
             test, catalog.full_cell_data(test["id"], normalized=True)
         )

@@ -10,9 +10,9 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
     build_site(c, tmp_path)
     script = (tmp_path / "catalog.js").read_text()
     data = json.loads(script.removeprefix("window.EBP_DATA = ").removesuffix(";\n"))
-    assert len(data["records"]) == 43
-    assert len(data["parameters"]) == 228
-    assert len(data["full_cell_tests"]) == 14
+    assert len(data["records"]) == 47
+    assert len(data["parameters"]) == 304
+    assert len(data["full_cell_tests"]) == 20
     for record in data["records"]:
         downloaded = json.loads(
             (tmp_path / "downloads" / f"{record['id']}.json").read_text()
@@ -29,6 +29,18 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
         assert all(r["cell_link"]["cell_id"] == cid for r in package["ocp_records"])
         assert not package["independent_full_cell_validation"]
     for test in data["full_cell_tests"]:
+        for relative in filter(
+            None,
+            [test.get("original_download_path")]
+            + [
+                path
+                for side in test.get("sidecars", [])
+                for path in [side["path"], side["original_download_path"]]
+            ],
+        ):
+            assert (tmp_path / "downloads" / relative.split("/")[-1]).read_bytes() == (
+                c.root / relative
+            ).read_bytes()
         assert len(test["preview_segments"]) == (
             4 if test["cell_id"] == "lg-m50" else 1
         )
@@ -45,10 +57,15 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
         assert "cdn." not in source
         assert not re.search(r"[\u4e00-\u9fff]", source)
     assert '<html lang="en">' in (tmp_path / "index.html").read_text()
+    assert (
+        json.loads((tmp_path / "downloads/matching-audit.json").read_text())
+        == c.matching_audit
+    )
     for name in [
         "PyBaMM-BSD-3-Clause.txt",
         "CC-BY-4.0.txt",
         "BPX-MIT.txt",
+        "PyBaMM-data-BSD-3-Clause.txt",
         "Oxford-BSD-2-Clause.txt",
     ]:
         assert (tmp_path / "licenses" / name).exists()

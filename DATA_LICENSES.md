@@ -110,3 +110,31 @@ AST-local substitution and constant folding preserve the source math; the gas
 constant is fixed for portable evaluation. Source reference parameters used by
 Kim kinetics are resolved from that same pinned parameter set. Native measured
 points are not claimed for any implementation expression or its generated CSV.
+
+## Matched full-cell expansion in v0.4
+
+`Ecker2015.py` and `Ai2020.py` inputs retain the existing PyBaMM v25.4.2
+BSD-3-Clause notice. Ecker scientific attribution is Ecker2015 I/II and
+Richardson2020 / Simon O'Kane; Enertech attribution is Ai2020 and Rieger2016.
+Borrowed Dualfoil diffusion/kinetics remain labeled for Ai2020. AST substitutions
+fix R=8.314462618 J/mol/K and F=96485.33212331001 C/mol.
+
+The six new voltage files, three temperature-rise channels and two published
+Enertech OCP tables are redistributed by the PyBaMM team in
+https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.2 under BSD-3-Clause.
+Its separate Copyright (c) 2024, PyBaMM Team notice is preserved verbatim in
+`src/ebp/licenses/PyBaMM-data-BSD-3-Clause.txt`. Scientific authors and the
+figure-history chain are recorded in `docs/FULL_CELL_MATCHING.md`.
+
+Changes: original time/voltage and temperature-rise files are copied byte-for-byte
+to `data/evidence/`. Normalized CSVs retain all numeric source pairs and row order
+with one-based source positions; unavailable current and absolute temperatures
+stay empty. Temperature rise stays in separate native-clock sidecars, without
+interpolation, synchronization or assumed ambient temperature. Ecker points are
+upstream figure digitizations, not instrument raw. Enertech tables omit comments
+and the explicitly synthetic negative-OCP `(0,3.5)` guard; all other numeric points
+and source line references are retained. No smoothing or extrapolation is added.
+
+The Mohtat DOI is indexed as a lead only. DataCite declares CC BY 4.0; no dataset
+files are redistributed because access was unavailable. Source authors have not
+endorsed this project.

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the scientific sources of each record and upstream software implementations as appropriate; this citation describes the catalog software."
 title: "Electrochemical Battery Parameters"
 type: software
-version: 0.3.0
+version: 0.4.0
 date-released: 2026-10-16
 authors:
   - name: FrankSuperG

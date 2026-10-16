@@ -298,5 +298,112 @@
     "sha256": "89c2acb9533912c54492063dad111c5feeff57402d8130f6b153f9f67d8df835",
     "source_id": "pybamm-25-4-2",
     "license": "BSD-3-Clause"
+  },
+  "pybamm-data-ecker-1c-csv": {
+    "filename": "Ecker_1C.csv",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/Ecker_1C.csv",
+    "sha256": "428dc5113a6430492f430fb9e895f67d3e20f5643dc49a1cc0a922b92a5a8e01",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/Ecker_1C.csv"
+  },
+  "pybamm-data-ecker-5c-csv": {
+    "filename": "Ecker_5C.csv",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/Ecker_5C.csv",
+    "sha256": "a89f8bf6e305b2a4195e1fae5e803277a40ed7557d263ef726f621803dcbb495",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/Ecker_5C.csv"
+  },
+  "pybamm-data-0-1c-discharge-u-txt": {
+    "filename": "0.1C_discharge_U.txt",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/0.1C_discharge_U.txt",
+    "sha256": "7b9fcd137441eea4ab686faee8d57fe242c5544400939ef358ccd99c63c9579d",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/0.1C_discharge_U.txt"
+  },
+  "pybamm-data-0-5c-discharge-u-txt": {
+    "filename": "0.5C_discharge_U.txt",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/0.5C_discharge_U.txt",
+    "sha256": "9ed8368b2c6149d2a69218e7df6aaade2511c9f7f6fc7932cda153d9a3a10f39",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/0.5C_discharge_U.txt"
+  },
+  "pybamm-data-1c-discharge-u-txt": {
+    "filename": "1C_discharge_U.txt",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/1C_discharge_U.txt",
+    "sha256": "8fc19de45172215d65c56522c224e6fc700ee443db236b814238a829b7a14c3a",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/1C_discharge_U.txt"
+  },
+  "pybamm-data-2c-discharge-u-txt": {
+    "filename": "2C_discharge_U.txt",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/2C_discharge_U.txt",
+    "sha256": "7b3c24b5e6df377075002abc2f62bab7c88b27d826812ba5a4c8385a1a12e723",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/2C_discharge_U.txt"
+  },
+  "pybamm-data-0-5c-discharge-t-txt": {
+    "filename": "0.5C_discharge_T.txt",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/0.5C_discharge_T.txt",
+    "sha256": "2140b2f6bd698135d09a25b1f04c271d35a3a02999ace118b10389e01defa2ae",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/0.5C_discharge_T.txt"
+  },
+  "pybamm-data-1c-discharge-t-txt": {
+    "filename": "1C_discharge_T.txt",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/1C_discharge_T.txt",
+    "sha256": "97308dfd7f7dd6c434e30f6c00fb6707c43c963855bb0800e0336809d5cc3756",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/1C_discharge_T.txt"
+  },
+  "pybamm-data-2c-discharge-t-txt": {
+    "filename": "2C_discharge_T.txt",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/2C_discharge_T.txt",
+    "sha256": "4bd688fb7653539701fe3df61857474b4d54e8b142c84fdc4c8b92b9573fa5d0",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2",
+    "path": "evidence/2C_discharge_T.txt"
+  },
+  "pybamm-data-graphite-ocp-enertech-ai2020-csv": {
+    "filename": "graphite_ocp_Enertech_Ai2020.csv",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/graphite_ocp_Enertech_Ai2020.csv",
+    "sha256": "a338d120551d2758532785f2d0a7196ca7df6180060eb47444a22f37e4e1ccda",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2"
+  },
+  "pybamm-data-lico2-ocp-ai2020-csv": {
+    "filename": "lico2_ocp_Ai2020.csv",
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/download/v1.0.2/lico2_ocp_Ai2020.csv",
+    "sha256": "d4c2be795e118fa46fe6cab88d652de92a09e1f2231951f208f92fe0b5e4c426",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2"
+  },
+  "pybamm-ai2020-code": {
+    "filename": "Ai2020-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ai2020.py",
+    "sha256": "02b1c3edb2217154ae0b525a132b12fe8cb2c4718465ff4eecdcf0188830ef20",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-25-4-2"
+  },
+  "pybamm-ecker2015-code": {
+    "filename": "Ecker2015-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ecker2015.py",
+    "sha256": "d8a1cfd49b4956c5af2d1ca5c7f1f3e507c20821591b2084cf6a1bf595d77d92",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-25-4-2"
+  },
+  "pybamm-data-license": {
+    "filename": "pybamm-data-LICENSE",
+    "url": "https://raw.githubusercontent.com/pybamm-team/pybamm-data/bed4e1b816afb4ec11e49fabef0d5996ff0a31e5/LICENSE",
+    "sha256": "30a183d0bc4e024522fb5018762d93995f6ed7a9ff4540941fca460157ea9424",
+    "license": "BSD-3-Clause",
+    "source_id": "pybamm-data-1-0-2"
   }
 }

@@ -38,7 +38,7 @@
     "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
     "version": "v25.4.2",
     "license": "BSD-3-Clause",
-    "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020."
+    "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
   },
   "sintef-2026-v3": {
     "kind": "dataset",
@@ -185,13 +185,13 @@
   },
   "dualfoil-attribution": {
     "kind": "software",
-    "title": "Dualfoil electrode functions, as attributed by PyBaMM Marquis2019",
+    "title": "Dualfoil electrode functions, as attributed by PyBaMM Marquis2019 and Ai2020",
     "authors": [
       "John Newman / Dualfoil developers"
     ],
     "year": 1998,
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
-    "role": "Scientific/code origin named in upstream function docstrings. This URL identifies the checked redistributable PyBaMM transcription, not a separately audited Dualfoil release or original measurement deposit."
+    "role": "Borrowed mathematical function origin named in upstream modules; no same-cell measurement origin inferred."
   },
   "mohtat-2020": {
     "kind": "paper",
@@ -222,5 +222,106 @@
     "doi": "10.1149/1.3597614",
     "url": "https://doi.org/10.1149/1.3597614",
     "role": "Nominal-design graphite/NCA parameter attribution. Commercial identity and matching raw full-cell data are unresolved. Thermal inputs in the implementation include borrowed/scaled Marquis values."
+  },
+  "pybamm-data-1-0-2": {
+    "kind": "dataset",
+    "title": "PyBaMM experimental data release v1.0.2",
+    "authors": [
+      "PyBaMM team; original experimental authors named per study"
+    ],
+    "year": 2026,
+    "url": "https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.2",
+    "license": "BSD-3-Clause",
+    "role": "Versioned redistribution. Experimental origins and figure-digitization history are documented in v1.0.0 release notes; v1.0.2 hashes match those files.",
+    "provenance_url": "https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0",
+    "license_url": "https://github.com/pybamm-team/pybamm-data/blob/bed4e1b816afb4ec11e49fabef0d5996ff0a31e5/LICENSE"
+  },
+  "ecker-2015-i": {
+    "kind": "paper",
+    "title": "Parameterization of a Physico-Chemical Model of a Lithium-Ion Battery: I. Determination of Parameters",
+    "authors": [
+      "Madeleine Ecker",
+      "Thi Kim Dung Tran",
+      "Philipp Dechent",
+      "Stefan Kabitz",
+      "Alexander Warnecke",
+      "Dirk Uwe Sauer"
+    ],
+    "year": 2015,
+    "doi": "10.1149/2.0551509jes",
+    "url": "https://doi.org/10.1149/2.0551509jes",
+    "role": "7.5 Ah Kokam SLPB75106100 electrochemical characterization; model/fit lineage, not identical-specimen proof."
+  },
+  "ecker-2015-ii": {
+    "kind": "paper",
+    "title": "Parameterization of a Physico-Chemical Model of a Lithium-Ion Battery: II. Model Validation",
+    "authors": [
+      "Madeleine Ecker",
+      "Stefan Kabitz",
+      "Izaro Laresgoiti",
+      "Dirk Uwe Sauer"
+    ],
+    "year": 2015,
+    "doi": "10.1149/2.0541509jes",
+    "url": "https://doi.org/10.1149/2.0541509jes",
+    "role": "Experimental origin attributed by PyBaMM's release notes for the digitized 1C/5C curves."
+  },
+  "richardson-2020": {
+    "kind": "paper",
+    "title": "Generalised single particle models for high-rate operation of graded lithium-ion electrodes: Systematic derivation and validation",
+    "authors": [
+      "Giles Richardson",
+      "Ivan Korotkin",
+      "Rahifa Ranom",
+      "Michael Castle",
+      "Jamie M. Foster"
+    ],
+    "year": 2020,
+    "doi": "10.1016/j.electacta.2020.135862",
+    "url": "https://doi.org/10.1016/j.electacta.2020.135862",
+    "role": "Figure 8 was digitized by upstream for the Ecker test files; fits supplied by Simon O'Kane are used in Ecker2015.py."
+  },
+  "ai-2020": {
+    "kind": "paper",
+    "title": "Electrochemical Thermal-Mechanical Modelling of Stress Inhomogeneity in Lithium-Ion Pouch Cells",
+    "authors": [
+      "Weilong Ai",
+      "Ludwig Kraft",
+      "Johannes Sturm",
+      "Andreas Jossen",
+      "Billy Wu"
+    ],
+    "year": 2020,
+    "doi": "10.1149/2.0122001JES",
+    "url": "https://doi.org/10.1149/2.0122001JES",
+    "role": "Enertech pouch model; validates against Rieger observations. Diffusion/kinetics borrowing remains explicit."
+  },
+  "rieger-2016": {
+    "kind": "paper",
+    "title": "A new method to model the thickness change of a commercial pouch cell during discharge",
+    "authors": [
+      "Bernhard Rieger",
+      "Simon V. Erhard",
+      "Katharina Rumpf",
+      "Andreas Jossen"
+    ],
+    "year": 2016,
+    "doi": "10.1149/2.0441608jes",
+    "url": "https://doi.org/10.1149/2.0441608jes",
+    "role": "Experimental origin named by Ai2020 and official PyBaMM data notes; part number not independently verified."
+  },
+  "mohtat-2020-data": {
+    "kind": "dataset",
+    "title": "UofM pouch cell voltage and expansion dataset and modeling code",
+    "authors": [
+      "Peyman Mohtat",
+      "Jason B. Siegel",
+      "Anna G. Stefanopoulou"
+    ],
+    "year": 2020,
+    "doi": "10.7302/wwma-hx25",
+    "url": "https://doi.org/10.7302/wwma-hx25",
+    "license": "CC-BY-4.0",
+    "role": "DataCite explicitly links the Mohtat2020 paper. Public landing page and listed file downloads returned HTTP 403 during this audit; file contents and cell/protocol mapping unverified, so no test imported."
   }
 }

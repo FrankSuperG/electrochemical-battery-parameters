@@ -32,3 +32,14 @@
 6. Add uncertainty only when supported by repeated observations or published estimates.
 
 Public hosting, PyPI publication and automated parameter identification remain separate future decisions. Current cell packages are partial data collections, not validated plug-and-play models.
+
+## v0.4 follow-up gaps
+
+- Retrieve and inspect the explicitly same-paper Mohtat voltage/expansion deposit
+  when public file access works; verify each file's units, protocol and specimen.
+- Seek electrode-specific OCP and current-resolved baseline tests for the existing
+  LFP entries without converting fitted/assumed quantities into measurements.
+- Resolve Enertech commercial identity and seek original current/charge records;
+  keep borrowed Dualfoil inputs separate from same-cell characterized quantities.
+- Locate same-study full-cell observations for SINTEF material specimens, the
+  nominal NCA design and Marquis context; do not join solely by chemistry.

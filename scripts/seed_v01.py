@@ -478,6 +478,9 @@ def main(download=False):
     from seed_materials import extend as extend_materials
 
     extend_materials(download=download)
+    from seed_fullcell import extend as extend_fullcell
+
+    extend_fullcell(download=download)
 
 
 if __name__ == "__main__":

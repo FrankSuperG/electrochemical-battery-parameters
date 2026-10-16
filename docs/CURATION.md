@@ -55,3 +55,24 @@ The pinned Marquis2019, Mohtat2020 and NCA_Kim2011 files each contribute two OCP
 Marquis2019 names a Kokam SLPB78205130H configuration but attributes electrode OCP, diffusion and kinetics to Dualfoil. These are borrowed implementation functions, not direct measurements on that commercial specimen. Mohtat2020 identifies a graphite/NMC532 pouch configuration; an exact commercial part and matching raw trace are not established here. A Deep Blue discovery endpoint returned HTTP 403, so unread model/data files were not imported as experiments. Kim2011 is explicitly a nominal NCA/graphite design; thermal properties include borrowed and scaled Marquis inputs. The source positive OCP docstring's Graphite label is retained as a source issue; the dictionary association and set context identify NCA.
 
 All new parameter packages retain raw-test coverage gaps. NMC532 chemistry alone does not associate the Mohtat model with SINTEF half-cells. LNMO is a distinct material from LMO. No LMO or LTO curve is fabricated to complete a list of chemistries; these remain discovery priorities. The new source files and checksums are pinned in `scripts/material_assets.json`.
+
+## Full-cell association audit in v0.4
+
+`scripts/seed_fullcell.py` adds two identified implementation contexts and six
+voltage series from pinned PyBaMM data v1.0.2. Same-model joins require explicit
+model/study evidence; Enertech remains a study-family join with an unresolved
+part number. Same-material SINTEF electrodes remain unassigned. Ecker figures
+and published Enertech tables have distinct observation types from instrument
+records. C-rate metadata never manufactures a measured-current trace.
+
+Ecker commercial 7.5 Ah and implementation 0.15625 Ah capacities are both kept.
+Borrowed Ecker thermal properties and Enertech Dualfoil D/kinetics remain visible.
+AST transcriptions resolve only numeric constants, including Faraday's constant;
+no upstream Python is executed by the importer. Original source files and native
+numeric rows are checked independently in tests. Temperature-rise sidecars retain
+separate clocks without resampling or assumed ambient temperature.
+
+The Mohtat same-paper dataset DOI is a verified metadata lead, not imported data:
+HTTP 403 prevented file inspection. The component evidence matrix records missing
+items and source IDs. Full decisions and citations are in
+[FULL_CELL_MATCHING.md](FULL_CELL_MATCHING.md).

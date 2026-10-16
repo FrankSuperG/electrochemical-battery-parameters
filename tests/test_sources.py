@@ -41,6 +41,8 @@ def test_every_retained_ocp_voltage_matches_source_row():
     pd = pytest.importorskip("pandas")
     catalog = Catalog()
     for curve in catalog.search(representation="table"):
+        if not curve.id.startswith("sintef-"):
+            continue
         asset = catalog.assets[curve.record["provenance"]["asset_ids"][0]]
         path = CACHE / asset["filename"]
         if not path.exists():

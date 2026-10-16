@@ -72,7 +72,34 @@
           "points": 146
         }
       ],
-      "format": "original CSV + explicitly normalized CSV"
+      "format": "original CSV + explicitly normalized CSV",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        },
+        "cell_temperature_K": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        },
+        "ambient_temperature_K": {
+          "present_rows": 6313,
+          "total_rows": 6313
+        }
+      },
+      "basic_test": {
+        "type": "CCCV_charge_and_CC_discharge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": []
     },
     {
       "id": "chen-lgm50-cell03",
@@ -145,7 +172,34 @@
           "points": 148
         }
       ],
-      "format": "original CSV + explicitly normalized CSV"
+      "format": "original CSV + explicitly normalized CSV",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        },
+        "cell_temperature_K": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        },
+        "ambient_temperature_K": {
+          "present_rows": 6315,
+          "total_rows": 6315
+        }
+      },
+      "basic_test": {
+        "type": "CCCV_charge_and_CC_discharge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": []
     },
     {
       "id": "chen-lgm50-cell04",
@@ -218,7 +272,34 @@
           "points": 148
         }
       ],
-      "format": "original CSV + explicitly normalized CSV"
+      "format": "original CSV + explicitly normalized CSV",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        },
+        "cell_temperature_K": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        },
+        "ambient_temperature_K": {
+          "present_rows": 6307,
+          "total_rows": 6307
+        }
+      },
+      "basic_test": {
+        "type": "CCCV_charge_and_CC_discharge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "CCCV charge; CC discharge at C/10, C/2, 1C and 1.5C (source description)"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": []
     },
     {
       "id": "a123-amp20-cell-i-4c",
@@ -260,7 +341,36 @@
           "points": 826
         }
       ],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 827,
+          "total_rows": 827
+        },
+        "current_charge_positive_A": {
+          "present_rows": 827,
+          "total_rows": 827
+        },
+        "cell_temperature_K": {
+          "present_rows": 827,
+          "total_rows": 827
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 827
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "4C full discharge after CCCV charging and 1 h rest; 1 Hz source timebase"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-2c-ch",
@@ -294,7 +404,36 @@
         "cell_temperature_K"
       ],
       "discharge_segments": [],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1810,
+          "total_rows": 1810
+        },
+        "current_charge_positive_A": {
+          "present_rows": 1810,
+          "total_rows": 1810
+        },
+        "cell_temperature_K": {
+          "present_rows": 1810,
+          "total_rows": 1810
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1810
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "2C constant-current charge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-2c-dch",
@@ -336,7 +475,36 @@
           "points": 1815
         }
       ],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1816,
+          "total_rows": 1817
+        },
+        "current_charge_positive_A": {
+          "present_rows": 1816,
+          "total_rows": 1817
+        },
+        "cell_temperature_K": {
+          "present_rows": 1817,
+          "total_rows": 1817
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1817
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "2C constant-current discharge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-4c-ch",
@@ -370,7 +538,36 @@
         "cell_temperature_K"
       ],
       "discharge_segments": [],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 892,
+          "total_rows": 892
+        },
+        "current_charge_positive_A": {
+          "present_rows": 892,
+          "total_rows": 892
+        },
+        "cell_temperature_K": {
+          "present_rows": 892,
+          "total_rows": 892
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 892
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "4C constant-current charge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-4c-dch",
@@ -412,7 +609,36 @@
           "points": 910
         }
       ],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 911,
+          "total_rows": 911
+        },
+        "current_charge_positive_A": {
+          "present_rows": 911,
+          "total_rows": 911
+        },
+        "cell_temperature_K": {
+          "present_rows": 911,
+          "total_rows": 911
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 911
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "4C constant-current discharge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-6c-ch",
@@ -446,7 +672,36 @@
         "cell_temperature_K"
       ],
       "discharge_segments": [],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 587,
+          "total_rows": 587
+        },
+        "current_charge_positive_A": {
+          "present_rows": 587,
+          "total_rows": 587
+        },
+        "cell_temperature_K": {
+          "present_rows": 587,
+          "total_rows": 587
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 587
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "6C constant-current charge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-6c-dch",
@@ -488,7 +743,36 @@
           "points": 606
         }
       ],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 607,
+          "total_rows": 607
+        },
+        "current_charge_positive_A": {
+          "present_rows": 607,
+          "total_rows": 607
+        },
+        "cell_temperature_K": {
+          "present_rows": 607,
+          "total_rows": 607
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 607
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "6C constant-current discharge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-8c-ch",
@@ -522,7 +806,36 @@
         "cell_temperature_K"
       ],
       "discharge_segments": [],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 436,
+          "total_rows": 436
+        },
+        "current_charge_positive_A": {
+          "present_rows": 436,
+          "total_rows": 436
+        },
+        "cell_temperature_K": {
+          "present_rows": 436,
+          "total_rows": 436
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 436
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "8C constant-current charge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-8c-dch",
@@ -564,7 +877,36 @@
           "points": 454
         }
       ],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 455,
+          "total_rows": 455
+        },
+        "current_charge_positive_A": {
+          "present_rows": 455,
+          "total_rows": 455
+        },
+        "cell_temperature_K": {
+          "present_rows": 455,
+          "total_rows": 455
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 455
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "8C constant-current discharge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-10c-ch",
@@ -598,7 +940,36 @@
         "cell_temperature_K"
       ],
       "discharge_segments": [],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 348,
+          "total_rows": 348
+        },
+        "current_charge_positive_A": {
+          "present_rows": 348,
+          "total_rows": 348
+        },
+        "cell_temperature_K": {
+          "present_rows": 348,
+          "total_rows": 348
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 348
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "10C constant-current charge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
     },
     {
       "id": "a123-9ah-10c-dch",
@@ -640,7 +1011,618 @@
           "points": 360
         }
       ],
-      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned"
+      "format": "Normalized measurements; original MAT/ZIP is external and checksum-pinned",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 361,
+          "total_rows": 362
+        },
+        "current_charge_positive_A": {
+          "present_rows": 361,
+          "total_rows": 362
+        },
+        "cell_temperature_K": {
+          "present_rows": 362,
+          "total_rows": 362
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 362
+        }
+      },
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "supplied; missing rows remain empty",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "protocol_evidence": "10C constant-current discharge; source index at 1 Hz"
+      },
+      "observation_kind": "instrument_series",
+      "missing_items": [
+        "Ambient temperature trace"
+      ]
+    },
+    {
+      "id": "ecker-kokam-1c-discharge",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-ecker-1c-csv",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/Ecker_1C.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/ecker-kokam-1c-discharge-normalized.csv",
+      "normalized_sha256": "4832815433ed2f5f46e6ce53a12889be8d7190e27f574223c061ce4d3b46a4ca",
+      "row_count": 31,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "1C constant-current discharge at 25 degC; published-figure digitization",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Official PyBaMM data release attributes the curve to Ecker2015ii, digitized from Richardson2020 Figure 8; same named Kokam model as Ecker2015 parameters.",
+      "observation_kind": "published_figure_digitization",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 1,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": 298.15
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 31,
+        "cell_temperature_K": 31,
+        "ambient_temperature_K": 31,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [],
+      "instrument_raw_status": "not instrument raw; published figure digitization",
+      "scientific_source_ids": [
+        "ecker-2015-ii",
+        "richardson-2020"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 31,
+          "total_rows": 31
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 31
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 31
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 31
+        }
+      }
+    },
+    {
+      "id": "ecker-kokam-5c-discharge",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-ecker-5c-csv",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/Ecker_5C.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/ecker-kokam-5c-discharge-normalized.csv",
+      "normalized_sha256": "4cf73341c6799e7d077180e304a8613c3aa08ea4d035165b1673aebebc29acf9",
+      "row_count": 33,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "5C constant-current discharge at 25 degC; published-figure digitization",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Official PyBaMM data release attributes the curve to Ecker2015ii, digitized from Richardson2020 Figure 8; same named Kokam model as Ecker2015 parameters.",
+      "observation_kind": "published_figure_digitization",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 5,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": 298.15
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 33,
+        "cell_temperature_K": 33,
+        "ambient_temperature_K": 33,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [],
+      "instrument_raw_status": "not instrument raw; published figure digitization",
+      "scientific_source_ids": [
+        "ecker-2015-ii",
+        "richardson-2020"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 33,
+          "total_rows": 33
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 33
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 33
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 33
+        }
+      }
+    },
+    {
+      "id": "enertech-0p1c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-0-1c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/0.1C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-0p1c-discharge-normalized.csv",
+      "normalized_sha256": "62ae4d196ea12895857be697d2dada159a54fb4a4e40bd42cf623362c707c51a",
+      "row_count": 36880,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "0.1C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 0.1,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 36880,
+        "cell_temperature_K": 36880,
+        "ambient_temperature_K": 36880,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 36880,
+          "total_rows": 36880
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 36880
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 36880
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 36880
+        }
+      }
+    },
+    {
+      "id": "enertech-0p5c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-0-5c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/0.5C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-0p5c-discharge-normalized.csv",
+      "normalized_sha256": "099cd507240ec5782a8af4e4141ee0f1fa50d4f79d3fc74dd6eeecd7fe9e59cd",
+      "row_count": 7310,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "0.5C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 0.5,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 7310,
+        "cell_temperature_K": 7310,
+        "ambient_temperature_K": 7310,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [
+        {
+          "kind": "temperature_rise",
+          "path": "full_cell/enertech-0p5c-discharge-temperature-rise.csv",
+          "sha256": "6ac32c30627964b891a41931b28bf5a52fb8cdee6ff20eea882827f3b0b43256",
+          "asset_id": "pybamm-data-0-5c-discharge-t-txt",
+          "original_download_path": "evidence/0.5C_discharge_T.txt",
+          "row_count": 8910,
+          "unit": "K",
+          "relationship": "same nominal C-rate and study family; identical run and clock synchronization not established",
+          "processing": "Separate native timebase retained; not interpolated, merged or converted to absolute temperature."
+        }
+      ],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 7310,
+          "total_rows": 7310
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 7310
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 7310
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 7310
+        }
+      }
+    },
+    {
+      "id": "enertech-1c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-1c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/1C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-1c-discharge-normalized.csv",
+      "normalized_sha256": "eb6921ae28717b10a819e59b6607c22d2407b37c1e8734e2a296c902a0f1102e",
+      "row_count": 3615,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "1C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 1,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 3615,
+        "cell_temperature_K": 3615,
+        "ambient_temperature_K": 3615,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [
+        {
+          "kind": "temperature_rise",
+          "path": "full_cell/enertech-1c-discharge-temperature-rise.csv",
+          "sha256": "d271145b41652e76037e285cf86b64f3aec856fe5c9230b137ddfc53bc67aa7d",
+          "asset_id": "pybamm-data-1c-discharge-t-txt",
+          "original_download_path": "evidence/1C_discharge_T.txt",
+          "row_count": 7033,
+          "unit": "K",
+          "relationship": "same nominal C-rate and study family; identical run and clock synchronization not established",
+          "processing": "Separate native timebase retained; not interpolated, merged or converted to absolute temperature."
+        }
+      ],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 3615,
+          "total_rows": 3615
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 3615
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3615
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3615
+        }
+      }
+    },
+    {
+      "id": "enertech-2c-discharge",
+      "cell_id": "enertech-lco-pouch-ai2020",
+      "sample_id": "not_disclosed",
+      "asset_id": "pybamm-data-2c-discharge-u-txt",
+      "source_id": "pybamm-data-1-0-2",
+      "path": null,
+      "original_download_path": "evidence/2C_discharge_U.txt",
+      "original_format": "TXT",
+      "normalized_path": "full_cell/enertech-2c-discharge-normalized.csv",
+      "normalized_sha256": "f4892233449ddb1cfca1aaa617cac442e7ccd710290b0924ef7c765f8ced2c1b",
+      "row_count": 1773,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "format": "time_voltage_only",
+      "license": "BSD-3-Clause",
+      "discharge_segments": [],
+      "protocol": "2C constant-current discharge; Enertech beginning-of-life observations",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Official PyBaMM data release attributes the Enertech observations to Ai2020 and Rieger2016, the same study family cited by Ai2020.py. Commercial part and exact specimen remain unresolved.",
+      "observation_kind": "published_experimental_series",
+      "current_convention": "Charge-positive column reserved but empty: current is absent from the source; nominal C-rate is protocol metadata only.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "nominal_C_rate": 2,
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_supplied",
+        "voltage_trace": "available",
+        "protocol_temperature_K": null
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Capacity channel",
+        "Charge trace",
+        "Exact specimen identifier",
+        "Measured current trace"
+      ],
+      "missing_values": {
+        "current_charge_positive_A": 1773,
+        "cell_temperature_K": 1773,
+        "ambient_temperature_K": 1773,
+        "voltage_V": 0
+      },
+      "temperature_definition": "No absolute measured temperature channel. Enertech rise channels, where available, retain their own timebase in separate sidecars.",
+      "processing": {
+        "script": "scripts/seed_fullcell.py",
+        "smoothing": "none",
+        "resampling": "none",
+        "imputation": "none",
+        "source_columns": [
+          "time_s",
+          "voltage_V"
+        ],
+        "changes": "Retain every source pair and row order; add one-based source_record. Current, absolute temperatures, cycle and step are empty. Mode D comes from the documented protocol."
+      },
+      "independent_validation_by_this_project": false,
+      "sidecars": [
+        {
+          "kind": "temperature_rise",
+          "path": "full_cell/enertech-2c-discharge-temperature-rise.csv",
+          "sha256": "183a91a7ce2f6342a21f7a6fdd4defabb93d9b250193c36d9d11041fa525230d",
+          "asset_id": "pybamm-data-2c-discharge-t-txt",
+          "original_download_path": "evidence/2C_discharge_T.txt",
+          "row_count": 8732,
+          "unit": "K",
+          "relationship": "same nominal C-rate and study family; identical run and clock synchronization not established",
+          "processing": "Separate native timebase retained; not interpolated, merged or converted to absolute temperature."
+        }
+      ],
+      "instrument_raw_status": "unestablished for published experimental series",
+      "scientific_source_ids": [
+        "ai-2020",
+        "rieger-2016"
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1773,
+          "total_rows": 1773
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1773
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1773
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1773
+        }
+      }
     }
   ]
 }

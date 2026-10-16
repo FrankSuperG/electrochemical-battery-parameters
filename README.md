@@ -4,29 +4,30 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.3.0-287b78" alt="Version 0.3.0">
+  <img src="https://img.shields.io/badge/version-0.4.0-287b78" alt="Version 0.4.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
 
 E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
-**v0.3.0: 43 OCP records · 10 material families · 228 other parameter records · 14 full-cell test files · 7 cell or parameter-set entries.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
+**v0.4.0: 47 OCP records · 11 material families · 304 other parameter records · 20 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
 
 ## Material coverage
 
-| Material family | Measured branches | Expressions | Identity / interpretation |
-|---|---:|---:|---|
-| LFP | 4 | 2 | SINTEF laboratory electrodes; Afshar and BPX expressions |
-| Graphite | 4 | 5 | Distinct effective or borrowed model fits; not one universal graphite curve |
-| NMC111 | 4 | 0 | Two SINTEF specimens; commercial full-cell identity unresolved |
-| NMC532 | 4 | 1 | SINTEF electrodes and the Mohtat pouch model are separate sources, without a cell-level join |
-| NMC811 | 0 | 1 | LG M50 positive OCP linked to the existing Chen2020 full-cell tests |
-| LNMO | 4 | 0 | Two NMP-processed high-voltage spinel specimens; distinct from LMO |
-| Silicon | 4 | 0 | Two Si-AQ-1 laboratory specimens |
-| Silicon–graphite | 8 | 0 | Two specimens each for SiGr-AQ-1 and SiGr-AQ-2; different source formulations retained |
-| LCO | 0 | 1 | Dualfoil expression used by Marquis2019; same-cell measurement match unestablished |
-| NCA | 0 | 1 | Kim2011 nominal-design expression; no commercial-model match |
+| Material family | Measured branches | Published tables | Expressions | Identity / interpretation |
+|---|---:|---:|---:|---|
+| LFP | 4 | 0 | 2 | SINTEF laboratory electrodes; Afshar and BPX expressions |
+| Graphite | 4 | 1 | 6 | Distinct effective, figure-fitted or borrowed inputs; no universal graphite curve |
+| NMC111 | 4 | 0 | 0 | SINTEF specimens; commercial full-cell identity unresolved |
+| NMC532 | 4 | 0 | 1 | SINTEF electrodes and Mohtat pouch remain separate sources |
+| NMC811 | 0 | 0 | 1 | LG M50 positive OCP linked to Chen2020 tests |
+| LNMO | 4 | 0 | 0 | High-voltage spinel specimens; distinct from LMO |
+| Silicon | 4 | 0 | 0 | Si-AQ-1 laboratory specimens |
+| Silicon–graphite | 8 | 0 | 0 | SiGr-AQ-1 and SiGr-AQ-2 formulations retained separately |
+| LCO | 0 | 1 | 1 | Enertech published table; separate borrowed Marquis/Dualfoil expression |
+| NCA | 0 | 0 | 1 | Kim2011 nominal design; no commercial-model match |
+| NCO | 0 | 0 | 1 | Ecker/Kokam upstream label; no NMC/NCA composition ratio inferred |
 
 LMO and LTO are deferred until a reusable source and its definitions can be verified; LNMO is not relabeled as LMO. All measured branches retain their own direction and relative-throughput coordinate. Formula domains describe numerical evaluation and do not establish experimental fit validity.
 
@@ -38,15 +39,27 @@ LMO and LTO are deferred until a reusable source and its definitions can be veri
 | **A123 high-power 9 Ah LFP pouch** | External full-cell pseudo-OCV workbooks indexed; redistribution license unresolved | Model assumes fast diffusion; no finite diffusivity or kinetic fit imported | 10 CC charge/discharge files at 2/4/6/8/10C | **Same study family.** Exact part number and per-file serial undisclosed |
 | **BPX LFP/graphite 2 Ah 18650 example** | 2 electrode expressions with supplied stoichiometry bounds | 46 scalar values, including two diffusivities, BPX rate constants and activation energies | No matching raw tests supplied | **Unmatched commercial identity.** Chemistry, capacity and format do not identify a cell model |
 | **LG M50, 5 Ah NMC811/graphite–SiOx** | 2 electrode expressions: effective negative and NMC811 positive | 36 scalars + 2 exchange-current functions from pinned Chen2020 implementation | 3 original Maccor CSVs and normalized derivatives | **Same model, same study.** Characterization and validation specimens not proven identical |
-| **Mohtat2020 NMC532/graphite, 5 Ah model input** | 2 expressions | 34 scalars + 2 diffusivity functions + 2 kinetic laws | No matching raw trace imported | **Parameter-set association only.** Commercial part / specimen mapping unresolved |
+| **Mohtat2020 NMC532/graphite, 5 Ah model input** | 2 expressions | 34 scalars + 2 diffusivity functions + 2 kinetic laws | [Same-paper dataset DOI located](https://doi.org/10.7302/wwma-hx25); downloads returned HTTP 403, no trace imported | **Parameter-set association only.** File contents and part / specimen mapping unresolved |
 | **Kokam SLPB78205130H / Marquis2019** | 2 borrowed Dualfoil expressions | 34 scalars + 2 borrowed diffusivity functions + 2 borrowed kinetic laws | No matching raw trace imported | **Parameter-set association only.** Named cell does not establish same-cell OCP characterization |
 | **Kim2011 NCA/graphite nominal design** | 2 expressions | 34 scalars + 2 diffusivity functions + 2 kinetic laws | No commercial cell / test assignment | **Nominal design, unmatched.** Thermal inputs include borrowed/scaled properties |
+| **Kokam SLPB75106100 / Ecker2015** | 2 figure-fitted expressions | 34 scalars + 2 D(sto,T) + 2 exchange-current laws | 1C and 5C CC discharge time/voltage pairs, digitized upstream from Richardson2020 Fig. 8 | **Same model and study lineage.** No measured current; 7.5 Ah commercial vs 0.15625 Ah implementation scaling is explicit |
+| **Enertech LCO/graphite / Ai2020-Rieger2016** | 2 published tables; synthetic graphite extrapolation guard removed | 34 scalars + 2 borrowed Dualfoil D functions + 2 borrowed kinetic laws | 0.1/0.5/1/2C discharge voltage; separate temperature-rise files at 0.5/1/2C | **Same study family.** Exact part unresolved; borrowed inputs are not same-cell measurements; measured current absent |
 | **SINTEF half-cells across 7 material families** | 32 C/50 pseudo-OCP branches from 16 specimens | Not imported | No commercial full-cell match | **Material only** |
 | **Afshar2017 LFP expression** | 1 expression via pinned PyBaMM implementation | Not imported | None established | **Material only** |
 
-A record is one stored value, expression or measured branch—not an independent experiment. The 30 AMP20 parameter records include repeated conditions and three derived values. The three newly added parameter sets contribute 38 records each, with temperature-dependent diffusivities kept as functions. These are partial packages with explicit gaps, not independently validated, drop-in model parameter sets.
+A record is one stored value, expression or measured branch—not an independent experiment. The 30 AMP20 parameter records include repeated conditions and three derived values. The three v0.3 model sets and the two v0.4 additions each contribute 38 records, with temperature-dependent diffusivities kept as functions. These are partial packages with explicit gaps, not independently validated, drop-in model parameter sets.
 
-The strongest new LFP association is [Lin et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/) and its [Oxford experiment deposit](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513). Its fitted diffusion time is shared by both electrodes. We expose `D = r²/t_d` using the implementation's **assumed 5 µm radius**, with that condition attached; it is not an independently measured intrinsic LFP diffusivity. The deposited full-discharge trace is linked for future model comparison; this project has not reproduced the paper's validation.
+The strongest LFP association is [Lin et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/) and its [Oxford experiment deposit](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513). Its fitted diffusion time is shared by both electrodes. We expose `D = r²/t_d` using the implementation's **assumed 5 µm radius**, with that condition attached; it is not an independently measured intrinsic LFP diffusivity. The deposited full-discharge trace is linked for future model comparison; this project has not reproduced the paper's validation.
+
+## Full-cell matching and basic tests
+
+Each cell package now includes an **evidence matrix** for OCP, diffusion, kinetics, full-cell observations and basic charge/discharge tests. Each component has record IDs, source IDs, its own match level and missing items. Test metadata separately records available channels and whether the data are instrument series, published experimental series or figure digitizations. See the [matching ledger and remaining gaps](docs/FULL_CELL_MATCHING.md).
+
+Existing **A123 9 Ah** files cover CC charge and discharge at 2/4/6/8/10C. **LG M50** files include CCCV charging and C/10, C/2, 1C and 1.5C CC discharge; preconditioning remains labeled. These measured-current files remain distinct from the new time/voltage-only files. A nominal C-rate never becomes a manufactured measured-current trace.
+
+The [official PyBaMM release notes](https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0) establish the experimental attribution and Ecker digitization history. Enertech temperature files contain **temperature rise**, not absolute temperature. Their own timebases are retained in sidecars; no alignment, interpolation or addition of an assumed ambient temperature is performed. The 20 test files are not 20 independently identified specimens.
+
+The Mohtat dataset [10.7302/wwma-hx25](https://doi.org/10.7302/wwma-hx25) is explicitly linked to the same paper by [DataCite metadata](https://api.datacite.org/dois/10.7302/wwma-hx25), with CC BY 4.0 and recorded voltage/current/temperature/expansion described. Landing/file access returned HTTP 403 during this audit. It remains a traceable research lead, with no imported bytes or inferred protocol/model join.
 
 ## Install and browse
 
@@ -131,7 +144,7 @@ PyBaMM's `Prada2013` file borrows its LFP OCP from Afshar2017 and its graphite O
 
 ```bash
 python -m pip install -e '.[dev,pybamm]'
-python scripts/seed_v01.py --download   # reconstructs the base and LFP expansion
+python scripts/seed_v01.py --download   # reconstructs all catalog expansions
 ebp validate
 PYBAMM_DISABLE_TELEMETRY=true python -m pytest -q
 ebp build-site
@@ -145,17 +158,20 @@ src/ebp/data/             Authoritative packaged catalog
   catalog.json           Electrode OCP records and representations
   parameters.json        Scalars and kinetic functions
   cells.json             Identities, coverage and match evidence
-  full_cell_tests.json    Test metadata, processing and links
+  full_cell_tests.json    Test metadata, channels, processing and links
+  matching_audit.json     Component match matrix, open gaps and research leads
   sources.json           Papers, datasets and software roles
   assets.json            Original URLs, versions and checksums
   curves/                Retained OCP points and source coordinates
   full_cell/             Original CSVs / normalized observations
-  evidence/              Explicit published-table transcriptions
+  evidence/              Published-table evidence and byte-identical TXT/CSV sources
   schema/                Structural constraints
 src/ebp/web/              English static viewer and companion logo
 src/ebp/licenses/         Upstream licenses and dataset notices
 scripts/seed_lfp.py       LFP extraction and normalization
 scripts/seed_materials.py Multi-material measurements and model functions
+scripts/seed_fullcell.py  Ecker/Enertech links, basic tests and missing-item audit
+scripts/fullcell_assets.json Pinned parameter and experiment assets
 scripts/material_assets.json Pinned multi-material source assets
 scripts/lfp_assets.json   Pinned LFP source assets
 ```
@@ -180,3 +196,7 @@ Cite the scientific sources for the records you use and retain upstream notices.
 | [Kumtepeli et al., 2026](https://doi.org/10.1016/j.jpowsour.2025.238764), [Oxford data](https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758) | 9 Ah study family / observations · CC BY 4.0 data |
 
 The README identity is a companion to [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas); its generation brief is recorded in [assets/README.md](assets/README.md).
+
+| [Ecker I](https://doi.org/10.1149/2.0551509jes), [Ecker II](https://doi.org/10.1149/2.0541509jes), [Richardson2020](https://doi.org/10.1016/j.electacta.2020.135862) | Kokam characterization, validation and fitted/digitized curve lineage |
+| [Ai2020](https://doi.org/10.1149/2.0122001JES), [Rieger2016](https://doi.org/10.1149/2.0441608jes) | Enertech parameterization and experimental lineage; borrowing remains explicit |
+| [PyBaMM data v1.0.2](https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.2) | Versioned experimental redistribution and published OCP tables · BSD-3-Clause; separate notice retained |
