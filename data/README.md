@@ -6,7 +6,7 @@ Start here when browsing on GitHub. No Python installation or hosted website is 
 2. Open the linked **CSV** for data and **JSON** for definitions, source evidence and missing items.
 3. Use the file page's **Raw / download raw file** controls to save the complete file. GitHub previews may not display large files. Keep the metadata and source license with your copy.
 
-See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. The repository remains private; sign in with an account that has access.
+See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.
 
 Snapshot: 49 OCP records, 337 other parameter records, 25 full-cell test files.
 

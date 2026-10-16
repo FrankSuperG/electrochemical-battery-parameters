@@ -116,6 +116,11 @@ def test_export_preserves_native_table_and_json_cli(catalog, tmp_path, capsys):
 
 
 def test_nonocp_scalar_and_kinetic_function(catalog):
+    diffusion = catalog.search_parameters(cell_id="lg-m50", category="diffusion")
+    assert {p.record["name"] for p in diffusion} == {
+        "Negative particle diffusivity [m2.s-1]",
+        "Positive particle diffusivity [m2.s-1]",
+    }
     parameter = catalog.search_parameters("Negative particle diffusivity")[0]
     assert parameter.value == 3.3e-14
     negative = catalog.get_parameter("lgm50-negative-exchange-current-density")

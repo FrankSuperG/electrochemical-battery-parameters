@@ -5,10 +5,10 @@ transport, thermal properties and the full-cell experiments that help interpret
 them. A useful contribution can be one well-documented curve or a source lead;
 it does not need to be a complete model parameter set.
 
-The repository is currently private. Invited collaborators can open issues and
-pull requests. Other researchers can email [Feng Guo](mailto:feng.guo@vito.be)
-with a source link or contribution inquiry. The templates are ready for future
-public collaboration; adding them does not change repository visibility.
+Open an issue or pull request when repository access permits. If access is
+restricted, invited collaborators can use those routes and other researchers
+can email [Feng Guo](mailto:feng.guo@vito.be) with a source link or contribution
+inquiry. The same templates support either workflow.
 
 ## Choose a contribution route
 

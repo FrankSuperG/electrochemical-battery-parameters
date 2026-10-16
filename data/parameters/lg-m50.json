@@ -516,9 +516,9 @@
     },
     {
       "id": "lgm50-negative-particle-diffusivity-m2-s-1",
-      "version": "1",
+      "version": "2",
       "cell_id": "lg-m50",
-      "category": "electrode",
+      "category": "diffusion",
       "name": "Negative particle diffusivity [m2.s-1]",
       "unit": "m2.s-1",
       "representation": {
@@ -656,9 +656,9 @@
     },
     {
       "id": "lgm50-positive-particle-diffusivity-m2-s-1",
-      "version": "1",
+      "version": "2",
       "cell_id": "lg-m50",
-      "category": "electrode",
+      "category": "diffusion",
       "name": "Positive particle diffusivity [m2.s-1]",
       "unit": "m2.s-1",
       "representation": {

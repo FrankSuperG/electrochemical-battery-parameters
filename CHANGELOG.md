@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased
+
+- Added a reproducible prepublication audit and a separate, source-backed data-candidate ledger; candidate observations are not counted as imported records.
+- Fixed LG M50 solid diffusivity classification so both electrode values appear under the diffusion filter; values, units and source evidence are unchanged, with record versions advanced to 2.
+- Included GitHub navigation exports, contribution templates and issue/PR files in source distributions.
+- Corrected license file patterns and historical Mohtat no-import wording; made access instructions work with either public or restricted repository visibility.
+
+## 0.5.0 — 2026-10-16
+
+- Retrieved ten official Mohtat author files under CC BY 4.0 and retained five charge-capacity/voltage/temperature series: 6,474 observations, with current and original time explicitly absent.
+- Added 33 author inputs and two OCP expressions alongside, rather than replacing, the PyBaMM variant; documented the graphite-offset and other model differences.
+- Reached 49 OCP records, 337 other parameters, 25 full-cell files, 9 cell/model entries and 11 material families.
+- Added offline cell ZIPs, parameter-variant selection, GitHub data navigation and scoped CSV/JSON downloads, with executable usage examples.
+- Added contribution templates, source-suggestion and PR templates, maintainer contact details, and an initial CPG-SPMT integration audit without claiming a new model-validation result.
+
+## 0.4.0 — 2026-10-16
+
+- Reached 47 OCP records, 304 other parameters and 20 full-cell files across 9 cell/model entries and 11 material families.
+- Added Ecker/Kokam and Enertech/Ai model inputs, two published electrode tables, six time/voltage series and three separate temperature-rise sidecars.
+- Retained upstream figure-digitization history, implementation/commercial scaling, borrowed inputs and missing measured current/absolute-temperature channels.
+- Added component-level matching evidence and an explicit ledger of missing full-cell and basic-test data.
+
 ## 0.3.0 — 2026-10-16
 
 - Expanded to 43 OCP records across 10 material families, 228 other parameter records and 7 cell / parameter-set entries; retained 14 existing full-cell files.

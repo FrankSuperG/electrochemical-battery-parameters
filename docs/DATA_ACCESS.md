@@ -1,8 +1,8 @@
 # Find, download and use data
 
 Start at **[Browse all data](../data/README.md)**. You can use the GitHub file
-links without installing Python or running a website. The repository is private;
-you must be signed in with an account that has access.
+links without installing Python or running a website. If repository access is
+restricted, sign in with an account that has access.
 
 ## 1. Find the right file
 

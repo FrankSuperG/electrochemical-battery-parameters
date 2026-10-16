@@ -100,9 +100,9 @@ def extend(download=False):
             parameters.append(
                 {
                     "id": rid,
-                    "version": "1",
+                    "version": "2" if "particle diffusivity" in key else "1",
                     "cell_id": "lg-m50",
-                    "category": category,
+                    "category": "diffusion" if "particle diffusivity" in key else category,
                     "name": key,
                     "unit": unit,
                     "representation": {"kind": "scalar", "value": scalars[key]},

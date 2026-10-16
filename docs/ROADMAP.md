@@ -24,6 +24,10 @@
 
 ## Next priorities
 
+The [2026-10-16 candidate-source review](DATA_CANDIDATES.md) records verified
+public entrances, licenses, inspected file structures and remaining match gaps.
+Candidate data are not part of the current catalog counts.
+
 1. Verify reusable LMO/LTO sources and locate electrode-resolved OCP and characterization data for an exactly identified commercial LFP model with matching full-cell experiments.
 2. Extend the AMP20 experiment collection to fitting and held-out pulse tests; establish specimen mapping using supplementary evidence.
 3. Audit BPX per-field origins and support electrolyte/entropy functions without changing their independent variables or units.

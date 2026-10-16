@@ -233,7 +233,7 @@ def render_index(repo=REPO):
              "1. Choose a cell below, or [browse OCP by material](ocp/README.md).",
              "2. Open the linked **CSV** for data and **JSON** for definitions, source evidence and missing items.",
              "3. Use the file page's **Raw / download raw file** controls to save the complete file. GitHub previews may not display large files. Keep the metadata and source license with your copy.", "",
-             "See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. The repository remains private; sign in with an account that has access.", "",
+             "See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.", "",
              f"Snapshot: {len(catalog.search())} OCP records, {len(catalog.parameters)} other parameter records, {len(catalog.full_cell_tests)} full-cell test files.", "",
              "## Choose a cell or study", "", cells_table(page), "",
              "## Find data by type", "",

@@ -1,6 +1,6 @@
 # Curation and evidence decisions
 
-All source assets are pinned by URL/version and SHA-256. Reconstruct the complete catalog with `python scripts/seed_v01.py --download`. This runs the base extraction, LG M50 importer LFP expansion and multi-material extension. Cached originals are excluded from Git. Four openly licensed Oxford inputs also have byte-identical, attributed copies in the private `upstream-lfp-v0.2.0` source-cache release because ORA returns HTTP 403 to hosted CI runners. CI verifies those copies using the same primary-source SHA-256 values; mirror URLs are explicit in asset metadata. Published facts, implementation values and generated observations retain distinct provenance.
+All source assets are pinned by URL/version and SHA-256. Reconstruct the complete catalog with `python scripts/seed_v01.py --download`. This runs the base extraction, LG M50 importer, LFP expansion and multi-material extension. Cached originals are excluded from Git. Four openly licensed Oxford inputs also have byte-identical, attributed copies in the `upstream-lfp-v0.2.0` source-cache release because ORA returns HTTP 403 to hosted CI runners. CI verifies those copies using the same primary-source SHA-256 values; mirror URLs are explicit in asset metadata. Published facts, implementation values and generated observations retain distinct provenance.
 
 ## SINTEF half-cell branches
 
@@ -42,7 +42,7 @@ Two OCP expressions are transcribed verbatim and evaluated only inside the file'
 
 ## Deferred sources and validation
 
-The ISU–UConn LFP/graphite deposit was discovered previously, but its workbook/README endpoints returned HTTP 403. Unread files were not turned into records. LiionDB remains a discovery route rather than an imported source. Follow-up work should favor same-model LFP half-cell OCP, diffusion/kinetic experiments and reusable full-cell tests, recording licensing and exact identity before joining them.
+The ISU–UConn LFP/graphite deposit's earlier workbook/README requests returned HTTP 403. On 2026-10-16, a pinned author GitHub copy was retrieved and its container/sheet structure inspected; it remains a candidate pending extraction and specimen mapping, not an imported record set. See [DATA_CANDIDATES.md](DATA_CANDIDATES.md). LiionDB remains a discovery route rather than an imported source. Follow-up work should favor same-model LFP half-cell OCP, diffusion/kinetic experiments and reusable full-cell tests, recording licensing and exact identity before joining them.
 
 Automated checks establish source-value fidelity, checksums, reference integrity, scoped downloads and adapter behavior. They do not replace electrochemical review or an independent prediction experiment.
 
@@ -52,7 +52,7 @@ The fixed PyBaMM v25.4.2 Chen2020 positive OCP completes the existing LG M50 ele
 
 The pinned Marquis2019, Mohtat2020 and NCA_Kim2011 files each contribute two OCPs, 34 selected scalars, two particle-diffusivity functions and two exchange-current laws. The importer parses dictionaries and simple mathematical statements with an AST allowlist; it never executes upstream Python. Local variables are substituted, the gas constant is fixed at 8.314462618 J/(mol·K), and source coefficients are retained. Tests independently compare against the pinned functions at off-grid stoichiometries and three temperatures. Kim's kinetic reference electrolyte concentration is resolved from that same parameter dictionary and disclosed in conditions. Its positive OCP uses a fractional power of 136.4; the interpreter permits bounded constant powers up to 256, while rejecting variable or unbounded powers.
 
-Marquis2019 names a Kokam SLPB78205130H configuration but attributes electrode OCP, diffusion and kinetics to Dualfoil. These are borrowed implementation functions, not direct measurements on that commercial specimen. Mohtat2020 identifies a graphite/NMC532 pouch configuration; an exact commercial part and matching raw trace are not established here. A Deep Blue discovery endpoint returned HTTP 403, so unread model/data files were not imported as experiments. Kim2011 is explicitly a nominal NCA/graphite design; thermal properties include borrowed and scaled Marquis inputs. The source positive OCP docstring's Graphite label is retained as a source issue; the dictionary association and set context identify NCA.
+Marquis2019 names a Kokam SLPB78205130H configuration but attributes electrode OCP, diffusion and kinetics to Dualfoil. These are borrowed implementation functions, not direct measurements on that commercial specimen. Mohtat2020 identifies a graphite/NMC532 pouch configuration; the v0.3 discovery endpoint returned HTTP 403 and that release contained no imported experiments. The v0.5 retrieval below supersedes that historical status: original author files and five charge-capacity/voltage/temperature series are now included, with current/time and commercial identity still unresolved. Kim2011 is explicitly a nominal NCA/graphite design; thermal properties include borrowed and scaled Marquis inputs. The source positive OCP docstring's Graphite label is retained as a source issue; the dictionary association and set context identify NCA.
 
 All new parameter packages retain raw-test coverage gaps. NMC532 chemistry alone does not associate the Mohtat model with SINTEF half-cells. LNMO is a distinct material from LMO. No LMO or LTO curve is fabricated to complete a list of chemistries; these remain discovery priorities. The new source files and checksums are pinned in `scripts/material_assets.json`.
 
@@ -72,9 +72,10 @@ no upstream Python is executed by the importer. Original source files and native
 numeric rows are checked independently in tests. Temperature-rise sidecars retain
 separate clocks without resampling or assumed ambient temperature.
 
-The Mohtat same-paper dataset DOI is a verified metadata lead, not imported data:
-HTTP 403 prevented file inspection. The component evidence matrix records missing
-items and source IDs. Full decisions and citations are in
+At v0.4, the Mohtat same-paper DOI was a metadata lead because HTTP 403 prevented
+file inspection. That status is historical and superseded by the v0.5 import
+below. The component evidence matrix records current missing items and source IDs.
+Full decisions and citations are in
 [FULL_CELL_MATCHING.md](FULL_CELL_MATCHING.md).
 
 ## Mohtat retrieval correction in v0.5

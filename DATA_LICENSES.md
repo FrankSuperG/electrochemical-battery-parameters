@@ -7,7 +7,7 @@ third-party experimental observations or formula implementations.
 |---|---|---|
 | `src/ebp/data/curves/sintef-*.csv` | Eibar Flores, Sridevi Krishnamurthi, Killian Stokes-Rodriguez, Julie Cathrine Guldahl, Charifa Hakim, Simon Clark, Nils Peter Wagner, Sergi Obrador, Andrés Bernabeu Santisteban; SINTEF and collaborators; Zenodo record 20086298 v3 | CC BY 4.0 |
 | SINTEF experimental and electrode metadata | Same dataset and authors | CC BY 4.0 |
-| `src/ebp/data/full_cell/lg-m50-*.csv`, originals and normalized derivatives | Chang-Hui Chen, Ferran Brosa Planella, Kieran O'Regan, Dominika Gastol, W. Dhammika Widanage, Emma Kendrick; Zenodo record 4032561 | CC BY 4.0 |
+| `src/ebp/data/full_cell/LGM50_cell*.csv`, originals and normalized derivatives | Chang-Hui Chen, Ferran Brosa Planella, Kieran O'Regan, Dominika Gastol, W. Dhammika Widanage, Emma Kendrick; Zenodo record 4032561 | CC BY 4.0 |
 | PyBaMM OCP expressions and their generated samples | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 pinned parameter modules | BSD-3-Clause |
 | LG M50 non-OCP numeric parameters and kinetics expressions | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 `Chen2020.py`; Chen et al. 2020 and references therein | BSD-3-Clause |
 | Original software, schemas and explanatory documentation | FrankSuperG | MIT |
@@ -58,7 +58,7 @@ data or generated exports. Each record carries its own license identifier.
 | BPX LFP example OCP expressions, scalar inputs and generated samples | Copyright (c) 2022 University of Oxford; About:Energy parameterization; pinned FaradayInstitution/BPX example | MIT |
 | E-BatP companion logo | Original project identity generated with ImageGen; generation brief in `assets/README.md` | MIT |
 
-The earlier full-cell CSV attribution to Chen applies specifically to `lg-m50-*`
+The earlier full-cell CSV attribution to Chen applies specifically to `LGM50_cell*`
 files, not to the Oxford additions above. Likewise, the PyBaMM parameter license
 applies to LG M50 inputs, not every scalar in the expanded catalog.
 
@@ -87,7 +87,7 @@ the multiscale model license. Related 9 Ah OCP workbooks with unresolved reuse
 licensing are linked as external references only. Source authors have not
 endorsed this project.
 
-The private `upstream-lfp-v0.2.0` release mirrors four original Oxford files for CI
+The `upstream-lfp-v0.2.0` source-cache release mirrors four original Oxford files for CI
 reproduction because ORA rejects hosted-runner downloads with HTTP 403. The files
 are byte-identical, retain CC BY 4.0, and include both original dataset notices.
 Release notes preserve authors, primary URLs, DOIs, license and SHA-256 values.
@@ -127,7 +127,7 @@ Its separate Copyright (c) 2024, PyBaMM Team notice is preserved verbatim in
 figure-history chain are recorded in `docs/FULL_CELL_MATCHING.md`.
 
 Changes: original time/voltage and temperature-rise files are copied byte-for-byte
-to `data/evidence/`. Normalized CSVs retain all numeric source pairs and row order
+to `src/ebp/data/evidence/`. Normalized CSVs retain all numeric source pairs and row order
 with one-based source positions; unavailable current and absolute temperatures
 stay empty. Temperature rise stays in separate native-clock sidecars, without
 interpolation, synchronization or assumed ambient temperature. Ecker points are

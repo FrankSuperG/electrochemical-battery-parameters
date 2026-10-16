@@ -1,8 +1,8 @@
 # Using and hosting E-BatP
 
 Hosting is optional. The Python library and local viewer work without publishing
-the repository or operating a server. The current repository remains private;
-no deployment integration or public site has been enabled.
+the repository or operating a server. Repository visibility and website access
+are separate choices; no deployment integration or public site is configured.
 
 ## Three ways to use the project
 

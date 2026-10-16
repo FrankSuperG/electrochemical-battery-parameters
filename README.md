@@ -11,7 +11,7 @@
 
 E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
-**v0.5.0: 49 OCP records · 11 material families · 337 other parameter records · 25 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
+**v0.5.0: 49 OCP records · 11 material families · 337 other parameter records · 25 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The viewer runs locally; no public hosting workflow is configured.
 
 ## Get the data
 
@@ -186,7 +186,7 @@ ebp build-site
 python -m build
 ```
 
-Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Working source caches are ignored by Git; the small Mohtat author originals are committed and hash-pinned for reliable offline reconstruction. ORA returns HTTP 403 to GitHub-hosted runners, so CI restores the four Oxford inputs from an attributed [private source-cache release](https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/tag/upstream-lfp-v0.2.0) and verifies the same primary-source SHA-256 pins. Primary URLs remain authoritative. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
+Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Working source caches are ignored by Git; the small Mohtat author originals are committed and hash-pinned for reliable offline reconstruction. ORA returns HTTP 403 to GitHub-hosted runners, so CI restores the four Oxford inputs from an attributed [source-cache release](https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/tag/upstream-lfp-v0.2.0) and verifies the same primary-source SHA-256 pins. Primary URLs remain authoritative. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
 
 ```text
 src/ebp/data/             Authoritative packaged catalog
@@ -219,7 +219,9 @@ See [data definitions](docs/DATA_MODEL.md), [curation and match decisions](docs/
 
 Help extend the library with OCP curves, diffusion and kinetic parameters, other electrochemical inputs, and matching full-cell tests. **Partial datasets and source suggestions are welcome.** Start with the [data contribution template](templates/data-contribution.md) and [CSV templates](templates/README.md), or use the [short source suggestion template](.github/ISSUE_TEMPLATE/source-suggestion.md) to recommend a paper or dataset. The templates ask for sources, reuse terms, definitions, cell-match evidence and missing items; they do not require an already complete parameter set.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and import workflow. While this repository is private, invited collaborators can open issues and pull requests; other researchers can contact the maintainer by email. Repository visibility is unchanged.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and import workflow. Open an issue or pull request when repository access permits, or contact the maintainer by email with a contribution or source suggestion.
+
+See the [prepublication review](docs/PREPUBLICATION_REVIEW.md) for the current audit scope and remaining limits, and [candidate data sources](docs/DATA_CANDIDATES.md) for newly reviewed leads. Candidate sources are separate from imported catalog records.
 
 ## Maintainer and collaboration
 
