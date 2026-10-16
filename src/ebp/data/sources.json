@@ -167,5 +167,60 @@
     "doi": "10.1016/j.jpowsour.2025.238764",
     "url": "https://doi.org/10.1016/j.jpowsour.2025.238764",
     "role": "A123 9 Ah power pouch cell; the model assumes fast diffusion rather than identifying a finite diffusion coefficient. Its full-cell pseudo-OCP is allocated between electrodes as a modeling convention, not measured electrode OCPs."
+  },
+  "marquis-2019": {
+    "kind": "paper",
+    "title": "An asymptotic derivation of a single particle model with electrolyte",
+    "authors": [
+      "Scott G. Marquis",
+      "Valentin Sulzer",
+      "Robert Timms",
+      "Colin P. Please",
+      "S. Jon Chapman"
+    ],
+    "year": 2019,
+    "doi": "10.1149/2.0341915jes",
+    "url": "https://doi.org/10.1149/2.0341915jes",
+    "role": "Context of the Kokam SLPB78205130H parameter set. OCP, diffusion and kinetic function docstrings attribute their origin to Dualfoil; no same-cell measurement provenance is inferred."
+  },
+  "dualfoil-attribution": {
+    "kind": "software",
+    "title": "Dualfoil electrode functions, as attributed by PyBaMM Marquis2019",
+    "authors": [
+      "John Newman / Dualfoil developers"
+    ],
+    "year": 1998,
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
+    "role": "Scientific/code origin named in upstream function docstrings. This URL identifies the checked redistributable PyBaMM transcription, not a separately audited Dualfoil release or original measurement deposit."
+  },
+  "mohtat-2020": {
+    "kind": "paper",
+    "title": "Differential Expansion and Voltage Model for Li-ion Batteries at Practical Charging Rates",
+    "authors": [
+      "Peyman Mohtat",
+      "Suhak Lee",
+      "Valentin Sulzer",
+      "Jason B. Siegel",
+      "Anna G. Stefanopoulou"
+    ],
+    "year": 2020,
+    "doi": "10.1149/1945-7111/aba5d1",
+    "url": "https://doi.org/10.1149/1945-7111/aba5d1",
+    "role": "Graphite/NMC532 pouch parameter attribution via the pinned Mohtat2020 implementation; per-value original measurement/fit/borrowing origins and matching raw tests are not independently audited."
+  },
+  "kim-2011": {
+    "kind": "paper",
+    "title": "Multi-domain modeling of lithium-ion batteries encompassing multi-physics in varied length scales",
+    "authors": [
+      "Gi-Heon Kim",
+      "Kandler Smith",
+      "Kyu-Jin Lee",
+      "Shriram Santhanagopalan",
+      "Ahmad Pesaran"
+    ],
+    "year": 2011,
+    "doi": "10.1149/1.3597614",
+    "url": "https://doi.org/10.1149/1.3597614",
+    "role": "Nominal-design graphite/NCA parameter attribution. Commercial identity and matching raw full-cell data are unresolved. Thermal inputs in the implementation include borrowed/scaled Marquis values."
   }
 }

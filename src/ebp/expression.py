@@ -33,7 +33,7 @@ def parse(expression, variables=("x",)):
             check(node.right)
             if isinstance(node.op, ast.Pow):
                 exponent = node.right
-                if not isinstance(exponent, ast.Constant) or abs(exponent.value) > 16:
+                if not isinstance(exponent, ast.Constant) or abs(exponent.value) > 256:
                     raise ValueError("Only bounded constant powers are supported")
         elif isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.UAdd, ast.USub)):
             check(node.operand)

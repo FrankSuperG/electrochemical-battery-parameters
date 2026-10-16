@@ -145,5 +145,158 @@
     "path": "evidence/lin2022-table1.json",
     "digest_scope": "local curated Table 1 transcription, not the publisher HTML",
     "license": "CC-BY-4.0"
+  },
+  "sintef-silicon-931301": {
+    "filename": "sintef__sintef-silicon-R2032-intelligent1-931301__20250405__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-silicon-R2032-intelligent1-931301__20250405__p-ocv__RT.bdf.parquet/content",
+    "md5": "00a49bd5bb388ea046924071ec2f86b5",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "silicon",
+    "public_label": "Si-AQ-1",
+    "electrode_role": "negative",
+    "sha256": "1b791c8e904d32dedf457d0e5f81a7a214cad8dac25d8b181f9cb6d8a0fb4684"
+  },
+  "sintef-silicon-2c4b6a": {
+    "filename": "sintef__sintef-silicon-R2032-intelligent1-2c4b6a__20250405__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-silicon-R2032-intelligent1-2c4b6a__20250405__p-ocv__RT.bdf.parquet/content",
+    "md5": "d49c62d3cd030c38bdeb4d4f9f061e4f",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "silicon",
+    "public_label": "Si-AQ-1",
+    "electrode_role": "negative",
+    "sha256": "8d7402ece38b37c35471aca53161d37dbed583adea1d5db808e39f45d41c8d79"
+  },
+  "sintef-silicon-graphite-70e745": {
+    "filename": "sintef__sintef-silicongraphite-R2032-intelligent1-70e745__20250514__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-silicongraphite-R2032-intelligent1-70e745__20250514__p-ocv__RT.bdf.parquet/content",
+    "md5": "57b0a9d5ed052556a7d518944f70289c",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "silicon-graphite",
+    "public_label": "SiGr-AQ-1",
+    "electrode_role": "negative",
+    "sha256": "d1312131007d4d43829a690cb8323813ba5993d03be7c2bcb46f5621610b3591"
+  },
+  "sintef-silicon-graphite-1c492a": {
+    "filename": "sintef__sintef-silicongraphite-R2032-intelligent1-1c492a__20250602__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-silicongraphite-R2032-intelligent1-1c492a__20250602__p-ocv__RT.bdf.parquet/content",
+    "md5": "80be7c96c4c7124a74eed799e88f4336",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "silicon-graphite",
+    "public_label": "SiGr-AQ-1",
+    "electrode_role": "negative",
+    "sha256": "987868c1de133bd336c175676207cf2294e97aa639af8819942710a802b12faf"
+  },
+  "sintef-silicon-graphite-f4569b": {
+    "filename": "sintef__sintef-silicongraphite-R2032-intelligent2-f4569b__20250405__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-silicongraphite-R2032-intelligent2-f4569b__20250405__p-ocv__RT.bdf.parquet/content",
+    "md5": "230fecae5bda7b479de5e9e826000a30",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "silicon-graphite",
+    "public_label": "SiGr-AQ-2",
+    "electrode_role": "negative",
+    "sha256": "ce6b87887d8fe0cdb1bd38a709d60186a5d0aabbba943d324b745bdb99b2847c"
+  },
+  "sintef-silicon-graphite-0cf06a": {
+    "filename": "sintef__sintef-silicongraphite-R2032-intelligent2-0cf06a__20250528__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-silicongraphite-R2032-intelligent2-0cf06a__20250528__p-ocv__RT.bdf.parquet/content",
+    "md5": "0b7ef0c932ac323e99b0dc46d7f5e80b",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "silicon-graphite",
+    "public_label": "SiGr-AQ-2",
+    "electrode_role": "negative",
+    "sha256": "7ae507050a9a94f1d85717cfee54d6b37e74b4b7ad05a38732cf669ee0ae7ec9"
+  },
+  "sintef-lnmo-59ceaa": {
+    "filename": "sintef__sintef-lnmo-R2032-intelligent1-59ceaa__20250424__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-lnmo-R2032-intelligent1-59ceaa__20250424__p-ocv__RT.bdf.parquet/content",
+    "md5": "6120ac14596d517552f00f325f12db0e",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "LNMO",
+    "public_label": "LNMO-NMP-1",
+    "electrode_role": "positive",
+    "sha256": "e575e3861ee08320220bf9c066c810429588e7f241c516526c8189b6d021ba52"
+  },
+  "sintef-lnmo-f9bf3e": {
+    "filename": "sintef__sintef-lnmo-R2032-intelligent1-f9bf3e__20250625__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-lnmo-R2032-intelligent1-f9bf3e__20250625__p-ocv__RT.bdf.parquet/content",
+    "md5": "c6f9b0ccd2249f18e394bd5f75abb2b4",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "LNMO",
+    "public_label": "LNMO-NMP-1",
+    "electrode_role": "positive",
+    "sha256": "0892db98d436d15f0ce80026b1eddcd2505ab3c4a89f4b81fda38798161d2fd5"
+  },
+  "sintef-nmc111-9d3ce5": {
+    "filename": "sintef__sintef-nmc111-R2032-customcells-9d3ce5__20250625__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-nmc111-R2032-customcells-9d3ce5__20250625__p-ocv__RT.bdf.parquet/content",
+    "md5": "1b185bc2eb4427090b1dc94cab938d71",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "NMC111",
+    "public_label": "NMC111-NMP-1",
+    "electrode_role": "positive",
+    "sha256": "f7cb10b5f1c3e3e27de901083213fe0e55d2c7ef26102ac7335438b8a25ad184"
+  },
+  "sintef-nmc111-6115bb": {
+    "filename": "sintef__sintef-nmc111-R2032-customcells-6115bb__20250720__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-nmc111-R2032-customcells-6115bb__20250720__p-ocv__RT.bdf.parquet/content",
+    "md5": "0d9122c66589b9913198ba864614a904",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "NMC111",
+    "public_label": "NMC111-NMP-1",
+    "electrode_role": "positive",
+    "sha256": "f16fa8720b5a8a6b6bdff31896ab466a08232e515fbe60825f634ad352170c49"
+  },
+  "sintef-nmc532-2a2be3": {
+    "filename": "sintef__sintef-nmc532-R2032-gelon-2a2be3__20250607__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-nmc532-R2032-gelon-2a2be3__20250607__p-ocv__RT.bdf.parquet/content",
+    "md5": "934846a01bfccd4058aaa3d19424ee4f",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "NMC532",
+    "public_label": "NMC532-NMP-1",
+    "electrode_role": "positive",
+    "sha256": "e738b5d86397e196653e43f3b5d3e044ea3c393b4efdac21032ce70c96b1728e"
+  },
+  "sintef-nmc532-ee86d1": {
+    "filename": "sintef__sintef-nmc532-R2032-gelon-ee86d1__20250625__p-ocv__RT.bdf.parquet",
+    "url": "https://zenodo.org/api/records/20086298/files/sintef__sintef-nmc532-R2032-gelon-ee86d1__20250625__p-ocv__RT.bdf.parquet/content",
+    "md5": "5d99b4fbaf00fd8729a90e35a29f6588",
+    "source_id": "sintef-2026-v3",
+    "license": "CC-BY-4.0",
+    "material": "NMC532",
+    "public_label": "NMC532-NMP-1",
+    "electrode_role": "positive",
+    "sha256": "5c582ea90ad431f1e34cc4aa30d5c614e706642f50e80385e9c9ac7dfe673ef9"
+  },
+  "pybamm-marquis2019-code": {
+    "filename": "Marquis2019-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
+    "sha256": "f200bede5ece656c0c88d2db9c314646986fb990978ae6b056eb263cd40283b6",
+    "source_id": "pybamm-25-4-2",
+    "license": "BSD-3-Clause"
+  },
+  "pybamm-nca_kim2011-code": {
+    "filename": "NCA_Kim2011-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/NCA_Kim2011.py",
+    "sha256": "d0aebb43b776f4804a0d7ad7f0b9dc6b3d1c30ee145e11e7c02b34c0a6f6c37c",
+    "source_id": "pybamm-25-4-2",
+    "license": "BSD-3-Clause"
+  },
+  "pybamm-mohtat2020-code": {
+    "filename": "Mohtat2020-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Mohtat2020.py",
+    "sha256": "89c2acb9533912c54492063dad111c5feeff57402d8130f6b153f9f67d8df835",
+    "source_id": "pybamm-25-4-2",
+    "license": "BSD-3-Clause"
   }
 }

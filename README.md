@@ -4,14 +4,31 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.2.0-287b78" alt="Version 0.2.0">
+  <img src="https://img.shields.io/badge/version-0.3.0-287b78" alt="Version 0.3.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
 
-E-BatP is an LFP-first library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
+E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
-**v0.2.0: 12 OCP records · 114 other parameter records · 14 full-cell test files · 4 cell or study-family entries.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
+**v0.3.0: 43 OCP records · 10 material families · 228 other parameter records · 14 full-cell test files · 7 cell or parameter-set entries.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
+
+## Material coverage
+
+| Material family | Measured branches | Expressions | Identity / interpretation |
+|---|---:|---:|---|
+| LFP | 4 | 2 | SINTEF laboratory electrodes; Afshar and BPX expressions |
+| Graphite | 4 | 5 | Distinct effective or borrowed model fits; not one universal graphite curve |
+| NMC111 | 4 | 0 | Two SINTEF specimens; commercial full-cell identity unresolved |
+| NMC532 | 4 | 1 | SINTEF electrodes and the Mohtat pouch model are separate sources, without a cell-level join |
+| NMC811 | 0 | 1 | LG M50 positive OCP linked to the existing Chen2020 full-cell tests |
+| LNMO | 4 | 0 | Two NMP-processed high-voltage spinel specimens; distinct from LMO |
+| Silicon | 4 | 0 | Two Si-AQ-1 laboratory specimens |
+| Silicon–graphite | 8 | 0 | Two specimens each for SiGr-AQ-1 and SiGr-AQ-2; different source formulations retained |
+| LCO | 0 | 1 | Dualfoil expression used by Marquis2019; same-cell measurement match unestablished |
+| NCA | 0 | 1 | Kim2011 nominal-design expression; no commercial-model match |
+
+LMO and LTO are deferred until a reusable source and its definitions can be verified; LNMO is not relabeled as LMO. All measured branches retain their own direction and relative-throughput coordinate. Formula domains describe numerical evaluation and do not establish experimental fit validity.
 
 ## Coverage and cell matches
 
@@ -20,11 +37,14 @@ E-BatP is an LFP-first library for finding and inspecting inputs to **DFN/P2D, S
 | **A123 AMP20M1HD-A, 20 Ah LFP pouch** | C/25 full-cell pseudo-OCV reported; electrode OCP points not located in the selected deposit | 27 Table 1 values at 30/50/70% SOC + 3 conditional diffusivities; shared diffusion time, volumetric kinetics, transport and thermal fits | 1 Cell I 4C full-discharge trace; current, voltage and thermal-grid mean | **Same commercial model, same study.** Table 1 specimen letter unresolved; no identical-specimen claim |
 | **A123 high-power 9 Ah LFP pouch** | External full-cell pseudo-OCV workbooks indexed; redistribution license unresolved | Model assumes fast diffusion; no finite diffusivity or kinetic fit imported | 10 CC charge/discharge files at 2/4/6/8/10C | **Same study family.** Exact part number and per-file serial undisclosed |
 | **BPX LFP/graphite 2 Ah 18650 example** | 2 electrode expressions with supplied stoichiometry bounds | 46 scalar values, including two diffusivities, BPX rate constants and activation energies | No matching raw tests supplied | **Unmatched commercial identity.** Chemistry, capacity and format do not identify a cell model |
-| **LG M50, 5 Ah NMC811/graphite–SiOx** | 1 effective negative-electrode expression | 36 scalars + 2 exchange-current functions from pinned Chen2020 implementation | 3 original Maccor CSVs and normalized derivatives | **Same model, same study.** Characterization and validation specimens not proven identical |
-| **SINTEF LFP and graphite half-cells** | 8 C/50 pseudo-OCP branches from 4 specimens | Not imported | No commercial full-cell match | **Material only** |
+| **LG M50, 5 Ah NMC811/graphite–SiOx** | 2 electrode expressions: effective negative and NMC811 positive | 36 scalars + 2 exchange-current functions from pinned Chen2020 implementation | 3 original Maccor CSVs and normalized derivatives | **Same model, same study.** Characterization and validation specimens not proven identical |
+| **Mohtat2020 NMC532/graphite, 5 Ah model input** | 2 expressions | 34 scalars + 2 diffusivity functions + 2 kinetic laws | No matching raw trace imported | **Parameter-set association only.** Commercial part / specimen mapping unresolved |
+| **Kokam SLPB78205130H / Marquis2019** | 2 borrowed Dualfoil expressions | 34 scalars + 2 borrowed diffusivity functions + 2 borrowed kinetic laws | No matching raw trace imported | **Parameter-set association only.** Named cell does not establish same-cell OCP characterization |
+| **Kim2011 NCA/graphite nominal design** | 2 expressions | 34 scalars + 2 diffusivity functions + 2 kinetic laws | No commercial cell / test assignment | **Nominal design, unmatched.** Thermal inputs include borrowed/scaled properties |
+| **SINTEF half-cells across 7 material families** | 32 C/50 pseudo-OCP branches from 16 specimens | Not imported | No commercial full-cell match | **Material only** |
 | **Afshar2017 LFP expression** | 1 expression via pinned PyBaMM implementation | Not imported | None established | **Material only** |
 
-A record is one stored value, expression or measured branch—not an independent experiment. The 30 AMP20 parameter records include repeated conditions and three derived values. These are partial packages with explicit gaps, not independently validated, drop-in model parameter sets.
+A record is one stored value, expression or measured branch—not an independent experiment. The 30 AMP20 parameter records include repeated conditions and three derived values. The three newly added parameter sets contribute 38 records each, with temperature-dependent diffusivities kept as functions. These are partial packages with explicit gaps, not independently validated, drop-in model parameter sets.
 
 The strongest new LFP association is [Lin et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/) and its [Oxford experiment deposit](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513). Its fitted diffusion time is shared by both electrodes. We expose `D = r²/t_d` using the implementation's **assumed 5 µm radius**, with that condition attached; it is not an independently measured intrinsic LFP diffusivity. The deposited full-discharge trace is linked for future model comparison; this project has not reproduced the paper's validation.
 
@@ -79,6 +99,14 @@ Measured OCP tables support linear interpolation and PCHIP. `.points()` returns 
 
 Original LG M50 CSVs encode current as a magnitude plus `Md=C/D`. Normalized files use **charge-positive current**, temperatures in K and source row/index references. Oxford MAT/ZIP originals stay at checksum-pinned URLs; normalized CSVs retain every time row. Source NaNs become empty fields and are counted in metadata. The 9 Ah temperature column has conflicting source descriptions, so its exact sensor/ROI identity remains unresolved. A model interface that uses discharge-positive current needs an explicit sign conversion.
 
+Temperature-dependent particle diffusion retains both source inputs, even when the selected implementation is independent of stoichiometry:
+
+```python
+D = catalog.get_parameter("mohtat2020-positive-diffusivity")
+print(D(sto=0.5, T=298.15))   # m²/s; source model function, not a new measurement
+silicon = catalog.search(material="silicon", representation="table")
+```
+
 ## Optional PyBaMM OCP adapter
 
 ```bash
@@ -127,6 +155,8 @@ src/ebp/data/             Authoritative packaged catalog
 src/ebp/web/              English static viewer and companion logo
 src/ebp/licenses/         Upstream licenses and dataset notices
 scripts/seed_lfp.py       LFP extraction and normalization
+scripts/seed_materials.py Multi-material measurements and model functions
+scripts/material_assets.json Pinned multi-material source assets
 scripts/lfp_assets.json   Pinned LFP source assets
 ```
 
@@ -142,6 +172,9 @@ Cite the scientific sources for the records you use and retain upstream notices.
 | [Afshar et al., 2017](https://arxiv.org/abs/1709.03970v1) | LFP OCP scientific attribution |
 | [Chen et al., 2020](https://doi.org/10.1149/1945-7111/ab9050), [full-cell data](https://zenodo.org/records/4032561) | LG M50 parameter attribution / observations · CC BY 4.0 data |
 | [PyBaMM v25.4.2](https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion) | Pinned OCP / Chen2020 implementations · BSD-3-Clause |
+| [Marquis et al., 2019](https://doi.org/10.1149/2.0341915jes) | LCO/graphite model context; electrode functions attributed to Dualfoil by upstream |
+| [Mohtat et al., 2020](https://doi.org/10.1149/1945-7111/aba5d1) | NMC532/graphite parameter attribution via pinned implementation |
+| [Kim et al., 2011](https://doi.org/10.1149/1.3597614) | NCA/graphite nominal-design parameter attribution via pinned implementation |
 | [BPX example](https://github.com/FaradayInstitution/BPX/blob/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json) | LFP parameter example · MIT |
 | [Lin et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/), [data](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513), [code](https://github.com/Battery-Intelligence-Lab/multiscale-coupling/tree/dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4) | AMP20 fitted parameters / observations · CC BY 4.0; code · BSD-2-Clause |
 | [Kumtepeli et al., 2026](https://doi.org/10.1016/j.jpowsour.2025.238764), [Oxford data](https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758) | 9 Ah study family / observations · CC BY 4.0 data |

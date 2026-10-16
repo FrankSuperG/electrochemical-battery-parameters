@@ -15,9 +15,16 @@
 - Cell-scoped exports, match/coverage inspection, English documentation/viewer and Atlas companion logo.
 - Preserved missing measurements, pinned originals, source-value audit and per-source notices.
 
+## Completed in v0.3
+
+- Ten material families, including NMC111/532/811, LNMO, silicon, silicon–graphite, LCO and NCA.
+- Thirty-two measured branches from sixteen specimens; eleven attributed model expressions.
+- NMC811 OCP linked to existing LG M50 tests; conservative association for three additional model packages.
+- Two-input Arrhenius diffusivities, source-aware math transcription and dynamic viewer filters.
+
 ## Next priorities
 
-1. Locate reusable electrode-resolved OCP and characterization data for an exactly identified commercial LFP model with matching full-cell experiments.
+1. Verify reusable LMO/LTO sources and locate electrode-resolved OCP and characterization data for an exactly identified commercial LFP model with matching full-cell experiments.
 2. Extend the AMP20 experiment collection to fitting and held-out pulse tests; establish specimen mapping using supplementary evidence.
 3. Audit BPX per-field origins and support electrolyte/entropy functions without changing their independent variables or units.
 4. Curate GITT/EIS processing with geometry, concentration, electrode-area and identifiability assumptions.

@@ -475,6 +475,9 @@ def main(download=False):
     from seed_lfp import extend as extend_lfp
 
     extend_lfp(download=download)
+    from seed_materials import extend as extend_materials
+
+    extend_materials(download=download)
 
 
 if __name__ == "__main__":

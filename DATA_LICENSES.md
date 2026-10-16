@@ -8,7 +8,7 @@ third-party experimental observations or formula implementations.
 | `src/ebp/data/curves/sintef-*.csv` | Eibar Flores, Sridevi Krishnamurthi, Killian Stokes-Rodriguez, Julie Cathrine Guldahl, Charifa Hakim, Simon Clark, Nils Peter Wagner, Sergi Obrador, Andrés Bernabeu Santisteban; SINTEF and collaborators; Zenodo record 20086298 v3 | CC BY 4.0 |
 | SINTEF experimental and electrode metadata | Same dataset and authors | CC BY 4.0 |
 | `src/ebp/data/full_cell/lg-m50-*.csv`, originals and normalized derivatives | Chang-Hui Chen, Ferran Brosa Planella, Kieran O'Regan, Dominika Gastol, W. Dhammika Widanage, Emma Kendrick; Zenodo record 4032561 | CC BY 4.0 |
-| Two formula expressions and their generated samples | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 `Prada2013.py` | BSD-3-Clause |
+| PyBaMM OCP expressions and their generated samples | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 pinned parameter modules | BSD-3-Clause |
 | LG M50 non-OCP numeric parameters and kinetics expressions | Copyright (c) 2018–2025, the PyBaMM team; v25.4.2 `Chen2020.py`; Chen et al. 2020 and references therein | BSD-3-Clause |
 | Original software, schemas and explanatory documentation | FrankSuperG | MIT |
 
@@ -92,3 +92,21 @@ reproduction because ORA rejects hosted-runner downloads with HTTP 403. The file
 are byte-identical, retain CC BY 4.0, and include both original dataset notices.
 Release notes preserve authors, primary URLs, DOIs, license and SHA-256 values.
 The source-cache release does not change the scientific attribution or license.
+
+## Multi-material expansion in v0.3
+
+The additional NMC111/NMC532/LNMO/silicon/silicon–graphite CSVs are selected
+observations from the same SINTEF Zenodo v3 dataset and retain CC BY 4.0 and its
+existing attribution. Processing follows the fixed cycle-3 C/50 branch rule,
+with source coordinates, duplicate-capacity removal counts and no smoothing.
+The two SiGr formulations are retained separately. No new independent study or
+commercial-cell association is inferred from adding specimens or materials.
+
+Additional OCP, diffusion and kinetic implementations are from PyBaMM v25.4.2
+`Chen2020.py`, `Marquis2019.py`, `Mohtat2020.py` and `NCA_Kim2011.py`, under the
+existing PyBaMM BSD-3-Clause notice. Scientific attributions are recorded per
+module/function; Dualfoil borrowing is explicit for Marquis electrode functions.
+AST-local substitution and constant folding preserve the source math; the gas
+constant is fixed for portable evaluation. Source reference parameters used by
+Kim kinetics are resolved from that same pinned parameter set. Native measured
+points are not claimed for any implementation expression or its generated CSV.

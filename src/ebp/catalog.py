@@ -295,7 +295,18 @@ class Catalog:
                     if not np.isfinite(rep["value"]):
                         raise ValueError("Non-finite scalar")
                 elif rep["kind"] == "expression":
-                    Parameter(p)(c_e=1000, c_s_surf=10000, c_s_max=30000, T=298.15)
+                    Parameter(p)(
+                        **{
+                            key: {
+                                "c_e": 1000,
+                                "c_s_surf": 10000,
+                                "c_s_max": 30000,
+                                "T": 298.15,
+                                "sto": 0.5,
+                            }[key]
+                            for key in rep["variables"]
+                        }
+                    )
                 else:
                     raise ValueError("Unknown parameter representation")
             except (ValueError, KeyError, SyntaxError, FloatingPointError) as exc:

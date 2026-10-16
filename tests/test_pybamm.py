@@ -12,11 +12,15 @@ from ebp import Catalog, StoichiometryMapping
         "graphite-chen2020-formula",
         "bpx-lfp18650-lfp-ocp",
         "bpx-lfp18650-graphite-ocp",
+        "nmc811-lgm50-chen2020-formula",
+        "mohtat2020-nmc532-ocp",
+        "marquis2019-lco-ocp",
+        "nca-kim2011-nca-ocp",
     ],
 )
 def test_actual_pybamm_component_with_off_grid_stoichiometry(rid):
     curve = Catalog().get(rid)
-    ocp = curve.to_pybamm(count=10001)
+    ocp = curve.to_pybamm(count=50001)
     parameter = pybamm.InputParameter("sto")
     symbolic = ocp(parameter)
     lo, hi = curve.record["x"]["domain"]

@@ -19,8 +19,8 @@ def catalog():
 def test_complete_catalog_and_link_integrity(catalog):
     assert catalog.validate() == []
     assert len(catalog.search(material="LFP")) == 6
-    assert len(catalog.search(material="graphite")) == 6
-    assert len(catalog.search(representation="table")) == 8
+    assert len(catalog.search(material="graphite")) == 9
+    assert len(catalog.search(representation="table")) == 32
     assert len(catalog.search_parameters(cell_id="lg-m50")) == 38
     assert len(catalog.linked_tests("lg-m50")) == 3
     assert all(

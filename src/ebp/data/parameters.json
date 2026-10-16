@@ -3404,6 +3404,3584 @@
         "One effective D is shared by both electrodes; this is not an independently measured intrinsic LFP diffusion coefficient.",
         "Changing radius changes inferred D quadratically; the inverse experiment identifies the time scale."
       ]
+    },
+    {
+      "id": "marquis2019-negative-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Negative current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Negative electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0001
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-separator-thickness-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Separator thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Separator thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Positive electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0001
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Positive current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-electrode-height-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Electrode height [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.137
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Electrode height [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-electrode-width-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Electrode width [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.207
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Electrode width [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-cell-volume-m3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Cell volume [m3]",
+      "unit": "m3",
+      "representation": {
+        "kind": "scalar",
+        "value": 7.8e-06
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Cell volume [m3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-cell-cooling-surface-area-m2",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "geometry",
+      "name": "Cell cooling surface area [m2]",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0569
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Cell cooling surface area [m2]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Negative electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Negative electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.6
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-particle-radius-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Negative particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-05
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Negative electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Positive electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Positive electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-particle-radius-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Positive particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-05
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Positive electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-maximum-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Maximum concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 24983.2619938437
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Maximum concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-maximum-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "electrode",
+      "name": "Maximum concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 51217.9257309275
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Maximum concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Negative electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1657.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Negative electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Negative electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.7
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Positive electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 3262.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Positive electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Positive electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.1
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-separator-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Separator density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 397.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Separator density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-separator-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Separator specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Separator specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-separator-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "thermal",
+      "name": "Separator thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.16
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Separator thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "operating_limits",
+      "name": "Nominal cell capacity [A.h]",
+      "unit": "A.h",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.680616
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Nominal cell capacity [A.h]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "operating_limits",
+      "name": "Lower voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.105
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Lower voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "operating_limits",
+      "name": "Upper voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.1
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Upper voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "initial_state",
+      "name": "Initial concentration in electrolyte [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-initial-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "initial_state",
+      "name": "Initial concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 19986.609595075
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Initial concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-initial-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "category": "initial_state",
+      "name": "Initial concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 30730.7554385565
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Initial concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "marquis2019-negative-diffusivity",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "3.9e-14 * exp(5144.0486252722 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::graphite_mcmb2528_diffusivity_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "marquis2019-negative-exchange-current-density",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "2e-05 * exp(4507.807867084453 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::graphite_electrolyte_exchange_current_density_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "marquis2019-positive-diffusivity",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "1e-13 * exp(2231.0521860836875 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::lico2_diffusivity_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "marquis2019-positive-exchange-current-density",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "6e-07 * exp(4759.177089128383 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "dualfoil-attribution",
+        "marquis-2019",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::lico2_electrolyte_exchange_current_density_Dualfoil1998",
+        "origin_status": "borrowed_dualfoil_implementation_function"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "mohtat2020-negative-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Negative current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Negative electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.2e-05
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-separator-thickness-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Separator thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2e-05
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Separator thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Positive electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 6.7e-05
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Positive current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-electrode-height-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Electrode height [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Electrode height [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-electrode-width-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Electrode width [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.205
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Electrode width [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-cell-volume-m3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Cell volume [m3]",
+      "unit": "m3",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.92e-05
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Cell volume [m3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-cell-cooling-surface-area-m2",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "geometry",
+      "name": "Cell cooling surface area [m2]",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.41
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Cell cooling surface area [m2]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.61
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-particle-radius-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-06
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Negative electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Positive electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Positive electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.445
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-particle-radius-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Positive particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 3.5e-06
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Positive electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-maximum-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Maximum concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 28746.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Maximum concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-maximum-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "electrode",
+      "name": "Maximum concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 35380.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Maximum concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Negative electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 3100.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Negative electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1100.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Negative electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.7
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Positive electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 3100.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Positive electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1100.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Positive electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.1
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-separator-density-kg-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Separator density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 397.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Separator density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-separator-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Separator specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Separator specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-separator-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "thermal",
+      "name": "Separator thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.16
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Separator thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "operating_limits",
+      "name": "Nominal cell capacity [A.h]",
+      "unit": "A.h",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Nominal cell capacity [A.h]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "operating_limits",
+      "name": "Lower voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.8
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Lower voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "operating_limits",
+      "name": "Upper voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Upper voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "initial_state",
+      "name": "Initial concentration in electrolyte [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-initial-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "initial_state",
+      "name": "Initial concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 48.8682
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Initial concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-initial-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "category": "initial_state",
+      "name": "Initial concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 31513.0
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Initial concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "mohtat2020-negative-diffusivity",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "5.000000000000001e-15 * exp(5144.0486252722 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::graphite_diffusivity_PeymanMPM",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "mohtat2020-negative-exchange-current-density",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "1.0609999999999999e-06 * exp(4507.807867084453 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::graphite_electrolyte_exchange_current_density_PeymanMPM",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "mohtat2020-positive-diffusivity",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "8e-15 * exp(2231.0521860836875 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::NMC_diffusivity_PeymanMPM",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "mohtat2020-positive-exchange-current-density",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "4.824e-06 * exp(4759.177089128383 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "mohtat-2020",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::NMC_electrolyte_exchange_current_density_PeymanMPM",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "nca-kim2011-negative-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Negative current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-05
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Negative electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 7e-05
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-separator-thickness-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Separator thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Separator thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Positive electrode thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-05
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-current-collector-thickness-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Positive current collector thickness [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-05
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive current collector thickness [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-electrode-height-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Electrode height [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Electrode height [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-electrode-width-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Electrode width [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.14
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Electrode width [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-cell-volume-m3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Cell volume [m3]",
+      "unit": "m3",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.62e-06
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Cell volume [m3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-cell-cooling-surface-area-m2",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "geometry",
+      "name": "Cell cooling surface area [m2]",
+      "unit": "m2",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0561
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Cell cooling surface area [m2]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Negative electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Negative electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.51
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-particle-radius-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Negative particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 5.083e-07
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Negative electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Positive electrode porosity",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode porosity",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Positive electrode active material volume fraction",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.41
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode active material volume fraction",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-particle-radius-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Positive particle radius [m]",
+      "unit": "m",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.633e-06
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive particle radius [m]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Positive electrode conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode conductivity [S.m-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-maximum-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Maximum concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 28700.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Maximum concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-maximum-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "electrode",
+      "name": "Maximum concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 49000.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Maximum concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Negative electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 2136.43638
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Negative electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Negative electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1339
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-electrode-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Positive electrode density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 4205.82708
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-electrode-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Positive electrode specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-positive-electrode-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Positive electrode thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.4007
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-separator-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Separator density [kg.m-3]",
+      "unit": "kg.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 511.86798
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Separator density [kg.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-separator-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Separator specific heat capacity [J.kg-1.K-1]",
+      "unit": "J.kg-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 700.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Separator specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-separator-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "thermal",
+      "name": "Separator thermal conductivity [W.m-1.K-1]",
+      "unit": "W.m-1.K-1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.10672
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Separator thermal conductivity [W.m-1.K-1]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "operating_limits",
+      "name": "Nominal cell capacity [A.h]",
+      "unit": "A.h",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.43
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Nominal cell capacity [A.h]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "operating_limits",
+      "name": "Lower voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 2.7
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Lower voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "operating_limits",
+      "name": "Upper voltage cut-off [V]",
+      "unit": "V",
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Upper voltage cut-off [V]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "initial_state",
+      "name": "Initial concentration in electrolyte [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 1200.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-initial-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "initial_state",
+      "name": "Initial concentration in negative electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 18081.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Initial concentration in negative electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-initial-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "category": "initial_state",
+      "name": "Initial concentration in positive electrode [mol.m-3]",
+      "unit": "mol.m-3",
+      "representation": {
+        "kind": "scalar",
+        "value": 20090.0
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Initial concentration in positive electrode [mol.m-3]",
+        "origin_status": "upstream_implementation_value; individual measurement/fit/borrowed/assumed origin not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "A partial model input collection, not a validated complete parameter set."
+      ],
+      "conditions": {
+        "reference_temperature_K": 298.15
+      }
+    },
+    {
+      "id": "nca-kim2011-negative-diffusivity",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "9e-14 * exp(481.0894201797709 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::graphite_diffusivity_Kim2011",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "nca-kim2011-negative-exchange-current-density",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "36 / (34.64101615137755 * (c_s_max - 0.36 * c_s_max) ** 0.5 * (0.36 * c_s_max) ** 0.5) * exp(3608.170651348282 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::graphite_electrolyte_exchange_current_density_Kim2011",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Negative electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": 1200.0
+      },
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "nca-kim2011-positive-diffusivity",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "representation": {
+        "kind": "expression",
+        "expression": "3.0000000000000002e-15 * exp(2405.4471008988544 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "sto": "1",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::nca_diffusivity_Kim2011",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive particle diffusivity [m2.s-1]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": null
+      },
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
+    },
+    {
+      "id": "nca-kim2011-positive-exchange-current-density",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "representation": {
+        "kind": "expression",
+        "expression": "4 / (34.64101615137755 * (c_s_max - 0.41 * c_s_max) ** 0.5 * (0.41 * c_s_max) ** 0.5) * exp(3608.170651348282 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical domain only: 0<=sto<=1 for diffusivity; c_e>=0, c_s_max>0, 0<=c_s_surf<=c_s_max for kinetics; T>0. Experimental validity range unestablished.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "source_ids": [
+        "kim-2011",
+        "pybamm-25-4-2"
+      ],
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::nca_electrolyte_exchange_current_density_Kim2011",
+        "origin_status": "upstream_implementation_function; original equations and fit data not independently audited"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Positive electrode exchange-current density [A.m-2]; retains the upstream particle/area/concentration convention",
+      "conditions": {
+        "reference_temperature_K": 298.15,
+        "resolved_source_electrolyte_reference_concentration_mol_m3": 1200.0
+      },
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
+        "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
+      ]
     }
   ]
 }

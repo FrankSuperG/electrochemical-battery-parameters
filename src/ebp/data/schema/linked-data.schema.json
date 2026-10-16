@@ -106,15 +106,27 @@
                 },
                 "variables": {
                   "type": "object",
-                  "required": [
-                    "c_e",
-                    "c_s_surf",
-                    "c_s_max",
-                    "T"
-                  ],
                   "additionalProperties": {
                     "type": "string"
-                  }
+                  },
+                  "oneOf": [
+                    {
+                      "required": [
+                        "c_e",
+                        "c_s_surf",
+                        "c_s_max",
+                        "T"
+                      ],
+                      "maxProperties": 4
+                    },
+                    {
+                      "required": [
+                        "sto",
+                        "T"
+                      ],
+                      "maxProperties": 2
+                    }
+                  ]
                 },
                 "domain": {
                   "type": "string"

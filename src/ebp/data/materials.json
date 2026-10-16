@@ -25,5 +25,57 @@
   "bpx-lfp18650-graphite": {
     "chemistry": "graphite",
     "description": "Electrode fit in the BPX example; supplier, batch, and commercial cell part number undisclosed."
+  },
+  "sintef-si-aq-1": {
+    "chemistry": "silicon",
+    "description": "SINTEF Si-AQ-1; processing route, composition/loading and specimen identity retained in experiment metadata. No commercial full-cell match established."
+  },
+  "sintef-sigr-aq-1": {
+    "chemistry": "silicon-graphite",
+    "description": "SINTEF SiGr-AQ-1; processing route, composition/loading and specimen identity retained in experiment metadata. No commercial full-cell match established."
+  },
+  "sintef-sigr-aq-2": {
+    "chemistry": "silicon-graphite",
+    "description": "SINTEF SiGr-AQ-2; processing route, composition/loading and specimen identity retained in experiment metadata. No commercial full-cell match established."
+  },
+  "sintef-lnmo-nmp-1": {
+    "chemistry": "LNMO",
+    "description": "SINTEF LNMO-NMP-1; processing route, composition/loading and specimen identity retained in experiment metadata. No commercial full-cell match established."
+  },
+  "sintef-nmc111-nmp-1": {
+    "chemistry": "NMC111",
+    "description": "SINTEF NMC111-NMP-1; processing route, composition/loading and specimen identity retained in experiment metadata. No commercial full-cell match established."
+  },
+  "sintef-nmc532-nmp-1": {
+    "chemistry": "NMC532",
+    "description": "SINTEF NMC532-NMP-1; processing route, composition/loading and specimen identity retained in experiment metadata. No commercial full-cell match established."
+  },
+  "nmc811-lgm50-chen2020-formula-material": {
+    "chemistry": "NMC811",
+    "description": "Same LG M50 model and Chen2020 study as the existing negative OCP and three full-cell test files. Identical characterization/validation specimen not established."
+  },
+  "marquis2019-graphite-ocp-material": {
+    "chemistry": "graphite",
+    "description": "Dualfoil1998 borrowed OCP implementation; no same-cell half-cell measurement match established; The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen."
+  },
+  "marquis2019-lco-ocp-material": {
+    "chemistry": "LCO",
+    "description": "Dualfoil1998 borrowed OCP implementation; no same-cell half-cell measurement match established; The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen."
+  },
+  "mohtat2020-graphite-ocp-material": {
+    "chemistry": "graphite",
+    "description": "Peyman MPM / Mohtat2020 implementation, as attributed by upstream function docstrings; The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch."
+  },
+  "mohtat2020-nmc532-ocp-material": {
+    "chemistry": "NMC532",
+    "description": "Peyman MPM / Mohtat2020 implementation, as attributed by upstream function docstrings; The implementation specifies a 5 Ah graphite/NMC532 pouch. Commercial manufacturer, part number, specimen mapping and matching raw full-cell files are not established in this release. SINTEF NMC532 half-cells are a separate source and are not assigned to this pouch."
+  },
+  "nca-kim2011-graphite-ocp-material": {
+    "chemistry": "graphite",
+    "description": "Kim2011 nominal-design implementation; A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned."
+  },
+  "nca-kim2011-nca-ocp-material": {
+    "chemistry": "NCA",
+    "description": "Kim2011 nominal-design implementation; A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned."
   }
 }

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 — 2026-10-16
+
+- Expanded to 43 OCP records across 10 material families, 228 other parameter records and 7 cell / parameter-set entries; retained 14 existing full-cell files.
+- Added 24 native C/50 branches from 12 SINTEF NMC111, NMC532, LNMO, silicon and silicon–graphite specimens, including two distinct SiGr formulations.
+- Added the LG M50 NMC811 positive OCP linked to the existing three same-model full-cell tests.
+- Added NMC532, LCO and NCA model expressions, plus 114 scalar/function inputs with conservative identity and borrowing labels.
+- Added stoichiometry/temperature diffusivity evaluation and source-value audits; made viewer materials and cell packages data-driven.
+- Corrected this project's historical author/committer names and configured future commits as FrankSuperG using the GitHub no-reply identity. File trees were unchanged by the metadata correction.
+
 ## 0.2.0 — 2026-10-16
 
 - Expanded to 12 OCP records, 114 other parameter records and 14 full-cell files.

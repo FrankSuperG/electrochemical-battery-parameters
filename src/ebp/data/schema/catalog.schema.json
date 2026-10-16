@@ -67,7 +67,15 @@
         "material": {
           "enum": [
             "LFP",
-            "graphite"
+            "graphite",
+            "NMC111",
+            "NMC532",
+            "NMC811",
+            "LNMO",
+            "silicon",
+            "silicon-graphite",
+            "LCO",
+            "NCA"
           ]
         },
         "material_id": {

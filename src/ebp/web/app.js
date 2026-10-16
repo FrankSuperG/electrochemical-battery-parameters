@@ -12,7 +12,7 @@ const sourceLinks = ids => ids.map(id => `<a href="${safeUrl(data.sources[id].ur
 const number = value => Math.abs(value) !== 0 && (Math.abs(value) < .001 || Math.abs(value) >= 1e5) ? value.toExponential(5) : String(value);
 
 $("total").textContent = data.records.length;
-$("stats").innerHTML = [[data.records.filter(r=>r.representation.kind==="table").length,"Measured OCP branches · 4 specimens"],[data.records.filter(r=>r.representation.kind==="expression").length,"OCP expressions"],[data.parameters.length,"Model parameter records"],[data.full_cell_tests.length,"Full-cell experiment files"]].map(([n,label])=>`<div class="stat"><strong>${n}</strong><span>${esc(label)}</span></div>`).join("");
+$("stats").innerHTML = [[data.records.filter(r=>r.representation.kind==="table").length,`Measured OCP branches · ${Object.keys(data.experiments).length} specimens`],[data.records.filter(r=>r.representation.kind==="expression").length,"OCP expressions"],[data.parameters.length,"Model parameter records"],[data.full_cell_tests.length,"Full-cell experiment files"]].map(([n,label])=>`<div class="stat"><strong>${n}</strong><span>${esc(label)}</span></div>`).join("");
 
 function filtered() {
   const query = $("query").value.toLowerCase().trim();
@@ -61,7 +61,11 @@ function renderDetail() {
 }
 $("source-cards").innerHTML=Object.entries(data.sources).map(([id,s])=>`<article class="source-card"><span class="tag">${esc(s.kind)} · ${esc(s.year)}</span><h3>${esc(s.title)}</h3><p>${esc(s.authors.join(", "))}</p><p>${esc(s.role)}</p><a href="${safeUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(id)} ↗</a></article>`).join("");
 
-const cellOrder=["a123-amp20m1hd-a","a123-high-power-pouch-9ah","bpx-lfp-18650-2ah-undisclosed","lg-m50"];
+const preferredCells=["a123-amp20m1hd-a","a123-high-power-pouch-9ah","bpx-lfp-18650-2ah-undisclosed","lg-m50"];
+const cellOrder=[...preferredCells.filter(id=>data.cells[id]),...Object.keys(data.cells).filter(id=>!preferredCells.includes(id)).sort()];
+const materialNames=[...new Set(data.records.map(r=>r.material))].sort((a,b)=>a.localeCompare(b));
+$("material").innerHTML='<option value="">All materials</option>'+materialNames.map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join("");
+$("material").value="LFP";
 $("cell-select").innerHTML=cellOrder.map(id=>`<option value="${id}">${esc(data.cells[id].display_name)}</option>`).join("");
 function renderCell() {
   const id=$("cell-select").value,cell=data.cells[id],parameters=data.parameters.filter(p=>p.cell_id===id),tests=data.full_cell_tests.filter(t=>t.cell_id===id);
@@ -82,10 +86,10 @@ function renderParameters() {
   $("parameter-count").textContent=`${rows.length} records`;
   $("parameter-rows").innerHTML=rows.map(p=>`<tr><td><button data-parameter="${esc(p.id)}">${esc(p.name)}</button>${p.conditions?.cell_SOC_fraction!==undefined?`<small class="condition">Cell SOC ${(p.conditions.cell_SOC_fraction*100).toFixed(0)}%</small>`:""}</td><td>${p.representation.kind==="scalar"?esc(number(p.representation.value)):"Function"}</td><td>${esc(p.unit)}</td></tr>`).join("")||'<tr><td colspan="3">No parameter values imported for this family. See coverage gaps above.</td></tr>';
 }
-$("parameter-rows").addEventListener("click",event=>{const button=event.target.closest("[data-parameter]");if(!button)return;const p=data.parameters.find(p=>p.id===button.dataset.parameter);$("parameter-detail").innerHTML=`<b>${esc(p.name)}</b><p>${esc(p.definition||p.name)}</p><p>Origin: ${esc(p.provenance.origin_status)}</p><code>${esc(p.representation.kind==="expression"?p.representation.expression:p.provenance.location)}</code><p>Conditions: ${esc(JSON.stringify(p.conditions||{}))}</p><p>${sourceLinks(p.source_ids)}</p><p>${p.limitations.map(esc).join("<br>")}</p>`;});
+$("parameter-rows").addEventListener("click",event=>{const button=event.target.closest("[data-parameter]");if(!button)return;const p=data.parameters.find(p=>p.id===button.dataset.parameter);$("parameter-detail").innerHTML=`<b>${esc(p.name)}</b><p>${esc(p.definition||p.name)}</p><p>Origin: ${esc(p.provenance.origin_status)}</p><code>${esc(p.representation.kind==="expression"?p.representation.expression:p.provenance.location)}</code>${p.representation.kind==="expression"?`<p>Inputs: ${esc(JSON.stringify(p.representation.variables))}</p><p>Domain: ${esc(p.representation.domain)}</p>`:""}<p>Conditions: ${esc(JSON.stringify(p.conditions||{}))}</p><p>${sourceLinks(p.source_ids)}</p><p>${p.limitations.map(esc).join("<br>")}</p>`;});
 function renderFullCell() {
   const test=data.full_cell_tests.find(t=>t.id===$("test-sample").value);
-  if(!test){$("test-description").textContent="No matching raw full-cell experiments supplied for this parameter example.";$("fullcell-chart").innerHTML='<p class="empty">Full-cell test coverage gap</p>';$("test-downloads").innerHTML="";$("test-note").textContent="No other cell's tests are substituted.";return;}
+  if(!test){$("test-description").textContent="No matching raw full-cell experiments imported for this cell or parameter set.";$("fullcell-chart").innerHTML='<p class="empty">Full-cell test coverage gap</p>';$("test-downloads").innerHTML="";$("test-note").textContent="This package retains an explicit test coverage gap.";return;}
   $("test-description").textContent=test.protocol+". Measured voltage only; no model prediction overlay.";
   $("fullcell-chart").innerHTML=plot(test.preview_segments,"Time from trace / segment start / h","Full-cell voltage / V");
   const asset=data.assets[test.asset_id];

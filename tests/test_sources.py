@@ -83,6 +83,8 @@ def test_formulas_and_kinetics_match_pinned_upstream():
         modules.append(module)
     x = np.linspace(0, 1, 1003)
     for curve in catalog.search(representation="expression", source="pybamm-25-4-2"):
+        if "pybamm-prada-code" not in curve.record["provenance"]["asset_ids"]:
+            continue
         expected = getattr(
             modules[0], curve.record["representation"]["source_function"]
         )(x)

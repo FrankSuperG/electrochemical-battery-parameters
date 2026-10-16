@@ -22,7 +22,7 @@ The authoritative catalog is `src/ebp/data/`, distributed inside the Python pack
 - Table CSVs retain potential, capacity, current, time and upstream row coordinates. Linear interpolation is default; PCHIP is optional. Formula CSVs are generated samples and remain labeled as such.
 - Unknown numeric temperatures are `null`. A model reference temperature is distinguished from a verified measurement temperature.
 
-Parameters use `representation.kind=scalar` or a restricted expression with named inputs. `conditions` records cell SOC and derivation assumptions where known. `definition` preserves distinctions such as volumetric versus surface kinetics, effective versus intrinsic transport, and heat-transfer velocity versus a heat-transfer coefficient.
+Parameters use `representation.kind=scalar` or a restricted expression with named inputs. Kinetic expressions use `c_e`, `c_s_surf`, `c_s_max`, `T`; particle-diffusivity expressions use `sto`, `T`. Both retain source conventions and reject non-finite inputs; diffusivity requires 0≤sto≤1 and T>0. Numerical domains do not establish experimental validity. `conditions` records cell SOC and derivation assumptions where known. `definition` preserves distinctions such as volumetric versus surface kinetics, effective versus intrinsic transport, and heat-transfer velocity versus a heat-transfer coefficient.
 
 ## Matching levels
 
@@ -31,6 +31,7 @@ Parameters use `representation.kind=scalar` or a restricted expression with name
 | `material_only` | Material/electrode identity; no commercial cell link |
 | `unmatched` | A parameter example exists, but commercial model and raw-test match are unresolved |
 | `same_study_cell_family` | Explicit study association and manufacturer/capacity/format; part number unresolved |
+| `parameter_set_only` | Parameters and OCP share a named implementation; no matched raw test or same-specimen measurement claim |
 | `same_model_same_study` | Exact model named in the paper and linked experiment deposit; does not imply identical specimen |
 
 OCP `cell_link.relationship=same_parameter_set` means a fit is stored in the same BPX example. It does not establish a commercial-model identity. Read the cell's `identity_level` and `match_level` together. No record currently establishes an identical characterization/validation specimen or independent validation by this project.
@@ -44,3 +45,9 @@ Current is charge positive. LG originals contain magnitude + mode, so normalizat
 For external MAT/ZIP originals, `path=null`; `asset_id` identifies the source download and checksum. `normalized_path` identifies the packaged CSV and `normalized_sha256` verifies it. For packaged Maccor originals, `path` and the asset checksum verify the original bytes as well. A local curated evidence asset's `digest_scope` explicitly names the transcription; its hash does not claim to hash publisher HTML.
 
 Cell package downloads are scoped by `cell_id`. They contain that cell's OCP metadata, parameters and test links, their source records and relevant assets. Empty packages expose gaps rather than silently substituting another model's data.
+
+## Material families and cell joins
+
+The v0.3 families are LFP, graphite, NMC111, NMC532, NMC811, LNMO, silicon, silicon-graphite, LCO and NCA. Positive/negative electrode roles are explicit per record; material names alone do not determine the role. Different SiGr formulations retain separate material IDs and source labels.
+
+A shared family such as NMC532 does not join a SINTEF half-cell to the Mohtat pouch model. Marquis2019 OCPs use `relationship=surrogate` because their function origin is borrowed Dualfoil data. The named Kokam model remains the implementation's model association, not proof of same-cell characterization. NCA is a nominal design with no commercial model assigned. The NCA source's positive-OCP docstring says Graphite; classification follows the positive dictionary entry and NCA set context, with that source issue retained in limitations.

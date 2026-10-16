@@ -30,14 +30,19 @@ class Parameter:
         values = {k: np.asarray(v, dtype=float) for k, v in variables.items()}
         if any(not np.all(np.isfinite(v)) for v in values.values()):
             raise ValueError("Inputs must be finite")
-        if (
+        concentration_invalid = "c_e" in values and (
             np.any(values["c_e"] < 0)
             or np.any(values["c_s_max"] <= 0)
             or np.any(values["c_s_surf"] < 0)
             or np.any(values["c_s_surf"] > values["c_s_max"])
-            or np.any(values["T"] <= 0)
-        ):
-            raise ValueError("Inputs violate the stated concentration or temperature domain")
+        )
+        stoichiometry_invalid = "sto" in values and (
+            np.any(values["sto"] < 0) or np.any(values["sto"] > 1)
+        )
+        if concentration_invalid or stoichiometry_invalid or np.any(values["T"] <= 0):
+            raise ValueError(
+                "Inputs violate the stated concentration or temperature domain"
+            )
         result = evaluate_named(rep["expression"], values)
         if not np.all(np.isfinite(result)):
             raise ValueError("Function returned a non-finite result")
