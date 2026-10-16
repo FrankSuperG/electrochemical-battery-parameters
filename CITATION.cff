@@ -5,6 +5,9 @@ type: software
 version: 0.5.0
 date-released: 2026-10-16
 authors:
-  - name: FrankSuperG
+  - family-names: Guo
+    given-names: Feng
+    affiliation: VITO / UHasselt
+    email: feng.guo@vito.be
 repository-code: "https://github.com/FrankSuperG/electrochemical-battery-parameters"
 license: MIT

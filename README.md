@@ -13,6 +13,8 @@ E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2
 
 **v0.5.0: 49 OCP records · 11 material families · 337 other parameter records · 25 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The repository is private. The viewer runs locally; no public hosting workflow is configured.
 
+**Get involved:** [Contribute data](templates/README.md) · [Suggest a source](.github/ISSUE_TEMPLATE/source-suggestion.md) · [Research collaboration](#maintainer-and-collaboration)
+
 ## Material coverage
 
 | Material family | Measured branches | Published tables | Expressions | Identity / interpretation |
@@ -184,6 +186,20 @@ scripts/lfp_assets.json   Pinned LFP source assets
 
 See [data definitions](docs/DATA_MODEL.md), [curation and match decisions](docs/CURATION.md), [roadmap](docs/ROADMAP.md) and [contribution guide](CONTRIBUTING.md).
 
+## Contribute data
+
+Help extend the library with OCP curves, diffusion and kinetic parameters, other electrochemical inputs, and matching full-cell tests. **Partial datasets and source suggestions are welcome.** Start with the [data contribution template](templates/data-contribution.md) and [CSV templates](templates/README.md), or use the [short source suggestion template](.github/ISSUE_TEMPLATE/source-suggestion.md) to recommend a paper or dataset. The templates ask for sources, reuse terms, definitions, cell-match evidence and missing items; they do not require an already complete parameter set.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and import workflow. While this repository is private, invited collaborators can open issues and pull requests; other researchers can contact the maintainer by email. Repository visibility is unchanged.
+
+## Maintainer and collaboration
+
+**Feng Guo** conducts battery research at VITO and UHasselt in Belgium as an FWO Senior Postdoctoral Fellow. He works on electrochemical models for battery management, with interests in parameter identification, state estimation, fault diagnosis and control. He develops [CPG-SPMT](https://github.com/FrankSuperG/CPG-SPMT) and maintains this parameter library and the [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas).
+
+Collaboration is welcome on electrochemical model development and validation, parameter identification, battery testing, data sharing and open-source research tools. To discuss a contribution or research collaboration, contact **[feng.guo@vito.be](mailto:feng.guo@vito.be)**.
+
+[Google Scholar](https://scholar.google.com/citations?user=z2SHUxkAAAAJ&hl=en) · [Academic homepage](https://franksuperg.github.io/feng-guo-academic/) · [GitHub](https://github.com/FrankSuperG)
+
 ## Attribution and licenses
 
 Cite the scientific sources for the records you use and retain upstream notices. Project code, documentation and logo use MIT; experimental data and imported implementations keep their source licenses. See [DATA_LICENSES.md](DATA_LICENSES.md) and [CITATION.cff](CITATION.cff).
@@ -200,9 +216,8 @@ Cite the scientific sources for the records you use and retain upstream notices.
 | [BPX example](https://github.com/FaradayInstitution/BPX/blob/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json) | LFP parameter example · MIT |
 | [Lin et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/), [data](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513), [code](https://github.com/Battery-Intelligence-Lab/multiscale-coupling/tree/dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4) | AMP20 fitted parameters / observations · CC BY 4.0; code · BSD-2-Clause |
 | [Kumtepeli et al., 2026](https://doi.org/10.1016/j.jpowsour.2025.238764), [Oxford data](https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758) | 9 Ah study family / observations · CC BY 4.0 data |
-
-The README identity is a companion to [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas); its generation brief is recorded in [assets/README.md](assets/README.md).
-
 | [Ecker I](https://doi.org/10.1149/2.0551509jes), [Ecker II](https://doi.org/10.1149/2.0541509jes), [Richardson2020](https://doi.org/10.1016/j.electacta.2020.135862) | Kokam characterization, validation and fitted/digitized curve lineage |
 | [Ai2020](https://doi.org/10.1149/2.0122001JES), [Rieger2016](https://doi.org/10.1149/2.0441608jes) | Enertech parameterization and experimental lineage; borrowing remains explicit |
 | [PyBaMM data v1.0.2](https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.2) | Versioned experimental redistribution and published OCP tables · BSD-3-Clause; separate notice retained |
+
+The README identity is a companion to [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas); its generation brief is recorded in [assets/README.md](assets/README.md).
