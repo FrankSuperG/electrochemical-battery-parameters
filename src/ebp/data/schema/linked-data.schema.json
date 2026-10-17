@@ -135,6 +135,82 @@
                   "type": "number"
                 }
               }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "path",
+                "sha256",
+                "point_count",
+                "x",
+                "y_column",
+                "default_interpolation"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "table"
+                },
+                "path": {
+                  "type": "string",
+                  "pattern": "^parameter_tables/[a-z0-9-]+\\.csv$"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "point_count": {
+                  "type": "integer",
+                  "minimum": 2
+                },
+                "x": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "column",
+                    "variable",
+                    "unit",
+                    "kind",
+                    "definition",
+                    "domain"
+                  ],
+                  "properties": {
+                    "column": {
+                      "type": "string"
+                    },
+                    "variable": {
+                      "type": "string"
+                    },
+                    "unit": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "enum": [
+                        "source_electrode_soc",
+                        "source_reported_stoichiometry"
+                      ]
+                    },
+                    "definition": {
+                      "type": "string"
+                    },
+                    "domain": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 2,
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "y_column": {
+                  "type": "string"
+                },
+                "default_interpolation": {
+                  "const": "linear"
+                }
+              }
             }
           ]
         },

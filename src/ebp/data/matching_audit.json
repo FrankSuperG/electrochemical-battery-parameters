@@ -1122,6 +1122,117 @@
         "Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved",
         "Standalone CC charge/discharge observations not deposited in the reviewed file set"
       ]
+    },
+    "lg-mj1-dlr-sintef": {
+      "display_name": "LG MJ1 | DLR-SINTEF harvested-electrode characterization",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "mj1-negative-ocp-charging",
+            "mj1-negative-ocp-discharging",
+            "mj1-positive-ocp-charging",
+            "mj1-positive-ocp-discharging"
+          ],
+          "source_ids": [
+            "kuhn-2026-workflows",
+            "mj1-zenodo-15497193"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Four laboratory pseudo-OCP tables, lithium reference; native reported coordinate requires explicit model balancing.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved",
+            "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+            "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "mj1-negative-diffusion-activation-energy",
+            "mj1-positive-diffusion-activation-energy",
+            "mj1-lab-negative-di-discharging",
+            "mj1-lab-negative-di-charging",
+            "mj1-lab-positive-di-discharging",
+            "mj1-lab-positive-di-charging",
+            "mj1-gitt-negative-spme-delithiation",
+            "mj1-gitt-negative-dfn-delithiation",
+            "mj1-gitt-negative-spm-delithiation",
+            "mj1-gitt-negative-spme-lithiation",
+            "mj1-gitt-negative-dfn-lithiation",
+            "mj1-gitt-negative-spm-lithiation",
+            "mj1-gitt-positive-spme-lithiation",
+            "mj1-gitt-positive-spme-delithiation",
+            "mj1-gitt-positive-dfn-lithiation",
+            "mj1-gitt-positive-spm-lithiation",
+            "mj1-gitt-positive-dfn-delithiation",
+            "mj1-gitt-positive-spm-delithiation"
+          ],
+          "source_ids": [
+            "kuhn-2026-workflows",
+            "mj1-zenodo-15497193",
+            "mj1-zenodo-15528177",
+            "mj1-zenodo-15538164"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Four workbook GITT tables, twelve model/direction-dependent GITT fit tables with source error bounds, and two SOC-specific activation energies.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved",
+            "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+            "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "mj1-negative-kinetic-activation-energy",
+            "mj1-positive-kinetic-activation-energy",
+            "mj1-lab-negative-i0-discharging",
+            "mj1-lab-negative-i0-charging",
+            "mj1-lab-positive-i0-discharging",
+            "mj1-lab-positive-i0-charging"
+          ],
+          "source_ids": [
+            "kuhn-2026-workflows",
+            "mj1-zenodo-15497193"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Four EIS-derived exchange-current tables and two SOC-specific activation energies; area-basis and concentration/temperature extension remain unresolved.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved",
+            "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+            "Source SOC/stoichiometry coordinates need explicit balancing before model use",
+            "Exchange-current active/geometric area convention not independently established"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No intact commercial-cell test verified. Structured anode GITT inspected: t/I/working-versus-Li voltage only, no measured T or intact-cell CC cycle.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+        "Exchange-current active/geometric area convention not independently established",
+        "Identical characterization/validation specimen not established",
+        "Independent electrochemical model validation not performed",
+        "Independent full-cell model reproduction not performed",
+        "Matching full-cell charge/discharge observations not imported",
+        "No same-study intact commercial MJ1 full-cell I/V/T validation series verified",
+        "No standalone intact-cell constant-current charge/discharge observations imported",
+        "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+      ]
     }
   },
   "unmatched_material_records": [
@@ -1262,6 +1373,8 @@
     "ISU-UConn laboratory CR2032 cells are not matched to a commercial A123 model or to the separate APR18650M1B aging study.",
     "Jahn2024 modeled single-string OCPn arrays are not labeled raw measured OCP; ECM resistances are not imported as DFN diffusion/kinetic properties.",
     "LG M50LT/Hallemans2025 is not Chen2020 LG M50; no cross-model OCP or CC data join.",
-    "Hallemans2025 grouped times/relative porosity are not intrinsic diffusivity, reaction-rate constant or absolute porosity."
+    "Hallemans2025 grouped times/relative porosity are not intrinsic diffusivity, reaction-rate constant or absolute porosity.",
+    "MJ1 three-electrode working-versus-Li GITT is not intact commercial-cell terminal voltage or a full-cell validation trace.",
+    "MJ1 simulation substitutions, 260 um laboratory separator, inconsistent concentration units/initial states, and other-model tests are not imported as intact-cell measurements."
   ]
 }

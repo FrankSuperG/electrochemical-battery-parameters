@@ -76,7 +76,9 @@
             "silicon-graphite",
             "LCO",
             "NCA",
-            "NCO"
+            "NCO",
+            "NMC",
+            "Graphite-SiOx"
           ]
         },
         "material_id": {
@@ -144,7 +146,8 @@
               "enum": [
                 "stoichiometry",
                 "normalized_branch_capacity",
-                "model_soc"
+                "model_soc",
+                "source_reported_stoichiometry"
               ]
             },
             "symbol": {
@@ -343,7 +346,8 @@
               "enum": [
                 "upstream_stoichiometry",
                 "relative_capacity_only",
-                "model_coordinate"
+                "model_coordinate",
+                "source_reported_stoichiometry"
               ]
             },
             "raw_data": {

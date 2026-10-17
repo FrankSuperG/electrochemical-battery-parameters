@@ -10,8 +10,8 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
     build_site(c, tmp_path)
     script = (tmp_path / "catalog.js").read_text()
     data = json.loads(script.removeprefix("window.EBP_DATA = ").removesuffix(";\n"))
-    assert len(data["records"]) == 55
-    assert len(data["parameters"]) == 355
+    assert len(data["records"]) == 59
+    assert len(data["parameters"]) == 397
     assert len(data["full_cell_tests"]) == 61
     for record in data["records"]:
         downloaded = json.loads(

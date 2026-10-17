@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "release": "0.7.0",
+  "release": "0.8.0",
   "records": [
     {
       "id": "lfp-afshar2017-formula",
@@ -4501,6 +4501,330 @@
         "OCPn is approximated and parameterized from electrode data; it cannot be measured directly (paper Parameterization). These arrays are not raw GITT/half-cell measurements.",
         "Model SOC/DOL is not established as absolute stoichiometry. LFP potential rises with this coordinate. Geometry, balancing and coordinate orientation need explicit review before DFN/SPM/SPMe reuse.",
         "No intrinsic diffusivity or Butler-Volmer kinetics inferred from ECM quantities."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "mj1-negative-ocp-charging",
+      "version": "1",
+      "title": "LG MJ1 Graphite-SiOx | source charging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "Graphite-SiOx",
+      "material_id": "mj1-negative-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-negative-ocp-charging.csv",
+        "sha256": "9881d3235067ecb9895faf6ee471504b56585317b0b7502b67881dd09755c34d",
+        "point_count": 100001,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-negative-charging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_graphite_silicon_oxide_charging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "charging",
+          "source_rows": 226585,
+          "nonfinite_rows_omitted": 0,
+          "duplicate_coordinate_rows_omitted": 126584,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "mj1-negative-ocp-discharging",
+      "version": "1",
+      "title": "LG MJ1 Graphite-SiOx | source discharging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "Graphite-SiOx",
+      "material_id": "mj1-negative-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-negative-ocp-discharging.csv",
+        "sha256": "69e0874a2d9f8a7274daade3a229100306585d93bf81ca828365e6dc940aabfb",
+        "point_count": 100001,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-negative-discharging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "discharging",
+          "source_rows": 226308,
+          "nonfinite_rows_omitted": 0,
+          "duplicate_coordinate_rows_omitted": 126307,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "mj1-positive-ocp-charging",
+      "version": "1",
+      "title": "LG MJ1 NMC | source charging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "NMC",
+      "material_id": "mj1-positive-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.21,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-positive-ocp-charging.csv",
+        "sha256": "e13ebda17d89e039e27679a483f97aca8819f343fcc224b9419b8d96ccc4ba72",
+        "point_count": 257898,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-positive-charging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_nmc_charging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "charging",
+          "source_rows": 259300,
+          "nonfinite_rows_omitted": 1402,
+          "duplicate_coordinate_rows_omitted": 0,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "mj1-positive-ocp-discharging",
+      "version": "1",
+      "title": "LG MJ1 NMC | source discharging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "NMC",
+      "material_id": "mj1-positive-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.21,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-positive-ocp-discharging.csv",
+        "sha256": "656bab715d2c459493d72e941397ff35037860b5770993daca907d5807d50885",
+        "point_count": 257898,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-positive-discharging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_nmc_discharging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "discharging",
+          "source_rows": 257898,
+          "nonfinite_rows_omitted": 0,
+          "duplicate_coordinate_rows_omitted": 0,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
       ],
       "license": "CC-BY-4.0"
     }

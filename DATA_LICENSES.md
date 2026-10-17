@@ -3,6 +3,43 @@
 The root MIT license applies to original project code and documentation, not to
 third-party experimental observations or formula implementations.
 
+Python distribution metadata lists `MIT AND BSD-3-Clause AND CC-BY-4.0` for the
+combined shipped contents. This does not relicense individual files: original
+project software remains MIT and each data/implementation record keeps its
+source-specific terms. Other external sources and their notices remain scoped
+to the provenance identified below.
+
+## LG MJ1 / DLR-SINTEF addition in v0.8
+
+Selected laboratory workbook cells, original Parquet, JSON/JSON-LD and Python evidence files are
+from Yannick Kuhn, Bhawna Rana, Micha Philipp, Christina Schmitt, Roberto Scipioni,
+Eibar Flores, Dennis Kopljar, Simon Clark, Arnulf Latz and Birger Horstmann.
+The fixed Zenodo records under [collection 15407849](https://zenodo.org/records/15407849)
+explicitly license these datasets CC BY 4.0. Packaged API metadata and
+`scripts/mj1_assets.json` retain exact record/file URLs, license evidence,
+published MD5 and pinned SHA-256. The existing CC BY 4.0 license text is retained.
+
+Changes: extract finite pseudo-OCP nodes with original Parquet row indices;
+retain first occurrence per duplicate coordinate and omit missing coordinates;
+extract numeric workbook D/i0 cells, omitting source NA/blanks rather than
+adopting processed zero substitutions; convert cm2/s to m2/s and mA/cm2 to A/m2;
+retain model/direction-specific diffusion values and source error bounds; extract
+an explicit scalar selection with units and origins. No voltage smoothing,
+resampling, source-code execution or silent scientific correction is applied.
+Sources have not endorsed this catalog.
+
+The complete MJ1 workbook remains external because its OCV sheet also contains
+separately attributed literature silicon curves. No CC BY 4.0 sublicense is
+asserted for those columns. Only a scoped selected-cell JSON is redistributed;
+its digest identifies our derivative, while embedded source MD5/SHA-256 and
+Excel addresses identify the original. No silicon literature OCV samples are
+curated or packaged by this addition.
+
+The associated article DOI 10.1039/D5DD00247H is separately labeled CC BY 3.0.
+Article images/text are not repackaged as datasets. The inspected electrode GITT
+tests remain external source links and are not relabeled full-cell observations.
+See [MJ1 review](docs/LG_MJ1.md) for source conflicts, assembly and matching limits.
+
 ## LG M50LT / Hallemans2025 addition in v0.7
 
 Original whole-cell EIS and drive-cycle MATs, the fitted-result MAT and Fig10/Fig11

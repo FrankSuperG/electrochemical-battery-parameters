@@ -39,6 +39,9 @@ not an automatic import format. Maintainers review and map them to the catalog.
    temperature, SOC/stoichiometry, units, independent variables and validity
    domain. For kinetics, retain the full equation and area/concentration
    convention. Distinguish intrinsic, effective and grouped parameters.
+   Native parameter tables should state their exact coordinate, source missing
+   values, interpolation domain and any error-bound meaning. Keep model and
+   direction alternatives separate; do not turn missing cells into zero.
 4. **Originals and processing:** source hashes, original file/member and row
    references, every conversion or extraction step and a reproducible script
    when processing is needed. Keep unmodified source bytes where reuse permits.

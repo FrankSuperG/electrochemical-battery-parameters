@@ -1,0 +1,1395 @@
+{
+    "@context": "https://w3id.org/emmo/domain/battery/context",
+    "@graph": [
+        {
+            "@type": "BatteryCell",
+            "@id": "urn:uuid:6acf74ee-5056-4a2a-a1fe-1ee4e0d62eb8",
+            "schema:manufacturer": {
+                "@id": "https://www.wikidata.org/wiki/Q486976",
+                "schema:name": "LG Chem"
+            },
+            "schema:model": "MJ1",
+            "schema:name": "MJ1",
+            "hasIECCode": "INR18650",
+            "schema:image": [
+                {
+                    "@id": "urn:uuid:d771a643-d416-4006-96b7-5069048572be"
+                },
+                {
+                    "@id": "urn:uuid:3277a4da-9083-40ab-9805-cbdba199ae81"
+                },
+                {
+                    "@id": "urn:uuid:7e1e267c-89f1-4465-99e0-5b61b0a04097"
+                },
+                {
+                    "@id": "urn:uuid:a83dbb71-fdbd-4e62-b309-0067ae3a340b"
+                },
+                {
+                    "@id": "urn:uuid:0580a06d-b4a5-4f15-b2b4-d78779a1a9b8"
+                },
+                {
+                    "@id": "urn:uuid:ea382c8a-ae6f-447c-87d4-034560da911f"
+                },
+                {
+                    "@id": "urn:uuid:b1acaef1-f4bf-45db-9043-e04e3a525c86"
+                },
+                {
+                    "@id": "urn:uuid:8b7b6c98-2b9f-46eb-97ac-18e813ad3236"
+                },
+                {
+                    "@id": "urn:uuid:67bcacb6-6597-4564-83d8-a666c108b52a"
+                },
+                {
+                    "@id": "urn:uuid:e6b0b94b-22a8-4261-994a-732308ee4db2"
+                },
+                {
+                    "@id": "urn:uuid:b18e3133-bf8e-4b6d-a93e-0de9bafb790d"
+                },
+                {
+                    "@id": "urn:uuid:8843a5f1-608f-4646-924a-a92ac22135ee"
+                },
+                {
+                    "@id": "urn:uuid:53d0242d-7db8-4322-9fff-b1bb323bb578"
+                },
+                {
+                    "@id": "urn:uuid:49107bd6-7f62-485f-803a-e4264243e8b7"
+                }
+            ],
+            "hasProperty": [
+                {
+                    "@type": "NominalVoltage",
+                    "hasNumericalPart": {
+                        "@type": "RealData",
+                        "hasNumberValue": 3.635
+                    },
+                    "hasMeasurementUnit": "emmo:Volt"
+                },
+                {
+                    "@type": "NominalCapacity",
+                    "hasNumericalPart": {
+                        "@type": "RealData",
+                        "hasNumberValue": 3.5
+                    },
+                    "hasMeasurementUnit": "emmo:AmpereHour"
+                }
+            ],
+            "hasCase": {
+                "@type": "R18650"
+            },
+            "hasPositiveElectrode": {
+                "@type": "Electrode",
+                "schema:image": [
+                    {
+                        "@id": "urn:uuid:7e1e267c-89f1-4465-99e0-5b61b0a04097"
+                    },
+                    {
+                        "@id": "urn:uuid:67bcacb6-6597-4564-83d8-a666c108b52a"
+                    },
+                    {
+                        "@id": "urn:uuid:e6b0b94b-22a8-4261-994a-732308ee4db2"
+                    },
+                    {
+                        "@id": "urn:uuid:8843a5f1-608f-4646-924a-a92ac22135ee"
+                    }
+                ],
+                "hasProperty": [
+                    {
+                        "@type": "Area",
+                        "hasNumericalPart": {
+                            "@type": "RealData",
+                            "hasNumberValue": 735
+                        },
+                        "hasMeasurementUnit": "emmo:SquareCentiMetre"
+                    }
+                ],
+                "hasCoating": {
+                    "@type": "Coating",
+                    "hasProperty": [
+                        {
+                            "@type": "Thickness",
+                            "hasNumericalPart": {
+                                "@type": "RealData",
+                                "hasNumberValue": 74
+                            },
+                            "hasMeasurementUnit": "emmo:MicroMetre",
+                            "@reverse": {
+                                "hasOutput": {
+                                    "@type": "ScanningElectronMicroscopy"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "Porosity",
+                            "hasNumericalPart": {
+                                "@type": "RealData",
+                                "hasNumberValue": 0.23
+                            },
+                            "hasMeasurementUnit": "emmo:UnitOne"
+                        },
+                        {
+                            "@type": "Tortuosity",
+                            "hasNumericalPart": {
+                                "@type": "RealData",
+                                "hasNumberValue": 2.5
+                            },
+                            "hasMeasurementUnit": "emmo:UnitOne"
+                        },
+                        {
+                            "@type": "BruggemanCoefficient",
+                            "hasNumericalPart": {
+                                "@type": "RealData",
+                                "hasNumberValue": 0.6
+                            },
+                            "hasMeasurementUnit": "emmo:UnitOne",
+                            "@reverse": {
+                                "hasOutput": {
+                                    "@type": "ElectrochemicalImpedanceSpectroscopy"
+                                }
+                            }
+                        }
+                    ],
+                    "hasActiveMaterial": {
+                        "@id": "urn:uuid:9624bef5-efc5-4636-affb-02c1a403f0a8"
+                    }
+                }
+            },
+            "hasNegativeElectrode": {
+                "@type": "Electrode",
+                "schema:image": [
+                    {
+                        "@id": "urn:uuid:7e1e267c-89f1-4465-99e0-5b61b0a04097"
+                    },
+                    {
+                        "@id": "urn:uuid:a83dbb71-fdbd-4e62-b309-0067ae3a340b"
+                    },
+                    {
+                        "@id": "urn:uuid:0580a06d-b4a5-4f15-b2b4-d78779a1a9b8"
+                    },
+                    {
+                        "@id": "urn:uuid:8b7b6c98-2b9f-46eb-97ac-18e813ad3236"
+                    }
+                ],
+                "hasCoating": {
+                    "@type": "Coating",
+                    "hasActiveMaterial": [
+                        {
+                            "@id": "urn:uuid:8ce9ccf3-86ec-41e4-86f6-0b88064f3325"
+                        },
+                        {
+                            "@id": "urn:uuid:ddc3b971-216d-4303-b1e4-69095fd5c9d6"
+                        }
+                    ]
+                }
+            },
+            "hasElectrolyte": {
+                "@id": "urn:uuid:11c1faf5-6d0c-4409-952e-15055b50d3a8"
+            },
+            "hasSeparator": {
+                "@id": "urn:uuid:ec4036bf-408d-41e7-b502-79f7aa803fde",
+                "@type": "Separator",
+                "schema:image": [
+                    {
+                        "@id": "urn:uuid:53d0242d-7db8-4322-9fff-b1bb323bb578"
+                    },
+                    {
+                        "@id": "urn:uuid:49107bd6-7f62-485f-803a-e4264243e8b7"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "BatteryHalfCell",
+            "@id": "urn:uuid:2254e5d7-1013-4079-9447-75f4453f833e",
+            "schema:name": "Graphite-Lithium Half Cell",
+            "hasWorkingElectrode": {
+                "@type": "Electrode",
+                "hasCoating": {
+                    "@type": "Coating",
+                    "hasActiveMaterial": {
+                        "@id": "urn:uuid:8ce9ccf3-86ec-41e4-86f6-0b88064f3325"
+                    }
+                }
+            },
+            "hasCounterElectrode": {
+                "@type": "Electrode",
+                "hasActiveMaterial": {
+                    "@id": "urn:uuid:8a2997ae-12d9-431a-94e9-cb817abff405"
+                }
+            },
+            "hasElectrolyte": {
+                "@id": "urn:uuid:11c1faf5-6d0c-4409-952e-15055b50d3a8"
+            }
+        },
+        {
+            "@type": "BatteryHalfCell",
+            "@id": "urn:uuid:18b35fe9-828c-4b0b-b674-8ee1d42c8cff",
+            "schema:name": "NMC-Lithium Half Cell",
+            "hasWorkingElectrode": {
+                "@type": "Electrode",
+                "hasCoating": {
+                    "@type": "Coating",
+                    "hasActiveMaterial": {
+                        "@id": "urn:uuid:9624bef5-efc5-4636-affb-02c1a403f0a8"
+                    }
+                }
+            },
+            "hasCounterElectrode": {
+                "@type": "Electrode",
+                "hasActiveMaterial": {
+                    "@id": "urn:uuid:8a2997ae-12d9-431a-94e9-cb817abff405"
+                }
+            },
+            "hasElectrolyte": {
+                "@id": "urn:uuid:11c1faf5-6d0c-4409-952e-15055b50d3a8"
+            }
+        },
+        {
+            "@type": "Graphite",
+            "@id": "urn:uuid:8ce9ccf3-86ec-41e4-86f6-0b88064f3325"
+        },
+        {
+            "@type": "SiliconOxide",
+            "@id": "urn:uuid:ddc3b971-216d-4303-b1e4-69095fd5c9d6"
+        },
+        {
+            "@type": "LithiumNickelManganeseCobaltOxide",
+            "@id": "urn:uuid:9624bef5-efc5-4636-affb-02c1a403f0a8",
+            "molecularFormula": "LiNi0.83Mn0.05Co0.12O2"
+        },
+        {
+            "@type": "Electrolyte",
+            "@id": "urn:uuid:38955102-b73b-4de8-b944-5ae3a9fba132"
+        },
+        {
+            "@type": "Lithium",
+            "@id": "urn:uuid:8a2997ae-12d9-431a-94e9-cb817abff405"
+        },
+        {
+            "@type": "csvw:TableSchema",
+            "@id": "urn:uuid:ff33e11e-ec39-4e7b-8a1a-8726ad2c43e2",
+            "schema:name": "diffusion coefficient table schema",
+            "csvw:columns": [
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "state_of_charge_percent",
+                    "csvw:titles": "State of Charge",
+                    "dc:description": "the state of charge of the electrode, determined according to some specific conditions e.g. voltage limits",
+                    "csvw:propertyUrl": {
+                        "@type": "StateOfCharge"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "echem:PercentUnit"
+                        },
+                        {
+                            "@id": "unit:PERCENT"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "echem:PercentUnit"
+                        },
+                        {
+                            "@id": "unit:PERCENT"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "false"
+                },
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "diffusion_coefficient_centimetre_squared_per_second",
+                    "csvw:titles": "Diffusion Coefficient",
+                    "csvw:propertyUrl": {
+                        "@type": "DiffusionCoefficient"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:SquareCentiMetrePerSecond"
+                        },
+                        {
+                            "@id": "unit:CentiM2-PER-SEC"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:SquareCentiMetrePerSecond"
+                        },
+                        {
+                            "@id": "unit:CentiM2-PER-SEC"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "true"
+                }
+            ],
+            "csvw:primaryKey": "state_of_charge_percent"
+        },
+        {
+            "@type": "csvw:TableSchema",
+            "@id": "urn:uuid:6ce6f1b9-83d0-43e7-a5c4-0073b4e8ec32",
+            "schema:name": "exchange current density table schema",
+            "csvw:columns": [
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "state_of_charge_percent",
+                    "csvw:titles": "State of Charge",
+                    "dc:description": "the state of charge of the electrode, determined according to some specific conditions e.g. voltage limits",
+                    "csvw:propertyUrl": {
+                        "@type": "StateOfCharge"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "echem:PercentUnit"
+                        },
+                        {
+                            "@id": "unit:PERCENT"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "echem:PercentUnit"
+                        },
+                        {
+                            "@id": "unit:PERCENT"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "false"
+                },
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "exchange_current_density_milliampere_per_centimetre_squared",
+                    "csvw:titles": "Exchange current density",
+                    "csvw:propertyUrl": {
+                        "@type": "ExchangeCurrentDensity"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:MilliAmperePerSquareCentiMetre"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:MilliAmperePerSquareCentiMetre"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "true"
+                }
+            ],
+            "csvw:primaryKey": "state_of_charge_percent"
+        },
+        {
+            "@type": "csvw:TableSchema",
+            "@id": "urn:uuid:2defdefc-b68f-475c-9137-901a0210ee38",
+            "schema:name": "conductivity of electrolyte table schema",
+            "csvw:columns": [
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "salt_concentration_mole_per_litre",
+                    "csvw:titles": "Salt concentration",
+                    "csvw:propertyUrl": {
+                        "@type": "AmountConcentration"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:MolePerLitre"
+                        },
+                        {
+                            "@id": "unit:MOL-PER-L"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:MolePerLitre"
+                        },
+                        {
+                            "@id": "unit:MOL-PER-L"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "false"
+                },
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "temperature_degree_celsius",
+                    "csvw:titles": "Temperature",
+                    "csvw:propertyUrl": {
+                        "@type": "CelsiusTemperature"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:DegreeCelsius"
+                        },
+                        {
+                            "@id": "unit:DEG_C"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:DegreeCelsius"
+                        },
+                        {
+                            "@id": "unit:DEG_C"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "true"
+                },
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "conductivity_millisiemens_per_centimetre",
+                    "csvw:titles": "Electrolyte conductivity",
+                    "csvw:propertyUrl": {
+                        "@type": "ElectrolyticConductivity"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:MilliSiemensPerCentiMetre"
+                        },
+                        {
+                            "@id": "unit:MilliS-PER-CentiM"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:MilliSiemensPerCentiMetre"
+                        },
+                        {
+                            "@id": "emmo:MilliS-PER-CentiM"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "true"
+                }
+            ],
+            "csvw:primaryKey": [
+                "salt_concentration_mole_per_litre",
+                "temperature_degree_celsius"
+            ]
+        },
+        {
+            "@type": "csvw:TableSchema",
+            "@id": "urn:uuid:cadfb1bb-7444-4b6f-87f6-898e9745a11c",
+            "schema:name": "diffusion coeefficient of electrolyte table schema",
+            "csvw:columns": [
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "salt_concentration_mole_per_litre",
+                    "csvw:titles": "Salt concentration",
+                    "csvw:propertyUrl": {
+                        "@type": "AmountConcentration"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:MolePerLitre"
+                        },
+                        {
+                            "@id": "unit:MOL-PER-L"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:MolePerLitre"
+                        },
+                        {
+                            "@id": "unit:MOL-PER-L"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "false"
+                },
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "temperature_degree_celsius",
+                    "csvw:titles": "Temperature",
+                    "csvw:propertyUrl": {
+                        "@type": "CelsiusTemperature"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:DegreeCelsius"
+                        },
+                        {
+                            "@id": "unit:DEG_C"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:DegreeCelsius"
+                        },
+                        {
+                            "@id": "unit:DEG_C"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "true"
+                },
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "diffusion_coefficient_centimetre_squared_per_second",
+                    "csvw:titles": "Diffusion coefficient in electrolyte",
+                    "csvw:propertyUrl": {
+                        "@type": "DiffusionCoefficient"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "unit:CentiM2-PER-SEC"
+                        },
+                        {
+                            "@id": "emmo:SquareCentiMetrePerSecond"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "unit:CentiM2-PER-SEC"
+                        },
+                        {
+                            "@id": "emmo:SquareCentiMetrePerSecond"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "true"
+                }
+            ],
+            "csvw:primaryKey": [
+                "salt_concentration_mole_per_litre",
+                "temperature_degree_celsius"
+            ]
+        },
+        {
+            "@type": "csvw:TableSchema",
+            "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c",
+            "schema:name": "open-circuit voltage table schema",
+            "csvw:columns": [
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "stoichiometry_unit_one",
+                    "csvw:titles": "Stoichiometry",
+                    "dc:description": "the stoichiometry of lithium in the active material",
+                    "csvw:propertyUrl": {
+                        "@type": "StoichiometricCoefficient"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:UnitOne"
+                        },
+                        {
+                            "@id": "unit:UNITLESS"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:UnitOne"
+                        },
+                        {
+                            "@id": "unit:UNITLESS"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "false"
+                },
+                {
+                    "@type": "csvw:Column",
+                    "csvw:name": "voltage_volt",
+                    "csvw:titles": "Voltage",
+                    "dc:description": "the voltage of the cell versus lithium",
+                    "csvw:propertyUrl": {
+                        "@type": "Voltage"
+                    },
+                    "hasMeasurementUnit": [
+                        {
+                            "@id": "emmo:Volt"
+                        },
+                        {
+                            "@id": "unit:V"
+                        }
+                    ],
+                    "schema:unitCode": [
+                        {
+                            "@id": "emmo:Volt"
+                        },
+                        {
+                            "@id": "unit:V"
+                        }
+                    ],
+                    "csvw:datatype": "xsd:decimal",
+                    "csvw:required": "true"
+                }
+            ],
+            "csvw:primaryKey": "stoichiometry_unit_one"
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:51a7ff1c-1f20-452e-8b58-88e2a4634362",
+            "dcat:description": "pseudoOCV data from Graphite-Lithium half cell obtained during a charging process",
+            "csvw:url": "pseudo_open_circuit_voltage_graphite_silicon_oxide_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:f1f3f6ce-2338-405e-a766-5b69f5512069",
+            "dcat:description": "pseudoOCV data from Graphite-Lithium half cell obtained during a discharging process",
+            "csvw:url": "pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:7aba57f6-ea42-456b-a70f-8a9c3d588cdf",
+            "dcat:description": "pseudoOCV data from Graphite-Lithium half cell obtained during a charging process",
+            "csvw:url": "pseudo_open_circuit_voltage_silicon_literature_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            },
+            "rdfs:seeAlso": "https://iopscience.iop.org/article/10.1149/2.0581602jes"
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:605cbfbf-dffc-4cca-8003-93ae4ba4f44f",
+            "dcat:description": "pseudoOCV data from Graphite-Lithium half cell obtained during a discharging process",
+            "csvw:url": "pseudo_open_circuit_voltage_silicon_literature_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            },
+            "rdfs:seeAlso": "https://iopscience.iop.org/article/10.1149/2.0581602jes"
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:b5eaa20b-b9b2-4669-b691-4d5d6767d308",
+            "dcat:description": "pseudoOCV data from NMC-Lithium half cell obtained during a charging process",
+            "csvw:url": "pseudo_open_circuit_voltage_nmc_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:8585e3e4-410d-41bf-a860-9a44e708409b",
+            "dcat:description": "pseudoOCV data from NMC-Lithium half cell obtained during a discharging process",
+            "csvw:url": "pseudo_open_circuit_voltage_nmc_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:06ff48d0-281d-494f-bb8d-fe1eb2f07800",
+            "dcat:description": "pseudoOCV data from silicon-Lithium half cell obtained during a charging process",
+            "csvw:url": "pseudo_open_circuit_voltage_silicon_literature_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "PseudoOpenCircuitVoltageData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:06ff48d0-281d-494f-bb8d-fe1eb2f07800",
+            "dcat:description": "pseudoOCV data from silicon-Lithium half cell obtained during a discharging process",
+            "csvw:url": "pseudo_open_circuit_voltage_silicon_literature_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:5648247c-905e-41ae-b428-60016c2c010c"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "ExchangeCurrentDensityData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:e78fb1fb-4857-49d9-9c5a-58665b7a8dd6",
+            "dcat:description": "exchange current density data from Graphite-Lithium half cell obtained during a charging process",
+            "csvw:url": "exchange_current_density_graphite_silicon_oxide_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:6ce6f1b9-83d0-43e7-a5c4-0073b4e8ec32"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "ExchangeCurrentDensityData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:4a1eaf70-065c-4c63-b37b-36f24d4a7438",
+            "dcat:description": "exchange current density data from Graphite-Lithium half cell obtained during a discharging process",
+            "csvw:url": "exchange_current_density_graphite_silicon_oxide_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:6ce6f1b9-83d0-43e7-a5c4-0073b4e8ec32"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "ExchangeCurrentDensityData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:8fa916c2-787a-4e9a-8b37-7138b3e0521d",
+            "dcat:description": "exchange current density data from NMC half cell obtained during a charging process",
+            "csvw:url": "exchange_current_density_nmc_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:6ce6f1b9-83d0-43e7-a5c4-0073b4e8ec32"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "ExchangeCurrentDensityData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:17240d35-4ba8-4801-9733-694bb1fe4704",
+            "dcat:description": "exchange current density data from NMC half cell obtained during a discharging process",
+            "csvw:url": "exchange_current_density_nmc_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:6ce6f1b9-83d0-43e7-a5c4-0073b4e8ec32"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "DiffusionData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:42ce2504-37fb-4a0e-983a-187d02ad58b6",
+            "dcat:description": "diffusion coefficient data measured in a Graphite-Lithium half cell obtained during a charging process",
+            "csvw:url": "diffusion_graphite_silicon_oxide_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:ff33e11e-ec39-4e7b-8a1a-8726ad2c43e2"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "DiffusionData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:0897b848-6bf2-4320-b5aa-78666cf6ca0d",
+            "dcat:description": "diffusion coefficient data measured in a Graphite-Lithium half cell obtained during a discharging process",
+            "csvw:url": "diffusion_graphite_silicon_oxide_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:ff33e11e-ec39-4e7b-8a1a-8726ad2c43e2"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "DiffusionData",
+                "ChargingData"
+            ],
+            "@id": "urn:uuid:8eb6f60f-d48a-4214-8f67-b6cead2bf868",
+            "dcat:description": "diffusion coefficient data measured in a NMC half cell obtained during a charging process",
+            "csvw:url": "diffusion_nmc_charging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:ff33e11e-ec39-4e7b-8a1a-8726ad2c43e2"
+            }
+        },
+        {
+            "@type": [
+                "dcat:Distribution",
+                "DiffusionData",
+                "DischargingData"
+            ],
+            "@id": "urn:uuid:ac2d434f-6f82-4113-af7d-8691a83340f5",
+            "dcat:description": "diffusion coefficient data measured in a NMC-Lithium half cell obtained during a discharging process",
+            "csvw:url": "diffusion_nmc_discharging.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:ff33e11e-ec39-4e7b-8a1a-8726ad2c43e2"
+            }
+        },
+        {
+            "@type": "dcat:Distribution",
+            "@id": "urn:uuid:3a95a6d0-aad6-420f-8cd6-81d8266d747e",
+            "dcat:description": "electrolytic conductivity data measured for an electrolyte at different concentrations and temperatures",
+            "csvw:url": "conductivity_in_electrolyte_at_a_function_of_temperature.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:2defdefc-b68f-475c-9137-901a0210ee38"
+            }
+        },
+        {
+            "@type": "dcat:Distribution",
+            "@id": "urn:uuid:923f98e6-6794-4190-a758-3f0aabd8f74c",
+            "dcat:description": "diffusion coefficient data measured for an electrolyte at different concentrations and temperatures",
+            "csvw:url": "diffusion_coefficient_in_electrolyte_at_a_function_of_temperature.parquet",
+            "dcat:mediaType": "application/vnd.apache.parquet",
+            "dcterms:format": {
+                "@id": "http://publications.europa.eu/resource/authority/file-type/PARQUET",
+                "rdfs:label": "Apache Parquet"
+            },
+            "csvw:tableSchema": {
+                "@id": "urn:uuid:cadfb1bb-7444-4b6f-87f6-898e9745a11c"
+            }
+        },
+        {
+            "@id": "urn:uuid:d771a643-d416-4006-96b7-5069048572be",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Computed tomography snapshot of INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_computed_tomography_snapshot.png"
+        },
+        {
+            "@id": "urn:uuid:3277a4da-9083-40ab-9805-cbdba199ae81",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Disassembly process of INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_disassembly_process.png"
+        },
+        {
+            "@id": "urn:uuid:7e1e267c-89f1-4465-99e0-5b61b0a04097",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Electrode schematic of INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_electrode_schematic.png"
+        },
+        {
+            "@id": "urn:uuid:a83dbb71-fdbd-4e62-b309-0067ae3a340b",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "SEM image of graphite-silicon oxide in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_graphite_silicon_oxide_sem.png"
+        },
+        {
+            "@id": "urn:uuid:0580a06d-b4a5-4f15-b2b4-d78779a1a9b8",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "SEM EDX image of graphite-silicon oxide in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_graphite_silicon_oxide_sem_edx.png"
+        },
+        {
+            "@id": "urn:uuid:ea382c8a-ae6f-447c-87d4-034560da911f",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Jellyroll of INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_jellyroll.png"
+        },
+        {
+            "@id": "urn:uuid:b1acaef1-f4bf-45db-9043-e04e3a525c86",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Side view of jellyroll in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_jellyroll_side.png"
+        },
+        {
+            "@id": "urn:uuid:8b7b6c98-2b9f-46eb-97ac-18e813ad3236",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Cross-section of the negative electrode in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_negative_electrode_cross_section.png"
+        },
+        {
+            "@id": "urn:uuid:67bcacb6-6597-4564-83d8-a666c108b52a",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "SEM image of NMC material in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_nmc_sem.png"
+        },
+        {
+            "@id": "urn:uuid:e6b0b94b-22a8-4261-994a-732308ee4db2",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "SEM EDX image of NMC material in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_nmc_sem_edx.png"
+        },
+        {
+            "@id": "urn:uuid:b18e3133-bf8e-4b6d-a93e-0de9bafb790d",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Partially disassembled view of INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_partially_disassembled.png"
+        },
+        {
+            "@id": "urn:uuid:8843a5f1-608f-4646-924a-a92ac22135ee",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "Cross-section of the positive electrode in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_positive_electrode_cross_section.png"
+        },
+        {
+            "@id": "urn:uuid:53d0242d-7db8-4322-9fff-b1bb323bb578",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "SEM image of ceramic coating on separator in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_separator_ceramic_coating_sem.png"
+        },
+        {
+            "@id": "urn:uuid:49107bd6-7f62-485f-803a-e4264243e8b7",
+            "@type": [
+                "schema:ImageObject",
+                "dcat:Distribution"
+            ],
+            "dc:description": "SEM image of polymer matrix coating on separator in INR18650 MJ1 battery",
+            "schema:encodingFormat": "image/png",
+            "dcat:mediaType": "image/png",
+            "dcat:accessURL": "inr18650_mj1_separator_polymer_matrix_sem.png"
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:649d8980-2ca0-4ab1-87e9-678b41419d0b",
+            "dct:title": "NMC Diffusion Coefficient Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:ac2d434f-6f82-4113-af7d-8691a83340f5"
+                },
+                {
+                    "@id": "urn:uuid:8eb6f60f-d48a-4214-8f67-b6cead2bf868"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:7aa4e83b-da58-4f9b-b592-aa3a61b0ab2f",
+            "dct:title": "Graphite-Silcon Diffusion Coefficient Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:0897b848-6bf2-4320-b5aa-78666cf6ca0d"
+                },
+                {
+                    "@id": "urn:uuid:42ce2504-37fb-4a0e-983a-187d02ad58b6"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:d49d3cf0-199f-4898-9cfc-834e0869117f",
+            "dct:title": "NMC Pseudo-Open-Circuit Voltage Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:8585e3e4-410d-41bf-a860-9a44e708409b"
+                },
+                {
+                    "@id": "urn:uuid:b5eaa20b-b9b2-4669-b691-4d5d6767d308"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:bf8890fc-1b9e-4b7a-b2de-b0b3356e72b8",
+            "dct:title": "Graphite-Silicon Pseudo-Open-Circuit Voltage Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:f1f3f6ce-2338-405e-a766-5b69f5512069"
+                },
+                {
+                    "@id": "urn:uuid:51a7ff1c-1f20-452e-8b58-88e2a4634362"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:13b358a6-237f-4447-8c04-f76daf60a0ed",
+            "dct:title": "Silicon Pseudo-Open-Circuit Voltage Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:06ff48d0-281d-494f-bb8d-fe1eb2f07800"
+                },
+                {
+                    "@id": "urn:uuid:5b536b0f-69db-487b-80c8-1f7372c3a257"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:82e062a6-685c-4282-b153-39e19fcc6a4a",
+            "dct:title": "Graphite-Silicon Exchange Current Density Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:4a1eaf70-065c-4c63-b37b-36f24d4a7438"
+                },
+                {
+                    "@id": "urn:uuid:e78fb1fb-4857-49d9-9c5a-58665b7a8dd6"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:eb9187e7-a4b5-442e-afdd-9c30003fedee",
+            "dct:title": "NMC Exchange Current Density Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:17240d35-4ba8-4801-9733-694bb1fe4704"
+                },
+                {
+                    "@id": "urn:uuid:8fa916c2-787a-4e9a-8b37-7138b3e0521d"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:e2a94fbf-1f3a-4f1e-bdf7-e1d313db53e2",
+            "dct:title": "Electrolyte Conductivity Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:3a95a6d0-aad6-420f-8cd6-81d8266d747e"
+                }
+            ]
+        },
+        {
+            "@type": "dcat:Dataset",
+            "@id": "urn:uuid:57a23bf2-2715-4e3e-8b67-5312a4bb5a64",
+            "dct:title": "Electrolyte Diffusion Coefficient Measurements",
+            "dcat:distribution": [
+                {
+                    "@id": "urn:uuid:923f98e6-6794-4190-a758-3f0aabd8f74c"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "PseudoOpenCircuitVoltageTest"
+            ],
+            "rdfs:label": "Half-Cell OCV Test for Graphite-SiOx",
+            "hasInput": {
+                "@id": "urn:uuid:2254e5d7-1013-4079-9447-75f4453f833e"
+            },
+            "hasOutput": [
+                {
+                    "@id": "urn:uuid:bf8890fc-1b9e-4b7a-b2de-b0b3356e72b8"
+                }
+            ],
+            "hasTask": {
+                "@type": "Charging",
+                "hasInput": {
+                    "@type": "ChargingCRate",
+                    "hasNumericalPart": {
+                        "@type": "RealData",
+                        "hasNumberValue": 0.05
+                    },
+                    "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
+                },
+                "precedes": {
+                    "@type": "Discharging",
+                    "hasInput": {
+                        "@type": "DischargingCRate",
+                        "hasNumericalPart": {
+                            "@type": "RealData",
+                            "hasNumberValue": 0.05
+                        },
+                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
+                    },
+                    "precedes": {
+                        "@type": "DataProcessing",
+                        "hasOutput": [
+                            {
+                                "@id": "urn:uuid:bf8890fc-1b9e-4b7a-b2de-b0b3356e72b8"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@type": [
+                "PseudoOpenCircuitVoltageTest"
+            ],
+            "rdfs:label": "Half-Cell OCV Test for NMC",
+            "hasInput": {
+                "@id": "urn:uuid:18b35fe9-828c-4b0b-b674-8ee1d42c8cff"
+            },
+            "hasOutput": [
+                {
+                    "@id": "urn:uuid:d49d3cf0-199f-4898-9cfc-834e0869117f"
+                }
+            ],
+            "hasTask": {
+                "@type": "Charging",
+                "hasInput": {
+                    "@type": "ChargingCRate",
+                    "hasNumericalPart": {
+                        "@type": "RealData",
+                        "hasNumberValue": 0.05
+                    },
+                    "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
+                },
+                "precedes": {
+                    "@type": "Discharging",
+                    "hasInput": {
+                        "@type": "DischargingCRate",
+                        "hasNumericalPart": {
+                            "@type": "RealData",
+                            "hasNumberValue": 0.05
+                        },
+                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
+                    },
+                    "precedes": {
+                        "@type": "DataProcessing",
+                        "hasOutput": [
+                            {
+                                "@id": "urn:uuid:d49d3cf0-199f-4898-9cfc-834e0869117f"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@type": [
+                "PseudoOpenCircuitVoltageTest"
+            ],
+            "rdfs:label": "Half-Cell OCV Test for Silicon obtained from Literature",
+            "rdfs:comment": "This data was obtained from literature",
+            "rdfs:seeAlso": " https://iopscience.iop.org/article/10.1149/2.0581602jes",
+            "hasInput": {
+                "@id": "urn:uuid:ca161dde-b052-4704-ac42-a994b6bf104e"
+            },
+            "hasOutput": [
+                {
+                    "@id": "urn:uuid:13b358a6-237f-4447-8c04-f76daf60a0ed"
+                }
+            ],
+            "hasTask": {
+                "@type": "Charging",
+                "hasInput": {
+                    "@type": "ChargingCRate",
+                    "hasNumericalPart": {
+                        "@type": "RealData",
+                        "hasNumberValue": 0.2
+                    },
+                    "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
+                },
+                "precedes": {
+                    "@type": "Discharging",
+                    "hasInput": {
+                        "@type": "DischargingCRate",
+                        "hasNumericalPart": {
+                            "@type": "RealData",
+                            "hasNumberValue": 0.2
+                        },
+                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
+                    },
+                    "precedes": {
+                        "@type": "DataProcessing",
+                        "hasOutput": [
+                            {
+                                "@id": "urn:uuid:13b358a6-237f-4447-8c04-f76daf60a0ed"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@type": [
+                "ElectrochemicalImpedanceSpectroscopy"
+            ],
+            "rdfs:label": "EIS test for exchange current density",
+            "hasInput": {
+                "@id": "urn:uuid:2254e5d7-1013-4079-9447-75f4453f833e"
+            },
+            "hasTask": {
+                "@type": "Charging",
+                "rdfs:comment": "a workflow where the cell is charged to a fixed SOC value, EIS is performed, and the process is repeated",
+                "precedes": {
+                    "@type": "Discharging",
+                    "precedes": {
+                        "@type": "DataProcessing",
+                        "hasOutput": [
+                            {
+                                "@id": "urn:uuid:82e062a6-685c-4282-b153-39e19fcc6a4a"
+                            },
+                            {
+                                "@id": "urn:uuid:7aa4e83b-da58-4f9b-b592-aa3a61b0ab2f"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@type": [
+                "ElectrochemicalImpedanceSpectroscopy"
+            ],
+            "rdfs:label": "EIS test for exchange current density",
+            "hasInput": {
+                "@id": "urn:uuid:18b35fe9-828c-4b0b-b674-8ee1d42c8cff"
+            },
+            "hasTask": {
+                "@type": "Charging",
+                "rdfs:comment": "a workflow where the cell is charged to a fixed SOC value, EIS is performed, and the process is repeated",
+                "precedes": {
+                    "@type": "Discharging",
+                    "precedes": {
+                        "@type": "DataProcessing",
+                        "hasOutput": [
+                            {
+                                "@id": "urn:uuid:eb9187e7-a4b5-442e-afdd-9c30003fedee"
+                            },
+                            {
+                                "@id": "urn:uuid:649d8980-2ca0-4ab1-87e9-678b41419d0b"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

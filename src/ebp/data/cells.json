@@ -1925,5 +1925,227 @@
         ]
       }
     }
+  },
+  "lg-mj1-dlr-sintef": {
+    "manufacturer": "LG Chem",
+    "model": "MJ1",
+    "display_name": "LG MJ1 | DLR-SINTEF harvested-electrode characterization",
+    "format": "18650 commercial source; 18 mm harvested electrodes in laboratory cells",
+    "chemistry": "NMC/Graphite-SiOx; exact NMC composition differs between source versions",
+    "nominal_capacity_Ah": 3.5,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "mj1-zenodo-15407849",
+      "mj1-zenodo-15497193",
+      "mj1-zenodo-15496570",
+      "mj1-zenodo-15528177",
+      "mj1-zenodo-15538164",
+      "mj1-zenodo-15520717",
+      "kuhn-2026-workflows"
+    ],
+    "model_context": "Laboratory characterization and direction/model-specific GITT fits; original components and reassembled-cell model settings are distinct",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established.",
+    "curation_guide": "docs/LG_MJ1.md",
+    "supporting_asset_ids": [
+      "mj1-15407849-metadata",
+      "mj1-15497193-metadata",
+      "mj1-ocp-positive-charging",
+      "mj1-source-exchange-current-density-graphite-silicon-oxide-discharging",
+      "mj1-source-exchange-current-density-nmc-discharging",
+      "mj1-direct-jsonld",
+      "mj1-source-exchange-current-density-graphite-silicon-oxide-charging",
+      "mj1-source-exchange-current-density-nmc-charging",
+      "mj1-ocp-negative-charging",
+      "mj1-source-diffusion-graphite-silicon-oxide-charging",
+      "mj1-source-diffusion-nmc-charging",
+      "mj1-source-diffusion-graphite-silicon-oxide-discharging",
+      "mj1-source-diffusion-nmc-discharging",
+      "mj1-ocp-negative-discharging",
+      "mj1-ocp-positive-discharging",
+      "mj1-15496570-metadata",
+      "mj1-continuum-source",
+      "mj1-15528177-metadata",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spme",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-dfn",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spm",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spme",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-dfn",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spm",
+      "mj1-15538164-metadata",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spme",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spme",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-dfn",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spm",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-dfn",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spm",
+      "mj1-15520717-metadata",
+      "mj1-workbook-selection"
+    ],
+    "note": "No same-study intact MJ1 full-cell trace imported. Three-electrode GITT is electrode-versus-Li voltage, with a 260 um replacement separator; it is not an original commercial-cell validation trace. Do not combine all diffusion variants.",
+    "coverage": {
+      "ocp": "Four laboratory pseudo-OCP tables, lithium reference; native reported coordinate requires explicit model balancing.",
+      "diffusion": "Four workbook GITT tables, twelve model/direction-dependent GITT fit tables with source error bounds, and two SOC-specific activation energies.",
+      "kinetics": "Four EIS-derived exchange-current tables and two SOC-specific activation energies; area-basis and concentration/temperature extension remain unresolved.",
+      "full_cell_tests": "No intact commercial-cell test verified. Structured anode GITT inspected: t/I/working-versus-Li voltage only, no measured T or intact-cell CC cycle."
+    },
+    "parameter_ids": [
+      "mj1-negative-thickness",
+      "mj1-negative-collector-thickness",
+      "mj1-positive-thickness",
+      "mj1-positive-collector-thickness",
+      "mj1-original-separator-thickness",
+      "mj1-negative-total-area",
+      "mj1-positive-total-area",
+      "mj1-negative-porosity",
+      "mj1-positive-porosity",
+      "mj1-original-separator-porosity",
+      "mj1-graphite-particle-diameter",
+      "mj1-silicon-particle-diameter",
+      "mj1-positive-particle-diameter",
+      "mj1-negative-bet-area",
+      "mj1-positive-bet-area",
+      "mj1-negative-kinetic-activation-energy",
+      "mj1-positive-kinetic-activation-energy",
+      "mj1-negative-diffusion-activation-energy",
+      "mj1-positive-diffusion-activation-energy",
+      "mj1-negative-electronic-conductivity",
+      "mj1-positive-electronic-conductivity",
+      "mj1-nominal-capacity",
+      "mj1-lab-negative-di-discharging",
+      "mj1-lab-negative-di-charging",
+      "mj1-lab-positive-di-discharging",
+      "mj1-lab-positive-di-charging",
+      "mj1-lab-negative-i0-discharging",
+      "mj1-lab-negative-i0-charging",
+      "mj1-lab-positive-i0-discharging",
+      "mj1-lab-positive-i0-charging",
+      "mj1-gitt-negative-spme-delithiation",
+      "mj1-gitt-negative-dfn-delithiation",
+      "mj1-gitt-negative-spm-delithiation",
+      "mj1-gitt-negative-spme-lithiation",
+      "mj1-gitt-negative-dfn-lithiation",
+      "mj1-gitt-negative-spm-lithiation",
+      "mj1-gitt-positive-spme-lithiation",
+      "mj1-gitt-positive-spme-delithiation",
+      "mj1-gitt-positive-dfn-lithiation",
+      "mj1-gitt-positive-spm-lithiation",
+      "mj1-gitt-positive-dfn-delithiation",
+      "mj1-gitt-positive-spm-delithiation"
+    ],
+    "ocp_record_ids": [
+      "mj1-negative-ocp-charging",
+      "mj1-negative-ocp-discharging",
+      "mj1-positive-ocp-charging",
+      "mj1-positive-ocp-discharging"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "mj1-negative-ocp-charging",
+          "mj1-negative-ocp-discharging",
+          "mj1-positive-ocp-charging",
+          "mj1-positive-ocp-discharging"
+        ],
+        "source_ids": [
+          "kuhn-2026-workflows",
+          "mj1-zenodo-15497193"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four laboratory pseudo-OCP tables, lithium reference; native reported coordinate requires explicit model balancing.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+          "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "mj1-negative-diffusion-activation-energy",
+          "mj1-positive-diffusion-activation-energy",
+          "mj1-lab-negative-di-discharging",
+          "mj1-lab-negative-di-charging",
+          "mj1-lab-positive-di-discharging",
+          "mj1-lab-positive-di-charging",
+          "mj1-gitt-negative-spme-delithiation",
+          "mj1-gitt-negative-dfn-delithiation",
+          "mj1-gitt-negative-spm-delithiation",
+          "mj1-gitt-negative-spme-lithiation",
+          "mj1-gitt-negative-dfn-lithiation",
+          "mj1-gitt-negative-spm-lithiation",
+          "mj1-gitt-positive-spme-lithiation",
+          "mj1-gitt-positive-spme-delithiation",
+          "mj1-gitt-positive-dfn-lithiation",
+          "mj1-gitt-positive-spm-lithiation",
+          "mj1-gitt-positive-dfn-delithiation",
+          "mj1-gitt-positive-spm-delithiation"
+        ],
+        "source_ids": [
+          "kuhn-2026-workflows",
+          "mj1-zenodo-15497193",
+          "mj1-zenodo-15528177",
+          "mj1-zenodo-15538164"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four workbook GITT tables, twelve model/direction-dependent GITT fit tables with source error bounds, and two SOC-specific activation energies.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+          "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "mj1-negative-kinetic-activation-energy",
+          "mj1-positive-kinetic-activation-energy",
+          "mj1-lab-negative-i0-discharging",
+          "mj1-lab-negative-i0-charging",
+          "mj1-lab-positive-i0-discharging",
+          "mj1-lab-positive-i0-charging"
+        ],
+        "source_ids": [
+          "kuhn-2026-workflows",
+          "mj1-zenodo-15497193"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four EIS-derived exchange-current tables and two SOC-specific activation energies; area-basis and concentration/temperature extension remain unresolved.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+          "Source SOC/stoichiometry coordinates need explicit balancing before model use",
+          "Exchange-current active/geometric area convention not independently established"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No intact commercial-cell test verified. Structured anode GITT inspected: t/I/working-versus-Li voltage only, no measured T or intact-cell CC cycle.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    },
+    "missing_items": [
+      "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+      "Exchange-current active/geometric area convention not independently established",
+      "Identical characterization/validation specimen not established",
+      "Independent electrochemical model validation not performed",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "No same-study intact commercial MJ1 full-cell I/V/T validation series verified",
+      "No standalone intact-cell constant-current charge/discharge observations imported",
+      "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+    ]
   }
 }

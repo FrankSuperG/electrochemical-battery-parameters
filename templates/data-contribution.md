@@ -70,7 +70,7 @@ section if needed. Use `ocp-points.csv` for tabulated points.
 
 ## 6. Diffusion, kinetics and other model inputs
 
-Use `parameters.csv`; add one row per value, condition or distinct expression.
+Use `parameters.csv`; add one row per value, condition, expression or native table.
 Keep author and software variants separate.
 
 - Parameter IDs and variant: [IDs; original-author / implementation version / fitted variant]
@@ -82,6 +82,8 @@ Keep author and software variants separate.
 - Arrhenius law: [full sign convention, reference temperature, activation energy and units]
 - Derivations or reductions: [formula and parent record IDs; no inferred effective radius without evidence]
 - Fitting information: [experiments used, objective, bounds, uncertainty if reported; or unknown]
+- Native table, if applicable: [CSV path; x/y column meanings and units; exact source coordinate; missing cells/rows; interpolation domain; meaning of error-bound columns]
+- Model/direction alternatives: [keep SPM, SPMe, DFN and branches separate; state which is intended for each use]
 - Borrowed/assumed inputs and source conflicts: [explicit list]
 
 ## 7. Full-cell and basic tests

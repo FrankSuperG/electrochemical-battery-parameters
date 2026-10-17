@@ -44,7 +44,7 @@ def parameter_csv(parameters):
          "parameterization_variant"],
         [
             [p["id"], p["cell_id"], p["name"], p["category"],
-             p["representation"].get("value", p["representation"].get("expression")),
+             ("table:" + p["representation"]["path"] if p["representation"]["kind"] == "table" else p["representation"].get("value", p["representation"].get("expression"))),
              p["unit"], json.dumps(p.get("conditions", {}), sort_keys=True),
              p.get("definition", p["name"]), ";".join(p["source_ids"]),
              p["provenance"]["origin_status"],
@@ -138,6 +138,7 @@ def render_index(repo=REPO):
         asset_ids.update(t["asset_id"] for t in tests)
         asset_ids.update(a for t in tests for a in t.get("supporting_asset_ids", []))
         asset_ids.update(s["asset_id"] for t in tests for s in t.get("sidecars", []))
+        asset_ids.update(cell.get("supporting_asset_ids", []))
         output[str(json_path)] = json_bytes({
                 "cell_id": cid, "cell": cell, "parameters": parameters,
                 "ocp_records": [c.record for c in curves], "full_cell_tests": tests,
@@ -165,6 +166,14 @@ def render_index(repo=REPO):
         else:
             lines += ["No non-OCP parameters imported for this entry. No placeholder parameter values are supplied.", "",
                       link(page, json_path, "Cell package: OCP, tests, sources and missing items (JSON)"), ""]
+        tabulated = [p for p in parameters if p["representation"]["kind"] == "table"]
+        if tabulated:
+            lines += ["### Native parameter tables", "", "Linear interpolation is available only within each retained native domain. Source SOC and stoichiometry coordinates require explicit mapping before model use.", "",
+                      "| Parameter | Native CSV | Axis / unit | Value unit | Variant |", "|---|---|---|---|---|"]
+            for p in tabulated:
+                rep = p["representation"]
+                lines.append(f"| `{p['id']}` | {link(page, source_path(rep['path']), 'Download CSV')} | {rep['x']['variable']} / {rep['x']['unit']} | {p['unit']} | {p['conditions'].get('parameterization_variant', '')} |")
+            lines.append("")
         lines += ["## OCP curves", ""]
         lines += [ocp_table(page, curves) if curves else "No electrode-resolved OCP record linked to this cell. Full-cell pseudo-OCV and unrelated same-chemistry curves do not fill this gap.", ""]
         lines += ["Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.", "",

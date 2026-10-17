@@ -4,9 +4,11 @@ This ledger began with the 2026-10-16 review. ISU-UConn and A123 18650M1A
 were partially imported in v0.6.0; see [LFP curation](LFP_STUDIES.md).
 **LG M50LT / Hallemans2025 is partially imported in v0.7.0**; see
 [its reuse/definition review](HALLEMANS2025.md). OCP remains external only.
-LG MJ1 and O'Regan remain candidates. Current counts are 55 electrode curves,
-355 other parameters and 61 full-cell exports. A download does not establish a
-validated parameter set; licensing, definitions and specimen matching remain distinct.
+LG MJ1 is partially imported in v0.8.0; [its review](LG_MJ1.md) documents
+four pseudo-OCP branches and 42 parameter records, without an intact-cell test.
+O'Regan remains a candidate. Current counts are 59 electrode curves, 397 other
+parameters and 61 full-cell exports. Licenses, model definitions and specimen
+matching remain distinct from data availability.
 
 ## Priorities
 
@@ -15,7 +17,7 @@ validated parameter set; licensing, definitions and specimen matching remain dis
 | Imported subset — LFP | [ISU–UConn LFP/graphite](https://digitalcommons.lib.uconn.edu/reil_datasets/6/) and [author repository](https://github.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics) | Four pseudo-OCP branches and 21 full-cell V-Q branches; CC BY 4.0 data | Same-study laboratory family; no commercial model. Reference details, I/t/T and diffusion/kinetics remain missing. |
 | Imported subset — LFP | [A123 18650M1A hysteresis study](https://doi.org/10.1038/s44172-024-00221-4), [data v2](https://zenodo.org/records/11958572) | Two modeled OCPn tables and 14 full-cell exports; CC BY 4.0 | Same paper/model; exact serial mapping unresolved. OCPn is parameterized, not raw measured OCP. No intrinsic diffusion/kinetic values imported. |
 | Imported subset — grouped SPMe | [Hallemans2025 LG M50LT](HALLEMANS2025.md) | 18 grouped fit values, measured drive cycle and EIS evidence; author repository BSD-3-Clause notice retained | Same named model/study, separate from LG M50. OCP permission, serial chain, intrinsic coefficients, measured T and standalone CC traces remain unresolved/missing. |
-| 4 — electrode characterization | [LG MJ1 characterization collection](https://zenodo.org/records/15407849) | Linked OCP, kinetics, geometry, GITT and model-dependent diffusion products; CC BY 4.0 | Same named cell/project; component-specific specimen evidence. No matching intact-cell time/current/voltage/temperature validation file located in reviewed records. |
+| Imported subset — harvested electrodes | [LG MJ1 characterization](LG_MJ1.md) | Four pseudo-OCP curves, 22 scalars/specifications, eight laboratory tables and twelve GITT model fits; CC BY 4.0 | Shared model/study; coordinates, model alternatives and original/reassembled cell configuration remain distinct. No intact-cell t/I/V/T test verified. |
 | 5 — characterization tables | [O'Regan temperature-dependent characterization](https://zenodo.org/records/5171874) | 58 CSV tables: diffusivity, exchange current, entropy, conductivity and thermal properties; CC BY 4.0 | LG M50 context; existing Chen2020 tests are another study. No same-study full-cell validation trace in the inspected ZIP. |
 
 ## 1. ISU–UConn LFP/graphite
@@ -71,21 +73,16 @@ simulation and Fig11's simulated voltage are not imported as observations.
 
 ## 4. LG MJ1 / DLR–SINTEF characterization
 
-Reviewed [complete continuum inputs](https://zenodo.org/records/15496570),
-[direct characterization](https://zenodo.org/records/15497193),
-[anode GITT raw observations](https://zenodo.org/records/15519535),
-[structured GITT](https://zenodo.org/records/15520717),
-[OCP fitting](https://zenodo.org/records/15527995) and
-[diffusion fits](https://zenodo.org/records/15528177). API metadata specify
-CC BY 4.0 and explicit parent/processing relationships.
+The v0.8 [source and matching review](LG_MJ1.md) supersedes the candidate
+status. Selected original bytes, metadata, native tables and model-fit error
+bounds are packaged under CC BY 4.0. The laboratory workbook resolves missing
+endpoints that some Parquet exports turned into zero. The model script's
+substitutions and placeholder initial states are not automatically imported.
 
-The parameter Python file was inspected as text. It contains substitutions,
-reference-electrode context and placeholder initial states, so a direct scalar
-scrape would be unsafe. Diffusion fits are separated by direction and by SPM,
-SPMe or DFN formulation; preserve these alternatives. Direct-characterization
-metadata name harvested cell #001, which does not establish every linked test's
-specimen identity. Large raw CSV/HDF5 payloads were not downloaded; complete
-numeric validation and intact-cell test matching remain open.
+Inspected structured anode GITT voltage is versus the lithium reference in a
+reassembled three-electrode fixture. It is not original MJ1 terminal voltage.
+No same-study intact-cell validation or standalone commercial CC trace was
+verified; this remains an explicit gap rather than an inferred join.
 
 ## 5. O'Regan / LG M50 characterization tables
 

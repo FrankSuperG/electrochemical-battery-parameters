@@ -1,8 +1,9 @@
 # Prepublication review — 2026-10-16
 
-Historical baseline review. Subsequent imports are documented in
-[LFP study packages](LFP_STUDIES.md) (v0.6) and
-[LG M50LT curation](HALLEMANS2025.md) (v0.7); current catalog counts supersede the baseline below.
+Historical baseline review. The current v0.8 release assessment is
+[RELEASE_READINESS.md](RELEASE_READINESS.md). Later imports are documented in
+[LFP study packages](LFP_STUDIES.md), [LG M50LT](HALLEMANS2025.md) and
+[LG MJ1](LG_MJ1.md); current catalog counts supersede the baseline below.
 
 Scope: repository content, data lineage and matching, distribution completeness,
 GitHub data navigation, usage examples and a new source search. The reviewed

@@ -4,16 +4,18 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.7.0-287b78" alt="Version 0.7.0">
+  <img src="https://img.shields.io/badge/version-0.8.0-287b78" alt="Version 0.8.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
 
 E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
-**v0.7.0: 55 electrode-curve records · 11 material families · 355 other parameter records · 61 full-cell branch/test files · 12 cell or study entries.** Curves comprise 36 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+**v0.8.0: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
-New matched study: [LG M50LT / Hallemans2025](data/cells/lg-m50lt-hallemans2025.md), with 18 grouped fitted values and 164,953 measured drive-cycle t/I/V rows. Read the [definitions, OCP reuse review and missing-item ledger](docs/HALLEMANS2025.md). OCP permission remains unresolved; no M50LT electrode curves are redistributed.
+New characterization package: [LG MJ1 / DLR-SINTEF](data/cells/lg-mj1-dlr-sintef.md): four pseudo-OCP branches, 22 scalar/specification records and 20 native parameter tables, including model/direction-specific GITT fits. Read the [MJ1 source and matching review](docs/LG_MJ1.md). **Same-study intact-cell validation remains missing.** The [public-release readiness review](docs/RELEASE_READINESS.md) records checked boundaries and remaining gaps.
+
+Earlier matched study: [LG M50LT / Hallemans2025](data/cells/lg-m50lt-hallemans2025.md), with 18 grouped fitted values and 164,953 measured drive-cycle t/I/V rows. Read the [definitions, OCP reuse review and missing-item ledger](docs/HALLEMANS2025.md). OCP permission remains unresolved; no M50LT electrode curves are redistributed.
 
 New LFP packages: [ISU-UConn laboratory half/full-cells](data/cells/isu-uconn-lfp-graphite-lab.md) and [A123 18650M1A / Jahn2024](data/cells/a123-18650m1a-jahn2024.md). Read the [selection, matching and missing-channel notes](docs/LFP_STUDIES.md), including ISU's unresolved reference details and A123's modeled OCPn representation.
 
@@ -39,6 +41,7 @@ No installation is needed to browse or download files from GitHub. Choose a cell
 | [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](data/cells/isu-uconn-lfp-graphite-lab.md) | [4 records](data/cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not imported | [21 files](data/cells/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | `same_study_cell_family` |
 | [A123 18650M1A &#124; Jahn2024 LFP/graphite](data/cells/a123-18650m1a-jahn2024.md) | [2 records](data/cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not imported | [14 files](data/cells/a123-18650m1a-jahn2024.md#full-cell-tests) | `same_model_same_study` |
 | [LG M50LT &#124; Hallemans2025 grouped SPMe](data/cells/lg-m50lt-hallemans2025.md) | Not linked | [18 records](data/cells/lg-m50lt-hallemans2025.md#parameters) | [1 file](data/cells/lg-m50lt-hallemans2025.md#full-cell-tests) | `same_model_same_study` |
+| [LG MJ1 &#124; DLR-SINTEF harvested-electrode characterization](data/cells/lg-mj1-dlr-sintef.md) | [4 records](data/cells/lg-mj1-dlr-sintef.md#ocp-curves) | [42 records](data/cells/lg-mj1-dlr-sintef.md#parameters) | Not imported | `same_model_same_study` |
 
 <!-- DATA_QUICKLINKS_END -->
 

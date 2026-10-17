@@ -17,7 +17,7 @@ from .parameter import Parameter
 
 @dataclass(frozen=True)
 class StoichiometryMapping:
-    """theta at the start/end of a measured branch, with supporting evidence.
+    """theta at the low/high native coordinate endpoints, with evidence.
 
     This is a user-supplied electrode balancing assumption, never an automatic
     conversion from relative passed capacity to absolute stoichiometry.
@@ -53,8 +53,10 @@ class Curve:
         """Return every stored point; analytical expressions have no raw points."""
         if self.record["representation"]["kind"] != "table":
             raise ValueError("Analytical formula: use sample() to generate points")
-        values = np.genfromtxt(self._path(), delimiter=",", names=True)
-        return np.asarray(values["x"]), np.asarray(values["potential_V"])
+        with self._path().open(newline="") as handle:
+            header = next(csv.reader(handle))
+            values = np.loadtxt(handle, delimiter=",", usecols=(header.index("x"), header.index("potential_V")), ndmin=2)
+        return values[:, 0], values[:, 1]
 
     def __call__(self, x, method="linear"):
         if method not in ("linear", "pchip"):
@@ -131,7 +133,9 @@ class Curve:
         else:
             x, y = self.sample(count)
         if mapping is not None:
-            x = mapping.theta_start + x * (mapping.theta_end - mapping.theta_start)
+            lo, hi = self.record["x"]["domain"]
+            progress = (x - lo) / (hi - lo)
+            x = mapping.theta_start + progress * (mapping.theta_end - mapping.theta_start)
             order = np.argsort(x)
             x, y = x[order], y[order]
 
@@ -147,6 +151,7 @@ class Curve:
             "coordinate_kind": self.record["x"]["kind"],
             "reference": self.record["reference"],
             "mapping": None if mapping is None else mapping.__dict__,
+            "mapping_source_domain": None if mapping is None else self.record["x"]["domain"],
             "interpolation": "linear",
             "sample_count": len(x),
             "independently_validated": False,
@@ -207,7 +212,7 @@ class Catalog:
 
     def search_parameters(self, query="", cell_id=None, category=None, variant=None):
         return [
-            Parameter(p)
+            Parameter(p, self.root)
             for p in self.parameters
             if (not cell_id or p["cell_id"] == cell_id)
             and (not category or p["category"] == category)
@@ -221,7 +226,7 @@ class Catalog:
     def get_parameter(self, parameter_id):
         for p in self.parameters:
             if p["id"] == parameter_id:
-                return Parameter(p)
+                return Parameter(p, self.root)
         raise KeyError(f"Unknown parameter: {parameter_id}")
 
     def linked_tests(self, cell_id):
@@ -319,9 +324,18 @@ class Catalog:
                             for key in rep["variables"]
                         }
                     )
+                elif rep["kind"] == "table":
+                    obj = Parameter(p, self.root)
+                    x, y = obj.points()
+                    if len(x) != rep["point_count"] or len(x) < 2 or not np.isfinite(x).all() or not np.isfinite(y).all() or np.any(np.diff(x) <= 0):
+                        raise ValueError("Invalid parameter table nodes")
+                    if [float(x[0]), float(x[-1])] != rep["x"]["domain"]:
+                        raise ValueError("Parameter table domain mismatch")
+                    if hashlib.sha256((self.root / rep["path"]).read_bytes()).hexdigest() != rep["sha256"]:
+                        raise ValueError("Parameter table SHA-256 mismatch")
                 else:
                     raise ValueError("Unknown parameter representation")
-            except (ValueError, KeyError, SyntaxError, FloatingPointError) as exc:
+            except (ValueError, KeyError, SyntaxError, FloatingPointError, OSError) as exc:
                 errors.append(f"{p['id']}: {exc}")
         test_ids = [t["id"] for t in self.full_cell_tests]
         if len(test_ids) != len(set(test_ids)):
@@ -427,6 +441,8 @@ class Catalog:
             except (ValueError, KeyError, OSError) as exc:
                 errors.append(f"{test['id']}: {exc}")
         for cid, cell in self.cells.items():
+            if any(aid not in self.assets for aid in cell.get("supporting_asset_ids", [])):
+                errors.append(f"cell {cid}: unknown supporting asset")
             for item in cell.get("supporting_files", []):
                 local = (self.root / item["path"]).resolve()
                 if not local.is_relative_to(self.root.resolve()) or not local.is_file():

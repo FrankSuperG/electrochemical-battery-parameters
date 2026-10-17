@@ -40,6 +40,13 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `isu-uconn-graphite-s2-b7-delithiation` | negative / graphite | pseudo_ocp / unresolved | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/isu-uconn-graphite-s2-b7-delithiation.csv) | [JSON](isu-uconn-graphite-s2-b7-delithiation.json) |
 | `jahn-a123-graphite-model-ocpn` | negative / graphite | model_ocp / Li/Li+ | model_soc; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/jahn-a123-graphite-model-ocpn.csv) | [JSON](jahn-a123-graphite-model-ocpn.json) |
 
+## Graphite-SiOx
+
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `mj1-negative-ocp-charging` | negative / Graphite-SiOx | pseudo_ocp / Li/Li+ | source_reported_stoichiometry; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/mj1-negative-ocp-charging.csv) | [JSON](mj1-negative-ocp-charging.json) |
+| `mj1-negative-ocp-discharging` | negative / Graphite-SiOx | pseudo_ocp / Li/Li+ | source_reported_stoichiometry; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/mj1-negative-ocp-discharging.csv) | [JSON](mj1-negative-ocp-discharging.json) |
+
 ## LCO
 
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
@@ -67,6 +74,13 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
 |---|---|---|---|---|---|
 | `ecker2015-nco-ocp` | positive / NCO | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](ecker2015-nco-ocp-sampled.csv) | [JSON](ecker2015-nco-ocp.json) |
+
+## NMC
+
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `mj1-positive-ocp-charging` | positive / NMC | pseudo_ocp / Li/Li+ | source_reported_stoichiometry; [0.21, 1.0] | [Retained table](../../src/ebp/data/curves/mj1-positive-ocp-charging.csv) | [JSON](mj1-positive-ocp-charging.json) |
+| `mj1-positive-ocp-discharging` | positive / NMC | pseudo_ocp / Li/Li+ | source_reported_stoichiometry; [0.21, 1.0] | [Retained table](../../src/ebp/data/curves/mj1-positive-ocp-discharging.csv) | [JSON](mj1-positive-ocp-discharging.json) |
 
 ## NMC111
 

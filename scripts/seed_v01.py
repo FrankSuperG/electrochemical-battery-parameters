@@ -490,6 +490,9 @@ def main(download=False):
     from seed_hallemans import extend as extend_hallemans
 
     extend_hallemans(download=download)
+    from seed_mj1 import extend as extend_mj1
+
+    extend_mj1(download=download)
 
 
 if __name__ == "__main__":

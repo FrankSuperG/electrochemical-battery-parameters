@@ -42,7 +42,7 @@ Two OCP expressions are transcribed verbatim and evaluated only inside the file'
 
 ## Deferred sources and validation
 
-The ISU–UConn LFP/graphite deposit's earlier workbook/README requests returned HTTP 403. On 2026-10-16, a pinned author GitHub copy was retrieved and its container/sheet structure inspected; it remains a candidate pending extraction and specimen mapping, not an imported record set. See [DATA_CANDIDATES.md](DATA_CANDIDATES.md). LiionDB remains a discovery route rather than an imported source. Follow-up work should favor same-model LFP half-cell OCP, diffusion/kinetic experiments and reusable full-cell tests, recording licensing and exact identity before joining them.
+The ISU–UConn LFP/graphite deposit's earlier workbook/README requests returned HTTP 403. On 2026-10-16, a pinned author GitHub copy was retrieved and inspected. The subsequent v0.6 import includes a documented subset of that workbook; see [LFP study selections](LFP_STUDIES.md). The earlier candidate status is superseded, while reference details and specimen-matching limits remain explicit. See [DATA_CANDIDATES.md](DATA_CANDIDATES.md). LiionDB remains a discovery route rather than an imported source. Follow-up work should favor same-model LFP half-cell OCP, diffusion/kinetic experiments and reusable full-cell tests, recording licensing and exact identity before joining them.
 
 Automated checks establish source-value fidelity, checksums, reference integrity, scoped downloads and adapter behavior. They do not replace electrochemical review or an independent prediction experiment.
 
@@ -87,3 +87,11 @@ browser download in CI. Five capacity-coordinate charging series and 33 author
 scalar inputs were curated without executing MATLAB. See [MOHTAT2020.md](MOHTAT2020.md)
 for missing current/time/discharge channels, a source rate conflict and the
 non-identical PyBaMM graphite OCP. The NMC532 label remains implementation-attributed.
+
+## MJ1 native tables in v0.8
+
+The MJ1 source/workbook comparison, missing-value corrections, model alternatives
+and intact-cell coverage gap are documented in [LG_MJ1.md](LG_MJ1.md). Original
+files retain CC BY 4.0. The new parameter-table representation retains source
+coordinates and error bounds, evaluates only within its native domain and does
+not infer kinetics concentration laws or absolute electrode balancing.

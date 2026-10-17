@@ -1,1 +1,1 @@
-record_id,category,electrode,name,definition,representation_kind,value,expression,unit,independent_variables,validity_domain,temperature_K,cell_soc,origin_status,parameterization_variant,source_id,source_location,limitations
+record_id,category,electrode,name,definition,representation_kind,value,expression,table_path,unit,independent_variables,validity_domain,temperature_K,cell_soc,origin_status,parameterization_variant,source_id,source_location,limitations

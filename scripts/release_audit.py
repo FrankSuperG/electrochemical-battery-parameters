@@ -6,6 +6,7 @@ all sensitive content or licensing issues have been identified.
 
 import argparse
 from collections import Counter
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -74,11 +75,27 @@ def audit():
     ) or Path(p).name in {".env", "id_rsa", "id_ed25519"}]
     patterns = {name: re.compile(pattern) for name, pattern in SECRET_PATTERNS.items()}
     working_findings = []
+    # Git text filters can change originals while working-tree hashes still pass.
+    index_objects = {}
+    for entry in git("ls-files", "--stage", "-z").decode().split("\0"):
+        if not entry:
+            continue
+        header, name = entry.split("\t", 1)
+        _, oid, stage = header.split()
+        if stage == "0":
+            index_objects[name] = oid
+    object_format = git("rev-parse", "--show-object-format").decode().strip()
+    index_mismatches = []
     for name in tracked:
         path = ROOT / name
         if not path.is_file():
             continue
         body = path.read_bytes()
+        if name.startswith("src/ebp/data/"):
+            h = hashlib.new(object_format)
+            h.update(b"blob " + str(len(body)).encode() + b"\0" + body)
+            if index_objects.get(name) != h.hexdigest():
+                index_mismatches.append(name)
         if b"\0" in body:
             continue
         for label, pattern in patterns.items():
@@ -119,14 +136,15 @@ def audit():
                         or p["duplicate_source_record_ids"]
                         or any(c["nonfinite"] for c in p["channels"].values())]
     blocking = bool(errors or inappropriate or working_findings or history["findings"]
-                    or table_issues or invalid_profiles)
+                    or table_issues or invalid_profiles or index_mismatches)
     return {
         "reviewed_head": git("rev-parse", "HEAD").decode().strip(),
-        "scope": "Current tracked working files, reachable local Git history, catalog integrity and stored-series profiles; no network or model validation.",
+        "scope": "Current tracked working files, staged canonical-data bytes, reachable local Git history, catalog integrity and stored-series profiles; no network or model validation.",
         "status": "review_required" if blocking else "automated_checks_passed",
         "tracked_files": len(tracked), "catalog_errors": errors,
         "inappropriate_tracked_paths": inappropriate,
         "working_tree_secret_patterns": working_findings,
+        "index_data_byte_mismatches": index_mismatches,
         "history_scan": history,
         "catalog": {"ocp_records": len(catalog.search()),
                     "retained_table_points": table_points,

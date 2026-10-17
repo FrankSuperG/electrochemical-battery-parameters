@@ -1,0 +1,169 @@
+{
+  "record": {
+    "id": "mj1-negative-ocp-discharging",
+    "version": "1",
+    "title": "LG MJ1 Graphite-SiOx | source discharging | pseudo-OCP",
+    "parameter": "electrode_ocp",
+    "material": "Graphite-SiOx",
+    "material_id": "mj1-negative-material",
+    "electrode_role": "negative",
+    "direction": "unspecified",
+    "measurement": "pseudo_ocp",
+    "temperature": {
+      "value_K": null,
+      "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "source_reported_stoichiometry",
+      "symbol": "x",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+      "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/mj1-negative-ocp-discharging.csv",
+      "sha256": "69e0874a2d9f8a7274daade3a229100306585d93bf81ca828365e6dc940aabfb",
+      "point_count": 100001,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "mj1-zenodo-15497193",
+      "kuhn-2026-workflows"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "lg-mj1-dlr-sintef",
+      "relationship": "same_model",
+      "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+    },
+    "provenance": {
+      "asset_ids": [
+        "mj1-ocp-negative-discharging",
+        "mj1-workbook",
+        "mj1-direct-jsonld"
+      ],
+      "derivation": "source_pseudo_ocp_table_extraction",
+      "location": "pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+      "processing": {
+        "script": "scripts/seed_mj1.py",
+        "source_branch": "discharging",
+        "source_rows": 226308,
+        "nonfinite_rows_omitted": 0,
+        "duplicate_coordinate_rows_omitted": 126307,
+        "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "source_reported_stoichiometry",
+      "raw_data": "published_table_not_instrument_raw",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+      "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+      "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+      "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+      "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+      "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+    ],
+    "license": "CC-BY-4.0"
+  },
+  "sources": {
+    "mj1-zenodo-15497193": {
+      "kind": "dataset",
+      "title": "INR18650-LG-3500-MJ1 Lithium-Ion Battery Cell Direct Characterization Data",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2025,
+      "version": "Zenodo fixed record 15497193; 1.0.0",
+      "doi": "10.5281/zenodo.15497193",
+      "url": "https://zenodo.org/records/15497193",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata evidence/mj1-15497193-metadata.json: metadata.license.id=cc-by-4.0; source file MD5 checked against that record.",
+      "role": "Same MJ1 characterization collection. Harvested/reassembled electrode characterization, not proof of intact commercial-cell validation."
+    },
+    "kuhn-2026-workflows": {
+      "kind": "paper",
+      "title": "Workflows and principles for collaboration and communication in battery research",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2026,
+      "doi": "10.1039/D5DD00247H",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2025/dd/d5dd00247h",
+      "license": "CC-BY-3.0",
+      "role": "Digital Discovery 2026, 5, 177-192; first published 2025-11-05. Section 3.4 establishes harvested/reassembled three-electrode configuration, replacement separator and 25 degC chamber."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "mj1-ocp-negative-discharging": {
+      "filename": "mj1-15497193-pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+      "source_filename": "pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "b4b809ee815054f8f73a0d8f01b70840c7ad5fb894df98dbbc6f6bb44a55fc84",
+      "md5": "dc60cf84fbb3ef2b1c6a3261d3bb8394",
+      "path": "evidence/mj1-15497193-pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet"
+    },
+    "mj1-workbook": {
+      "filename": "mj1-15497193-MJ1_parameters.xlsx",
+      "source_filename": "MJ1_parameters.xlsx",
+      "url": "https://zenodo.org/api/records/15497193/files/MJ1_parameters.xlsx/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "Deposit CC-BY-4.0; third-party OCV scope unresolved",
+      "sha256": "dc621ad13b917c5aea339a9e538b8527af555070ffe77cdb90834408dbb7b8c5",
+      "md5": "be75d0f6fa7127f3b6c9d084a3931b40",
+      "redistribution_status": "External original only: OCV sheet includes separately attributed literature silicon curves; their reuse scope is not assigned CC BY 4.0 by this project."
+    },
+    "mj1-direct-jsonld": {
+      "filename": "mj1-15497193-metadata.jsonld",
+      "source_filename": "metadata.jsonld",
+      "url": "https://zenodo.org/api/records/15497193/files/metadata.jsonld/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "50ec9a8747ab0b0bf0fb1e67ef636765200b2f0c2d6c63fa1412bf9a9cd5442b",
+      "md5": "5b22f298961c9b033b2db5ff284f4ccd",
+      "path": "evidence/mj1-15497193-metadata.jsonld"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

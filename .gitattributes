@@ -8,7 +8,6 @@
 *.css text eol=lf
 # Preserve experimental files byte-for-byte, including source line endings.
 *.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
-src/ebp/data/evidence/*.txt -text -whitespace
-src/ebp/data/evidence/*.m -text -whitespace
+src/ebp/data/evidence/* -text -whitespace
 # Keep the publisher's license text as obtained.
 src/ebp/licenses/* -text -whitespace

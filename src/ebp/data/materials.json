@@ -125,5 +125,15 @@
   "jahn-a123-graphite-model-ocpn-material": {
     "chemistry": "graphite",
     "description": "Harvested A123 18650M1A electrode context; approximated single-string PD-ECM potential."
+  },
+  "mj1-negative-material": {
+    "name": "Graphite-SiOx",
+    "family": "Graphite-SiOx",
+    "note": "Source MJ1 harvested electrode; NMC ratio differs between laboratory workbook and later paper, so no exact composition is assigned."
+  },
+  "mj1-positive-material": {
+    "name": "NMC",
+    "family": "NMC",
+    "note": "Source MJ1 harvested electrode; NMC ratio differs between laboratory workbook and later paper, so no exact composition is assigned."
   }
 }

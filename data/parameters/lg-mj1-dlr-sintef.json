@@ -1,0 +1,2994 @@
+{
+  "cell_id": "lg-mj1-dlr-sintef",
+  "cell": {
+    "manufacturer": "LG Chem",
+    "model": "MJ1",
+    "display_name": "LG MJ1 | DLR-SINTEF harvested-electrode characterization",
+    "format": "18650 commercial source; 18 mm harvested electrodes in laboratory cells",
+    "chemistry": "NMC/Graphite-SiOx; exact NMC composition differs between source versions",
+    "nominal_capacity_Ah": 3.5,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "mj1-zenodo-15407849",
+      "mj1-zenodo-15497193",
+      "mj1-zenodo-15496570",
+      "mj1-zenodo-15528177",
+      "mj1-zenodo-15538164",
+      "mj1-zenodo-15520717",
+      "kuhn-2026-workflows"
+    ],
+    "model_context": "Laboratory characterization and direction/model-specific GITT fits; original components and reassembled-cell model settings are distinct",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established.",
+    "curation_guide": "docs/LG_MJ1.md",
+    "supporting_asset_ids": [
+      "mj1-15407849-metadata",
+      "mj1-15497193-metadata",
+      "mj1-ocp-positive-charging",
+      "mj1-source-exchange-current-density-graphite-silicon-oxide-discharging",
+      "mj1-source-exchange-current-density-nmc-discharging",
+      "mj1-direct-jsonld",
+      "mj1-source-exchange-current-density-graphite-silicon-oxide-charging",
+      "mj1-source-exchange-current-density-nmc-charging",
+      "mj1-ocp-negative-charging",
+      "mj1-source-diffusion-graphite-silicon-oxide-charging",
+      "mj1-source-diffusion-nmc-charging",
+      "mj1-source-diffusion-graphite-silicon-oxide-discharging",
+      "mj1-source-diffusion-nmc-discharging",
+      "mj1-ocp-negative-discharging",
+      "mj1-ocp-positive-discharging",
+      "mj1-15496570-metadata",
+      "mj1-continuum-source",
+      "mj1-15528177-metadata",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spme",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-dfn",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spm",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spme",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-dfn",
+      "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spm",
+      "mj1-15538164-metadata",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spme",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spme",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-dfn",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spm",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-dfn",
+      "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spm",
+      "mj1-15520717-metadata",
+      "mj1-workbook-selection"
+    ],
+    "note": "No same-study intact MJ1 full-cell trace imported. Three-electrode GITT is electrode-versus-Li voltage, with a 260 um replacement separator; it is not an original commercial-cell validation trace. Do not combine all diffusion variants.",
+    "coverage": {
+      "ocp": "Four laboratory pseudo-OCP tables, lithium reference; native reported coordinate requires explicit model balancing.",
+      "diffusion": "Four workbook GITT tables, twelve model/direction-dependent GITT fit tables with source error bounds, and two SOC-specific activation energies.",
+      "kinetics": "Four EIS-derived exchange-current tables and two SOC-specific activation energies; area-basis and concentration/temperature extension remain unresolved.",
+      "full_cell_tests": "No intact commercial-cell test verified. Structured anode GITT inspected: t/I/working-versus-Li voltage only, no measured T or intact-cell CC cycle."
+    },
+    "parameter_ids": [
+      "mj1-negative-thickness",
+      "mj1-negative-collector-thickness",
+      "mj1-positive-thickness",
+      "mj1-positive-collector-thickness",
+      "mj1-original-separator-thickness",
+      "mj1-negative-total-area",
+      "mj1-positive-total-area",
+      "mj1-negative-porosity",
+      "mj1-positive-porosity",
+      "mj1-original-separator-porosity",
+      "mj1-graphite-particle-diameter",
+      "mj1-silicon-particle-diameter",
+      "mj1-positive-particle-diameter",
+      "mj1-negative-bet-area",
+      "mj1-positive-bet-area",
+      "mj1-negative-kinetic-activation-energy",
+      "mj1-positive-kinetic-activation-energy",
+      "mj1-negative-diffusion-activation-energy",
+      "mj1-positive-diffusion-activation-energy",
+      "mj1-negative-electronic-conductivity",
+      "mj1-positive-electronic-conductivity",
+      "mj1-nominal-capacity",
+      "mj1-lab-negative-di-discharging",
+      "mj1-lab-negative-di-charging",
+      "mj1-lab-positive-di-discharging",
+      "mj1-lab-positive-di-charging",
+      "mj1-lab-negative-i0-discharging",
+      "mj1-lab-negative-i0-charging",
+      "mj1-lab-positive-i0-discharging",
+      "mj1-lab-positive-i0-charging",
+      "mj1-gitt-negative-spme-delithiation",
+      "mj1-gitt-negative-dfn-delithiation",
+      "mj1-gitt-negative-spm-delithiation",
+      "mj1-gitt-negative-spme-lithiation",
+      "mj1-gitt-negative-dfn-lithiation",
+      "mj1-gitt-negative-spm-lithiation",
+      "mj1-gitt-positive-spme-lithiation",
+      "mj1-gitt-positive-spme-delithiation",
+      "mj1-gitt-positive-dfn-lithiation",
+      "mj1-gitt-positive-spm-lithiation",
+      "mj1-gitt-positive-dfn-delithiation",
+      "mj1-gitt-positive-spm-delithiation"
+    ],
+    "ocp_record_ids": [
+      "mj1-negative-ocp-charging",
+      "mj1-negative-ocp-discharging",
+      "mj1-positive-ocp-charging",
+      "mj1-positive-ocp-discharging"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "mj1-negative-ocp-charging",
+          "mj1-negative-ocp-discharging",
+          "mj1-positive-ocp-charging",
+          "mj1-positive-ocp-discharging"
+        ],
+        "source_ids": [
+          "kuhn-2026-workflows",
+          "mj1-zenodo-15497193"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four laboratory pseudo-OCP tables, lithium reference; native reported coordinate requires explicit model balancing.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+          "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "mj1-negative-diffusion-activation-energy",
+          "mj1-positive-diffusion-activation-energy",
+          "mj1-lab-negative-di-discharging",
+          "mj1-lab-negative-di-charging",
+          "mj1-lab-positive-di-discharging",
+          "mj1-lab-positive-di-charging",
+          "mj1-gitt-negative-spme-delithiation",
+          "mj1-gitt-negative-dfn-delithiation",
+          "mj1-gitt-negative-spm-delithiation",
+          "mj1-gitt-negative-spme-lithiation",
+          "mj1-gitt-negative-dfn-lithiation",
+          "mj1-gitt-negative-spm-lithiation",
+          "mj1-gitt-positive-spme-lithiation",
+          "mj1-gitt-positive-spme-delithiation",
+          "mj1-gitt-positive-dfn-lithiation",
+          "mj1-gitt-positive-spm-lithiation",
+          "mj1-gitt-positive-dfn-delithiation",
+          "mj1-gitt-positive-spm-delithiation"
+        ],
+        "source_ids": [
+          "kuhn-2026-workflows",
+          "mj1-zenodo-15497193",
+          "mj1-zenodo-15528177",
+          "mj1-zenodo-15538164"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four workbook GITT tables, twelve model/direction-dependent GITT fit tables with source error bounds, and two SOC-specific activation energies.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+          "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "mj1-negative-kinetic-activation-energy",
+          "mj1-positive-kinetic-activation-energy",
+          "mj1-lab-negative-i0-discharging",
+          "mj1-lab-negative-i0-charging",
+          "mj1-lab-positive-i0-discharging",
+          "mj1-lab-positive-i0-charging"
+        ],
+        "source_ids": [
+          "kuhn-2026-workflows",
+          "mj1-zenodo-15497193"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four EIS-derived exchange-current tables and two SOC-specific activation energies; area-basis and concentration/temperature extension remain unresolved.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+          "Source SOC/stoichiometry coordinates need explicit balancing before model use",
+          "Exchange-current active/geometric area convention not independently established"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No intact commercial-cell test verified. Structured anode GITT inspected: t/I/working-versus-Li voltage only, no measured T or intact-cell CC cycle.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    },
+    "missing_items": [
+      "Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved",
+      "Exchange-current active/geometric area convention not independently established",
+      "Identical characterization/validation specimen not established",
+      "Independent electrochemical model validation not performed",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "No same-study intact commercial MJ1 full-cell I/V/T validation series verified",
+      "No standalone intact-cell constant-current charge/discharge observations imported",
+      "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+    ]
+  },
+  "parameters": [
+    {
+      "id": "mj1-negative-thickness",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode coating thickness",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F3",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Negative electrode coating thickness; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 3,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "SEM",
+        "source_comment": "average",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.8e-05
+      }
+    },
+    {
+      "id": "mj1-negative-collector-thickness",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative current collector full thickness",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F4",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Negative current collector full thickness; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 4,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "SEM",
+        "source_comment": "average, full",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1e-05
+      }
+    },
+    {
+      "id": "mj1-positive-thickness",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode coating thickness",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F5",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Positive electrode coating thickness; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 5,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "SEM",
+        "source_comment": "average",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 7.4e-05
+      }
+    },
+    {
+      "id": "mj1-positive-collector-thickness",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive current collector full thickness",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F6",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Positive current collector full thickness; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 6,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "SEM",
+        "source_comment": "average, full",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.7e-05
+      }
+    },
+    {
+      "id": "mj1-original-separator-thickness",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Original commercial separator thickness",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F7",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Original commercial separator thickness; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 7,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "SEM",
+        "source_comment": "average",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2e-05
+      }
+    },
+    {
+      "id": "mj1-negative-total-area",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Reported negative electrode total area",
+      "category": "geometry",
+      "unit": "m2",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F8",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported negative electrode total area; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 8,
+        "source_unit": "cm\u00b2",
+        "unit_multiplier": 0.0001,
+        "source_method": "manual",
+        "source_comment": "total",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0766
+      }
+    },
+    {
+      "id": "mj1-positive-total-area",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Reported positive electrode total area",
+      "category": "geometry",
+      "unit": "m2",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F9",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported positive electrode total area; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 9,
+        "source_unit": "cm\u00b2",
+        "unit_multiplier": 0.0001,
+        "source_method": "manual",
+        "source_comment": "total",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.07350000000000001
+      }
+    },
+    {
+      "id": "mj1-negative-porosity",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F11",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Negative electrode porosity; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 11,
+        "source_unit": "-",
+        "unit_multiplier": 1,
+        "source_method": "MIP",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.26
+      }
+    },
+    {
+      "id": "mj1-positive-porosity",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F12",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Positive electrode porosity; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 12,
+        "source_unit": "-",
+        "unit_multiplier": 1,
+        "source_method": "MIP",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.23
+      }
+    },
+    {
+      "id": "mj1-original-separator-porosity",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Original commercial separator porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F13",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Original commercial separator porosity; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 13,
+        "source_unit": "-",
+        "unit_multiplier": 1,
+        "source_method": "MIP",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.38
+      }
+    },
+    {
+      "id": "mj1-graphite-particle-diameter",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Graphite particle diameter",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F23",
+        "origin_status": "reported_microstructure_estimate; later paper uses external Heenan MJ1 tomography"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Graphite particle diameter; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 23,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "\u00b5CT",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT",
+        "specimen_scope": "Microstructure image lineage is external in the paper; not independently tied to harvested cell #001"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Paper microstructure reconstruction uses Heenan et al. MJ1 images; these particle diameters are not asserted as same-specimen measurements of cell #001."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 9.57e-06
+      }
+    },
+    {
+      "id": "mj1-silicon-particle-diameter",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Silicon-phase particle diameter",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F24",
+        "origin_status": "reported_microstructure_estimate; later paper uses external Heenan MJ1 tomography"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Silicon-phase particle diameter; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 24,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "\u00b5CT",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT",
+        "specimen_scope": "Microstructure image lineage is external in the paper; not independently tied to harvested cell #001"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Paper microstructure reconstruction uses Heenan et al. MJ1 images; these particle diameters are not asserted as same-specimen measurements of cell #001."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.25e-06
+      }
+    },
+    {
+      "id": "mj1-positive-particle-diameter",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "NMC particle diameter",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F25",
+        "origin_status": "reported_microstructure_estimate; later paper uses external Heenan MJ1 tomography"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "NMC particle diameter; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 25,
+        "source_unit": "\u00b5m",
+        "unit_multiplier": 1e-06,
+        "source_method": "\u00b5CT",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT",
+        "specimen_scope": "Microstructure image lineage is external in the paper; not independently tied to harvested cell #001"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Paper microstructure reconstruction uses Heenan et al. MJ1 images; these particle diameters are not asserted as same-specimen measurements of cell #001."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.749999999999999e-06
+      }
+    },
+    {
+      "id": "mj1-negative-bet-area",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode BET specific surface area",
+      "category": "geometry",
+      "unit": "m2.kg-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F26",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Negative electrode BET specific surface area; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 26,
+        "source_unit": "m\u00b2/g",
+        "unit_multiplier": 1000,
+        "source_method": "BET",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1230.0
+      }
+    },
+    {
+      "id": "mj1-positive-bet-area",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode BET specific surface area",
+      "category": "geometry",
+      "unit": "m2.kg-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F27",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Positive electrode BET specific surface area; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 27,
+        "source_unit": "m\u00b2/g",
+        "unit_multiplier": 1000,
+        "source_method": "BET",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1190.0
+      }
+    },
+    {
+      "id": "mj1-negative-kinetic-activation-energy",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative exchange-current activation energy at source SOC15",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F38",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Negative exchange-current activation energy at source SOC15; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 38,
+        "source_unit": "kJ/mol",
+        "unit_multiplier": 1000,
+        "source_method": "EIS",
+        "source_comment": "SOC15",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Activation energy is reported at one source SOC; no general Arrhenius extension of the entire table is constructed."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 47800.0
+      }
+    },
+    {
+      "id": "mj1-positive-kinetic-activation-energy",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive exchange-current activation energy at source SOC50",
+      "category": "kinetics",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F39",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Positive exchange-current activation energy at source SOC50; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 39,
+        "source_unit": "kJ/mol",
+        "unit_multiplier": 1000,
+        "source_method": "EIS",
+        "source_comment": "SOC50",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Activation energy is reported at one source SOC; no general Arrhenius extension of the entire table is constructed."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 40460.0
+      }
+    },
+    {
+      "id": "mj1-negative-diffusion-activation-energy",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative diffusion activation energy at source SOC15",
+      "category": "diffusion",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F41",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Negative diffusion activation energy at source SOC15; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 41,
+        "source_unit": "kJ/mol",
+        "unit_multiplier": 1000,
+        "source_method": "GITT",
+        "source_comment": "SOC15",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Activation energy is reported at one source SOC; no general Arrhenius extension of the entire table is constructed."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 13820.0
+      }
+    },
+    {
+      "id": "mj1-positive-diffusion-activation-energy",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive diffusion activation energy at source SOC50",
+      "category": "diffusion",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F42",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Positive diffusion activation energy at source SOC50; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 42,
+        "source_unit": "kJ/mol",
+        "unit_multiplier": 1000,
+        "source_method": "GITT",
+        "source_comment": "SOC50",
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Activation energy is reported at one source SOC; no general Arrhenius extension of the entire table is constructed."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5630.0
+      }
+    },
+    {
+      "id": "mj1-negative-electronic-conductivity",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode electronic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F43",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Negative electrode electronic conductivity; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 43,
+        "source_unit": "S/m",
+        "unit_multiplier": 1,
+        "source_method": "4-probe method",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 215.0
+      }
+    },
+    {
+      "id": "mj1-positive-electronic-conductivity",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode electronic conductivity",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::physical_quantities!F44",
+        "origin_status": "reported_laboratory_result; source method retained"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Positive electrode electronic conductivity; source description/measurement method retained without model substitution.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_row": 44,
+        "source_unit": "S/m",
+        "unit_multiplier": 1,
+        "source_method": "4-probe method",
+        "source_comment": null,
+        "assembly_scope": "Harvested original component; original separator differs from the 260 um replacement used in GITT"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.25
+      }
+    },
+    {
+      "id": "mj1-nominal-capacity",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Nominal commercial cell capacity",
+      "category": "operating_limits",
+      "unit": "Ah",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::cell_specifications!D9",
+        "origin_status": "reported_nominal_specification"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Commercial nominal capacity, not the reassembled 18 mm electrode cell's measured capacity.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3.5
+      }
+    },
+    {
+      "id": "mj1-lab-negative-di-discharging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | source discharging",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::Di!B5:B41,C5:C41",
+        "origin_status": "laboratory_GITT_estimate"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "discharging",
+        "electrode": "negative",
+        "source_unit": "cm2.s-1",
+        "unit_multiplier": 0.0001,
+        "missing_source_rows": [
+          5
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Not applicable"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-negative-di-discharging.csv",
+        "sha256": "9a19ca4e6db93b39af5090870620b064b61894878a0bc1fe85a9770866848573",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            0.0,
+            99.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-lab-negative-di-charging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | source charging",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::Di!B5:B41,D5:D41",
+        "origin_status": "laboratory_GITT_estimate"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "charging",
+        "electrode": "negative",
+        "source_unit": "cm2.s-1",
+        "unit_multiplier": 0.0001,
+        "missing_source_rows": [
+          41
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Not applicable"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-negative-di-charging.csv",
+        "sha256": "3bb6a3a0a2b93ad695d46e616cb4f962ae1821b03b4dde55400dd7f17f4322ed",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            1.0,
+            100.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-lab-positive-di-discharging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | source discharging",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::Di!B5:B41,E5:E41",
+        "origin_status": "laboratory_GITT_estimate"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "discharging",
+        "electrode": "positive",
+        "source_unit": "cm2.s-1",
+        "unit_multiplier": 0.0001,
+        "missing_source_rows": [
+          5
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Not applicable"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-positive-di-discharging.csv",
+        "sha256": "6a579cb7012b796a992a840cef2fa071240f3d4dea93d48a29f7f2029e23cd0c",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            0.0,
+            99.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-lab-positive-di-charging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | source charging",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::Di!B5:B41,F5:F41",
+        "origin_status": "laboratory_GITT_estimate"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "charging",
+        "electrode": "positive",
+        "source_unit": "cm2.s-1",
+        "unit_multiplier": 0.0001,
+        "missing_source_rows": [
+          41
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Not applicable"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-positive-di-charging.csv",
+        "sha256": "630ad9ee2e29267b3ecca317d59af3c3d16b3709459dcc08b188b5a6debc2405",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            1.0,
+            100.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-lab-negative-i0-discharging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode exchange-current density | source discharging",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::i0!B5:B41,C5:C41",
+        "origin_status": "laboratory_EIS_derived_exchange_current_density"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "discharging",
+        "electrode": "negative",
+        "source_unit": "mA.cm-2",
+        "unit_multiplier": 10,
+        "missing_source_rows": [
+          5
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Source-reported area basis; active versus geometric area not independently established"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-negative-i0-discharging.csv",
+        "sha256": "c420142bddb997a5f20a297dc52ef7cf9569a075b116dc9e9f2d5a7f7f933e62",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            1.0,
+            100.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-lab-negative-i0-charging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode exchange-current density | source charging",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::i0!B5:B41,D5:D41",
+        "origin_status": "laboratory_EIS_derived_exchange_current_density"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "charging",
+        "electrode": "negative",
+        "source_unit": "mA.cm-2",
+        "unit_multiplier": 10,
+        "missing_source_rows": [
+          41
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Source-reported area basis; active versus geometric area not independently established"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-negative-i0-charging.csv",
+        "sha256": "7dbcd80852af4dfae572e7334af8ecfb24e88c7e7c236f0563a414d2f5be600f",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            0.0,
+            99.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-lab-positive-i0-discharging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode exchange-current density | source discharging",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::i0!B5:B41,E5:E41",
+        "origin_status": "laboratory_EIS_derived_exchange_current_density"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "discharging",
+        "electrode": "positive",
+        "source_unit": "mA.cm-2",
+        "unit_multiplier": 10,
+        "missing_source_rows": [
+          5
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Source-reported area basis; active versus geometric area not independently established"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-positive-i0-discharging.csv",
+        "sha256": "4ef4d4e111c7ee03afb7b44395a00f66c0024d6afafff5b21037a5c4031c78db",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            1.0,
+            100.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-lab-positive-i0-charging",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode exchange-current density | source charging",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-workbook",
+        "location": "MJ1_parameters.xlsx::i0!B5:B41,F5:F41",
+        "origin_status": "laboratory_EIS_derived_exchange_current_density"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Reported electrode coefficient versus source SOC; charging/discharging is the original branch label, not a new electrode-direction inference.",
+      "conditions": {
+        "parameterization_variant": "direct-laboratory",
+        "source_branch": "charging",
+        "electrode": "positive",
+        "source_unit": "mA.cm-2",
+        "unit_multiplier": 10,
+        "missing_source_rows": [
+          41
+        ],
+        "chamber_setpoint_K": 298.15,
+        "temperature_scope": "Paper experimental setting; no measured temperature array",
+        "area_basis": "Source-reported area basis; active versus geometric area not independently established"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Workbook NA/blanks are omitted, never zero-filled; corresponding Parquet exports contain zero/NaN substitutions and rounded values.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-lab-positive-i0-charging.csv",
+        "sha256": "8e0242319713d45ad38bab15e7b2ff2f610c184b099c1b666c6dd49d84920527",
+        "point_count": 36,
+        "x": {
+          "column": "source_soc_percent",
+          "variable": "source_soc_percent",
+          "unit": "%",
+          "kind": "source_electrode_soc",
+          "domain": [
+            0.0,
+            99.0
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-negative-spme-delithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | SPMe | delithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15528177",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spme",
+        "location": "negative-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spme-delithiation",
+        "model": "SPMe",
+        "direction": "delithiation",
+        "electrode": "negative",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-negative-spme-delithiation.csv",
+        "sha256": "0822eeda496eb2167e6997d9368e8286349aae0f8013dd85db9341b8ad611d70",
+        "point_count": 33,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.019827455468046696,
+            0.9714642580779994
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-negative-dfn-delithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | DFN | delithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15528177",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-dfn",
+        "location": "negative-electrode-diffusivity-m2s-1_delithiation_from_DFN.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-dfn-delithiation",
+        "model": "DFN",
+        "direction": "delithiation",
+        "electrode": "negative",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-negative-dfn-delithiation.csv",
+        "sha256": "f2e35136367212af016310647bf19ca523b2b451802596e37a3c8994c129dea1",
+        "point_count": 33,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.019827455468046696,
+            0.9714642580779994
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-negative-spm-delithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | SPM | delithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15528177",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spm",
+        "location": "negative-electrode-diffusivity-m2s-1_delithiation_from_SPM.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spm-delithiation",
+        "model": "SPM",
+        "direction": "delithiation",
+        "electrode": "negative",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-negative-spm-delithiation.csv",
+        "sha256": "3ef9459f9d807c4a9c8cf7cb080f1a3be1ff6f4085194267a3180a4cb252d518",
+        "point_count": 33,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.019827455468046696,
+            0.9714642580779994
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-negative-spme-lithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | SPMe | lithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15528177",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spme",
+        "location": "negative-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spme-lithiation",
+        "model": "SPMe",
+        "direction": "lithiation",
+        "electrode": "negative",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-negative-spme-lithiation.csv",
+        "sha256": "d40fdd087b09efa88234a1ef94a049d437dcece72f14cf5c6dab9f545d12534b",
+        "point_count": 30,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            4.850569893897266e-06,
+            0.9363699730627941
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-negative-dfn-lithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | DFN | lithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15528177",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-dfn",
+        "location": "negative-electrode-diffusivity-m2s-1_lithiation_from_DFN.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-dfn-lithiation",
+        "model": "DFN",
+        "direction": "lithiation",
+        "electrode": "negative",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-negative-dfn-lithiation.csv",
+        "sha256": "8918a63d26a1d53ae3fba746bd1af067b05e8f546a46bc261fe6590c2296fda2",
+        "point_count": 30,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            4.850569893897266e-06,
+            0.9363699730627941
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-negative-spm-lithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Negative electrode diffusivity | SPM | lithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15528177",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spm",
+        "location": "negative-electrode-diffusivity-m2s-1_lithiation_from_SPM.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spm-lithiation",
+        "model": "SPM",
+        "direction": "lithiation",
+        "electrode": "negative",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-negative-spm-lithiation.csv",
+        "sha256": "7ce8b734950be3bc65016a65740a01f7e2865f4504248024d757095a84dd42d9",
+        "point_count": 30,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            4.850569893897266e-06,
+            0.9363699730627941
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-positive-spme-lithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | SPMe | lithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15538164",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spme",
+        "location": "positive-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spme-lithiation",
+        "model": "SPMe",
+        "direction": "lithiation",
+        "electrode": "positive",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-positive-spme-lithiation.csv",
+        "sha256": "95a9e40f790bbdc11c60de7f2d00768092689f8bcdeb5ee3f59c3285dff1423e",
+        "point_count": 30,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.07560086967188899,
+            0.9478984957306278
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-positive-spme-delithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | SPMe | delithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15538164",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spme",
+        "location": "positive-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spme-delithiation",
+        "model": "SPMe",
+        "direction": "delithiation",
+        "electrode": "positive",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-positive-spme-delithiation.csv",
+        "sha256": "63b3d43a0946fe646860462909b5d380b64efb57b9af145102f4005110203866",
+        "point_count": 33,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.05967318493316176,
+            0.9335707882804912
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-positive-dfn-lithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | DFN | lithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15538164",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-dfn",
+        "location": "positive-electrode-diffusivity-m2s-1_lithiation_from_DFN.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-dfn-lithiation",
+        "model": "DFN",
+        "direction": "lithiation",
+        "electrode": "positive",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-positive-dfn-lithiation.csv",
+        "sha256": "b41ca0399e67a25f2ad496eec8d38693139e457e7bedac3eb422f62d0537d9bc",
+        "point_count": 30,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.07560086967188899,
+            0.9478984957306278
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-positive-spm-lithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | SPM | lithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15538164",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spm",
+        "location": "positive-electrode-diffusivity-m2s-1_lithiation_from_SPM.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spm-lithiation",
+        "model": "SPM",
+        "direction": "lithiation",
+        "electrode": "positive",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-positive-spm-lithiation.csv",
+        "sha256": "b51d085ef55ce67c0665690467bd21110425be28472c9e8ccff9373e00eaa941",
+        "point_count": 30,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.07560086967188899,
+            0.9478984957306278
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-positive-dfn-delithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | DFN | delithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15538164",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-dfn",
+        "location": "positive-electrode-diffusivity-m2s-1_delithiation_from_DFN.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-dfn-delithiation",
+        "model": "DFN",
+        "direction": "delithiation",
+        "electrode": "positive",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-positive-dfn-delithiation.csv",
+        "sha256": "926ba590afa47734400f86753bc0dd5b161726dd372b0f084d246ee5566b2cf7",
+        "point_count": 33,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.05967318493316176,
+            0.9335707882804912
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "mj1-gitt-positive-spm-delithiation",
+      "version": "1",
+      "cell_id": "lg-mj1-dlr-sintef",
+      "name": "Positive electrode diffusivity | SPM | delithiation",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "mj1-zenodo-15538164",
+        "kuhn-2026-workflows"
+      ],
+      "provenance": {
+        "asset_id": "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spm",
+        "location": "positive-electrode-diffusivity-m2s-1_delithiation_from_SPM.json",
+        "origin_status": "EP-BOLFI_model_dependent_GITT_fit"
+      },
+      "license": "CC-BY-4.0",
+      "independent_validation": false,
+      "definition": "Fitted effective solid diffusivity under the named model and direction; source SOC alignment retained.",
+      "conditions": {
+        "parameterization_variant": "gitt-spm-delithiation",
+        "model": "SPM",
+        "direction": "delithiation",
+        "electrode": "positive",
+        "uncertainty": "Original lower/upper error bounds retained per node; no coverage probability assigned or interpolated.",
+        "temperature_note": "Paper chamber setting 25 degC; no temperature trace imported"
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "SPM, SPMe and DFN fits are alternatives, not independent measurements or interchangeable inputs. Broad error bounds remain visible.",
+        "Arithmetic linear interpolation of retained nodes only; no extrapolation. Coordinate mapping and model conventions remain the caller's responsibility."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/mj1-gitt-positive-spm-delithiation.csv",
+        "sha256": "597ef030fe7f4a82c52901248cd0340abbdb18021f7fcc039cd349bdc0e85512",
+        "point_count": 33,
+        "x": {
+          "column": "source_sto",
+          "variable": "source_sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.05967318493316176,
+            0.9335707882804912
+          ],
+          "definition": "Source electrode SOC/stoichiometry coordinate; not automatically full-cell SOC or verified absolute lithium fraction."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    }
+  ],
+  "ocp_records": [
+    {
+      "id": "mj1-negative-ocp-charging",
+      "version": "1",
+      "title": "LG MJ1 Graphite-SiOx | source charging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "Graphite-SiOx",
+      "material_id": "mj1-negative-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-negative-ocp-charging.csv",
+        "sha256": "9881d3235067ecb9895faf6ee471504b56585317b0b7502b67881dd09755c34d",
+        "point_count": 100001,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-negative-charging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_graphite_silicon_oxide_charging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "charging",
+          "source_rows": 226585,
+          "nonfinite_rows_omitted": 0,
+          "duplicate_coordinate_rows_omitted": 126584,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "mj1-negative-ocp-discharging",
+      "version": "1",
+      "title": "LG MJ1 Graphite-SiOx | source discharging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "Graphite-SiOx",
+      "material_id": "mj1-negative-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-negative-ocp-discharging.csv",
+        "sha256": "69e0874a2d9f8a7274daade3a229100306585d93bf81ca828365e6dc940aabfb",
+        "point_count": 100001,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-negative-discharging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "discharging",
+          "source_rows": 226308,
+          "nonfinite_rows_omitted": 0,
+          "duplicate_coordinate_rows_omitted": 126307,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "mj1-positive-ocp-charging",
+      "version": "1",
+      "title": "LG MJ1 NMC | source charging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "NMC",
+      "material_id": "mj1-positive-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.21,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-positive-ocp-charging.csv",
+        "sha256": "e13ebda17d89e039e27679a483f97aca8819f343fcc224b9419b8d96ccc4ba72",
+        "point_count": 257898,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-positive-charging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_nmc_charging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "charging",
+          "source_rows": 259300,
+          "nonfinite_rows_omitted": 1402,
+          "duplicate_coordinate_rows_omitted": 0,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "mj1-positive-ocp-discharging",
+      "version": "1",
+      "title": "LG MJ1 NMC | source discharging | pseudo-OCP",
+      "parameter": "electrode_ocp",
+      "material": "NMC",
+      "material_id": "mj1-positive-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Paper reports 25 degC chamber; no per-node temperature or separate file setpoint verified."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.21,
+          1.0
+        ],
+        "definition": "Native stoichiometry_unit_one from the source Parquet; calibration to absolute lithium fraction not independently verified. Not full-cell SOC or branch progress.",
+        "domain_basis": "Finite retained native endpoints; no extrapolation or endpoint reconstruction."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/mj1-positive-ocp-discharging.csv",
+        "sha256": "656bab715d2c459493d72e941397ff35037860b5770993daca907d5807d50885",
+        "point_count": 257898,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "mj1-zenodo-15497193",
+        "kuhn-2026-workflows"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-mj1-dlr-sintef",
+        "relationship": "same_model",
+        "evidence": "Explicit LG MJ1 model and common DLR/SINTEF collection. Direct characterization identifies harvested cell #001; fit records link to their GITT processing chain. No intact-cell validation specimen correspondence established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "mj1-ocp-positive-discharging",
+          "mj1-workbook",
+          "mj1-direct-jsonld"
+        ],
+        "derivation": "source_pseudo_ocp_table_extraction",
+        "location": "pseudo_open_circuit_voltage_nmc_discharging.parquet",
+        "processing": {
+          "script": "scripts/seed_mj1.py",
+          "source_branch": "discharging",
+          "source_rows": 257898,
+          "nonfinite_rows_omitted": 0,
+          "duplicate_coordinate_rows_omitted": 0,
+          "selection": "First source occurrence per finite coordinate; sort ascending; source_parquet_row is one-based. No smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Same model/study association; exact serialized specimen linkage to intact validation tests unresolved.",
+        "Partial characterization package; not a complete independently validated commercial-cell parameter set.",
+        "Finite-current pseudo-OCP; source metadata describes 0.05 C. Not a claimed equilibrium OCP.",
+        "Source charging/discharging label retained in title/provenance; physical lithiation direction is left unspecified.",
+        "Original Parquet/workbook retain discarded duplicate-coordinate voltages and missing rows; no coordinate or potential imputation.",
+        "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
+      ],
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "full_cell_tests": [],
+  "sources": {
+    "kuhn-2026-workflows": {
+      "kind": "paper",
+      "title": "Workflows and principles for collaboration and communication in battery research",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2026,
+      "doi": "10.1039/D5DD00247H",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2025/dd/d5dd00247h",
+      "license": "CC-BY-3.0",
+      "role": "Digital Discovery 2026, 5, 177-192; first published 2025-11-05. Section 3.4 establishes harvested/reassembled three-electrode configuration, replacement separator and 25 degC chamber."
+    },
+    "mj1-zenodo-15407849": {
+      "kind": "dataset",
+      "title": "INR18650-LG-3500-MJ1 Lithium-Ion Battery Cell Characterization Data",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2025,
+      "version": "Zenodo fixed record 15407849; 1.0.0",
+      "doi": "10.5281/zenodo.15407849",
+      "url": "https://zenodo.org/records/15407849",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata evidence/mj1-15407849-metadata.json: metadata.license.id=cc-by-4.0; source file MD5 checked against that record.",
+      "role": "Same MJ1 characterization collection. Harvested/reassembled electrode characterization, not proof of intact commercial-cell validation."
+    },
+    "mj1-zenodo-15496570": {
+      "kind": "dataset",
+      "title": "INR18650-LG-3500-MJ1 Lithium-Ion Battery Cell Complete Continuum Simulation Parameters",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2025,
+      "version": "Zenodo fixed record 15496570; 1.0.0",
+      "doi": "10.5281/zenodo.15496570",
+      "url": "https://zenodo.org/records/15496570",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata evidence/mj1-15496570-metadata.json: metadata.license.id=cc-by-4.0; source file MD5 checked against that record.",
+      "role": "Same MJ1 characterization collection. Harvested/reassembled electrode characterization, not proof of intact commercial-cell validation."
+    },
+    "mj1-zenodo-15497193": {
+      "kind": "dataset",
+      "title": "INR18650-LG-3500-MJ1 Lithium-Ion Battery Cell Direct Characterization Data",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2025,
+      "version": "Zenodo fixed record 15497193; 1.0.0",
+      "doi": "10.5281/zenodo.15497193",
+      "url": "https://zenodo.org/records/15497193",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata evidence/mj1-15497193-metadata.json: metadata.license.id=cc-by-4.0; source file MD5 checked against that record.",
+      "role": "Same MJ1 characterization collection. Harvested/reassembled electrode characterization, not proof of intact commercial-cell validation."
+    },
+    "mj1-zenodo-15520717": {
+      "kind": "dataset",
+      "title": "INR18650-LG-3500-MJ1 Anode GITT Structured Data",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2025,
+      "version": "Zenodo fixed record 15520717; 1.0.0",
+      "doi": "10.5281/zenodo.15520717",
+      "url": "https://zenodo.org/records/15520717",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata evidence/mj1-15520717-metadata.json: metadata.license.id=cc-by-4.0; source file MD5 checked against that record.",
+      "role": "Same MJ1 characterization collection. Harvested/reassembled electrode characterization, not proof of intact commercial-cell validation."
+    },
+    "mj1-zenodo-15528177": {
+      "kind": "dataset",
+      "title": "INR18650-LG-3500-MJ1 Anode GITT Parameters",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2025,
+      "version": "Zenodo fixed record 15528177; 1.0.0",
+      "doi": "10.5281/zenodo.15528177",
+      "url": "https://zenodo.org/records/15528177",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata evidence/mj1-15528177-metadata.json: metadata.license.id=cc-by-4.0; source file MD5 checked against that record.",
+      "role": "Same MJ1 characterization collection. Harvested/reassembled electrode characterization, not proof of intact commercial-cell validation."
+    },
+    "mj1-zenodo-15538164": {
+      "kind": "dataset",
+      "title": "INR18650-LG-3500-MJ1 Cathode GITT Parameters",
+      "authors": [
+        "Kuhn, Yannick",
+        "Rana, Bhawna",
+        "Philipp, Micha",
+        "Schmitt, Christina",
+        "Scipioni, Roberto",
+        "Flores, Eibar",
+        "Kopljar, Dennis",
+        "Clark, Simon",
+        "Latz, Arnulf",
+        "Horstmann, Birger"
+      ],
+      "year": 2025,
+      "version": "Zenodo fixed record 15538164; 1.0.0",
+      "doi": "10.5281/zenodo.15538164",
+      "url": "https://zenodo.org/records/15538164",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata evidence/mj1-15538164-metadata.json: metadata.license.id=cc-by-4.0; source file MD5 checked against that record.",
+      "role": "Same MJ1 characterization collection. Harvested/reassembled electrode characterization, not proof of intact commercial-cell validation."
+    }
+  },
+  "upstream_assets": {
+    "mj1-15407849-metadata": {
+      "filename": "mj1-15407849-metadata.json",
+      "source_filename": "Zenodo API 15407849",
+      "url": "https://zenodo.org/api/records/15407849",
+      "source_id": "mj1-zenodo-15407849",
+      "license": "CC-BY-4.0",
+      "sha256": "3813f5fdfa6673f1c54df7ee7e961cf2f36c0e70742249d456c0e70dd98b4231",
+      "path": "evidence/mj1-15407849-metadata.json",
+      "role": "record_metadata"
+    },
+    "mj1-15496570-metadata": {
+      "filename": "mj1-15496570-metadata.json",
+      "source_filename": "Zenodo API 15496570",
+      "url": "https://zenodo.org/api/records/15496570",
+      "source_id": "mj1-zenodo-15496570",
+      "license": "CC-BY-4.0",
+      "sha256": "c81e944123405ee6a09769754ba3de19a088c104c107ba55f4029274c070bfec",
+      "path": "evidence/mj1-15496570-metadata.json",
+      "role": "record_metadata"
+    },
+    "mj1-15497193-metadata": {
+      "filename": "mj1-15497193-metadata.json",
+      "source_filename": "Zenodo API 15497193",
+      "url": "https://zenodo.org/api/records/15497193",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "a1d74fd616da4c5150eff4672cddd760226fc6db684d138f1e73204099f20cfd",
+      "path": "evidence/mj1-15497193-metadata.json",
+      "role": "record_metadata"
+    },
+    "mj1-15520717-metadata": {
+      "filename": "mj1-15520717-metadata.json",
+      "source_filename": "Zenodo API 15520717",
+      "url": "https://zenodo.org/api/records/15520717",
+      "source_id": "mj1-zenodo-15520717",
+      "license": "CC-BY-4.0",
+      "sha256": "0269374ee8a0ef6d0729b2d3995c915427c88f30de6c6f9c895e417b6a9eac13",
+      "path": "evidence/mj1-15520717-metadata.json",
+      "role": "record_metadata"
+    },
+    "mj1-15528177-metadata": {
+      "filename": "mj1-15528177-metadata.json",
+      "source_filename": "Zenodo API 15528177",
+      "url": "https://zenodo.org/api/records/15528177",
+      "source_id": "mj1-zenodo-15528177",
+      "license": "CC-BY-4.0",
+      "sha256": "a2febd9fee3a0ad025796d9100f0cec2f0fcfe83d10c61e11b858e934d6574f3",
+      "path": "evidence/mj1-15528177-metadata.json",
+      "role": "record_metadata"
+    },
+    "mj1-15538164-metadata": {
+      "filename": "mj1-15538164-metadata.json",
+      "source_filename": "Zenodo API 15538164",
+      "url": "https://zenodo.org/api/records/15538164",
+      "source_id": "mj1-zenodo-15538164",
+      "license": "CC-BY-4.0",
+      "sha256": "5c2057babddb659bff2f1c67da9a80be46d54a19d750f4a081613a9285eaaa63",
+      "path": "evidence/mj1-15538164-metadata.json",
+      "role": "record_metadata"
+    },
+    "mj1-continuum-source": {
+      "filename": "mj1-15496570-lg_mj1.py",
+      "source_filename": "lg_mj1.py",
+      "url": "https://zenodo.org/api/records/15496570/files/lg_mj1.py/content",
+      "source_id": "mj1-zenodo-15496570",
+      "license": "CC-BY-4.0",
+      "sha256": "6712774cde0b01eca1cc497205b571f2925260014bcb26de9c83cbe326e3226b",
+      "md5": "b6e2161cd08846807fbaf5fadf3f55b4",
+      "path": "evidence/mj1-15496570-lg_mj1.py"
+    },
+    "mj1-direct-jsonld": {
+      "filename": "mj1-15497193-metadata.jsonld",
+      "source_filename": "metadata.jsonld",
+      "url": "https://zenodo.org/api/records/15497193/files/metadata.jsonld/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "50ec9a8747ab0b0bf0fb1e67ef636765200b2f0c2d6c63fa1412bf9a9cd5442b",
+      "md5": "5b22f298961c9b033b2db5ff284f4ccd",
+      "path": "evidence/mj1-15497193-metadata.jsonld"
+    },
+    "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-dfn": {
+      "filename": "mj1-15528177-negative-electrode-diffusivity-m2s-1_delithiation_from_DFN.json",
+      "source_filename": "negative-electrode-diffusivity-m2s-1_delithiation_from_DFN.json",
+      "url": "https://zenodo.org/api/records/15528177/files/negative-electrode-diffusivity-m2s-1_delithiation_from_DFN.json/content",
+      "source_id": "mj1-zenodo-15528177",
+      "license": "CC-BY-4.0",
+      "sha256": "c7b90d7940bef773b5d1303c0960409f7eb67aaa0e2ac9db0695cfb331953abd",
+      "md5": "ec8efda20a9b0564980ead301f1e4e1a",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15528177-negative-electrode-diffusivity-m2s-1_delithiation_from_DFN.json"
+    },
+    "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spm": {
+      "filename": "mj1-15528177-negative-electrode-diffusivity-m2s-1_delithiation_from_SPM.json",
+      "source_filename": "negative-electrode-diffusivity-m2s-1_delithiation_from_SPM.json",
+      "url": "https://zenodo.org/api/records/15528177/files/negative-electrode-diffusivity-m2s-1_delithiation_from_SPM.json/content",
+      "source_id": "mj1-zenodo-15528177",
+      "license": "CC-BY-4.0",
+      "sha256": "9649ca8547bc9a5d70679ced699512253fe95a3da85b9eb0f7b6982c24e644bd",
+      "md5": "4a23637671017f2669c696e9c1274f89",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15528177-negative-electrode-diffusivity-m2s-1_delithiation_from_SPM.json"
+    },
+    "mj1-fit-negative-electrode-diffusivity-m2s-1-delithiation-from-spme": {
+      "filename": "mj1-15528177-negative-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json",
+      "source_filename": "negative-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json",
+      "url": "https://zenodo.org/api/records/15528177/files/negative-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json/content",
+      "source_id": "mj1-zenodo-15528177",
+      "license": "CC-BY-4.0",
+      "sha256": "6c8cbbe25441cfa54312b290d93e6e8a769b765223cb01d0b8124df02f619c68",
+      "md5": "92d4f26f6621208de831cddac891b8b1",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15528177-negative-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json"
+    },
+    "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-dfn": {
+      "filename": "mj1-15528177-negative-electrode-diffusivity-m2s-1_lithiation_from_DFN.json",
+      "source_filename": "negative-electrode-diffusivity-m2s-1_lithiation_from_DFN.json",
+      "url": "https://zenodo.org/api/records/15528177/files/negative-electrode-diffusivity-m2s-1_lithiation_from_DFN.json/content",
+      "source_id": "mj1-zenodo-15528177",
+      "license": "CC-BY-4.0",
+      "sha256": "a33a94fcd9859b0d03dc45454806226693094092037d53555b475914691b76a6",
+      "md5": "3159b21db1026ad8adea56e0364796a1",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15528177-negative-electrode-diffusivity-m2s-1_lithiation_from_DFN.json"
+    },
+    "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spm": {
+      "filename": "mj1-15528177-negative-electrode-diffusivity-m2s-1_lithiation_from_SPM.json",
+      "source_filename": "negative-electrode-diffusivity-m2s-1_lithiation_from_SPM.json",
+      "url": "https://zenodo.org/api/records/15528177/files/negative-electrode-diffusivity-m2s-1_lithiation_from_SPM.json/content",
+      "source_id": "mj1-zenodo-15528177",
+      "license": "CC-BY-4.0",
+      "sha256": "d65ea1f0520fb1ea08af029f814d06e945c72d360d04adbb4e319c6753ef06f8",
+      "md5": "ddbc9b889f5d84668bfe48d4b76e5d32",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15528177-negative-electrode-diffusivity-m2s-1_lithiation_from_SPM.json"
+    },
+    "mj1-fit-negative-electrode-diffusivity-m2s-1-lithiation-from-spme": {
+      "filename": "mj1-15528177-negative-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json",
+      "source_filename": "negative-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json",
+      "url": "https://zenodo.org/api/records/15528177/files/negative-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json/content",
+      "source_id": "mj1-zenodo-15528177",
+      "license": "CC-BY-4.0",
+      "sha256": "ae8e6ca9f795d5dd7a251afafe391a1539478b0b7e341990ab6908b2e9efa722",
+      "md5": "8caed292ca795e70a67195371eabd03d",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15528177-negative-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json"
+    },
+    "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-dfn": {
+      "filename": "mj1-15538164-positive-electrode-diffusivity-m2s-1_delithiation_from_DFN.json",
+      "source_filename": "positive-electrode-diffusivity-m2s-1_delithiation_from_DFN.json",
+      "url": "https://zenodo.org/api/records/15538164/files/positive-electrode-diffusivity-m2s-1_delithiation_from_DFN.json/content",
+      "source_id": "mj1-zenodo-15538164",
+      "license": "CC-BY-4.0",
+      "sha256": "ee122759b4b30f08954d412dc975633f8062543b6d47ec414b39010882ed0e84",
+      "md5": "4794abd30844745429c1be9ebdae5204",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15538164-positive-electrode-diffusivity-m2s-1_delithiation_from_DFN.json"
+    },
+    "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spm": {
+      "filename": "mj1-15538164-positive-electrode-diffusivity-m2s-1_delithiation_from_SPM.json",
+      "source_filename": "positive-electrode-diffusivity-m2s-1_delithiation_from_SPM.json",
+      "url": "https://zenodo.org/api/records/15538164/files/positive-electrode-diffusivity-m2s-1_delithiation_from_SPM.json/content",
+      "source_id": "mj1-zenodo-15538164",
+      "license": "CC-BY-4.0",
+      "sha256": "6eba2d2554909136e99736d23afaf05e6ad741941eeea6690472daa81c540b27",
+      "md5": "b39b8d52a47d79059715ccd927cd17d9",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15538164-positive-electrode-diffusivity-m2s-1_delithiation_from_SPM.json"
+    },
+    "mj1-fit-positive-electrode-diffusivity-m2s-1-delithiation-from-spme": {
+      "filename": "mj1-15538164-positive-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json",
+      "source_filename": "positive-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json",
+      "url": "https://zenodo.org/api/records/15538164/files/positive-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json/content",
+      "source_id": "mj1-zenodo-15538164",
+      "license": "CC-BY-4.0",
+      "sha256": "d3f8ec314c38bd3f363e11fb53a75a73c20779e3b3e1300ea0416f854859d9b8",
+      "md5": "668b4970f2c3b24b8de39003cb1a8b90",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15538164-positive-electrode-diffusivity-m2s-1_delithiation_from_SPMe.json"
+    },
+    "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-dfn": {
+      "filename": "mj1-15538164-positive-electrode-diffusivity-m2s-1_lithiation_from_DFN.json",
+      "source_filename": "positive-electrode-diffusivity-m2s-1_lithiation_from_DFN.json",
+      "url": "https://zenodo.org/api/records/15538164/files/positive-electrode-diffusivity-m2s-1_lithiation_from_DFN.json/content",
+      "source_id": "mj1-zenodo-15538164",
+      "license": "CC-BY-4.0",
+      "sha256": "938a76f246a6eb52284e9b293f8653be1e1e2cc3901e3836e1742390ecac3dfa",
+      "md5": "58f50a42e4c7e930a0bd33c731cccfa2",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15538164-positive-electrode-diffusivity-m2s-1_lithiation_from_DFN.json"
+    },
+    "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spm": {
+      "filename": "mj1-15538164-positive-electrode-diffusivity-m2s-1_lithiation_from_SPM.json",
+      "source_filename": "positive-electrode-diffusivity-m2s-1_lithiation_from_SPM.json",
+      "url": "https://zenodo.org/api/records/15538164/files/positive-electrode-diffusivity-m2s-1_lithiation_from_SPM.json/content",
+      "source_id": "mj1-zenodo-15538164",
+      "license": "CC-BY-4.0",
+      "sha256": "1e1b9bd999bd8a947eabb4b6bfdc2dfe29fad46a0cb920c2acbf6a23e1a1d21d",
+      "md5": "427d176a22dc92eb292ee0f299806bc2",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15538164-positive-electrode-diffusivity-m2s-1_lithiation_from_SPM.json"
+    },
+    "mj1-fit-positive-electrode-diffusivity-m2s-1-lithiation-from-spme": {
+      "filename": "mj1-15538164-positive-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json",
+      "source_filename": "positive-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json",
+      "url": "https://zenodo.org/api/records/15538164/files/positive-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json/content",
+      "source_id": "mj1-zenodo-15538164",
+      "license": "CC-BY-4.0",
+      "sha256": "270f049fca3bf802a55755036187652974ce3039549995431e322dd1536c8f83",
+      "md5": "2a3eacb6c1bbf9728cd74d5ae2179a05",
+      "role": "gitt_diffusion_fit",
+      "path": "evidence/mj1-15538164-positive-electrode-diffusivity-m2s-1_lithiation_from_SPMe.json"
+    },
+    "mj1-ocp-negative-charging": {
+      "filename": "mj1-15497193-pseudo_open_circuit_voltage_graphite_silicon_oxide_charging.parquet",
+      "source_filename": "pseudo_open_circuit_voltage_graphite_silicon_oxide_charging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/pseudo_open_circuit_voltage_graphite_silicon_oxide_charging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "6670197787f78726f008208bcb24000e4422800a6aa438f535e648dcc37f4340",
+      "md5": "d11253fa63cab0ebd924cd6f413713f3",
+      "path": "evidence/mj1-15497193-pseudo_open_circuit_voltage_graphite_silicon_oxide_charging.parquet"
+    },
+    "mj1-ocp-negative-discharging": {
+      "filename": "mj1-15497193-pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+      "source_filename": "pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "b4b809ee815054f8f73a0d8f01b70840c7ad5fb894df98dbbc6f6bb44a55fc84",
+      "md5": "dc60cf84fbb3ef2b1c6a3261d3bb8394",
+      "path": "evidence/mj1-15497193-pseudo_open_circuit_voltage_graphite_silicon_oxide_discharging.parquet"
+    },
+    "mj1-ocp-positive-charging": {
+      "filename": "mj1-15497193-pseudo_open_circuit_voltage_nmc_charging.parquet",
+      "source_filename": "pseudo_open_circuit_voltage_nmc_charging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/pseudo_open_circuit_voltage_nmc_charging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "759e17f88e00df957313df941a4105c0b276562c1b370a5402d1b96ac3bc7d17",
+      "md5": "db79731b2a8a8c56c584f7363ee6188a",
+      "path": "evidence/mj1-15497193-pseudo_open_circuit_voltage_nmc_charging.parquet"
+    },
+    "mj1-ocp-positive-discharging": {
+      "filename": "mj1-15497193-pseudo_open_circuit_voltage_nmc_discharging.parquet",
+      "source_filename": "pseudo_open_circuit_voltage_nmc_discharging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/pseudo_open_circuit_voltage_nmc_discharging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "3636b32633b216cd28663116906b22954f0c086baffcda0c597a1bba39605cf0",
+      "md5": "cd15ee21f38a8c65430562fe0b66dd74",
+      "path": "evidence/mj1-15497193-pseudo_open_circuit_voltage_nmc_discharging.parquet"
+    },
+    "mj1-source-diffusion-graphite-silicon-oxide-charging": {
+      "filename": "mj1-15497193-diffusion_graphite_silicon_oxide_charging.parquet",
+      "source_filename": "diffusion_graphite_silicon_oxide_charging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/diffusion_graphite_silicon_oxide_charging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "963c948872b6b8f705a9a4d5e286d0ceb450e7f9c5e60a2680cf6ae5d5f8a45d",
+      "md5": "a27f0dd307924775c05b17a13f48448b",
+      "path": "evidence/mj1-15497193-diffusion_graphite_silicon_oxide_charging.parquet"
+    },
+    "mj1-source-diffusion-graphite-silicon-oxide-discharging": {
+      "filename": "mj1-15497193-diffusion_graphite_silicon_oxide_discharging.parquet",
+      "source_filename": "diffusion_graphite_silicon_oxide_discharging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/diffusion_graphite_silicon_oxide_discharging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "3549e95113af200823bc4688e5452aab63acca05db30a7deba14562d16c2dfb9",
+      "md5": "d61ea31a9486406d2ed2013f3aca82c4",
+      "path": "evidence/mj1-15497193-diffusion_graphite_silicon_oxide_discharging.parquet"
+    },
+    "mj1-source-diffusion-nmc-charging": {
+      "filename": "mj1-15497193-diffusion_nmc_charging.parquet",
+      "source_filename": "diffusion_nmc_charging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/diffusion_nmc_charging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "cb8bf60764606bbb89d9b4ca19d83f6397301e69e7cbd1703ea2ad1e3749d1d3",
+      "md5": "d56288670ef57fbb32eba5881cadd9aa",
+      "path": "evidence/mj1-15497193-diffusion_nmc_charging.parquet"
+    },
+    "mj1-source-diffusion-nmc-discharging": {
+      "filename": "mj1-15497193-diffusion_nmc_discharging.parquet",
+      "source_filename": "diffusion_nmc_discharging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/diffusion_nmc_discharging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "733d6bb2ce194c6f8be15112ce772c36ce95a6eef11e72fca5a9672e47610c4f",
+      "md5": "621281c34f248588577c3324bf27f0ce",
+      "path": "evidence/mj1-15497193-diffusion_nmc_discharging.parquet"
+    },
+    "mj1-source-exchange-current-density-graphite-silicon-oxide-charging": {
+      "filename": "mj1-15497193-exchange_current_density_graphite_silicon_oxide_charging.parquet",
+      "source_filename": "exchange_current_density_graphite_silicon_oxide_charging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/exchange_current_density_graphite_silicon_oxide_charging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "17a4c80eb488e6c13a898d3c051360fefe7b88cb7025e9f382a8536fa880bf34",
+      "md5": "4dc9094c38a083884b5734f14967fb36",
+      "path": "evidence/mj1-15497193-exchange_current_density_graphite_silicon_oxide_charging.parquet"
+    },
+    "mj1-source-exchange-current-density-graphite-silicon-oxide-discharging": {
+      "filename": "mj1-15497193-exchange_current_density_graphite_silicon_oxide_discharging.parquet",
+      "source_filename": "exchange_current_density_graphite_silicon_oxide_discharging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/exchange_current_density_graphite_silicon_oxide_discharging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "039a30393712860df7c0ecdf8f74dd253f8c3b642ba671e52b535230a40e506d",
+      "md5": "adab2e60e1a71fc32cd5eef5e12f7511",
+      "path": "evidence/mj1-15497193-exchange_current_density_graphite_silicon_oxide_discharging.parquet"
+    },
+    "mj1-source-exchange-current-density-nmc-charging": {
+      "filename": "mj1-15497193-exchange_current_density_nmc_charging.parquet",
+      "source_filename": "exchange_current_density_nmc_charging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/exchange_current_density_nmc_charging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "1c4dbbbc69b642d58040a139a888982af8ded886b8a0f4cd5651417a7e2d0f2b",
+      "md5": "76b94dd4b390245827a6b9e3c55eb8ee",
+      "path": "evidence/mj1-15497193-exchange_current_density_nmc_charging.parquet"
+    },
+    "mj1-source-exchange-current-density-nmc-discharging": {
+      "filename": "mj1-15497193-exchange_current_density_nmc_discharging.parquet",
+      "source_filename": "exchange_current_density_nmc_discharging.parquet",
+      "url": "https://zenodo.org/api/records/15497193/files/exchange_current_density_nmc_discharging.parquet/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "7ac350c9616e7560861bd5727b2d8fbd42b696a5b4390481a576da7918a893a4",
+      "md5": "d356fc9e63ce85f6b6db6051cc817161",
+      "path": "evidence/mj1-15497193-exchange_current_density_nmc_discharging.parquet"
+    },
+    "mj1-workbook": {
+      "filename": "mj1-15497193-MJ1_parameters.xlsx",
+      "source_filename": "MJ1_parameters.xlsx",
+      "url": "https://zenodo.org/api/records/15497193/files/MJ1_parameters.xlsx/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "Deposit CC-BY-4.0; third-party OCV scope unresolved",
+      "sha256": "dc621ad13b917c5aea339a9e538b8527af555070ffe77cdb90834408dbb7b8c5",
+      "md5": "be75d0f6fa7127f3b6c9d084a3931b40",
+      "redistribution_status": "External original only: OCV sheet includes separately attributed literature silicon curves; their reuse scope is not assigned CC BY 4.0 by this project."
+    },
+    "mj1-workbook-selection": {
+      "filename": "mj1-workbook-cell-selection.json",
+      "source_filename": "Selected laboratory cells from MJ1_parameters.xlsx",
+      "url": "https://zenodo.org/api/records/15497193/files/MJ1_parameters.xlsx/content",
+      "source_id": "mj1-zenodo-15497193",
+      "license": "CC-BY-4.0",
+      "sha256": "e861cbf2adbab886e32b2552cb1c06a67293ce59df1e51676cadfb7b57aa33ba",
+      "path": "evidence/mj1-workbook-cell-selection.json",
+      "role": "workbook_cell_selection",
+      "digest_scope": "Local selected-cell JSON, not original XLSX bytes or the download URL. Source original SHA-256/MD5 and cell addresses are embedded.",
+      "derived_from_asset_ids": [
+        "mj1-workbook"
+      ],
+      "excluded_content": "Entire OCV sheet, including third-party silicon literature columns, and electrolyte sheet"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

@@ -112,6 +112,7 @@ def build_site(catalog, output):
         asset_ids.update(
             aid for t in tests for aid in t.get("supporting_asset_ids", [])
         )
+        asset_ids.update(cell.get("supporting_asset_ids", []))
         write_json(
             f"{cid}-parameters.json",
             {
@@ -148,13 +149,15 @@ def build_site(catalog, output):
             )
             for p in parameters:
                 rep = p["representation"]
+                if rep["kind"] == "table":
+                    (downloads / Path(rep["path"]).name).write_bytes((catalog.root / rep["path"]).read_bytes())
                 writer.writerow(
                     [
                         p["id"],
                         cid,
                         p["name"],
                         p["category"],
-                        rep.get("value", rep.get("expression")),
+                        "table:" + rep["path"] if rep["kind"] == "table" else rep.get("value", rep.get("expression")),
                         p["unit"],
                         json.dumps(p.get("conditions", {}), sort_keys=True),
                         p.get("definition", p["name"]),
@@ -207,6 +210,8 @@ def build_site(catalog, output):
     # Offline bundles keep one cell's records, sources and notices together.
     for cid, cell in catalog.cells.items():
         names = {f"{cid}-parameters.json", f"{cid}-parameters.csv"}
+        names.update(Path(p["representation"]["path"]).name for p in catalog.parameters
+                     if p["cell_id"] == cid and p["representation"]["kind"] == "table")
         for curve in catalog.search(cell_id=cid):
             names.update([f"{curve.id}.json", f"{curve.id}.csv"])
         for test in catalog.linked_tests(cid):

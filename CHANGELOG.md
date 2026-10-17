@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.0 — 2026-10-17
+
+- Curated LG MJ1 / DLR-SINTEF: four finite-current pseudo-OCP tables, 22 scalar/specification records, eight laboratory D/i0 tables and twelve direction/model-specific GITT diffusion tables with original error bounds. No intact-cell full-cell trace was verified or imported.
+- Preserved CC BY 4.0 source bytes/selected laboratory cells and metadata; kept the literature-containing full XLSX external and separated the paper's CC BY 3.0 license. Used original workbook values instead of Parquet zero substitutions for missing endpoints, with unit conversions and source rows explicit.
+- Added native non-OCP table evaluation, bounded linear interpolation, CSV downloads and offline packaging. Source-reported electrode coordinates require explicit PyBaMM mapping.
+- Recorded NMC composition, units, stoichiometry-label and geometry differences; excluded ambiguous concentrations/initial states and kept reassembled-cell settings separate from commercial-cell components.
+- Reached 59 electrode curves, 397 other parameter records, 61 full-cell exports, 13 material labels and 13 cell/study entries. Refreshed public-release documentation and corrected stale candidate wording; repository visibility remains private.
+
 ## 0.7.0 — 2026-10-17
 
 - Curated LG M50LT / Hallemans2025: 18 jointly EIS-fitted grouped-SPMe parameters, one measured t/I/V drive cycle (164,953 rows), and 585 frequency-domain evidence rows with measured/model components distinguished.

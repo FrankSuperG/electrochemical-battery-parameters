@@ -7,7 +7,7 @@ The authoritative catalog is `src/ebp/data/`, distributed inside the Python pack
 | Entity | File | Meaning |
 |---|---|---|
 | OCP record | `catalog.json` | One electrode curve or expression, with coordinate, domain, conditions, representation, provenance and limitations |
-| Model parameter | `parameters.json` | One scalar or multivariable function, its unit, definition, model-specific origin and conditions |
+| Model parameter | `parameters.json` | One scalar, function or native one-dimensional table, its unit, definition, origin and conditions |
 | Cell / family | `cells.json` | Identity evidence, model context, linked record IDs, coverage and gaps |
 | Experiment | `experiments.json` | Half-cell specimen, protocol, cycle/branch selection and extraction rule |
 | Full-cell test | `full_cell_tests.json` | One source file/member, normalized rows, test protocol and relationship to parameters |
@@ -21,6 +21,7 @@ The authoritative catalog is `src/ebp/data/`, distributed inside the Python pack
 - `stoichiometry`: electrode lithium fraction θ. BPX bounds are the exact example's operating minimum/maximum; the older PyBaMM formulas retain their mathematical 0..1 domain without claiming independently verified fit validity.
 - `normalized_branch_capacity`: cumulative charge throughput over the selected branch, normalized to 0..1. It follows test progress and does not establish absolute lithium fraction or whole-cell SOC.
 - `model_soc`: author model SOC/DOL coordinate. The Jahn2024 single-string PD-ECM coordinate is not verified absolute stoichiometry and is kept separate from measured branch throughput.
+- `source_reported_stoichiometry`: source-labeled electrode coordinate whose absolute calibration is not independently established. MJ1 retains this separately from branch progress and verified lithium fraction; PyBaMM adaptation requires an explicit mapping.
 - Table CSVs retain potential, capacity, current, time and upstream row coordinates. Linear interpolation is default; PCHIP is optional. Formula CSVs are generated samples and remain labeled as such.
 - Unknown numeric temperatures are `null`. A model reference temperature is distinguished from a verified measurement temperature.
 
@@ -99,3 +100,27 @@ continuous CC time series or electrode OCP. `source_record` is one-based Excel
 row for ISU and zero-based CSV/array sample for Jahn; exact source locations and
 original bytes are provided. Blank cycle IDs do not invent instrument cycles.
 See [LFP study selections and missing items](LFP_STUDIES.md).
+
+## Native non-OCP parameter tables in v0.8
+
+`representation.kind=table` references a checksum-pinned CSV in
+`parameter_tables/`. Its x descriptor records the column, required API variable,
+unit, source coordinate meaning and native domain; `y_column` selects the value.
+Extra columns preserve source row indices or original error bounds.
+`Parameter.points()` returns all stored x/y nodes; `p(source_soc_percent=50)`
+or `p(source_sto=0.5)` must use the record's exact variable. Arithmetic linear
+interpolation is bounded by native endpoints and rejects non-finite inputs.
+Neither error bounds nor missing endpoints are interpolated into new evidence.
+
+Parameter summary CSVs use `table:parameter_tables/<id>.csv` in
+`value_or_expression`; it is a catalog-relative file reference, not a formula.
+Per-cell pages link the native CSVs directly, and offline bundles include them.
+Source SOC percent and model-aligned electrode coordinates are not automatically
+full-cell SOC or absolute lithium fraction. Changing a coordinate requires
+external balancing evidence, not a simple name substitution.
+
+For mapped OCPs, `StoichiometryMapping.theta_start/theta_end` are the lithium
+fractions at the **low/high native coordinate endpoints**. The adapter uses
+`theta = theta_start + (x-lo)/(hi-lo)*(theta_end-theta_start)` and records
+`mapping_source_domain`. This matters for source axes such as MJ1 NMC 0.21..1;
+a missing part of the native domain is not implicitly treated as observed.

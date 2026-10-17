@@ -1,5 +1,6 @@
 include README.md LICENSE DATA_LICENSES.md CITATION.cff CHANGELOG.md CONTRIBUTING.md
 include requirements-lock-py312.txt
+include .gitattributes .gitignore
 recursive-include docs *.md
 recursive-include data *.md *.csv *.json
 recursive-include templates *.md *.csv

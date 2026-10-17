@@ -29,7 +29,8 @@ breaks, including formulas and parameter definitions.
 |---|---|
 | [data-contribution.md](data-contribution.md) | Source, licenses, cell identity, component matching, conditions, processing and missing-item checklist |
 | [ocp-points.csv](ocp-points.csv) | One electrode branch: `x,potential_V,source_record`. Define `x` and the potential reference in Markdown. Separate lithiation and delithiation branches. |
-| [parameters.csv](parameters.csv) | One scalar or expression per row, including units, definition, inputs, conditions, origin and source location |
+| [parameters.csv](parameters.csv) | One scalar, expression or table descriptor per row, including units, definition, inputs, conditions, origin and source location |
+| [parameter-points.csv](parameter-points.csv) | Native nodes for one parameter table; define the coordinate/unit and error bounds in Markdown |
 | [full-cell-time-series.csv](full-cell-time-series.csv) | Measured time-based current/voltage/temperature observations; current is charge positive and temperature is K |
 | [full-cell-capacity-series.csv](full-cell-capacity-series.csv) | Native charge-capacity observations when no original time is available; leave time and unmeasured current blank |
 
@@ -40,11 +41,13 @@ breaks, including formulas and parameter definitions.
   electrode stoichiometry. Retain additional original coordinate columns when
   available. Tabulated values from a publication, digitized plots, measured
   points and sampled expressions must be labeled separately.
-- **Parameters:** `representation_kind` is `scalar` or `expression`; fill the
-  applicable `value` or `expression`. Define variables and their units in
+- **Parameters:** `representation_kind` is `scalar`, `expression` or `table`; fill the
+  applicable `value`, `expression` or `table_path`. Define variables and their units in
   `independent_variables`, and specify the domain in `validity_domain`. A table
-  can be submitted as a separate source-faithful CSV with its definitions in
-  Markdown; the current non-OCP importer may need extension to support it.
+  can be submitted using `parameter-points.csv` with its definitions in
+  Markdown. The catalog supports one-dimensional native tables with bounded
+  linear interpolation; leave unavailable error bounds blank and state their
+  meaning when reported. Use separate tables for model/direction alternatives.
   `category` should use an existing category from
   [the catalog schema](../src/ebp/data/schema/linked-data.schema.json) where
   applicable. `origin_status` is measured, fitted, derived, borrowed or assumed.

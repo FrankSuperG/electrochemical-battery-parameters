@@ -59,3 +59,17 @@ def test_model_ocpn_explicit_mapping_keeps_model_label_and_native_values(materia
     assert function.ebp_metadata["measurement"] == "model_ocp"
     assert function.ebp_metadata["coordinate_kind"] == "model_soc"
     assert not function.ebp_metadata["independently_validated"]
+
+
+@pytest.mark.parametrize("side", ["negative", "positive"])
+def test_source_reported_coordinate_maps_its_native_domain_endpoints(side):
+    curve = Catalog().get(f"mj1-{side}-ocp-charging")
+    lo, hi = curve.record["x"]["domain"]
+    mapping = StoichiometryMapping(.1, .9, "Hypothetical test-only balancing, not an experimental result")
+    function = curve.to_pybamm(mapping=mapping)
+    symbol = function(pybamm.InputParameter("sto"))
+    for fraction in [0, .4137, 1]:
+        theta = mapping.theta_start + fraction*(mapping.theta_end-mapping.theta_start)
+        actual = float(np.asarray(symbol.evaluate(inputs={"sto": theta})).item())
+        assert actual == pytest.approx(curve(lo+fraction*(hi-lo)),abs=1e-11)
+    assert function.ebp_metadata["mapping_source_domain"] == [lo, hi]
