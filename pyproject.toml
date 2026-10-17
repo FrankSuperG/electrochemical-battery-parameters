@@ -5,12 +5,40 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "electrochemical-battery-parameters"
 version = "0.8.0"
-description = "Traceable electrode OCP curves and electrochemical battery parameters"
+description = "Traceable lithium-ion battery parameters and test data for DFN/P2D, SPM and SPMe models"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT AND BSD-3-Clause AND CC-BY-4.0"
 license-files = ["LICENSE", "DATA_LICENSES.md", "src/ebp/licenses/*.txt"]
 authors = [{name = "FrankSuperG"}]
+keywords = [
+    "electrochemistry",
+    "lithium-ion batteries",
+    "battery modeling",
+    "electrochemical parameters",
+    "battery datasets",
+    "PyBaMM",
+    "DFN",
+    "P2D",
+    "SPM",
+    "SPMe",
+    "open-circuit potential",
+    "OCP",
+    "GITT",
+    "solid-state diffusion",
+    "reaction kinetics",
+    "exchange current density",
+    "LFP",
+    "NMC",
+    "full-cell testing",
+    "data provenance",
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
 dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2", "jsonschema>=4.18,<5"]
 
 [project.optional-dependencies]
@@ -22,6 +50,10 @@ ebp = "ebp.cli:main"
 
 [project.urls]
 Repository = "https://github.com/FrankSuperG/electrochemical-battery-parameters"
+Documentation = "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/DATA_ACCESS.md"
+"Data catalog" = "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/data/README.md"
+Contributing = "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/CONTRIBUTING.md"
+Issues = "https://github.com/FrankSuperG/electrochemical-battery-parameters/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

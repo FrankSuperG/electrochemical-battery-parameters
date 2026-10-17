@@ -9,7 +9,9 @@
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
 
-E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
+E-BatP is a multi-material library of traceable lithium-ion battery parameters and experimental records for **Doyle-Fuller-Newman (DFN/P2D)**, **single-particle (SPM)** and **single-particle with electrolyte dynamics (SPMe)** models. It covers electrode **open-circuit potential (OCP)** curves, solid-state diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
+
+Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-current data, **EIS** (electrochemical impedance spectroscopy) evidence, and full-cell tests including **constant-current charge/discharge** and drive cycles. Start with [OCP by material](data/ocp/README.md) for LFP, NMC, graphite and other electrodes, or [cell and study entries](data/README.md) for model-specific records. Source licenses, match levels and missing channels are explicit; entries can be partial references rather than complete, independently validated parameter sets.
 
 **v0.8.0: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
