@@ -97,7 +97,12 @@ def main(argv=None):
             else:
                 for p in parameters:
                     rep = p.record["representation"]
-                    value = (rep["value"] if rep["kind"] == "scalar" else f"table: {rep["point_count"]} nodes" if rep["kind"] == "table" else "function")
+                    if rep["kind"] == "scalar":
+                        value = rep["value"]
+                    elif rep["kind"] == "table":
+                        value = f"table: {rep['point_count']} nodes"
+                    else:
+                        value = "function"
                     print(
                         f"{p.record['name']:65} {str(value):15} {p.record['category']}"
                     )

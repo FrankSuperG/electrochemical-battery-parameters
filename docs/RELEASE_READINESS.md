@@ -25,6 +25,7 @@ full-cell test; existing test counts are unchanged.
 | Stale curation text still called imported ISU data a candidate. | Updated historical status and linked the actual LFP, M50LT and MJ1 curation records. README, navigation, version and citation metadata refreshed. |
 | Python distribution metadata named only MIT despite shipping separately licensed data. | Metadata now describes the combined MIT/BSD-3-Clause/CC-BY-4.0 contents; individual source/file licenses and root software terms are unchanged. |
 | Git text rules would normalize CRLF in two original MJ1 evidence files, breaking their source hashes after checkout. | Evidence files now bypass text normalization; release audit compares staged Git blob bytes with canonical working files. Source archives retain `.gitattributes` and `.gitignore`. |
+| New CLI table-label syntax worked on Python 3.12 but failed on the declared Python 3.10 minimum. | Replaced the quoted expression with compatible branches; added a Python 3.10 grammar check for authored modules, alongside actual version-matrix CI. |
 
 The [2026-10-16 baseline review](PREPUBLICATION_REVIEW.md) remains available as
 history. Current coverage is defined by the catalog and the per-cell evidence
