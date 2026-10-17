@@ -621,5 +621,99 @@
     "sha256": "1730ca4ff52332626db414961e2eed12ce18312d9f04b932ea38e80afb2d6744",
     "md5": "d595766089e58e36f42717defdd32991",
     "path": "evidence/jahn-pdecm_fullcell.m"
+  },
+  "hallemans-drive-mat": {
+    "filename": "hallemans-DrivecycleMeasurement_80to20.mat",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/DrivecycleMeasurement_80to20.mat",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "981e5b045556a226ad7c08ed1401004f980d7983cafa45592f291833bfd9e0d0",
+    "path": "evidence/hallemans-DrivecycleMeasurement_80to20.mat"
+  },
+  "hallemans-fit-mat": {
+    "filename": "hallemans-Zhat3mV_SOC_SPMe_LGM50LT.mat",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/Zhat3mV_SOC_SPMe_LGM50LT.mat",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "b451a9c009479efe6b5f3a13989d424d35ae4d20f033371a4ecb87b95d6840df",
+    "path": "evidence/hallemans-Zhat3mV_SOC_SPMe_LGM50LT.mat"
+  },
+  "hallemans-eis-mat": {
+    "filename": "hallemans-impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "5f06cf0b495eeb2d5704b41a6e3c93b8e480e977b71809d5b8f5e39c643ad8c5",
+    "path": "evidence/hallemans-impedanceLGM50LT_Hybrid_4h_3mVrms.mat"
+  },
+  "hallemans-fig10": {
+    "filename": "hallemans-Fig10_EIS_Fitting_LGM50LT.py",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Fig10_EIS_Fitting_LGM50LT.py",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "2d2f7c9fdeb4f6886e621c692f9f6e0a7c0fab8f080201bffe6c1959dadd7bd1",
+    "path": "evidence/hallemans-Fig10_EIS_Fitting_LGM50LT.py"
+  },
+  "hallemans-fig11": {
+    "filename": "hallemans-Fig11_validationLGM50LT.py",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Fig11_validationLGM50LT.py",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "282dce08f6ad3cb0cdf886f3cf86ca4c395ecfca4658d4cc282a3772eb24333e",
+    "path": "evidence/hallemans-Fig11_validationLGM50LT.py"
+  },
+  "hallemans-license": {
+    "filename": "hallemans-LICENSE",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/LICENSE",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "21d1e1b2dc18fd2fde0c712a63845c4d07b2b7bd5b75f2774d81fad246e90e8c",
+    "path": "evidence/hallemans-LICENSE.txt"
+  },
+  "hallemans-readme": {
+    "filename": "hallemans-README.md",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/README.md",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "00523ac0bfb97c7f3cb76e5f9673d49eea0592882da1074ddf615b5d791dbadc"
+  },
+  "hallemans-requirements": {
+    "filename": "hallemans-requirements.txt",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/requirements.txt",
+    "source_id": "hallemans-2025-repository",
+    "license": "BSD-3-Clause",
+    "sha256": "62aaa058c0f3e9f3b49431852176dd174fa82f0ebd1958c381d6d1cadce7b663"
+  },
+  "hallemans-ocp-mat-external": {
+    "filename": "hallemans-OCP_LGM50LT.mat",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/OCP_LGM50LT.mat",
+    "source_id": "aboutenergy-m50lt-ocp-lead",
+    "license": "unresolved",
+    "sha256": "9fd8293724ae5da5ad101a142875e8b6ed2c68c0f916bd6d80c13652b33d1233",
+    "reuse_status": "External lead only; no packaged file or derived OCP curve. Root repository BSD notice does not independently settle third-party permission."
+  },
+  "hallemans-ocp-notes-external": {
+    "filename": "hallemans-Notes on LG M50LT OCP.pdf",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/Notes%20on%20LG%20M50LT%20OCP.pdf",
+    "source_id": "aboutenergy-m50lt-ocp-lead",
+    "license": "unresolved",
+    "sha256": "9341f9e8088cd6b39f2a6fe1d9ebd9c1e0d44ac070f71028162af66f73363939",
+    "reuse_status": "External lead only; no packaged file or derived OCP curve. Root repository BSD notice does not independently settle third-party permission."
+  },
+  "hallemans-ocp-uneg-external": {
+    "filename": "hallemans-LG_M50LT_Uneg.csv",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/LG_M50LT_Uneg.csv",
+    "source_id": "aboutenergy-m50lt-ocp-lead",
+    "license": "unresolved",
+    "sha256": "23795944237357f8d8f656ed10b26eab0df6841e07510d7d9ef275359a1445ba",
+    "reuse_status": "External lead only; no packaged file or derived OCP curve. Root repository BSD notice does not independently settle third-party permission."
+  },
+  "hallemans-ocp-upos-external": {
+    "filename": "hallemans-LG_M50LT_Upos.csv",
+    "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/LG_M50LT_Upos.csv",
+    "source_id": "aboutenergy-m50lt-ocp-lead",
+    "license": "unresolved",
+    "sha256": "012bde7b805908274f2661a4a260f6faa61b4b9e03925db194a3fd63744f7791",
+    "reuse_status": "External lead only; no packaged file or derived OCP curve. Root repository BSD notice does not independently settle third-party permission."
   }
 }

@@ -235,6 +235,9 @@ def build_site(catalog, output):
                         "sources/" + Path(asset.get("filename", asset["path"])).name,
                         (catalog.root / asset["path"]).read_bytes(),
                     )
+            for item in cell.get("supporting_files", []):
+                archive.writestr("sources/" + Path(item["path"]).name,
+                                 (catalog.root / item["path"]).read_bytes())
             for notice in license_dir.iterdir():
                 archive.writestr("licenses/" + notice.name, notice.read_bytes())
             archive.writestr(

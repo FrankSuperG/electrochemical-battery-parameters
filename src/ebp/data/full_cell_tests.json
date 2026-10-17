@@ -5916,6 +5916,101 @@
         "cell_temperature_K": 6988,
         "ambient_temperature_K": 6988
       }
+    },
+    {
+      "id": "hallemans2025-m50lt-drive-80to20",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "sample_id": "LG M50LT; serial not supplied",
+      "asset_id": "hallemans-drive-mat",
+      "source_id": "hallemans-2025-repository",
+      "path": null,
+      "original_download_path": "evidence/hallemans-DrivecycleMeasurement_80to20.mat",
+      "original_format": "MATLAB v5 MAT",
+      "normalized_path": "full_cell/hallemans2025-m50lt-drive-80to20-normalized.csv",
+      "normalized_sha256": "d9b784af582313428faa99e03ba19f957464d266bb364e34855794eca3809ae3",
+      "license": "BSD-3-Clause",
+      "csv_header_rows": 0,
+      "protocol": "Measured drive cycle, nominal 80 to 20% SOC; repeated excitation, 0.15 s sampling, 24742.8 s elapsed; paper v4 Section 7.3 / Figure 11.",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Same explicit LG M50LT model and Hallemans2025 study: Fig11 loads this drive-cycle MAT and the same fitted vector; v4 Section 7.3 identifies measured terminal voltage and Fig11 validation. Exact serialized-specimen chain to harvested OCP half-cells is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 164953,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "discharge_segments": [],
+      "format": "Published measured t/i/v arrays, all rows and native precision retained; not instrument export or simulated model output.",
+      "current_convention": "Source i retained: charge positive, discharge negative. Author Fig11 negates i to supply PyBaMM's discharge-positive current. u is not used as voltage or substituted for measured i.",
+      "temperature_definition": "No cell/ambient temperature array. Paper Table 4 specifies 25 degC for EIS; this is not assigned to drive-cycle rows.",
+      "basic_test": {
+        "type": "drive_cycle",
+        "current_measurement": "supplied source i",
+        "charge_trace": "available dynamic segments",
+        "discharge_trace": "available dynamic segments",
+        "voltage_trace": "available"
+      },
+      "processing": {
+        "script": "scripts/seed_hallemans.py",
+        "source_fields": {
+          "time_s": "t [s]",
+          "current_charge_positive_A": "i [A]",
+          "voltage_V": "v [V]"
+        },
+        "source_position": "source_record is one-based MATLAB array index",
+        "changes": "Extract t/i/v without resampling, smoothing or unit changes; classify mode from i sign. Blank T/cycle/step remain unavailable.",
+        "omitted_fields": {
+          "u": "Current-like array; precise measured/commanded/processed meaning unresolved. Retained only in original MAT."
+        }
+      },
+      "missing_items": [
+        "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Intrinsic solid diffusivity and reaction-rate prefactors not identified separately",
+        "Measured cell and ambient temperature traces absent",
+        "Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved",
+        "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+      ],
+      "supporting_asset_ids": [
+        "hallemans-fit-mat",
+        "hallemans-eis-mat",
+        "hallemans-fig10",
+        "hallemans-fig11",
+        "hallemans-license"
+      ],
+      "source_checks": {
+        "sampling_period_s": 0.15,
+        "net_charge_Ah_trapezoid": -2.923841244894962,
+        "note": "Integrated current is a consistency check, not an inferred capacity or SOC measurement."
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 164953,
+          "total_rows": 164953
+        },
+        "current_charge_positive_A": {
+          "present_rows": 164953,
+          "total_rows": 164953
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 164953
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 164953
+        }
+      }
     }
   ]
 }

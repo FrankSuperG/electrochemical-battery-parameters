@@ -487,6 +487,9 @@ def main(download=False):
     from seed_lfp_studies import extend as extend_lfp_studies
 
     extend_lfp_studies(download=download)
+    from seed_hallemans import extend as extend_hallemans
+
+    extend_hallemans(download=download)
 
 
 if __name__ == "__main__":

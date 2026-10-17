@@ -3,6 +3,28 @@
 The root MIT license applies to original project code and documentation, not to
 third-party experimental observations or formula implementations.
 
+## LG M50LT / Hallemans2025 addition in v0.7
+
+Original whole-cell EIS and drive-cycle MATs, the fitted-result MAT and Fig10/Fig11
+scripts are from the Hallemans2025 authors, pinned to author repository commit
+`3308a34396b8b56cd614291dd151c3405577c068`, under its root BSD-3-Clause license.
+The unchanged notice is packaged as `src/ebp/licenses/Hallemans2025-BSD-3-Clause.txt`.
+Scientific authors, exact URLs and hashes are in `scripts/hallemans_assets.json`.
+No upstream code is executed. The authors have not endorsed this project.
+
+Changes: extract eighteen fitted scalar groups with definitions/units and original
+vector indices; extract all measured t/i/v drive-cycle rows without resampling;
+leave missing temperatures blank; classify mode by signed i; retain all measured
+complex EIS components and distinguish seven-SOC fitted model components.
+Original files remain unchanged. The EIS CSV is a derived table, not an instrument
+export. Scalars are joint fit results, not newly measured intrinsic properties.
+
+About:Energy M50LT electrode OCPs are **not redistributed**. The paper identifies
+them as personal communication; separate reuse terms have not been established.
+The company's separate BPX license is not transferred to this battery. External
+URLs and hashes are provenance leads only. The review and implementation
+boundaries are documented in [HALLEMANS2025.md](docs/HALLEMANS2025.md).
+
 | Content | Attribution | License |
 |---|---|---|
 | `src/ebp/data/curves/sintef-*.csv` | Eibar Flores, Sridevi Krishnamurthi, Killian Stokes-Rodriguez, Julie Cathrine Guldahl, Charifa Hakim, Simon Clark, Nils Peter Wagner, Sergi Obrador, Andrés Bernabeu Santisteban; SINTEF and collaborators; Zenodo record 20086298 v3 | CC BY 4.0 |

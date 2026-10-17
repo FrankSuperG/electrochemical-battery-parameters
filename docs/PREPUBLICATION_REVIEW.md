@@ -1,7 +1,8 @@
 # Prepublication review — 2026-10-16
 
-Historical baseline review. The subsequent v0.6.0 LFP import is documented in
-[LFP study packages](LFP_STUDIES.md); its counts supersede the baseline below.
+Historical baseline review. Subsequent imports are documented in
+[LFP study packages](LFP_STUDIES.md) (v0.6) and
+[LG M50LT curation](HALLEMANS2025.md) (v0.7); current catalog counts supersede the baseline below.
 
 Scope: repository content, data lineage and matching, distribution completeness,
 GitHub data navigation, usage examples and a new source search. The reviewed

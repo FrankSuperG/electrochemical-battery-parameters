@@ -17,6 +17,7 @@ restricted, sign in with an account that has access.
 | LFP laboratory half/full-cell V-Q association | [ISU-UConn](../data/cells/isu-uconn-lfp-graphite-lab.md) | Four C/20 pseudo-OCP branches and 21 full-cell branches from 11 configurations; reference details and I/t/T remain unresolved |
 | A123 electrode-model potentials and current/voltage tests | [18650M1A / Jahn2024](../data/cells/a123-18650m1a-jahn2024.md) | Two modeled OCPn tables and 14 full-cell branch/array exports; current only in power/loop files, no temperature trace |
 | Mohtat author inputs and charge data | [Mohtat2020](../data/cells/mohtat2020-nmc532-pouch.md) | Separate author/PyBaMM parameter variants and five V–Q/T–Q files; measured current and original time are absent |
+| Grouped SPMe and same-study dynamic validation data | [LG M50LT / Hallemans2025](../data/cells/lg-m50lt-hallemans2025.md) | 18 fitted groups, measured t/I/V drive cycle and EIS evidence; OCP reuse permission, temperature and standalone CC observations remain missing |
 
 Parameters CSVs include a `name`, `category`, `unit`, `definition`, conditions,
 source IDs, origin and variant column. Filter by name as well as category to find

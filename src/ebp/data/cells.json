@@ -1780,5 +1780,150 @@
       "Raw measured electrode OCP/GITT points",
       "Time/current in incremental OCV file"
     ]
+  },
+  "lg-m50lt-hallemans2025": {
+    "manufacturer": "LG Energy Solution",
+    "model": "M50LT",
+    "display_name": "LG M50LT | Hallemans2025 grouped SPMe",
+    "format": "Cylindrical; dimensions not independently verified in this import",
+    "chemistry": "NMC/graphite; About:Energy notes assume NMC811/pure graphite",
+    "nominal_capacity_Ah": null,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "hallemans-2025-repository",
+      "hallemans-2025-paper-v4",
+      "aboutenergy-m50lt-ocp-lead",
+      "pybop-25-6-grouped"
+    ],
+    "model_context": "Grouped SPMe with double-layer capacitance; eighteen jointly EIS-fitted values",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Same explicit LG M50LT model and Hallemans2025 study: Fig11 loads this drive-cycle MAT and the same fitted vector; v4 Section 7.3 identifies measured terminal voltage and Fig11 validation. Exact serialized-specimen chain to harvested OCP half-cells is not supplied.",
+    "note": "M50LT is separate from Chen2020 LG M50. No intrinsic D or exchange-current law is reconstructed. About:Energy OCP inputs remain external with unresolved reuse scope. Paper v4 values match this vector after rounding; v3 describes a different fit.",
+    "curation_guide": "docs/HALLEMANS2025.md",
+    "missing_items": [
+      "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Intrinsic solid diffusivity and reaction-rate prefactors not identified separately",
+      "Measured cell and ambient temperature traces absent",
+      "Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved",
+      "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+    ],
+    "supporting_files": [
+      {
+        "path": "evidence/hallemans2025-m50lt-eis.csv",
+        "sha256": "a50abc9ed5d673affb8ac560b7900958a87c10fa831a12cef12a8d8b3edfa530",
+        "license": "BSD-3-Clause",
+        "description": "EIS: 65 frequencies x 9 SOCs; measured complex impedance, full-cell OCV and seven-SOC model fit; 585 rows. Imaginary part retains source sign, not -Im(Z)."
+      }
+    ],
+    "coverage": {
+      "ocp": "Third-party About:Energy OCPs used by source model; no separate M50LT reuse grant established, no curves imported.",
+      "diffusion": "Two fitted R^2/D particle time scales; not independent solid diffusivities. EIS Z/f/SOC exactly matches fit MAT selection.",
+      "kinetics": "Two fitted F*R/(m*sqrt(c_e0)) groups and two electrode capacitances; no intrinsic k or exchange-current density law.",
+      "full_cell_tests": "One same-study measured drive-cycle t/i/v series (164953 rows), nominal 80-20% SOC. No measured T or standalone CC cycle."
+    },
+    "parameter_ids": [
+      "hallemans2025-r-0",
+      "hallemans2025-tau-d-p",
+      "hallemans2025-tau-d-n",
+      "hallemans2025-t-plus",
+      "hallemans2025-tau-e-p",
+      "hallemans2025-tau-e-n",
+      "hallemans2025-tau-e-sep",
+      "hallemans2025-tau-ct-p",
+      "hallemans2025-tau-ct-n",
+      "hallemans2025-c-p",
+      "hallemans2025-c-n",
+      "hallemans2025-zeta-p",
+      "hallemans2025-zeta-n",
+      "hallemans2025-q-e",
+      "hallemans2025-c-p-100",
+      "hallemans2025-c-p-0",
+      "hallemans2025-c-n-0",
+      "hallemans2025-c-n-100"
+    ],
+    "ocp_record_ids": [],
+    "full_cell_test_ids": [
+      "hallemans2025-m50lt-drive-80to20"
+    ],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [],
+        "source_ids": [
+          "hallemans-2025-paper-v4",
+          "aboutenergy-m50lt-ocp-lead"
+        ],
+        "match_level": "external_only_license_unresolved",
+        "evidence": "Third-party About:Energy OCPs used by source model; no separate M50LT reuse grant established, no curves imported.",
+        "missing_items": [
+          "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+          "Verified OCP half-cell to intact-cell specimen chain"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "hallemans2025-tau-d-p",
+          "hallemans2025-tau-d-n"
+        ],
+        "source_ids": [
+          "hallemans-2025-paper-v4",
+          "hallemans-2025-repository"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two fitted R^2/D particle time scales; not independent solid diffusivities. EIS Z/f/SOC exactly matches fit MAT selection.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Intrinsic coefficients not separable from grouped fit without additional assumptions"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "hallemans2025-tau-ct-p",
+          "hallemans2025-tau-ct-n",
+          "hallemans2025-c-p",
+          "hallemans2025-c-n"
+        ],
+        "source_ids": [
+          "hallemans-2025-paper-v4",
+          "hallemans-2025-repository"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two fitted F*R/(m*sqrt(c_e0)) groups and two electrode capacitances; no intrinsic k or exchange-current density law.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Intrinsic coefficients not separable from grouped fit without additional assumptions"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "hallemans2025-m50lt-drive-80to20"
+        ],
+        "source_ids": [
+          "hallemans-2025-repository"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "One same-study measured drive-cycle t/i/v series (164953 rows), nominal 80-20% SOC. No measured T or standalone CC cycle.",
+        "missing_items": [
+          "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Intrinsic solid diffusivity and reaction-rate prefactors not identified separately",
+          "Measured cell and ambient temperature traces absent",
+          "Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved",
+          "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "Dynamic charge/discharge segments are available in drive cycle; no standalone constant-current test imported.",
+        "missing_items": [
+          "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+        ]
+      }
+    }
   }
 }

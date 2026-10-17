@@ -301,7 +301,8 @@
                 "constant_current_cycle",
                 "constant_current_steps",
                 "constant_current_partial_cycle",
-                "incremental_ocv"
+                "incremental_ocv",
+                "drive_cycle"
               ]
             },
             "nominal_C_rate": {

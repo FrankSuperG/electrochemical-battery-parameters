@@ -1,0 +1,1340 @@
+{
+  "cell_id": "lg-m50lt-hallemans2025",
+  "cell": {
+    "manufacturer": "LG Energy Solution",
+    "model": "M50LT",
+    "display_name": "LG M50LT | Hallemans2025 grouped SPMe",
+    "format": "Cylindrical; dimensions not independently verified in this import",
+    "chemistry": "NMC/graphite; About:Energy notes assume NMC811/pure graphite",
+    "nominal_capacity_Ah": null,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "hallemans-2025-repository",
+      "hallemans-2025-paper-v4",
+      "aboutenergy-m50lt-ocp-lead",
+      "pybop-25-6-grouped"
+    ],
+    "model_context": "Grouped SPMe with double-layer capacitance; eighteen jointly EIS-fitted values",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Same explicit LG M50LT model and Hallemans2025 study: Fig11 loads this drive-cycle MAT and the same fitted vector; v4 Section 7.3 identifies measured terminal voltage and Fig11 validation. Exact serialized-specimen chain to harvested OCP half-cells is not supplied.",
+    "note": "M50LT is separate from Chen2020 LG M50. No intrinsic D or exchange-current law is reconstructed. About:Energy OCP inputs remain external with unresolved reuse scope. Paper v4 values match this vector after rounding; v3 describes a different fit.",
+    "curation_guide": "docs/HALLEMANS2025.md",
+    "missing_items": [
+      "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Intrinsic solid diffusivity and reaction-rate prefactors not identified separately",
+      "Measured cell and ambient temperature traces absent",
+      "Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved",
+      "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+    ],
+    "supporting_files": [
+      {
+        "path": "evidence/hallemans2025-m50lt-eis.csv",
+        "sha256": "a50abc9ed5d673affb8ac560b7900958a87c10fa831a12cef12a8d8b3edfa530",
+        "license": "BSD-3-Clause",
+        "description": "EIS: 65 frequencies x 9 SOCs; measured complex impedance, full-cell OCV and seven-SOC model fit; 585 rows. Imaginary part retains source sign, not -Im(Z)."
+      }
+    ],
+    "coverage": {
+      "ocp": "Third-party About:Energy OCPs used by source model; no separate M50LT reuse grant established, no curves imported.",
+      "diffusion": "Two fitted R^2/D particle time scales; not independent solid diffusivities. EIS Z/f/SOC exactly matches fit MAT selection.",
+      "kinetics": "Two fitted F*R/(m*sqrt(c_e0)) groups and two electrode capacitances; no intrinsic k or exchange-current density law.",
+      "full_cell_tests": "One same-study measured drive-cycle t/i/v series (164953 rows), nominal 80-20% SOC. No measured T or standalone CC cycle."
+    },
+    "parameter_ids": [
+      "hallemans2025-r-0",
+      "hallemans2025-tau-d-p",
+      "hallemans2025-tau-d-n",
+      "hallemans2025-t-plus",
+      "hallemans2025-tau-e-p",
+      "hallemans2025-tau-e-n",
+      "hallemans2025-tau-e-sep",
+      "hallemans2025-tau-ct-p",
+      "hallemans2025-tau-ct-n",
+      "hallemans2025-c-p",
+      "hallemans2025-c-n",
+      "hallemans2025-zeta-p",
+      "hallemans2025-zeta-n",
+      "hallemans2025-q-e",
+      "hallemans2025-c-p-100",
+      "hallemans2025-c-p-0",
+      "hallemans2025-c-n-0",
+      "hallemans2025-c-n-100"
+    ],
+    "ocp_record_ids": [],
+    "full_cell_test_ids": [
+      "hallemans2025-m50lt-drive-80to20"
+    ],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [],
+        "source_ids": [
+          "hallemans-2025-paper-v4",
+          "aboutenergy-m50lt-ocp-lead"
+        ],
+        "match_level": "external_only_license_unresolved",
+        "evidence": "Third-party About:Energy OCPs used by source model; no separate M50LT reuse grant established, no curves imported.",
+        "missing_items": [
+          "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+          "Verified OCP half-cell to intact-cell specimen chain"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "hallemans2025-tau-d-p",
+          "hallemans2025-tau-d-n"
+        ],
+        "source_ids": [
+          "hallemans-2025-paper-v4",
+          "hallemans-2025-repository"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two fitted R^2/D particle time scales; not independent solid diffusivities. EIS Z/f/SOC exactly matches fit MAT selection.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Intrinsic coefficients not separable from grouped fit without additional assumptions"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "hallemans2025-tau-ct-p",
+          "hallemans2025-tau-ct-n",
+          "hallemans2025-c-p",
+          "hallemans2025-c-n"
+        ],
+        "source_ids": [
+          "hallemans-2025-paper-v4",
+          "hallemans-2025-repository"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two fitted F*R/(m*sqrt(c_e0)) groups and two electrode capacitances; no intrinsic k or exchange-current density law.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Intrinsic coefficients not separable from grouped fit without additional assumptions"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "hallemans2025-m50lt-drive-80to20"
+        ],
+        "source_ids": [
+          "hallemans-2025-repository"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "One same-study measured drive-cycle t/i/v series (164953 rows), nominal 80-20% SOC. No measured T or standalone CC cycle.",
+        "missing_items": [
+          "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Intrinsic solid diffusivity and reaction-rate prefactors not identified separately",
+          "Measured cell and ambient temperature traces absent",
+          "Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved",
+          "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "Dynamic charge/discharge segments are available in drive cycle; no standalone constant-current test imported.",
+        "missing_items": [
+          "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+        ]
+      }
+    }
+  },
+  "parameters": [
+    {
+      "id": "hallemans2025-r-0",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Series resistance [Ohm]",
+      "category": "transport",
+      "unit": "Ohm",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.014497097914016151
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Lumped series resistance of the grouped SPMe; not an isolated contact resistance.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[0] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "R_0",
+        "theta_index_zero_based": 0,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.0125,
+          0.016
+        ],
+        "near_bound": false,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-tau-d-p",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Positive particle diffusion time scale [s]",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 8953.211491915381
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "tau_d_p = R_p^2 / D_p",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[1] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "tau_d_p",
+        "theta_index_zero_based": 1,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          500,
+          10000
+        ],
+        "near_bound": false,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-tau-d-n",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Negative particle diffusion time scale [s]",
+      "category": "diffusion",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 7974.158721365195
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "tau_d_n = R_n^2 / D_n",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[2] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "tau_d_n",
+        "theta_index_zero_based": 2,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          500,
+          10000
+        ],
+        "near_bound": false,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-t-plus",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.6999999860980445
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Cation transference number in the fitted electrolyte model.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[3] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "t_plus",
+        "theta_index_zero_based": 3,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.2,
+          0.7
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-tau-e-p",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Positive electrode electrolyte diffusion time scale [s]",
+      "category": "transport",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.00012458380525
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "tau_e_p = epsilon_sep * L^2 / (epsilon_p^b_p * D_e)",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[4] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "tau_e_p",
+        "theta_index_zero_based": 4,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          100,
+          1000
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-tau-e-n",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Negative electrode electrolyte diffusion time scale [s]",
+      "category": "transport",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.00065810410796
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "tau_e_n = epsilon_sep * L^2 / (epsilon_n^b_n * D_e)",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[5] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "tau_e_n",
+        "theta_index_zero_based": 5,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          100,
+          1000
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-tau-e-sep",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Separator electrolyte diffusion time scale [s]",
+      "category": "transport",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 100.00059711203751
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "tau_e_sep = L^2 / (epsilon_sep^(b_sep - 1) * D_e); paper Table 2 convention.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[6] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "tau_e_sep",
+        "theta_index_zero_based": 6,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          100,
+          1000
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied.",
+        "PyBOP v25.6 physical-to-grouped helper uses L^2/(epsilon_sep^b_sep*D_e), unlike paper's exponent b_sep-1; retained fitted value is not converted."
+      ]
+    },
+    {
+      "id": "hallemans2025-tau-ct-p",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Positive electrode charge transfer time scale [s]",
+      "category": "kinetics",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 1086.675124780971
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "tau_ct_p = F * R_p / (m_p * sqrt(c_e0)); m_p is the paper's reference exchange-current prefactor.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[7] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "tau_ct_p",
+        "theta_index_zero_based": 7,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          10,
+          5000
+        ],
+        "near_bound": false,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-tau-ct-n",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Negative electrode charge transfer time scale [s]",
+      "category": "kinetics",
+      "unit": "s",
+      "representation": {
+        "kind": "scalar",
+        "value": 1515.3429380602977
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "tau_ct_n = F * R_n / (m_n * sqrt(c_e0)); m_n is the paper's reference exchange-current prefactor.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[8] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "tau_ct_n",
+        "theta_index_zero_based": 8,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          10,
+          5000
+        ],
+        "near_bound": false,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-c-p",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Positive electrode capacitance [F]",
+      "category": "kinetics",
+      "unit": "F",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.9999997996015484
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "C_p = 3 * alpha_p * Cdl_p * L_p * A / R_p; whole-electrode capacitance, not F/m^2.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[9] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "C_p",
+        "theta_index_zero_based": 9,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0,
+          2
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-c-n",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Negative electrode capacitance [F]",
+      "category": "kinetics",
+      "unit": "F",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5320045222295552
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "C_n = 3 * alpha_n * Cdl_n * L_n * A / R_n; whole-electrode capacitance, not F/m^2.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[10] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "C_n",
+        "theta_index_zero_based": 10,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0,
+          2
+        ],
+        "near_bound": false,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-zeta-p",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Positive electrode relative porosity",
+      "category": "electrode",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.69999967159918
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "zeta_p = epsilon_p / epsilon_sep; ratio, not absolute porosity.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[11] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "zeta_p",
+        "theta_index_zero_based": 11,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.5,
+          1.7
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-zeta-n",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Negative electrode relative porosity",
+      "category": "electrode",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 1.6999996878164123
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "zeta_n = epsilon_n / epsilon_sep; ratio, not absolute porosity.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[12] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "zeta_n",
+        "theta_index_zero_based": 12,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.5,
+          1.7
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-q-e",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Reference electrolyte capacity [A.s]",
+      "category": "transport",
+      "unit": "A.s",
+      "representation": {
+        "kind": "scalar",
+        "value": 1999.998806635406
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Q_e = F * epsilon_sep * c_e0 * L * A; reference electrolyte inventory in charge units, not cell capacity.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[13] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "Q_e",
+        "theta_index_zero_based": 13,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          500,
+          2000
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-c-p-100",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Minimum positive stoichiometry",
+      "category": "initial_state",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.1897000000014263
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "c_p_100 = c_p_at_100_percent_SOC / c_p_max; positive electrode minimum occurs at full-cell 100% SOC.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[14] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "c_p_100",
+        "theta_index_zero_based": 14,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.1897,
+          0.1899
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-c-p-0",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Maximum positive stoichiometry",
+      "category": "initial_state",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.9829370585720488
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "c_p_0 = c_p_at_0_percent_SOC / c_p_max; positive electrode maximum occurs at full-cell 0% SOC.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[15] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "c_p_0",
+        "theta_index_zero_based": 15,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.982,
+          0.984
+        ],
+        "near_bound": false,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-c-n-0",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Minimum negative stoichiometry",
+      "category": "initial_state",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0014999999996892458
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "c_n_0 = c_n_at_0_percent_SOC / c_n_max; negative electrode minimum occurs at full-cell 0% SOC.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[16] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "c_n_0",
+        "theta_index_zero_based": 16,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.0014,
+          0.0015
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    },
+    {
+      "id": "hallemans2025-c-n-100",
+      "version": "1",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "name": "Maximum negative stoichiometry",
+      "category": "initial_state",
+      "unit": "1",
+      "representation": {
+        "kind": "scalar",
+        "value": 0.8863999999999868
+      },
+      "source_ids": [
+        "hallemans-2025-repository",
+        "hallemans-2025-paper-v4"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "c_n_100 = c_n_at_100_percent_SOC / c_n_max; negative electrode maximum occurs at full-cell 100% SOC.",
+      "provenance": {
+        "asset_id": "hallemans-fit-mat",
+        "location": "Zhat3mV_SOC_SPMe_LGM50LT.mat::thetahat[17] (zero-based); ordering: Fig10/Fig11 pybop.Parameters",
+        "origin_status": "joint_EIS_fitted_grouped_SPMe_parameter; not independent material characterization"
+      },
+      "conditions": {
+        "parameterization_variant": "hallemans2025-v4-grouped-spme",
+        "paper_symbol": "c_n_100",
+        "theta_index_zero_based": 17,
+        "definition_source": "arXiv v4 Table 2 / Appendix C",
+        "ambient_setpoint_K": 298.15,
+        "ambient_setpoint_scope": "EIS Table 4; not a measured temperature channel or verified drive-cycle setting",
+        "fitted_SOC_fraction": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8
+        ],
+        "optimization_bounds": [
+          0.8862,
+          0.8864
+        ],
+        "near_bound": true,
+        "near_bound_rule": "Within 1e-4 of bound span; computational flag, not an uncertainty estimate",
+        "model": "Grouped SPMe with differential double-layer surface form and contact resistance",
+        "fitted_together": 18
+      },
+      "limitations": [
+        "Retain as a jointly fitted grouped quantity; do not label as an independently measured intrinsic coefficient.",
+        "Some parameters clip at bounds; paper reports poor low-frequency fits. No confidence intervals or uniqueness claim.",
+        "Fit uses external About:Energy OCPs and a Chen2020 initialization; OCP permission is unresolved, so no ready-to-run complete model is supplied."
+      ]
+    }
+  ],
+  "ocp_records": [],
+  "full_cell_tests": [
+    {
+      "id": "hallemans2025-m50lt-drive-80to20",
+      "cell_id": "lg-m50lt-hallemans2025",
+      "sample_id": "LG M50LT; serial not supplied",
+      "asset_id": "hallemans-drive-mat",
+      "source_id": "hallemans-2025-repository",
+      "path": null,
+      "original_download_path": "evidence/hallemans-DrivecycleMeasurement_80to20.mat",
+      "original_format": "MATLAB v5 MAT",
+      "normalized_path": "full_cell/hallemans2025-m50lt-drive-80to20-normalized.csv",
+      "normalized_sha256": "d9b784af582313428faa99e03ba19f957464d266bb364e34855794eca3809ae3",
+      "license": "BSD-3-Clause",
+      "csv_header_rows": 0,
+      "protocol": "Measured drive cycle, nominal 80 to 20% SOC; repeated excitation, 0.15 s sampling, 24742.8 s elapsed; paper v4 Section 7.3 / Figure 11.",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Same explicit LG M50LT model and Hallemans2025 study: Fig11 loads this drive-cycle MAT and the same fitted vector; v4 Section 7.3 identifies measured terminal voltage and Fig11 validation. Exact serialized-specimen chain to harvested OCP half-cells is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 164953,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record"
+      ],
+      "discharge_segments": [],
+      "format": "Published measured t/i/v arrays, all rows and native precision retained; not instrument export or simulated model output.",
+      "current_convention": "Source i retained: charge positive, discharge negative. Author Fig11 negates i to supply PyBaMM's discharge-positive current. u is not used as voltage or substituted for measured i.",
+      "temperature_definition": "No cell/ambient temperature array. Paper Table 4 specifies 25 degC for EIS; this is not assigned to drive-cycle rows.",
+      "basic_test": {
+        "type": "drive_cycle",
+        "current_measurement": "supplied source i",
+        "charge_trace": "available dynamic segments",
+        "discharge_trace": "available dynamic segments",
+        "voltage_trace": "available"
+      },
+      "processing": {
+        "script": "scripts/seed_hallemans.py",
+        "source_fields": {
+          "time_s": "t [s]",
+          "current_charge_positive_A": "i [A]",
+          "voltage_V": "v [V]"
+        },
+        "source_position": "source_record is one-based MATLAB array index",
+        "changes": "Extract t/i/v without resampling, smoothing or unit changes; classify mode from i sign. Blank T/cycle/step remain unavailable.",
+        "omitted_fields": {
+          "u": "Current-like array; precise measured/commanded/processed meaning unresolved. Retained only in original MAT."
+        }
+      },
+      "missing_items": [
+        "About:Energy M50LT OCP redistribution permission unresolved; no OCP imported",
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Intrinsic solid diffusivity and reaction-rate prefactors not identified separately",
+        "Measured cell and ambient temperature traces absent",
+        "Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved",
+        "Standalone CC charge/discharge observations not deposited in the reviewed file set"
+      ],
+      "supporting_asset_ids": [
+        "hallemans-fit-mat",
+        "hallemans-eis-mat",
+        "hallemans-fig10",
+        "hallemans-fig11",
+        "hallemans-license"
+      ],
+      "source_checks": {
+        "sampling_period_s": 0.15,
+        "net_charge_Ah_trapezoid": -2.923841244894962,
+        "note": "Integrated current is a consistency check, not an inferred capacity or SOC measurement."
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 164953,
+          "total_rows": 164953
+        },
+        "current_charge_positive_A": {
+          "present_rows": 164953,
+          "total_rows": 164953
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 164953
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 164953
+        }
+      }
+    }
+  ],
+  "sources": {
+    "aboutenergy-m50lt-ocp-lead": {
+      "kind": "external_data_lead",
+      "title": "About:Energy LG M50LT OCP inputs (reuse scope unresolved)",
+      "authors": [
+        "About:Energy Ltd"
+      ],
+      "year": 2024,
+      "url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/blob/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/Notes%20on%20LG%20M50LT%20OCP.pdf",
+      "license": "unresolved",
+      "role": "Paper Section 7 identifies personal communication; notes attribute OCP to About:Energy without separate reuse terms. Official company's CC-BY-SA-4.0 BPX repository describes a different NMC111 pouch cell, not M50LT. No OCP arrays, notes PDF or derived samples redistributed."
+    },
+    "hallemans-2025-paper-v4": {
+      "kind": "paper",
+      "title": "Physics-based battery model parametrisation from impedance data",
+      "authors": [
+        "Noel Hallemans",
+        "Nicola E. Courtier",
+        "Colin P. Please",
+        "Brady Planden",
+        "Rishit Dhoot",
+        "Robert Timms",
+        "S. Jon Chapman",
+        "David Howey",
+        "Stephen R. Duncan"
+      ],
+      "year": 2025,
+      "doi": "10.1149/1945-7111/add41b",
+      "url": "https://arxiv.org/html/2412.10896v4",
+      "version": "arXiv v4, 2025-04-23",
+      "license": "CC-BY-4.0",
+      "role": "Table 2 definitions, Tables 4/5 EIS conditions and rounded fit, Section 7.3 measured drive-cycle interpretation. Earlier v3 is a different experiment/fit and is not combined."
+    },
+    "hallemans-2025-repository": {
+      "kind": "dataset_and_software",
+      "title": "Hallemans2025 LG M50LT author data and scripts",
+      "authors": [
+        "Noel Hallemans",
+        "Nicola E. Courtier",
+        "Colin P. Please",
+        "Brady Planden",
+        "Rishit Dhoot",
+        "Robert Timms",
+        "S. Jon Chapman",
+        "David Howey",
+        "Stephen R. Duncan"
+      ],
+      "year": 2025,
+      "version": "3308a34396b8b56cd614291dd151c3405577c068",
+      "url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+      "license": "BSD-3-Clause",
+      "license_evidence": "Pinned root LICENSE, Copyright (c) 2025 authors of journal paper, retained verbatim. Applied to author-owned measured data/results; no inferred grant for About:Energy third-party OCP inputs.",
+      "role": "Measured whole-cell EIS and drive cycle; fitted grouped-SPMe vector. Source code inspected as text, not executed."
+    },
+    "pybop-25-6-grouped": {
+      "kind": "software",
+      "title": "PyBOP v25.6 grouped SPMe",
+      "authors": [
+        "PyBOP team"
+      ],
+      "year": 2025,
+      "version": "v25.6",
+      "url": "https://github.com/pybop-team/PyBOP/blob/v25.6/pybop/models/lithium_ion/basic_SPMe.py",
+      "license": "BSD-3-Clause",
+      "role": "Definition cross-check only. Separator conversion-helper convention differs from paper Table 2; fitted time scale is retained without inversion."
+    }
+  },
+  "upstream_assets": {
+    "hallemans-drive-mat": {
+      "filename": "hallemans-DrivecycleMeasurement_80to20.mat",
+      "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/DrivecycleMeasurement_80to20.mat",
+      "source_id": "hallemans-2025-repository",
+      "license": "BSD-3-Clause",
+      "sha256": "981e5b045556a226ad7c08ed1401004f980d7983cafa45592f291833bfd9e0d0",
+      "path": "evidence/hallemans-DrivecycleMeasurement_80to20.mat"
+    },
+    "hallemans-eis-mat": {
+      "filename": "hallemans-impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+      "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+      "source_id": "hallemans-2025-repository",
+      "license": "BSD-3-Clause",
+      "sha256": "5f06cf0b495eeb2d5704b41a6e3c93b8e480e977b71809d5b8f5e39c643ad8c5",
+      "path": "evidence/hallemans-impedanceLGM50LT_Hybrid_4h_3mVrms.mat"
+    },
+    "hallemans-fig10": {
+      "filename": "hallemans-Fig10_EIS_Fitting_LGM50LT.py",
+      "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Fig10_EIS_Fitting_LGM50LT.py",
+      "source_id": "hallemans-2025-repository",
+      "license": "BSD-3-Clause",
+      "sha256": "2d2f7c9fdeb4f6886e621c692f9f6e0a7c0fab8f080201bffe6c1959dadd7bd1",
+      "path": "evidence/hallemans-Fig10_EIS_Fitting_LGM50LT.py"
+    },
+    "hallemans-fig11": {
+      "filename": "hallemans-Fig11_validationLGM50LT.py",
+      "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Fig11_validationLGM50LT.py",
+      "source_id": "hallemans-2025-repository",
+      "license": "BSD-3-Clause",
+      "sha256": "282dce08f6ad3cb0cdf886f3cf86ca4c395ecfca4658d4cc282a3772eb24333e",
+      "path": "evidence/hallemans-Fig11_validationLGM50LT.py"
+    },
+    "hallemans-fit-mat": {
+      "filename": "hallemans-Zhat3mV_SOC_SPMe_LGM50LT.mat",
+      "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/Zhat3mV_SOC_SPMe_LGM50LT.mat",
+      "source_id": "hallemans-2025-repository",
+      "license": "BSD-3-Clause",
+      "sha256": "b451a9c009479efe6b5f3a13989d424d35ae4d20f033371a4ecb87b95d6840df",
+      "path": "evidence/hallemans-Zhat3mV_SOC_SPMe_LGM50LT.mat"
+    },
+    "hallemans-license": {
+      "filename": "hallemans-LICENSE",
+      "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/LICENSE",
+      "source_id": "hallemans-2025-repository",
+      "license": "BSD-3-Clause",
+      "sha256": "21d1e1b2dc18fd2fde0c712a63845c4d07b2b7bd5b75f2774d81fad246e90e8c",
+      "path": "evidence/hallemans-LICENSE.txt"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

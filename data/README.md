@@ -8,7 +8,7 @@ Start here when browsing on GitHub. No Python installation or hosted website is 
 
 See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.
 
-Snapshot: 55 OCP records, 337 other parameter records, 60 full-cell test files.
+Snapshot: 55 OCP records, 355 other parameter records, 61 full-cell test files.
 
 ## Choose a cell or study
 
@@ -25,6 +25,7 @@ Snapshot: 55 OCP records, 337 other parameter records, 60 full-cell test files.
 | [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](cells/enertech-lco-pouch-ai2020.md) | [2 records](cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [38 records](cells/enertech-lco-pouch-ai2020.md#parameters) | [4 files](cells/enertech-lco-pouch-ai2020.md#full-cell-tests) | `same_study_cell_family` |
 | [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](cells/isu-uconn-lfp-graphite-lab.md) | [4 records](cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not imported | [21 files](cells/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | `same_study_cell_family` |
 | [A123 18650M1A &#124; Jahn2024 LFP/graphite](cells/a123-18650m1a-jahn2024.md) | [2 records](cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not imported | [14 files](cells/a123-18650m1a-jahn2024.md#full-cell-tests) | `same_model_same_study` |
+| [LG M50LT &#124; Hallemans2025 grouped SPMe](cells/lg-m50lt-hallemans2025.md) | Not linked | [18 records](cells/lg-m50lt-hallemans2025.md#parameters) | [1 file](cells/lg-m50lt-hallemans2025.md#full-cell-tests) | `same_model_same_study` |
 
 ## Find data by type
 

@@ -415,5 +415,70 @@
     "doi": "10.1038/s44172-024-00221-4",
     "url": "https://www.nature.com/articles/s44172-024-00221-4",
     "role": "Methods names A123 18650M1A, 25 degC chamber, subsequent harvested-electrode tests and approximated OCPn parameterization."
+  },
+  "hallemans-2025-repository": {
+    "kind": "dataset_and_software",
+    "title": "Hallemans2025 LG M50LT author data and scripts",
+    "authors": [
+      "Noel Hallemans",
+      "Nicola E. Courtier",
+      "Colin P. Please",
+      "Brady Planden",
+      "Rishit Dhoot",
+      "Robert Timms",
+      "S. Jon Chapman",
+      "David Howey",
+      "Stephen R. Duncan"
+    ],
+    "year": 2025,
+    "version": "3308a34396b8b56cd614291dd151c3405577c068",
+    "url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+    "license": "BSD-3-Clause",
+    "license_evidence": "Pinned root LICENSE, Copyright (c) 2025 authors of journal paper, retained verbatim. Applied to author-owned measured data/results; no inferred grant for About:Energy third-party OCP inputs.",
+    "role": "Measured whole-cell EIS and drive cycle; fitted grouped-SPMe vector. Source code inspected as text, not executed."
+  },
+  "hallemans-2025-paper-v4": {
+    "kind": "paper",
+    "title": "Physics-based battery model parametrisation from impedance data",
+    "authors": [
+      "Noel Hallemans",
+      "Nicola E. Courtier",
+      "Colin P. Please",
+      "Brady Planden",
+      "Rishit Dhoot",
+      "Robert Timms",
+      "S. Jon Chapman",
+      "David Howey",
+      "Stephen R. Duncan"
+    ],
+    "year": 2025,
+    "doi": "10.1149/1945-7111/add41b",
+    "url": "https://arxiv.org/html/2412.10896v4",
+    "version": "arXiv v4, 2025-04-23",
+    "license": "CC-BY-4.0",
+    "role": "Table 2 definitions, Tables 4/5 EIS conditions and rounded fit, Section 7.3 measured drive-cycle interpretation. Earlier v3 is a different experiment/fit and is not combined."
+  },
+  "pybop-25-6-grouped": {
+    "kind": "software",
+    "title": "PyBOP v25.6 grouped SPMe",
+    "authors": [
+      "PyBOP team"
+    ],
+    "year": 2025,
+    "version": "v25.6",
+    "url": "https://github.com/pybop-team/PyBOP/blob/v25.6/pybop/models/lithium_ion/basic_SPMe.py",
+    "license": "BSD-3-Clause",
+    "role": "Definition cross-check only. Separator conversion-helper convention differs from paper Table 2; fitted time scale is retained without inversion."
+  },
+  "aboutenergy-m50lt-ocp-lead": {
+    "kind": "external_data_lead",
+    "title": "About:Energy LG M50LT OCP inputs (reuse scope unresolved)",
+    "authors": [
+      "About:Energy Ltd"
+    ],
+    "year": 2024,
+    "url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/blob/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/Notes%20on%20LG%20M50LT%20OCP.pdf",
+    "license": "unresolved",
+    "role": "Paper Section 7 identifies personal communication; notes attribute OCP to About:Energy without separate reuse terms. Official company's CC-BY-SA-4.0 BPX repository describes a different NMC111 pouch cell, not M50LT. No OCP arrays, notes PDF or derived samples redistributed."
   }
 }

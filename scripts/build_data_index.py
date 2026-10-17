@@ -125,6 +125,8 @@ def render_index(repo=REPO):
                  f"Cell ID: `{cid}`. Match level: `{cell['match_level']}`.", "",
                  cell["match_evidence"], "", cell["note"], "",
                  "## Parameters", ""]
+        if cell.get("curation_guide"):
+            lines += [link(page, Path(cell["curation_guide"]), "Curation review: definitions, licensing and matching limits"), ""]
         csv_path = Path("data/parameters") / f"{cid}.csv"
         json_path = csv_path.with_suffix(".json")
         source_ids = set(cell["source_ids"])
@@ -195,6 +197,10 @@ def render_index(repo=REPO):
                     lines.append(f"  - {link(page, source_path(side['path']), 'Separate temperature-rise CSV')}; its own timebase is retained, not absolute cell temperature.")
         else:
             lines += ["No matching full-cell observation file imported. A named model or chemistry does not establish a test-data match."]
+        if cell.get("supporting_files"):
+            lines += ["", "### Additional study evidence", ""]
+            for item in cell["supporting_files"]:
+                lines.append(f"- {link(page, source_path(item['path']), 'Download CSV')}: {item['description']} License: {item['license']}.")
         lines += ["", "## Cell-level gaps", ""]
         lines += [f"- {item}" for item in cell["missing_items"]]
         lines += ["", "## Sources and reuse", ""]

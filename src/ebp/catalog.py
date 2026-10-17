@@ -427,6 +427,12 @@ class Catalog:
             except (ValueError, KeyError, OSError) as exc:
                 errors.append(f"{test['id']}: {exc}")
         for cid, cell in self.cells.items():
+            for item in cell.get("supporting_files", []):
+                local = (self.root / item["path"]).resolve()
+                if not local.is_relative_to(self.root.resolve()) or not local.is_file():
+                    errors.append(f"cell {cid}: invalid supporting evidence path")
+                elif hashlib.sha256(local.read_bytes()).hexdigest() != item["sha256"]:
+                    errors.append(f"cell {cid}: supporting evidence SHA-256 mismatch")
             owned = set(
                 cell.get("ocp_record_ids", [])
                 + cell.get("parameter_ids", [])

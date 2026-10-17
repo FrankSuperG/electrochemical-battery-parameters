@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.0 — 2026-10-17
+
+- Curated LG M50LT / Hallemans2025: 18 jointly EIS-fitted grouped-SPMe parameters, one measured t/I/V drive cycle (164,953 rows), and 585 frequency-domain evidence rows with measured/model components distinguished.
+- Verified the seven-SOC measured EIS slice byte-for-value against the fit MAT; checked parameter ordering and v4 paper definitions, including relative porosity, stoichiometry orientation and the separator-group conversion-helper discrepancy.
+- Retained BSD-3-Clause author data/scripts and notices. About:Energy OCP permission remains unresolved; OCP files stay external leads without redistributed data or samples.
+- Added cell-scoped CSV/JSON links, original evidence, an English curation guide and offline bundle support. Temperature, standalone CC tests, intrinsic coefficients and exact specimen mapping remain explicit gaps.
+- Catalog now holds 55 electrode curves, 355 other parameter records and 61 full-cell exports across 12 cell/study entries; no independent model-validation or public-deployment claim.
+
 ## 0.6.0 — 2026-10-17
 
 - Curated ISU-UConn's author-selected two half-cell specimens into four finite-current pseudo-OCP branches and 21 full-cell V-Q branches from eleven configurations; retained workbook addresses, unknown reference details, and missing I/t/T.
