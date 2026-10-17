@@ -157,3 +157,28 @@ balancing limits are retained. PyBaMM variants keep their separate BSD license.
 The author/PyBaMM crosswalk is original project documentation. Source authors
 have not endorsed this project. The v0.4 no-import status is superseded by the
 verified v0.5 official retrieval; no third-party paper-download link is included.
+
+## LFP study packages in v0.6
+
+| Content | Attribution / source | License |
+|---|---|---|
+| Original `isu-uconn-LFP_Data.xlsx`, `isu-uconn-*.csv` electrode/full-cell derivatives | Yifan Zhang, Tingkai Li, Shan Hu, Chao Hu; [ISU-UConn primary deposit](https://digitalcommons.lib.uconn.edu/reil_datasets/6/) and author-hosted workbook at commit `1188c371e5836df4a7e5f5acf336a34ffd4027e6` | CC BY 4.0 |
+| ISU author notebook/loader/README referenced as evidence | [REIL-UConn repository](https://github.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics); pinned URLs/hashes, not executed or included as project code | MIT for code; does not replace the workbook's separate CC BY 4.0 terms |
+| Original `jahn-*` evidence, model OCPn tables and experimental derivatives | Leonard Jahn; [data v2](https://zenodo.org/records/11958572), [code](https://zenodo.org/records/10852695); associated [Jahn et al. paper](https://doi.org/10.1038/s44172-024-00221-4) | CC BY 4.0 for both deposits, verified in packaged API metadata |
+
+All selected original bytes are retained under checksum pins. ISU pseudo-OCP
+changes: select two author-used half-cell pairs, blocks 6/7, stop at the first
+capacity maximum, retain the first repeated-capacity observation and normalize
+branch throughput. Full-cell changes: select eleven configurations and available
+following reverse branches, retain every numeric row in those blocks, and convert
+mAh to Ah. One-based Excel addresses are retained. Reference/temperature details
+not verified from accessible sources remain explicit gaps.
+
+Jahn changes: copy native modeled OCPn nodes; export nine MAT loop arrays; split
+incremental full-cell OCV at the first maximum Q with no row duplication/deletion;
+retain original stored charge alongside per-branch passed capacity. Signed
+current is retained where supplied. Missing current/time/temperature are never
+synthesized. Model OCPn is not raw electrode OCP. No source code is executed and
+no prediction accuracy is claimed. See [curation details](docs/LFP_STUDIES.md),
+`scripts/lfp_study_assets.json`, `ISU-UConn-data-notice.txt` and
+`Jahn2024-data-code-notice.txt`. Source authors have not endorsed E-BatP.

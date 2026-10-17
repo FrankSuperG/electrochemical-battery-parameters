@@ -1,0 +1,22 @@
+ISU-UConn LFP/Graphite Emulated Degradation Dataset (2026)
+Yifan Zhang, Tingkai Li, Shan Hu, Chao Hu
+https://digitalcommons.lib.uconn.edu/reil_datasets/6/
+Data license: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+See the included CC-BY-4.0.txt legal code.
+
+The author repository identifies LFP_Data.xlsx as this CC BY 4.0 dataset:
+https://github.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/tree/1188c371e5836df4a7e5f5acf336a34ffd4027e6
+Its code is separately MIT. E-BatP does not relicense the experimental data as MIT.
+Scientific attribution: Li et al., eTransportation 29 (2026) 100593,
+https://doi.org/10.1016/j.etran.2026.100593
+
+E-BatP changes: selected the author-used two half-cell pairs and eleven full-cell
+configurations; added available following reverse branches; extracted full-cell
+numeric blocks unchanged except mAh to Ah; retained one-based Excel row addresses.
+For half-cell pseudo-OCP, omitted points after first maximum capacity, retained
+first repeated-capacity occurrence, and normalized branch throughput to 0..1.
+No smoothing, resampling or missing-channel imputation. Full author-hosted source
+XLSX is retained byte-for-byte. University-copy byte identity and detailed
+reference chemistry were not established. The source authors do not endorse
+this project. Retain attribution, license link and these change descriptions.

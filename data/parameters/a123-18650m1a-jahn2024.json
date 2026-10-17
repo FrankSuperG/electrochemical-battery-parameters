@@ -1,0 +1,1776 @@
+{
+  "cell_id": "a123-18650m1a-jahn2024",
+  "cell": {
+    "manufacturer": "A123 Systems",
+    "model": "18650M1A",
+    "display_name": "A123 18650M1A | Jahn2024 LFP/graphite",
+    "format": "18650",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": null,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "jahn-2024-data-v2",
+      "jahn-2024-code",
+      "jahn-2024-paper"
+    ],
+    "model_context": "Probability-distributed ECM with parameterized single-string OCPn, not a DFN parameter set",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+    "note": "18650M1A is separate from AMP20M1HD-A, the 9 Ah pouch family and APR18650M1B. PD-ECM resistances are not intrinsic Butler-Volmer kinetic constants.",
+    "coverage": {
+      "ocp": "Two modeled OCPn node arrays (LFP 399; graphite 602); raw measured electrode/GITT points are not included in these files.",
+      "diffusion": "No intrinsic solid diffusivity imported.",
+      "kinetics": "No intrinsic Butler-Volmer coefficient or exchange-current density imported; ECM parameters remain separate.",
+      "full_cell_tests": "Low-rate full cycle, incremental OCV charge/discharge branches, two power tests and nine partial hysteresis loops. Current is present only in power/loop files; no temperature trace."
+    },
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "jahn-a123-lfp-model-ocpn",
+      "jahn-a123-graphite-model-ocpn"
+    ],
+    "full_cell_test_ids": [
+      "jahn-a123-pocv-full-cycle",
+      "jahn-a123-power-soc50",
+      "jahn-a123-power-soc100",
+      "jahn-a123-incremental-ocv-charge",
+      "jahn-a123-incremental-ocv-discharge",
+      "jahn-a123-hysteresis-loop-1",
+      "jahn-a123-hysteresis-loop-2",
+      "jahn-a123-hysteresis-loop-3",
+      "jahn-a123-hysteresis-loop-4",
+      "jahn-a123-hysteresis-loop-5",
+      "jahn-a123-hysteresis-loop-6",
+      "jahn-a123-hysteresis-loop-7",
+      "jahn-a123-hysteresis-loop-8",
+      "jahn-a123-hysteresis-loop-9"
+    ],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "jahn-a123-lfp-model-ocpn",
+          "jahn-a123-graphite-model-ocpn"
+        ],
+        "source_ids": [
+          "jahn-2024-code",
+          "jahn-2024-data-v2",
+          "jahn-2024-paper"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two modeled OCPn node arrays (LFP 399; graphite 602); raw measured electrode/GITT points are not included in these files.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Raw electrode OCP observations",
+          "PD-ECM coordinate to lithium-fraction mapping"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No intrinsic solid diffusivity imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No intrinsic Butler-Volmer coefficient or exchange-current density imported; ECM parameters remain separate.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "jahn-a123-pocv-full-cycle",
+          "jahn-a123-power-soc50",
+          "jahn-a123-power-soc100",
+          "jahn-a123-incremental-ocv-charge",
+          "jahn-a123-incremental-ocv-discharge",
+          "jahn-a123-hysteresis-loop-1",
+          "jahn-a123-hysteresis-loop-2",
+          "jahn-a123-hysteresis-loop-3",
+          "jahn-a123-hysteresis-loop-4",
+          "jahn-a123-hysteresis-loop-5",
+          "jahn-a123-hysteresis-loop-6",
+          "jahn-a123-hysteresis-loop-7",
+          "jahn-a123-hysteresis-loop-8",
+          "jahn-a123-hysteresis-loop-9"
+        ],
+        "source_ids": [
+          "jahn-2024-data-v2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Low-rate full cycle, incremental OCV charge/discharge branches, two power tests and nine partial hysteresis loops. Current is present only in power/loop files; no temperature trace.",
+        "missing_items": [
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Same-specimen file-to-electrode provenance unresolved",
+          "Measured current in pseudo-OCV file",
+          "Time/current in incremental OCV file"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [
+          "jahn-a123-pocv-full-cycle",
+          "jahn-a123-power-soc50",
+          "jahn-a123-power-soc100",
+          "jahn-a123-incremental-ocv-charge",
+          "jahn-a123-incremental-ocv-discharge",
+          "jahn-a123-hysteresis-loop-1",
+          "jahn-a123-hysteresis-loop-2",
+          "jahn-a123-hysteresis-loop-3",
+          "jahn-a123-hysteresis-loop-4",
+          "jahn-a123-hysteresis-loop-5",
+          "jahn-a123-hysteresis-loop-6",
+          "jahn-a123-hysteresis-loop-7",
+          "jahn-a123-hysteresis-loop-8",
+          "jahn-a123-hysteresis-loop-9"
+        ],
+        "source_ids": [
+          "jahn-2024-data-v2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "constant_current_cycle; constant_current_partial_cycle; constant_current_steps; incremental_ocv",
+        "missing_items": [
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Measured current trace",
+          "Original timestamps",
+          "Same-specimen file-to-electrode provenance unresolved"
+        ]
+      }
+    },
+    "missing_items": [
+      "Absolute measured cell/ambient temperature traces",
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Intrinsic reaction kinetics not imported",
+      "Intrinsic solid diffusivity not imported",
+      "Measured current in pseudo-OCV file",
+      "Nominal capacity denominator not independently established",
+      "Raw measured electrode OCP/GITT points",
+      "Time/current in incremental OCV file"
+    ]
+  },
+  "parameters": [],
+  "ocp_records": [
+    {
+      "id": "jahn-a123-lfp-model-ocpn",
+      "version": "1",
+      "title": "LFP | A123 18650M1A / Jahn2024 | modeled PD-ECM OCPn",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "jahn-a123-lfp-model-ocpn-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "model_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Characterization protocol at 25 degC per Methods; parameterized model table, not a temperature sensor trace."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "model_soc",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Author model SOC/DOL coordinate, not verified absolute electrode lithium fraction.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/jahn-a123-lfp-model-ocpn.csv",
+        "sha256": "44505f84d141375c46d2201e677e52739cb444d8490210e195fb635bdef8c1d8",
+        "point_count": 399,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "jahn-2024-data-v2",
+        "jahn-2024-code",
+        "jahn-2024-paper"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "a123-18650m1a-jahn2024",
+        "relationship": "same_parameter_set",
+        "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied."
+      },
+      "provenance": {
+        "asset_ids": [
+          "jahn-param-ocpn-lfp-mat",
+          "jahn-pdecm-fullcell-m"
+        ],
+        "derivation": "author_parameterized_pd_ecm_ocpn_nodes",
+        "location": "param_ocpn_lfp.mat::pot_dol, pot",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "changes": "Native pot_dol and positive electrode-potential pot nodes copied unchanged. Source model negates graphite pot during full-cell assembly; this catalog retains its physical positive potential versus Li/Li+. Author spline/PCHIP/extrapolation is not reproduced by the catalog's bounded linear interpolation."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "model_coordinate",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+        "OCPn is approximated and parameterized from electrode data; it cannot be measured directly (paper Parameterization). These arrays are not raw GITT/half-cell measurements.",
+        "Model SOC/DOL is not established as absolute stoichiometry. LFP potential rises with this coordinate. Geometry, balancing and coordinate orientation need explicit review before DFN/SPM/SPMe reuse.",
+        "No intrinsic diffusivity or Butler-Volmer kinetics inferred from ECM quantities."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "jahn-a123-graphite-model-ocpn",
+      "version": "1",
+      "title": "graphite | A123 18650M1A / Jahn2024 | modeled PD-ECM OCPn",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "jahn-a123-graphite-model-ocpn-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "model_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Characterization protocol at 25 degC per Methods; parameterized model table, not a temperature sensor trace."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "model_soc",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Author model SOC/DOL coordinate, not verified absolute electrode lithium fraction.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/jahn-a123-graphite-model-ocpn.csv",
+        "sha256": "ca81440492a0af3e2a8e47262f9980dc72f77e4f152f4d3552ad3435e210dd65",
+        "point_count": 602,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "jahn-2024-data-v2",
+        "jahn-2024-code",
+        "jahn-2024-paper"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "a123-18650m1a-jahn2024",
+        "relationship": "same_parameter_set",
+        "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied."
+      },
+      "provenance": {
+        "asset_ids": [
+          "jahn-param-ocpn-graphite-mat",
+          "jahn-pdecm-fullcell-m"
+        ],
+        "derivation": "author_parameterized_pd_ecm_ocpn_nodes",
+        "location": "param_ocpn_graphite.mat::pot_dol, pot",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "changes": "Native pot_dol and positive electrode-potential pot nodes copied unchanged. Source model negates graphite pot during full-cell assembly; this catalog retains its physical positive potential versus Li/Li+. Author spline/PCHIP/extrapolation is not reproduced by the catalog's bounded linear interpolation."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "model_coordinate",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+        "OCPn is approximated and parameterized from electrode data; it cannot be measured directly (paper Parameterization). These arrays are not raw GITT/half-cell measurements.",
+        "Model SOC/DOL is not established as absolute stoichiometry. LFP potential rises with this coordinate. Geometry, balancing and coordinate orientation need explicit review before DFN/SPM/SPMe reuse.",
+        "No intrinsic diffusivity or Butler-Volmer kinetics inferred from ECM quantities."
+      ],
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "full_cell_tests": [
+    {
+      "id": "jahn-a123-pocv-full-cycle",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hys-a123-01-25deg-pocv-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_Hys_A123_01_25deg_pOCV.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-pocv-full-cycle-normalized.csv",
+      "normalized_sha256": "3abedea2dcb6adff965cbc87722aa169dcb82fd83c50c47a038949acf822544a",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/20 pseudo-OCV full charge/discharge cycle; t/Q/U supplied, measured current absent",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 13413,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_cycle",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Measured current trace",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently.",
+      "source_issues": [
+        "Author script differentiates Q to generate its simulation current; that derived current is not imported as measured current."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 13413,
+          "total_rows": 13413
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 13413
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 13413
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 13413
+        },
+        "time_s": {
+          "present_rows": 13413,
+          "total_rows": 13413
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 13413,
+        "voltage_V": 0,
+        "cell_temperature_K": 13413,
+        "ambient_temperature_K": 13413
+      }
+    },
+    {
+      "id": "jahn-a123-power-soc50",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hyspowertest-a123-01-25deg-soc50-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC50.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-power-soc50-normalized.csv",
+      "normalized_sha256": "a296c46e2217862015ad4f613c9b3f6d9801198175d30815febef4df5187142f",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "SOC50 path-dependency power test; full deposited record including conditioning and rest retained",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 336,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_steps",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently.",
+      "source_issues": [
+        "Deposit describes C/2 conditioning and 4C discharge; retain measured amperes and do not infer a capacity denominator. SOC100 file also contains initial positive-current conditioning.",
+        "Author simulation truncates SOC50 to 275 rows; catalog retains all 336 rows."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 336,
+          "total_rows": 336
+        },
+        "current_charge_positive_A": {
+          "present_rows": 336,
+          "total_rows": 336
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 336
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 336
+        },
+        "time_s": {
+          "present_rows": 336,
+          "total_rows": 336
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 336,
+        "ambient_temperature_K": 336
+      }
+    },
+    {
+      "id": "jahn-a123-power-soc100",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hyspowertest-a123-01-25deg-soc100-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC100.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-power-soc100-normalized.csv",
+      "normalized_sha256": "ce287ef5bcf2a76443d02ecf20795e741723f482a2436b9a95bd049fd9295d30",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "SOC100 path-dependency power test; full deposited record including conditioning and rest retained",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 723,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_steps",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently.",
+      "source_issues": [
+        "Deposit describes C/2 conditioning and 4C discharge; retain measured amperes and do not infer a capacity denominator. SOC100 file also contains initial positive-current conditioning.",
+        "Author simulation truncates SOC50 to 275 rows; catalog retains all 336 rows."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 723,
+          "total_rows": 723
+        },
+        "current_charge_positive_A": {
+          "present_rows": 723,
+          "total_rows": 723
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 723
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 723
+        },
+        "time_s": {
+          "present_rows": 723,
+          "total_rows": 723
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 723,
+        "ambient_temperature_K": 723
+      }
+    },
+    {
+      "id": "jahn-a123-incremental-ocv-charge",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hys-a123-01-25deg-incrocv-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_Hys_A123_01_25deg_incrOCV.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-incremental-ocv-charge-normalized.csv",
+      "normalized_sha256": "8312fdf6e818e9ba45c64c2cb3a53d435b9fb98fe11839b4ce8a3b351e98d56b",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "Incremental full-cell OCV charge endpoints after current interruptions; Q/U only",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 101,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "incremental_ocv",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Charge: source Q-Q_start; discharge: Q_start-Q. Original source stored charge Q is retained separately. No clock or current inferred."
+      },
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. Split after first global maximum stored charge; no observation is duplicated or deleted across the two branch exports.",
+      "source_issues": [
+        "These are whole-cell OCV points, not electrode OCP or a continuous CC time series."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 101,
+          "total_rows": 101
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 101,
+          "total_rows": 101
+        }
+      },
+      "missing_values": {
+        "time_s": 101,
+        "current_charge_positive_A": 101,
+        "voltage_V": 0,
+        "cell_temperature_K": 101,
+        "ambient_temperature_K": 101
+      }
+    },
+    {
+      "id": "jahn-a123-incremental-ocv-discharge",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hys-a123-01-25deg-incrocv-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_Hys_A123_01_25deg_incrOCV.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-incremental-ocv-discharge-normalized.csv",
+      "normalized_sha256": "46ed06f7791b0731cc96c75aa3e6b02aae97e9b7a4b4f5818fdbdf8f3d648989",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "Incremental full-cell OCV discharge endpoints after current interruptions; Q/U only",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 101,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "incremental_ocv",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Charge: source Q-Q_start; discharge: Q_start-Q. Original source stored charge Q is retained separately. No clock or current inferred."
+      },
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. Split after first global maximum stored charge; no observation is duplicated or deleted across the two branch exports.",
+      "source_issues": [
+        "These are whole-cell OCV points, not electrode OCP or a continuous CC time series."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 101,
+          "total_rows": 101
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 101,
+          "total_rows": 101
+        }
+      },
+      "missing_values": {
+        "time_s": 101,
+        "current_charge_positive_A": 101,
+        "voltage_V": 0,
+        "cell_temperature_K": 101,
+        "ambient_temperature_K": 101
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-1",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-1-normalized.csv",
+      "normalized_sha256": "29d3a95d9e17569ce884eaa0195c70c8b40a0376e538221c9bd17ee085bdb4a7",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 1; nominal SOC window 45 to 55 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1756,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(1,:).",
+      "original_member": "minor_loops(1,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1756,
+          "total_rows": 1756
+        },
+        "current_charge_positive_A": {
+          "present_rows": 1756,
+          "total_rows": 1756
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1756
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1756
+        },
+        "time_s": {
+          "present_rows": 1756,
+          "total_rows": 1756
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 1756,
+        "ambient_temperature_K": 1756
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-2",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-2-normalized.csv",
+      "normalized_sha256": "3f81cfe9991b3b6c5c39bf6772218c78c937e54a068f8f0e8c749756db3f1f8b",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 2; nominal SOC window 40 to 60 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 2409,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(2,:).",
+      "original_member": "minor_loops(2,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 2409,
+          "total_rows": 2409
+        },
+        "current_charge_positive_A": {
+          "present_rows": 2409,
+          "total_rows": 2409
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 2409
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 2409
+        },
+        "time_s": {
+          "present_rows": 2409,
+          "total_rows": 2409
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 2409,
+        "ambient_temperature_K": 2409
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-3",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-3-normalized.csv",
+      "normalized_sha256": "17c343f615fe28516482c014dbaa072ea9049f0eb840680942f848ad146f27cf",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 3; nominal SOC window 35 to 65 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 3064,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(3,:).",
+      "original_member": "minor_loops(3,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 3064,
+          "total_rows": 3064
+        },
+        "current_charge_positive_A": {
+          "present_rows": 3064,
+          "total_rows": 3064
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3064
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3064
+        },
+        "time_s": {
+          "present_rows": 3064,
+          "total_rows": 3064
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 3064,
+        "ambient_temperature_K": 3064
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-4",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-4-normalized.csv",
+      "normalized_sha256": "514fa87d29a37f9c7cb0b4ac2535bc5709c42ec9baa18761ca0f6341a4d000a2",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 4; nominal SOC window 30 to 70 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 3717,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(4,:).",
+      "original_member": "minor_loops(4,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 3717,
+          "total_rows": 3717
+        },
+        "current_charge_positive_A": {
+          "present_rows": 3717,
+          "total_rows": 3717
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3717
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3717
+        },
+        "time_s": {
+          "present_rows": 3717,
+          "total_rows": 3717
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 3717,
+        "ambient_temperature_K": 3717
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-5",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-5-normalized.csv",
+      "normalized_sha256": "ec79c999beccbcd8851901d5e4fdcbfa3f8e4b7d6104109c98db0788adf0dfff",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 5; nominal SOC window 25 to 75 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 4372,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(5,:).",
+      "original_member": "minor_loops(5,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 4372,
+          "total_rows": 4372
+        },
+        "current_charge_positive_A": {
+          "present_rows": 4372,
+          "total_rows": 4372
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 4372
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 4372
+        },
+        "time_s": {
+          "present_rows": 4372,
+          "total_rows": 4372
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 4372,
+        "ambient_temperature_K": 4372
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-6",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-6-normalized.csv",
+      "normalized_sha256": "dbc8c31a0ee27b35550ca517ffba32517c51ea5617c01cd79971ef32335a8011",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 6; nominal SOC window 20 to 80 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 5025,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(6,:).",
+      "original_member": "minor_loops(6,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 5025,
+          "total_rows": 5025
+        },
+        "current_charge_positive_A": {
+          "present_rows": 5025,
+          "total_rows": 5025
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5025
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5025
+        },
+        "time_s": {
+          "present_rows": 5025,
+          "total_rows": 5025
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 5025,
+        "ambient_temperature_K": 5025
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-7",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-7-normalized.csv",
+      "normalized_sha256": "689baa3d50bd095cec173d75c565024c93f88900e03d2a42ece4abce6ca8e091",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 7; nominal SOC window 15 to 85 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 5680,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(7,:).",
+      "original_member": "minor_loops(7,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 5680,
+          "total_rows": 5680
+        },
+        "current_charge_positive_A": {
+          "present_rows": 5680,
+          "total_rows": 5680
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5680
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5680
+        },
+        "time_s": {
+          "present_rows": 5680,
+          "total_rows": 5680
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 5680,
+        "ambient_temperature_K": 5680
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-8",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-8-normalized.csv",
+      "normalized_sha256": "a9a91aa36ace02b8884397676bf65b8c23dc0b916c48ceb7353abb1411cdaa14",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 8; nominal SOC window 10 to 90 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 6333,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(8,:).",
+      "original_member": "minor_loops(8,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6333,
+          "total_rows": 6333
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6333,
+          "total_rows": 6333
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6333
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6333
+        },
+        "time_s": {
+          "present_rows": 6333,
+          "total_rows": 6333
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 6333,
+        "ambient_temperature_K": 6333
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-9",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-9-normalized.csv",
+      "normalized_sha256": "a3f6acc7d936fa249c703162b0393346a30824ba5ae69f3f1820e010d91f4590",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 9; nominal SOC window 5 to 95 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 6988,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(9,:).",
+      "original_member": "minor_loops(9,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6988,
+          "total_rows": 6988
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6988,
+          "total_rows": 6988
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6988
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6988
+        },
+        "time_s": {
+          "present_rows": 6988,
+          "total_rows": 6988
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 6988,
+        "ambient_temperature_K": 6988
+      }
+    }
+  ],
+  "sources": {
+    "jahn-2024-code": {
+      "kind": "software",
+      "title": "Probability distributed equivalent circuit model - Code",
+      "authors": [
+        "Leonard Jahn"
+      ],
+      "year": 2024,
+      "doi": "10.5281/zenodo.10852695",
+      "url": "https://zenodo.org/records/10852695",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata metadata.license.id=cc-by-4.0.",
+      "role": "Original MATLAB inspected as text for coordinate, signs, column units and file linkage; never executed."
+    },
+    "jahn-2024-data-v2": {
+      "kind": "dataset",
+      "title": "Probability distributed equivalent circuit model - Data (v2)",
+      "authors": [
+        "Leonard Jahn"
+      ],
+      "year": 2024,
+      "version": "v2; fixed record 11958572",
+      "doi": "10.5281/zenodo.11958572",
+      "url": "https://zenodo.org/records/11958572",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged Zenodo API metadata metadata.license.id=cc-by-4.0; files verified against published MD5 and SHA-256.",
+      "role": "Experimental whole-cell observations and modeled electrode OCPn arrays; these are different evidence types."
+    },
+    "jahn-2024-paper": {
+      "kind": "paper",
+      "title": "A physically motivated voltage hysteresis model for lithium-ion batteries using a probability distributed equivalent circuit",
+      "authors": [
+        "Leonard Jahn",
+        "Patrick Moessle",
+        "Fridolin Roeder",
+        "Michael A. Danzer"
+      ],
+      "year": 2024,
+      "doi": "10.1038/s44172-024-00221-4",
+      "url": "https://www.nature.com/articles/s44172-024-00221-4",
+      "role": "Methods names A123 18650M1A, 25 degC chamber, subsequent harvested-electrode tests and approximated OCPn parameterization."
+    }
+  },
+  "upstream_assets": {
+    "jahn-20230125-hys-a123-01-25deg-incrocv-csv": {
+      "filename": "jahn-20230125_Hys_A123_01_25deg_incrOCV.csv",
+      "url": "https://zenodo.org/api/records/11958572/files/20230125_Hys_A123_01_25deg_incrOCV.csv/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "25c318255e1f4203842ec6780b9adbcbbc12a23461c0fb618be2da51480b9704",
+      "md5": "196f0ca05003ceb8a11039665da1d815",
+      "path": "evidence/jahn-20230125_Hys_A123_01_25deg_incrOCV.csv"
+    },
+    "jahn-20230125-hys-a123-01-25deg-pocv-csv": {
+      "filename": "jahn-20230125_Hys_A123_01_25deg_pOCV.csv",
+      "url": "https://zenodo.org/api/records/11958572/files/20230125_Hys_A123_01_25deg_pOCV.csv/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "da6e14f79fe0e16d528780f6a5bacf725778c1390593d689bc6ad54a7517bda0",
+      "md5": "62dbf637d9ed8d568576ccdff2c692b0",
+      "path": "evidence/jahn-20230125_Hys_A123_01_25deg_pOCV.csv"
+    },
+    "jahn-20230125-hyspowertest-a123-01-25deg-soc100-csv": {
+      "filename": "jahn-20230125_HysPowerTest_A123_01_25deg_SOC100.csv",
+      "url": "https://zenodo.org/api/records/11958572/files/20230125_HysPowerTest_A123_01_25deg_SOC100.csv/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "009c2fb085e219c7b20afaa050ac9e69d848cf04fc6e9165ce2bbd1282357feb",
+      "md5": "588ecca63c63ebc21204a10d5d123958",
+      "path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC100.csv"
+    },
+    "jahn-20230125-hyspowertest-a123-01-25deg-soc50-csv": {
+      "filename": "jahn-20230125_HysPowerTest_A123_01_25deg_SOC50.csv",
+      "url": "https://zenodo.org/api/records/11958572/files/20230125_HysPowerTest_A123_01_25deg_SOC50.csv/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "d6e8b4b7ea4f832a67a859604ab8d507d2a1fdd7541cb37a485ac933dec92fd3",
+      "md5": "e043115d3e8aaf1e83f7d5a7670c409e",
+      "path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC50.csv"
+    },
+    "jahn-2024-code-metadata": {
+      "filename": "jahn-2024-code-metadata.json",
+      "url": "https://zenodo.org/api/records/10852695",
+      "source_id": "jahn-2024-code",
+      "license": "CC-BY-4.0",
+      "sha256": "ccbcff6e20149efc587ac87dcbc55cd5b49f56b85a05de5781d406b2290f1d6a",
+      "path": "evidence/jahn-2024-code-metadata.json"
+    },
+    "jahn-2024-data-v2-metadata": {
+      "filename": "jahn-2024-data-v2-metadata.json",
+      "url": "https://zenodo.org/api/records/11958572",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "01891e90e0c16ece78ca80eee71718721751b1e965a5f713025c6fb82fb8e47b",
+      "path": "evidence/jahn-2024-data-v2-metadata.json"
+    },
+    "jahn-hys-sim-lfp-fc-m": {
+      "filename": "jahn-hys_sim_lfp_fc.m",
+      "url": "https://zenodo.org/api/records/10852695/files/hys_sim_lfp_fc.m/content",
+      "source_id": "jahn-2024-code",
+      "license": "CC-BY-4.0",
+      "sha256": "855333283001077a013a143c320f0950bc827192b16556d81f3820c43f759ed1",
+      "md5": "a1fb859bc5f8934ae1ff2bd71e9941c5",
+      "path": "evidence/jahn-hys_sim_lfp_fc.m"
+    },
+    "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat": {
+      "filename": "jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "url": "https://zenodo.org/api/records/11958572/files/Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "713bca99fb96ac1fc29e45ff331605924aab84cc9ddbf02c8226bc8cbf264b36",
+      "md5": "84f99a78b32067de7e59360728bd364e",
+      "path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat"
+    },
+    "jahn-param-ocpn-graphite-mat": {
+      "filename": "jahn-param_ocpn_graphite.mat",
+      "url": "https://zenodo.org/api/records/11958572/files/param_ocpn_graphite.mat/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "2a7a694c5d5865ef5c081cd7e97cacb94d6002895c8ac384a403db22ebc36ce9",
+      "md5": "3fcaf7d0923b0e4012f8cea9eaf25dc9",
+      "path": "evidence/jahn-param_ocpn_graphite.mat"
+    },
+    "jahn-param-ocpn-lfp-mat": {
+      "filename": "jahn-param_ocpn_lfp.mat",
+      "url": "https://zenodo.org/api/records/11958572/files/param_ocpn_lfp.mat/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "2a2af10c8a662b987f4fb09f59a12ff65afa1f9e746248d9d80cbf2210b5d4aa",
+      "md5": "f26df0a8520966721871116c963a47bf",
+      "path": "evidence/jahn-param_ocpn_lfp.mat"
+    },
+    "jahn-pdecm-fullcell-m": {
+      "filename": "jahn-pdecm_fullcell.m",
+      "url": "https://zenodo.org/api/records/10852695/files/pdecm_fullcell.m/content",
+      "source_id": "jahn-2024-code",
+      "license": "CC-BY-4.0",
+      "sha256": "1730ca4ff52332626db414961e2eed12ce18312d9f04b932ea38e80afb2d6744",
+      "md5": "d595766089e58e36f42717defdd32991",
+      "path": "evidence/jahn-pdecm_fullcell.m"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

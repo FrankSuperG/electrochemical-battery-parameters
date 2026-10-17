@@ -484,6 +484,9 @@ def main(download=False):
     from seed_mohtat import extend as extend_mohtat
 
     extend_mohtat()
+    from seed_lfp_studies import extend as extend_lfp_studies
+
+    extend_lfp_studies(download=download)
 
 
 if __name__ == "__main__":

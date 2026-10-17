@@ -1,0 +1,23 @@
+Probability distributed equivalent circuit model - Data, v2 (2024)
+Leonard Jahn
+https://doi.org/10.5281/zenodo.11958572
+Associated code: https://doi.org/10.5281/zenodo.10852695
+Both deposits' API metadata specify CC BY 4.0. See included CC-BY-4.0.txt.
+License: https://creativecommons.org/licenses/by/4.0/
+
+Scientific attribution: Leonard Jahn, Patrick Moessle, Fridolin Roeder,
+Michael A. Danzer, "A physically motivated voltage hysteresis model for lithium-ion
+batteries using a probability distributed equivalent circuit", Communications
+Engineering (2024), https://doi.org/10.1038/s44172-024-00221-4
+
+Selected original CSV, MAT, MATLAB text and API metadata are retained byte-for-byte
+with checksum pins. E-BatP changes: renamed normalized CSV channels; split
+incremental full-cell OCV at the first maximum stored charge into two branches
+with explicit passed-capacity transformations; exported nine native minor-loop
+arrays separately; copied native OCPn nodes without fitting or resampling.
+No source code is executed, measured current synthesized, temperature trace
+invented, or simulation prediction imported as observation. OCPn tables are
+parameterized model inputs, not raw measured electrode OCP/GITT points. Catalog
+interpolation does not reproduce the complete author's model or extrapolation.
+The source authors do not endorse E-BatP. Preserve source attribution, licensing,
+hashes and transformation/representation labels when redistributing derivatives.

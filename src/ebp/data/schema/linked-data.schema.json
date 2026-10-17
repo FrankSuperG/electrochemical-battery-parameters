@@ -297,7 +297,11 @@
               "enum": [
                 "constant_current_discharge",
                 "constant_current_charge",
-                "CCCV_charge_and_CC_discharge"
+                "CCCV_charge_and_CC_discharge",
+                "constant_current_cycle",
+                "constant_current_steps",
+                "constant_current_partial_cycle",
+                "incremental_ocv"
               ]
             },
             "nominal_C_rate": {
@@ -337,7 +341,7 @@
         },
         "original_download_path": {
           "type": "string",
-          "pattern": "^evidence/[A-Za-z0-9._-]+\\.(csv|txt|mat)$"
+          "pattern": "^evidence/[A-Za-z0-9._-]+\\.(csv|txt|mat|xlsx)$"
         },
         "sidecars": {
           "type": "array",
@@ -386,7 +390,10 @@
           ],
           "properties": {
             "column": {
-              "const": "charge_capacity_Ah"
+              "enum": [
+                "charge_capacity_Ah",
+                "passed_capacity_Ah"
+              ]
             },
             "unit": {
               "const": "Ah"

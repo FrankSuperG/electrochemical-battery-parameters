@@ -495,5 +495,131 @@
     "license": "CC-BY-4.0",
     "path": "evidence/mohtat2020-Plot_data_only.m",
     "capture_method": "Official open-access zipped dataset, downloaded with a normal browser on 2026-10-16; individual original bytes retained."
+  },
+  "isu-uconn-workbook": {
+    "filename": "isu-uconn-LFP_Data.xlsx",
+    "url": "https://raw.githubusercontent.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/1188c371e5836df4a7e5f5acf336a34ffd4027e6/LFP_Data.xlsx",
+    "source_id": "isu-uconn-2026-data",
+    "license": "CC-BY-4.0",
+    "sha256": "fd50e09542be7adb2270963d65a6e7b5ccae1473a512f68462c2dd419d620ee1",
+    "path": "evidence/isu-uconn-LFP_Data.xlsx"
+  },
+  "isu-uconn-author-readme": {
+    "filename": "isu-uconn-README.md",
+    "url": "https://raw.githubusercontent.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/1188c371e5836df4a7e5f5acf336a34ffd4027e6/README.md",
+    "source_id": "isu-uconn-2026-code",
+    "license": "MIT",
+    "sha256": "1eaf4a09133c529cb60ca8d3caa3b488384eb0dc1356732d5c7cd2cd35c2cb72"
+  },
+  "isu-uconn-author-notebook": {
+    "filename": "isu-uconn-Benchmarking_LFP_final.ipynb",
+    "url": "https://raw.githubusercontent.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/1188c371e5836df4a7e5f5acf336a34ffd4027e6/Benchmarking_LFP_final.ipynb",
+    "source_id": "isu-uconn-2026-code",
+    "license": "MIT",
+    "sha256": "388f2a6f101abf42ef8c7c1c627b7046e8bf900b913d22f83435b39eb81a9e29"
+  },
+  "isu-uconn-author-loader": {
+    "filename": "isu-uconn-util_LFP.py",
+    "url": "https://raw.githubusercontent.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/1188c371e5836df4a7e5f5acf336a34ffd4027e6/util_LFP.py",
+    "source_id": "isu-uconn-2026-code",
+    "license": "MIT",
+    "sha256": "3c19e45ef8a64ce67cda1f623551e758d4c0f67086bbae02b978428d78de1c76"
+  },
+  "jahn-2024-data-v2-metadata": {
+    "filename": "jahn-2024-data-v2-metadata.json",
+    "url": "https://zenodo.org/api/records/11958572",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "01891e90e0c16ece78ca80eee71718721751b1e965a5f713025c6fb82fb8e47b",
+    "path": "evidence/jahn-2024-data-v2-metadata.json"
+  },
+  "jahn-20230125-hys-a123-01-25deg-pocv-csv": {
+    "filename": "jahn-20230125_Hys_A123_01_25deg_pOCV.csv",
+    "url": "https://zenodo.org/api/records/11958572/files/20230125_Hys_A123_01_25deg_pOCV.csv/content",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "da6e14f79fe0e16d528780f6a5bacf725778c1390593d689bc6ad54a7517bda0",
+    "md5": "62dbf637d9ed8d568576ccdff2c692b0",
+    "path": "evidence/jahn-20230125_Hys_A123_01_25deg_pOCV.csv"
+  },
+  "jahn-20230125-hys-a123-01-25deg-incrocv-csv": {
+    "filename": "jahn-20230125_Hys_A123_01_25deg_incrOCV.csv",
+    "url": "https://zenodo.org/api/records/11958572/files/20230125_Hys_A123_01_25deg_incrOCV.csv/content",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "25c318255e1f4203842ec6780b9adbcbbc12a23461c0fb618be2da51480b9704",
+    "md5": "196f0ca05003ceb8a11039665da1d815",
+    "path": "evidence/jahn-20230125_Hys_A123_01_25deg_incrOCV.csv"
+  },
+  "jahn-20230125-hyspowertest-a123-01-25deg-soc100-csv": {
+    "filename": "jahn-20230125_HysPowerTest_A123_01_25deg_SOC100.csv",
+    "url": "https://zenodo.org/api/records/11958572/files/20230125_HysPowerTest_A123_01_25deg_SOC100.csv/content",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "009c2fb085e219c7b20afaa050ac9e69d848cf04fc6e9165ce2bbd1282357feb",
+    "md5": "588ecca63c63ebc21204a10d5d123958",
+    "path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC100.csv"
+  },
+  "jahn-20230125-hyspowertest-a123-01-25deg-soc50-csv": {
+    "filename": "jahn-20230125_HysPowerTest_A123_01_25deg_SOC50.csv",
+    "url": "https://zenodo.org/api/records/11958572/files/20230125_HysPowerTest_A123_01_25deg_SOC50.csv/content",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "d6e8b4b7ea4f832a67a859604ab8d507d2a1fdd7541cb37a485ac933dec92fd3",
+    "md5": "e043115d3e8aaf1e83f7d5a7670c409e",
+    "path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC50.csv"
+  },
+  "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat": {
+    "filename": "jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+    "url": "https://zenodo.org/api/records/11958572/files/Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat/content",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "713bca99fb96ac1fc29e45ff331605924aab84cc9ddbf02c8226bc8cbf264b36",
+    "md5": "84f99a78b32067de7e59360728bd364e",
+    "path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat"
+  },
+  "jahn-param-ocpn-lfp-mat": {
+    "filename": "jahn-param_ocpn_lfp.mat",
+    "url": "https://zenodo.org/api/records/11958572/files/param_ocpn_lfp.mat/content",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "2a2af10c8a662b987f4fb09f59a12ff65afa1f9e746248d9d80cbf2210b5d4aa",
+    "md5": "f26df0a8520966721871116c963a47bf",
+    "path": "evidence/jahn-param_ocpn_lfp.mat"
+  },
+  "jahn-param-ocpn-graphite-mat": {
+    "filename": "jahn-param_ocpn_graphite.mat",
+    "url": "https://zenodo.org/api/records/11958572/files/param_ocpn_graphite.mat/content",
+    "source_id": "jahn-2024-data-v2",
+    "license": "CC-BY-4.0",
+    "sha256": "2a7a694c5d5865ef5c081cd7e97cacb94d6002895c8ac384a403db22ebc36ce9",
+    "md5": "3fcaf7d0923b0e4012f8cea9eaf25dc9",
+    "path": "evidence/jahn-param_ocpn_graphite.mat"
+  },
+  "jahn-2024-code-metadata": {
+    "filename": "jahn-2024-code-metadata.json",
+    "url": "https://zenodo.org/api/records/10852695",
+    "source_id": "jahn-2024-code",
+    "license": "CC-BY-4.0",
+    "sha256": "ccbcff6e20149efc587ac87dcbc55cd5b49f56b85a05de5781d406b2290f1d6a",
+    "path": "evidence/jahn-2024-code-metadata.json"
+  },
+  "jahn-hys-sim-lfp-fc-m": {
+    "filename": "jahn-hys_sim_lfp_fc.m",
+    "url": "https://zenodo.org/api/records/10852695/files/hys_sim_lfp_fc.m/content",
+    "source_id": "jahn-2024-code",
+    "license": "CC-BY-4.0",
+    "sha256": "855333283001077a013a143c320f0950bc827192b16556d81f3820c43f759ed1",
+    "md5": "a1fb859bc5f8934ae1ff2bd71e9941c5",
+    "path": "evidence/jahn-hys_sim_lfp_fc.m"
+  },
+  "jahn-pdecm-fullcell-m": {
+    "filename": "jahn-pdecm_fullcell.m",
+    "url": "https://zenodo.org/api/records/10852695/files/pdecm_fullcell.m/content",
+    "source_id": "jahn-2024-code",
+    "license": "CC-BY-4.0",
+    "sha256": "1730ca4ff52332626db414961e2eed12ce18312d9f04b932ea38e80afb2d6744",
+    "md5": "d595766089e58e36f42717defdd32991",
+    "path": "evidence/jahn-pdecm_fullcell.m"
   }
 }

@@ -1442,5 +1442,343 @@
       "Independent full-cell model reproduction not performed",
       "Commercial part number unresolved"
     ]
+  },
+  "isu-uconn-lfp-graphite-lab": {
+    "manufacturer": "ISU / UConn laboratory",
+    "model": null,
+    "display_name": "ISU-UConn | laboratory LFP/graphite CR2032 family",
+    "format": "CR2032 laboratory coin cell",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": null,
+    "identity_level": "laboratory_cell_family",
+    "source_ids": [
+      "isu-uconn-2026-data",
+      "isu-uconn-2026-code",
+      "li-2026-benchmarking"
+    ],
+    "model_context": "Empirical electrode balancing / degradation-diagnostic half-cell fitting",
+    "match_level": "same_study_cell_family",
+    "match_evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+    "note": "Only a documented subset is curated. The deposit describes 50 cells; retained branches and configuration labels are not independent studies or 50 imported specimens.",
+    "coverage": {
+      "ocp": "Four C/20 half-cell pseudo-OCP branches from the author-selected two specimens; reference electrode detail and temperature not verified.",
+      "diffusion": "No matched solid diffusion characterization imported.",
+      "kinetics": "No matched intrinsic reaction-rate or exchange-current characterization imported.",
+      "full_cell_tests": "Eleven author-selected charge branches and available following discharge branches; native capacity/voltage only."
+    },
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "isu-uconn-lfp-s2-b6-delithiation",
+      "isu-uconn-lfp-s2-b7-lithiation",
+      "isu-uconn-graphite-s2-b6-lithiation",
+      "isu-uconn-graphite-s2-b7-delithiation"
+    ],
+    "full_cell_test_ids": [
+      "isu-uconn-fresh-b6-charge",
+      "isu-uconn-fresh-b7-discharge",
+      "isu-uconn-lli-1-b6-charge",
+      "isu-uconn-lli-1-b7-discharge",
+      "isu-uconn-lli-2-b6-charge",
+      "isu-uconn-lli-2-b7-discharge",
+      "isu-uconn-lam-pe-1-b7-charge",
+      "isu-uconn-lam-pe-1-b8-discharge",
+      "isu-uconn-lam-ne-1-b6-charge",
+      "isu-uconn-lam-ne-1-b7-discharge",
+      "isu-uconn-lam-pe-lli-1-b0-charge",
+      "isu-uconn-lam-pe-lli-2-b0-charge",
+      "isu-uconn-lam-pe-lli-2-b1-discharge",
+      "isu-uconn-lam-ne-lli-1-b6-charge",
+      "isu-uconn-lam-ne-lli-1-b7-discharge",
+      "isu-uconn-lam-ne-lli-2-b6-charge",
+      "isu-uconn-lam-ne-lli-2-b7-discharge",
+      "isu-uconn-all-mode-1-b6-charge",
+      "isu-uconn-all-mode-1-b7-discharge",
+      "isu-uconn-all-mode-2-b6-charge",
+      "isu-uconn-all-mode-2-b7-discharge"
+    ],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "isu-uconn-lfp-s2-b6-delithiation",
+          "isu-uconn-lfp-s2-b7-lithiation",
+          "isu-uconn-graphite-s2-b6-lithiation",
+          "isu-uconn-graphite-s2-b7-delithiation"
+        ],
+        "source_ids": [
+          "isu-uconn-2026-code",
+          "isu-uconn-2026-data",
+          "li-2026-benchmarking"
+        ],
+        "match_level": "same_study_cell_family",
+        "evidence": "Four C/20 half-cell pseudo-OCP branches from the author-selected two specimens; reference electrode detail and temperature not verified.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Verified reference chemistry",
+          "Absolute stoichiometry mapping"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched solid diffusion characterization imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched intrinsic reaction-rate or exchange-current characterization imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "isu-uconn-fresh-b6-charge",
+          "isu-uconn-fresh-b7-discharge",
+          "isu-uconn-lli-1-b6-charge",
+          "isu-uconn-lli-1-b7-discharge",
+          "isu-uconn-lli-2-b6-charge",
+          "isu-uconn-lli-2-b7-discharge",
+          "isu-uconn-lam-pe-1-b7-charge",
+          "isu-uconn-lam-pe-1-b8-discharge",
+          "isu-uconn-lam-ne-1-b6-charge",
+          "isu-uconn-lam-ne-1-b7-discharge",
+          "isu-uconn-lam-pe-lli-1-b0-charge",
+          "isu-uconn-lam-pe-lli-2-b0-charge",
+          "isu-uconn-lam-pe-lli-2-b1-discharge",
+          "isu-uconn-lam-ne-lli-1-b6-charge",
+          "isu-uconn-lam-ne-lli-1-b7-discharge",
+          "isu-uconn-lam-ne-lli-2-b6-charge",
+          "isu-uconn-lam-ne-lli-2-b7-discharge",
+          "isu-uconn-all-mode-1-b6-charge",
+          "isu-uconn-all-mode-1-b7-discharge",
+          "isu-uconn-all-mode-2-b6-charge",
+          "isu-uconn-all-mode-2-b7-discharge"
+        ],
+        "source_ids": [
+          "isu-uconn-2026-data"
+        ],
+        "match_level": "same_study_cell_family",
+        "evidence": "Eleven author-selected charge branches and available following discharge branches; native capacity/voltage only.",
+        "missing_items": [
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Measured current trace",
+          "Original timestamps",
+          "Same-specimen file-to-electrode provenance unresolved"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [
+          "isu-uconn-fresh-b6-charge",
+          "isu-uconn-fresh-b7-discharge",
+          "isu-uconn-lli-1-b6-charge",
+          "isu-uconn-lli-1-b7-discharge",
+          "isu-uconn-lli-2-b6-charge",
+          "isu-uconn-lli-2-b7-discharge",
+          "isu-uconn-lam-pe-1-b7-charge",
+          "isu-uconn-lam-pe-1-b8-discharge",
+          "isu-uconn-lam-ne-1-b6-charge",
+          "isu-uconn-lam-ne-1-b7-discharge",
+          "isu-uconn-lam-pe-lli-1-b0-charge",
+          "isu-uconn-lam-pe-lli-2-b0-charge",
+          "isu-uconn-lam-pe-lli-2-b1-discharge",
+          "isu-uconn-lam-ne-lli-1-b6-charge",
+          "isu-uconn-lam-ne-lli-1-b7-discharge",
+          "isu-uconn-lam-ne-lli-2-b6-charge",
+          "isu-uconn-lam-ne-lli-2-b7-discharge",
+          "isu-uconn-all-mode-1-b6-charge",
+          "isu-uconn-all-mode-1-b7-discharge",
+          "isu-uconn-all-mode-2-b6-charge",
+          "isu-uconn-all-mode-2-b7-discharge"
+        ],
+        "source_ids": [
+          "isu-uconn-2026-data"
+        ],
+        "match_level": "same_study_cell_family",
+        "evidence": "constant_current_charge; constant_current_discharge",
+        "missing_items": [
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Instrument cycle/step identifiers",
+          "Measured current trace",
+          "Original timestamps",
+          "Same-specimen file-to-electrode provenance unresolved",
+          "Verified numeric temperature and reference details for associated half-cells"
+        ]
+      }
+    },
+    "missing_items": [
+      "Absolute measured cell/ambient temperature traces",
+      "Commercial part number unresolved",
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Intrinsic reaction kinetics not imported",
+      "Intrinsic solid diffusivity not imported",
+      "Measured current and timestamps",
+      "Verified reference chemistry and numerical temperature for selected half-cells"
+    ]
+  },
+  "a123-18650m1a-jahn2024": {
+    "manufacturer": "A123 Systems",
+    "model": "18650M1A",
+    "display_name": "A123 18650M1A | Jahn2024 LFP/graphite",
+    "format": "18650",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": null,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "jahn-2024-data-v2",
+      "jahn-2024-code",
+      "jahn-2024-paper"
+    ],
+    "model_context": "Probability-distributed ECM with parameterized single-string OCPn, not a DFN parameter set",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+    "note": "18650M1A is separate from AMP20M1HD-A, the 9 Ah pouch family and APR18650M1B. PD-ECM resistances are not intrinsic Butler-Volmer kinetic constants.",
+    "coverage": {
+      "ocp": "Two modeled OCPn node arrays (LFP 399; graphite 602); raw measured electrode/GITT points are not included in these files.",
+      "diffusion": "No intrinsic solid diffusivity imported.",
+      "kinetics": "No intrinsic Butler-Volmer coefficient or exchange-current density imported; ECM parameters remain separate.",
+      "full_cell_tests": "Low-rate full cycle, incremental OCV charge/discharge branches, two power tests and nine partial hysteresis loops. Current is present only in power/loop files; no temperature trace."
+    },
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "jahn-a123-lfp-model-ocpn",
+      "jahn-a123-graphite-model-ocpn"
+    ],
+    "full_cell_test_ids": [
+      "jahn-a123-pocv-full-cycle",
+      "jahn-a123-power-soc50",
+      "jahn-a123-power-soc100",
+      "jahn-a123-incremental-ocv-charge",
+      "jahn-a123-incremental-ocv-discharge",
+      "jahn-a123-hysteresis-loop-1",
+      "jahn-a123-hysteresis-loop-2",
+      "jahn-a123-hysteresis-loop-3",
+      "jahn-a123-hysteresis-loop-4",
+      "jahn-a123-hysteresis-loop-5",
+      "jahn-a123-hysteresis-loop-6",
+      "jahn-a123-hysteresis-loop-7",
+      "jahn-a123-hysteresis-loop-8",
+      "jahn-a123-hysteresis-loop-9"
+    ],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "jahn-a123-lfp-model-ocpn",
+          "jahn-a123-graphite-model-ocpn"
+        ],
+        "source_ids": [
+          "jahn-2024-code",
+          "jahn-2024-data-v2",
+          "jahn-2024-paper"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Two modeled OCPn node arrays (LFP 399; graphite 602); raw measured electrode/GITT points are not included in these files.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved",
+          "Raw electrode OCP observations",
+          "PD-ECM coordinate to lithium-fraction mapping"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No intrinsic solid diffusivity imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No intrinsic Butler-Volmer coefficient or exchange-current density imported; ECM parameters remain separate.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [
+          "jahn-a123-pocv-full-cycle",
+          "jahn-a123-power-soc50",
+          "jahn-a123-power-soc100",
+          "jahn-a123-incremental-ocv-charge",
+          "jahn-a123-incremental-ocv-discharge",
+          "jahn-a123-hysteresis-loop-1",
+          "jahn-a123-hysteresis-loop-2",
+          "jahn-a123-hysteresis-loop-3",
+          "jahn-a123-hysteresis-loop-4",
+          "jahn-a123-hysteresis-loop-5",
+          "jahn-a123-hysteresis-loop-6",
+          "jahn-a123-hysteresis-loop-7",
+          "jahn-a123-hysteresis-loop-8",
+          "jahn-a123-hysteresis-loop-9"
+        ],
+        "source_ids": [
+          "jahn-2024-data-v2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Low-rate full cycle, incremental OCV charge/discharge branches, two power tests and nine partial hysteresis loops. Current is present only in power/loop files; no temperature trace.",
+        "missing_items": [
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Same-specimen file-to-electrode provenance unresolved",
+          "Measured current in pseudo-OCV file",
+          "Time/current in incremental OCV file"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [
+          "jahn-a123-pocv-full-cycle",
+          "jahn-a123-power-soc50",
+          "jahn-a123-power-soc100",
+          "jahn-a123-incremental-ocv-charge",
+          "jahn-a123-incremental-ocv-discharge",
+          "jahn-a123-hysteresis-loop-1",
+          "jahn-a123-hysteresis-loop-2",
+          "jahn-a123-hysteresis-loop-3",
+          "jahn-a123-hysteresis-loop-4",
+          "jahn-a123-hysteresis-loop-5",
+          "jahn-a123-hysteresis-loop-6",
+          "jahn-a123-hysteresis-loop-7",
+          "jahn-a123-hysteresis-loop-8",
+          "jahn-a123-hysteresis-loop-9"
+        ],
+        "source_ids": [
+          "jahn-2024-data-v2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "constant_current_cycle; constant_current_partial_cycle; constant_current_steps; incremental_ocv",
+        "missing_items": [
+          "Absolute measured temperature",
+          "Ambient temperature trace",
+          "Independent full-cell model reproduction not performed",
+          "Measured current trace",
+          "Original timestamps",
+          "Same-specimen file-to-electrode provenance unresolved"
+        ]
+      }
+    },
+    "missing_items": [
+      "Absolute measured cell/ambient temperature traces",
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Intrinsic reaction kinetics not imported",
+      "Intrinsic solid diffusivity not imported",
+      "Measured current in pseudo-OCV file",
+      "Nominal capacity denominator not independently established",
+      "Raw measured electrode OCP/GITT points",
+      "Time/current in incremental OCV file"
+    ]
   }
 }

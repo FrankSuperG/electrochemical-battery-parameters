@@ -1,0 +1,148 @@
+{
+  "record": {
+    "id": "jahn-a123-graphite-model-ocpn",
+    "version": "1",
+    "title": "graphite | A123 18650M1A / Jahn2024 | modeled PD-ECM OCPn",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "jahn-a123-graphite-model-ocpn-material",
+    "electrode_role": "negative",
+    "direction": "unspecified",
+    "measurement": "model_ocp",
+    "temperature": {
+      "value_K": 298.15,
+      "description": "Characterization protocol at 25 degC per Methods; parameterized model table, not a temperature sensor trace."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "model_soc",
+      "symbol": "x",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Author model SOC/DOL coordinate, not verified absolute electrode lithium fraction.",
+      "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/jahn-a123-graphite-model-ocpn.csv",
+      "sha256": "ca81440492a0af3e2a8e47262f9980dc72f77e4f152f4d3552ad3435e210dd65",
+      "point_count": 602,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "jahn-2024-data-v2",
+      "jahn-2024-code",
+      "jahn-2024-paper"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "a123-18650m1a-jahn2024",
+      "relationship": "same_parameter_set",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied."
+    },
+    "provenance": {
+      "asset_ids": [
+        "jahn-param-ocpn-graphite-mat",
+        "jahn-pdecm-fullcell-m"
+      ],
+      "derivation": "author_parameterized_pd_ecm_ocpn_nodes",
+      "location": "param_ocpn_graphite.mat::pot_dol, pot",
+      "processing": {
+        "script": "scripts/seed_lfp_studies.py",
+        "changes": "Native pot_dol and positive electrode-potential pot nodes copied unchanged. Source model negates graphite pot during full-cell assembly; this catalog retains its physical positive potential versus Li/Li+. Author spline/PCHIP/extrapolation is not reproduced by the catalog's bounded linear interpolation."
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "model_coordinate",
+      "raw_data": "published_table_not_instrument_raw",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "OCPn is approximated and parameterized from electrode data; it cannot be measured directly (paper Parameterization). These arrays are not raw GITT/half-cell measurements.",
+      "Model SOC/DOL is not established as absolute stoichiometry. LFP potential rises with this coordinate. Geometry, balancing and coordinate orientation need explicit review before DFN/SPM/SPMe reuse.",
+      "No intrinsic diffusivity or Butler-Volmer kinetics inferred from ECM quantities."
+    ],
+    "license": "CC-BY-4.0"
+  },
+  "sources": {
+    "jahn-2024-data-v2": {
+      "kind": "dataset",
+      "title": "Probability distributed equivalent circuit model - Data (v2)",
+      "authors": [
+        "Leonard Jahn"
+      ],
+      "year": 2024,
+      "version": "v2; fixed record 11958572",
+      "doi": "10.5281/zenodo.11958572",
+      "url": "https://zenodo.org/records/11958572",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged Zenodo API metadata metadata.license.id=cc-by-4.0; files verified against published MD5 and SHA-256.",
+      "role": "Experimental whole-cell observations and modeled electrode OCPn arrays; these are different evidence types."
+    },
+    "jahn-2024-code": {
+      "kind": "software",
+      "title": "Probability distributed equivalent circuit model - Code",
+      "authors": [
+        "Leonard Jahn"
+      ],
+      "year": 2024,
+      "doi": "10.5281/zenodo.10852695",
+      "url": "https://zenodo.org/records/10852695",
+      "license": "CC-BY-4.0",
+      "license_evidence": "Packaged fixed-record API metadata metadata.license.id=cc-by-4.0.",
+      "role": "Original MATLAB inspected as text for coordinate, signs, column units and file linkage; never executed."
+    },
+    "jahn-2024-paper": {
+      "kind": "paper",
+      "title": "A physically motivated voltage hysteresis model for lithium-ion batteries using a probability distributed equivalent circuit",
+      "authors": [
+        "Leonard Jahn",
+        "Patrick Moessle",
+        "Fridolin Roeder",
+        "Michael A. Danzer"
+      ],
+      "year": 2024,
+      "doi": "10.1038/s44172-024-00221-4",
+      "url": "https://www.nature.com/articles/s44172-024-00221-4",
+      "role": "Methods names A123 18650M1A, 25 degC chamber, subsequent harvested-electrode tests and approximated OCPn parameterization."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "jahn-param-ocpn-graphite-mat": {
+      "filename": "jahn-param_ocpn_graphite.mat",
+      "url": "https://zenodo.org/api/records/11958572/files/param_ocpn_graphite.mat/content",
+      "source_id": "jahn-2024-data-v2",
+      "license": "CC-BY-4.0",
+      "sha256": "2a7a694c5d5865ef5c081cd7e97cacb94d6002895c8ac384a403db22ebc36ce9",
+      "md5": "3fcaf7d0923b0e4012f8cea9eaf25dc9",
+      "path": "evidence/jahn-param_ocpn_graphite.mat"
+    },
+    "jahn-pdecm-fullcell-m": {
+      "filename": "jahn-pdecm_fullcell.m",
+      "url": "https://zenodo.org/api/records/10852695/files/pdecm_fullcell.m/content",
+      "source_id": "jahn-2024-code",
+      "license": "CC-BY-4.0",
+      "sha256": "1730ca4ff52332626db414961e2eed12ce18312d9f04b932ea38e80afb2d6744",
+      "md5": "d595766089e58e36f42717defdd32991",
+      "path": "evidence/jahn-pdecm_fullcell.m"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

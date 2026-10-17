@@ -52,6 +52,11 @@ def test_parameter_exports_keep_source_values_and_separate_alternatives(index):
     exported = []
     for cid in catalog.cells:
         parameters = [p for p in catalog.parameters if p["cell_id"] == cid]
+        package = json.loads(index[f"data/parameters/{cid}.json"])
+        assert package["parameters"] == parameters
+        assert package["cell_id"] == cid
+        assert {r["id"] for r in package["ocp_records"]} == {r.id for r in catalog.search(cell_id=cid)}
+        assert {t["id"] for t in package["full_cell_tests"]} == {t["id"] for t in catalog.linked_tests(cid)}
         if not parameters:
             assert f"data/parameters/{cid}.csv" not in index
             continue

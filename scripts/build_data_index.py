@@ -74,8 +74,8 @@ def render_index(repo=REPO):
 
     def ocp_table(page, curves):
         lines = [
-            "| Record | Electrode / material | Coordinate and domain | CSV | Metadata |",
-            "|---|---|---|---|---|",
+            "| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |",
+            "|---|---|---|---|---|---|",
         ]
         for curve in curves:
             r = curve.record
@@ -84,7 +84,7 @@ def render_index(repo=REPO):
                       else source_path(r["representation"]["path"]))
             label = "Generated samples" if is_formula else "Retained table"
             lines.append(
-                f"| `{curve.id}` | {r['electrode_role']} / {r['material']} | "
+                f"| `{curve.id}` | {r['electrode_role']} / {r['material']} | {r['measurement']} / {r['reference']} | "
                 f"{r['x']['kind']}; {r['x']['domain']} | "
                 f"{link(page, target, label)} | "
                 f"{link(page, Path('data/ocp') / f'{curve.id}.json', 'JSON')} |"
@@ -125,27 +125,27 @@ def render_index(repo=REPO):
                  f"Cell ID: `{cid}`. Match level: `{cell['match_level']}`.", "",
                  cell["match_evidence"], "", cell["note"], "",
                  "## Parameters", ""]
-        if parameters:
-            csv_path = Path("data/parameters") / f"{cid}.csv"
-            json_path = csv_path.with_suffix(".json")
-            output[str(csv_path)] = parameter_csv(parameters)
-            source_ids = set(cell["source_ids"])
-            source_ids.update(s for p in parameters for s in p["source_ids"])
-            source_ids.update(s for curve in curves for s in curve.record["source_ids"])
-            source_ids.update(t["source_id"] for t in tests)
-            asset_ids = {p["provenance"]["asset_id"] for p in parameters}
-            asset_ids.update(a for curve in curves for a in curve.record["provenance"]["asset_ids"])
-            asset_ids.update(t["asset_id"] for t in tests)
-            asset_ids.update(a for t in tests for a in t.get("supporting_asset_ids", []))
-            asset_ids.update(s["asset_id"] for t in tests for s in t.get("sidecars", []))
-            output[str(json_path)] = json_bytes({
+        csv_path = Path("data/parameters") / f"{cid}.csv"
+        json_path = csv_path.with_suffix(".json")
+        source_ids = set(cell["source_ids"])
+        source_ids.update(s for p in parameters for s in p["source_ids"])
+        source_ids.update(s for curve in curves for s in curve.record["source_ids"])
+        source_ids.update(t["source_id"] for t in tests)
+        asset_ids = {p["provenance"]["asset_id"] for p in parameters}
+        asset_ids.update(a for curve in curves for a in curve.record["provenance"]["asset_ids"])
+        asset_ids.update(t["asset_id"] for t in tests)
+        asset_ids.update(a for t in tests for a in t.get("supporting_asset_ids", []))
+        asset_ids.update(s["asset_id"] for t in tests for s in t.get("sidecars", []))
+        output[str(json_path)] = json_bytes({
                 "cell_id": cid, "cell": cell, "parameters": parameters,
                 "ocp_records": [c.record for c in curves], "full_cell_tests": tests,
                 "sources": {s: catalog.sources[s] for s in sorted(source_ids)},
                 "upstream_assets": {a: catalog.assets[a] for a in sorted(asset_ids)},
                 "canonical_data_root": "../../src/ebp/data",
                 "independent_full_cell_validation": False,
-            })
+        })
+        if parameters:
+            output[str(csv_path)] = parameter_csv(parameters)
             lines += [f"{link(page, csv_path, f'All {len(parameters)} parameter records (CSV)')} · "
                       f"{link(page, json_path, 'Definitions, sources and linked-test metadata (JSON)')}", "",
                       "CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.", ""]
@@ -161,7 +161,8 @@ def render_index(repo=REPO):
                     lines.append(f"| `{variant}` | {len(subset)} | {link(page, target, 'Download CSV')} |")
                 lines.append("")
         else:
-            lines += ["No non-OCP parameters imported for this entry. No placeholder parameter values are supplied.", ""]
+            lines += ["No non-OCP parameters imported for this entry. No placeholder parameter values are supplied.", "",
+                      link(page, json_path, "Cell package: OCP, tests, sources and missing items (JSON)"), ""]
         lines += ["## OCP curves", ""]
         lines += [ocp_table(page, curves) if curves else "No electrode-resolved OCP record linked to this cell. Full-cell pseudo-OCV and unrelated same-chemistry curves do not fill this gap.", ""]
         lines += ["Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.", "",
@@ -221,7 +222,7 @@ def render_index(repo=REPO):
     page = Path("data/ocp/README.md")
     lines = ["# OCP data by material", "", "[All cells](../README.md) · [Download and use the data](../../docs/DATA_ACCESS.md)", "",
              "Every CSV link below is available from the repository without installing E-BatP. Retained tables preserve all stored points and source columns; generated samples contain 2,001 calculated points rounded to 12 significant digits and have `-sampled.csv` filenames. Read the adjacent JSON for original formulas, provenance, licensing and coordinate definitions.", "",
-             "Material-level measurements are not automatically linked to a commercial cell. Whole-cell SOC, electrode stoichiometry and normalized branch capacity are different coordinates.", ""]
+             "Material-level measurements are not automatically linked to a commercial cell. Whole-cell SOC, electrode stoichiometry, author model SOC/DOL and normalized branch capacity are different coordinates. Modeled OCPn and unresolved-reference half-cell voltage remain explicitly labeled.", ""]
     materials = sorted({curve.record["material"] for curve in catalog.search()}, key=lambda x: (x != "LFP", x.casefold()))
     for material in materials:
         lines += [f"## {material}", "", ocp_table(page, catalog.search(material=material)), ""]

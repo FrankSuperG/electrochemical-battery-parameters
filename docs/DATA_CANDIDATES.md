@@ -1,16 +1,18 @@
 # Candidate data sources — review of 2026-10-16
 
-These are reviewed leads, **not imported catalog records**. Downloading an
-original file does not establish a validated parameter set. Catalog counts stay
-at 49 OCP records, 337 other parameters and 25 full-cell files. Licensing, model
-definitions and specimen matching must be resolved separately for each import.
+This ledger began with the 2026-10-16 review. **ISU-UConn and A123 18650M1A are
+now partially imported in v0.6.0**; see [the curation record](LFP_STUDIES.md) for
+the exact subset, missing channels and representation labels. The other three
+groups remain candidates. Current counts are 55 electrode curves, 337 other
+parameters and 60 full-cell exports. A download does not establish a validated
+parameter set; licensing, definitions and specimen matching remain distinct.
 
 ## Priorities
 
 | Priority | Candidate | Evidence available | Matching boundary / missing items |
 |---|---|---|---|
-| 1 — LFP | [ISU–UConn LFP/graphite](https://digitalcommons.lib.uconn.edu/reil_datasets/6/) and [author repository](https://github.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics) | Low-rate half-cell and full-cell voltage/capacity workbook; CC BY 4.0 data | Same-study laboratory electrode/cell family; no commercial model. No diffusion/kinetic characterization or complete measured I/t/T input established. |
-| 2 — LFP | [A123 18650M1A hysteresis study](https://doi.org/10.1038/s44172-024-00221-4), [data](https://zenodo.org/records/10852930) | Pseudo-OCV, pulse/path-dependency files and electrode-model arrays; CC BY 4.0 | Same paper/model; exact serial mapping and OCP-array derivation need review. ECM quantities are not intrinsic DFN diffusivity or reaction-rate constants. |
+| Imported subset — LFP | [ISU–UConn LFP/graphite](https://digitalcommons.lib.uconn.edu/reil_datasets/6/) and [author repository](https://github.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics) | Four pseudo-OCP branches and 21 full-cell V-Q branches; CC BY 4.0 data | Same-study laboratory family; no commercial model. Reference details, I/t/T and diffusion/kinetics remain missing. |
+| Imported subset — LFP | [A123 18650M1A hysteresis study](https://doi.org/10.1038/s44172-024-00221-4), [data v2](https://zenodo.org/records/11958572) | Two modeled OCPn tables and 14 full-cell exports; CC BY 4.0 | Same paper/model; exact serial mapping unresolved. OCPn is parameterized, not raw measured OCP. No intrinsic diffusion/kinetic values imported. |
 | 3 — same-paper parameter/test chain | [Hallemans2025 LG M50LT](https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES) | OCP tables, fitted grouped-SPMe vector, impedance data and measured drive cycle; repository BSD-3-Clause notice | LG M50LT must remain separate from existing LG M50. Review third-party OCP attribution/reuse scope, current sign, group definitions and absent temperature trace before redistribution/import. |
 | 4 — electrode characterization | [LG MJ1 characterization collection](https://zenodo.org/records/15407849) | Linked OCP, kinetics, geometry, GITT and model-dependent diffusion products; CC BY 4.0 | Same named cell/project; component-specific specimen evidence. No matching intact-cell time/current/voltage/temperature validation file located in reviewed records. |
 | 5 — characterization tables | [O'Regan temperature-dependent characterization](https://zenodo.org/records/5171874) | 58 CSV tables: diffusivity, exchange current, entropy, conductivity and thermal properties; CC BY 4.0 | LG M50 context; existing Chen2020 tests are another study. No same-study full-cell validation trace in the inspected ZIP. |
@@ -30,8 +32,9 @@ half-cell and full-cell configurations. Sheet count is not cell count. The
 author loader consumes capacity/voltage pairs; newest-data selection, blank
 delimiters, cycles and specimen columns need a dedicated extraction review.
 Byte identity with the university-hosted original has not been established.
-Best first import: low-rate electrode branches plus explicitly associated
-laboratory full-cell V–Q tests. Do not infer commercial identity or measured I/t/T.
+The subsequent v0.6 importer uses two author-selected half-cell specimens and
+eleven full-cell configurations, with explicit source addresses and derivative
+rules. It does not infer commercial identity, reference chemistry or measured I/t/T.
 
 ## 2. A123 18650M1A / probability-distributed ECM
 
@@ -42,11 +45,12 @@ contains pseudo-OCV and power-test CSVs plus `param_ocpn_lfp.mat` and
 `param_ocpn_graphite.mat`. Downloaded pulse files have time, capacity, current and
 voltage columns; no temperature channel is present in those CSV headers.
 
-The MATs contain `pot`/`pot_dol` arrays of 399 and 602 values. The paper
-distinguishes measured electrode responses from an approximated non-monotone
-single-string potential. Determine which representation the arrays encode
-before classifying them as measured OCP. Chamber setting is not a measured cell
-temperature trace. No solid diffusivity/Butler–Volmer parameter import is proposed.
+The MATs contain `pot`/`pot_dol` arrays of 399 and 602 values. The subsequent paper
+and MATLAB text review confirms these are parameterized single-string OCPn model
+inputs. v0.6 retains them with `model_ocp` / `model_soc` labels and imports the
+selected observation files from fixed data v2 (the original v1 file checksums
+agree). Chamber setting remains distinct from measured temperature. No intrinsic
+diffusivity/Butler–Volmer parameters are inferred.
 
 ## 3. LG M50LT / Hallemans2025
 
@@ -107,8 +111,9 @@ interpolation policy rather than an unreported fitted formula.
 
 ## Files actually retrieved and pinned
 
-Copies remain in ignored review caches; the table below records provenance,
-not permission to treat them as curated data. The original university XLSX and
+The original review downloaded these files into ignored caches. Selected
+ISU/A123 originals are now also packaged with their v0.6 curated derivatives;
+other candidates remain unimported. The original university XLSX and
 author-hosted XLSX have not been compared byte-for-byte.
 
 | Source file | SHA-256 |

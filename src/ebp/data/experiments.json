@@ -446,5 +446,45 @@
       "Known Issues": null
     },
     "known_issues": []
+  },
+  "isu-uconn-lfp-selected-s2": {
+    "source_id": "isu-uconn-2026-data",
+    "asset_id": "isu-uconn-workbook",
+    "sample_id": "S2 (updated pair E:F; sample label inherited from earlier sheet)",
+    "configuration": "Laboratory CR2032 half-cell; detailed counter/reference construction not verified because primary README returned HTTP 403.",
+    "protocol": "C/20 half-cell cycling per deposit and sheet name; blocks 6 and 7 (zero-based blank-delimited capacity branches).",
+    "cycle_selected": null,
+    "cycle_selection_reason": "Block 6 / S2 is selected by author notebook cell 6; block 7 is the following reverse branch. No instrument cycle IDs are supplied.",
+    "temperature_K": null,
+    "temperature_description": "Numeric temperature not supplied in accessible workbook/notebook.",
+    "electrode_metadata": {
+      "supplier": "MTI Corporation per primary deposit",
+      "sheet": "12-LFP C_20 Updated",
+      "capacity_column": "E"
+    },
+    "known_issues": [
+      "Reference chemistry not independently verified",
+      "No current/time/temperature columns"
+    ]
+  },
+  "isu-uconn-graphite-selected-s2": {
+    "source_id": "isu-uconn-2026-data",
+    "asset_id": "isu-uconn-workbook",
+    "sample_id": "S2 (pair J:K after the latest date marker)",
+    "configuration": "Laboratory CR2032 half-cell; detailed counter/reference construction not verified because primary README returned HTTP 403.",
+    "protocol": "C/20 half-cell cycling per deposit and sheet name; blocks 6 and 7 (zero-based blank-delimited capacity branches).",
+    "cycle_selected": null,
+    "cycle_selection_reason": "Block 6 / S2 is selected by author notebook cell 6; block 7 is the following reverse branch. No instrument cycle IDs are supplied.",
+    "temperature_K": null,
+    "temperature_description": "Numeric temperature not supplied in accessible workbook/notebook.",
+    "electrode_metadata": {
+      "supplier": "MTI Corporation per primary deposit",
+      "sheet": "12-Graphite Half-cell @ C_20",
+      "capacity_column": "J"
+    },
+    "known_issues": [
+      "Reference chemistry not independently verified",
+      "No current/time/temperature columns"
+    ]
   }
 }

@@ -323,5 +323,97 @@
     "url": "https://deepblue.lib.umich.edu/data/concern/data_sets/kp78gg60j",
     "license": "CC-BY-4.0",
     "role": "Official author dataset downloaded through the normal browser on 2026-10-16. Five experimental charging MATs, four MATLAB model/plot files and README reviewed. Earlier automated HTTP 403 was an access-method failure. Packaged originals retain hashes and CC BY 4.0."
+  },
+  "isu-uconn-2026-data": {
+    "kind": "dataset",
+    "title": "ISU-UConn LFP/Graphite Emulated Degradation Dataset",
+    "authors": [
+      "Yifan Zhang",
+      "Tingkai Li",
+      "Shan Hu",
+      "Chao Hu"
+    ],
+    "year": 2026,
+    "url": "https://digitalcommons.lib.uconn.edu/reil_datasets/6/",
+    "license": "CC-BY-4.0",
+    "version": "Author-hosted workbook at commit 1188c371e5836df4a7e5f5acf336a34ffd4027e6",
+    "license_evidence": "Primary deposit Terms of Use CC BY 4.0; pinned author README explicitly assigns this workbook to that dataset (checked 2026-10-17).",
+    "role": "Laboratory CR2032 half/full-cell voltage-capacity observations. Author-hosted copy; byte identity to university download not established (HTTP 403)."
+  },
+  "isu-uconn-2026-code": {
+    "kind": "software",
+    "title": "REIL-UConn half-cell fitting notebook and loader",
+    "authors": [
+      "Tingkai Li",
+      "Yifan Zhang",
+      "Benjamin Nowacki",
+      "Sina Navidi",
+      "Thomas Schmitt",
+      "Shan Hu",
+      "Chao Hu"
+    ],
+    "year": 2026,
+    "url": "https://github.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/tree/1188c371e5836df4a7e5f5acf336a34ffd4027e6",
+    "version": "1188c371e5836df4a7e5f5acf336a34ffd4027e6",
+    "license": "MIT",
+    "role": "Selection and linkage evidence only; no author code executed or copied into project code. Dataset has separate CC BY 4.0 terms."
+  },
+  "li-2026-benchmarking": {
+    "kind": "paper",
+    "title": "Benchmarking half-cell model fitting approaches for lithium-ion battery degradation diagnostics",
+    "authors": [
+      "Tingkai Li",
+      "Yifan Zhang",
+      "Benjamin Nowacki",
+      "Sina Navidi",
+      "Thomas Schmitt",
+      "Shan Hu",
+      "Chao Hu"
+    ],
+    "year": 2026,
+    "doi": "10.1016/j.etran.2026.100593",
+    "url": "https://doi.org/10.1016/j.etran.2026.100593",
+    "role": "Scientific study associated by primary deposit and author repository; full experimental procedures were not accessible in this import."
+  },
+  "jahn-2024-data-v2": {
+    "kind": "dataset",
+    "title": "Probability distributed equivalent circuit model - Data (v2)",
+    "authors": [
+      "Leonard Jahn"
+    ],
+    "year": 2024,
+    "version": "v2; fixed record 11958572",
+    "doi": "10.5281/zenodo.11958572",
+    "url": "https://zenodo.org/records/11958572",
+    "license": "CC-BY-4.0",
+    "license_evidence": "Packaged Zenodo API metadata metadata.license.id=cc-by-4.0; files verified against published MD5 and SHA-256.",
+    "role": "Experimental whole-cell observations and modeled electrode OCPn arrays; these are different evidence types."
+  },
+  "jahn-2024-code": {
+    "kind": "software",
+    "title": "Probability distributed equivalent circuit model - Code",
+    "authors": [
+      "Leonard Jahn"
+    ],
+    "year": 2024,
+    "doi": "10.5281/zenodo.10852695",
+    "url": "https://zenodo.org/records/10852695",
+    "license": "CC-BY-4.0",
+    "license_evidence": "Packaged fixed-record API metadata metadata.license.id=cc-by-4.0.",
+    "role": "Original MATLAB inspected as text for coordinate, signs, column units and file linkage; never executed."
+  },
+  "jahn-2024-paper": {
+    "kind": "paper",
+    "title": "A physically motivated voltage hysteresis model for lithium-ion batteries using a probability distributed equivalent circuit",
+    "authors": [
+      "Leonard Jahn",
+      "Patrick Moessle",
+      "Fridolin Roeder",
+      "Michael A. Danzer"
+    ],
+    "year": 2024,
+    "doi": "10.1038/s44172-024-00221-4",
+    "url": "https://www.nature.com/articles/s44172-024-00221-4",
+    "role": "Methods names A123 18650M1A, 25 degC chamber, subsequent harvested-electrode tests and approximated OCPn parameterization."
   }
 }

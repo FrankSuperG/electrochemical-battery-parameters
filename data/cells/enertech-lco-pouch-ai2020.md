@@ -16,10 +16,10 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 
 ## OCP curves
 
-| Record | Electrode / material | Coordinate and domain | CSV | Metadata |
-|---|---|---|---|---|
-| `ai2020-graphite-ocp` | negative / graphite | stoichiometry; [0.0005, 1.0] | [Retained table](../../src/ebp/data/curves/ai2020-graphite-ocp.csv) | [JSON](../ocp/ai2020-graphite-ocp.json) |
-| `ai2020-lco-ocp` | positive / LCO | stoichiometry; [0.4, 0.998903136] | [Retained table](../../src/ebp/data/curves/ai2020-lco-ocp.csv) | [JSON](../ocp/ai2020-lco-ocp.json) |
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `ai2020-graphite-ocp` | negative / graphite | literature_table / Li/Li+ | stoichiometry; [0.0005, 1.0] | [Retained table](../../src/ebp/data/curves/ai2020-graphite-ocp.csv) | [JSON](../ocp/ai2020-graphite-ocp.json) |
+| `ai2020-lco-ocp` | positive / LCO | literature_table / Li/Li+ | stoichiometry; [0.4, 0.998903136] | [Retained table](../../src/ebp/data/curves/ai2020-lco-ocp.csv) | [JSON](../ocp/ai2020-lco-ocp.json) |
 
 Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.
 

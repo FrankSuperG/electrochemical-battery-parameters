@@ -39,6 +39,12 @@ Public hosting, PyPI publication and automated parameter identification remain s
 
 ## v0.4 follow-up gaps
 
+v0.6 imports the documented ISU-UConn and A123 18650M1A subsets from the
+candidate ledger. Remaining LFP work includes verifying ISU reference/temperature
+and specimen details, locating original I/t channels, finding raw A123 electrode
+observations and establishing justified coordinate/stoichiometry mappings.
+The three other candidate groups remain unimported; see [LFP study details](LFP_STUDIES.md).
+
 - Mohtat2020 originals retrieved in v0.5. Remaining work is original current/time,
   discharge/CV/rest/C20 files, exact specimen and raw electrode OCP exports.
 - Seek electrode-specific OCP and current-resolved baseline tests for the existing

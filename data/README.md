@@ -8,7 +8,7 @@ Start here when browsing on GitHub. No Python installation or hosted website is 
 
 See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.
 
-Snapshot: 49 OCP records, 337 other parameter records, 25 full-cell test files.
+Snapshot: 55 OCP records, 337 other parameter records, 60 full-cell test files.
 
 ## Choose a cell or study
 
@@ -23,6 +23,8 @@ Snapshot: 49 OCP records, 337 other parameter records, 25 full-cell test files.
 | [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](cells/kim2011-nca-nominal-design.md) | [2 records](cells/kim2011-nca-nominal-design.md#ocp-curves) | [38 records](cells/kim2011-nca-nominal-design.md#parameters) | Not imported | `unmatched` |
 | [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](cells/kokam-slpb75106100-ecker2015.md) | [2 records](cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [38 records](cells/kokam-slpb75106100-ecker2015.md#parameters) | [2 files](cells/kokam-slpb75106100-ecker2015.md#full-cell-tests) | `same_model_same_study` |
 | [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](cells/enertech-lco-pouch-ai2020.md) | [2 records](cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [38 records](cells/enertech-lco-pouch-ai2020.md#parameters) | [4 files](cells/enertech-lco-pouch-ai2020.md#full-cell-tests) | `same_study_cell_family` |
+| [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](cells/isu-uconn-lfp-graphite-lab.md) | [4 records](cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not imported | [21 files](cells/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | `same_study_cell_family` |
+| [A123 18650M1A &#124; Jahn2024 LFP/graphite](cells/a123-18650m1a-jahn2024.md) | [2 records](cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not imported | [14 files](cells/a123-18650m1a-jahn2024.md#full-cell-tests) | `same_model_same_study` |
 
 ## Find data by type
 

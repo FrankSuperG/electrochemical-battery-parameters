@@ -12,6 +12,8 @@ OCP workbooks in the related GitHub code repository have no explicit file-level 
 
 No non-OCP parameters imported for this entry. No placeholder parameter values are supplied.
 
+[Cell package: OCP, tests, sources and missing items (JSON)](../parameters/a123-high-power-pouch-9ah.json)
+
 ## OCP curves
 
 No electrode-resolved OCP record linked to this cell. Full-cell pseudo-OCV and unrelated same-chemistry curves do not fill this gap.

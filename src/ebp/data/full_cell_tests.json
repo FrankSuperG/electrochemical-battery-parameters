@@ -2204,6 +2204,3718 @@
           "total_rows": 156
         }
       }
+    },
+    {
+      "id": "isu-uconn-fresh-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 16-Gr Full-cell @ C_20::O:P",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-fresh-b6-charge-normalized.csv",
+      "normalized_sha256": "aa4bdd5a345c78bf9c191ec7e645064ba725aaa416ea9eeadf48d4570b5be893",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "fresh: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1107,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "fresh",
+        "sheet": "15-LFP 16-Gr Full-cell @ C_20",
+        "pair_column": "O",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 6865,
+        "last_row": 7971,
+        "selected_block": 6,
+        "voltage_column": "P",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1107,
+          "total_rows": 1107
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1107
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1107
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1107
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1107
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1107,
+          "total_rows": 1107
+        }
+      },
+      "missing_values": {
+        "time_s": 1107,
+        "current_charge_positive_A": 1107,
+        "voltage_V": 0,
+        "cell_temperature_K": 1107,
+        "ambient_temperature_K": 1107
+      }
+    },
+    {
+      "id": "isu-uconn-fresh-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 16-Gr Full-cell @ C_20::O:P",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-fresh-b7-discharge-normalized.csv",
+      "normalized_sha256": "594df28a99b8914f6909135637945a4d223f12dfdfea007f915bbed0162fb2d7",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "fresh: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1098,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "fresh",
+        "sheet": "15-LFP 16-Gr Full-cell @ C_20",
+        "pair_column": "O",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 7973,
+        "last_row": 9070,
+        "selected_block": 7,
+        "voltage_column": "P",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1098,
+          "total_rows": 1098
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1098
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1098
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1098
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1098
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1098,
+          "total_rows": 1098
+        }
+      },
+      "missing_values": {
+        "time_s": 1098,
+        "current_charge_positive_A": 1098,
+        "voltage_V": 0,
+        "cell_temperature_K": 1098,
+        "ambient_temperature_K": 1098
+      }
+    },
+    {
+      "id": "isu-uconn-lli-1-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 16-Gr SOC-10::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lli-1-b6-charge-normalized.csv",
+      "normalized_sha256": "8d439fb4a2f2037905e58547ddffbd575b88cb08c8dca0ef7e9bca0d35f9039c",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lli-1: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1070,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lli-1",
+        "sheet": "15-LFP 16-Gr SOC-10",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 14,
+        "first_row": 6596,
+        "last_row": 7665,
+        "selected_block": 6,
+        "voltage_column": "C",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1070,
+          "total_rows": 1070
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1070
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1070
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1070
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1070
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1070,
+          "total_rows": 1070
+        }
+      },
+      "missing_values": {
+        "time_s": 1070,
+        "current_charge_positive_A": 1070,
+        "voltage_V": 0,
+        "cell_temperature_K": 1070,
+        "ambient_temperature_K": 1070
+      }
+    },
+    {
+      "id": "isu-uconn-lli-1-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 16-Gr SOC-10::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lli-1-b7-discharge-normalized.csv",
+      "normalized_sha256": "77ec52c9b6efcee2ffdcd6f59851d6de01a8ebf84d7da39ea3acf54152e1166a",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lli-1: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1060,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lli-1",
+        "sheet": "15-LFP 16-Gr SOC-10",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 14,
+        "first_row": 7667,
+        "last_row": 8726,
+        "selected_block": 7,
+        "voltage_column": "C",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1060,
+          "total_rows": 1060
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1060
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1060
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1060
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1060
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1060,
+          "total_rows": 1060
+        }
+      },
+      "missing_values": {
+        "time_s": 1060,
+        "current_charge_positive_A": 1060,
+        "voltage_V": 0,
+        "cell_temperature_K": 1060,
+        "ambient_temperature_K": 1060
+      }
+    },
+    {
+      "id": "isu-uconn-lli-2-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 16-Gr SOC-20::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lli-2-b6-charge-normalized.csv",
+      "normalized_sha256": "a30230daa239691e909d4cae729f3c1be380907177577b87270db4bed724f39e",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lli-2: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 950,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lli-2",
+        "sheet": "15-LFP 16-Gr SOC-20",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 5890,
+        "last_row": 6839,
+        "selected_block": 6,
+        "voltage_column": "C",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 950,
+          "total_rows": 950
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 950
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 950
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 950
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 950
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 950,
+          "total_rows": 950
+        }
+      },
+      "missing_values": {
+        "time_s": 950,
+        "current_charge_positive_A": 950,
+        "voltage_V": 0,
+        "cell_temperature_K": 950,
+        "ambient_temperature_K": 950
+      }
+    },
+    {
+      "id": "isu-uconn-lli-2-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 16-Gr SOC-20::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lli-2-b7-discharge-normalized.csv",
+      "normalized_sha256": "986333e53f87d3697d4c0c7ab7bcab7b6373e8ab62a39ebd18d94e5aed0e605b",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lli-2: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 940,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lli-2",
+        "sheet": "15-LFP 16-Gr SOC-20",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 6841,
+        "last_row": 7780,
+        "selected_block": 7,
+        "voltage_column": "C",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 940,
+          "total_rows": 940
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 940
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 940
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 940
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 940
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 940,
+          "total_rows": 940
+        }
+      },
+      "missing_values": {
+        "time_s": 940,
+        "current_charge_positive_A": 940,
+        "voltage_V": 0,
+        "cell_temperature_K": 940,
+        "ambient_temperature_K": 940
+      }
+    },
+    {
+      "id": "isu-uconn-lam-pe-1-b7-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "12-LFP 16-Gr SOC-100::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-pe-1-b7-charge-normalized.csv",
+      "normalized_sha256": "3c36c78b46240d0e3454843502233a0eb38908a904e06add6fe5bace081388ad",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-pe-1: C/20 charge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1341,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-pe-1",
+        "sheet": "12-LFP 16-Gr SOC-100",
+        "pair_column": "B",
+        "block": 7,
+        "blocks": 17,
+        "first_row": 9115,
+        "last_row": 10455,
+        "selected_block": 7,
+        "voltage_column": "C",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1341,
+          "total_rows": 1341
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1341
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1341
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1341
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1341
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1341,
+          "total_rows": 1341
+        }
+      },
+      "missing_values": {
+        "time_s": 1341,
+        "current_charge_positive_A": 1341,
+        "voltage_V": 0,
+        "cell_temperature_K": 1341,
+        "ambient_temperature_K": 1341
+      }
+    },
+    {
+      "id": "isu-uconn-lam-pe-1-b8-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "12-LFP 16-Gr SOC-100::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-pe-1-b8-discharge-normalized.csv",
+      "normalized_sha256": "b2d7d3d27397a8e59b88e9f1ef84e51e2b4be89058f3ff38e67303ce147a0a70",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-pe-1: C/20 discharge capacity branch, source block 8; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1319,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-pe-1",
+        "sheet": "12-LFP 16-Gr SOC-100",
+        "pair_column": "B",
+        "block": 7,
+        "blocks": 17,
+        "first_row": 10457,
+        "last_row": 11775,
+        "selected_block": 8,
+        "voltage_column": "C",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1319,
+          "total_rows": 1319
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1319
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1319
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1319
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1319
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1319,
+          "total_rows": 1319
+        }
+      },
+      "missing_values": {
+        "time_s": 1319,
+        "current_charge_positive_A": 1319,
+        "voltage_V": 0,
+        "cell_temperature_K": 1319,
+        "ambient_temperature_K": 1319
+      }
+    },
+    {
+      "id": "isu-uconn-lam-ne-1-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 12-Gr Full-cell @ C_20::E:F",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-ne-1-b6-charge-normalized.csv",
+      "normalized_sha256": "6feb4c6f6ee662ddc5fd7e7ddf3b58e773b613444a6d4a509fe391935e68fbe8",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-ne-1: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1596,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-ne-1",
+        "sheet": "15-LFP 12-Gr Full-cell @ C_20",
+        "pair_column": "E",
+        "block": 6,
+        "blocks": 12,
+        "first_row": 10518,
+        "last_row": 12113,
+        "selected_block": 6,
+        "voltage_column": "F",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1596,
+          "total_rows": 1596
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1596
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1596
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1596
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1596
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1596,
+          "total_rows": 1596
+        }
+      },
+      "missing_values": {
+        "time_s": 1596,
+        "current_charge_positive_A": 1596,
+        "voltage_V": 0,
+        "cell_temperature_K": 1596,
+        "ambient_temperature_K": 1596
+      }
+    },
+    {
+      "id": "isu-uconn-lam-ne-1-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 12-Gr Full-cell @ C_20::E:F",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-ne-1-b7-discharge-normalized.csv",
+      "normalized_sha256": "77743bd1977b29b4ea606d575f9c2d6b65e7d2b180cec59f9c3d21e8fb1c77b9",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-ne-1: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1545,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-ne-1",
+        "sheet": "15-LFP 12-Gr Full-cell @ C_20",
+        "pair_column": "E",
+        "block": 6,
+        "blocks": 12,
+        "first_row": 12115,
+        "last_row": 13659,
+        "selected_block": 7,
+        "voltage_column": "F",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1545,
+          "total_rows": 1545
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1545
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1545
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1545
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1545
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1545,
+          "total_rows": 1545
+        }
+      },
+      "missing_values": {
+        "time_s": 1545,
+        "current_charge_positive_A": 1545,
+        "voltage_V": 0,
+        "cell_temperature_K": 1545,
+        "ambient_temperature_K": 1545
+      }
+    },
+    {
+      "id": "isu-uconn-lam-pe-lli-1-b0-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "Full cell after FM SOC 0::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-pe-lli-1-b0-charge-normalized.csv",
+      "normalized_sha256": "b2fde41f489edbada3d76900efe658cc979504c39bc486e598725fd451195e18",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-pe-lli-1: C/20 charge capacity branch, source block 0; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1079,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-pe-lli-1",
+        "sheet": "Full cell after FM SOC 0",
+        "pair_column": "B",
+        "block": 0,
+        "blocks": 1,
+        "first_row": 2,
+        "last_row": 1080,
+        "selected_block": 0,
+        "voltage_column": "C",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1079,
+          "total_rows": 1079
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1079
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1079
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1079
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1079
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1079,
+          "total_rows": 1079
+        }
+      },
+      "missing_values": {
+        "time_s": 1079,
+        "current_charge_positive_A": 1079,
+        "voltage_V": 0,
+        "cell_temperature_K": 1079,
+        "ambient_temperature_K": 1079
+      }
+    },
+    {
+      "id": "isu-uconn-lam-pe-lli-2-b0-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "Full cell after FM SOC 10::G:H",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-pe-lli-2-b0-charge-normalized.csv",
+      "normalized_sha256": "64d9bf06d0be5f6911c50fcd45d158db2cddeb3d87a17bb9ac639f5d8c24d7ed",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-pe-lli-2: C/20 charge capacity branch, source block 0; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1045,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-pe-lli-2",
+        "sheet": "Full cell after FM SOC 10",
+        "pair_column": "G",
+        "block": 0,
+        "blocks": 2,
+        "first_row": 2,
+        "last_row": 1046,
+        "selected_block": 0,
+        "voltage_column": "H",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1045,
+          "total_rows": 1045
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1045
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1045
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1045
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1045
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1045,
+          "total_rows": 1045
+        }
+      },
+      "missing_values": {
+        "time_s": 1045,
+        "current_charge_positive_A": 1045,
+        "voltage_V": 0,
+        "cell_temperature_K": 1045,
+        "ambient_temperature_K": 1045
+      }
+    },
+    {
+      "id": "isu-uconn-lam-pe-lli-2-b1-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "Full cell after FM SOC 10::G:H",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-pe-lli-2-b1-discharge-normalized.csv",
+      "normalized_sha256": "614e79c14985e22677c173413bdfe7ca3c74aff22f4e24320622250975566118",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-pe-lli-2: C/20 discharge capacity branch, source block 1; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1014,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-pe-lli-2",
+        "sheet": "Full cell after FM SOC 10",
+        "pair_column": "G",
+        "block": 0,
+        "blocks": 2,
+        "first_row": 1048,
+        "last_row": 2061,
+        "selected_block": 1,
+        "voltage_column": "H",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1014,
+          "total_rows": 1014
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1014
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1014
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1014
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1014
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1014,
+          "total_rows": 1014
+        }
+      },
+      "missing_values": {
+        "time_s": 1014,
+        "current_charge_positive_A": 1014,
+        "voltage_V": 0,
+        "cell_temperature_K": 1014,
+        "ambient_temperature_K": 1014
+      }
+    },
+    {
+      "id": "isu-uconn-lam-ne-lli-1-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 12-Gr SOC-10::E:F",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-ne-lli-1-b6-charge-normalized.csv",
+      "normalized_sha256": "7593e391d4761ba6e22dcae7cc78270e8b66ea490dce3f82fa1697af16912451",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-ne-lli-1: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1551,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-ne-lli-1",
+        "sheet": "15-LFP 12-Gr SOC-10",
+        "pair_column": "E",
+        "block": 6,
+        "blocks": 8,
+        "first_row": 9920,
+        "last_row": 11470,
+        "selected_block": 6,
+        "voltage_column": "F",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1551,
+          "total_rows": 1551
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1551
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1551
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1551
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1551
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1551,
+          "total_rows": 1551
+        }
+      },
+      "missing_values": {
+        "time_s": 1551,
+        "current_charge_positive_A": 1551,
+        "voltage_V": 0,
+        "cell_temperature_K": 1551,
+        "ambient_temperature_K": 1551
+      }
+    },
+    {
+      "id": "isu-uconn-lam-ne-lli-1-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 12-Gr SOC-10::E:F",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-ne-lli-1-b7-discharge-normalized.csv",
+      "normalized_sha256": "a5def93001cff5c1ebce70b421ae06ff761dd68c0e1dbafcbba2cb8e309bb37d",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-ne-lli-1: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1499,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-ne-lli-1",
+        "sheet": "15-LFP 12-Gr SOC-10",
+        "pair_column": "E",
+        "block": 6,
+        "blocks": 8,
+        "first_row": 11472,
+        "last_row": 12970,
+        "selected_block": 7,
+        "voltage_column": "F",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1499,
+          "total_rows": 1499
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1499
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1499
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1499
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1499
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1499,
+          "total_rows": 1499
+        }
+      },
+      "missing_values": {
+        "time_s": 1499,
+        "current_charge_positive_A": 1499,
+        "voltage_V": 0,
+        "cell_temperature_K": 1499,
+        "ambient_temperature_K": 1499
+      }
+    },
+    {
+      "id": "isu-uconn-lam-ne-lli-2-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 12-Gr SOC-20::E:F",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-ne-lli-2-b6-charge-normalized.csv",
+      "normalized_sha256": "050d1b8559acbc47b3216434f6540ae57395710ab73a2f8648a0a600ffd32811",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-ne-lli-2: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1487,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-ne-lli-2",
+        "sheet": "15-LFP 12-Gr SOC-20",
+        "pair_column": "E",
+        "block": 6,
+        "blocks": 9,
+        "first_row": 9503,
+        "last_row": 10989,
+        "selected_block": 6,
+        "voltage_column": "F",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1487,
+          "total_rows": 1487
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1487
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1487
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1487
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1487
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1487,
+          "total_rows": 1487
+        }
+      },
+      "missing_values": {
+        "time_s": 1487,
+        "current_charge_positive_A": 1487,
+        "voltage_V": 0,
+        "cell_temperature_K": 1487,
+        "ambient_temperature_K": 1487
+      }
+    },
+    {
+      "id": "isu-uconn-lam-ne-lli-2-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "15-LFP 12-Gr SOC-20::E:F",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-lam-ne-lli-2-b7-discharge-normalized.csv",
+      "normalized_sha256": "001edd67026626e7357d0a4d3e2efcde967e3ed3348630aa23669a07aa56f280",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "lam-ne-lli-2: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1451,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "lam-ne-lli-2",
+        "sheet": "15-LFP 12-Gr SOC-20",
+        "pair_column": "E",
+        "block": 6,
+        "blocks": 9,
+        "first_row": 10991,
+        "last_row": 12441,
+        "selected_block": 7,
+        "voltage_column": "F",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1451,
+          "total_rows": 1451
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1451
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1451
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1451
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1451
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1451,
+          "total_rows": 1451
+        }
+      },
+      "missing_values": {
+        "time_s": 1451,
+        "current_charge_positive_A": 1451,
+        "voltage_V": 0,
+        "cell_temperature_K": 1451,
+        "ambient_temperature_K": 1451
+      }
+    },
+    {
+      "id": "isu-uconn-all-mode-1-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "12-LFP 12-Gr SOC-10::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-all-mode-1-b6-charge-normalized.csv",
+      "normalized_sha256": "65dcad84dbfdbc8d10d4b25c9809eb451efe07aeb93b8f794a5deb4a45925ac5",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "all-mode-1: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1009,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "all-mode-1",
+        "sheet": "12-LFP 12-Gr SOC-10",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 6427,
+        "last_row": 7435,
+        "selected_block": 6,
+        "voltage_column": "C",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1009,
+          "total_rows": 1009
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 1009
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1009
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1009
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 1009
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 1009,
+          "total_rows": 1009
+        }
+      },
+      "missing_values": {
+        "time_s": 1009,
+        "current_charge_positive_A": 1009,
+        "voltage_V": 0,
+        "cell_temperature_K": 1009,
+        "ambient_temperature_K": 1009
+      }
+    },
+    {
+      "id": "isu-uconn-all-mode-1-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "12-LFP 12-Gr SOC-10::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-all-mode-1-b7-discharge-normalized.csv",
+      "normalized_sha256": "6d56681a01fee89cec24aca9f5020ce5df6e5608c9c15b3356d5bc7d689108fe",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "all-mode-1: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 998,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "all-mode-1",
+        "sheet": "12-LFP 12-Gr SOC-10",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 7437,
+        "last_row": 8434,
+        "selected_block": 7,
+        "voltage_column": "C",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 998,
+          "total_rows": 998
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 998
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 998
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 998
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 998
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 998,
+          "total_rows": 998
+        }
+      },
+      "missing_values": {
+        "time_s": 998,
+        "current_charge_positive_A": 998,
+        "voltage_V": 0,
+        "cell_temperature_K": 998,
+        "ambient_temperature_K": 998
+      }
+    },
+    {
+      "id": "isu-uconn-all-mode-2-b6-charge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "12-LFP 12-Gr SOC-20::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-all-mode-2-b6-charge-normalized.csv",
+      "normalized_sha256": "c05aedda51141f1af81251b165c9900b02c176e5786122550fa37a13a4b867f8",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "all-mode-2: C/20 charge capacity branch, source block 6; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 872,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_charge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "all-mode-2",
+        "sheet": "12-LFP 12-Gr SOC-20",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 5586,
+        "last_row": 6457,
+        "selected_block": 6,
+        "voltage_column": "C",
+        "selection_role": "author_primary"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 872,
+          "total_rows": 872
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 872
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 872
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 872
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 872
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 872,
+          "total_rows": 872
+        }
+      },
+      "missing_values": {
+        "time_s": 872,
+        "current_charge_positive_A": 872,
+        "voltage_V": 0,
+        "cell_temperature_K": 872,
+        "ambient_temperature_K": 872
+      }
+    },
+    {
+      "id": "isu-uconn-all-mode-2-b7-discharge",
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "sample_id": "12-LFP 12-Gr SOC-20::B:C",
+      "asset_id": "isu-uconn-workbook",
+      "source_id": "isu-uconn-2026-data",
+      "path": null,
+      "original_download_path": "evidence/isu-uconn-LFP_Data.xlsx",
+      "original_format": "XLSX",
+      "normalized_path": "full_cell/isu-uconn-all-mode-2-b7-discharge-normalized.csv",
+      "normalized_sha256": "eca133b61f1f152aea6c5ba464348f2ab8d11eed1a572fc91541bf0452895c87",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "all-mode-2: C/20 discharge capacity branch, source block 7; constant-capacity tail retained",
+      "relationship_to_parameters": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 860,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "No numeric temperature or sensor trace verified from the accessible workbook and author notebook.",
+      "basic_test": {
+        "type": "constant_current_discharge",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Instrument cycle/step identifiers",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved",
+        "Verified numeric temperature and reference details for associated half-cells"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Source positive cumulative Capacity/mAh divided by 1000 for this branch, including discharge. No time inferred."
+      },
+      "scientific_source_ids": [
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "supporting_asset_ids": [
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "processing": "Retain every numeric row in the selected source capacity block, including repeated capacities and constant-capacity tails; mAh divided by 1000. Header/date markers and blank delimiters are not observations. No smoothing, resampling, current synthesis or timestamps. source_record is the one-based Excel row.",
+      "source_location": {
+        "label": "all-mode-2",
+        "sheet": "12-LFP 12-Gr SOC-20",
+        "pair_column": "B",
+        "block": 6,
+        "blocks": 16,
+        "first_row": 6459,
+        "last_row": 7318,
+        "selected_block": 7,
+        "voltage_column": "C",
+        "selection_role": "following_reverse_branch"
+      },
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 860,
+          "total_rows": 860
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 860
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 860
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 860
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 860
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 860,
+          "total_rows": 860
+        }
+      },
+      "missing_values": {
+        "time_s": 860,
+        "current_charge_positive_A": 860,
+        "voltage_V": 0,
+        "cell_temperature_K": 860,
+        "ambient_temperature_K": 860
+      }
+    },
+    {
+      "id": "jahn-a123-pocv-full-cycle",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hys-a123-01-25deg-pocv-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_Hys_A123_01_25deg_pOCV.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-pocv-full-cycle-normalized.csv",
+      "normalized_sha256": "3abedea2dcb6adff965cbc87722aa169dcb82fd83c50c47a038949acf822544a",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/20 pseudo-OCV full charge/discharge cycle; t/Q/U supplied, measured current absent",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 13413,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_cycle",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.05
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Measured current trace",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently.",
+      "source_issues": [
+        "Author script differentiates Q to generate its simulation current; that derived current is not imported as measured current."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 13413,
+          "total_rows": 13413
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 13413
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 13413
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 13413
+        },
+        "time_s": {
+          "present_rows": 13413,
+          "total_rows": 13413
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 13413,
+        "voltage_V": 0,
+        "cell_temperature_K": 13413,
+        "ambient_temperature_K": 13413
+      }
+    },
+    {
+      "id": "jahn-a123-power-soc50",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hyspowertest-a123-01-25deg-soc50-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC50.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-power-soc50-normalized.csv",
+      "normalized_sha256": "a296c46e2217862015ad4f613c9b3f6d9801198175d30815febef4df5187142f",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "SOC50 path-dependency power test; full deposited record including conditioning and rest retained",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 336,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_steps",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently.",
+      "source_issues": [
+        "Deposit describes C/2 conditioning and 4C discharge; retain measured amperes and do not infer a capacity denominator. SOC100 file also contains initial positive-current conditioning.",
+        "Author simulation truncates SOC50 to 275 rows; catalog retains all 336 rows."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 336,
+          "total_rows": 336
+        },
+        "current_charge_positive_A": {
+          "present_rows": 336,
+          "total_rows": 336
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 336
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 336
+        },
+        "time_s": {
+          "present_rows": 336,
+          "total_rows": 336
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 336,
+        "ambient_temperature_K": 336
+      }
+    },
+    {
+      "id": "jahn-a123-power-soc100",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hyspowertest-a123-01-25deg-soc100-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_HysPowerTest_A123_01_25deg_SOC100.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-power-soc100-normalized.csv",
+      "normalized_sha256": "ce287ef5bcf2a76443d02ecf20795e741723f482a2436b9a95bd049fd9295d30",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "SOC100 path-dependency power test; full deposited record including conditioning and rest retained",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 723,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_steps",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently.",
+      "source_issues": [
+        "Deposit describes C/2 conditioning and 4C discharge; retain measured amperes and do not infer a capacity denominator. SOC100 file also contains initial positive-current conditioning.",
+        "Author simulation truncates SOC50 to 275 rows; catalog retains all 336 rows."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 723,
+          "total_rows": 723
+        },
+        "current_charge_positive_A": {
+          "present_rows": 723,
+          "total_rows": 723
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 723
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 723
+        },
+        "time_s": {
+          "present_rows": 723,
+          "total_rows": 723
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 723,
+        "ambient_temperature_K": 723
+      }
+    },
+    {
+      "id": "jahn-a123-incremental-ocv-charge",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hys-a123-01-25deg-incrocv-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_Hys_A123_01_25deg_incrOCV.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-incremental-ocv-charge-normalized.csv",
+      "normalized_sha256": "8312fdf6e818e9ba45c64c2cb3a53d435b9fb98fe11839b4ce8a3b351e98d56b",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "Incremental full-cell OCV charge endpoints after current interruptions; Q/U only",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 101,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "incremental_ocv",
+        "current_measurement": "not_supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "not_selected"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Charge: source Q-Q_start; discharge: Q_start-Q. Original source stored charge Q is retained separately. No clock or current inferred."
+      },
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. Split after first global maximum stored charge; no observation is duplicated or deleted across the two branch exports.",
+      "source_issues": [
+        "These are whole-cell OCV points, not electrode OCP or a continuous CC time series."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 101,
+          "total_rows": 101
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 101,
+          "total_rows": 101
+        }
+      },
+      "missing_values": {
+        "time_s": 101,
+        "current_charge_positive_A": 101,
+        "voltage_V": 0,
+        "cell_temperature_K": 101,
+        "ambient_temperature_K": 101
+      }
+    },
+    {
+      "id": "jahn-a123-incremental-ocv-discharge",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-20230125-hys-a123-01-25deg-incrocv-csv",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-20230125_Hys_A123_01_25deg_incrOCV.csv",
+      "original_format": "CSV",
+      "normalized_path": "full_cell/jahn-a123-incremental-ocv-discharge-normalized.csv",
+      "normalized_sha256": "46ed06f7791b0731cc96c75aa3e6b02aae97e9b7a4b4f5818fdbdf8f3d648989",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "Incremental full-cell OCV discharge endpoints after current interruptions; Q/U only",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 101,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "passed_capacity_Ah",
+        "source_stored_charge_Ah"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Measured current absent; blank is not zero and no current was inferred from capacity or C-rate.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "incremental_ocv",
+        "current_measurement": "not_supplied",
+        "charge_trace": "not_selected",
+        "voltage_trace": "available",
+        "discharge_trace": "available"
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Measured current trace",
+        "Original timestamps",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "independent_variable": {
+        "column": "passed_capacity_Ah",
+        "unit": "Ah",
+        "label": "Branch passed capacity / Ah",
+        "definition": "Charge: source Q-Q_start; discharge: Q_start-Q. Original source stored charge Q is retained separately. No clock or current inferred."
+      },
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. Split after first global maximum stored charge; no observation is duplicated or deleted across the two branch exports.",
+      "source_issues": [
+        "These are whole-cell OCV points, not electrode OCP or a continuous CC time series."
+      ],
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 101,
+          "total_rows": 101
+        },
+        "current_charge_positive_A": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "time_s": {
+          "present_rows": 0,
+          "total_rows": 101
+        },
+        "passed_capacity_Ah": {
+          "present_rows": 101,
+          "total_rows": 101
+        }
+      },
+      "missing_values": {
+        "time_s": 101,
+        "current_charge_positive_A": 101,
+        "voltage_V": 0,
+        "cell_temperature_K": 101,
+        "ambient_temperature_K": 101
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-1",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-1-normalized.csv",
+      "normalized_sha256": "29d3a95d9e17569ce884eaa0195c70c8b40a0376e538221c9bd17ee085bdb4a7",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 1; nominal SOC window 45 to 55 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 1756,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(1,:).",
+      "original_member": "minor_loops(1,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 1756,
+          "total_rows": 1756
+        },
+        "current_charge_positive_A": {
+          "present_rows": 1756,
+          "total_rows": 1756
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1756
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 1756
+        },
+        "time_s": {
+          "present_rows": 1756,
+          "total_rows": 1756
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 1756,
+        "ambient_temperature_K": 1756
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-2",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-2-normalized.csv",
+      "normalized_sha256": "3f81cfe9991b3b6c5c39bf6772218c78c937e54a068f8f0e8c749756db3f1f8b",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 2; nominal SOC window 40 to 60 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 2409,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(2,:).",
+      "original_member": "minor_loops(2,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 2409,
+          "total_rows": 2409
+        },
+        "current_charge_positive_A": {
+          "present_rows": 2409,
+          "total_rows": 2409
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 2409
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 2409
+        },
+        "time_s": {
+          "present_rows": 2409,
+          "total_rows": 2409
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 2409,
+        "ambient_temperature_K": 2409
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-3",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-3-normalized.csv",
+      "normalized_sha256": "17c343f615fe28516482c014dbaa072ea9049f0eb840680942f848ad146f27cf",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 3; nominal SOC window 35 to 65 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 3064,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(3,:).",
+      "original_member": "minor_loops(3,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 3064,
+          "total_rows": 3064
+        },
+        "current_charge_positive_A": {
+          "present_rows": 3064,
+          "total_rows": 3064
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3064
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3064
+        },
+        "time_s": {
+          "present_rows": 3064,
+          "total_rows": 3064
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 3064,
+        "ambient_temperature_K": 3064
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-4",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-4-normalized.csv",
+      "normalized_sha256": "514fa87d29a37f9c7cb0b4ac2535bc5709c42ec9baa18761ca0f6341a4d000a2",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 4; nominal SOC window 30 to 70 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 3717,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(4,:).",
+      "original_member": "minor_loops(4,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 3717,
+          "total_rows": 3717
+        },
+        "current_charge_positive_A": {
+          "present_rows": 3717,
+          "total_rows": 3717
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3717
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 3717
+        },
+        "time_s": {
+          "present_rows": 3717,
+          "total_rows": 3717
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 3717,
+        "ambient_temperature_K": 3717
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-5",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-5-normalized.csv",
+      "normalized_sha256": "ec79c999beccbcd8851901d5e4fdcbfa3f8e4b7d6104109c98db0788adf0dfff",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 5; nominal SOC window 25 to 75 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 4372,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(5,:).",
+      "original_member": "minor_loops(5,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 4372,
+          "total_rows": 4372
+        },
+        "current_charge_positive_A": {
+          "present_rows": 4372,
+          "total_rows": 4372
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 4372
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 4372
+        },
+        "time_s": {
+          "present_rows": 4372,
+          "total_rows": 4372
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 4372,
+        "ambient_temperature_K": 4372
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-6",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-6-normalized.csv",
+      "normalized_sha256": "dbc8c31a0ee27b35550ca517ffba32517c51ea5617c01cd79971ef32335a8011",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 6; nominal SOC window 20 to 80 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 5025,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(6,:).",
+      "original_member": "minor_loops(6,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 5025,
+          "total_rows": 5025
+        },
+        "current_charge_positive_A": {
+          "present_rows": 5025,
+          "total_rows": 5025
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5025
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5025
+        },
+        "time_s": {
+          "present_rows": 5025,
+          "total_rows": 5025
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 5025,
+        "ambient_temperature_K": 5025
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-7",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-7-normalized.csv",
+      "normalized_sha256": "689baa3d50bd095cec173d75c565024c93f88900e03d2a42ece4abce6ca8e091",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 7; nominal SOC window 15 to 85 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 5680,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(7,:).",
+      "original_member": "minor_loops(7,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 5680,
+          "total_rows": 5680
+        },
+        "current_charge_positive_A": {
+          "present_rows": 5680,
+          "total_rows": 5680
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5680
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 5680
+        },
+        "time_s": {
+          "present_rows": 5680,
+          "total_rows": 5680
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 5680,
+        "ambient_temperature_K": 5680
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-8",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-8-normalized.csv",
+      "normalized_sha256": "a9a91aa36ace02b8884397676bf65b8c23dc0b916c48ceb7353abb1411cdaa14",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 8; nominal SOC window 10 to 90 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 6333,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(8,:).",
+      "original_member": "minor_loops(8,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6333,
+          "total_rows": 6333
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6333,
+          "total_rows": 6333
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6333
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6333
+        },
+        "time_s": {
+          "present_rows": 6333,
+          "total_rows": 6333
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 6333,
+        "ambient_temperature_K": 6333
+      }
+    },
+    {
+      "id": "jahn-a123-hysteresis-loop-9",
+      "cell_id": "a123-18650m1a-jahn2024",
+      "sample_id": "A123_01 (shared file label; serialized identity unresolved)",
+      "asset_id": "jahn-hysteresis-soc50loops-c10-a123-01-t-soc-u-i-ah-mat",
+      "source_id": "jahn-2024-data-v2",
+      "path": null,
+      "original_download_path": "evidence/jahn-Hysteresis_SOC50Loops_C10_A123_01_t_SOC_U_I_Ah.mat",
+      "original_format": "MAT",
+      "normalized_path": "full_cell/jahn-a123-hysteresis-loop-9-normalized.csv",
+      "normalized_sha256": "a3f6acc7d936fa249c703162b0393346a30824ba5ae69f3f1820e010d91f4590",
+      "csv_header_rows": 0,
+      "license": "CC-BY-4.0",
+      "protocol": "C/10 partial hysteresis cycle 9; nominal SOC window 5 to 95 percent per deposit",
+      "relationship_to_parameters": "same_model_same_study",
+      "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+      "independent_validation_by_this_project": false,
+      "observation_kind": "published_experimental_series",
+      "row_count": 6988,
+      "columns": [
+        "time_s",
+        "current_charge_positive_A",
+        "voltage_V",
+        "cell_temperature_K",
+        "ambient_temperature_K",
+        "cycle",
+        "step",
+        "mode",
+        "source_record",
+        "source_stored_charge_Ah",
+        "source_soc_fraction"
+      ],
+      "discharge_segments": [],
+      "format": "Source branch/array extracted without smoothing or resampling; packaged original retained",
+      "current_convention": "Charge positive, discharge negative; supplied signed current retained and checked against stored-charge increments.",
+      "temperature_definition": "25 degC chamber setting in Methods; no measured cell or ambient temperature trace.",
+      "basic_test": {
+        "type": "constant_current_partial_cycle",
+        "current_measurement": "supplied",
+        "charge_trace": "available",
+        "voltage_trace": "available",
+        "discharge_trace": "available",
+        "nominal_C_rate": 0.1
+      },
+      "missing_items": [
+        "Absolute measured temperature",
+        "Ambient temperature trace",
+        "Independent full-cell model reproduction not performed",
+        "Same-specimen file-to-electrode provenance unresolved"
+      ],
+      "scientific_source_ids": [
+        "jahn-2024-paper",
+        "jahn-2024-code"
+      ],
+      "supporting_asset_ids": [
+        "jahn-hys-sim-lfp-fc-m",
+        "jahn-pdecm-fullcell-m",
+        "jahn-2024-data-v2-metadata",
+        "jahn-2024-code-metadata"
+      ],
+      "processing": "Native observation values/order retained; no smoothing, resampling, imputation or author MATLAB execution. source_record is zero-based numeric CSV row (excluding header) or the explicitly named MAT-array index. Absolute source time retained where available. Stored-charge offsets and published SOC are retained as source channels, not normalized silently. source_record refers to the zero-based sample in minor_loops(9,:).",
+      "original_member": "minor_loops(9,:) [t,SOC,U,I,Q]",
+      "channel_availability": {
+        "voltage_V": {
+          "present_rows": 6988,
+          "total_rows": 6988
+        },
+        "current_charge_positive_A": {
+          "present_rows": 6988,
+          "total_rows": 6988
+        },
+        "cell_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6988
+        },
+        "ambient_temperature_K": {
+          "present_rows": 0,
+          "total_rows": 6988
+        },
+        "time_s": {
+          "present_rows": 6988,
+          "total_rows": 6988
+        }
+      },
+      "missing_values": {
+        "time_s": 0,
+        "current_charge_positive_A": 0,
+        "voltage_V": 0,
+        "cell_temperature_K": 6988,
+        "ambient_temperature_K": 6988
+      }
     }
   ]
 }

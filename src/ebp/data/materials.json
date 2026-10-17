@@ -101,5 +101,29 @@
   "mohtat-author-nmc532-ocp-material": {
     "chemistry": "NMC532",
     "description": "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given."
+  },
+  "isu-uconn-lfp-s2-b6-delithiation-material": {
+    "chemistry": "LFP",
+    "description": "MTI laboratory electrode family in the ISU-UConn deposit; no batch-to-commercial-model mapping."
+  },
+  "isu-uconn-lfp-s2-b7-lithiation-material": {
+    "chemistry": "LFP",
+    "description": "MTI laboratory electrode family in the ISU-UConn deposit; no batch-to-commercial-model mapping."
+  },
+  "isu-uconn-graphite-s2-b6-lithiation-material": {
+    "chemistry": "graphite",
+    "description": "MTI laboratory electrode family in the ISU-UConn deposit; no batch-to-commercial-model mapping."
+  },
+  "isu-uconn-graphite-s2-b7-delithiation-material": {
+    "chemistry": "graphite",
+    "description": "MTI laboratory electrode family in the ISU-UConn deposit; no batch-to-commercial-model mapping."
+  },
+  "jahn-a123-lfp-model-ocpn-material": {
+    "chemistry": "LFP",
+    "description": "Harvested A123 18650M1A electrode context; approximated single-string PD-ECM potential."
+  },
+  "jahn-a123-graphite-model-ocpn-material": {
+    "chemistry": "graphite",
+    "description": "Harvested A123 18650M1A electrode context; approximated single-string PD-ECM potential."
   }
 }

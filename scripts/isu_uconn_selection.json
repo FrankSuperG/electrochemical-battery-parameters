@@ -1,0 +1,126 @@
+{
+  "author_commit": "1188c371e5836df4a7e5f5acf336a34ffd4027e6",
+  "half_cells": [
+    {
+      "material": "LFP",
+      "sheet": "12-LFP C_20 Updated",
+      "pair_column": "E",
+      "blocks": [
+        6,
+        7
+      ],
+      "sample_label": "S2 (updated pair E:F; sample label inherited from earlier sheet)"
+    },
+    {
+      "material": "graphite",
+      "sheet": "12-Graphite Half-cell @ C_20",
+      "pair_column": "J",
+      "blocks": [
+        6,
+        7
+      ],
+      "sample_label": "S2 (pair J:K after the latest date marker)"
+    }
+  ],
+  "full_cells": [
+    {
+      "label": "fresh",
+      "sheet": "15-LFP 16-Gr Full-cell @ C_20",
+      "pair_column": "O",
+      "block": 6,
+      "blocks": 16,
+      "first_row": 6865,
+      "last_row": 7971
+    },
+    {
+      "label": "lli-1",
+      "sheet": "15-LFP 16-Gr SOC-10",
+      "pair_column": "B",
+      "block": 6,
+      "blocks": 14,
+      "first_row": 6596,
+      "last_row": 7665
+    },
+    {
+      "label": "lli-2",
+      "sheet": "15-LFP 16-Gr SOC-20",
+      "pair_column": "B",
+      "block": 6,
+      "blocks": 16,
+      "first_row": 5890,
+      "last_row": 6839
+    },
+    {
+      "label": "lam-pe-1",
+      "sheet": "12-LFP 16-Gr SOC-100",
+      "pair_column": "B",
+      "block": 7,
+      "blocks": 17,
+      "first_row": 9115,
+      "last_row": 10455
+    },
+    {
+      "label": "lam-ne-1",
+      "sheet": "15-LFP 12-Gr Full-cell @ C_20",
+      "pair_column": "E",
+      "block": 6,
+      "blocks": 12,
+      "first_row": 10518,
+      "last_row": 12113
+    },
+    {
+      "label": "lam-pe-lli-1",
+      "sheet": "Full cell after FM SOC 0",
+      "pair_column": "B",
+      "block": 0,
+      "blocks": 1,
+      "first_row": 2,
+      "last_row": 1080
+    },
+    {
+      "label": "lam-pe-lli-2",
+      "sheet": "Full cell after FM SOC 10",
+      "pair_column": "G",
+      "block": 0,
+      "blocks": 2,
+      "first_row": 2,
+      "last_row": 1046
+    },
+    {
+      "label": "lam-ne-lli-1",
+      "sheet": "15-LFP 12-Gr SOC-10",
+      "pair_column": "E",
+      "block": 6,
+      "blocks": 8,
+      "first_row": 9920,
+      "last_row": 11470
+    },
+    {
+      "label": "lam-ne-lli-2",
+      "sheet": "15-LFP 12-Gr SOC-20",
+      "pair_column": "E",
+      "block": 6,
+      "blocks": 9,
+      "first_row": 9503,
+      "last_row": 10989
+    },
+    {
+      "label": "all-mode-1",
+      "sheet": "12-LFP 12-Gr SOC-10",
+      "pair_column": "B",
+      "block": 6,
+      "blocks": 16,
+      "first_row": 6427,
+      "last_row": 7435
+    },
+    {
+      "label": "all-mode-2",
+      "sheet": "12-LFP 12-Gr SOC-20",
+      "pair_column": "B",
+      "block": 6,
+      "blocks": 16,
+      "first_row": 5586,
+      "last_row": 6457
+    }
+  ]
+}

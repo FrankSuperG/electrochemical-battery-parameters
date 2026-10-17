@@ -101,8 +101,12 @@ class Curve:
 
         Formulas are sampled, with resolution controlled by count. Callers must
         respect the stated domain. Empirical pseudo-OCP curves require an explicit
-        StoichiometryMapping and remain pseudo-OCP after mapping.
+        StoichiometryMapping and remain pseudo-OCP after mapping. Author model
+        coordinates also require mapping; model OCPn remains a modeled component.
+        An unresolved electrode reference blocks adaptation before either step.
         """
+        if self.record["reference"] != "Li/Li+":
+            raise ValueError("Reference chemistry is unresolved; Li/Li+ evidence is required before PyBaMM adaptation")
         if self.record["x"]["kind"] != "stoichiometry" and mapping is None:
             raise ValueError(
                 "Absolute stoichiometry is unknown; provide StoichiometryMapping with evidence"
@@ -139,6 +143,9 @@ class Curve:
         ocp.ebp_metadata = {
             "record_id": self.id,
             "record_version": self.record["version"],
+            "measurement": self.record["measurement"],
+            "coordinate_kind": self.record["x"]["kind"],
+            "reference": self.record["reference"],
             "mapping": None if mapping is None else mapping.__dict__,
             "interpolation": "linear",
             "sample_count": len(x),

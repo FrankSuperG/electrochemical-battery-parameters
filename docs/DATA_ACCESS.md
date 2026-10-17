@@ -14,6 +14,8 @@ restricted, sign in with an account that has access.
 | A practical same-model/same-study starting case | [LG M50](../data/cells/lg-m50.md) | Two OCP expressions, 38 other inputs and three current/voltage/temperature test files |
 | LFP parameters with a full-cell discharge | [A123 AMP20](../data/cells/a123-amp20m1hd-a.md) | Fitted/derived inputs and one 4C trace; electrode OCP remains missing |
 | LFP CC charge/discharge tests | [A123 9 Ah study family](../data/cells/a123-high-power-pouch-9ah.md) | Ten files at 2/4/6/8/10C; finite diffusion/kinetic inputs and reusable electrode OCP remain missing |
+| LFP laboratory half/full-cell V-Q association | [ISU-UConn](../data/cells/isu-uconn-lfp-graphite-lab.md) | Four C/20 pseudo-OCP branches and 21 full-cell branches from 11 configurations; reference details and I/t/T remain unresolved |
+| A123 electrode-model potentials and current/voltage tests | [18650M1A / Jahn2024](../data/cells/a123-18650m1a-jahn2024.md) | Two modeled OCPn tables and 14 full-cell branch/array exports; current only in power/loop files, no temperature trace |
 | Mohtat author inputs and charge data | [Mohtat2020](../data/cells/mohtat2020-nmc532-pouch.md) | Separate author/PyBaMM parameter variants and five V–Q/T–Q files; measured current and original time are absent |
 
 Parameters CSVs include a `name`, `category`, `unit`, `definition`, conditions,
@@ -44,7 +46,8 @@ does not need anonymous raw-file URLs.
 
 - **Retained table:** links to the stored table under `src/ebp/data/curves/`.
   All retained points and source columns are preserved. The JSON distinguishes
-  measurements, published tables and figure digitizations.
+  measurements, published tables and modeled OCPn. `model_ocp` is not a raw
+  measurement. `reference=unresolved` must be resolved before PyBaMM adaptation.
 - **Generated samples:** `data/ocp/*-sampled.csv` contains 2,001 evaluations of a
   stored expression across its documented domain, rounded to 12 significant
   digits. It is a convenient numeric

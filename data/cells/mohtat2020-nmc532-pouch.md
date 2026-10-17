@@ -23,12 +23,12 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 
 ## OCP curves
 
-| Record | Electrode / material | Coordinate and domain | CSV | Metadata |
-|---|---|---|---|---|
-| `mohtat2020-graphite-ocp` | negative / graphite | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/mohtat2020-graphite-ocp-sampled.csv) | [JSON](../ocp/mohtat2020-graphite-ocp.json) |
-| `mohtat2020-nmc532-ocp` | positive / NMC532 | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/mohtat2020-nmc532-ocp-sampled.csv) | [JSON](../ocp/mohtat2020-nmc532-ocp.json) |
-| `mohtat-author-graphite-ocp` | negative / graphite | stoichiometry; [0.0017, 0.8332] | [Generated samples](../ocp/mohtat-author-graphite-ocp-sampled.csv) | [JSON](../ocp/mohtat-author-graphite-ocp.json) |
-| `mohtat-author-nmc532-ocp` | positive / NMC532 | stoichiometry; [0.0335, 0.8907] | [Generated samples](../ocp/mohtat-author-nmc532-ocp-sampled.csv) | [JSON](../ocp/mohtat-author-nmc532-ocp.json) |
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `mohtat2020-graphite-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/mohtat2020-graphite-ocp-sampled.csv) | [JSON](../ocp/mohtat2020-graphite-ocp.json) |
+| `mohtat2020-nmc532-ocp` | positive / NMC532 | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/mohtat2020-nmc532-ocp-sampled.csv) | [JSON](../ocp/mohtat2020-nmc532-ocp.json) |
+| `mohtat-author-graphite-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0017, 0.8332] | [Generated samples](../ocp/mohtat-author-graphite-ocp-sampled.csv) | [JSON](../ocp/mohtat-author-graphite-ocp.json) |
+| `mohtat-author-nmc532-ocp` | positive / NMC532 | literature_formula / Li/Li+ | stoichiometry; [0.0335, 0.8907] | [Generated samples](../ocp/mohtat-author-nmc532-ocp-sampled.csv) | [JSON](../ocp/mohtat-author-nmc532-ocp.json) |
 
 Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.
 

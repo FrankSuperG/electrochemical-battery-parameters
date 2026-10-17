@@ -16,10 +16,10 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 
 ## OCP curves
 
-| Record | Electrode / material | Coordinate and domain | CSV | Metadata |
-|---|---|---|---|---|
-| `ecker2015-graphite-ocp` | negative / graphite | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/ecker2015-graphite-ocp-sampled.csv) | [JSON](../ocp/ecker2015-graphite-ocp.json) |
-| `ecker2015-nco-ocp` | positive / NCO | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/ecker2015-nco-ocp-sampled.csv) | [JSON](../ocp/ecker2015-nco-ocp.json) |
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `ecker2015-graphite-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/ecker2015-graphite-ocp-sampled.csv) | [JSON](../ocp/ecker2015-graphite-ocp.json) |
+| `ecker2015-nco-ocp` | positive / NCO | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/ecker2015-nco-ocp-sampled.csv) | [JSON](../ocp/ecker2015-nco-ocp.json) |
 
 Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.
 

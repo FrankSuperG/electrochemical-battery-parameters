@@ -16,10 +16,10 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 
 ## OCP curves
 
-| Record | Electrode / material | Coordinate and domain | CSV | Metadata |
-|---|---|---|---|---|
-| `nca-kim2011-graphite-ocp` | negative / graphite | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/nca-kim2011-graphite-ocp-sampled.csv) | [JSON](../ocp/nca-kim2011-graphite-ocp.json) |
-| `nca-kim2011-nca-ocp` | positive / NCA | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/nca-kim2011-nca-ocp-sampled.csv) | [JSON](../ocp/nca-kim2011-nca-ocp.json) |
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `nca-kim2011-graphite-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/nca-kim2011-graphite-ocp-sampled.csv) | [JSON](../ocp/nca-kim2011-graphite-ocp.json) |
+| `nca-kim2011-nca-ocp` | positive / NCA | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/nca-kim2011-nca-ocp-sampled.csv) | [JSON](../ocp/nca-kim2011-nca-ocp.json) |
 
 Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.
 

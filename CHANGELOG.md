@@ -1,6 +1,14 @@
 # Changelog
 
-## Unreleased
+## 0.6.0 — 2026-10-17
+
+- Curated ISU-UConn's author-selected two half-cell specimens into four finite-current pseudo-OCP branches and 21 full-cell V-Q branches from eleven configurations; retained workbook addresses, unknown reference details, and missing I/t/T.
+- Curated A123 18650M1A / Jahn2024 data v2: two modeled PD-ECM OCPn arrays and fourteen full-cell branch/array exports (low-rate cycle, incremental OCV, power tests and nine hysteresis loops).
+- Added original source bytes, hashes, license evidence, attribution/change notices and reproducible selection scripts without executing upstream code. Intrinsic diffusion/kinetic coverage remains missing for both additions.
+- Reached 55 electrode-curve records, 337 other parameters and 60 full-cell exports across eleven cell/study entries. Modeled OCPn is labeled separately from measured pseudo-OCP and published tables.
+- Added model-coordinate and unresolved-reference metadata, guarded PyBaMM adaptation, explicit viewer labels, and cell JSON packages even when no non-OCP values are available.
+
+### Prepublication fixes included
 
 - Added a reproducible prepublication audit and a separate, source-backed data-candidate ledger; candidate observations are not counted as imported records.
 - Fixed LG M50 solid diffusivity classification so both electrode values appear under the diffusion filter; values, units and source evidence are unchanged, with record versions advanced to 2.

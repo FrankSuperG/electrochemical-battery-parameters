@@ -16,10 +16,10 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 
 ## OCP curves
 
-| Record | Electrode / material | Coordinate and domain | CSV | Metadata |
-|---|---|---|---|---|
-| `bpx-lfp18650-lfp-ocp` | positive / LFP | stoichiometry; [0.0875, 0.95038] | [Generated samples](../ocp/bpx-lfp18650-lfp-ocp-sampled.csv) | [JSON](../ocp/bpx-lfp18650-lfp-ocp.json) |
-| `bpx-lfp18650-graphite-ocp` | negative / graphite | stoichiometry; [0.0016261, 0.82258] | [Generated samples](../ocp/bpx-lfp18650-graphite-ocp-sampled.csv) | [JSON](../ocp/bpx-lfp18650-graphite-ocp.json) |
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `bpx-lfp18650-lfp-ocp` | positive / LFP | literature_formula / Li/Li+ | stoichiometry; [0.0875, 0.95038] | [Generated samples](../ocp/bpx-lfp18650-lfp-ocp-sampled.csv) | [JSON](../ocp/bpx-lfp18650-lfp-ocp.json) |
+| `bpx-lfp18650-graphite-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0016261, 0.82258] | [Generated samples](../ocp/bpx-lfp18650-graphite-ocp-sampled.csv) | [JSON](../ocp/bpx-lfp18650-graphite-ocp.json) |
 
 Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.
 

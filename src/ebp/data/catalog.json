@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "release": "0.5.0",
+  "release": "0.6.0",
   "records": [
     {
       "id": "lfp-afshar2017-formula",
@@ -4003,6 +4003,504 @@
         "Original author model is bundled with these five experimental charging files in the same DOI deposit. Cell is fabricated by UMBL, not an identified commercial part. Exact specimen identity is not given.",
         "NMC532 label is stated in the pinned PyBaMM implementation; the deposited model/README use NMC without an independent composition assay.",
         "Original graphite expression uses x+0.007. PyBaMM v25.4.2 uses x+0.001. These are distinct implementation variants; do not mix their OCPs silently."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "isu-uconn-lfp-s2-b6-delithiation",
+      "version": "1",
+      "title": "LFP | ISU-UConn S2 | C/20 pseudo-OCP | block 6 delithiation",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "isu-uconn-lfp-s2-b6-delithiation-material",
+      "electrode_role": "positive",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Numeric temperature/setpoint not verified from the accessible workbook and author notebook."
+      },
+      "reference": "unresolved",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized over this retained branch; not absolute stoichiometry or full-cell SOC.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Published half-cell terminal voltage. Counter/reference chemistry was not verified from the accessible workbook and notebook."
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/isu-uconn-lfp-s2-b6-delithiation.csv",
+        "sha256": "9d29902c24538f3da683a4624f393bbb8392cf988156b28e6d08ec3a2aa5ef52",
+        "point_count": 1315,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "isu-uconn-2026-data",
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "experiment_id": "isu-uconn-lfp-selected-s2",
+      "cell_link": {
+        "cell_id": "isu-uconn-lfp-graphite-lab",
+        "relationship": "same_study_cell_family",
+        "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen."
+      },
+      "provenance": {
+        "asset_ids": [
+          "isu-uconn-workbook",
+          "isu-uconn-author-notebook",
+          "isu-uconn-author-loader"
+        ],
+        "derivation": "measured_capacity_branch_extraction",
+        "location": "LFP_Data.xlsx::12-LFP C_20 Updated::E:F::block 6",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "sheet": "12-LFP C_20 Updated",
+          "capacity_column": "E",
+          "voltage_column": "F",
+          "blank_delimited_block_zero_based": 6,
+          "source_rows": [
+            8148,
+            9484
+          ],
+          "source_branch_points": 1337,
+          "tail_points_after_first_capacity_maximum": 22,
+          "duplicate_capacity_points_removed": 0,
+          "changes": "Truncate after first maximum capacity to omit the constant-capacity tail; first occurrence per capacity retained; normalize branch capacity to 0..1. No smoothing/resampling. Direction inferred from electrode potential trend; source cycle IDs unavailable."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+        "Finite-current pseudo-OCP includes polarization and branch hysteresis; not equilibrium OCP.",
+        "Reference chemistry and numerical temperature not verified; Li/Li+ is not asserted. PyBaMM adaptation is blocked until reference evidence is curated.",
+        "Relative branch throughput requires independently justified stoichiometry endpoints; no full-cell SOC mapping is inferred."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "isu-uconn-lfp-s2-b7-lithiation",
+      "version": "1",
+      "title": "LFP | ISU-UConn S2 | C/20 pseudo-OCP | block 7 lithiation",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "isu-uconn-lfp-s2-b7-lithiation-material",
+      "electrode_role": "positive",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Numeric temperature/setpoint not verified from the accessible workbook and author notebook."
+      },
+      "reference": "unresolved",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized over this retained branch; not absolute stoichiometry or full-cell SOC.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Published half-cell terminal voltage. Counter/reference chemistry was not verified from the accessible workbook and notebook."
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/isu-uconn-lfp-s2-b7-lithiation.csv",
+        "sha256": "62d034a76cd77b2b4fba4a49e0a3ca2706159f7d98ba2e5f026ffc5fb3c627a1",
+        "point_count": 1314,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "isu-uconn-2026-data",
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "experiment_id": "isu-uconn-lfp-selected-s2",
+      "cell_link": {
+        "cell_id": "isu-uconn-lfp-graphite-lab",
+        "relationship": "same_study_cell_family",
+        "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen."
+      },
+      "provenance": {
+        "asset_ids": [
+          "isu-uconn-workbook",
+          "isu-uconn-author-notebook",
+          "isu-uconn-author-loader"
+        ],
+        "derivation": "measured_capacity_branch_extraction",
+        "location": "LFP_Data.xlsx::12-LFP C_20 Updated::E:F::block 7",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "sheet": "12-LFP C_20 Updated",
+          "capacity_column": "E",
+          "voltage_column": "F",
+          "blank_delimited_block_zero_based": 7,
+          "source_rows": [
+            9486,
+            10822
+          ],
+          "source_branch_points": 1337,
+          "tail_points_after_first_capacity_maximum": 23,
+          "duplicate_capacity_points_removed": 0,
+          "changes": "Truncate after first maximum capacity to omit the constant-capacity tail; first occurrence per capacity retained; normalize branch capacity to 0..1. No smoothing/resampling. Direction inferred from electrode potential trend; source cycle IDs unavailable."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+        "Finite-current pseudo-OCP includes polarization and branch hysteresis; not equilibrium OCP.",
+        "Reference chemistry and numerical temperature not verified; Li/Li+ is not asserted. PyBaMM adaptation is blocked until reference evidence is curated.",
+        "Relative branch throughput requires independently justified stoichiometry endpoints; no full-cell SOC mapping is inferred."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "isu-uconn-graphite-s2-b6-lithiation",
+      "version": "1",
+      "title": "graphite | ISU-UConn S2 | C/20 pseudo-OCP | block 6 lithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "isu-uconn-graphite-s2-b6-lithiation-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Numeric temperature/setpoint not verified from the accessible workbook and author notebook."
+      },
+      "reference": "unresolved",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized over this retained branch; not absolute stoichiometry or full-cell SOC.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Published half-cell terminal voltage. Counter/reference chemistry was not verified from the accessible workbook and notebook."
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/isu-uconn-graphite-s2-b6-lithiation.csv",
+        "sha256": "059cd125f8df35cc94aaf8a9545649b8ba2b1e671bb838f7e08adf60ca7c2ce9",
+        "point_count": 213,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "isu-uconn-2026-data",
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "experiment_id": "isu-uconn-graphite-selected-s2",
+      "cell_link": {
+        "cell_id": "isu-uconn-lfp-graphite-lab",
+        "relationship": "same_study_cell_family",
+        "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen."
+      },
+      "provenance": {
+        "asset_ids": [
+          "isu-uconn-workbook",
+          "isu-uconn-author-notebook",
+          "isu-uconn-author-loader"
+        ],
+        "derivation": "measured_capacity_branch_extraction",
+        "location": "LFP_Data.xlsx::12-Graphite Half-cell @ C_20::J:K::block 6",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "sheet": "12-Graphite Half-cell @ C_20",
+          "capacity_column": "J",
+          "voltage_column": "K",
+          "blank_delimited_block_zero_based": 6,
+          "source_rows": [
+            7271,
+            8467
+          ],
+          "source_branch_points": 1197,
+          "tail_points_after_first_capacity_maximum": 26,
+          "duplicate_capacity_points_removed": 958,
+          "changes": "Truncate after first maximum capacity to omit the constant-capacity tail; first occurrence per capacity retained; normalize branch capacity to 0..1. No smoothing/resampling. Direction inferred from electrode potential trend; source cycle IDs unavailable."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+        "Finite-current pseudo-OCP includes polarization and branch hysteresis; not equilibrium OCP.",
+        "Reference chemistry and numerical temperature not verified; Li/Li+ is not asserted. PyBaMM adaptation is blocked until reference evidence is curated.",
+        "Relative branch throughput requires independently justified stoichiometry endpoints; no full-cell SOC mapping is inferred."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "isu-uconn-graphite-s2-b7-delithiation",
+      "version": "1",
+      "title": "graphite | ISU-UConn S2 | C/20 pseudo-OCP | block 7 delithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "isu-uconn-graphite-s2-b7-delithiation-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Numeric temperature/setpoint not verified from the accessible workbook and author notebook."
+      },
+      "reference": "unresolved",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized over this retained branch; not absolute stoichiometry or full-cell SOC.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Published half-cell terminal voltage. Counter/reference chemistry was not verified from the accessible workbook and notebook."
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/isu-uconn-graphite-s2-b7-delithiation.csv",
+        "sha256": "6adaa76a72e92f9a99cf9554b71df9f70cf244cf54eead6b5ad0c2d6fe13e6b6",
+        "point_count": 215,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "isu-uconn-2026-data",
+        "isu-uconn-2026-code",
+        "li-2026-benchmarking"
+      ],
+      "experiment_id": "isu-uconn-graphite-selected-s2",
+      "cell_link": {
+        "cell_id": "isu-uconn-lfp-graphite-lab",
+        "relationship": "same_study_cell_family",
+        "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen."
+      },
+      "provenance": {
+        "asset_ids": [
+          "isu-uconn-workbook",
+          "isu-uconn-author-notebook",
+          "isu-uconn-author-loader"
+        ],
+        "derivation": "measured_capacity_branch_extraction",
+        "location": "LFP_Data.xlsx::12-Graphite Half-cell @ C_20::J:K::block 7",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "sheet": "12-Graphite Half-cell @ C_20",
+          "capacity_column": "J",
+          "voltage_column": "K",
+          "blank_delimited_block_zero_based": 7,
+          "source_rows": [
+            8469,
+            9673
+          ],
+          "source_branch_points": 1205,
+          "tail_points_after_first_capacity_maximum": 23,
+          "duplicate_capacity_points_removed": 967,
+          "changes": "Truncate after first maximum capacity to omit the constant-capacity tail; first occurrence per capacity retained; normalize branch capacity to 0..1. No smoothing/resampling. Direction inferred from electrode potential trend; source cycle IDs unavailable."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+        "Finite-current pseudo-OCP includes polarization and branch hysteresis; not equilibrium OCP.",
+        "Reference chemistry and numerical temperature not verified; Li/Li+ is not asserted. PyBaMM adaptation is blocked until reference evidence is curated.",
+        "Relative branch throughput requires independently justified stoichiometry endpoints; no full-cell SOC mapping is inferred."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "jahn-a123-lfp-model-ocpn",
+      "version": "1",
+      "title": "LFP | A123 18650M1A / Jahn2024 | modeled PD-ECM OCPn",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "jahn-a123-lfp-model-ocpn-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "model_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Characterization protocol at 25 degC per Methods; parameterized model table, not a temperature sensor trace."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "model_soc",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Author model SOC/DOL coordinate, not verified absolute electrode lithium fraction.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/jahn-a123-lfp-model-ocpn.csv",
+        "sha256": "44505f84d141375c46d2201e677e52739cb444d8490210e195fb635bdef8c1d8",
+        "point_count": 399,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "jahn-2024-data-v2",
+        "jahn-2024-code",
+        "jahn-2024-paper"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "a123-18650m1a-jahn2024",
+        "relationship": "same_parameter_set",
+        "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied."
+      },
+      "provenance": {
+        "asset_ids": [
+          "jahn-param-ocpn-lfp-mat",
+          "jahn-pdecm-fullcell-m"
+        ],
+        "derivation": "author_parameterized_pd_ecm_ocpn_nodes",
+        "location": "param_ocpn_lfp.mat::pot_dol, pot",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "changes": "Native pot_dol and positive electrode-potential pot nodes copied unchanged. Source model negates graphite pot during full-cell assembly; this catalog retains its physical positive potential versus Li/Li+. Author spline/PCHIP/extrapolation is not reproduced by the catalog's bounded linear interpolation."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "model_coordinate",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+        "OCPn is approximated and parameterized from electrode data; it cannot be measured directly (paper Parameterization). These arrays are not raw GITT/half-cell measurements.",
+        "Model SOC/DOL is not established as absolute stoichiometry. LFP potential rises with this coordinate. Geometry, balancing and coordinate orientation need explicit review before DFN/SPM/SPMe reuse.",
+        "No intrinsic diffusivity or Butler-Volmer kinetics inferred from ECM quantities."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "jahn-a123-graphite-model-ocpn",
+      "version": "1",
+      "title": "graphite | A123 18650M1A / Jahn2024 | modeled PD-ECM OCPn",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "jahn-a123-graphite-model-ocpn-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "model_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Characterization protocol at 25 degC per Methods; parameterized model table, not a temperature sensor trace."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "model_soc",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Author model SOC/DOL coordinate, not verified absolute electrode lithium fraction.",
+        "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/jahn-a123-graphite-model-ocpn.csv",
+        "sha256": "ca81440492a0af3e2a8e47262f9980dc72f77e4f152f4d3552ad3435e210dd65",
+        "point_count": 602,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "jahn-2024-data-v2",
+        "jahn-2024-code",
+        "jahn-2024-paper"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "a123-18650m1a-jahn2024",
+        "relationship": "same_parameter_set",
+        "evidence": "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied."
+      },
+      "provenance": {
+        "asset_ids": [
+          "jahn-param-ocpn-graphite-mat",
+          "jahn-pdecm-fullcell-m"
+        ],
+        "derivation": "author_parameterized_pd_ecm_ocpn_nodes",
+        "location": "param_ocpn_graphite.mat::pot_dol, pot",
+        "processing": {
+          "script": "scripts/seed_lfp_studies.py",
+          "changes": "Native pot_dol and positive electrode-potential pot nodes copied unchanged. Source model negates graphite pot during full-cell assembly; this catalog retains its physical positive potential versus Li/Li+. Author spline/PCHIP/extrapolation is not reproduced by the catalog's bounded linear interpolation."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "model_coordinate",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Paper Methods names A123 18650M1A and electrode harvesting after intact-cell tests. The deposited author script loads these OCPn MATs and the A123_01 full-cell files. Exact serialized specimen/file mapping is not supplied.",
+        "OCPn is approximated and parameterized from electrode data; it cannot be measured directly (paper Parameterization). These arrays are not raw GITT/half-cell measurements.",
+        "Model SOC/DOL is not established as absolute stoichiometry. LFP potential rises with this coordinate. Geometry, balancing and coordinate orientation need explicit review before DFN/SPM/SPMe reuse.",
+        "No intrinsic diffusivity or Butler-Volmer kinetics inferred from ECM quantities."
       ],
       "license": "CC-BY-4.0"
     }

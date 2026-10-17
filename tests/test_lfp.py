@@ -27,8 +27,8 @@ def cached(catalog, asset_id):
 def test_lfp_coverage_and_match_limits():
     c = Catalog()
     assert len(c.parameters) == 337
-    assert len(c.full_cell_tests) == 25
-    assert len(c.cells) == 9
+    assert len(c.full_cell_tests) == 60
+    assert len(c.cells) == 11
     amp = c.cells["a123-amp20m1hd-a"]
     assert amp["model"] == "AMP20M1HD-A"
     assert amp["match_level"] == "same_model_same_study"

@@ -1,5 +1,8 @@
 # Prepublication review — 2026-10-16
 
+Historical baseline review. The subsequent v0.6.0 LFP import is documented in
+[LFP study packages](LFP_STUDIES.md); its counts supersede the baseline below.
+
 Scope: repository content, data lineage and matching, distribution completeness,
 GitHub data navigation, usage examples and a new source search. The reviewed
 baseline was `a2916ae8aa67d8989cdc0aa4746b312cecc58b9e`. Visibility changes,

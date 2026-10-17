@@ -4,14 +4,16 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.5.0-287b78" alt="Version 0.5.0">
+  <img src="https://img.shields.io/badge/version-0.6.0-287b78" alt="Version 0.6.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
 
 E-BatP is a multi-material library for finding and inspecting inputs to **DFN/P2D, SPM and SPMe** models: electrode OCP curves, diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
-**v0.5.0: 49 OCP records · 11 material families · 337 other parameter records · 25 full-cell test files · 9 cell or parameter-set entries. Three separate temperature-rise sidecars are additional channels, not additional experiments.** The viewer runs locally; no public hosting workflow is configured.
+**v0.6.0: 55 electrode-curve records · 11 material families · 337 other parameter records · 60 full-cell branch/test files · 11 cell or study entries.** Curves comprise 36 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars remain additional channels. The viewer runs locally; no public hosting workflow is configured.
+
+New LFP packages: [ISU-UConn laboratory half/full-cells](data/cells/isu-uconn-lfp-graphite-lab.md) and [A123 18650M1A / Jahn2024](data/cells/a123-18650m1a-jahn2024.md). Read the [selection, matching and missing-channel notes](docs/LFP_STUDIES.md), including ISU's unresolved reference details and A123's modeled OCPn representation.
 
 ## Get the data
 
@@ -32,6 +34,8 @@ No installation is needed to browse or download files from GitHub. Choose a cell
 | [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](data/cells/kim2011-nca-nominal-design.md) | [2 records](data/cells/kim2011-nca-nominal-design.md#ocp-curves) | [38 records](data/cells/kim2011-nca-nominal-design.md#parameters) | Not imported | `unmatched` |
 | [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](data/cells/kokam-slpb75106100-ecker2015.md) | [2 records](data/cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [38 records](data/cells/kokam-slpb75106100-ecker2015.md#parameters) | [2 files](data/cells/kokam-slpb75106100-ecker2015.md#full-cell-tests) | `same_model_same_study` |
 | [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](data/cells/enertech-lco-pouch-ai2020.md) | [2 records](data/cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [38 records](data/cells/enertech-lco-pouch-ai2020.md#parameters) | [4 files](data/cells/enertech-lco-pouch-ai2020.md#full-cell-tests) | `same_study_cell_family` |
+| [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](data/cells/isu-uconn-lfp-graphite-lab.md) | [4 records](data/cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not imported | [21 files](data/cells/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | `same_study_cell_family` |
+| [A123 18650M1A &#124; Jahn2024 LFP/graphite](data/cells/a123-18650m1a-jahn2024.md) | [2 records](data/cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not imported | [14 files](data/cells/a123-18650m1a-jahn2024.md#full-cell-tests) | `same_model_same_study` |
 
 <!-- DATA_QUICKLINKS_END -->
 
@@ -44,19 +48,19 @@ Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaM
 
 ## Material coverage
 
-| Material family | Measured branches | Published tables | Expressions | Identity / interpretation |
-|---|---:|---:|---:|---|
-| LFP | 4 | 0 | 2 | SINTEF laboratory electrodes; Afshar and BPX expressions |
-| Graphite | 4 | 1 | 7 | Distinct effective, figure-fitted or borrowed inputs; no universal graphite curve |
-| NMC111 | 4 | 0 | 0 | SINTEF specimens; commercial full-cell identity unresolved |
-| NMC532 | 4 | 0 | 2 | SINTEF electrodes and Mohtat pouch remain separate sources |
-| NMC811 | 0 | 0 | 1 | LG M50 positive OCP linked to Chen2020 tests |
-| LNMO | 4 | 0 | 0 | High-voltage spinel specimens; distinct from LMO |
-| Silicon | 4 | 0 | 0 | Si-AQ-1 laboratory specimens |
-| Silicon–graphite | 8 | 0 | 0 | SiGr-AQ-1 and SiGr-AQ-2 formulations retained separately |
-| LCO | 0 | 1 | 1 | Enertech published table; separate borrowed Marquis/Dualfoil expression |
-| NCA | 0 | 0 | 1 | Kim2011 nominal design; no commercial-model match |
-| NCO | 0 | 0 | 1 | Ecker/Kokam upstream label; no NMC/NCA composition ratio inferred |
+| Material family | Measured branches | Published tables | Expressions | Modeled OCPn | Identity / interpretation |
+|---|---:|---:|---:|---:|---|
+| LFP | 6 | 0 | 2 | 1 | SINTEF and ISU laboratory electrodes; A123 PD-ECM model; Afshar and BPX expressions |
+| Graphite | 6 | 1 | 7 | 1 | Distinct measured, modeled, figure-fitted and borrowed inputs; reference/coordinate labels retained |
+| NMC111 | 4 | 0 | 0 | 0 | SINTEF specimens; commercial full-cell identity unresolved |
+| NMC532 | 4 | 0 | 2 | 0 | SINTEF electrodes and Mohtat pouch remain separate sources |
+| NMC811 | 0 | 0 | 1 | 0 | LG M50 positive OCP linked to Chen2020 tests |
+| LNMO | 4 | 0 | 0 | 0 | High-voltage spinel specimens; distinct from LMO |
+| Silicon | 4 | 0 | 0 | 0 | Si-AQ-1 laboratory specimens |
+| Silicon–graphite | 8 | 0 | 0 | 0 | SiGr-AQ-1 and SiGr-AQ-2 formulations retained separately |
+| LCO | 0 | 1 | 1 | 0 | Enertech published table; separate borrowed Marquis/Dualfoil expression |
+| NCA | 0 | 0 | 1 | 0 | Kim2011 nominal design; no commercial-model match |
+| NCO | 0 | 0 | 1 | 0 | Ecker/Kokam upstream label; no NMC/NCA composition ratio inferred |
 
 LMO and LTO are deferred until a reusable source and its definitions can be verified; LNMO is not relabeled as LMO. All measured branches retain their own direction and relative-throughput coordinate. Formula domains describe numerical evaluation and do not establish experimental fit validity.
 
@@ -64,6 +68,8 @@ LMO and LTO are deferred until a reusable source and its definitions can be veri
 
 | Cell / material | OCP | Diffusion & kinetics | Full-cell observations | Match evidence |
 |---|---|---|---|---|
+| **ISU-UConn LFP/graphite CR2032 family** | 4 C/20 pseudo-OCP branches, reference details unresolved | Not imported | 21 V-Q branches from 11 configurations; no I/t/T | **Same study family.** No commercial identity or identical harvested-specimen claim |
+| **A123 18650M1A / Jahn2024** | 2 modeled PD-ECM OCPn tables; raw electrode points absent | Not imported; ECM quantities are not intrinsic DFN inputs | 14 exported arrays/branches, including low-rate cycle, incremental OCV, power tests and partial loops | **Same named model and study.** I present only in power/loop tests; T absent |
 | **A123 AMP20M1HD-A, 20 Ah LFP pouch** | C/25 full-cell pseudo-OCV reported; electrode OCP points not located in the selected deposit | 27 Table 1 values at 30/50/70% SOC + 3 conditional diffusivities; shared diffusion time, volumetric kinetics, transport and thermal fits | 1 Cell I 4C full-discharge trace; current, voltage and thermal-grid mean | **Same commercial model, same study.** Table 1 specimen letter unresolved; no identical-specimen claim |
 | **A123 high-power 9 Ah LFP pouch** | External full-cell pseudo-OCV workbooks indexed; redistribution license unresolved | Model assumes fast diffusion; no finite diffusivity or kinetic fit imported | 10 CC charge/discharge files at 2/4/6/8/10C | **Same study family.** Exact part number and per-file serial undisclosed |
 | **BPX LFP/graphite 2 Ah 18650 example** | 2 electrode expressions with supplied stoichiometry bounds | 46 scalar values, including two diffusivities, BPX rate constants and activation energies | No matching raw tests supplied | **Unmatched commercial identity.** Chemistry, capacity and format do not identify a cell model |

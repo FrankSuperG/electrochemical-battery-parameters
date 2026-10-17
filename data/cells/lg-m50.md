@@ -16,10 +16,10 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 
 ## OCP curves
 
-| Record | Electrode / material | Coordinate and domain | CSV | Metadata |
-|---|---|---|---|---|
-| `graphite-chen2020-formula` | negative / graphite | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/graphite-chen2020-formula-sampled.csv) | [JSON](../ocp/graphite-chen2020-formula.json) |
-| `nmc811-lgm50-chen2020-formula` | positive / NMC811 | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/nmc811-lgm50-chen2020-formula-sampled.csv) | [JSON](../ocp/nmc811-lgm50-chen2020-formula.json) |
+| Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
+|---|---|---|---|---|---|
+| `graphite-chen2020-formula` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/graphite-chen2020-formula-sampled.csv) | [JSON](../ocp/graphite-chen2020-formula.json) |
+| `nmc811-lgm50-chen2020-formula` | positive / NMC811 | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](../ocp/nmc811-lgm50-chen2020-formula-sampled.csv) | [JSON](../ocp/nmc811-lgm50-chen2020-formula.json) |
 
 Read each JSON for branch direction, source conditions and coordinate meaning. Generated formula samples are not measured OCP points.
 

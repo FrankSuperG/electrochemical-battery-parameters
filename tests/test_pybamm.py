@@ -45,3 +45,17 @@ def test_reverse_direction_mapping_retains_voltage_order():
     actual = float(np.asarray(symbol.evaluate(inputs={"sto": 0.5})).item())
     assert actual == pytest.approx(curve(0.5), abs=1e-12)
     assert function.ebp_metadata["mapping"]["evidence"] == mapping.evidence
+
+
+@pytest.mark.parametrize("material", ["lfp", "graphite"])
+def test_model_ocpn_explicit_mapping_keeps_model_label_and_native_values(material):
+    curve = Catalog().get(f"jahn-a123-{material}-model-ocpn")
+    mapping = StoichiometryMapping(.1, .9, "Hypothetical test-only mapping; not a scientific balancing result")
+    function = curve.to_pybamm(mapping=mapping)
+    symbol = function(pybamm.InputParameter("sto"))
+    source_x = .4137
+    actual = float(np.asarray(symbol.evaluate(inputs={"sto": .1+.8*source_x})).item())
+    assert actual == pytest.approx(curve(source_x),abs=1e-12)
+    assert function.ebp_metadata["measurement"] == "model_ocp"
+    assert function.ebp_metadata["coordinate_kind"] == "model_soc"
+    assert not function.ebp_metadata["independently_validated"]

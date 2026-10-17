@@ -1,0 +1,193 @@
+{
+  "record": {
+    "id": "isu-uconn-graphite-s2-b7-delithiation",
+    "version": "1",
+    "title": "graphite | ISU-UConn S2 | C/20 pseudo-OCP | block 7 delithiation",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "isu-uconn-graphite-s2-b7-delithiation-material",
+    "electrode_role": "negative",
+    "direction": "delithiation",
+    "measurement": "pseudo_ocp",
+    "temperature": {
+      "value_K": null,
+      "description": "Numeric temperature/setpoint not verified from the accessible workbook and author notebook."
+    },
+    "reference": "unresolved",
+    "x": {
+      "kind": "normalized_branch_capacity",
+      "symbol": "x",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Passed capacity normalized over this retained branch; not absolute stoichiometry or full-cell SOC.",
+      "domain_basis": "Retained native coordinate endpoints; no extrapolation."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Published half-cell terminal voltage. Counter/reference chemistry was not verified from the accessible workbook and notebook."
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/isu-uconn-graphite-s2-b7-delithiation.csv",
+      "sha256": "6adaa76a72e92f9a99cf9554b71df9f70cf244cf54eead6b5ad0c2d6fe13e6b6",
+      "point_count": 215,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "isu-uconn-2026-data",
+      "isu-uconn-2026-code",
+      "li-2026-benchmarking"
+    ],
+    "experiment_id": "isu-uconn-graphite-selected-s2",
+    "cell_link": {
+      "cell_id": "isu-uconn-lfp-graphite-lab",
+      "relationship": "same_study_cell_family",
+      "evidence": "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen."
+    },
+    "provenance": {
+      "asset_ids": [
+        "isu-uconn-workbook",
+        "isu-uconn-author-notebook",
+        "isu-uconn-author-loader"
+      ],
+      "derivation": "measured_capacity_branch_extraction",
+      "location": "LFP_Data.xlsx::12-Graphite Half-cell @ C_20::J:K::block 7",
+      "processing": {
+        "script": "scripts/seed_lfp_studies.py",
+        "sheet": "12-Graphite Half-cell @ C_20",
+        "capacity_column": "J",
+        "voltage_column": "K",
+        "blank_delimited_block_zero_based": 7,
+        "source_rows": [
+          8469,
+          9673
+        ],
+        "source_branch_points": 1205,
+        "tail_points_after_first_capacity_maximum": 23,
+        "duplicate_capacity_points_removed": 967,
+        "changes": "Truncate after first maximum capacity to omit the constant-capacity tail; first occurrence per capacity retained; normalize branch capacity to 0..1. No smoothing/resampling. Direction inferred from electrode potential trend; source cycle IDs unavailable."
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "relative_capacity_only",
+      "raw_data": "published_table_not_instrument_raw",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Author notebook cells 6 and 8 use the selected LFP/graphite half-cell pair for eleven full-cell configurations in the same laboratory study. Shared MTI electrode family, not an identified commercial model or proven identical harvested specimen.",
+      "Finite-current pseudo-OCP includes polarization and branch hysteresis; not equilibrium OCP.",
+      "Reference chemistry and numerical temperature not verified; Li/Li+ is not asserted. PyBaMM adaptation is blocked until reference evidence is curated.",
+      "Relative branch throughput requires independently justified stoichiometry endpoints; no full-cell SOC mapping is inferred."
+    ],
+    "license": "CC-BY-4.0"
+  },
+  "sources": {
+    "isu-uconn-2026-data": {
+      "kind": "dataset",
+      "title": "ISU-UConn LFP/Graphite Emulated Degradation Dataset",
+      "authors": [
+        "Yifan Zhang",
+        "Tingkai Li",
+        "Shan Hu",
+        "Chao Hu"
+      ],
+      "year": 2026,
+      "url": "https://digitalcommons.lib.uconn.edu/reil_datasets/6/",
+      "license": "CC-BY-4.0",
+      "version": "Author-hosted workbook at commit 1188c371e5836df4a7e5f5acf336a34ffd4027e6",
+      "license_evidence": "Primary deposit Terms of Use CC BY 4.0; pinned author README explicitly assigns this workbook to that dataset (checked 2026-10-17).",
+      "role": "Laboratory CR2032 half/full-cell voltage-capacity observations. Author-hosted copy; byte identity to university download not established (HTTP 403)."
+    },
+    "isu-uconn-2026-code": {
+      "kind": "software",
+      "title": "REIL-UConn half-cell fitting notebook and loader",
+      "authors": [
+        "Tingkai Li",
+        "Yifan Zhang",
+        "Benjamin Nowacki",
+        "Sina Navidi",
+        "Thomas Schmitt",
+        "Shan Hu",
+        "Chao Hu"
+      ],
+      "year": 2026,
+      "url": "https://github.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/tree/1188c371e5836df4a7e5f5acf336a34ffd4027e6",
+      "version": "1188c371e5836df4a7e5f5acf336a34ffd4027e6",
+      "license": "MIT",
+      "role": "Selection and linkage evidence only; no author code executed or copied into project code. Dataset has separate CC BY 4.0 terms."
+    },
+    "li-2026-benchmarking": {
+      "kind": "paper",
+      "title": "Benchmarking half-cell model fitting approaches for lithium-ion battery degradation diagnostics",
+      "authors": [
+        "Tingkai Li",
+        "Yifan Zhang",
+        "Benjamin Nowacki",
+        "Sina Navidi",
+        "Thomas Schmitt",
+        "Shan Hu",
+        "Chao Hu"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.etran.2026.100593",
+      "url": "https://doi.org/10.1016/j.etran.2026.100593",
+      "role": "Scientific study associated by primary deposit and author repository; full experimental procedures were not accessible in this import."
+    }
+  },
+  "experiment": {
+    "source_id": "isu-uconn-2026-data",
+    "asset_id": "isu-uconn-workbook",
+    "sample_id": "S2 (pair J:K after the latest date marker)",
+    "configuration": "Laboratory CR2032 half-cell; detailed counter/reference construction not verified because primary README returned HTTP 403.",
+    "protocol": "C/20 half-cell cycling per deposit and sheet name; blocks 6 and 7 (zero-based blank-delimited capacity branches).",
+    "cycle_selected": null,
+    "cycle_selection_reason": "Block 6 / S2 is selected by author notebook cell 6; block 7 is the following reverse branch. No instrument cycle IDs are supplied.",
+    "temperature_K": null,
+    "temperature_description": "Numeric temperature not supplied in accessible workbook/notebook.",
+    "electrode_metadata": {
+      "supplier": "MTI Corporation per primary deposit",
+      "sheet": "12-Graphite Half-cell @ C_20",
+      "capacity_column": "J"
+    },
+    "known_issues": [
+      "Reference chemistry not independently verified",
+      "No current/time/temperature columns"
+    ]
+  },
+  "upstream_assets": {
+    "isu-uconn-workbook": {
+      "filename": "isu-uconn-LFP_Data.xlsx",
+      "url": "https://raw.githubusercontent.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/1188c371e5836df4a7e5f5acf336a34ffd4027e6/LFP_Data.xlsx",
+      "source_id": "isu-uconn-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "fd50e09542be7adb2270963d65a6e7b5ccae1473a512f68462c2dd419d620ee1",
+      "path": "evidence/isu-uconn-LFP_Data.xlsx"
+    },
+    "isu-uconn-author-notebook": {
+      "filename": "isu-uconn-Benchmarking_LFP_final.ipynb",
+      "url": "https://raw.githubusercontent.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/1188c371e5836df4a7e5f5acf336a34ffd4027e6/Benchmarking_LFP_final.ipynb",
+      "source_id": "isu-uconn-2026-code",
+      "license": "MIT",
+      "sha256": "388f2a6f101abf42ef8c7c1c627b7046e8bf900b913d22f83435b39eb81a9e29"
+    },
+    "isu-uconn-author-loader": {
+      "filename": "isu-uconn-util_LFP.py",
+      "url": "https://raw.githubusercontent.com/REIL-UConn/Multi-Objective-Optimization-for-Lithium-Ion-Battery-Degradation-Diagnostics/1188c371e5836df4a7e5f5acf336a34ffd4027e6/util_LFP.py",
+      "source_id": "isu-uconn-2026-code",
+      "license": "MIT",
+      "sha256": "3c19e45ef8a64ce67cda1f623551e758d4c0f67086bbae02b978428d78de1c76"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

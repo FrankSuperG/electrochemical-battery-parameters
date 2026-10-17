@@ -52,6 +52,15 @@ asserted. A sidecar is an additional channel, not another independent experiment
 
 ## Additional association status
 
+The [v0.6 LFP study packages](LFP_STUDIES.md) add four ISU-UConn C/20
+pseudo-OCP branches with 21 full-cell V-Q branches from eleven laboratory
+configurations, and two modeled A123 18650M1A PD-ECM OCPn tables with fourteen
+whole-cell branch/array exports. ISU is a study-family association with unknown
+reference detail and no I/t/T. A123 is a same-model/same-study chain with measured
+I only in power/loop tests, no temperature trace, and no raw electrode OCP.
+Neither addition fills intrinsic diffusion/kinetic or identical-specimen gaps.
+Do not join this 18650M1A to AMP20, the 9 Ah pouch or APR18650M1B by brand/chemistry.
+
 | Candidate | Evidence | Status / required work |
 |---|---|---|
 | Mohtat2020 NMC532/graphite | [Official deposit retrieved](https://deepblue.lib.umich.edu/data/concern/data_sets/kp78gg60j), five charging files and original author code | **Imported in v0.5.** Capacity/voltage/temperature available; measured current/time, discharge and C/20 exports absent. Author/PyBaMM variants and Cover2 protocol conflict are documented in [MOHTAT2020.md](MOHTAT2020.md). |

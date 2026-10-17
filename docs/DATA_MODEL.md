@@ -20,6 +20,7 @@ The authoritative catalog is `src/ebp/data/`, distributed inside the Python pack
 
 - `stoichiometry`: electrode lithium fraction θ. BPX bounds are the exact example's operating minimum/maximum; the older PyBaMM formulas retain their mathematical 0..1 domain without claiming independently verified fit validity.
 - `normalized_branch_capacity`: cumulative charge throughput over the selected branch, normalized to 0..1. It follows test progress and does not establish absolute lithium fraction or whole-cell SOC.
+- `model_soc`: author model SOC/DOL coordinate. The Jahn2024 single-string PD-ECM coordinate is not verified absolute stoichiometry and is kept separate from measured branch throughput.
 - Table CSVs retain potential, capacity, current, time and upstream row coordinates. Linear interpolation is default; PCHIP is optional. Formula CSVs are generated samples and remain labeled as such.
 - Unknown numeric temperatures are `null`. A model reference temperature is distinguished from a verified measurement temperature.
 
@@ -31,11 +32,11 @@ Parameters use `representation.kind=scalar` or a restricted expression with name
 |---|---|
 | `material_only` | Material/electrode identity; no commercial cell link |
 | `unmatched` | A parameter example exists, but commercial model and raw-test match are unresolved |
-| `same_study_cell_family` | Explicit study association and manufacturer/capacity/format; part number unresolved |
+| `same_study_cell_family` | Explicit study/electrode/configuration family association; commercial part may be unresolved or inapplicable to laboratory cells |
 | `parameter_set_only` | Parameters and OCP share a named implementation; no matched raw test or same-specimen measurement claim |
 | `same_model_same_study` | Exact model named in the paper and linked experiment deposit; does not imply identical specimen |
 
-OCP `cell_link.relationship=same_parameter_set` means a fit is stored in the same BPX example. It does not establish a commercial-model identity. Read the cell's `identity_level` and `match_level` together. No record currently establishes an identical characterization/validation specimen or independent validation by this project.
+OCP `cell_link.relationship=same_parameter_set` means the curve is part of the same source model (for example BPX or Jahn2024). It does not by itself establish a commercial-model identity. `same_study_cell_family` is also available for electrode curves associated with laboratory full-cell configurations. Read the cell's `identity_level` and `match_level` together. No record currently establishes an identical characterization/validation specimen or independent validation by this project.
 
 ## Normalized full-cell observations
 
@@ -68,3 +69,33 @@ charge-current magnitudes are protocol metadata only. Parameter conditions use
 `parameterization_variant` to separate author MPM inputs from the pinned PyBaMM
 implementation; same-study association does not mean identical coefficients.
 Offline cell ZIPs include scoped data, available source bytes, metadata and notices.
+
+## Electrode-model and laboratory branches in v0.6
+
+`measurement=model_ocp` explicitly identifies the parameterized Jahn2024 PD-ECM
+single-string OCPn tables. They are tabulated model inputs, not instrument OCP
+or raw GITT. `x.kind=model_soc` preserves their author coordinate; an explicit
+`StoichiometryMapping` is required for PyBaMM adaptation and its metadata retains
+the model label. Original node values are unchanged; bounded catalog interpolation
+does not reproduce the entire source model's spline/extrapolation/balancing.
+
+`reference=unresolved` is used for the ISU half-cell records because accessible
+workbook/notebook evidence does not verify reference construction. Their voltage
+is not automatically labeled versus Li/Li+. The adapter rejects such records
+until reference evidence is curated, even if mapping endpoints are supplied.
+Plots separate reference and model-coordinate groups.
+
+`independent_variable.column=passed_capacity_Ah` covers source branch capacity
+in the ISU workbook and the explicit Q-Q_start / Q_start-Q transformation for
+Jahn incremental whole-cell OCV. Original Q remains in a separate source column.
+Time/current stay blank where missing. Repeated full-cell branch capacities and
+constant-capacity tails are retained; half-cell interpolation tables use the
+documented first-occurrence/cutoff rule. Full-cell exports may be individual
+branches or MAT arrays, so file counts are not specimen counts.
+
+`basic_test.type` additionally supports constant-current full cycles, current
+steps, partial cycles and incremental whole-cell OCV. The latter is not a
+continuous CC time series or electrode OCP. `source_record` is one-based Excel
+row for ISU and zero-based CSV/array sample for Jahn; exact source locations and
+original bytes are provided. Blank cycle IDs do not invent instrument cycles.
+See [LFP study selections and missing items](LFP_STUDIES.md).
