@@ -5,6 +5,10 @@ transport, thermal properties and the full-cell experiments that help interpret
 them. A useful contribution can be one well-documented curve or a source lead;
 it does not need to be a complete model parameter set.
 
+The project curates parameters and associated experiments. Model simulation,
+parameter fitting and model validation are outside its scope. Published fitted
+values are welcome when their source definitions and evidence are retained.
+
 Open an issue or pull request when repository access permits. If access is
 restricted, invited collaborators can use those routes and other researchers
 can email [Feng Guo](mailto:feng.guo@vito.be) with a source link or contribution
@@ -47,8 +51,8 @@ not an automatic import format. Maintainers review and map them to the catalog.
    when processing is needed. Keep unmodified source bytes where reuse permits.
 5. **Evidence and gaps:** measured, fitted, derived, borrowed or assumed origin;
    missing channels and identity information; source conflicts; and whether any
-   trace informed fitting. A parameter source's validation claim is distinct
-   from an independent validation performed by this project.
+   trace informed fitting. Keep any source-reported model results attributed
+   to that source; they are not results produced by this catalog.
 
 Use `unknown` or `not reported` in the Markdown submission when information is
 missing. In CSVs, leave unavailable measurements empty; zero is a measured value.
@@ -103,5 +107,5 @@ git diff --exit-code -- src/ebp/data
 Stage the intended generated data before this comparison so that the diff checks
 reconstruction against your proposed records. Avoid unrelated staged changes.
 Source downloads may need network access. Report checks not run and why. A
-source-only issue or a documentation-only contribution does not require model
-simulation or a full data reconstruction.
+source-only issue or a documentation-only contribution does not require a full
+data reconstruction. Model simulation is not required for a data contribution.

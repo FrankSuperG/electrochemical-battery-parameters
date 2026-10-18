@@ -99,8 +99,8 @@ links, formula labels, complete-data targets and parameter variant separation.
   project has not independently audited every original paper equation or fit.
 - Same-model/same-study is not same specimen. Current per-cell gaps remain
   material to transferring a parameterization into a model.
-- CPG-SPMT still requires its documented interface, grouping and equation review;
-  this repository review does not resolve those model-level questions.
+- Model simulation, fitting and validation are outside this catalog's scope;
+  this review covers data, source evidence and access.
 - Browser interaction/visual QA was not repeated. The previously declined
   localhost browser origin was not retried. Static and file-export checks do
   not establish browser layout or interaction behavior.

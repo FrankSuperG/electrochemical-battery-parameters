@@ -1,4 +1,4 @@
-"""Command-line search, inspection, export, validation, and private local preview."""
+"""Command-line search, inspection, export, data checks, and private local preview."""
 
 import argparse
 from functools import partial
@@ -43,7 +43,7 @@ def main(argv=None):
         "--count", type=int, help="Resample explicitly; default preserves table points"
     )
     export.add_argument("--method", choices=["linear", "pchip"], default="linear")
-    sub.add_parser("validate")
+    sub.add_parser("validate", help="Check data schemas, references, values and SHA-256 hashes")
     build = sub.add_parser("build-site")
     build.add_argument("--output", type=Path, default=Path("site"))
     serve = sub.add_parser("serve", help="Build and serve only on 127.0.0.1")

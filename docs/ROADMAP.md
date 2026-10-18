@@ -1,5 +1,9 @@
 # Roadmap
 
+This roadmap covers parameter and experimental-data curation, provenance,
+matching and access. Model simulation, parameter fitting and model validation
+are outside the project's scope.
+
 ## Completed in v0.1
 
 - Eight measured LFP/graphite pseudo-OCP branches and two attributed expressions.
@@ -29,13 +33,13 @@ public entrances, licenses, inspected file structures and remaining match gaps.
 Candidate data are not part of the current catalog counts.
 
 1. Verify reusable LMO/LTO sources and locate electrode-resolved OCP and characterization data for an exactly identified commercial LFP model with matching full-cell experiments.
-2. Extend the AMP20 experiment collection to fitting and held-out pulse tests; establish specimen mapping using supplementary evidence.
+2. Extend the AMP20 experiment collection with deposited pulse tests; retain each trace's source-reported role and establish specimen mapping using supplementary evidence.
 3. Audit BPX per-field origins and support electrolyte/entropy functions without changing their independent variables or units.
 4. Curate GITT/EIS processing with geometry, concentration, electrode-area and identifiability assumptions.
-5. Build the audited [CPG-SPMT adapter](CPG_SPMT_VALIDATION.md), starting with a no-refit LG M50 voltage comparison. Resolve OCP injection, timing, voltage clipping, kinetic signs and parameter grouping first; preserve fit/validation separation. Supplied temperature is an input, not an independently predicted output.
+5. Improve data discovery, source-linked exports and contribution templates while keeping missing measurements and uncertain matches explicit.
 6. Add uncertainty only when supported by repeated observations or published estimates.
 
-Public hosting, PyPI publication and automated parameter identification remain separate future decisions. Current cell packages are partial data collections, not validated plug-and-play models.
+Public hosting and PyPI publication remain separate future decisions. Current cell packages are partial data collections; scientific parameter definitions and source conventions remain explicit.
 
 ## v0.4 follow-up gaps
 

@@ -92,7 +92,8 @@ change workflow. Tests build the optional viewer without deploying it.
 
 Browser interaction and visual QA of the optional local viewer were not rerun
 in this review; JavaScript syntax, generated files and download contents are
-checked. No CPG-SPMT fit or independent full-cell prediction is claimed.
+checked. Model simulation, fitting and validation are outside the catalog's
+scope; this review covers data and software consistency.
 
 ## Remaining scientific coverage limits
 

@@ -17,7 +17,7 @@ restricted, sign in with an account that has access.
 | LFP laboratory half/full-cell V-Q association | [ISU-UConn](../data/cells/isu-uconn-lfp-graphite-lab.md) | Four C/20 pseudo-OCP branches and 21 full-cell branches from 11 configurations; reference details and I/t/T remain unresolved |
 | A123 electrode-model potentials and current/voltage tests | [18650M1A / Jahn2024](../data/cells/a123-18650m1a-jahn2024.md) | Two modeled OCPn tables and 14 full-cell branch/array exports; current only in power/loop files, no temperature trace |
 | Mohtat author inputs and charge data | [Mohtat2020](../data/cells/mohtat2020-nmc532-pouch.md) | Separate author/PyBaMM parameter variants and five V–Q/T–Q files; measured current and original time are absent |
-| Grouped SPMe and same-study dynamic validation data | [LG M50LT / Hallemans2025](../data/cells/lg-m50lt-hallemans2025.md) | 18 fitted groups, measured t/I/V drive cycle and EIS evidence; OCP reuse permission, temperature and standalone CC observations remain missing |
+| Grouped SPMe parameters and same-study drive-cycle measurements | [LG M50LT / Hallemans2025](../data/cells/lg-m50lt-hallemans2025.md) | 18 fitted groups, measured t/I/V drive cycle and EIS evidence; OCP reuse permission, temperature and standalone CC observations remain missing |
 | MJ1 OCP, diffusion and kinetics with source tables | [LG MJ1 / DLR-SINTEF](../data/cells/lg-mj1-dlr-sintef.md) | Four pseudo-OCP branches, 22 scalars and 20 native tables; model/direction variants and original error bounds retained. No intact-cell full-cell test verified |
 
 Parameters CSVs include a `name`, `category`, `unit`, `definition`, conditions,
@@ -169,7 +169,7 @@ time or exported measured current. Do not manufacture these from a C-rate, Q/I
 or a row index. Temperature is measured against capacity; the current evidence
 supports nominal-protocol V–Q comparison rather than a measured-input V–t test.
 
-## File locations and model integration
+## File locations and parameter export
 
 | Location | Role |
 |---|---|
@@ -184,7 +184,9 @@ not from the JSON export's folder. The export provides `canonical_data_root`
 (under `export` for OCP metadata) so those paths can be resolved from a checkout.
 Primary-source URLs are also retained for originals stored externally.
 
-For model use, read the [PyBaMM OCP example](../examples/pybamm_ocp.py) or the
-[CPG-SPMT integration audit](CPG_SPMT_VALIDATION.md). Electrode balancing,
-initial state, kinetic definitions and parameter grouping require explicit
-choices. The files and data checks do not establish independent model accuracy.
+For optional OCP-format conversion, read the
+[PyBaMM OCP export example](../examples/pybamm_ocp.py). It constructs an OCP
+component without running a cell simulation. Electrode balancing, initial state,
+kinetic definitions and parameter grouping remain the data user's responsibility.
+This repository provides parameters, associated observations and provenance;
+model simulation, fitting and validation are outside its scope.

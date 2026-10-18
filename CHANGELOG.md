@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- Focused the project on parameter and experimental-data curation, provenance,
+  matching and export. Removed the CPG-SPMT validation plan and benchmark roadmap.
+- Clarified that `ebp validate` checks catalog integrity and that optional
+  PyBaMM support exports OCP components without running a cell model.
+- Retained associated full-cell observations, source-reported model context,
+  matching evidence, missing-item ledgers and per-source reuse terms.
+
 ## 0.8.0 — 2026-10-17
 
 - Curated LG MJ1 / DLR-SINTEF: four finite-current pseudo-OCP tables, 22 scalar/specification records, eight laboratory D/i0 tables and twelve direction/model-specific GITT diffusion tables with original error bounds. No intact-cell full-cell trace was verified or imported.
@@ -37,7 +46,7 @@
 - Added 33 author inputs and two OCP expressions alongside, rather than replacing, the PyBaMM variant; documented the graphite-offset and other model differences.
 - Reached 49 OCP records, 337 other parameters, 25 full-cell files, 9 cell/model entries and 11 material families.
 - Added offline cell ZIPs, parameter-variant selection, GitHub data navigation and scoped CSV/JSON downloads, with executable usage examples.
-- Added contribution templates, source-suggestion and PR templates, maintainer contact details, and an initial CPG-SPMT integration audit without claiming a new model-validation result.
+- Added contribution templates, source-suggestion and PR templates, and maintainer contact details. The initial CPG-SPMT integration note was removed in the later data-only scope revision.
 
 ## 0.4.0 — 2026-10-16
 
@@ -74,4 +83,4 @@
 - Added Python and CLI search/evaluation/export, optional PyBaMM OCP components,
   static local browsing, parameter inspection, comparison, and data downloads.
 - Added schemas, provenance reproduction, package checks, tests, CI, and per-asset licensing.
-- Full-cell model validation and complete parameter sets remain future work.
+- At that release, full-cell model validation and complete parameter sets were deferred. The current scope covers parameter and experimental-data curation.

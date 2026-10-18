@@ -11,11 +11,13 @@
 
 E-BatP is a multi-material library of traceable lithium-ion battery parameters and experimental records for **Doyle-Fuller-Newman (DFN/P2D)**, **single-particle (SPM)** and **single-particle with electrolyte dynamics (SPMe)** models. It covers electrode **open-circuit potential (OCP)** curves, solid-state diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
-Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-current data, **EIS** (electrochemical impedance spectroscopy) evidence, and full-cell tests including **constant-current charge/discharge** and drive cycles. Start with [OCP by material](data/ocp/README.md) for LFP, NMC, graphite and other electrodes, or [cell and study entries](data/README.md) for model-specific records. Source licenses, match levels and missing channels are explicit; entries can be partial references rather than complete, independently validated parameter sets.
+Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-current data, **EIS** (electrochemical impedance spectroscopy) evidence, and full-cell tests including **constant-current charge/discharge** and drive cycles. Start with [OCP by material](data/ocp/README.md) for LFP, NMC, graphite and other electrodes, or [cell and study entries](data/README.md) for model-specific records. Source licenses, match levels and missing channels are explicit; entries can be partial references.
+
+**Project scope:** curate, document and export electrochemical parameters and associated experimental data. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
 **v0.8.0: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
-New characterization package: [LG MJ1 / DLR-SINTEF](data/cells/lg-mj1-dlr-sintef.md): four pseudo-OCP branches, 22 scalar/specification records and 20 native parameter tables, including model/direction-specific GITT fits. Read the [MJ1 source and matching review](docs/LG_MJ1.md). **Same-study intact-cell validation remains missing.** The [public-release readiness review](docs/RELEASE_READINESS.md) records checked boundaries and remaining gaps.
+New characterization package: [LG MJ1 / DLR-SINTEF](data/cells/lg-mj1-dlr-sintef.md): four pseudo-OCP branches, 22 scalar/specification records and 20 native parameter tables, including model/direction-specific GITT fits. Read the [MJ1 source and matching review](docs/LG_MJ1.md). **Same-study intact-cell test data remain missing.** The [public-release readiness review](docs/RELEASE_READINESS.md) records checked boundaries and remaining gaps.
 
 Earlier matched study: [LG M50LT / Hallemans2025](data/cells/lg-m50lt-hallemans2025.md), with 18 grouped fitted values and 164,953 measured drive-cycle t/I/V rows. Read the [definitions, OCP reuse review and missing-item ledger](docs/HALLEMANS2025.md). OCP permission remains unresolved; no M50LT electrode curves are redistributed.
 
@@ -92,7 +94,7 @@ LMO and LTO are deferred until a reusable source and its definitions can be veri
 
 A record is one stored value, expression or measured branch—not an independent experiment. The 30 AMP20 parameter records include repeated conditions and three derived values. The three v0.3 model sets and the two v0.4 additions each contribute 38 records, with temperature-dependent diffusivities kept as functions. These are partial packages with explicit gaps, not independently validated, drop-in model parameter sets.
 
-The strongest LFP association is [Lin et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/) and its [Oxford experiment deposit](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513). Its fitted diffusion time is shared by both electrodes. We expose `D = r²/t_d` using the implementation's **assumed 5 µm radius**, with that condition attached; it is not an independently measured intrinsic LFP diffusivity. The deposited full-discharge trace is linked for future model comparison; this project has not reproduced the paper's validation.
+The strongest LFP association is [Lin et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/) and its [Oxford experiment deposit](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513). Its fitted diffusion time is shared by both electrodes. We expose `D = r²/t_d` using the implementation's **assumed 5 µm radius**, with that condition attached; it is not an independently measured intrinsic LFP diffusivity. The deposited full-discharge trace is retained as associated experimental data.
 
 ## Full-cell matching and basic tests
 
@@ -119,6 +121,8 @@ python -m pip install -e .
 ebp validate
 ebp serve
 ```
+
+`ebp validate` checks data schemas, references, coordinates, values and checksums. It does not run an electrochemical model.
 
 Run `ebp cells` to find stable cell IDs. Open [the local viewer](http://127.0.0.1:8765). Filter and compare OCPs, switch between cell packages, inspect coverage and parameter origins, and download data with metadata. Choose **Offline bundle ZIP** to download a cell's data, metadata, available originals and licenses together. Use the **Variant** filter to distinguish the Mohtat author model from PyBaMM inputs. The viewer uses local assets, without CDNs, analytics or remote fonts. `ebp serve` binds to `127.0.0.1`; `ebp build-site --output site` only writes static files.
 
@@ -167,7 +171,7 @@ print(D(sto=0.5, T=298.15))   # m²/s; source model function, not a new measurem
 silicon = catalog.search(material="silicon", representation="table")
 ```
 
-## Optional PyBaMM OCP adapter
+## Optional PyBaMM OCP export
 
 ```bash
 python -m pip install -e '.[pybamm]'
@@ -176,16 +180,14 @@ PYBAMM_DISABLE_TELEMETRY=true python examples/pybamm_ocp.py
 
 `curve.to_pybamm()` creates a linear `pybamm.Interpolant` with extrapolation disabled. Expressions are sampled for this conversion. Measured branch-throughput curves require an explicit `StoichiometryMapping(theta_start, theta_end, evidence)`: no absolute electrode balancing is inferred. The adapter supplies an OCP component, not a complete cell model.
 
-## Scientific boundaries
-
-CPG-SPMT is the planned first full-cell benchmark. The [integration audit](docs/CPG_SPMT_VALIDATION.md) records the reviewed implementation, conditional parameter-group mappings, dataset readiness, equation checks and fit/holdout policy. No new model-accuracy result is claimed.
+## Data scope and interpretation
 
 - **Electrode OCP, full-cell pseudo-OCV and loaded terminal voltage remain distinct.** Neither Oxford study's conventional allocation of full-cell OCV establishes measured half-cell OCPs.
 - **Electrode lithium fraction, normalized branch throughput and whole-cell SOC remain distinct.** Plots group different coordinate types and directions separately.
 - **Kinetic definitions travel with values.** AMP20 volumetric exchange current in A/m³, LG surface exchange-current laws, and BPX rate constants in mol/(m²·s) cannot be substituted directly.
 - **Measured, fitted, derived, borrowed and assumed origins remain visible.** Optimizer initial guesses are not imported as fitted results. BPX's estimated thermal properties are labeled.
 - **Unknown information stays unknown.** Room temperature does not become 298.15 K; nominal capacity does not create a commercial identity; a study link does not establish the same specimen.
-- **No independent full-cell model validation is claimed.** Data checks and adapter tests establish implementation consistency, not DFN/SPM/SPMe predictive accuracy.
+- **Data checks establish catalog consistency.** Schema, source-value and export checks do not establish model-prediction accuracy.
 
 PyBaMM's `Prada2013` file borrows its LFP OCP from Afshar2017 and its graphite OCP from Chen2020. Scientific attribution is recorded per function. BPX electrolyte and entropy sources are disclosed in its header; those non-OCP functions/tables are not yet imported.
 
@@ -241,7 +243,7 @@ See the [prepublication review](docs/PREPUBLICATION_REVIEW.md) for the current a
 
 **Feng Guo** conducts battery research at VITO and UHasselt in Belgium as an FWO Senior Postdoctoral Fellow. He works on electrochemical models for battery management, with interests in parameter identification, state estimation, fault diagnosis and control. He develops [CPG-SPMT](https://github.com/FrankSuperG/CPG-SPMT) and maintains this parameter library and the [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas).
 
-Collaboration is welcome on electrochemical model development and validation, parameter identification, battery testing, data sharing and open-source research tools. To discuss a contribution or research collaboration, contact **[feng.guo@vito.be](mailto:feng.guo@vito.be)**.
+Collaboration is welcome on parameter curation, source matching, electrochemical testing, data sharing and open-source research tools. To discuss a contribution or research collaboration, contact **[feng.guo@vito.be](mailto:feng.guo@vito.be)**.
 
 [Google Scholar](https://scholar.google.com/citations?user=z2SHUxkAAAAJ&hl=en) · [Academic homepage](https://franksuperg.github.io/feng-guo-academic/) · [GitHub](https://github.com/FrankSuperG)
 

@@ -40,7 +40,7 @@ The [pinned BPX file](https://github.com/FaradayInstitution/BPX/blob/0f591336937
 
 Two OCP expressions are transcribed verbatim and evaluated only inside the file's supplied operating stoichiometry limits. The positive expression has a large exponential coefficient; extrapolating it to θ=0 would be misleading. Forty-six numeric fields are imported with their BPX units and reference-temperature context. Rate constants in mol/(m²·s) keep the BPX definition and are not relabeled as exchange-current density. Thermal properties described as estimated remain marked. The header's borrowed electrolyte and entropy attributions are retained; non-OCP expressions and the entropy table are not yet imported. No complete BPX round-trip or full-cell prediction is claimed.
 
-## Deferred sources and validation
+## Deferred sources and data checks
 
 The ISU–UConn LFP/graphite deposit's earlier workbook/README requests returned HTTP 403. On 2026-10-16, a pinned author GitHub copy was retrieved and inspected. The subsequent v0.6 import includes a documented subset of that workbook; see [LFP study selections](LFP_STUDIES.md). The earlier candidate status is superseded, while reference details and specimen-matching limits remain explicit. See [DATA_CANDIDATES.md](DATA_CANDIDATES.md). LiionDB remains a discovery route rather than an imported source. Follow-up work should favor same-model LFP half-cell OCP, diffusion/kinetic experiments and reusable full-cell tests, recording licensing and exact identity before joining them.
 

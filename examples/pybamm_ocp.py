@@ -1,4 +1,4 @@
-"""Numerical OCP component check; this is not a full-cell validation."""
+"""Export an OCP component to PyBaMM and inspect interpolation differences."""
 
 import numpy as np
 import pybamm
@@ -14,4 +14,4 @@ converted = np.array(
 )
 print("PyBaMM OCP component:", converted)
 print("Maximum interpolation error / V:", np.max(np.abs(converted - curve(test_points))))
-print("Full-cell validation has not been performed.")
+print("OCP component export only; no cell simulation is run.")

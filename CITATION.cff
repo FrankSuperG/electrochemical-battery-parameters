@@ -8,9 +8,10 @@ abstract: >-
   open-circuit potential curves, diffusion, reaction kinetics, geometry, transport
   and thermal parameters, with full-cell test links where supported by evidence.
   Records preserve source definitions, reuse licenses, cell and study matching
-  levels, and missing data. Entries can be partial references rather than complete,
-  independently validated parameter sets. Individual data sources retain their
-  own licenses and citation requirements.
+  levels, and missing data. Entries can be partial references. The project curates
+  and exports data; it does not run model simulations or report predictive
+  performance. Individual data sources retain their own licenses and citation
+  requirements.
 keywords:
   - electrochemistry
   - lithium-ion batteries
