@@ -29,9 +29,9 @@ def test_material_families_specimens_and_cell_associations():
         "NCA",
         "NCO",
     }
-    assert len(c.search()) == 83
-    assert len(c.experiments) == 20
-    assert len(c.search(representation="table")) == 64
+    assert len(c.search()) == 90
+    assert len(c.experiments) == 22
+    assert len(c.search(representation="table")) == 71
     for material, role in [
         ("NMC111", "positive"),
         ("NMC532", "positive"),

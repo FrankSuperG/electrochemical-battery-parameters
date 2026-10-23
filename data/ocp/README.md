@@ -20,6 +20,9 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `isu-uconn-lfp-s2-b7-lithiation` | positive / LFP | pseudo_ocp / unresolved | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/isu-uconn-lfp-s2-b7-lithiation.csv) | [JSON](isu-uconn-lfp-s2-b7-lithiation.json) |
 | `jahn-a123-lfp-model-ocpn` | positive / LFP | model_ocp / Li/Li+ | model_soc; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/jahn-a123-lfp-model-ocpn.csv) | [JSON](jahn-a123-lfp-model-ocpn.json) |
 | `prada2013-positive-borrowed-ocp` | positive / LFP | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](prada2013-positive-borrowed-ocp-sampled.csv) | [JSON](prada2013-positive-borrowed-ocp.json) |
+| `haidi-rehm2025-cathode-delithiation-0c02` | positive / LFP | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/haidi-rehm2025-cathode-delithiation-0c02.csv) | [JSON](haidi-rehm2025-cathode-delithiation-0c02.json) |
+| `haidi-rehm2025-cathode-lithiation-0c02` | positive / LFP | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/haidi-rehm2025-cathode-lithiation-0c02.csv) | [JSON](haidi-rehm2025-cathode-lithiation-0c02.json) |
+| `haidi-rehm2025-cathode-lithiation-0c05` | positive / LFP | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/haidi-rehm2025-cathode-lithiation-0c05.csv) | [JSON](haidi-rehm2025-cathode-lithiation-0c05.json) |
 
 ## graphite
 
@@ -49,6 +52,10 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `prada2013-negative-borrowed-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](prada2013-negative-borrowed-ocp-sampled.csv) | [JSON](prada2013-negative-borrowed-ocp.json) |
 | `tum-rehm2026-gr-delithiation-rehm2026` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-gr-delithiation-rehm2026.csv) | [JSON](tum-rehm2026-gr-delithiation-rehm2026.json) |
 | `tum-rehm2026-gr-lithiation-rehm2026` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-gr-lithiation-rehm2026.csv) | [JSON](tum-rehm2026-gr-lithiation-rehm2026.json) |
+| `haidi-rehm2025-anode-delithiation-0c02` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/haidi-rehm2025-anode-delithiation-0c02.csv) | [JSON](haidi-rehm2025-anode-delithiation-0c02.json) |
+| `haidi-rehm2025-anode-delithiation-0c05` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/haidi-rehm2025-anode-delithiation-0c05.csv) | [JSON](haidi-rehm2025-anode-delithiation-0c05.json) |
+| `haidi-rehm2025-anode-lithiation-0c02` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/haidi-rehm2025-anode-lithiation-0c02.csv) | [JSON](haidi-rehm2025-anode-lithiation-0c02.json) |
+| `haidi-rehm2025-anode-lithiation-0c05` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/haidi-rehm2025-anode-lithiation-0c05.csv) | [JSON](haidi-rehm2025-anode-lithiation-0c05.json) |
 
 ## Graphite-SiOx
 

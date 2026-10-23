@@ -9,6 +9,29 @@ project software remains MIT and each data/implementation record keeps its
 source-specific terms. Other external sources and their notices remain scoped
 to the provenance identified below.
 
+## HAIDI admission in v0.15
+
+The seven HAIDI derived pseudo-OCP CSVs and all eight retained author MAT
+originals keep **CC BY 4.0** data terms from the exact-DOI TUM publisher
+catalog distribution in open.bydata/GovData. The generic `cc-by` URI resolves
+to CC BY 4.0 through GovData and the official DCAT vocabulary; attribution and
+conflicting incomplete metadata are recorded in the [source review](docs/HAIDI_REHM2025.md).
+The framework root MIT notice is not the HAIDI data grant.
+
+Attribute Mathias Rehm, Marco Fischer, Manuel Rubio-Gomez, Moritz Schuette,
+Dirk Uwe Sauer and Andreas Jossen; cite original paper 10.1016/j.jpowsour.2025.236290,
+dataset 10.14459/2024mp1762675 and the additionally requested Rehm2026 framework
+paper. Changes are branch-coordinate normalization/orientation and ordering;
+source capacity and one-based row columns preserve every admitted node. No
+new smoothing, clipping, row removal or endpoint insertion. The entire 0.05C
+cathode-delithiation original is quarantined, with no admitted OCP derivative.
+
+The author folder notice retains framework MIT documentation terms and its
+original attribution request. The project's factual rights/quality review is
+original MIT curation text and includes source response hashes/URLs; these do
+not relicense measurement data. The article PDF, full release ZIP and whole-cell
+observation payloads are not redistributed. [Exact asset pins](scripts/haidi_assets.json).
+
 ## First-party TUM admission in v0.14
 
 Seven original Rehm2026 half-cell MATs and derived tables retain **MIT**, scoped

@@ -41,6 +41,17 @@ def ocp_anchor_label(record):
             "not_identified": "Not identified", "full_cell_ocv_only": "Whole-cell OCV only"}[record["ocp_anchor"]["kind"]]
 
 
+def eis_coverage_label(record):
+    if "eis" not in record["test_types"]:
+        return "Not reported"
+    status = record["test_coverage"]["EIS"]["status"]
+    if status == "container_only":
+        return "Dataset link only; files unverified"
+    if status in {"not_located", "not_established"}:
+        return "Source claim; files unverified"
+    return "Located / source-listed"
+
+
 def csv_bytes(headers, rows):
     handle = io.StringIO(newline="")
     writer = csv.writer(handle, lineterminator="\n")
@@ -145,7 +156,7 @@ def battery_model_index(catalog):
             for category in ["ocp", "diffusion", "kinetics"]:
                 lines += [f"- **{category.upper() if category == 'ocp' else category.title()}:** {cell['coverage'][category]}"]
         lines += ["", "## Full-cell tests", "",
-                  "New full-cell observations remain at their providers. Links below lead to descriptions, exact file locations, source licenses and missing channels. Existing packaged tests are retained for compatibility.", ""]
+                  "New full-cell observations remain at their providers. Links below lead to descriptions, available file locations, source licenses and missing channels. Existing packaged tests are retained for compatibility.", ""]
         local = catalog.linked_tests(group["id"]) if cell else []
         if local:
             lines += [link(page, f"data/cells/{group['id']}.md#full-cell-tests", f"{len(local)} existing packaged test files with per-file conditions"), "", cell["coverage"]["full_cell_tests"], ""]
@@ -159,7 +170,7 @@ def battery_model_index(catalog):
                 if group["id"] not in r["parameter_link"]["cell_ids"] and cell:assoc = "Same model; other study, no native parameter join"
                 lines += ["| "+" | ".join([link(page, source+"#file-locations", r["id"]), cc,
                     "/".join(str(t) for t in r["temperatures_C"]) or "Unverified", text_cell(dynamic),
-                    link(page, source+"#ageing-data", aging_label(r)), "Located / source-listed" if "eis" in r["test_types"] else "Not reported", text_cell(assoc)])+" |"]
+                    link(page, source+"#ageing-data", aging_label(r)), eis_coverage_label(r), text_cell(assoc)])+" |"]
         else:lines += ["No external full-cell dataset curated for this entry."]
         lines += ["", link(page,"docs/PARAMETER_AUDIT.md","Parameter extraction audit: stored records, unresolved reuse and definitions"), "",
                   "Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.", "",
@@ -277,7 +288,8 @@ def full_cell_index(catalog):
             conditions = f"{item['temperature_C']} degC" if item["temperature_C"] is not None else "Temperature unknown"
             if item["nominal_rate_C"] is not None:
                 conditions += f"; {item['nominal_rate_C']}C"
-            label = "Parent archive" if item["kind"] == "archive_member" else "Open source file"
+            label = ("Parent archive" if item["kind"] == "archive_member" else
+                     "Open dataset / documentation" if item["kind"] == "documentation" else "Open source file")
             lines += [f"| `{text_cell(item['source_path'])}` | {text_cell(item['cell_model'] or 'Unresolved')} / {text_cell(item['source_sample_id'] or 'No sample ID')} | {text_cell(', '.join(item['test_types']) + '; ' + ', '.join(item['profiles']))} | {conditions} | `{item['verification']}`; content `{item['content_review']}` | [{label}]({item['url']}) |"]
         lines += ["", "File notes:", ""]
         for item in r["file_links"]:

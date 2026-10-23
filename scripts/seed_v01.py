@@ -510,6 +510,10 @@ def main(download=False):
 
     extend_tum_ocp()
 
+    from seed_haidi import extend as extend_haidi
+
+    extend_haidi()
+
     # The manually reviewed external-link registry is committed metadata. It is
     # never fetched here; reconstructing observations must not download its payloads.
     from ebp import __version__

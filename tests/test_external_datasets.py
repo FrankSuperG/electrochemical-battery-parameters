@@ -40,7 +40,7 @@ def test_external_cli_filters_combine_and_keep_dataset_grain(capsys):
     assert records[0]["parameter_link"]["cell_ids"] == []
     assert main(["datasets", "--material", "LFP", "--test-type", "cccv", "--json"]) == 0
     records = json.loads(capsys.readouterr().out)
-    assert [r["id"] for r in records] == ["uccs-a123-26650m1b-2021"]
+    assert [r["id"] for r in records] == ["uccs-a123-26650m1b-2021", "haidi-lfp-rehm2025"]
 
 
 def test_file_search_does_not_inherit_uninspected_dataset_profile_claims(capsys):

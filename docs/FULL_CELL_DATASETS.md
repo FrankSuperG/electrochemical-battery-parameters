@@ -159,3 +159,18 @@ An optional [archive-directory inspector](../scripts/inspect_external_archives.p
 performs bounded ZIP/RAR5 header reads, plus optional 7z listing with
 `pip install '.[archive-review]'`, only when explicitly invoked by a reviewer. It is
 not called by catalog search, viewer generation, normal reconstruction or CI.
+
+## HAIDI same-study follow-up — v0.15
+
+[HAIDI HDCF18650-1800 / Rehm2025](../data/full-cell/haidi-lfp-rehm2025.md) now
+links seven native harvested pseudo-OCP branches to the paper's six-temperature
+OCV, multi-rate CC/CP and GEIS dataset. Data reuse is CC BY 4.0 via the exact-DOI
+publisher catalog record; a duplicate incomplete record is documented. One
+cathode source branch is quarantined for nine potentials below the paper cutoff.
+
+Whole-cell observations remain external. Source conditions are 10/20/25/30/35/45 C;
+half-cell OCP is 25 C only. Original whole-cell filenames and headers could not
+be read, so rate/EIS coverage is `container_only`, not a certified condition/file
+matrix. The dataset access point is explicitly documentation, not a made-up ZIP
+member. Exact donors, same-study D/k, road profiles and ageing remain unresolved.
+Read the [license, definitions and access review](HAIDI_REHM2025.md).

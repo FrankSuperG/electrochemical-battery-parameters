@@ -187,7 +187,7 @@ An archive-member link downloads its parent container; extract the named member 
 | `2_130.h5` | Panasonic NCR18650B / 2_130 | constant_current, cccv, pulse;  | Temperature unknown | `source_documentation`; content `not_read` | [Open source file](https://zenodo.org/api/records/7896429/files/2_130.h5/content) |
 | `2_131.h5` | Panasonic NCR18650B / 2_131 | constant_current, cccv, pulse;  | Temperature unknown | `source_documentation`; content `not_read` | [Open source file](https://zenodo.org/api/records/7896429/files/2_131.h5/content) |
 | `2_132.h5` | Panasonic NCR18650B / 2_132 | constant_current, cccv, pulse;  | Temperature unknown | `source_documentation`; content `not_read` | [Open source file](https://zenodo.org/api/records/7896429/files/2_132.h5/content) |
-| `Galijatovic_2023_Ageing Data of Lithium-ion Panasonic NCR18650B Battery Cells.pdf` | Panasonic NCR18650B / No sample ID | ;  | Temperature unknown | `source_listing`; content `documentation_reviewed` | [Open source file](https://zenodo.org/api/records/7896429/files/Galijatovic_2023_Ageing%20Data%20of%20Lithium-ion%20Panasonic%20NCR18650B%20Battery%20Cells.pdf/content) |
+| `Galijatovic_2023_Ageing Data of Lithium-ion Panasonic NCR18650B Battery Cells.pdf` | Panasonic NCR18650B / No sample ID | ;  | Temperature unknown | `source_listing`; content `documentation_reviewed` | [Open dataset / documentation](https://zenodo.org/api/records/7896429/files/Galijatovic_2023_Ageing%20Data%20of%20Lithium-ion%20Panasonic%20NCR18650B%20Battery%20Cells.pdf/content) |
 
 File notes:
 

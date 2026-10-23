@@ -22,7 +22,7 @@ OCP and reusable model parameters are extracted into versioned CSV/JSON records.
 
 ## Full-cell tests
 
-New full-cell observations remain at their providers. Links below lead to descriptions, exact file locations, source licenses and missing channels. Existing packaged tests are retained for compatibility.
+New full-cell observations remain at their providers. Links below lead to descriptions, available file locations, source licenses and missing channels. Existing packaged tests are retained for compatibility.
 
 | Source / files | CC / rate coverage | Full-cell temperatures / °C | Dynamic | Ageing | EIS | Parameter relationship |
 |---|---|---|---|---|---|---|

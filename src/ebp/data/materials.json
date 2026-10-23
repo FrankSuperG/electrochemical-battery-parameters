@@ -251,5 +251,40 @@
     "label": "graphite",
     "cell_id": null,
     "note": "Source-specific measured electrode, not a universal material curve."
+  },
+  "haidi-rehm2025-anode-delithiation-0c02-material": {
+    "label": "graphite",
+    "cell_id": "haidi-hdcf18650-1800-rehm2025",
+    "note": "Source-specific harvested HAIDI electrode; branch endpoints are not absolute stoichiometry."
+  },
+  "haidi-rehm2025-anode-delithiation-0c05-material": {
+    "label": "graphite",
+    "cell_id": "haidi-hdcf18650-1800-rehm2025",
+    "note": "Source-specific harvested HAIDI electrode; branch endpoints are not absolute stoichiometry."
+  },
+  "haidi-rehm2025-anode-lithiation-0c02-material": {
+    "label": "graphite",
+    "cell_id": "haidi-hdcf18650-1800-rehm2025",
+    "note": "Source-specific harvested HAIDI electrode; branch endpoints are not absolute stoichiometry."
+  },
+  "haidi-rehm2025-anode-lithiation-0c05-material": {
+    "label": "graphite",
+    "cell_id": "haidi-hdcf18650-1800-rehm2025",
+    "note": "Source-specific harvested HAIDI electrode; branch endpoints are not absolute stoichiometry."
+  },
+  "haidi-rehm2025-cathode-delithiation-0c02-material": {
+    "label": "LFP",
+    "cell_id": "haidi-hdcf18650-1800-rehm2025",
+    "note": "Source-specific harvested HAIDI electrode; branch endpoints are not absolute stoichiometry."
+  },
+  "haidi-rehm2025-cathode-lithiation-0c02-material": {
+    "label": "LFP",
+    "cell_id": "haidi-hdcf18650-1800-rehm2025",
+    "note": "Source-specific harvested HAIDI electrode; branch endpoints are not absolute stoichiometry."
+  },
+  "haidi-rehm2025-cathode-lithiation-0c05-material": {
+    "label": "LFP",
+    "cell_id": "haidi-hdcf18650-1800-rehm2025",
+    "note": "Source-specific harvested HAIDI electrode; branch endpoints are not absolute stoichiometry."
   }
 }

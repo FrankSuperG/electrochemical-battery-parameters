@@ -517,5 +517,36 @@
     "temperature_K": null,
     "known_issues": [],
     "selection": "All seven allowlisted author-processed branches; exact cycle index not supplied."
+  },
+  "haidi-rehm2025-LFP-halfcell": {
+    "source_id": "haidi-rehm2025-data",
+    "asset_id": "haidi-haidi18650-cathode-delithiation-0c02",
+    "asset_ids": [
+      "haidi-haidi18650-cathode-delithiation-0c02",
+      "haidi-haidi18650-cathode-lithiation-0c02",
+      "haidi-haidi18650-cathode-lithiation-0c05"
+    ],
+    "configuration": "Harvested single-side-coated HAIDI electrode, 14 mm disk, CR2032 half-cell against metallic lithium; 80 uL LP57",
+    "protocol": "0.02C main protocol with earlier 0.05C cycles and 1 h pauses; graphite 0.01-1.5 V, LFP 2-4 V vs Li. Exact supplied MAT cycle indices unresolved.",
+    "temperature_K": 298.15,
+    "cycle_selected": null,
+    "known_issues": [
+      "One 0.05C cathode branch quarantined separately; original retained"
+    ]
+  },
+  "haidi-rehm2025-graphite-halfcell": {
+    "source_id": "haidi-rehm2025-data",
+    "asset_id": "haidi-haidi18650-anode-delithiation-0c02",
+    "asset_ids": [
+      "haidi-haidi18650-anode-delithiation-0c02",
+      "haidi-haidi18650-anode-delithiation-0c05",
+      "haidi-haidi18650-anode-lithiation-0c02",
+      "haidi-haidi18650-anode-lithiation-0c05"
+    ],
+    "configuration": "Harvested single-side-coated HAIDI electrode, 14 mm disk, CR2032 half-cell against metallic lithium; 80 uL LP57",
+    "protocol": "0.02C main protocol with earlier 0.05C cycles and 1 h pauses; graphite 0.01-1.5 V, LFP 2-4 V vs Li. Exact supplied MAT cycle indices unresolved.",
+    "temperature_K": 298.15,
+    "cycle_selected": null,
+    "known_issues": []
   }
 }

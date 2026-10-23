@@ -1,5 +1,7 @@
 # Public-release readiness review - v0.8.0
 
+**Historical review.** See the [current v0.15 final project review](FINAL_REVIEW.md) for executed checks, current totals, license decisions and remaining limits.
+
 Reviewed 2026-10-17. **Suitable for publication as a traceable, partial parameter
 and observation catalog**, with the source, coordinate, variant and missing-item
 labels retained. This review does not change repository visibility. It does not

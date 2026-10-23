@@ -4046,5 +4046,137 @@
       "0C03 filename rate is 0.03C; original paper protocol states 0.033C",
       "Full-cell tests are external links; 25 C is a paper condition, not a verified measured temperature channel"
     ]
+  },
+  "haidi-hdcf18650-1800-rehm2025": {
+    "manufacturer": "HAIDI Energy Group",
+    "model": "HDCF18650-1800",
+    "display_name": "HAIDI HDCF18650-1800 | Rehm2025 LFP/graphite",
+    "format": "18650 cylindrical; harvested electrodes in CR2032 half-cells",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": 1.8,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "haidi-rehm2025-data",
+      "rehm-2025",
+      "rehm-2026"
+    ],
+    "curation_guide": "docs/HAIDI_REHM2025.md",
+    "supporting_asset_ids": [
+      "haidi-rights-quality-review",
+      "haidi-haidi18650-cathode-delithiation-0c05"
+    ],
+    "model_context": "Partial source-specific measured pseudo-OCP package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Paper LIBHE is HAIDI HDCF18650-1800. Author half-cell notice cites the same paper as the deposited whole-cell tests; exact donor/serial chain unresolved.",
+    "coverage": {
+      "ocp": "Seven admitted author-processed branches: four graphite and three LFP, at 25 C and 0.02/0.05C. One 0.05C cathode branch quarantined for protocol-inconsistent low potentials.",
+      "diffusion": "No same-study intrinsic diffusivity admitted; relaxed OCV/GITT observations alone are not D estimates.",
+      "kinetics": "No same-study intrinsic kinetic law admitted; GEIS alone is not a defined kinetic coefficient.",
+      "full_cell_tests": "Same-study dataset/paper links: 10/20/25/30/35/45 C OCV, multi-rate CC/CP and GEIS. Individual original file names and measured channels remain unverified; no new payload packaged."
+    },
+    "quarantined_source_files": [
+      {
+        "filename": "HAIDI18650_Cathode_Delithiation_0C05.mat",
+        "rows_below_protocol_minimum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "source_voltage_range_V": [
+          1.54006766759693,
+          4.00017080621399
+        ],
+        "reason": "Nine source nodes fall below the 2.0 V cathode cutoff reported for LIBHE. Origin cannot be resolved from normalized-capacity/voltage alone; entire 0.05C cathode-delithiation branch held rather than trimming or repairing nodes.",
+        "original_preserved": true
+      }
+    ],
+    "note": "Source LIBHE subset only. No A123 match, no sodium-ion material import, no shared specimen assertion or automatic parameter transfer.",
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "haidi-rehm2025-anode-delithiation-0c02",
+      "haidi-rehm2025-anode-delithiation-0c05",
+      "haidi-rehm2025-anode-lithiation-0c02",
+      "haidi-rehm2025-anode-lithiation-0c05",
+      "haidi-rehm2025-cathode-delithiation-0c02",
+      "haidi-rehm2025-cathode-lithiation-0c02",
+      "haidi-rehm2025-cathode-lithiation-0c05"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "haidi-rehm2025-anode-delithiation-0c02",
+          "haidi-rehm2025-anode-delithiation-0c05",
+          "haidi-rehm2025-anode-lithiation-0c02",
+          "haidi-rehm2025-anode-lithiation-0c05",
+          "haidi-rehm2025-cathode-delithiation-0c02",
+          "haidi-rehm2025-cathode-lithiation-0c02",
+          "haidi-rehm2025-cathode-lithiation-0c05"
+        ],
+        "source_ids": [
+          "haidi-rehm2025-data",
+          "rehm-2025",
+          "rehm-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Seven admitted author-processed branches: four graphite and three LFP, at 25 C and 0.02/0.05C. One 0.05C cathode branch quarantined for protocol-inconsistent low potentials.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No same-study intrinsic diffusivity admitted; relaxed OCV/GITT observations alone are not D estimates.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No same-study intrinsic kinetic law admitted; GEIS alone is not a defined kinetic coefficient.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "Same-study dataset/paper links: 10/20/25/30/35/45 C OCV, multi-rate CC/CP and GEIS. Individual original file names and measured channels remain unverified; no new payload packaged.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "Exact harvested donor and full-cell serial mapping unresolved",
+      "Original provider full-cell file inventory and observation headers unavailable",
+      "Absolute stoichiometric endpoints, half-cell Ah and exact MAT filtering/cycle history unresolved",
+      "Same-study intrinsic diffusion and kinetic coefficients not located",
+      "0.05C cathode delithiation held: nine source nodes below the paper's 2 V cutoff",
+      "Dynamic road-cycle profiles and longitudinal ageing series not established"
+    ]
   }
 }

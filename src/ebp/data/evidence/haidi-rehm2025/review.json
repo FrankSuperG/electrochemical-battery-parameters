@@ -1,0 +1,332 @@
+{
+  "checked_on": "2026-10-24",
+  "cell_id": "haidi-hdcf18650-1800-rehm2025",
+  "dataset_doi": "10.14459/2024mp1762675",
+  "paper_doi": "10.1016/j.jpowsour.2025.236290",
+  "license_decision": {
+    "identifier": "CC-BY-4.0",
+    "basis": "Exact-DOI TUM publisher record in open.bydata, corroborating GovData/EU distribution and official DCAT-AP.de URI mapping; not an inferred grant from framework MIT or article access.",
+    "bydata_url": "https://open.bydata.de/api/hub/search/datasets/10-14459-2024mp1762675",
+    "bydata_catalog_id": "mediatum",
+    "distribution_license_uri": "http://dcat-ap.de/def/licenses/cc-by",
+    "distribution_access_url": "https://mediatum.ub.tum.de/1762675",
+    "attribution": "Rehm, Mathias; Fischer, Marco; Rubio-Gomez, Manuel; Sch\u00fctte, Moritz; Sauer, Dirk Uwe; Jossen, Andreas",
+    "govdata_url": "https://data.gov.de/suche/daten/rate-capability-tests-ocv-measurements-impedance-and-half-cell-measurements-of-two-sodium-ion-b99db5",
+    "govdata_ttl_url": "https://www.govdata.de/ckan/dataset/rate-capability-tests-ocv-measurements-impedance-and-half-cell-measurements-of-two-sodium-ion-b99db5.ttl",
+    "govdata_ui_license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "vocabulary_url": "https://www.dcat-ap.de/def/licenses/20260924",
+    "vocabulary_mapping": "http://dcat-ap.de/def/licenses/cc-by -> https://creativecommons.org/licenses/by/4.0/",
+    "conflicts": [
+      "DataCite rightsList is empty; this does not establish that reuse is forbidden.",
+      "A duplicate GovData record keyed by the mediatum URL has other-closed/UnknownIPR and an empty resource URL; the exact-DOI record retains specific CC-BY attribution and a valid access URL.",
+      "The GovData RDF types its generic cc-by LicenseDocument as UnknownIPR, while its actual dct:license URI, frontend license URL and official vocabulary resolve to CC BY 4.0. These observations are retained rather than silently discarding the inconsistency."
+    ],
+    "metadata_response_sha256": {
+      "bydata.json": "f8bd5c3a8a39813c33ba84843087fdc8b31e422de1847e8c9db036e819bb0cdd",
+      "govdata-duplicate.ttl": "f841b547cef5ed4ec77125f42eeecb62b550cfe8a4db6644038abf476ab268de",
+      "govdata-duplicate.html": "74f4637ded3b770ae2836f8f3c5d54fe1aa0e2a09c225c84d44498a7f19289f2",
+      "dcat-cc-by.html": "0d118f941c89faf9dae3a177630f6e85b81dafa240bc600ec78c34944ab44bf7",
+      "govdata.ttl": "d3c59b7d3d6c0aa079822a23e3226c21d06ccaf85b696199624f192ee28af21e",
+      "europa.json": "dd70a765b149fbe057b1f868d0150ec979ab8abab803804145ef9ae17843e085"
+    }
+  },
+  "paper_review": {
+    "original_pdf_url": "https://d-nb.info/1370379285/34",
+    "pdf_sha256": "264c29b98199a9f537afbc57dcfe95d2663e0e1896dbfd66e1edb8a0078d11a5",
+    "article_license": "CC-BY-4.0",
+    "visual_pages_reviewed": [
+      3,
+      4
+    ],
+    "model": "HDCF18650-1800",
+    "manufacturer": "HAIDI Energy Group",
+    "nominal_capacity_Ah": 1.8,
+    "half_cell_reference": "Li/Li+",
+    "half_cell_temperature_C": 25,
+    "half_cell_nominal_rates_C": [
+      0.02,
+      0.05
+    ],
+    "half_cell_protocol_voltage_limits_V": {
+      "graphite": [
+        0.01,
+        1.5
+      ],
+      "LFP": [
+        2.0,
+        4.0
+      ]
+    },
+    "full_cell_temperatures_C": [
+      10,
+      20,
+      25,
+      30,
+      35,
+      45
+    ],
+    "full_cell_cc_charge_rates_C": [
+      0.1,
+      0.2,
+      0.33,
+      0.5,
+      0.67,
+      1.0
+    ],
+    "full_cell_cc_discharge_rates_C": [
+      0.1,
+      0.2,
+      0.33,
+      0.5,
+      0.67,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "additional_discharge_note": "At discharge rates 1.5/2/2.5C, charge is held at 1C. CP experiments use E-rates, not C-rates.",
+    "eis_method": "GEIS",
+    "eis_frequency_range_Hz": [
+      0.01,
+      100000
+    ],
+    "eis_current_amplitude_A": 0.1,
+    "eis_points_per_decade": 15,
+    "eis_soc_percent": [
+      5,
+      10,
+      15,
+      30,
+      45,
+      60,
+      75,
+      80,
+      85,
+      90,
+      95
+    ],
+    "paper_filter_note": "Displayed half-cell curves use five Savitzky-Golay passes (window 2.8% of points, order 3); exact MAT filtering/cycle selection history is not independently established. No further filtering is applied."
+  },
+  "mirror_provenance": {
+    "release_url": "https://zenodo.org/records/19555109",
+    "release_archive_md5": "0f2c702fab98561dcc5eee8a09f90166",
+    "author_github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+    "cross_version_status": "All eight MATs verified byte-identical to fixed release and pinned author GitHub blobs.",
+    "original_dataset_byte_identity": "Not established: provider payload/file listing could not be retrieved. These are author-processed mirrored branches, not certified original instrument files."
+  },
+  "branch_reports": [
+    {
+      "asset_id": "haidi-haidi18650-anode-delithiation-0c02",
+      "filename": "HAIDI18650_Anode_Delithiation_0C02.mat",
+      "point_count": 17918,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        7.144050206964181e-08,
+        1.0000001485650871
+      ],
+      "source_voltage_bounds_V": [
+        0.036616526118866,
+        1.50146828194704
+      ],
+      "admission": "native_pseudo_ocp",
+      "below_cathode_2V_source_rows": [],
+      "github_blob_sha1": "02c74cfbb2a356d57527563c671ebeb26b319d7a"
+    },
+    {
+      "asset_id": "haidi-haidi18650-anode-delithiation-0c05",
+      "filename": "HAIDI18650_Anode_Delithiation_0C05.mat",
+      "point_count": 8988,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        6.639698280075379e-08,
+        1.000000143755164
+      ],
+      "source_voltage_bounds_V": [
+        0.0806707841056267,
+        1.50280325946179
+      ],
+      "admission": "native_pseudo_ocp",
+      "below_cathode_2V_source_rows": [],
+      "github_blob_sha1": "13d45d73696e53836a982e637264df9a950338a2"
+    },
+    {
+      "asset_id": "haidi-haidi18650-anode-lithiation-0c02",
+      "filename": "HAIDI18650_Anode_Lithiation_0C02.mat",
+      "point_count": 18069,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        1.535535260055454e-07,
+        1.000000076776763
+      ],
+      "source_voltage_bounds_V": [
+        0.00972626475032379,
+        1.01000584544539
+      ],
+      "admission": "native_pseudo_ocp",
+      "below_cathode_2V_source_rows": [],
+      "github_blob_sha1": "24070258fd942dbdbfece2bdda2e7ba40ee21ee6"
+    },
+    {
+      "asset_id": "haidi-haidi18650-anode-lithiation-0c05",
+      "filename": "HAIDI18650_Anode_Lithiation_0C05.mat",
+      "point_count": 9357,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        1.4054694275067448e-07,
+        1.0000000702734713
+      ],
+      "source_voltage_bounds_V": [
+        0.00972626475032379,
+        1.12767457781695
+      ],
+      "admission": "native_pseudo_ocp",
+      "below_cathode_2V_source_rows": [],
+      "github_blob_sha1": "f0a2e58455583f1220d13e56dcc370347484a8f5"
+    },
+    {
+      "asset_id": "haidi-haidi18650-cathode-delithiation-0c02",
+      "filename": "HAIDI18650_Cathode_Delithiation_0C02.mat",
+      "point_count": 18620,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        -3.3483597441130507e-07,
+        0.9999998355214526
+      ],
+      "source_voltage_bounds_V": [
+        2.81102877432955,
+        4.00017080621399
+      ],
+      "admission": "native_pseudo_ocp",
+      "below_cathode_2V_source_rows": [],
+      "github_blob_sha1": "868525fcef6dd3e83b1963fa5330abaf38a3e5a8"
+    },
+    {
+      "asset_id": "haidi-haidi18650-cathode-delithiation-0c05",
+      "filename": "HAIDI18650_Cathode_Delithiation_0C05.mat",
+      "point_count": 9224,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        -2.990268090073849e-07,
+        0.9999998560788801
+      ],
+      "source_voltage_bounds_V": [
+        1.54006766759693,
+        4.00017080621399
+      ],
+      "admission": "quarantined_protocol_mismatch",
+      "below_cathode_2V_source_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "github_blob_sha1": "4c53e999926b14adde812c741d4fa4a119377956"
+    },
+    {
+      "asset_id": "haidi-haidi18650-cathode-lithiation-0c02",
+      "filename": "HAIDI18650_Cathode_Lithiation_0C02.mat",
+      "point_count": 17470,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        -1.825347532241486e-07,
+        0.9999996349304937
+      ],
+      "source_voltage_bounds_V": [
+        3.09463008971242,
+        3.61872989783085
+      ],
+      "admission": "native_pseudo_ocp",
+      "below_cathode_2V_source_rows": [],
+      "github_blob_sha1": "4f8c7b1e3fdcebc95fc14ca1531b9b31e8c82c97"
+    },
+    {
+      "asset_id": "haidi-haidi18650-cathode-lithiation-0c05",
+      "filename": "HAIDI18650_Cathode_Lithiation_0C05.mat",
+      "point_count": 8273,
+      "source_variable": "batteryData",
+      "source_fields": [
+        "normalizedCapacity",
+        "voltage"
+      ],
+      "source_capacity_bounds": [
+        -1.6719748232211171e-07,
+        0.9999996656050354
+      ],
+      "source_voltage_bounds_V": [
+        1.99932252129023,
+        3.69635312268682
+      ],
+      "admission": "native_pseudo_ocp",
+      "below_cathode_2V_source_rows": [
+        8272,
+        8273
+      ],
+      "github_blob_sha1": "3be540f83a68ac579fce06d873c1f9fa5729b637"
+    }
+  ],
+  "quarantine": {
+    "filename": "HAIDI18650_Cathode_Delithiation_0C05.mat",
+    "rows_below_protocol_minimum": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source_voltage_range_V": [
+      1.54006766759693,
+      4.00017080621399
+    ],
+    "reason": "Nine source nodes fall below the 2.0 V cathode cutoff reported for LIBHE. Origin cannot be resolved from normalized-capacity/voltage alone; entire 0.05C cathode-delithiation branch held rather than trimming or repairing nodes.",
+    "original_preserved": true
+  },
+  "full_cell_access": {
+    "storage": "external_link",
+    "provider_status": "Primary landing page returned HTTP 429 via web and TLS/read timeouts via direct/public-export requests. Official metadata catalogs are accessible.",
+    "source_file_inventory": "Unresolved: no individual rate/GEIS filenames verified, and no archive format/path invented.",
+    "headers_read": false,
+    "whole_cell_payload_imported": false,
+    "same_specimen_mapping": "Unresolved",
+    "source_conditions_not_measured_channels": true,
+    "dynamic_profiles": "Not established",
+    "longitudinal_aging": "Not established",
+    "intrinsic_D_kinetics": "No same-study values admitted"
+  }
+}

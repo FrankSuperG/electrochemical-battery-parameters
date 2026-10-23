@@ -8,7 +8,7 @@ Start here when browsing on GitHub. No Python installation or hosted website is 
 
 See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.
 
-Snapshot: 83 OCP records, 1041 other parameter records, 61 full-cell test files.
+Snapshot: 90 OCP records, 1041 other parameter records, 61 full-cell test files.
 
 ## Choose a battery model
 
@@ -37,6 +37,7 @@ Snapshot: 83 OCP records, 1041 other parameter records, 61 full-cell test files.
 | [LG M50 &#124; O'Regan2022 characterization and model](cells/lg-m50-oregan2022.md) | [2 records](cells/lg-m50-oregan2022.md#ocp-curves) | [128 records](cells/lg-m50-oregan2022.md#parameters) | Not imported | `same_model_same_study` |
 | [LFP 2.3 Ah &#124; Prada2013 implementation &#124; part unresolved](cells/prada2013-lfp-nominal-design.md) | [2 records](cells/prada2013-lfp-nominal-design.md#ocp-curves) | [50 records](cells/prada2013-lfp-nominal-design.md#parameters) | Not imported | `parameter_set_only` |
 | [Molicel P45B &#124; TUM Rehm2026 measured half-cells](cells/molicel-p45b-tum-rehm2026.md) | [5 records](cells/molicel-p45b-tum-rehm2026.md#ocp-curves) | Not imported | Not imported | `same_model_same_study` |
+| [HAIDI HDCF18650-1800 &#124; Rehm2025 LFP/graphite](cells/haidi-hdcf18650-1800-rehm2025.md) | [7 records](cells/haidi-hdcf18650-1800-rehm2025.md#ocp-curves) | Not imported | Not imported | `same_model_same_study` |
 
 ## Find data by type
 

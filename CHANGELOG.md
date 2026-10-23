@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.15.0 — 2026-10-24
+
+- Added seven HAIDI HDCF18650-1800 author-processed pseudo-OCP branches / 98,695 unchanged source nodes, under dataset-specific CC BY 4.0 publisher-catalog evidence. Half-cell Li reference, 25 C, source capacity/rows and direction conventions are explicit.
+- Preserved eight original author MATs; quarantined the 0.05C cathode-delithiation branch with nine nodes below the paper cutoff. No clipping, trimming, refitting or manufactured endpoints.
+- Linked same-study six-temperature OCV, multi-rate CC/CP and GEIS at dataset level. Original full-cell file names/headers and exact donor mapping remain unresolved; no new full-cell payload, D estimate or kinetic law admitted.
+- Retained empty/conflicting metadata with explicit source hashes and explained the exact-DOI CC BY 4.0 decision. Framework MIT is not applied to HAIDI data; viewer notices follow record license as well as source.
+- Updated English battery/material indexes and final review. Totals: 90 curves/fits, 1,041 non-OCP records, 20 native cell/study packages, 17 external sources / 436 locators. Existing 61 full-cell test files unchanged.
+
 ## 0.14.0 — 2026-10-23
 
 - Admitted seven first-party TUM Rehm2026 pseudo-OCP branches (40,378 original nodes) under narrowly scoped fixed-release MIT evidence. Five harvested P45B branches form a new same-study/model package; two laboratory graphite curves remain material-only.

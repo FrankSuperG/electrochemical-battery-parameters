@@ -775,5 +775,50 @@
     "url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/TUM_OCP_RIGHTS.md",
     "year": 2026,
     "role": "Fixed-release metadata and unresolved third-party-source review; no third-party MAT files admitted."
+  },
+  "haidi-rehm2025-data": {
+    "kind": "dataset",
+    "title": "Rehm2025 HAIDI LFP/graphite subset of rate, OCV, impedance and half-cell dataset",
+    "authors": [
+      "Mathias Rehm",
+      "Marco Fischer",
+      "Manuel Rubio-Gomez",
+      "Moritz Schuette",
+      "Dirk Uwe Sauer",
+      "Andreas Jossen"
+    ],
+    "year": 2025,
+    "doi": "10.14459/2024mp1762675",
+    "url": "https://mediatum.ub.tum.de/1762675",
+    "license": "CC-BY-4.0",
+    "version": "Dataset published 2025-01-31; author branch mirror from fixed release 19555109",
+    "license_evidence": "Exact-DOI TUM publisher metadata in open.bydata/GovData identifies cc-by with author attribution; GovData and the official DCAT vocabulary map it to CC BY 4.0. Empty/incomplete duplicate metadata are retained in the review. Framework MIT is not the data grant.",
+    "role": "Seven native author-processed half-cell branches, one quarantined original; same-study full-cell tests remain external. Original provider file inventory and mirror/raw-file identity unresolved."
+  },
+  "rehm-2025": {
+    "kind": "paper",
+    "title": "Comparing the electrical performance of commercial sodium-ion and lithium-iron-phosphate batteries",
+    "authors": [
+      "Mathias Rehm",
+      "Marco Fischer",
+      "Manuel Rubio-Gomez",
+      "Moritz Schuette",
+      "Dirk Uwe Sauer",
+      "Andreas Jossen"
+    ],
+    "year": 2025,
+    "doi": "10.1016/j.jpowsour.2025.236290",
+    "url": "https://doi.org/10.1016/j.jpowsour.2025.236290",
+    "role": "Model identity, half-cell Li/25 C/rate definitions and full-cell multi-temperature charge/discharge/GEIS protocols. Only LIBHE selected; sodium-ion cell types excluded."
+  },
+  "haidi-review-2026": {
+    "kind": "documentation",
+    "title": "HAIDI source, license and quality review, 2026-10-24",
+    "authors": [
+      "E-BatP maintainers"
+    ],
+    "year": 2026,
+    "url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/HAIDI_REHM2025.md",
+    "role": "Curated factual evidence from original paper and publisher catalogs, with response hashes and explicit access/quality gaps."
   }
 }

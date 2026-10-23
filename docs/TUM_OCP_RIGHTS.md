@@ -1,5 +1,7 @@
 # TUM and M50LT OCP rights and definitions — 2026-10-23
 
+**Follow-up, 2026-10-24:** [HAIDI reuse is now cleared through exact-DOI publisher metadata](HAIDI_REHM2025.md), with seven native branches and one quality quarantine. The original dated review/metadata below remain history; the framework MIT grant is not extended to HAIDI.
+
 **v0.14 admits seven first-party TUM pseudo-OCP branches (40,378 points).**
 Five belong to harvested Molicel P45B electrodes; two are laboratory graphite
 comparators without a commercial-cell assignment. M50LT third-party OCP and
@@ -101,7 +103,7 @@ transferred or called a same-study measured set.
 |---|---|
 | M50LT / Hallemans2025 | OCP is attributed to About:Energy personal communication. No explicit M50LT grant located in the original notes or current author/company repositories. Existing grouped parameters and tests remain unchanged. [Detailed review](HALLEMANS2025.md). |
 | Stapf et al. M50/M50T/M50LT | Original [2025 paper](https://doi.org/10.1149/1945-7111/add112) is CC BY 4.0, but its raw-data statement is request-based. No open raw table resolved; no plot-digitized or substitute Hallemans curve admitted. |
-| HAIDI LFP / graphite | Original [paper](https://doi.org/10.1016/j.jpowsour.2025.236290) identifies [dataset DOI](https://doi.org/10.14459/2024mp1762675). [Saved DOI metadata](../src/ebp/data/evidence/tum-rehm2026/haidi-datacite.json) resolves the provider but has an empty `rightsList`; the provider returned HTTP 429/timeouts. Dataset reuse and original anode-axis convention remain unresolved. |
+| HAIDI LFP / graphite | Original [paper](https://doi.org/10.1016/j.jpowsour.2025.236290) identifies [dataset DOI](https://doi.org/10.14459/2024mp1762675). [Saved DOI metadata](../src/ebp/data/evidence/tum-rehm2026/haidi-datacite.json) resolves the provider but has an empty `rightsList`; the provider returned HTTP 429/timeouts. This was the v0.14 hold; the [v0.15 follow-up](HAIDI_REHM2025.md) resolves reuse/direction via publisher metadata and the original paper. One branch remains quarantined for quality. |
 | M35A / LG M36 | First-party attribution alone does not establish original protocol, Li reference or study/full-cell mapping. These definitions still need primary confirmation. |
 | Wetjen / Schmitt / Hossain and other literature curves | Original-source permission/definition checks remain incomplete; root MIT is not imposed on third-party inputs. |
 | Reconstructed silicon | Derived from blend decomposition, not measured pure-silicon OCP. Version-specific reconstruction and later boundary/zero-fill corrections need separate review. |

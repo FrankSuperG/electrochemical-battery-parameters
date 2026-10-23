@@ -1,0 +1,1243 @@
+{
+  "cell_id": "haidi-hdcf18650-1800-rehm2025",
+  "cell": {
+    "manufacturer": "HAIDI Energy Group",
+    "model": "HDCF18650-1800",
+    "display_name": "HAIDI HDCF18650-1800 | Rehm2025 LFP/graphite",
+    "format": "18650 cylindrical; harvested electrodes in CR2032 half-cells",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": 1.8,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "haidi-rehm2025-data",
+      "rehm-2025",
+      "rehm-2026"
+    ],
+    "curation_guide": "docs/HAIDI_REHM2025.md",
+    "supporting_asset_ids": [
+      "haidi-rights-quality-review",
+      "haidi-haidi18650-cathode-delithiation-0c05"
+    ],
+    "model_context": "Partial source-specific measured pseudo-OCP package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Paper LIBHE is HAIDI HDCF18650-1800. Author half-cell notice cites the same paper as the deposited whole-cell tests; exact donor/serial chain unresolved.",
+    "coverage": {
+      "ocp": "Seven admitted author-processed branches: four graphite and three LFP, at 25 C and 0.02/0.05C. One 0.05C cathode branch quarantined for protocol-inconsistent low potentials.",
+      "diffusion": "No same-study intrinsic diffusivity admitted; relaxed OCV/GITT observations alone are not D estimates.",
+      "kinetics": "No same-study intrinsic kinetic law admitted; GEIS alone is not a defined kinetic coefficient.",
+      "full_cell_tests": "Same-study dataset/paper links: 10/20/25/30/35/45 C OCV, multi-rate CC/CP and GEIS. Individual original file names and measured channels remain unverified; no new payload packaged."
+    },
+    "quarantined_source_files": [
+      {
+        "filename": "HAIDI18650_Cathode_Delithiation_0C05.mat",
+        "rows_below_protocol_minimum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "source_voltage_range_V": [
+          1.54006766759693,
+          4.00017080621399
+        ],
+        "reason": "Nine source nodes fall below the 2.0 V cathode cutoff reported for LIBHE. Origin cannot be resolved from normalized-capacity/voltage alone; entire 0.05C cathode-delithiation branch held rather than trimming or repairing nodes.",
+        "original_preserved": true
+      }
+    ],
+    "note": "Source LIBHE subset only. No A123 match, no sodium-ion material import, no shared specimen assertion or automatic parameter transfer.",
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "haidi-rehm2025-anode-delithiation-0c02",
+      "haidi-rehm2025-anode-delithiation-0c05",
+      "haidi-rehm2025-anode-lithiation-0c02",
+      "haidi-rehm2025-anode-lithiation-0c05",
+      "haidi-rehm2025-cathode-delithiation-0c02",
+      "haidi-rehm2025-cathode-lithiation-0c02",
+      "haidi-rehm2025-cathode-lithiation-0c05"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "haidi-rehm2025-anode-delithiation-0c02",
+          "haidi-rehm2025-anode-delithiation-0c05",
+          "haidi-rehm2025-anode-lithiation-0c02",
+          "haidi-rehm2025-anode-lithiation-0c05",
+          "haidi-rehm2025-cathode-delithiation-0c02",
+          "haidi-rehm2025-cathode-lithiation-0c02",
+          "haidi-rehm2025-cathode-lithiation-0c05"
+        ],
+        "source_ids": [
+          "haidi-rehm2025-data",
+          "rehm-2025",
+          "rehm-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Seven admitted author-processed branches: four graphite and three LFP, at 25 C and 0.02/0.05C. One 0.05C cathode branch quarantined for protocol-inconsistent low potentials.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No same-study intrinsic diffusivity admitted; relaxed OCV/GITT observations alone are not D estimates.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No same-study intrinsic kinetic law admitted; GEIS alone is not a defined kinetic coefficient.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "Same-study dataset/paper links: 10/20/25/30/35/45 C OCV, multi-rate CC/CP and GEIS. Individual original file names and measured channels remain unverified; no new payload packaged.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "Exact harvested donor and full-cell serial mapping unresolved",
+      "Original provider full-cell file inventory and observation headers unavailable",
+      "Absolute stoichiometric endpoints, half-cell Ah and exact MAT filtering/cycle history unresolved",
+      "Same-study intrinsic diffusion and kinetic coefficients not located",
+      "0.05C cathode delithiation held: nine source nodes below the paper's 2 V cutoff",
+      "Dynamic road-cycle profiles and longitudinal ageing series not established"
+    ]
+  },
+  "parameters": [],
+  "ocp_records": [
+    {
+      "id": "haidi-rehm2025-anode-delithiation-0c02",
+      "version": "1",
+      "title": "HAIDI HDCF18650-1800 | graphite | delithiation | 0.02C | Rehm2025",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "haidi-rehm2025-anode-delithiation-0c02-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Original Rehm2025 paper Section 1 states half-cell measurements at 25 C; full-cell temperatures are stored separately."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Normalized branch progress, not absolute lithium fraction or full-cell SOC. The author notice reports swapped anode direction/capacity conventions; named electrode direction and source endpoint potentials define this curation axis. Original source capacity/row are retained.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/haidi-rehm2025-anode-delithiation-0c02.csv",
+        "sha256": "2036c2d13ff62a067560a6cce5864b3db0ad72481227860025ec43df3e5b078d",
+        "point_count": 17918,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "haidi-rehm2025-data",
+        "rehm-2025",
+        "rehm-2026"
+      ],
+      "experiment_id": "haidi-rehm2025-graphite-halfcell",
+      "cell_link": {
+        "cell_id": "haidi-hdcf18650-1800-rehm2025",
+        "relationship": "same_model",
+        "evidence": "Original paper identifies HAIDI HDCF18650-1800 (LIBHE); author notice links these electrode branches to that paper. Same-study full-cell tests are externally linked; exact harvested donor and test serials unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "haidi-haidi18650-anode-delithiation-0c02",
+          "haidi-tum-source-notice",
+          "haidi-rights-quality-review"
+        ],
+        "derivation": "author_processed_finite_current_half_cell_branch; original dataset byte identity unresolved",
+        "location": "batteryData.normalizedCapacity; batteryData.voltage",
+        "processing": {
+          "script": "scripts/seed_haidi.py",
+          "source_variable": "batteryData",
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "source_rows": 17918,
+          "omitted_rows": 0,
+          "nominal_rate_C": 0.02,
+          "source_capacity_bounds": [
+            7.144050206964181e-08,
+            1.0000001485650871
+          ],
+          "reverse_normalized_axis": true,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author notice names electrode lithiation/delithiation. Endpoint potential decreases on lithiation and increases on delithiation. Original capacity and row retained; no chronological acquisition order inferred.",
+          "filtering": "No additional smoothing, clipping, resampling, deleted nodes or inserted endpoints. The original paper reports filtered displayed curves; exact MAT filtering history is unresolved."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author-processed finite-current pseudo-OCP, not certified equilibrium or an original instrument recording.",
+        "Absolute half-cell Ah, lithium stoichiometry, exact cycle selection and MAT filtering history are not supplied.",
+        "Mirror-to-original-dataset byte identity cannot be checked while provider file inventory is unavailable.",
+        "Supplied voltage coverage may be narrower than the complete protocol; no missing cutoff endpoints are inserted.",
+        "Millivolt-scale cutoff excursions remain unchanged; source voltages are not clipped.",
+        "Same-study association does not establish identical serialized half-cell/full-cell specimens or a transferable complete D/kinetics set.",
+        "No independent electrochemical-model validation is claimed."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "haidi-rehm2025-anode-delithiation-0c05",
+      "version": "1",
+      "title": "HAIDI HDCF18650-1800 | graphite | delithiation | 0.05C | Rehm2025",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "haidi-rehm2025-anode-delithiation-0c05-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Original Rehm2025 paper Section 1 states half-cell measurements at 25 C; full-cell temperatures are stored separately."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Normalized branch progress, not absolute lithium fraction or full-cell SOC. The author notice reports swapped anode direction/capacity conventions; named electrode direction and source endpoint potentials define this curation axis. Original source capacity/row are retained.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/haidi-rehm2025-anode-delithiation-0c05.csv",
+        "sha256": "ac8323340eb38c061cab9fc16e024ca70038341d35d0407111ded034fc0ee93d",
+        "point_count": 8988,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "haidi-rehm2025-data",
+        "rehm-2025",
+        "rehm-2026"
+      ],
+      "experiment_id": "haidi-rehm2025-graphite-halfcell",
+      "cell_link": {
+        "cell_id": "haidi-hdcf18650-1800-rehm2025",
+        "relationship": "same_model",
+        "evidence": "Original paper identifies HAIDI HDCF18650-1800 (LIBHE); author notice links these electrode branches to that paper. Same-study full-cell tests are externally linked; exact harvested donor and test serials unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "haidi-haidi18650-anode-delithiation-0c05",
+          "haidi-tum-source-notice",
+          "haidi-rights-quality-review"
+        ],
+        "derivation": "author_processed_finite_current_half_cell_branch; original dataset byte identity unresolved",
+        "location": "batteryData.normalizedCapacity; batteryData.voltage",
+        "processing": {
+          "script": "scripts/seed_haidi.py",
+          "source_variable": "batteryData",
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "source_rows": 8988,
+          "omitted_rows": 0,
+          "nominal_rate_C": 0.05,
+          "source_capacity_bounds": [
+            6.639698280075379e-08,
+            1.000000143755164
+          ],
+          "reverse_normalized_axis": true,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author notice names electrode lithiation/delithiation. Endpoint potential decreases on lithiation and increases on delithiation. Original capacity and row retained; no chronological acquisition order inferred.",
+          "filtering": "No additional smoothing, clipping, resampling, deleted nodes or inserted endpoints. The original paper reports filtered displayed curves; exact MAT filtering history is unresolved."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author-processed finite-current pseudo-OCP, not certified equilibrium or an original instrument recording.",
+        "Absolute half-cell Ah, lithium stoichiometry, exact cycle selection and MAT filtering history are not supplied.",
+        "Mirror-to-original-dataset byte identity cannot be checked while provider file inventory is unavailable.",
+        "Supplied voltage coverage may be narrower than the complete protocol; no missing cutoff endpoints are inserted.",
+        "Millivolt-scale cutoff excursions remain unchanged; source voltages are not clipped.",
+        "Same-study association does not establish identical serialized half-cell/full-cell specimens or a transferable complete D/kinetics set.",
+        "No independent electrochemical-model validation is claimed.",
+        "Two source nodes exceed the 1.5 V graphite cutoff by up to 2.8033 mV; retained as provided."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "haidi-rehm2025-anode-lithiation-0c02",
+      "version": "1",
+      "title": "HAIDI HDCF18650-1800 | graphite | lithiation | 0.02C | Rehm2025",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "haidi-rehm2025-anode-lithiation-0c02-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Original Rehm2025 paper Section 1 states half-cell measurements at 25 C; full-cell temperatures are stored separately."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Normalized branch progress, not absolute lithium fraction or full-cell SOC. The author notice reports swapped anode direction/capacity conventions; named electrode direction and source endpoint potentials define this curation axis. Original source capacity/row are retained.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/haidi-rehm2025-anode-lithiation-0c02.csv",
+        "sha256": "50f6af4a5d75f54b4c10db951ee2759db77aed64ea155f17732c86f70e6ff38c",
+        "point_count": 18069,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "haidi-rehm2025-data",
+        "rehm-2025",
+        "rehm-2026"
+      ],
+      "experiment_id": "haidi-rehm2025-graphite-halfcell",
+      "cell_link": {
+        "cell_id": "haidi-hdcf18650-1800-rehm2025",
+        "relationship": "same_model",
+        "evidence": "Original paper identifies HAIDI HDCF18650-1800 (LIBHE); author notice links these electrode branches to that paper. Same-study full-cell tests are externally linked; exact harvested donor and test serials unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "haidi-haidi18650-anode-lithiation-0c02",
+          "haidi-tum-source-notice",
+          "haidi-rights-quality-review"
+        ],
+        "derivation": "author_processed_finite_current_half_cell_branch; original dataset byte identity unresolved",
+        "location": "batteryData.normalizedCapacity; batteryData.voltage",
+        "processing": {
+          "script": "scripts/seed_haidi.py",
+          "source_variable": "batteryData",
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "source_rows": 18069,
+          "omitted_rows": 0,
+          "nominal_rate_C": 0.02,
+          "source_capacity_bounds": [
+            1.535535260055454e-07,
+            1.000000076776763
+          ],
+          "reverse_normalized_axis": false,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author notice names electrode lithiation/delithiation. Endpoint potential decreases on lithiation and increases on delithiation. Original capacity and row retained; no chronological acquisition order inferred.",
+          "filtering": "No additional smoothing, clipping, resampling, deleted nodes or inserted endpoints. The original paper reports filtered displayed curves; exact MAT filtering history is unresolved."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author-processed finite-current pseudo-OCP, not certified equilibrium or an original instrument recording.",
+        "Absolute half-cell Ah, lithium stoichiometry, exact cycle selection and MAT filtering history are not supplied.",
+        "Mirror-to-original-dataset byte identity cannot be checked while provider file inventory is unavailable.",
+        "Supplied voltage coverage may be narrower than the complete protocol; no missing cutoff endpoints are inserted.",
+        "Millivolt-scale cutoff excursions remain unchanged; source voltages are not clipped.",
+        "Same-study association does not establish identical serialized half-cell/full-cell specimens or a transferable complete D/kinetics set.",
+        "No independent electrochemical-model validation is claimed."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "haidi-rehm2025-anode-lithiation-0c05",
+      "version": "1",
+      "title": "HAIDI HDCF18650-1800 | graphite | lithiation | 0.05C | Rehm2025",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "haidi-rehm2025-anode-lithiation-0c05-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Original Rehm2025 paper Section 1 states half-cell measurements at 25 C; full-cell temperatures are stored separately."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Normalized branch progress, not absolute lithium fraction or full-cell SOC. The author notice reports swapped anode direction/capacity conventions; named electrode direction and source endpoint potentials define this curation axis. Original source capacity/row are retained.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/haidi-rehm2025-anode-lithiation-0c05.csv",
+        "sha256": "a6c548568c746335023624f1fe3d8c6f86ddfa634bfff59a26dc07dd77fd1fc0",
+        "point_count": 9357,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "haidi-rehm2025-data",
+        "rehm-2025",
+        "rehm-2026"
+      ],
+      "experiment_id": "haidi-rehm2025-graphite-halfcell",
+      "cell_link": {
+        "cell_id": "haidi-hdcf18650-1800-rehm2025",
+        "relationship": "same_model",
+        "evidence": "Original paper identifies HAIDI HDCF18650-1800 (LIBHE); author notice links these electrode branches to that paper. Same-study full-cell tests are externally linked; exact harvested donor and test serials unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "haidi-haidi18650-anode-lithiation-0c05",
+          "haidi-tum-source-notice",
+          "haidi-rights-quality-review"
+        ],
+        "derivation": "author_processed_finite_current_half_cell_branch; original dataset byte identity unresolved",
+        "location": "batteryData.normalizedCapacity; batteryData.voltage",
+        "processing": {
+          "script": "scripts/seed_haidi.py",
+          "source_variable": "batteryData",
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "source_rows": 9357,
+          "omitted_rows": 0,
+          "nominal_rate_C": 0.05,
+          "source_capacity_bounds": [
+            1.4054694275067448e-07,
+            1.0000000702734713
+          ],
+          "reverse_normalized_axis": false,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author notice names electrode lithiation/delithiation. Endpoint potential decreases on lithiation and increases on delithiation. Original capacity and row retained; no chronological acquisition order inferred.",
+          "filtering": "No additional smoothing, clipping, resampling, deleted nodes or inserted endpoints. The original paper reports filtered displayed curves; exact MAT filtering history is unresolved."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author-processed finite-current pseudo-OCP, not certified equilibrium or an original instrument recording.",
+        "Absolute half-cell Ah, lithium stoichiometry, exact cycle selection and MAT filtering history are not supplied.",
+        "Mirror-to-original-dataset byte identity cannot be checked while provider file inventory is unavailable.",
+        "Supplied voltage coverage may be narrower than the complete protocol; no missing cutoff endpoints are inserted.",
+        "Millivolt-scale cutoff excursions remain unchanged; source voltages are not clipped.",
+        "Same-study association does not establish identical serialized half-cell/full-cell specimens or a transferable complete D/kinetics set.",
+        "No independent electrochemical-model validation is claimed."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "haidi-rehm2025-cathode-delithiation-0c02",
+      "version": "1",
+      "title": "HAIDI HDCF18650-1800 | LFP | delithiation | 0.02C | Rehm2025",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "haidi-rehm2025-cathode-delithiation-0c02-material",
+      "electrode_role": "positive",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Original Rehm2025 paper Section 1 states half-cell measurements at 25 C; full-cell temperatures are stored separately."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Normalized branch progress, not absolute lithium fraction or full-cell SOC. The author notice reports swapped anode direction/capacity conventions; named electrode direction and source endpoint potentials define this curation axis. Original source capacity/row are retained.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/haidi-rehm2025-cathode-delithiation-0c02.csv",
+        "sha256": "ba614f496084bc72c4455c2f55c041e3499a43ec13d0feaa1ea9e553cd7ceb27",
+        "point_count": 18620,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "haidi-rehm2025-data",
+        "rehm-2025",
+        "rehm-2026"
+      ],
+      "experiment_id": "haidi-rehm2025-LFP-halfcell",
+      "cell_link": {
+        "cell_id": "haidi-hdcf18650-1800-rehm2025",
+        "relationship": "same_model",
+        "evidence": "Original paper identifies HAIDI HDCF18650-1800 (LIBHE); author notice links these electrode branches to that paper. Same-study full-cell tests are externally linked; exact harvested donor and test serials unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "haidi-haidi18650-cathode-delithiation-0c02",
+          "haidi-tum-source-notice",
+          "haidi-rights-quality-review"
+        ],
+        "derivation": "author_processed_finite_current_half_cell_branch; original dataset byte identity unresolved",
+        "location": "batteryData.normalizedCapacity; batteryData.voltage",
+        "processing": {
+          "script": "scripts/seed_haidi.py",
+          "source_variable": "batteryData",
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "source_rows": 18620,
+          "omitted_rows": 0,
+          "nominal_rate_C": 0.02,
+          "source_capacity_bounds": [
+            -3.3483597441130507e-07,
+            0.9999998355214526
+          ],
+          "reverse_normalized_axis": false,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author notice names electrode lithiation/delithiation. Endpoint potential decreases on lithiation and increases on delithiation. Original capacity and row retained; no chronological acquisition order inferred.",
+          "filtering": "No additional smoothing, clipping, resampling, deleted nodes or inserted endpoints. The original paper reports filtered displayed curves; exact MAT filtering history is unresolved."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author-processed finite-current pseudo-OCP, not certified equilibrium or an original instrument recording.",
+        "Absolute half-cell Ah, lithium stoichiometry, exact cycle selection and MAT filtering history are not supplied.",
+        "Mirror-to-original-dataset byte identity cannot be checked while provider file inventory is unavailable.",
+        "Supplied voltage coverage may be narrower than the complete protocol; no missing cutoff endpoints are inserted.",
+        "Millivolt-scale cutoff excursions remain unchanged; source voltages are not clipped.",
+        "Same-study association does not establish identical serialized half-cell/full-cell specimens or a transferable complete D/kinetics set.",
+        "No independent electrochemical-model validation is claimed."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "haidi-rehm2025-cathode-lithiation-0c02",
+      "version": "1",
+      "title": "HAIDI HDCF18650-1800 | LFP | lithiation | 0.02C | Rehm2025",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "haidi-rehm2025-cathode-lithiation-0c02-material",
+      "electrode_role": "positive",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Original Rehm2025 paper Section 1 states half-cell measurements at 25 C; full-cell temperatures are stored separately."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Normalized branch progress, not absolute lithium fraction or full-cell SOC. The author notice reports swapped anode direction/capacity conventions; named electrode direction and source endpoint potentials define this curation axis. Original source capacity/row are retained.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/haidi-rehm2025-cathode-lithiation-0c02.csv",
+        "sha256": "5edfc1ae1755342b6cb86aaf3d5d408c27e240eb3bccf8dc0306555f4c4b422e",
+        "point_count": 17470,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "haidi-rehm2025-data",
+        "rehm-2025",
+        "rehm-2026"
+      ],
+      "experiment_id": "haidi-rehm2025-LFP-halfcell",
+      "cell_link": {
+        "cell_id": "haidi-hdcf18650-1800-rehm2025",
+        "relationship": "same_model",
+        "evidence": "Original paper identifies HAIDI HDCF18650-1800 (LIBHE); author notice links these electrode branches to that paper. Same-study full-cell tests are externally linked; exact harvested donor and test serials unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "haidi-haidi18650-cathode-lithiation-0c02",
+          "haidi-tum-source-notice",
+          "haidi-rights-quality-review"
+        ],
+        "derivation": "author_processed_finite_current_half_cell_branch; original dataset byte identity unresolved",
+        "location": "batteryData.normalizedCapacity; batteryData.voltage",
+        "processing": {
+          "script": "scripts/seed_haidi.py",
+          "source_variable": "batteryData",
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "source_rows": 17470,
+          "omitted_rows": 0,
+          "nominal_rate_C": 0.02,
+          "source_capacity_bounds": [
+            -1.825347532241486e-07,
+            0.9999996349304937
+          ],
+          "reverse_normalized_axis": true,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author notice names electrode lithiation/delithiation. Endpoint potential decreases on lithiation and increases on delithiation. Original capacity and row retained; no chronological acquisition order inferred.",
+          "filtering": "No additional smoothing, clipping, resampling, deleted nodes or inserted endpoints. The original paper reports filtered displayed curves; exact MAT filtering history is unresolved."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author-processed finite-current pseudo-OCP, not certified equilibrium or an original instrument recording.",
+        "Absolute half-cell Ah, lithium stoichiometry, exact cycle selection and MAT filtering history are not supplied.",
+        "Mirror-to-original-dataset byte identity cannot be checked while provider file inventory is unavailable.",
+        "Supplied voltage coverage may be narrower than the complete protocol; no missing cutoff endpoints are inserted.",
+        "Millivolt-scale cutoff excursions remain unchanged; source voltages are not clipped.",
+        "Same-study association does not establish identical serialized half-cell/full-cell specimens or a transferable complete D/kinetics set.",
+        "No independent electrochemical-model validation is claimed."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "haidi-rehm2025-cathode-lithiation-0c05",
+      "version": "1",
+      "title": "HAIDI HDCF18650-1800 | LFP | lithiation | 0.05C | Rehm2025",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "haidi-rehm2025-cathode-lithiation-0c05-material",
+      "electrode_role": "positive",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": 298.15,
+        "description": "Original Rehm2025 paper Section 1 states half-cell measurements at 25 C; full-cell temperatures are stored separately."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Normalized branch progress, not absolute lithium fraction or full-cell SOC. The author notice reports swapped anode direction/capacity conventions; named electrode direction and source endpoint potentials define this curation axis. Original source capacity/row are retained.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/haidi-rehm2025-cathode-lithiation-0c05.csv",
+        "sha256": "f5f7c1b025d1d0545fce16c59b510355ae831a3f43dc4e3878acb237c1163fd3",
+        "point_count": 8273,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "haidi-rehm2025-data",
+        "rehm-2025",
+        "rehm-2026"
+      ],
+      "experiment_id": "haidi-rehm2025-LFP-halfcell",
+      "cell_link": {
+        "cell_id": "haidi-hdcf18650-1800-rehm2025",
+        "relationship": "same_model",
+        "evidence": "Original paper identifies HAIDI HDCF18650-1800 (LIBHE); author notice links these electrode branches to that paper. Same-study full-cell tests are externally linked; exact harvested donor and test serials unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "haidi-haidi18650-cathode-lithiation-0c05",
+          "haidi-tum-source-notice",
+          "haidi-rights-quality-review"
+        ],
+        "derivation": "author_processed_finite_current_half_cell_branch; original dataset byte identity unresolved",
+        "location": "batteryData.normalizedCapacity; batteryData.voltage",
+        "processing": {
+          "script": "scripts/seed_haidi.py",
+          "source_variable": "batteryData",
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "source_rows": 8273,
+          "omitted_rows": 0,
+          "nominal_rate_C": 0.05,
+          "source_capacity_bounds": [
+            -1.6719748232211171e-07,
+            0.9999996656050354
+          ],
+          "reverse_normalized_axis": true,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author notice names electrode lithiation/delithiation. Endpoint potential decreases on lithiation and increases on delithiation. Original capacity and row retained; no chronological acquisition order inferred.",
+          "filtering": "No additional smoothing, clipping, resampling, deleted nodes or inserted endpoints. The original paper reports filtered displayed curves; exact MAT filtering history is unresolved."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Author-processed finite-current pseudo-OCP, not certified equilibrium or an original instrument recording.",
+        "Absolute half-cell Ah, lithium stoichiometry, exact cycle selection and MAT filtering history are not supplied.",
+        "Mirror-to-original-dataset byte identity cannot be checked while provider file inventory is unavailable.",
+        "Supplied voltage coverage may be narrower than the complete protocol; no missing cutoff endpoints are inserted.",
+        "Millivolt-scale cutoff excursions remain unchanged; source voltages are not clipped.",
+        "Same-study association does not establish identical serialized half-cell/full-cell specimens or a transferable complete D/kinetics set.",
+        "No independent electrochemical-model validation is claimed."
+      ],
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "full_cell_tests": [],
+  "external_datasets": [
+    {
+      "id": "haidi-lfp-rehm2025",
+      "title": "HAIDI HDCF18650-1800 | Rehm2025 multi-temperature OCV, rate and GEIS source",
+      "material_families": [
+        "LFP"
+      ],
+      "cell_identity": "HAIDI Energy Group HDCF18650-1800, 1.8 Ah, LFP/graphite, 18650; paper LIBHE. Only this lithium-ion subset is indexed; two sodium-ion cell types in the source deposit are excluded.",
+      "test_types": [
+        "constant_current",
+        "cccv",
+        "pulse",
+        "eis",
+        "ocv"
+      ],
+      "profiles": [],
+      "rate_summary": "Paper-defined full-cell protocol at 10/20/25/30/35/45 C: equal charge/discharge 0.1/0.2/0.33/0.5/0.67/1C; additional discharge 1.5/2/2.5C with charge held at 1C. CP load rates are E-rates, not C-rates. Quasi-OCV at 0.05C, relaxed OCV 0.1C pulses/rests; GEIS 0.01-100000 Hz, 15 points/decade, 0.1 A, eleven SOC levels. These are study conditions, not a verified file-by-temperature matrix.",
+      "temperatures_C": [
+        10,
+        20,
+        25,
+        30,
+        35,
+        45
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "Original full-cell observation headers were not read. Paper conditions do not certify measured time/current/voltage/temperature or frequency/Z column availability."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://mediatum.ub.tum.de/1762675",
+        "doi": "10.14459/2024mp1762675",
+        "version": "Published 2025-01-31; author half-cell mirror from fixed Zenodo 19555109. Original full-cell file inventory unresolved."
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://data.gov.de/suche/daten/rate-capability-tests-ocv-measurements-impedance-and-half-cell-measurements-of-two-sodium-ion-b99db5",
+        "note": "Exact-DOI TUM publisher record in open.bydata/GovData identifies CC-BY and author attribution; GovData license URL and official DCAT vocabulary resolve to CC BY 4.0. Empty DataCite rights and incomplete duplicate catalog records are documented. Framework MIT is not used to relicense the data. Full-cell observations remain external."
+      },
+      "review": {
+        "checked_on": "2026-10-24",
+        "level": "existing_source_audit",
+        "note": "Original paper methods pages 3/4 visually checked; public publisher-catalog rights and eight author MATs reviewed, seven admitted and one quarantined. Original provider requests returned 429/timeouts; no full-cell payload/file inventory read or imported."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "haidi-hdcf18650-1800-rehm2025"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "The author HAIDI half-cell notice cites Rehm2025; the original paper identifies LIBHE as HDCF18650-1800 and points to this dataset. Exact serialized donors/test cells are not linked.",
+        "missing_components": [
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://doi.org/10.1016/j.jpowsour.2025.236290",
+        "https://d-nb.info/1370379285/34",
+        "https://open.bydata.de/api/hub/search/datasets/10-14459-2024mp1762675",
+        "https://data.gov.de/suche/daten/rate-capability-tests-ocv-measurements-impedance-and-half-cell-measurements-of-two-sodium-ion-b99db5",
+        "https://www.dcat-ap.de/def/licenses/20260924",
+        "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/README_additional_citations_necessary.txt"
+      ],
+      "file_links": [
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Quarantined original: nine cathode nodes below the paper 2 V cutoff; no admitted CSV/record."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "Original dataset landing page; full-cell file inventory unresolved",
+          "url": "https://mediatum.ub.tum.de/1762675",
+          "source_path": "Dataset landing page (not an observed filesystem path)",
+          "kind": "documentation",
+          "cell_model": "HAIDI HDCF18650-1800 (LIBHE subset)",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "source_sample_id": null,
+          "verification": "source_documentation",
+          "content_review": "documentation_reviewed",
+          "note": "Paper/catalog confirm same-study multi-temperature OCV, CC/CP and GEIS. This link is a dataset access point, not a verified file/ZIP or read observation. No individual full-cell filenames or headers established."
+        }
+      ],
+      "missing_items": [
+        "Exact harvested donor/full-cell serial mapping unresolved.",
+        "Individual full-cell filenames, archive paths and observation headers unverified: provider landing/export requests unavailable; no payload imported.",
+        "Absolute stoichiometry, half-cell Ah, exact MAT filtering and cycle selection history unresolved.",
+        "One 0.05C cathode-delithiation MAT quarantined: nine nodes below the paper 2 V cutoff; no trimmed/repaired native curve.",
+        "No same-study intrinsic D/kinetics admitted; relaxed OCV/GITT and GEIS observations are not automatically D or kinetic coefficients.",
+        "Dynamic road profiles and longitudinal ageing series not established.",
+        "Empty DataCite and incomplete duplicate GovData records retained in rights review; actual data grant comes from exact-DOI publisher distribution metadata."
+      ],
+      "inventory_scope": "Eight real author-mirror half-cell paths plus one documentation-only original dataset access point. No whole-cell file name, archive format, cell serial or complete condition grid is invented. Counts are locators, not independent tests.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "haidi-rehm2025-anode-delithiation-0c02",
+            "haidi-rehm2025-anode-delithiation-0c05",
+            "haidi-rehm2025-anode-lithiation-0c02",
+            "haidi-rehm2025-anode-lithiation-0c05",
+            "haidi-rehm2025-cathode-delithiation-0c02",
+            "haidi-rehm2025-cathode-lithiation-0c02",
+            "haidi-rehm2025-cathode-lithiation-0c05"
+          ],
+          "evidence": "Seven stored finite-current author-processed half-cell branches at 25 C: four graphite and three LFP. One additional LFP branch is quarantined; no equilibrium, absolute-stoichiometry or shared-specimen claim.",
+          "missing_items": [
+            "Absolute stoichiometry/half-cell Ah",
+            "Exact donor/cycle/filtering history",
+            "One cathode branch held for protocol mismatch"
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "Same-study relaxed OCV/GITT traces do not define a reusable intrinsic diffusivity estimate.",
+          "missing_items": [
+            "No same-study intrinsic D admitted"
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "GEIS observations do not independently define an intrinsic reaction-rate coefficient or i0 law.",
+          "missing_items": [
+            "No same-study intrinsic kinetic law admitted"
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "container_only",
+          "evidence": "Original paper describes 0.1-1C charge protocols at six temperatures; dataset links confirmed, individual original files not listed/read."
+        },
+        "multi_rate_discharge": {
+          "status": "container_only",
+          "evidence": "Original paper describes 0.1-2.5C discharge at six temperatures; charge stays 1C for the additional 1.5/2/2.5C discharge stages. Individual filenames unresolved."
+        },
+        "EIS": {
+          "status": "container_only",
+          "evidence": "GEIS in the paper and exact-DOI dataset description: six temperatures, eleven SOCs, 10 mHz-100 kHz, 0.1 A. File locations and frequency/Z headers not read."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No named road-cycle file found. Constant-power characterization is not relabeled US06 or a verified dynamic profile."
+        }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "source_url": "https://doi.org/10.1016/j.jpowsour.2025.236290",
+        "file_paths": [],
+        "evidence": "Study characterizes fresh cells and uses new LIB cells per temperature to limit ageing effects. Repeated conditioning/rate cycles are not a longitudinal ageing dataset."
+      },
+      "ocp_anchor": {
+        "kind": "catalog_half_cell",
+        "half_cell_temperatures_C": [
+          25
+        ],
+        "source_paths": [
+          "input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat"
+        ],
+        "source_urls": [
+          "https://doi.org/10.1016/j.jpowsour.2025.236290",
+          "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/README_additional_citations_necessary.txt"
+        ],
+        "evidence": "Seven native author-processed Li-reference half-cell branches at 25 C and 0.02/0.05C; preserved source capacity/rows. Same-study full-cell association, unresolved donor serials. Eighth original is quarantined and excluded from this admitted anchor."
+      },
+      "catalog_evidence_paths": [
+        "evidence/haidi-rehm2025/review.json"
+      ]
+    }
+  ],
+  "sources": {
+    "haidi-rehm2025-data": {
+      "kind": "dataset",
+      "title": "Rehm2025 HAIDI LFP/graphite subset of rate, OCV, impedance and half-cell dataset",
+      "authors": [
+        "Mathias Rehm",
+        "Marco Fischer",
+        "Manuel Rubio-Gomez",
+        "Moritz Schuette",
+        "Dirk Uwe Sauer",
+        "Andreas Jossen"
+      ],
+      "year": 2025,
+      "doi": "10.14459/2024mp1762675",
+      "url": "https://mediatum.ub.tum.de/1762675",
+      "license": "CC-BY-4.0",
+      "version": "Dataset published 2025-01-31; author branch mirror from fixed release 19555109",
+      "license_evidence": "Exact-DOI TUM publisher metadata in open.bydata/GovData identifies cc-by with author attribution; GovData and the official DCAT vocabulary map it to CC BY 4.0. Empty/incomplete duplicate metadata are retained in the review. Framework MIT is not the data grant.",
+      "role": "Seven native author-processed half-cell branches, one quarantined original; same-study full-cell tests remain external. Original provider file inventory and mirror/raw-file identity unresolved."
+    },
+    "rehm-2025": {
+      "kind": "paper",
+      "title": "Comparing the electrical performance of commercial sodium-ion and lithium-iron-phosphate batteries",
+      "authors": [
+        "Mathias Rehm",
+        "Marco Fischer",
+        "Manuel Rubio-Gomez",
+        "Moritz Schuette",
+        "Dirk Uwe Sauer",
+        "Andreas Jossen"
+      ],
+      "year": 2025,
+      "doi": "10.1016/j.jpowsour.2025.236290",
+      "url": "https://doi.org/10.1016/j.jpowsour.2025.236290",
+      "role": "Model identity, half-cell Li/25 C/rate definitions and full-cell multi-temperature charge/discharge/GEIS protocols. Only LIBHE selected; sodium-ion cell types excluded."
+    },
+    "rehm-2026": {
+      "kind": "paper",
+      "title": "How to determine the degradation modes of lithium-ion batteries with silicon-graphite blend electrodes",
+      "authors": [
+        "Mathias Rehm",
+        "Johannes Natterer",
+        "Josef Eizenhammer",
+        "Moritz Guenthner",
+        "Simon Kuecher",
+        "Can Korkmaz",
+        "Franz Roehrer",
+        "Andreas Jossen"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.jpowsour.2026.239418",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.239418",
+      "role": "Methods Section 2.4 establishes lithium-counter coin-cell measurements; Data availability points to author GitHub. Article license is not used to relicense external tables."
+    }
+  },
+  "upstream_assets": {
+    "haidi-haidi18650-anode-delithiation-0c02": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Anode_Delithiation_0C02.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Delithiation_0C02.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "42bac95760ce4583c5ca3acb2ac9dc85458a845c3d30c08807172d14b5f489d8",
+      "admission": "native_pseudo_ocp"
+    },
+    "haidi-haidi18650-anode-delithiation-0c05": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Anode_Delithiation_0C05.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Delithiation_0C05.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "6d6ac9701f6892e98665f1808b6d0d03a62ad2e83423abb53e69d1b685c0b89c",
+      "admission": "native_pseudo_ocp"
+    },
+    "haidi-haidi18650-anode-lithiation-0c02": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Anode_Lithiation_0C02.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Lithiation_0C02.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "b28c4d9d23a1f0948e37ae76e7a254ca266e677fc7143fabe495408786e9f53f",
+      "admission": "native_pseudo_ocp"
+    },
+    "haidi-haidi18650-anode-lithiation-0c05": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Anode_Lithiation_0C05.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Lithiation_0C05.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "cab04c6d84ac21d1d44ec915d83161c68c3efebf6cc88fd063e6ca4591e12ba7",
+      "admission": "native_pseudo_ocp"
+    },
+    "haidi-haidi18650-cathode-delithiation-0c02": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Cathode_Delithiation_0C02.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Delithiation_0C02.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "13e1c8c984afb527c5d943d611934853747c18c0c0385577899afdcbfada3d1b",
+      "admission": "native_pseudo_ocp"
+    },
+    "haidi-haidi18650-cathode-delithiation-0c05": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Cathode_Delithiation_0C05.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Delithiation_0C05.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "1e0b4854b05d79b048a46604d7d989bb92d1865608f456a6181965462d2e9110",
+      "admission": "quarantined_protocol_mismatch"
+    },
+    "haidi-haidi18650-cathode-lithiation-0c02": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Cathode_Lithiation_0C02.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Lithiation_0C02.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "1dc546decf77c33d92743a598032c875a2815a6006355313c65ec2bda7a9c2d4",
+      "admission": "native_pseudo_ocp"
+    },
+    "haidi-haidi18650-cathode-lithiation-0c05": {
+      "source_id": "haidi-rehm2025-data",
+      "filename": "HAIDI18650_Cathode_Lithiation_0C05.mat",
+      "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Lithiation_0C05.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+      "license": "CC-BY-4.0",
+      "sha256": "f2a11074330179ee6ec93b9dd3f2506bfcf21cc4a48c64f5d4ced4a66568dd39",
+      "admission": "native_pseudo_ocp"
+    },
+    "haidi-rights-quality-review": {
+      "source_id": "haidi-review-2026",
+      "filename": "review.json",
+      "path": "evidence/haidi-rehm2025/review.json",
+      "url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/HAIDI_REHM2025.md",
+      "license": "MIT",
+      "sha256": "d660e2172d514693c6bb86ea350e1e79246498cb6134a4f259acdfd79025ebe7"
+    },
+    "haidi-tum-source-notice": {
+      "source_id": "tum-rehm2026-v2",
+      "filename": "TUM-LFP-source-notice.txt",
+      "path": "evidence/haidi-rehm2025/TUM-LFP-source-notice.txt",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/README_additional_citations_necessary.txt",
+      "license": "MIT",
+      "sha256": "ceab021014d074f0c86defbf8b36eafc7dddbfd5647f7e9065b72feafa6399e3"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

@@ -1,10 +1,10 @@
-# OCP and parameter extraction audit — 2026-10-23
+# OCP and parameter extraction audit — 2026-10-24
 
 [Battery model index](../data/batteries/README.md) · [Formats and storage](PARAMETER_STORAGE.md) · [O'Regan source review](OREGAN2022.md)
 
 This audit covers every current native cell/study entry, every external-only model group, and the remaining half-cell leads from the earlier source screen. It checks what is actually stored, source reuse scope, definitions, coordinate/units, and test associations. It is not a claim to have found every published measurement.
 
-**Current inventory: 83 electrode curve/fit records, 1,041 non-OCP records, 19 cell/study entries.** Counts include borrowed expressions, assumptions, activation energies and optional model inputs, not independent experiments. v0.14 adds seven first-party TUM pseudo-OCP branches; the four v0.13 additions remain reused expressions, not measured curves.
+**Current inventory: 90 electrode curve/fit records, 1,041 non-OCP records, 20 cell/study entries.** Counts include borrowed expressions, assumptions, activation energies and optional model inputs, not independent experiments. v0.15 adds seven HAIDI author-processed pseudo-OCP branches with one source branch quarantined. Earlier reused expressions and model inputs retain their separate origins.
 
 ## Native inventory by battery or study
 
@@ -31,6 +31,16 @@ Every nonzero count below links to actual versioned repository data. A zero mean
 | [LG M50 &#124; O'Regan2022 characterization and model](../data/batteries/lg-m50-oregan2022.md) | [2](../data/cells/lg-m50-oregan2022.md#ocp-curves) | [43](../data/parameters/lg-m50-oregan2022--diffusion.csv) | [14](../data/parameters/lg-m50-oregan2022--kinetics.csv) | [128](../data/parameters/lg-m50-oregan2022.json) | Three Cp tables quarantined. OCP reused from Chen2020; linked TEC/Chen full-cell tests are cross-study. |
 | [LFP 2.3 Ah &#124; Prada2013 implementation &#124; part unresolved](../data/batteries/prada2013-lfp-nominal-design.md) | [2](../data/cells/prada2013-lfp-nominal-design.md#ocp-curves) | [3](../data/parameters/prada2013-lfp-nominal-design--diffusion.csv) | [6](../data/parameters/prada2013-lfp-nominal-design--kinetics.csv) | [50](../data/parameters/prada2013-lfp-nominal-design.json) | Borrowed Afshar/Chen OCP; exact commercial identity and matching tests unresolved. |
 | [Molicel P45B &#124; TUM Rehm2026 measured half-cells](../data/batteries/molicel-p45b-tum-rehm2026.md) | [5](../data/cells/molicel-p45b-tum-rehm2026.md#ocp-curves) | 0 — not admitted | 0 — not admitted | [0](../data/parameters/molicel-p45b-tum-rehm2026.json) | Five harvested pseudo-OCP branches; half-cell temperature, absolute stoichiometry, exact donor and D/k unresolved. |
+| [HAIDI HDCF18650-1800 &#124; Rehm2025 LFP/graphite](../data/batteries/haidi-hdcf18650-1800-rehm2025.md) | [7](../data/cells/haidi-hdcf18650-1800-rehm2025.md#ocp-curves) | 0 — not admitted | 0 — not admitted | [0](../data/parameters/haidi-hdcf18650-1800-rehm2025.json) | Seven native branches at 25 C; one cathode branch quarantined. Full-cell protocols linked at dataset level; raw file inventory, exact donors, stoichiometry and D/k unresolved. |
+
+## Confirmed additions in v0.15
+
+- HAIDI HDCF18650-1800: seven author-processed pseudo-OCP branches / 98,695 original nodes, under exact-DOI publisher-catalog CC BY 4.0 evidence. One 0.05C cathode branch is quarantined for nine points below the paper cutoff. Original capacity/row, Li reference, 25 C and cycle/processing gaps are retained. [Rights and definitions](HAIDI_REHM2025.md).
+- Same-study six-temperature OCV, CC/CP and GEIS are linked at dataset level. Original full-cell filenames/headers remain unverified; no new full-cell payload or D/kinetic estimates are inferred.
+
+## Confirmed additions in v0.14
+
+- Seven first-party TUM Rehm2026 branches / 40,378 original nodes under a separately scoped MIT grant. Five P45B harvested branches and two laboratory graphite comparators remain distinct from HAIDI and third-party literature.
 
 ## Confirmed additions in v0.13
 
@@ -45,7 +55,7 @@ Every nonzero count below links to actual versioned repository data. A zero mean
 |---|---|---|
 | [M50LT / Hallemans author source](HALLEMANS2025.md) | Reuse unresolved for OCP | About:Energy personal-communication tables remain third-party inputs. The author's software notice does not establish their original redistribution permission. Grouped parameter records are already native. |
 | [TUM first-party source admission](TUM_OCP_RIGHTS.md) | Seven native pseudo-OCP branches; remaining inputs held | Fixed MIT release 19555109, bundled notice, first-party folder attribution and original paper jointly support five P45B and two material-only graphite branches. Reconstructed silicon and third-party literature curves are excluded. |
-| [TUM HAIDI LFP/graphite, M35A and LG M36 leads](TUM_OCP_RIGHTS.md) | Source-specific reuse/definition checks incomplete | HAIDI dataset DOI resolves in DataCite but rightsList is empty; provider returned 429/timeouts. M35A/M36 original protocol/reference and study mapping remain unresolved. No dataset grant or direction is inferred from article access or filenames. |
+| [HAIDI cathode quarantine and remaining TUM M35A/LG M36 leads](HAIDI_REHM2025.md) | HAIDI reuse cleared; one curve held for quality | Publisher catalog resolves HAIDI data to CC BY 4.0. Nine source nodes in one cathode branch conflict with the paper cutoff; no trimmed/repaired OCP admitted. M35A/M36 protocol/reference/study mapping remain unresolved. [Earlier review](TUM_OCP_RIGHTS.md). |
 | [Oxford A123 9 Ah author parameters](https://github.com/Battery-Intelligence-Lab/pouch-cell-thermal/tree/83054d013b288f01e1afa2da7935e0a6a67c6bc6/data/param) | Reuse unresolved for parameter code/workbooks | Pinned tree has no LICENSE file. calculate_param.py contains model constants, but its definitions/permission cannot be inferred from the separate CC BY full-cell deposit. The OCP workbooks represent whole-cell pseudo-OCV; do not split them into measured half-cell curves. |
 | O'Regan three Specific_Heat_Capacity CSVs | Definition unresolved; quarantined | Header states J/kg/K, but some values are negative and the magnitude is inconsistent with physical Cp. Original bytes stay in the licensed archive; no native physical Cp table or undocumented rescaling. Published model Cp laws are separate records. |
 | [NEXTBMS GITT files](../data/full-cell/nextbms-calb-nmc532-2026.md) | Observation links only | A current/voltage/time GITT trace is not itself a defined D(sto,T) estimate. Electrode geometry, analysis definition and derived coefficients must be established before conversion. |

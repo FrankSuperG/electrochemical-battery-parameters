@@ -4,7 +4,7 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.14.0-287b78" alt="Version 0.14.0">
+  <img src="https://img.shields.io/badge/version-0.15.0-287b78" alt="Version 0.15.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
@@ -15,17 +15,19 @@ Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-curr
 
 **Project scope:** curate, document and export electrochemical parameters and associated experimental data. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
-**v0.14.0: 83 electrode-curve records · 13 material labels · 1,041 other parameter records · 61 full-cell branch/test files · 19 cell or study entries.** Curves comprise 55 measured pseudo-OCP branches, 7 published tables/fits, 19 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+**v0.15.0: 90 electrode-curve records · 13 material labels · 1,041 other parameter records · 61 full-cell branch/test files · 20 cell or study entries.** Curves comprise 62 measured pseudo-OCP branches, 7 published tables/fits, 19 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
 File-level follow-up: **[OCP-first search: 21 source families and five additions](docs/OCP_FIRST_EXPANSION.md)** · [Panasonic NCR18650B: four sources, tests and ageing](docs/NCR18650B.md) · [original seven-source review](docs/EXTERNAL_FILE_REVIEW.md) · [selected file/container locations](data/full-cell/files.csv). Source-listed filenames, archive-directory evidence and reviewed contents remain separate. OCP, diffusion and kinetics associations are recorded independently.
 
-New full-cell discovery: **[LFP](data/full-cell/LFP.md) · [NMC](data/full-cell/NMC.md) · [NCA](data/full-cell/NCA.md) · [LCO](data/full-cell/LCO.md) · [NCO](data/full-cell/NCO.md)**. Sixteen external dataset-link records include 427 selected locators for electrode-source anchors and full-cell rate, temperature, dynamic, ageing and EIS data where verified. [The source table includes OCP anchor and Ageing data columns](data/full-cell/README.md). Large payloads stay with their providers; these links are separate from the 61 existing packaged test files. [Review sources, licenses and matching limits](docs/FULL_CELL_DATASETS.md).
+New full-cell discovery: **[LFP](data/full-cell/LFP.md) · [NMC](data/full-cell/NMC.md) · [NCA](data/full-cell/NCA.md) · [LCO](data/full-cell/LCO.md) · [NCO](data/full-cell/NCO.md)**. Seventeen external dataset-link records include 436 selected locators for electrode-source anchors and full-cell rate, temperature, dynamic, ageing and EIS data where verified. [The source table includes OCP anchor and Ageing data columns](data/full-cell/README.md). Large payloads stay with their providers; these links are separate from the 61 existing packaged test files. [Review sources, licenses and matching limits](docs/FULL_CELL_DATASETS.md).
 
-New characterization package: [LG MJ1 / DLR-SINTEF](data/cells/lg-mj1-dlr-sintef.md): four pseudo-OCP branches, 22 scalar/specification records and 20 native parameter tables, including model/direction-specific GITT fits. Read the [MJ1 source and matching review](docs/LG_MJ1.md). **Same-study intact-cell test data remain missing.** The [public-release readiness review](docs/RELEASE_READINESS.md) records checked boundaries and remaining gaps.
+New characterization package: [LG MJ1 / DLR-SINTEF](data/cells/lg-mj1-dlr-sintef.md): four pseudo-OCP branches, 22 scalar/specification records and 20 native parameter tables, including model/direction-specific GITT fits. Read the [MJ1 source and matching review](docs/LG_MJ1.md). **Same-study intact-cell test data remain missing.** The [final project review](docs/FINAL_REVIEW.md) records checked boundaries and remaining gaps.
 
 Earlier matched study: [LG M50LT / Hallemans2025](data/cells/lg-m50lt-hallemans2025.md), with 18 grouped fitted values and 164,953 measured drive-cycle t/I/V rows. Read the [definitions, OCP reuse review and missing-item ledger](docs/HALLEMANS2025.md). OCP permission remains unresolved; no M50LT electrode curves are redistributed.
 
 New LFP packages: [ISU-UConn laboratory half/full-cells](data/cells/isu-uconn-lfp-graphite-lab.md) and [A123 18650M1A / Jahn2024](data/cells/a123-18650m1a-jahn2024.md). Read the [selection, matching and missing-channel notes](docs/LFP_STUDIES.md), including ISU's unresolved reference details and A123's modeled OCPn representation.
+
+New LFP source: [HAIDI HDCF18650-1800 / Rehm2025](data/batteries/haidi-hdcf18650-1800-rehm2025.md): seven native pseudo-OCP branches at 25 C and same-study six-temperature charge/discharge/GEIS dataset links. One source cathode branch is quarantined; original full-cell filenames/headers remain unverified. [Read the rights and definitions](docs/HAIDI_REHM2025.md).
 
 ## Battery model index
 
@@ -54,6 +56,7 @@ Record counts include published assumptions, borrowed functions, activation ener
 | [A123 AMP20M1HD-A &#124; 20 Ah LFP pouch](data/batteries/a123-amp20m1hd-a.md) | Not extracted | [6 records](data/parameters/a123-amp20m1hd-a--diffusion.csv) | [6 records](data/parameters/a123-amp20m1hd-a--kinetics.csv) | [1 packaged](data/batteries/a123-amp20m1hd-a.md#full-cell-tests) | See test conditions / gaps<br>same model same study · [Match / gaps](data/batteries/a123-amp20m1hd-a.md#matching-and-gaps) |
 | [A123 cylindrical LFP / part unresolved](data/batteries/calce-a123-dynamic.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/calce-a123-dynamic.md#full-cell-tests) | multi-T, dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/calce-a123-dynamic.md#matching-and-gaps) |
 | [A123 high-power LFP pouch &#124; 9 Ah &#124; part undisclosed](data/batteries/a123-high-power-pouch-9ah.md) | Not extracted | Not extracted | Not extracted | [10 packaged](data/batteries/a123-high-power-pouch-9ah.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/a123-high-power-pouch-9ah.md#matching-and-gaps) |
+| [HAIDI HDCF18650-1800 &#124; Rehm2025 LFP/graphite](data/batteries/haidi-hdcf18650-1800-rehm2025.md) | [7 pseudo-OCP](data/cells/haidi-hdcf18650-1800-rehm2025.md#ocp-curves) | Not extracted | Not extracted | [1 external source](data/batteries/haidi-hdcf18650-1800-rehm2025.md#full-cell-tests) | multi-T, EIS<br>same model same study · [Match / gaps](data/batteries/haidi-hdcf18650-1800-rehm2025.md#matching-and-gaps) |
 | [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](data/batteries/isu-uconn-lfp-graphite-lab.md) | [4 pseudo-OCP](data/cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not extracted | Not extracted | [21 packaged](data/batteries/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/isu-uconn-lfp-graphite-lab.md#matching-and-gaps) |
 | [LFP 2.3 Ah &#124; Prada2013 implementation &#124; part unresolved](data/batteries/prada2013-lfp-nominal-design.md) | [2 reused expressions](data/cells/prada2013-lfp-nominal-design.md#ocp-curves) | [3 records](data/parameters/prada2013-lfp-nominal-design--diffusion.csv) | [6 records](data/parameters/prada2013-lfp-nominal-design--kinetics.csv) | [Not linked](data/batteries/prada2013-lfp-nominal-design.md#full-cell-tests) | See test conditions / gaps<br>parameter set only · [Match / gaps](data/batteries/prada2013-lfp-nominal-design.md#matching-and-gaps) |
 | [LFP IFR14500 labels / manufacturer unresolved](data/batteries/milano-lfp-eis-2023.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/milano-lfp-eis-2023.md#full-cell-tests) | EIS<br>Parameters unmatched · [Match / gaps](data/batteries/milano-lfp-eis-2023.md#matching-and-gaps) |
@@ -117,8 +120,8 @@ Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaM
 
 | Material family | Measured branches | Published tables | Expressions | Modeled OCPn | Identity / interpretation |
 |---|---:|---:|---:|---:|---|
-| LFP | 6 | 0 | 3 | 1 | SINTEF and ISU laboratory electrodes; A123 PD-ECM model; Afshar and BPX expressions |
-| Graphite | 12 | 2 | 9 | 1 | Distinct measured, modeled, figure-fitted and borrowed inputs; reference/coordinate labels retained |
+| LFP | 9 | 0 | 3 | 1 | SINTEF/ISU laboratory and HAIDI harvested electrodes; A123 model; Afshar/BPX expressions |
+| Graphite | 16 | 2 | 9 | 1 | Distinct measured, modeled, figure-fitted and borrowed inputs; reference/coordinate labels retained |
 | NMC111 | 4 | 0 | 0 | 0 | SINTEF specimens; commercial full-cell identity unresolved |
 | NMC532 | 6 | 0 | 2 | 0 | SINTEF electrodes, NEXTBMS harvested CALB and Mohtat pouch remain separate sources |
 | NMC811 | 0 | 0 | 2 | 0 | Chen2020 M50 positive OCP and its explicitly reused O'Regan model expression |
@@ -137,7 +140,7 @@ LMO and LTO are deferred until a reusable source and its definitions can be veri
 
 Use the [battery model index](data/batteries/README.md) for OCP, diffusion,
 kinetics and full-cell links together. The [per-model extraction audit](docs/PARAMETER_AUDIT.md)
-shows all 19 native packages, remaining source-only leads and why a component
+shows all 20 native packages, remaining source-only leads and why a component
 has not been admitted. Each cell page carries its definitions, provenance,
 parameter variants, full-cell association and missing items.
 

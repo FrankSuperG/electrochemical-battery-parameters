@@ -10744,6 +10744,314 @@
       "catalog_evidence_paths": [
         "evidence/ocp-first-expansion-review.json"
       ]
+    },
+    {
+      "id": "haidi-lfp-rehm2025",
+      "title": "HAIDI HDCF18650-1800 | Rehm2025 multi-temperature OCV, rate and GEIS source",
+      "material_families": [
+        "LFP"
+      ],
+      "cell_identity": "HAIDI Energy Group HDCF18650-1800, 1.8 Ah, LFP/graphite, 18650; paper LIBHE. Only this lithium-ion subset is indexed; two sodium-ion cell types in the source deposit are excluded.",
+      "test_types": [
+        "constant_current",
+        "cccv",
+        "pulse",
+        "eis",
+        "ocv"
+      ],
+      "profiles": [],
+      "rate_summary": "Paper-defined full-cell protocol at 10/20/25/30/35/45 C: equal charge/discharge 0.1/0.2/0.33/0.5/0.67/1C; additional discharge 1.5/2/2.5C with charge held at 1C. CP load rates are E-rates, not C-rates. Quasi-OCV at 0.05C, relaxed OCV 0.1C pulses/rests; GEIS 0.01-100000 Hz, 15 points/decade, 0.1 A, eleven SOC levels. These are study conditions, not a verified file-by-temperature matrix.",
+      "temperatures_C": [
+        10,
+        20,
+        25,
+        30,
+        35,
+        45
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "Original full-cell observation headers were not read. Paper conditions do not certify measured time/current/voltage/temperature or frequency/Z column availability."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://mediatum.ub.tum.de/1762675",
+        "doi": "10.14459/2024mp1762675",
+        "version": "Published 2025-01-31; author half-cell mirror from fixed Zenodo 19555109. Original full-cell file inventory unresolved."
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://data.gov.de/suche/daten/rate-capability-tests-ocv-measurements-impedance-and-half-cell-measurements-of-two-sodium-ion-b99db5",
+        "note": "Exact-DOI TUM publisher record in open.bydata/GovData identifies CC-BY and author attribution; GovData license URL and official DCAT vocabulary resolve to CC BY 4.0. Empty DataCite rights and incomplete duplicate catalog records are documented. Framework MIT is not used to relicense the data. Full-cell observations remain external."
+      },
+      "review": {
+        "checked_on": "2026-10-24",
+        "level": "existing_source_audit",
+        "note": "Original paper methods pages 3/4 visually checked; public publisher-catalog rights and eight author MATs reviewed, seven admitted and one quarantined. Original provider requests returned 429/timeouts; no full-cell payload/file inventory read or imported."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "haidi-hdcf18650-1800-rehm2025"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "The author HAIDI half-cell notice cites Rehm2025; the original paper identifies LIBHE as HDCF18650-1800 and points to this dataset. Exact serialized donors/test cells are not linked.",
+        "missing_components": [
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://doi.org/10.1016/j.jpowsour.2025.236290",
+        "https://d-nb.info/1370379285/34",
+        "https://open.bydata.de/api/hub/search/datasets/10-14459-2024mp1762675",
+        "https://data.gov.de/suche/daten/rate-capability-tests-ocv-measurements-impedance-and-half-cell-measurements-of-two-sodium-ion-b99db5",
+        "https://www.dcat-ap.de/def/licenses/20260924",
+        "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/README_additional_citations_necessary.txt"
+      ],
+      "file_links": [
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Quarantined original: nine cathode nodes below the paper 2 V cutoff; no admitted CSV/record."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.02,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "HAIDI HDCF18650-1800",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Native author-processed half-cell pseudo-OCP; all nodes and original capacity/row retained. 25 C and Li reference confirmed by original paper. Exact cycle/filtering history and raw-deposit byte identity unresolved."
+        },
+        {
+          "label": "Original dataset landing page; full-cell file inventory unresolved",
+          "url": "https://mediatum.ub.tum.de/1762675",
+          "source_path": "Dataset landing page (not an observed filesystem path)",
+          "kind": "documentation",
+          "cell_model": "HAIDI HDCF18650-1800 (LIBHE subset)",
+          "material_family": "LFP",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "source_sample_id": null,
+          "verification": "source_documentation",
+          "content_review": "documentation_reviewed",
+          "note": "Paper/catalog confirm same-study multi-temperature OCV, CC/CP and GEIS. This link is a dataset access point, not a verified file/ZIP or read observation. No individual full-cell filenames or headers established."
+        }
+      ],
+      "missing_items": [
+        "Exact harvested donor/full-cell serial mapping unresolved.",
+        "Individual full-cell filenames, archive paths and observation headers unverified: provider landing/export requests unavailable; no payload imported.",
+        "Absolute stoichiometry, half-cell Ah, exact MAT filtering and cycle selection history unresolved.",
+        "One 0.05C cathode-delithiation MAT quarantined: nine nodes below the paper 2 V cutoff; no trimmed/repaired native curve.",
+        "No same-study intrinsic D/kinetics admitted; relaxed OCV/GITT and GEIS observations are not automatically D or kinetic coefficients.",
+        "Dynamic road profiles and longitudinal ageing series not established.",
+        "Empty DataCite and incomplete duplicate GovData records retained in rights review; actual data grant comes from exact-DOI publisher distribution metadata."
+      ],
+      "inventory_scope": "Eight real author-mirror half-cell paths plus one documentation-only original dataset access point. No whole-cell file name, archive format, cell serial or complete condition grid is invented. Counts are locators, not independent tests.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "haidi-rehm2025-anode-delithiation-0c02",
+            "haidi-rehm2025-anode-delithiation-0c05",
+            "haidi-rehm2025-anode-lithiation-0c02",
+            "haidi-rehm2025-anode-lithiation-0c05",
+            "haidi-rehm2025-cathode-delithiation-0c02",
+            "haidi-rehm2025-cathode-lithiation-0c02",
+            "haidi-rehm2025-cathode-lithiation-0c05"
+          ],
+          "evidence": "Seven stored finite-current author-processed half-cell branches at 25 C: four graphite and three LFP. One additional LFP branch is quarantined; no equilibrium, absolute-stoichiometry or shared-specimen claim.",
+          "missing_items": [
+            "Absolute stoichiometry/half-cell Ah",
+            "Exact donor/cycle/filtering history",
+            "One cathode branch held for protocol mismatch"
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "Same-study relaxed OCV/GITT traces do not define a reusable intrinsic diffusivity estimate.",
+          "missing_items": [
+            "No same-study intrinsic D admitted"
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "GEIS observations do not independently define an intrinsic reaction-rate coefficient or i0 law.",
+          "missing_items": [
+            "No same-study intrinsic kinetic law admitted"
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "container_only",
+          "evidence": "Original paper describes 0.1-1C charge protocols at six temperatures; dataset links confirmed, individual original files not listed/read."
+        },
+        "multi_rate_discharge": {
+          "status": "container_only",
+          "evidence": "Original paper describes 0.1-2.5C discharge at six temperatures; charge stays 1C for the additional 1.5/2/2.5C discharge stages. Individual filenames unresolved."
+        },
+        "EIS": {
+          "status": "container_only",
+          "evidence": "GEIS in the paper and exact-DOI dataset description: six temperatures, eleven SOCs, 10 mHz-100 kHz, 0.1 A. File locations and frequency/Z headers not read."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No named road-cycle file found. Constant-power characterization is not relabeled US06 or a verified dynamic profile."
+        }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "source_url": "https://doi.org/10.1016/j.jpowsour.2025.236290",
+        "file_paths": [],
+        "evidence": "Study characterizes fresh cells and uses new LIB cells per temperature to limit ageing effects. Repeated conditioning/rate cycles are not a longitudinal ageing dataset."
+      },
+      "ocp_anchor": {
+        "kind": "catalog_half_cell",
+        "half_cell_temperatures_C": [
+          25
+        ],
+        "source_paths": [
+          "input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat"
+        ],
+        "source_urls": [
+          "https://doi.org/10.1016/j.jpowsour.2025.236290",
+          "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP/README_additional_citations_necessary.txt"
+        ],
+        "evidence": "Seven native author-processed Li-reference half-cell branches at 25 C and 0.02/0.05C; preserved source capacity/rows. Same-study full-cell association, unresolved donor serials. Eighth original is quarantined and excluded from this admitted anchor."
+      },
+      "catalog_evidence_paths": [
+        "evidence/haidi-rehm2025/review.json"
+      ]
     }
   ]
 }

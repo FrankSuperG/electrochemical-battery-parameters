@@ -16,3 +16,4 @@ recursive-include src/ebp/web *.png
 recursive-include assets *.png *.md
 
 recursive-include src/ebp/data/evidence/tum-rehm2026 *
+recursive-include src/ebp/data/evidence/haidi-rehm2025 *

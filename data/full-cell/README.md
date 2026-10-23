@@ -2,13 +2,13 @@
 
 [All data](../README.md) · [How to use external links](../../docs/FULL_CELL_DATASETS.md)
 
-61 existing packaged branch/test files and 16 external dataset-link records. External records are not imported files or independent specimens. One multi-chemistry dataset can appear under several materials.
+61 existing packaged branch/test files and 17 external dataset-link records. External records are not imported files or independent specimens. One multi-chemistry dataset can appear under several materials.
 
-Large observations remain with the original provider. [Dataset metadata CSV](datasets.csv) · [Complete metadata JSON](datasets.json) · [427 selected file/container locators (CSV)](files.csv). No automatic download occurs.
+Large observations remain with the original provider. [Dataset metadata CSV](datasets.csv) · [Complete metadata JSON](datasets.json) · [436 selected file/container locators (CSV)](files.csv). No automatic download occurs.
 
 | Material family | Packaged test files | External datasets | Browse |
 |---|---:|---:|---|
-| LFP | 46 | 4 | [LFP](LFP.md) |
+| LFP | 46 | 5 | [LFP](LFP.md) |
 | NMC | 9 | 7 | [NMC](NMC.md) |
 | NCA | 0 | 7 | [NCA](NCA.md) |
 | LCO | 4 | 0 | [LCO](LCO.md) |
@@ -36,5 +36,6 @@ Ageing availability applies to a source, not every linked file. `Not reported` i
 | [Molicel P45B harvested half-cell curves and 800-EFC checkup pseudo-OCV](tum-p45b-halfcell-aging-2026.md) | NCA | Imported half-cell branches | Yes (cycle) | MIT |
 | [LG M50 multi-temperature discharge with explicitly reused Chen2020 electrode OCP](tec-lgm50-multitemperature-2021.md) | NMC | Explicitly reused catalog expression | Not reported | BSD-3-Clause |
 | [LG MJ1 dynamic operating-sequence ageing (80 cells)](snu-mj1-dynamic-aging-2024.md) | NMC | Cross-study catalog half-cell reference | Yes (cycle) | CC-BY-4.0 |
+| [HAIDI HDCF18650-1800 &#124; Rehm2025 multi-temperature OCV, rate and GEIS source](haidi-lfp-rehm2025.md) | LFP | Imported half-cell branches | Not reported | CC-BY-4.0 |
 
 Test types: `constant_current`, `cccv`, `pulse`, `dynamic`, `eis`, `ocv`. Named profiles can be searched at dataset level with `ebp datasets --profile US06`, or at inspected-file level with `ebp datasets --files --profile US06`. Dataset declarations are not automatically inherited by file locators. `ocv` refers to whole-cell characterization, never an automatically inferred electrode OCP. Use `ebp datasets --aging-status available` for sources with documented ageing data.

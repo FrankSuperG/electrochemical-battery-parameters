@@ -1368,5 +1368,102 @@
     "url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/TUM_OCP_RIGHTS.md",
     "license": "MIT",
     "sha256": "0059cd294d74d4828d9c2ec25fe932d7f568147ab2eebd77ae25227977832eeb"
+  },
+  "haidi-haidi18650-anode-delithiation-0c02": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Anode_Delithiation_0C02.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Delithiation_0C02.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "42bac95760ce4583c5ca3acb2ac9dc85458a845c3d30c08807172d14b5f489d8",
+    "admission": "native_pseudo_ocp"
+  },
+  "haidi-haidi18650-anode-delithiation-0c05": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Anode_Delithiation_0C05.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Delithiation_0C05.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "6d6ac9701f6892e98665f1808b6d0d03a62ad2e83423abb53e69d1b685c0b89c",
+    "admission": "native_pseudo_ocp"
+  },
+  "haidi-haidi18650-anode-lithiation-0c02": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Anode_Lithiation_0C02.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Lithiation_0C02.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "b28c4d9d23a1f0948e37ae76e7a254ca266e677fc7143fabe495408786e9f53f",
+    "admission": "native_pseudo_ocp"
+  },
+  "haidi-haidi18650-anode-lithiation-0c05": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Anode_Lithiation_0C05.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Anode_Lithiation_0C05.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "cab04c6d84ac21d1d44ec915d83161c68c3efebf6cc88fd063e6ca4591e12ba7",
+    "admission": "native_pseudo_ocp"
+  },
+  "haidi-haidi18650-cathode-delithiation-0c02": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Cathode_Delithiation_0C02.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Delithiation_0C02.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "13e1c8c984afb527c5d943d611934853747c18c0c0385577899afdcbfada3d1b",
+    "admission": "native_pseudo_ocp"
+  },
+  "haidi-haidi18650-cathode-delithiation-0c05": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Cathode_Delithiation_0C05.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Delithiation_0C05.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "1e0b4854b05d79b048a46604d7d989bb92d1865608f456a6181965462d2e9110",
+    "admission": "quarantined_protocol_mismatch"
+  },
+  "haidi-haidi18650-cathode-lithiation-0c02": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Cathode_Lithiation_0C02.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Lithiation_0C02.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "1dc546decf77c33d92743a598032c875a2815a6006355313c65ec2bda7a9c2d4",
+    "admission": "native_pseudo_ocp"
+  },
+  "haidi-haidi18650-cathode-lithiation-0c05": {
+    "source_id": "haidi-rehm2025-data",
+    "filename": "HAIDI18650_Cathode_Lithiation_0C05.mat",
+    "path": "evidence/haidi-rehm2025/HAIDI18650_Cathode_Lithiation_0C05.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+    "license": "CC-BY-4.0",
+    "sha256": "f2a11074330179ee6ec93b9dd3f2506bfcf21cc4a48c64f5d4ced4a66568dd39",
+    "admission": "native_pseudo_ocp"
+  },
+  "haidi-tum-source-notice": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "TUM-LFP-source-notice.txt",
+    "path": "evidence/haidi-rehm2025/TUM-LFP-source-notice.txt",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/LFP/README_additional_citations_necessary.txt",
+    "license": "MIT",
+    "sha256": "ceab021014d074f0c86defbf8b36eafc7dddbfd5647f7e9065b72feafa6399e3"
+  },
+  "haidi-rights-quality-review": {
+    "source_id": "haidi-review-2026",
+    "filename": "review.json",
+    "path": "evidence/haidi-rehm2025/review.json",
+    "url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/HAIDI_REHM2025.md",
+    "license": "MIT",
+    "sha256": "d660e2172d514693c6bb86ea350e1e79246498cb6134a4f259acdfd79025ebe7"
   }
 }

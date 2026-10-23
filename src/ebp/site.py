@@ -11,12 +11,13 @@ import zipfile
 
 def _ocp_license_url(record):
     source_notices = {
-        "tum-rehm2026-v2": "TUM-Rehm2026-MIT.txt",
-        "aepy-p45b-2026": "AEPyBaMM-BSD-3-Clause.txt",
+        ("tum-rehm2026-v2", "MIT"): "TUM-Rehm2026-MIT.txt",
+        ("aepy-p45b-2026", "BSD-3-Clause"): "AEPyBaMM-BSD-3-Clause.txt",
     }
     for sid in record["source_ids"]:
-        if sid in source_notices:
-            return "licenses/" + source_notices[sid]
+        key = (sid, record["license"])
+        if key in source_notices:
+            return "licenses/" + source_notices[key]
     return {
         "BSD-3-Clause": "licenses/PyBaMM-BSD-3-Clause.txt",
         "MIT": "licenses/BPX-MIT.txt",
