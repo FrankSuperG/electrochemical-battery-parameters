@@ -241,11 +241,12 @@ class Catalog:
                      if chemistry.startswith(family)), "Unknown")
 
     def search_datasets(self, query="", material=None, test_type=None, profile=None,
-                        cell_id=None):
+                        cell_id=None, aging_status=None):
         """Find external dataset metadata without downloading any observations.
 
         A record describes dataset-level coverage, not a measured file or an
         independently identified specimen. Only explicit parameter joins count.
+        Ageing status is source-level availability, not a per-file content claim.
         """
         return [r for r in self.external_datasets
                 if (not material or material.casefold() in
@@ -254,17 +255,20 @@ class Catalog:
                 and (not profile or profile.casefold() in
                      [p.casefold() for p in r["profiles"]])
                 and (not cell_id or cell_id in r["parameter_link"]["cell_ids"])
+                and (not aging_status or aging_status == r["aging_data"]["status"])
                 and (not query or query.casefold() in json.dumps(r).casefold())]
 
     def search_dataset_files(self, query="", material=None, test_type=None,
-                             profile=None, cell_id=None):
+                             profile=None, cell_id=None, aging_status=None):
         """Return inspected file/container locators, never inherit dataset profiles.
 
         An archive member links to its parent archive. No observation is fetched.
         Unknown per-model coverage in a mixed-chemistry archive stays unknown.
+        The optional ageing filter applies to the parent source only.
         """
         rows = []
-        for dataset in self.search_datasets(material=material, cell_id=cell_id):
+        for dataset in self.search_datasets(material=material, cell_id=cell_id,
+                                            aging_status=aging_status):
             for item in dataset["file_links"]:
                 if material and (item["material_family"] or "").casefold() != material.casefold():
                     continue
@@ -275,6 +279,7 @@ class Catalog:
                 if query and query.casefold() not in (dataset["title"] + " " + json.dumps(item)).casefold():
                     continue
                 rows.append({"dataset_id": dataset["id"], "dataset_title": dataset["title"],
+                             "dataset_aging_status": dataset["aging_data"]["status"],
                              "parameter_match": dataset["parameter_link"]["match_level"], **item})
         return rows
 
@@ -352,6 +357,8 @@ class Catalog:
             paths = [item["source_path"] for item in dataset["file_links"]]
             if len(paths) != len(set(paths)):
                 errors.append(f"{dataset['id']}: duplicate external source paths")
+            if any(path not in paths for path in dataset["aging_data"]["file_paths"]):
+                errors.append(f"{dataset['id']}: ageing evidence references an unknown external source path")
             for item in dataset["file_links"]:
                 if item["material_family"] and item["material_family"] not in dataset["material_families"]:
                     errors.append(f"{dataset['id']}: file material family disagrees")

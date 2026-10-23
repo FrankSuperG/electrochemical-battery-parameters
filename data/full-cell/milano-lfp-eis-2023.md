@@ -24,6 +24,12 @@ Reported frequency-domain channels: impedance.
 
 Official metadata describes EIS, but archive columns, impedance sign, units and frequency range were not inspected.
 
+## Ageing data
+
+**Not reported**. The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.
+
+[Ageing coverage evidence](https://figshare.com/articles/dataset/Li-ion_Batteries_EIS_measurements/23736582/1). This status applies to the dataset, not every file. Formation and repeated initial characterization are not a longitudinal ageing series.
+
 ## Parameter association
 
 Match: `unmatched`. Only 600 mAh LFP is disclosed. No manufacturer/part or electrode-characterization chain establishes a join to catalog LFP OCP, D or kinetics.

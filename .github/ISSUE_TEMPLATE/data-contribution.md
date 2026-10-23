@@ -27,6 +27,7 @@ unresolved. A publicly accessible download does not by itself establish reuse.
 - Which parameters and full-cell tests can be linked?
 - Evidence for same study, same model or exact specimen:
 - Available measured channels: time / current / voltage / temperature / capacity
+- Ageing data: available / not reported / unverified; cycle or calendar; source and file paths (formation and repeated initial tests alone do not count)
 - Missing items and source conflicts:
 
 ## Submission files

@@ -24,6 +24,12 @@ Reported frequency-domain channels: Not verified / not applicable.
 
 Download table lists these temperature labels. They are not proof of measured per-row temperature channels.
 
+## Ageing data
+
+**Not reported**. The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.
+
+[Ageing coverage evidence](https://calce.umd.edu/data). This status applies to the dataset, not every file. Formation and repeated initial characterization are not a longitudinal ageing series.
+
 ## Parameter association
 
 Match: `unmatched`. CALCE exact A123 part is unresolved; source specification and sample labels do not establish identity with catalog A123 entries. Same brand and LFP chemistry are insufficient.

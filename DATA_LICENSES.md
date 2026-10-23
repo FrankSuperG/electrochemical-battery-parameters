@@ -9,6 +9,20 @@ project software remains MIT and each data/implementation record keeps its
 source-specific terms. Other external sources and their notices remain scoped
 to the provenance identified below.
 
+## NCR18650B external links in v0.10
+
+HNEI Zenodo 60232 reports `cc-zero` in its API and CC0 1.0 in its record export.
+Virtual Vehicle Zenodo 7896429 and Stanford Mendeley kxsbr4x3j2 v2 state CC BY 4.0
+for their datasets. No license was found in the inspected page, API or export
+for Bayreuth Zenodo 8369275; its observations remain links pending clarification.
+Open access alone is not a reuse grant.
+
+Only attributed metadata, directory evidence and external locators are packaged.
+None of these new observations or the author protocol PDF are redistributed.
+Source MD5 values identify external objects, not independent payload verification.
+Article terms remain distinct from dataset terms. See [the source guide](docs/NCR18650B.md)
+for exact records, matching limits and reuse evidence.
+
 ## LG MJ1 / DLR-SINTEF addition in v0.8
 
 Selected laboratory workbook cells, original Parquet, JSON/JSON-LD and Python evidence files are

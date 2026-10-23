@@ -10,7 +10,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "1.1"
+      "const": "1.2"
     },
     "description": {
       "type": "string",
@@ -41,7 +41,8 @@
           "missing_items",
           "inventory_scope",
           "parameter_components",
-          "test_coverage"
+          "test_coverage",
+          "aging_data"
         ],
         "properties": {
           "id": {
@@ -177,6 +178,7 @@
             "properties": {
               "identifier": {
                 "enum": [
+                  "CC0-1.0",
                   "CC-BY-4.0",
                   "BSD-3-Clause",
                   "not-stated"
@@ -320,7 +322,8 @@
                     "archive",
                     "archive_member",
                     "directory",
-                    "parameter_evidence"
+                    "parameter_evidence",
+                    "documentation"
                   ]
                 },
                 "cell_model": {
@@ -397,7 +400,8 @@
                 "content_review": {
                   "enum": [
                     "not_read",
-                    "existing_source_audit"
+                    "existing_source_audit",
+                    "documentation_reviewed"
                   ]
                 },
                 "note": {
@@ -732,6 +736,83 @@
                 }
               }
             }
+          },
+          "aging_data": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "kinds",
+              "evidence",
+              "source_url",
+              "file_paths"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "available",
+                  "not_reported",
+                  "unverified"
+                ]
+              },
+              "kinds": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "enum": [
+                    "cycle",
+                    "calendar"
+                  ]
+                }
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_url": {
+                "type": "string",
+                "pattern": "^https://"
+              },
+              "file_paths": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "available"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "kinds": {
+                      "minItems": 1
+                    },
+                    "file_paths": {
+                      "minItems": 1
+                    }
+                  }
+                },
+                "else": {
+                  "properties": {
+                    "kinds": {
+                      "maxItems": 0
+                    },
+                    "file_paths": {
+                      "maxItems": 0
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       }

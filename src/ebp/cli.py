@@ -41,6 +41,8 @@ def main(argv=None):
     datasets.add_argument("--test-type", choices=["constant_current", "cccv", "pulse", "dynamic", "eis", "ocv"])
     datasets.add_argument("--profile", help="Exact profile name, for example US06 or UDDS")
     datasets.add_argument("--cell", help="Only datasets explicitly linked to this catalog cell")
+    datasets.add_argument("--aging-status", choices=["available", "not_reported", "unverified"],
+        help="Filter source-level ageing availability; with --files, applies to the parent dataset")
     datasets.add_argument("--json", action="store_true")
     datasets.add_argument("--files", action="store_true", help="List inspected file/container locators; do not inherit dataset-level profiles")
     export = sub.add_parser("export")
@@ -126,7 +128,8 @@ def main(argv=None):
         elif args.command == "datasets":
             search = catalog.search_dataset_files if args.files else catalog.search_datasets
             records = search(args.query, material=args.material,
-                test_type=args.test_type, profile=args.profile, cell_id=args.cell)
+                test_type=args.test_type, profile=args.profile, cell_id=args.cell,
+                aging_status=args.aging_status)
             if args.json:
                 print(json.dumps(records, indent=2, ensure_ascii=False))
             elif args.files:
@@ -135,9 +138,10 @@ def main(argv=None):
                         record["source_path"], record["verification"], record["url"]))
             else:
                 for record in records:
-                    print("{} | {} | {}\n  {}".format(record["id"],
+                    print("{} | {} | {} | ageing: {}\n  {}".format(record["id"],
                         ", ".join(record["material_families"]),
-                        ", ".join(record["test_types"]), record["source"]["url"]))
+                        ", ".join(record["test_types"]), record["aging_data"]["status"],
+                        record["source"]["url"]))
         elif args.command == "export":
             curve = catalog.get(args.id)
             if args.format == "json":

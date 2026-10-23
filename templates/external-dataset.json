@@ -96,5 +96,12 @@
       "status": "not_located",
       "evidence": "Replace with the exact inspected source folder, file or archive member and remaining gaps."
     }
+  },
+  "aging_data": {
+    "status": "unverified",
+    "kinds": [],
+    "evidence": "Replace with source-backed longitudinal cycle/calendar coverage. Formation, repeated initial tests and simulated degradation alone do not establish measured ageing data.",
+    "source_url": "https://example.org/replace-with-ageing-evidence",
+    "file_paths": []
   }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "description": "External full-cell dataset links; records describe dataset coverage, not imported files or independent specimens. No payload is fetched by catalog, viewer, export or CI.",
   "records": [
     {
@@ -296,6 +296,13 @@
           "status": "not_located",
           "evidence": "No specifically verified file of this class in this selected review; not proof of absence."
         }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.",
+        "source_url": "https://data.mendeley.com/datasets/p8kf893yv3/1",
+        "file_paths": []
       }
     },
     {
@@ -922,7 +929,14 @@
       },
       "catalog_evidence_paths": [
         "evidence/external-archive-directory-review.json"
-      ]
+      ],
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.",
+        "source_url": "https://calce.umd.edu/data",
+        "file_paths": []
+      }
     },
     {
       "id": "calce-a123-dynamic",
@@ -1421,7 +1435,14 @@
       },
       "catalog_evidence_paths": [
         "evidence/external-archive-directory-review.json"
-      ]
+      ],
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.",
+        "source_url": "https://calce.umd.edu/data",
+        "file_paths": []
+      }
     },
     {
       "id": "calb-l148n58a-2025",
@@ -1754,6 +1775,13 @@
           "status": "file_located",
           "evidence": "Processed Data/Temperature_25C/EIS_test/59294.mat is explicitly listed; eleven cell labels seen. Contents not fetched."
         }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.",
+        "source_url": "https://data.mendeley.com/datasets/ycx459r5c3/2",
+        "file_paths": []
       }
     },
     {
@@ -1886,6 +1914,13 @@
           "status": "not_located",
           "evidence": "No specifically verified file of this class in this selected review; not proof of absence."
         }
+      },
+      "aging_data": {
+        "status": "unverified",
+        "kinds": [],
+        "evidence": "The archive internals remain uninspected. The reviewed landing-page description does not establish longitudinal ageing coverage for any named model.",
+        "source_url": "https://data.mendeley.com/datasets/29kw38kzwj/1",
+        "file_paths": []
       }
     },
     {
@@ -2313,7 +2348,14 @@
       ],
       "catalog_evidence_paths": [
         "evidence/external-archive-directory-review.json"
-      ]
+      ],
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.",
+        "source_url": "https://figshare.com/articles/dataset/Li-ion_Batteries_EIS_measurements/23736582/1",
+        "file_paths": []
+      }
     },
     {
       "id": "hallemans-m50lt-eis-2025",
@@ -2499,6 +2541,3754 @@
           "status": "previously_audited",
           "evidence": "Pinned author MAT and existing 585-row measured EIS evidence CSV, same model/study as six linked diffusion/kinetic group records."
         }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.",
+        "source_url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+        "file_paths": []
+      }
+    },
+    {
+      "id": "hnei-ncr18650b-2016",
+      "title": "Panasonic NCR18650B formation, full-cell RPT and harvested half-cell tests",
+      "material_families": [
+        "NCA"
+      ],
+      "cell_identity": "Panasonic NCR18650B; HNEI study with full-cell labels NCRBxxx and harvested NE/PE half cells. Different specimens within one study, not an established half-cell-to-full-cell serial mapping.",
+      "test_types": [
+        "constant_current",
+        "ocv"
+      ],
+      "profiles": [],
+      "rate_summary": "The paper reports multi-rate full-cell charge/discharge characterization and half-cell RPT. Exact rate-to-MAT-step mapping was not read; a member named RPT is not a standalone equilibrium-OCP table.",
+      "temperatures_C": [],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "The paper describes voltage/capacity characterization against Li for harvested half cells. MAT fields, current/time/temperature columns, branch coordinates and reference conventions have not been inspected."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://zenodo.org/records/60232",
+        "doi": "10.5281/zenodo.60232",
+        "version": "v1 (fixed record 60232)"
+      },
+      "license": {
+        "identifier": "CC0-1.0",
+        "evidence_url": "https://zenodo.org/api/records/60232",
+        "note": "Zenodo API reports cc-zero; the record export identifies CC0 1.0. Publisher ZIP MD5 is retained, not independently recomputed. Only metadata and links are packaged."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "archive_directory_reviewed",
+        "note": "Zenodo API/export license and file metadata, primary paper and complete ZIP central directory inspected. Three range requests read 20,604 directory bytes; no MAT member extracted. There are 158 MAT files (100 FORM, 56 full-cell RPT, two half-cell RPT), not 158 independent cells."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://zenodo.org/records/60232",
+        "https://zenodo.org/api/records/60232",
+        "https://zenodo.org/records/60232/export/json",
+        "https://doi.org/10.3390/batteries2030028",
+        "https://www.mdpi.com/2313-0105/2/3/28"
+      ],
+      "file_links": [
+        {
+          "label": "Panasonic_NCR18650B_formation_and_RPT_tests.zip",
+          "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+          "source_path": "Panasonic_NCR18650B_formation_and_RPT_tests.zip",
+          "kind": "archive",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Download the parent ZIP and extract the named members; observations remain external.",
+          "size_bytes": 73115393,
+          "md5": "6b6a9caa8ab053252bf8eb478717f95b"
+        },
+        {
+          "label": "Upload/Half cell/NE/[01] RPT.mat",
+          "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+          "source_path": "Panasonic_NCR18650B_formation_and_RPT_tests.zip::Upload/Half cell/NE/[01] RPT.mat",
+          "kind": "archive_member",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "NE",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Harvested NE half-cell RPT from the same study as the full-cell tests; finite-current characterization is an electrode OCP lead, not an imported equilibrium OCP. Exact donor serial, columns and branches remain unchecked.",
+          "size_bytes": 806973
+        },
+        {
+          "label": "Upload/Half cell/PE/[02] RPT.mat",
+          "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+          "source_path": "Panasonic_NCR18650B_formation_and_RPT_tests.zip::Upload/Half cell/PE/[02] RPT.mat",
+          "kind": "archive_member",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "PE",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Harvested PE half-cell RPT from the same study as the full-cell tests; finite-current characterization is an electrode OCP lead, not an imported equilibrium OCP. Exact donor serial, columns and branches remain unchecked.",
+          "size_bytes": 708175
+        },
+        {
+          "label": "Upload/Full cell/NCRB001/[00] FORM.mat",
+          "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+          "source_path": "Panasonic_NCR18650B_formation_and_RPT_tests.zip::Upload/Full cell/NCRB001/[00] FORM.mat",
+          "kind": "archive_member",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "NCRB001",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Source-labelled full-cell formation member; rate/step mapping and raw channels were not read. No ageing series inferred.",
+          "size_bytes": 528639
+        },
+        {
+          "label": "Upload/Full cell/NCRB001/[01] RPT.mat",
+          "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+          "source_path": "Panasonic_NCR18650B_formation_and_RPT_tests.zip::Upload/Full cell/NCRB001/[01] RPT.mat",
+          "kind": "archive_member",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "NCRB001",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Source-labelled full-cell RPT member; rate/step mapping and raw channels were not read. No ageing series inferred.",
+          "size_bytes": 262109
+        },
+        {
+          "label": "Upload/Full cell/NCRB002/[01] RPT.mat",
+          "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+          "source_path": "Panasonic_NCR18650B_formation_and_RPT_tests.zip::Upload/Full cell/NCRB002/[01] RPT.mat",
+          "kind": "archive_member",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "NCRB002",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Source-labelled full-cell RPT member; rate/step mapping and raw channels were not read. No ageing series inferred.",
+          "size_bytes": 263429
+        }
+      ],
+      "missing_items": [
+        "Harvested NE/PE curves are external leads only; equilibrium/pseudo-OCP branches and coordinates are not imported or inspected.",
+        "No independently verified intrinsic diffusion or kinetic-law values or current-catalog parameter association.",
+        "No exact harvested-donor to NCRBxxx serial mapping; other studies share a commercial model only.",
+        "No measured longitudinal ageing series identified; paper degradation emulations are not measured ageing files.",
+        "Raw MAT channels, rate/step mapping, temperature and payload checksums remain unverified."
+      ],
+      "inventory_scope": "Parent ZIP and five selected members. The complete persisted directory records 262 entries, including 158 MAT files. This is a locator selection, not all rate branches or specimens.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "Same-study NE and PE half-cell RPT member paths are located and linked alongside full-cell FORM/RPT paths. Their finite-current branches have not been read or imported, so no catalog electrode-OCP association is asserted.",
+          "missing_items": [
+            "MAT branch extraction, reference/coordinate verification and catalog OCP records are missing."
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "archive_member_located",
+          "evidence": "The primary paper describes multi-rate charge/discharge RPT; selected full/half-cell RPT members are located in the source ZIP. The rate-to-member/step matrix has not been independently read."
+        },
+        "multi_rate_discharge": {
+          "status": "archive_member_located",
+          "evidence": "The primary paper describes multi-rate charge/discharge RPT; selected full/half-cell RPT members are located in the source ZIP. The rate-to-member/step matrix has not been independently read."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        },
+        "EIS": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        }
+      },
+      "catalog_evidence_paths": [
+        "evidence/ncr18650b-source-review.json"
+      ],
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The source describes initial characterization, not a longitudinal ageing series.",
+        "source_url": "https://zenodo.org/records/60232",
+        "file_paths": []
+      }
+    },
+    {
+      "id": "bayreuth-ncr18650b-2023",
+      "title": "Panasonic NCR18650B beginning-of-life pseudo-OCV, pulses and EIS (92 cells)",
+      "material_families": [
+        "NCA"
+      ],
+      "cell_identity": "92 Panasonic NCR18650B cells at beginning of life. Source rows identify individual cells within this dataset; no cross-study row/serial correspondence is established.",
+      "test_types": [
+        "constant_current",
+        "ocv",
+        "pulse",
+        "eis"
+      ],
+      "profiles": [],
+      "rate_summary": "Whole-cell pseudo-OCV at 0.05C in both directions; 0.5C, 10 s charge/discharge pulses at 50% SOC. A single pulse rate is not a multi-rate continuous CC sweep.",
+      "temperatures_C": [
+        25
+      ],
+      "channels": {
+        "time_series": [
+          "pulse_time",
+          "pulse_voltage",
+          "whole_cell_pseudo_OCV",
+          "SOC"
+        ],
+        "frequency_domain": [
+          "frequency_Hz",
+          "Z_real_Ohm",
+          "Z_imag_Ohm"
+        ],
+        "note": "Field names/units are documented on the source page, not verified from CSV/MAT contents. Pseudo-OCV curves are interpolated to 5000 SOC points. EIS: 50% SOC, four-hour rest, 250 mA excitation, 0.01 Hz–10 kHz. Pulses follow two-hour rest. 25 degC is a chamber condition, not a measured temperature trace; no pulse current trace is claimed."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://zenodo.org/records/8369275",
+        "doi": "10.5281/zenodo.8369275",
+        "version": "1.0 (fixed record 8369275)"
+      },
+      "license": {
+        "identifier": "not-stated",
+        "evidence_url": "https://zenodo.org/records/8369275/export/json",
+        "note": "No license was found in the inspected API metadata, record export or landing page. Open access is not a redistribution grant; keep observations external and resolve permission before reuse/redistribution."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_file_listing",
+        "note": "Primary metadata and listed file paths inspected; no experimental file contents read or imported."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://zenodo.org/records/8369275",
+        "https://zenodo.org/api/records/8369275",
+        "https://zenodo.org/records/8369275/export/json",
+        "https://doi.org/10.1016/j.jpowsour.2023.233677"
+      ],
+      "file_links": [
+        {
+          "label": "Z_imag.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/Z_imag.csv/content",
+          "source_path": "Z_imag.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 62666,
+          "md5": "625f64adb72f4cebd0977b40186bbbc2"
+        },
+        {
+          "label": "Z_real.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/Z_real.csv/content",
+          "source_path": "Z_real.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 50835,
+          "md5": "66c912594aebfd612c5cdf84e4aca86b"
+        },
+        {
+          "label": "f.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/f.csv/content",
+          "source_path": "f.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 39192,
+          "md5": "92c140ad832996c876b84fd2d87b9fd5"
+        },
+        {
+          "label": "impedance.mat",
+          "url": "https://zenodo.org/api/records/8369275/files/impedance.mat/content",
+          "source_path": "impedance.mat",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 121318,
+          "md5": "73d6c64790063f076f24b47d4781a1c7"
+        },
+        {
+          "label": "pocv.mat",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv.mat/content",
+          "source_path": "pocv.mat",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "ocv",
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 3988206,
+          "md5": "6193e6355e9d845f77b4decf691afa38"
+        },
+        {
+          "label": "pocv_ch.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv_ch.csv/content",
+          "source_path": "pocv_ch.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "ocv",
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 3168700,
+          "md5": "0f02774494b93c18edd335c9a188408f"
+        },
+        {
+          "label": "pocv_dc.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv_dc.csv/content",
+          "source_path": "pocv_dc.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "ocv",
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 3168623,
+          "md5": "485ea0795d373c2ec19bca93643130bb"
+        },
+        {
+          "label": "pocv_soc.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv_soc.csv/content",
+          "source_path": "pocv_soc.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "ocv",
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 40099,
+          "md5": "02e4d69ca3600f3f72a3c1ff86203ba4"
+        },
+        {
+          "label": "pulse.mat",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse.mat/content",
+          "source_path": "pulse.mat",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 2107509,
+          "md5": "035611fc459b22e26daf64423145fe01"
+        },
+        {
+          "label": "pulse_neg_time.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_neg_time.csv/content",
+          "source_path": "pulse_neg_time.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 1375190,
+          "md5": "ae99b9c526e6dec00e63c916dae18b25"
+        },
+        {
+          "label": "pulse_neg_voltage.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_neg_voltage.csv/content",
+          "source_path": "pulse_neg_voltage.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 1396319,
+          "md5": "4bd137cc3aaa4401f683b856e1083504"
+        },
+        {
+          "label": "pulse_pos_time.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_pos_time.csv/content",
+          "source_path": "pulse_pos_time.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 1379761,
+          "md5": "fa0ab49979a1c02b4de50748153bf516"
+        },
+        {
+          "label": "pulse_pos_voltage.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_pos_voltage.csv/content",
+          "source_path": "pulse_pos_voltage.csv",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed file; documented field definitions and shared row grain only. Contents and publisher MD5 were not independently checked.",
+          "size_bytes": 1403257,
+          "md5": "dd6c6da30a3d738e0b884dfd4493c2ba"
+        }
+      ],
+      "missing_items": [
+        "No stated dataset reuse license identified.",
+        "Whole-cell pseudo-OCV is not electrode OCP; no matched intrinsic D or kinetic-law records.",
+        "No longitudinal ageing series, US06 or multi-rate continuous charge/discharge sweep reported in the reviewed source.",
+        "Raw matrix dimensions, row identity across companion files and measured temperature/current traces remain unchecked."
+      ],
+      "inventory_scope": "All 13 source-listed files: three MAT containers and ten CSV companions. CSV and MAT are alternative representations, not additional specimens or independent tests.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        },
+        "multi_rate_discharge": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        },
+        "EIS": {
+          "status": "file_located",
+          "evidence": "impedance.mat, f.csv, Z_real.csv and Z_imag.csv are explicitly listed with source-documented frequency and complex-impedance definitions. File contents remain unread."
+        }
+      },
+      "catalog_evidence_paths": [
+        "evidence/ncr18650b-source-review.json"
+      ],
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The source describes initial characterization, not a longitudinal ageing series.",
+        "source_url": "https://zenodo.org/records/8369275",
+        "file_paths": []
+      }
+    },
+    {
+      "id": "virtual-vehicle-ncr18650b-aging-2023",
+      "title": "Panasonic NCR18650B ageing and repeated reference tests (116 cells)",
+      "material_families": [
+        "NCA"
+      ],
+      "cell_identity": "116 Panasonic NCR18650B 3.25 Ah cells in the Virtual Vehicle study. Source file stems are cell IDs; they do not identify cells in other NCR18650B studies.",
+      "test_types": [
+        "constant_current",
+        "cccv",
+        "pulse",
+        "dynamic"
+      ],
+      "profiles": [],
+      "rate_summary": "37 source-reported ageing load profiles plus repeated reference tests. RTP includes C/3 and 1C discharges, C/3 and C/2 CCCV charges and pulse sequences. Ageing-profile rates vary by cell; no complete same-state multi-rate characterization matrix is asserted.",
+      "temperatures_C": [
+        0,
+        5,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45
+      ],
+      "channels": {
+        "time_series": [
+          "voltage",
+          "current",
+          "temperature",
+          "charge_capacity",
+          "discharge_capacity",
+          "step_index"
+        ],
+        "frequency_domain": [],
+        "note": "Fields are described in the author PDF; HDF5 groups, units, time axes and actual raw headers were not read. Initial RTPs use 5/15/25/35/45 degC; subsequent RTPs use 25 degC. Ageing-load temperatures differ (Table 2); source labels are not measured temperature extrema."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://zenodo.org/records/7896429",
+        "doi": "10.5281/zenodo.7896429",
+        "version": "1.0.0 (fixed record 7896429)"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://zenodo.org/api/records/7896429",
+        "note": "CC BY 4.0 is stated in Zenodo metadata/export. Retain author attribution and this DOI. Publisher file MD5 values identify external objects; no HDF5 checksum independently verified or data redistributed."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_file_listing",
+        "note": "Complete Zenodo file metadata (116 H5 plus one PDF) and author PDF text reviewed; Table 2 and RTP page visually checked. No H5 observations read. Experiment ends at 70% remaining capacity or project end, so not every cell is certified to reach EOL."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://zenodo.org/records/7896429",
+        "https://zenodo.org/api/records/7896429",
+        "https://zenodo.org/records/7896429/export/json",
+        "https://zenodo.org/api/records/7896429/files/Galijatovic_2023_Ageing%20Data%20of%20Lithium-ion%20Panasonic%20NCR18650B%20Battery%20Cells.pdf/content",
+        "https://doi.org/10.1109/IECON48115.2021.9589655"
+      ],
+      "file_links": [
+        {
+          "label": "2_009.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_009.h5/content",
+          "source_path": "2_009.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_009",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 186435242,
+          "md5": "8408795eba16a5fcc9e4c1fad936b073"
+        },
+        {
+          "label": "2_010.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_010.h5/content",
+          "source_path": "2_010.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_010",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 195317251,
+          "md5": "451ece35f174aa3e5cc777da2ad3e96b"
+        },
+        {
+          "label": "2_011.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_011.h5/content",
+          "source_path": "2_011.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_011",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 191460608,
+          "md5": "45aabf56c35af916ff35593dd9a60ddb"
+        },
+        {
+          "label": "2_012.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_012.h5/content",
+          "source_path": "2_012.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_012",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 287442128,
+          "md5": "f77cbe28dea3c408efc24717178eed38"
+        },
+        {
+          "label": "2_013.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_013.h5/content",
+          "source_path": "2_013.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_013",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 299003643,
+          "md5": "7d0763820d0079887a6067e3c8164eac"
+        },
+        {
+          "label": "2_014.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_014.h5/content",
+          "source_path": "2_014.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_014",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 277884958,
+          "md5": "3078d4f47f113386f91ba976635bdf65"
+        },
+        {
+          "label": "2_015.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_015.h5/content",
+          "source_path": "2_015.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_015",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 520593223,
+          "md5": "841058f75156e9f55a280d4a65ebfb13"
+        },
+        {
+          "label": "2_016.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_016.h5/content",
+          "source_path": "2_016.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_016",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 523981937,
+          "md5": "a873824fffa9a4c9e1c355f18a986a0f"
+        },
+        {
+          "label": "2_017.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_017.h5/content",
+          "source_path": "2_017.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_017",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 522088261,
+          "md5": "e3a2c9310015868119e4c7063a9c28e0"
+        },
+        {
+          "label": "2_018.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_018.h5/content",
+          "source_path": "2_018.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_018",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 39141430,
+          "md5": "cdcead5aa854647a7fa30e5f52d6b0ac"
+        },
+        {
+          "label": "2_019.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_019.h5/content",
+          "source_path": "2_019.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_019",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 40076695,
+          "md5": "3351b6537bbf13435df9696d050524fa"
+        },
+        {
+          "label": "2_020.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_020.h5/content",
+          "source_path": "2_020.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_020",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 40675442,
+          "md5": "002d4e56787f66e714402c6ae38fb85f"
+        },
+        {
+          "label": "2_021.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_021.h5/content",
+          "source_path": "2_021.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_021",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 36135303,
+          "md5": "f82671ae13ed1895ad610ce0f11139a0"
+        },
+        {
+          "label": "2_022.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_022.h5/content",
+          "source_path": "2_022.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_022",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 35998506,
+          "md5": "d060424713034a2bd8889ffc56f3f1cf"
+        },
+        {
+          "label": "2_023.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_023.h5/content",
+          "source_path": "2_023.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_023",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 35945618,
+          "md5": "9c0a821bf33e8f159e2a8d96424b0183"
+        },
+        {
+          "label": "2_024.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_024.h5/content",
+          "source_path": "2_024.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_024",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 35873406,
+          "md5": "d2bf8754bd2b66cf3edf6662cc7f41fa"
+        },
+        {
+          "label": "2_025.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_025.h5/content",
+          "source_path": "2_025.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_025",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 35804735,
+          "md5": "6ba246455f1d5daaa5b5d7c68a424dd2"
+        },
+        {
+          "label": "2_026.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_026.h5/content",
+          "source_path": "2_026.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_026",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 35755101,
+          "md5": "426480b6e2f187f9713033734c1a037b"
+        },
+        {
+          "label": "2_027.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_027.h5/content",
+          "source_path": "2_027.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_027",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 116078620,
+          "md5": "b48c5badf1e0733fbb115745a3d76713"
+        },
+        {
+          "label": "2_028.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_028.h5/content",
+          "source_path": "2_028.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_028",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 117778586,
+          "md5": "d7348791336783dcaee88190541932cf"
+        },
+        {
+          "label": "2_029.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_029.h5/content",
+          "source_path": "2_029.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_029",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 116689356,
+          "md5": "d6f0d6eb94ca33e671738ece713d5ee3"
+        },
+        {
+          "label": "2_030.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_030.h5/content",
+          "source_path": "2_030.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_030",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 162092446,
+          "md5": "614f4d2d8684e70c54fd776636fd194b"
+        },
+        {
+          "label": "2_031.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_031.h5/content",
+          "source_path": "2_031.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_031",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 180630602,
+          "md5": "881536cea22e31c7705cacf59c2dae78"
+        },
+        {
+          "label": "2_032.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_032.h5/content",
+          "source_path": "2_032.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_032",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 182623638,
+          "md5": "b5d66bdeb85e708f9239d98e6621ed3e"
+        },
+        {
+          "label": "2_033.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_033.h5/content",
+          "source_path": "2_033.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_033",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 120021501,
+          "md5": "0f1d2c913aa94c771aada28232549268"
+        },
+        {
+          "label": "2_034.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_034.h5/content",
+          "source_path": "2_034.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_034",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 118574526,
+          "md5": "fbf381e843ab98ec60d9a8c65d52eb61"
+        },
+        {
+          "label": "2_035.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_035.h5/content",
+          "source_path": "2_035.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_035",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 117575874,
+          "md5": "270805d5114142aa94f570687b941476"
+        },
+        {
+          "label": "2_036.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_036.h5/content",
+          "source_path": "2_036.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_036",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 308321825,
+          "md5": "07428386cf463ee8f49aad5000f9abe6"
+        },
+        {
+          "label": "2_037.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_037.h5/content",
+          "source_path": "2_037.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_037",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 262647802,
+          "md5": "942cb7b4d7b35b23c9e0bd585e6e498a"
+        },
+        {
+          "label": "2_038.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_038.h5/content",
+          "source_path": "2_038.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_038",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 285890254,
+          "md5": "36c13fc8b1df8e11cf1a403eb36642eb"
+        },
+        {
+          "label": "2_039.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_039.h5/content",
+          "source_path": "2_039.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_039",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 192012450,
+          "md5": "77e0efde013d56f81c5d2499641b3007"
+        },
+        {
+          "label": "2_040.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_040.h5/content",
+          "source_path": "2_040.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_040",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 194880110,
+          "md5": "22ea19578f05ad665484340907d74f28"
+        },
+        {
+          "label": "2_041.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_041.h5/content",
+          "source_path": "2_041.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_041",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 210004447,
+          "md5": "e4ca461fe5f6f358d6428bed0caea2e3"
+        },
+        {
+          "label": "2_042.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_042.h5/content",
+          "source_path": "2_042.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_042",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 309193067,
+          "md5": "a7c956c402f6622f62c6942ccdca7a70"
+        },
+        {
+          "label": "2_043.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_043.h5/content",
+          "source_path": "2_043.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_043",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 427539099,
+          "md5": "ae524aae22c9bfa3fa910c73a36d2388"
+        },
+        {
+          "label": "2_044.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_044.h5/content",
+          "source_path": "2_044.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_044",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 414964686,
+          "md5": "1c01466adf264171c28d60f949382c02"
+        },
+        {
+          "label": "2_045.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_045.h5/content",
+          "source_path": "2_045.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_045",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 321261072,
+          "md5": "c7e435c0cab34f88c825f0e82a424a18"
+        },
+        {
+          "label": "2_046.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_046.h5/content",
+          "source_path": "2_046.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_046",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 321012062,
+          "md5": "0a6a30a5ac593f39b3adc0653a5df079"
+        },
+        {
+          "label": "2_047.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_047.h5/content",
+          "source_path": "2_047.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_047",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 277648216,
+          "md5": "c82012a802ac5a625121f9782dd43240"
+        },
+        {
+          "label": "2_048.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_048.h5/content",
+          "source_path": "2_048.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_048",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 257601940,
+          "md5": "5ac00e59e5bd1953ff4fcc76dc4f3234"
+        },
+        {
+          "label": "2_049.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_049.h5/content",
+          "source_path": "2_049.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_049",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 271110352,
+          "md5": "deda0e693146bec459b272ab9410b53e"
+        },
+        {
+          "label": "2_050.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_050.h5/content",
+          "source_path": "2_050.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_050",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 197066003,
+          "md5": "133cfc34520b8cead2c876a596ffb078"
+        },
+        {
+          "label": "2_051.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_051.h5/content",
+          "source_path": "2_051.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_051",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 197643813,
+          "md5": "67177faa8f8b1bbfcf5883aa956e0b4b"
+        },
+        {
+          "label": "2_052.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_052.h5/content",
+          "source_path": "2_052.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_052",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 198445669,
+          "md5": "b3bcba69b7285400de52c0d1a3c6a1f9"
+        },
+        {
+          "label": "2_053.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_053.h5/content",
+          "source_path": "2_053.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_053",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 507046995,
+          "md5": "3afebf624e84ba3652d47c56ef9049be"
+        },
+        {
+          "label": "2_054.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_054.h5/content",
+          "source_path": "2_054.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_054",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 510428694,
+          "md5": "3ce707be336ca85433bda1b571f410b8"
+        },
+        {
+          "label": "2_055.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_055.h5/content",
+          "source_path": "2_055.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_055",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 514733556,
+          "md5": "cc25f0167085996c34944884781b8f36"
+        },
+        {
+          "label": "2_056.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_056.h5/content",
+          "source_path": "2_056.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_056",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 304001453,
+          "md5": "0493bc7639bdc35bb1c1caa94d4cde6a"
+        },
+        {
+          "label": "2_057.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_057.h5/content",
+          "source_path": "2_057.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_057",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 308308970,
+          "md5": "9374790e6444369ba1f439800ee7856a"
+        },
+        {
+          "label": "2_058.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_058.h5/content",
+          "source_path": "2_058.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_058",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 175541770,
+          "md5": "5e548e0188f7c71d193ae572fd58c201"
+        },
+        {
+          "label": "2_059.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_059.h5/content",
+          "source_path": "2_059.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_059",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 180466118,
+          "md5": "663d3fc69832c3af2d59c49bc6dfe6c1"
+        },
+        {
+          "label": "2_060.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_060.h5/content",
+          "source_path": "2_060.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_060",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 181525335,
+          "md5": "09549ba5d04c4b8f6a96b7fc8468d381"
+        },
+        {
+          "label": "2_061.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_061.h5/content",
+          "source_path": "2_061.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_061",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 46039843,
+          "md5": "8c6e136df25689456d7df4d6401f67d8"
+        },
+        {
+          "label": "2_062.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_062.h5/content",
+          "source_path": "2_062.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_062",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 45887278,
+          "md5": "dafa81fdc8b3cf289b5729e0fd1f62b9"
+        },
+        {
+          "label": "2_063.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_063.h5/content",
+          "source_path": "2_063.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_063",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 46120019,
+          "md5": "fef440f475afa7005528a68de3f456c7"
+        },
+        {
+          "label": "2_067.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_067.h5/content",
+          "source_path": "2_067.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_067",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 265249068,
+          "md5": "4091f1124bf5854c15a0e82ec1ae2be3"
+        },
+        {
+          "label": "2_068.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_068.h5/content",
+          "source_path": "2_068.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_068",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 268688240,
+          "md5": "1d1ff658ba902b368e700adf6c84d0b7"
+        },
+        {
+          "label": "2_069.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_069.h5/content",
+          "source_path": "2_069.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_069",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 261614043,
+          "md5": "7381665b985379d31920f911ee0eddd8"
+        },
+        {
+          "label": "2_070.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_070.h5/content",
+          "source_path": "2_070.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_070",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 559201819,
+          "md5": "5c7c1b673fd009af705b2d61971b563c"
+        },
+        {
+          "label": "2_071.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_071.h5/content",
+          "source_path": "2_071.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_071",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 556931725,
+          "md5": "22530a97918a258057f65742c5e06d3a"
+        },
+        {
+          "label": "2_072.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_072.h5/content",
+          "source_path": "2_072.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_072",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 559820950,
+          "md5": "0d2d6a3697a09fdf7fef7e938daaca40"
+        },
+        {
+          "label": "2_073.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_073.h5/content",
+          "source_path": "2_073.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_073",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 362207197,
+          "md5": "94b72e987c3c619920799cb81362ccb0"
+        },
+        {
+          "label": "2_075.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_075.h5/content",
+          "source_path": "2_075.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_075",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 368070694,
+          "md5": "e81c370ff2e7263a021d7ed62c9f7262"
+        },
+        {
+          "label": "2_076.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_076.h5/content",
+          "source_path": "2_076.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_076",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 162039304,
+          "md5": "d2fbd7d23a864b6721ac8828ad5a0473"
+        },
+        {
+          "label": "2_077.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_077.h5/content",
+          "source_path": "2_077.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_077",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 163682696,
+          "md5": "83b52ea0b08ccd1a5811370dcd8ea0ff"
+        },
+        {
+          "label": "2_078.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_078.h5/content",
+          "source_path": "2_078.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_078",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 165638728,
+          "md5": "ae2e5f751b149178787e52383481fdfa"
+        },
+        {
+          "label": "2_079.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_079.h5/content",
+          "source_path": "2_079.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_079",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 315367755,
+          "md5": "5cbd1881f7442b9d140b0e2c933bbd83"
+        },
+        {
+          "label": "2_080.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_080.h5/content",
+          "source_path": "2_080.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_080",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 321160837,
+          "md5": "5d1584451febe8fb33f4d310bc4ae34f"
+        },
+        {
+          "label": "2_081.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_081.h5/content",
+          "source_path": "2_081.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_081",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 328155196,
+          "md5": "9f6b7f14ff8f7f85317e905381b331d0"
+        },
+        {
+          "label": "2_082.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_082.h5/content",
+          "source_path": "2_082.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_082",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 218298825,
+          "md5": "2452735e6019a8ab5a44d6e6aaafaf5a"
+        },
+        {
+          "label": "2_083.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_083.h5/content",
+          "source_path": "2_083.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_083",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 220751116,
+          "md5": "a81cc96be67e947b3ba7b751cdc686b3"
+        },
+        {
+          "label": "2_084.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_084.h5/content",
+          "source_path": "2_084.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_084",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 225812752,
+          "md5": "568b2df7bd852c8dc9088d22b10c75c6"
+        },
+        {
+          "label": "2_085.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_085.h5/content",
+          "source_path": "2_085.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_085",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 675094253,
+          "md5": "1e562324f2d77a4921b596350b59dd39"
+        },
+        {
+          "label": "2_086.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_086.h5/content",
+          "source_path": "2_086.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_086",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 675587371,
+          "md5": "fbf36c329f5f59d4b7f285f87bc12816"
+        },
+        {
+          "label": "2_087.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_087.h5/content",
+          "source_path": "2_087.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_087",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 675217393,
+          "md5": "c8acd38980e9bb38dcf91929a19924e8"
+        },
+        {
+          "label": "2_088.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_088.h5/content",
+          "source_path": "2_088.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_088",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 361534252,
+          "md5": "d6c6c050ecbb457e6eadcc80e63dfc52"
+        },
+        {
+          "label": "2_089.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_089.h5/content",
+          "source_path": "2_089.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_089",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 370907934,
+          "md5": "6512d89385a6bbb127d1c61e546a5acf"
+        },
+        {
+          "label": "2_090.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_090.h5/content",
+          "source_path": "2_090.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_090",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 370415366,
+          "md5": "8d79b4c3173d1160996cb56b3bcc662a"
+        },
+        {
+          "label": "2_091.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_091.h5/content",
+          "source_path": "2_091.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_091",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 325960737,
+          "md5": "3e09c9355b5957daf069932f111c07d1"
+        },
+        {
+          "label": "2_092.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_092.h5/content",
+          "source_path": "2_092.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_092",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 34281818,
+          "md5": "edaf982b049de1484fce61471412b7be"
+        },
+        {
+          "label": "2_093.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_093.h5/content",
+          "source_path": "2_093.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_093",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 34751291,
+          "md5": "e3c39e4b1ee789691f80d9e15c9b6610"
+        },
+        {
+          "label": "2_094.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_094.h5/content",
+          "source_path": "2_094.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_094",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 34735067,
+          "md5": "7ad4231a42ed404716d37681f870554f"
+        },
+        {
+          "label": "2_095.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_095.h5/content",
+          "source_path": "2_095.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_095",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 24511414,
+          "md5": "83b6aa6466e5cb917f5e9bbdfd720020"
+        },
+        {
+          "label": "2_096.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_096.h5/content",
+          "source_path": "2_096.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_096",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 24087843,
+          "md5": "6b7e5719a5e60ed2837c161208f2c9a3"
+        },
+        {
+          "label": "2_097.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_097.h5/content",
+          "source_path": "2_097.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_097",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 23574037,
+          "md5": "8e682d827ac9c75e0d5018a8dbbc0ba0"
+        },
+        {
+          "label": "2_098.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_098.h5/content",
+          "source_path": "2_098.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_098",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 124802041,
+          "md5": "4daeb89257d6f5af52aecb8305031440"
+        },
+        {
+          "label": "2_099.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_099.h5/content",
+          "source_path": "2_099.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_099",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 128320098,
+          "md5": "f07c58bee428a94a496b66f05e029cbe"
+        },
+        {
+          "label": "2_100.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_100.h5/content",
+          "source_path": "2_100.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_100",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 125032530,
+          "md5": "56b427593b99170cfe5a87194278ba59"
+        },
+        {
+          "label": "2_101.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_101.h5/content",
+          "source_path": "2_101.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_101",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 107285991,
+          "md5": "33119b6381e62f75428bc2d5016ee4ed"
+        },
+        {
+          "label": "2_102.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_102.h5/content",
+          "source_path": "2_102.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_102",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 106887567,
+          "md5": "c826f8f1a186d7a866a44ab202f9205b"
+        },
+        {
+          "label": "2_103.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_103.h5/content",
+          "source_path": "2_103.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_103",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 106865739,
+          "md5": "f6f9fd3c02232eb18afac37dfe349b5d"
+        },
+        {
+          "label": "2_104.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_104.h5/content",
+          "source_path": "2_104.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_104",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 186143064,
+          "md5": "177e018263668c2f09f408d97a3a3961"
+        },
+        {
+          "label": "2_105.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_105.h5/content",
+          "source_path": "2_105.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_105",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 181075079,
+          "md5": "0f40daf9a02a5c253075bc08ba3ddb5f"
+        },
+        {
+          "label": "2_106.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_106.h5/content",
+          "source_path": "2_106.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_106",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 181109587,
+          "md5": "d2c2ea7bd13f4a4aaf962bd551836d64"
+        },
+        {
+          "label": "2_107.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_107.h5/content",
+          "source_path": "2_107.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_107",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 401753336,
+          "md5": "dd35e4d8201ae61eddb99c5f22362fc5"
+        },
+        {
+          "label": "2_108.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_108.h5/content",
+          "source_path": "2_108.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_108",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 143955913,
+          "md5": "7eddc63b28e6b572ecefe9550149cec8"
+        },
+        {
+          "label": "2_109.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_109.h5/content",
+          "source_path": "2_109.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_109",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 141437946,
+          "md5": "49a72cb7fce3ad8ffc15b320f57e7a59"
+        },
+        {
+          "label": "2_110.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_110.h5/content",
+          "source_path": "2_110.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_110",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 147406987,
+          "md5": "81d7488cc6fa982a99f3b30e0f6d4f12"
+        },
+        {
+          "label": "2_111.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_111.h5/content",
+          "source_path": "2_111.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_111",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 182582059,
+          "md5": "5f64533df76116e5ed6f30a624771ef4"
+        },
+        {
+          "label": "2_112.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_112.h5/content",
+          "source_path": "2_112.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_112",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 179150869,
+          "md5": "e74f5ffdb17bc20a0a7f2f75f7296bac"
+        },
+        {
+          "label": "2_113.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_113.h5/content",
+          "source_path": "2_113.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_113",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 35458503,
+          "md5": "caebd810a65d350028a68cc7ec2c4cb9"
+        },
+        {
+          "label": "2_114.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_114.h5/content",
+          "source_path": "2_114.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_114",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 34961000,
+          "md5": "22005d66788e7999e3875b7e781cdcca"
+        },
+        {
+          "label": "2_115.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_115.h5/content",
+          "source_path": "2_115.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_115",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 35027604,
+          "md5": "84a179af05d984be1b315b1df851e659"
+        },
+        {
+          "label": "2_116.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_116.h5/content",
+          "source_path": "2_116.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_116",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 322857923,
+          "md5": "ea4743d64510f1a4c244c2af310fa354"
+        },
+        {
+          "label": "2_117.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_117.h5/content",
+          "source_path": "2_117.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_117",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 323330540,
+          "md5": "9f958cf7486356f52f23b49235f9c832"
+        },
+        {
+          "label": "2_118.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_118.h5/content",
+          "source_path": "2_118.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_118",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 326483925,
+          "md5": "a0be4409f4ba57ec383f914178bdc70f"
+        },
+        {
+          "label": "2_119.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_119.h5/content",
+          "source_path": "2_119.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_119",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 30437722,
+          "md5": "2cec6cbfee3629992d85954e664a1387"
+        },
+        {
+          "label": "2_120.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_120.h5/content",
+          "source_path": "2_120.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_120",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 83512805,
+          "md5": "ea935f85f2802cd5d7fbb08613296e06"
+        },
+        {
+          "label": "2_121.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_121.h5/content",
+          "source_path": "2_121.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_121",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 533449292,
+          "md5": "d0a9a0842764bbb25274a0d008714a41"
+        },
+        {
+          "label": "2_123.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_123.h5/content",
+          "source_path": "2_123.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_123",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 376140208,
+          "md5": "ff86111736657c725fd8dd06919ccea3"
+        },
+        {
+          "label": "2_127.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_127.h5/content",
+          "source_path": "2_127.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_127",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 186834096,
+          "md5": "0aea8f54115ad54e8eed0d92b3598939"
+        },
+        {
+          "label": "2_128.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_128.h5/content",
+          "source_path": "2_128.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_128",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 465712511,
+          "md5": "cc7354a8b4496e2226fe50ab98768523"
+        },
+        {
+          "label": "2_129.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_129.h5/content",
+          "source_path": "2_129.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_129",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 420361863,
+          "md5": "2f16edc08cff75e5c468c1b8686405c3"
+        },
+        {
+          "label": "2_130.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_130.h5/content",
+          "source_path": "2_130.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_130",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 166781475,
+          "md5": "ae7ca9db201423aed6bb92feb6be5c7a"
+        },
+        {
+          "label": "2_131.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_131.h5/content",
+          "source_path": "2_131.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_131",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 175999221,
+          "md5": "1d24444f235e522b8a409679a3739589"
+        },
+        {
+          "label": "2_132.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_132.h5/content",
+          "source_path": "2_132.h5",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "2_132",
+          "test_types": [
+            "constant_current",
+            "cccv",
+            "pulse"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_documentation",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/reference container, according to source documentation. Actual H5 groups, units, phases and profile-to-cell assignment were not read; no per-file rate/temperature is assigned. Only the common source-documented RTP types are tagged; a dynamic ageing profile is not assigned to every cell, including storage arms.",
+          "size_bytes": 167910667,
+          "md5": "7d567a0ee194347e7236104db560fa2d"
+        },
+        {
+          "label": "Galijatovic_2023_Ageing Data of Lithium-ion Panasonic NCR18650B Battery Cells.pdf",
+          "url": "https://zenodo.org/api/records/7896429/files/Galijatovic_2023_Ageing%20Data%20of%20Lithium-ion%20Panasonic%20NCR18650B%20Battery%20Cells.pdf/content",
+          "source_path": "Galijatovic_2023_Ageing Data of Lithium-ion Panasonic NCR18650B Battery Cells.pdf",
+          "kind": "documentation",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": null,
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "documentation_reviewed",
+          "note": "Author protocol/field documentation, not an experimental trace.",
+          "size_bytes": 731137,
+          "md5": "9ff2e0a534cd5f9b1b3ca54b1701c4dd"
+        }
+      ],
+      "missing_items": [
+        "No electrode OCP, intrinsic diffusion or kinetic-law parameter association to the current catalog.",
+        "No H5 content inspection: group names, time axes, units, column coverage, cycle counts and payload checksums are not verified.",
+        "Table 2 reuses cell IDs 2_013/2_014/2_015 across distinct profile rows (L35/L26 and L205); L221 prints 2_57 rather than the listed 2_057.h5. No authoritative per-cell profile map is imported or silently corrected.",
+        "The stopping rule permits project-end censoring; do not label every cell as measured through EOL.",
+        "No named US06 or EIS measurement file identified. Pulse resistance is not EIS.",
+        "The other NCR18650B deposits share a commercial model only, not a verified study, batch, state of health or specimen."
+      ],
+      "inventory_scope": "All 116 external HDF5 cell-file links and the source documentation PDF. One H5 contains multiple tests of one source cell; file count is not a test/cycle count. The 27.1 GB payload remains external.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_established",
+          "evidence": "Author RTP and ageing arms use several currents, but no independently checked same-state continuous CC rate-sweep matrix exists. H5 paths are located; phase boundaries remain unread."
+        },
+        "multi_rate_discharge": {
+          "status": "not_established",
+          "evidence": "Author RTP and ageing arms use several currents, but no independently checked same-state continuous CC rate-sweep matrix exists. H5 paths are located; phase boundaries remain unread."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        },
+        "EIS": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        }
+      },
+      "catalog_evidence_paths": [
+        "evidence/ncr18650b-source-review.json"
+      ],
+      "aging_data": {
+        "status": "available",
+        "kinds": [
+          "cycle",
+          "calendar"
+        ],
+        "evidence": "Source lists 116 per-cell H5 files, 37 ageing profiles and periodic RTP. PDF describes a 70%-capacity or project-end stopping rule. Zero-current storage arms in Table 2 support the calendar category; nonzero-current load profiles support cycle ageing. This is documented availability, not a full content audit.",
+        "source_url": "https://zenodo.org/api/records/7896429/files/Galijatovic_2023_Ageing%20Data%20of%20Lithium-ion%20Panasonic%20NCR18650B%20Battery%20Cells.pdf/content",
+        "file_paths": [
+          "2_009.h5",
+          "2_018.h5",
+          "2_021.h5"
+        ]
+      }
+    },
+    {
+      "id": "stanford-ncr18650b-rates-2021",
+      "title": "Panasonic NCR18650B multi-rate discharge and surface-temperature data",
+      "material_families": [
+        "NCA"
+      ],
+      "cell_identity": "Panasonic NCR18650B 3350 mAh NCA/graphite; only the NCA section of the three-model Stanford source is curated here. Its LG INR21700-M50 and A123 ANR26650m1-B sections are separate cells, not NCR18650B data.",
+      "test_types": [
+        "constant_current",
+        "cccv"
+      ],
+      "profiles": [],
+      "rate_summary": "NCA discharge rates C/20, 1C, 2C, 3C and 5C at source temperatures 5/25/35 degC after standard CCCV charge. The LFP source range up to 20C must not be assigned to NCR18650B. Charging preparation is not a multi-rate charge sweep.",
+      "temperatures_C": [
+        5,
+        25,
+        35
+      ],
+      "channels": {
+        "time_series": [
+          "time",
+          "voltage",
+          "current",
+          "cell_surface_temperature"
+        ],
+        "frequency_domain": [],
+        "note": "The primary paper describes Excel time, current, voltage and thermocouple surface-temperature data. Workbook contents/units were not read. Source directory names are 05degC/25degC/35degC; preserve these actual names rather than the schematic T_amb folders in the paper."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://data.mendeley.com/datasets/kxsbr4x3j2/2",
+        "doi": "10.17632/kxsbr4x3j2.2",
+        "version": "2 (NCA section only)"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://data.mendeley.com/datasets/kxsbr4x3j2/2",
+        "note": "Dataset landing page states CC BY 4.0. The associated paper has separate CC BY-NC-ND terms; do not substitute the paper license for dataset reuse terms. No workbook is redistributed."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_file_listing",
+        "note": "Primary paper, public Mendeley UI and NCA temperature folders inspected. Retained fifteen exact k1 workbook links across five rates and three temperatures. Automated landing-page HTTP access returned 403; normal public UI exposed links. No workbook downloaded."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://data.mendeley.com/datasets/kxsbr4x3j2/2",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7941039/",
+        "https://doi.org/10.1016/j.dib.2021.106894"
+      ],
+      "file_links": [
+        {
+          "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_0_05C_05degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/76f12d0e-917e-4221-b9ec-ae6feb2fa71f/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_0_05C_05degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 5,
+          "nominal_rate_C": 0.05,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_1C_05degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/9b67ee52-7a18-4477-9ae6-a36d0761f131/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_1C_05degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 5,
+          "nominal_rate_C": 1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_2C_05degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/f73ad953-73d8-4924-ba04-d3cd5a00ba8f/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_2C_05degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 5,
+          "nominal_rate_C": 2,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_3C_05degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/73e4dee2-4237-4855-8f0e-1563d1c7fedb/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_3C_05degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 5,
+          "nominal_rate_C": 3,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_5C_05degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/ae639390-e7ab-4448-84b6-b0f66f4e0a2b/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_5C_05degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 5,
+          "nominal_rate_C": 5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_0_05C_25degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/e4bf7e8e-f3ef-4e6d-be8c-751bdec075f1/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_0_05C_25degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 0.05,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_1C_25degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/9ed734d2-2589-42e3-8311-95204e3a79c7/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_1C_25degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_2C_25degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/ee70ffd8-1c8e-4255-918c-09bdd8ee9466/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_2C_25degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 2,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_3C_25degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/35e36e18-81d9-49de-a3ba-205af572a9c2/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_3C_25degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 3,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_5C_25degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/3e2dea20-3349-4c6b-8b3e-aae43c5deb26/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_5C_25degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": 5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_0_05C_35degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/d7d9aaf5-39a8-463a-b663-177595739e23/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_0_05C_35degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 35,
+          "nominal_rate_C": 0.05,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_1C_35degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/978ff2ea-e13a-47bc-8284-34f8779283bb/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_1C_35degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 35,
+          "nominal_rate_C": 1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_2C_35degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/658f3d3c-b8e2-4d07-8bb3-0aa9bb8409d7/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_2C_35degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 35,
+          "nominal_rate_C": 2,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_3C_35degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/2ca08fdf-cb26-4a21-82b1-95905877917c/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_3C_35degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 35,
+          "nominal_rate_C": 3,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        },
+        {
+          "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_5C_35degC.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/2ff68215-d1ab-4163-9bba-998911fb11e4/file_downloaded",
+          "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_5C_35degC.xlsx",
+          "kind": "file",
+          "cell_model": "Panasonic NCR18650B",
+          "material_family": "NCA",
+          "source_sample_id": "k1",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "temperature_C": 35,
+          "nominal_rate_C": 5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+        }
+      ],
+      "missing_items": [
+        "No verified current-catalog OCP/D/kinetics association for NCR18650B; other same-model studies are different specimens.",
+        "No US06, EIS or longitudinal ageing series reported in the reviewed source.",
+        "Only representative k1 links retained; six samples per chemistry in the paper does not certify a complete six-by-five-by-three source matrix.",
+        "Workbook phase boundaries, measured channel units and thermal cutoffs remain unchecked."
+      ],
+      "inventory_scope": "Fifteen selected source-listed NCA k1 workbooks (five rates by three temperatures). This is not a certified six-cell matrix or an import of the LFP/NMC source sections.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "missing_items": [
+            "No verified current-catalog parameter record for this model and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        },
+        "multi_rate_discharge": {
+          "status": "file_located",
+          "evidence": "Actual NCA/k1 XLSX links are listed at 0.05/1/2/3/5C in each of 05degC, 25degC and 35degC. Only selected paths, not all specimens or raw columns, are checked."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        },
+        "EIS": {
+          "status": "not_located",
+          "evidence": "No file for this test class was identified in the inspected source listing/documentation; absence elsewhere is not established."
+        }
+      },
+      "catalog_evidence_paths": [
+        "evidence/ncr18650b-source-review.json"
+      ],
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The source describes initial characterization, not a longitudinal ageing series.",
+        "source_url": "https://data.mendeley.com/datasets/kxsbr4x3j2/2",
+        "file_paths": []
       }
     }
   ]

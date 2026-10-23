@@ -2743,6 +2743,1326 @@
           "is_directory": true
         }
       ]
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+      "method": "HTTP Range zip directory only; no member extraction",
+      "archive_size_bytes": 73115393,
+      "bytes_transferred": 20604,
+      "requests": 3,
+      "complete": true,
+      "files": [
+        {
+          "path": "Upload/Full cell/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB001/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB001/[00] FORM.mat",
+          "size_bytes": 528639,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB001/[01] RPT.mat",
+          "size_bytes": 262109,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB002/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB002/[00] FORM.mat",
+          "size_bytes": 463350,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB002/[01] RPT.mat",
+          "size_bytes": 263429,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB003/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB003/[00] FORM.mat",
+          "size_bytes": 466880,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB003/[01] RPT.mat",
+          "size_bytes": 264079,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB004/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB004/[00] FORM.mat",
+          "size_bytes": 618010,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB004/[01] RPT.mat",
+          "size_bytes": 261917,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB005/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB005/[00] FORM.mat",
+          "size_bytes": 469027,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB005/[01] RPT.mat",
+          "size_bytes": 265125,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB006/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB006/[00] FORM.mat",
+          "size_bytes": 452529,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB006/[01] RPT.mat",
+          "size_bytes": 264939,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB007/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB007/[00] FORM.mat",
+          "size_bytes": 463836,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB007/[01] RPT.mat",
+          "size_bytes": 264072,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB008/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB008/[00] FORM.mat",
+          "size_bytes": 580821,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB008/[01] RPT.mat",
+          "size_bytes": 265336,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB009/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB009/[00] FORM.mat",
+          "size_bytes": 471120,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB009/[01] RPT.mat",
+          "size_bytes": 266368,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB010/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB010/[00] FORM.mat",
+          "size_bytes": 467793,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB010/[01] RPT.mat",
+          "size_bytes": 266010,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB011/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB011/[00] FORM.mat",
+          "size_bytes": 581955,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB011/[01] RPT.mat",
+          "size_bytes": 266080,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB012/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB012/[00] FORM.mat",
+          "size_bytes": 471795,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB012/[01] RPT.mat",
+          "size_bytes": 266180,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB013/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB013/[00] FORM.mat",
+          "size_bytes": 474376,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB013/[01] RPT.mat",
+          "size_bytes": 267539,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB014/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB014/[00] FORM.mat",
+          "size_bytes": 473887,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB014/[01] RPT.mat",
+          "size_bytes": 269112,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB015/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB015/[00] FORM.mat",
+          "size_bytes": 467424,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB015/[01] RPT.mat",
+          "size_bytes": 266596,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB016/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB016/[00] FORM.mat",
+          "size_bytes": 473401,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB016/[01] RPT.mat",
+          "size_bytes": 269071,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB017/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB017/[00] FORM.mat",
+          "size_bytes": 459242,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB017/[01] RPT.mat",
+          "size_bytes": 260434,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB018/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB018/[00] FORM.mat",
+          "size_bytes": 466955,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB018/[01] RPT.mat",
+          "size_bytes": 260641,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB019/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB019/[00] FORM.mat",
+          "size_bytes": 459751,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB019/[01] RPT.mat",
+          "size_bytes": 259548,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB020/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB020/[00] FORM.mat",
+          "size_bytes": 455855,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB020/[01] RPT.mat",
+          "size_bytes": 258489,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB021/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB021/[00] FORM.mat",
+          "size_bytes": 463171,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB021/[01] RPT.mat",
+          "size_bytes": 260481,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB022/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB022/[00] FORM.mat",
+          "size_bytes": 529179,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB022/[01] RPT.mat",
+          "size_bytes": 261140,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB023/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB023/[00] FORM.mat",
+          "size_bytes": 467979,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB023/[01] RPT.mat",
+          "size_bytes": 262641,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB024/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB024/[00] FORM.mat",
+          "size_bytes": 463823,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB024/[01] RPT.mat",
+          "size_bytes": 261728,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB025/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB025/[00] FORM.mat",
+          "size_bytes": 453145,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB025/[01] RPT.mat",
+          "size_bytes": 259534,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB026/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB026/[00] FORM.mat",
+          "size_bytes": 447028,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB026/[01] RPT.mat",
+          "size_bytes": 258818,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB027/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB027/[00] FORM.mat",
+          "size_bytes": 454486,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB027/[01] RPT.mat",
+          "size_bytes": 261062,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB028/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB028/[00] FORM.mat",
+          "size_bytes": 454764,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB028/[01] RPT.mat",
+          "size_bytes": 260929,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB029/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB029/[00] FORM.mat",
+          "size_bytes": 4802117,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB029/[01] RPT.mat",
+          "size_bytes": 261372,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB030/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB030/[00] FORM.mat",
+          "size_bytes": 4676286,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB030/[01] RPT.mat",
+          "size_bytes": 261975,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB031/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB031/[00] FORM.mat",
+          "size_bytes": 458095,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB031/[01] RPT.mat",
+          "size_bytes": 263485,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB032/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB032/[00] FORM.mat",
+          "size_bytes": 518025,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB033/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB033/[00] FORM.mat",
+          "size_bytes": 466781,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB033/[01] RPT.mat",
+          "size_bytes": 263761,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB034/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB034/[00] FORM.mat",
+          "size_bytes": 467783,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB034/[01] RPT.mat",
+          "size_bytes": 261097,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB035/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB035/[00] FORM.mat",
+          "size_bytes": 462640,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB035/[01] RPT.mat",
+          "size_bytes": 260776,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB036/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB036/[00] FORM.mat",
+          "size_bytes": 466613,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB036/[01] RPT.mat",
+          "size_bytes": 261684,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB037/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB037/[00] FORM.mat",
+          "size_bytes": 463309,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB037/[01] RPT.mat",
+          "size_bytes": 261723,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB038/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB038/[00] FORM.mat",
+          "size_bytes": 465015,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB038/[01] RPT.mat",
+          "size_bytes": 341479,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB039/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB039/[00] FORM.mat",
+          "size_bytes": 463656,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB039/[01] RPT.mat",
+          "size_bytes": 342417,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB040/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB040/[00] FORM.mat",
+          "size_bytes": 465353,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB041/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB041/[00] FORM.mat",
+          "size_bytes": 520595,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB041/[01] RPT.mat",
+          "size_bytes": 144322,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB042/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB042/[00] FORM.mat",
+          "size_bytes": 485873,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB043/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB043/[00] FORM.mat",
+          "size_bytes": 458324,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB043/[01] RPT.mat",
+          "size_bytes": 335538,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB044/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB044/[00] FORM.mat",
+          "size_bytes": 521474,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB044/[01] RPT.mat",
+          "size_bytes": 334654,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB045/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB045/[00] FORM.mat",
+          "size_bytes": 460791,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB046/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB046/[00] FORM.mat",
+          "size_bytes": 640853,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB046/[01] RPT.mat",
+          "size_bytes": 329791,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB047/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB047/[00] FORM.mat",
+          "size_bytes": 461190,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB047/[01] RPT.mat",
+          "size_bytes": 330611,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB048/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB048/[00] FORM.mat",
+          "size_bytes": 460574,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB049/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB049/[00] FORM.mat",
+          "size_bytes": 463283,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB049/[01] RPT.mat",
+          "size_bytes": 344059,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB050/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB050/[00] FORM.mat",
+          "size_bytes": 462982,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB050/[01] RPT.mat",
+          "size_bytes": 342674,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB051/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB051/[00] FORM.mat",
+          "size_bytes": 351075,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB052/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB052/[00] FORM.mat",
+          "size_bytes": 466894,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB053/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB053/[00] FORM.mat",
+          "size_bytes": 463132,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB054/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB054/[00] FORM.mat",
+          "size_bytes": 465066,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB054/[01] RPT.mat",
+          "size_bytes": 144064,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB055/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB055/[00] FORM.mat",
+          "size_bytes": 521318,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB056/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB056/[00] FORM.mat",
+          "size_bytes": 462144,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB056/[01] RPT.mat",
+          "size_bytes": 364495,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB057/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB057/[00] FORM.mat",
+          "size_bytes": 452353,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB058/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB058/[00] FORM.mat",
+          "size_bytes": 453419,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB058/[01] RPT.mat",
+          "size_bytes": 366468,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB059/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB059/[00] FORM.mat",
+          "size_bytes": 449704,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB059/[01] RPT.mat",
+          "size_bytes": 353069,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB060/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB060/[00] FORM.mat",
+          "size_bytes": 457705,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB061/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB061/[00] FORM.mat",
+          "size_bytes": 452508,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB061/[01] RPT.mat",
+          "size_bytes": 145275,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB062/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB062/[00] FORM.mat",
+          "size_bytes": 517735,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB063/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB063/[00] FORM.mat",
+          "size_bytes": 458211,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB063/[01] RPT.mat",
+          "size_bytes": 353103,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB064/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB064/[00] FORM.mat",
+          "size_bytes": 458459,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB065/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB065/[00] FORM.mat",
+          "size_bytes": 446551,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB066/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB066/[00] FORM.mat",
+          "size_bytes": 450955,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB066/[01] RPT.mat",
+          "size_bytes": 145248,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB067/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB067/[00] FORM.mat",
+          "size_bytes": 511325,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB068/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB068/[00] FORM.mat",
+          "size_bytes": 449762,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB069/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB069/[00] FORM.mat",
+          "size_bytes": 454173,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB069/[01] RPT.mat",
+          "size_bytes": 333963,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB070/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB070/[00] FORM.mat",
+          "size_bytes": 453799,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB071/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB071/[00] FORM.mat",
+          "size_bytes": 451114,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB072/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB072/[00] FORM.mat",
+          "size_bytes": 452102,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB073/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB073/[00] FORM.mat",
+          "size_bytes": 456753,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB074/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB074/[00] FORM.mat",
+          "size_bytes": 460356,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB075/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB075/[00] FORM.mat",
+          "size_bytes": 457124,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB076/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB076/[00] FORM.mat",
+          "size_bytes": 457914,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB077/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB077/[00] FORM.mat",
+          "size_bytes": 457489,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB078/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB078/[00] FORM.mat",
+          "size_bytes": 517896,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB079/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB079/[00] FORM.mat",
+          "size_bytes": 459392,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB080/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB080/[00] FORM.mat",
+          "size_bytes": 460265,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB081/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB081/[00] FORM.mat",
+          "size_bytes": 526550,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB082/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB082/[00] FORM.mat",
+          "size_bytes": 457569,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB083/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB083/[00] FORM.mat",
+          "size_bytes": 463080,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB083/[01] RPT.mat",
+          "size_bytes": 337435,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB084/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB084/[00] FORM.mat",
+          "size_bytes": 462160,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB085/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB085/[00] FORM.mat",
+          "size_bytes": 464281,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB085/[01] RPT.mat",
+          "size_bytes": 356407,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB086/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB086/[00] FORM.mat",
+          "size_bytes": 465166,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB087/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB087/[00] FORM.mat",
+          "size_bytes": 461594,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB088/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB088/[00] FORM.mat",
+          "size_bytes": 580580,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB089/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB089/[00] FORM.mat",
+          "size_bytes": 467484,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB090/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB090/[00] FORM.mat",
+          "size_bytes": 465258,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB091/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB091/[00] FORM.mat",
+          "size_bytes": 583246,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB092/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB092/[00] FORM.mat",
+          "size_bytes": 468299,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB093/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB093/[00] FORM.mat",
+          "size_bytes": 469484,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB093/[01] RPT.mat",
+          "size_bytes": 355653,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB094/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB094/[00] FORM.mat",
+          "size_bytes": 470488,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB095/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB095/[00] FORM.mat",
+          "size_bytes": 467184,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB096/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB096/[00] FORM.mat",
+          "size_bytes": 469663,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB097/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB097/[00] FORM.mat",
+          "size_bytes": 524078,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB098/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB098/[00] FORM.mat",
+          "size_bytes": 457672,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB099/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB099/[00] FORM.mat",
+          "size_bytes": 458758,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Full cell/NCRB100/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Full cell/NCRB100/[00] FORM.mat",
+          "size_bytes": 452805,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Half cell/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Half cell/NE/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Half cell/NE/[01] RPT.mat",
+          "size_bytes": 806973,
+          "is_directory": false
+        },
+        {
+          "path": "Upload/Half cell/PE/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "Upload/Half cell/PE/[02] RPT.mat",
+          "size_bytes": 708175,
+          "is_directory": false
+        }
+      ]
     }
   ]
 }

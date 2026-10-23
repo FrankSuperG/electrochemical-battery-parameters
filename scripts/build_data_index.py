@@ -25,6 +25,12 @@ def text_cell(value):
     return str(value).replace("|", "&#124;").replace("\n", " ")
 
 
+def aging_label(record):
+    aging = record["aging_data"]
+    return ("Yes (" + ", ".join(aging["kinds"]) + ")" if aging["status"] == "available"
+            else {"not_reported": "Not reported", "unverified": "Unverified"}[aging["status"]])
+
+
 def csv_bytes(headers, rows):
     handle = io.StringIO(newline="")
     writer = csv.writer(handle, lineterminator="\n")
@@ -70,21 +76,25 @@ def full_cell_index(catalog):
     output[str(root / "datasets.csv")] = csv_bytes(
         ["id", "material_families", "cell_identity", "test_types", "profiles", "rate_summary",
          "temperatures_C", "license", "parameter_match", "linked_cell_ids", "source_url",
-         "doi", "source_version", "checked_on", "review_level", "missing_items"],
+         "doi", "source_version", "checked_on", "review_level", "missing_items",
+         "aging_data", "aging_kinds", "aging_evidence", "aging_source_url"],
         [[r["id"], ";".join(r["material_families"]), r["cell_identity"], ";".join(r["test_types"]),
           ";".join(r["profiles"]), r["rate_summary"], json.dumps(r["temperatures_C"]),
           r["license"]["identifier"], r["parameter_link"]["match_level"],
           ";".join(r["parameter_link"]["cell_ids"]), r["source"]["url"], r["source"]["doi"],
           r["source"]["version"], r["review"]["checked_on"], r["review"]["level"],
-          "; ".join(r["missing_items"])] for r in catalog.external_datasets])
+          "; ".join(r["missing_items"]), r["aging_data"]["status"],
+          ";".join(r["aging_data"]["kinds"]), r["aging_data"]["evidence"],
+          r["aging_data"]["source_url"]] for r in catalog.external_datasets])
     file_rows = catalog.search_dataset_files()
     output[str(root / "files.csv")] = csv_bytes(
         ["dataset_id", "source_path", "kind", "cell_model", "material_family", "source_sample_id",
          "test_types", "profiles", "temperature_C", "nominal_rate_C", "verification", "content_review",
-         "parameter_match", "url", "note"],
+         "parameter_match", "url", "note", "dataset_aging_status"],
         [[r["dataset_id"], r["source_path"], r["kind"], r["cell_model"], r["material_family"], r["source_sample_id"],
           ";".join(r["test_types"]), ";".join(r["profiles"]), r["temperature_C"], r["nominal_rate_C"],
-          r["verification"], r["content_review"], r["parameter_match"], r["url"], r["note"]] for r in file_rows])
+          r["verification"], r["content_review"], r["parameter_match"], r["url"], r["note"],
+          r["dataset_aging_status"]] for r in file_rows])
     for r in catalog.external_datasets:
         page = root / (r["id"] + ".md")
         lines = [f"# {r['title']}", "", "[Full-cell index](README.md) · [Usage and review notes](../../docs/FULL_CELL_DATASETS.md)", "",
@@ -98,7 +108,10 @@ def full_cell_index(catalog):
                  f"Reported temperature labels / degC: {r['temperatures_C'] or 'Not verified'}. These are source conditions, not measured temperature channels.", "",
                  f"Reported time-series channels: {', '.join(r['channels']['time_series']) or 'Raw headers not inspected'}.", "",
                  f"Reported frequency-domain channels: {', '.join(r['channels']['frequency_domain']) or 'Not verified / not applicable'}.", "",
-                 r["channels"]["note"], "", "## Parameter association", "",
+                 r["channels"]["note"], "", "## Ageing data", "",
+                 f"**{aging_label(r)}**. {r['aging_data']['evidence']}", "",
+                 f"[Ageing coverage evidence]({r['aging_data']['source_url']}). This status applies to the dataset, not every file. Formation and repeated initial characterization are not a longitudinal ageing series.", "",
+                 "## Parameter association", "",
                  f"Match: `{r['parameter_link']['match_level']}`. {r['parameter_link']['evidence']}", ""]
         for cid in r["parameter_link"]["cell_ids"]:
             lines += [link(page, Path("data/cells") / f"{cid}.md", catalog.cells[cid]["display_name"]), ""]
@@ -149,10 +162,10 @@ def full_cell_index(catalog):
         page = root / f"{family}.md"
         lines = [f"# {family} full-cell tests", "", "[All materials](README.md) · [Access, licenses and limits](../../docs/FULL_CELL_DATASETS.md)", "",
                  "Material grouping is a discovery aid, not evidence that tests and parameters belong together. NCO retains its source label and is not silently classified as NMC or NCA.", "",
-                 "## External datasets", "", "| Dataset / cell | Tests / profiles | Rates and temperatures | License | Parameter match |", "|---|---|---|---|---|"]
+                 "## External datasets", "", "| Dataset / cell | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |", "|---|---|---|---|---|---|"]
         for r in external:
             temperatures = str(r["temperatures_C"]) if r["temperatures_C"] else "not verified"
-            lines += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {text_cell(', '.join(r['test_types']) + '; ' + ', '.join(r['profiles']))} | {text_cell(r['rate_summary'])} Source temperatures: {temperatures} | {r['license']['identifier']} | `{r['parameter_link']['match_level']}` |"]
+            lines += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {text_cell(', '.join(r['test_types']) + '; ' + ', '.join(r['profiles']))} | {text_cell(r['rate_summary'])} Source temperatures: {temperatures} | {aging_label(r)} | {r['license']['identifier']} | `{r['parameter_link']['match_level']}` |"]
         if not external:
             lines += ["", "No external dataset link curated for this family yet."]
         lines += ["", "## Existing packaged tests", "", "These CSVs already belong to the catalog; this index adds links without duplicating observations.", "",
@@ -164,7 +177,12 @@ def full_cell_index(catalog):
             lines += ["", "No packaged full-cell file for this family. External links do not fill missing parameter matches."]
         lines += [""]
         output[str(page)] = "\n".join(lines).encode()
-    overview += ["", "Test types: `constant_current`, `cccv`, `pulse`, `dynamic`, `eis`, `ocv`. Named profiles can be searched at dataset level with `ebp datasets --profile US06`, or at inspected-file level with `ebp datasets --files --profile US06`. Dataset declarations are not automatically inherited by file locators. `ocv` refers to whole-cell characterization, never an automatically inferred electrode OCP.", ""]
+    overview += ["", "## External dataset availability", "",
+                 "Ageing availability applies to a source, not every linked file. `Not reported` is not proof of absence. Formation, repeated initial tests and simulated degradation alone are not measured longitudinal ageing data.", "",
+                 "| Dataset | Materials | Ageing data | License |", "|---|---|---|---|"]
+    for r in catalog.external_datasets:
+        overview += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {', '.join(r['material_families'])} | {aging_label(r)} | {r['license']['identifier']} |"]
+    overview += ["", "Test types: `constant_current`, `cccv`, `pulse`, `dynamic`, `eis`, `ocv`. Named profiles can be searched at dataset level with `ebp datasets --profile US06`, or at inspected-file level with `ebp datasets --files --profile US06`. Dataset declarations are not automatically inherited by file locators. `ocv` refers to whole-cell characterization, never an automatically inferred electrode OCP. Use `ebp datasets --aging-status available` for sources with documented ageing data.", ""]
     output[str(root / "README.md")] = "\n".join(overview).encode()
     return output
 

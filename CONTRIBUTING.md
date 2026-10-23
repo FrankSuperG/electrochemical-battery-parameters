@@ -1,6 +1,6 @@
 # Contributing to E-BatP
 
-Large full-cell datasets can be contributed as [external-link metadata](templates/external-dataset.json), with source versions, test types, material families, licensing and explicit parameter-match evidence. Follow the [source-review guide](docs/FULL_CELL_DATASETS.md); no raw payload or model simulation is needed.
+Large full-cell datasets can be contributed as [external-link metadata](templates/external-dataset.json), with source versions, test types, material families, licensing and explicit parameter-match evidence. Include `aging_data` with source-backed availability, cycle/calendar kinds and exact linked evidence paths; use `not_reported` or `unverified` for unresolved coverage. Formation or repeated initial tests alone are not measured ageing data. Follow the [source-review guide](docs/FULL_CELL_DATASETS.md); no raw payload or model simulation is needed.
 
 Contributions are welcome: electrode OCP, diffusion, reaction kinetics, geometry,
 transport, thermal properties and the full-cell experiments that help interpret

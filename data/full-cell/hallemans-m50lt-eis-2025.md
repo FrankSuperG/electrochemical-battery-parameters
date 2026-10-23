@@ -24,6 +24,12 @@ Reported frequency-domain channels: frequency_Hz, measured_Z_real_Ohm, measured_
 
 Existing audited author MAT t/i/v drive-cycle channels and measured whole-cell EIS evidence. Source u is not used as measured voltage/current. The 25 degC EIS setpoint is not a measured temperature trace or a drive-cycle condition. Seven-SOC fitting subset is distinct from all nine measured EIS SOCs.
 
+## Ageing data
+
+**Not reported**. The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.
+
+[Ageing coverage evidence](https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068). This status applies to the dataset, not every file. Formation and repeated initial characterization are not a longitudinal ageing series.
+
 ## Parameter association
 
 Match: `same_model_same_study`. Pinned author Figure 10 script connects the measured EIS file to the same grouped SPMe fit. Exact specimen identity across EIS, drive-cycle and harvested-electrode characterization is not established.

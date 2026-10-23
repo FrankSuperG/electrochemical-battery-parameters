@@ -1403,6 +1403,13 @@
           "status": "previously_audited",
           "evidence": "Pinned author MAT and existing 585-row measured EIS evidence CSV, same model/study as six linked diffusion/kinetic group records."
         }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.",
+        "source_url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+        "file_paths": []
       }
     }
   ],

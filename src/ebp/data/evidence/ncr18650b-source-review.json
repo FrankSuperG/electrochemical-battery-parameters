@@ -1,0 +1,1109 @@
+{
+  "reviewed_on": "2026-10-23",
+  "scope": "Public source metadata, directory names and protocol documentation only. No new experimental observations are packaged.",
+  "zenodo_records": [
+    {
+      "record_url": "https://zenodo.org/records/60232",
+      "metadata_url": "https://zenodo.org/api/records/60232",
+      "export_url": "https://zenodo.org/records/60232/export/json",
+      "title": "Panasonic NCR18650B formation, RPT and half cell data set",
+      "version": null,
+      "license_as_reported": {
+        "id": "cc-zero"
+      },
+      "files": [
+        {
+          "source_path": "Panasonic_NCR18650B_formation_and_RPT_tests.zip",
+          "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+          "size_bytes": 73115393,
+          "publisher_checksum": "md5:6b6a9caa8ab053252bf8eb478717f95b"
+        }
+      ]
+    },
+    {
+      "record_url": "https://zenodo.org/records/8369275",
+      "metadata_url": "https://zenodo.org/api/records/8369275",
+      "export_url": "https://zenodo.org/records/8369275/export/json",
+      "title": "Cell-to-Cell-Variations of a Panasonic NCR18650B",
+      "version": "1.0",
+      "license_as_reported": null,
+      "files": [
+        {
+          "source_path": "Z_imag.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/Z_imag.csv/content",
+          "size_bytes": 62666,
+          "publisher_checksum": "md5:625f64adb72f4cebd0977b40186bbbc2"
+        },
+        {
+          "source_path": "Z_real.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/Z_real.csv/content",
+          "size_bytes": 50835,
+          "publisher_checksum": "md5:66c912594aebfd612c5cdf84e4aca86b"
+        },
+        {
+          "source_path": "f.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/f.csv/content",
+          "size_bytes": 39192,
+          "publisher_checksum": "md5:92c140ad832996c876b84fd2d87b9fd5"
+        },
+        {
+          "source_path": "impedance.mat",
+          "url": "https://zenodo.org/api/records/8369275/files/impedance.mat/content",
+          "size_bytes": 121318,
+          "publisher_checksum": "md5:73d6c64790063f076f24b47d4781a1c7"
+        },
+        {
+          "source_path": "pocv.mat",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv.mat/content",
+          "size_bytes": 3988206,
+          "publisher_checksum": "md5:6193e6355e9d845f77b4decf691afa38"
+        },
+        {
+          "source_path": "pocv_ch.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv_ch.csv/content",
+          "size_bytes": 3168700,
+          "publisher_checksum": "md5:0f02774494b93c18edd335c9a188408f"
+        },
+        {
+          "source_path": "pocv_dc.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv_dc.csv/content",
+          "size_bytes": 3168623,
+          "publisher_checksum": "md5:485ea0795d373c2ec19bca93643130bb"
+        },
+        {
+          "source_path": "pocv_soc.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pocv_soc.csv/content",
+          "size_bytes": 40099,
+          "publisher_checksum": "md5:02e4d69ca3600f3f72a3c1ff86203ba4"
+        },
+        {
+          "source_path": "pulse.mat",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse.mat/content",
+          "size_bytes": 2107509,
+          "publisher_checksum": "md5:035611fc459b22e26daf64423145fe01"
+        },
+        {
+          "source_path": "pulse_neg_time.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_neg_time.csv/content",
+          "size_bytes": 1375190,
+          "publisher_checksum": "md5:ae99b9c526e6dec00e63c916dae18b25"
+        },
+        {
+          "source_path": "pulse_neg_voltage.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_neg_voltage.csv/content",
+          "size_bytes": 1396319,
+          "publisher_checksum": "md5:4bd137cc3aaa4401f683b856e1083504"
+        },
+        {
+          "source_path": "pulse_pos_time.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_pos_time.csv/content",
+          "size_bytes": 1379761,
+          "publisher_checksum": "md5:fa0ab49979a1c02b4de50748153bf516"
+        },
+        {
+          "source_path": "pulse_pos_voltage.csv",
+          "url": "https://zenodo.org/api/records/8369275/files/pulse_pos_voltage.csv/content",
+          "size_bytes": 1403257,
+          "publisher_checksum": "md5:dd6c6da30a3d738e0b884dfd4493c2ba"
+        }
+      ]
+    },
+    {
+      "record_url": "https://zenodo.org/records/7896429",
+      "metadata_url": "https://zenodo.org/api/records/7896429",
+      "export_url": "https://zenodo.org/records/7896429/export/json",
+      "title": "Ageing Data of Lithium-ion \"Panasonic NCR18650B\" Battery Cells",
+      "version": "1.0.0",
+      "license_as_reported": {
+        "id": "cc-by-4.0"
+      },
+      "files": [
+        {
+          "source_path": "2_009.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_009.h5/content",
+          "size_bytes": 186435242,
+          "publisher_checksum": "md5:8408795eba16a5fcc9e4c1fad936b073"
+        },
+        {
+          "source_path": "2_010.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_010.h5/content",
+          "size_bytes": 195317251,
+          "publisher_checksum": "md5:451ece35f174aa3e5cc777da2ad3e96b"
+        },
+        {
+          "source_path": "2_011.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_011.h5/content",
+          "size_bytes": 191460608,
+          "publisher_checksum": "md5:45aabf56c35af916ff35593dd9a60ddb"
+        },
+        {
+          "source_path": "2_012.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_012.h5/content",
+          "size_bytes": 287442128,
+          "publisher_checksum": "md5:f77cbe28dea3c408efc24717178eed38"
+        },
+        {
+          "source_path": "2_013.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_013.h5/content",
+          "size_bytes": 299003643,
+          "publisher_checksum": "md5:7d0763820d0079887a6067e3c8164eac"
+        },
+        {
+          "source_path": "2_014.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_014.h5/content",
+          "size_bytes": 277884958,
+          "publisher_checksum": "md5:3078d4f47f113386f91ba976635bdf65"
+        },
+        {
+          "source_path": "2_015.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_015.h5/content",
+          "size_bytes": 520593223,
+          "publisher_checksum": "md5:841058f75156e9f55a280d4a65ebfb13"
+        },
+        {
+          "source_path": "2_016.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_016.h5/content",
+          "size_bytes": 523981937,
+          "publisher_checksum": "md5:a873824fffa9a4c9e1c355f18a986a0f"
+        },
+        {
+          "source_path": "2_017.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_017.h5/content",
+          "size_bytes": 522088261,
+          "publisher_checksum": "md5:e3a2c9310015868119e4c7063a9c28e0"
+        },
+        {
+          "source_path": "2_018.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_018.h5/content",
+          "size_bytes": 39141430,
+          "publisher_checksum": "md5:cdcead5aa854647a7fa30e5f52d6b0ac"
+        },
+        {
+          "source_path": "2_019.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_019.h5/content",
+          "size_bytes": 40076695,
+          "publisher_checksum": "md5:3351b6537bbf13435df9696d050524fa"
+        },
+        {
+          "source_path": "2_020.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_020.h5/content",
+          "size_bytes": 40675442,
+          "publisher_checksum": "md5:002d4e56787f66e714402c6ae38fb85f"
+        },
+        {
+          "source_path": "2_021.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_021.h5/content",
+          "size_bytes": 36135303,
+          "publisher_checksum": "md5:f82671ae13ed1895ad610ce0f11139a0"
+        },
+        {
+          "source_path": "2_022.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_022.h5/content",
+          "size_bytes": 35998506,
+          "publisher_checksum": "md5:d060424713034a2bd8889ffc56f3f1cf"
+        },
+        {
+          "source_path": "2_023.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_023.h5/content",
+          "size_bytes": 35945618,
+          "publisher_checksum": "md5:9c0a821bf33e8f159e2a8d96424b0183"
+        },
+        {
+          "source_path": "2_024.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_024.h5/content",
+          "size_bytes": 35873406,
+          "publisher_checksum": "md5:d2bf8754bd2b66cf3edf6662cc7f41fa"
+        },
+        {
+          "source_path": "2_025.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_025.h5/content",
+          "size_bytes": 35804735,
+          "publisher_checksum": "md5:6ba246455f1d5daaa5b5d7c68a424dd2"
+        },
+        {
+          "source_path": "2_026.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_026.h5/content",
+          "size_bytes": 35755101,
+          "publisher_checksum": "md5:426480b6e2f187f9713033734c1a037b"
+        },
+        {
+          "source_path": "2_027.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_027.h5/content",
+          "size_bytes": 116078620,
+          "publisher_checksum": "md5:b48c5badf1e0733fbb115745a3d76713"
+        },
+        {
+          "source_path": "2_028.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_028.h5/content",
+          "size_bytes": 117778586,
+          "publisher_checksum": "md5:d7348791336783dcaee88190541932cf"
+        },
+        {
+          "source_path": "2_029.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_029.h5/content",
+          "size_bytes": 116689356,
+          "publisher_checksum": "md5:d6f0d6eb94ca33e671738ece713d5ee3"
+        },
+        {
+          "source_path": "2_030.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_030.h5/content",
+          "size_bytes": 162092446,
+          "publisher_checksum": "md5:614f4d2d8684e70c54fd776636fd194b"
+        },
+        {
+          "source_path": "2_031.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_031.h5/content",
+          "size_bytes": 180630602,
+          "publisher_checksum": "md5:881536cea22e31c7705cacf59c2dae78"
+        },
+        {
+          "source_path": "2_032.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_032.h5/content",
+          "size_bytes": 182623638,
+          "publisher_checksum": "md5:b5d66bdeb85e708f9239d98e6621ed3e"
+        },
+        {
+          "source_path": "2_033.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_033.h5/content",
+          "size_bytes": 120021501,
+          "publisher_checksum": "md5:0f1d2c913aa94c771aada28232549268"
+        },
+        {
+          "source_path": "2_034.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_034.h5/content",
+          "size_bytes": 118574526,
+          "publisher_checksum": "md5:fbf381e843ab98ec60d9a8c65d52eb61"
+        },
+        {
+          "source_path": "2_035.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_035.h5/content",
+          "size_bytes": 117575874,
+          "publisher_checksum": "md5:270805d5114142aa94f570687b941476"
+        },
+        {
+          "source_path": "2_036.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_036.h5/content",
+          "size_bytes": 308321825,
+          "publisher_checksum": "md5:07428386cf463ee8f49aad5000f9abe6"
+        },
+        {
+          "source_path": "2_037.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_037.h5/content",
+          "size_bytes": 262647802,
+          "publisher_checksum": "md5:942cb7b4d7b35b23c9e0bd585e6e498a"
+        },
+        {
+          "source_path": "2_038.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_038.h5/content",
+          "size_bytes": 285890254,
+          "publisher_checksum": "md5:36c13fc8b1df8e11cf1a403eb36642eb"
+        },
+        {
+          "source_path": "2_039.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_039.h5/content",
+          "size_bytes": 192012450,
+          "publisher_checksum": "md5:77e0efde013d56f81c5d2499641b3007"
+        },
+        {
+          "source_path": "2_040.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_040.h5/content",
+          "size_bytes": 194880110,
+          "publisher_checksum": "md5:22ea19578f05ad665484340907d74f28"
+        },
+        {
+          "source_path": "2_041.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_041.h5/content",
+          "size_bytes": 210004447,
+          "publisher_checksum": "md5:e4ca461fe5f6f358d6428bed0caea2e3"
+        },
+        {
+          "source_path": "2_042.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_042.h5/content",
+          "size_bytes": 309193067,
+          "publisher_checksum": "md5:a7c956c402f6622f62c6942ccdca7a70"
+        },
+        {
+          "source_path": "2_043.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_043.h5/content",
+          "size_bytes": 427539099,
+          "publisher_checksum": "md5:ae524aae22c9bfa3fa910c73a36d2388"
+        },
+        {
+          "source_path": "2_044.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_044.h5/content",
+          "size_bytes": 414964686,
+          "publisher_checksum": "md5:1c01466adf264171c28d60f949382c02"
+        },
+        {
+          "source_path": "2_045.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_045.h5/content",
+          "size_bytes": 321261072,
+          "publisher_checksum": "md5:c7e435c0cab34f88c825f0e82a424a18"
+        },
+        {
+          "source_path": "2_046.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_046.h5/content",
+          "size_bytes": 321012062,
+          "publisher_checksum": "md5:0a6a30a5ac593f39b3adc0653a5df079"
+        },
+        {
+          "source_path": "2_047.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_047.h5/content",
+          "size_bytes": 277648216,
+          "publisher_checksum": "md5:c82012a802ac5a625121f9782dd43240"
+        },
+        {
+          "source_path": "2_048.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_048.h5/content",
+          "size_bytes": 257601940,
+          "publisher_checksum": "md5:5ac00e59e5bd1953ff4fcc76dc4f3234"
+        },
+        {
+          "source_path": "2_049.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_049.h5/content",
+          "size_bytes": 271110352,
+          "publisher_checksum": "md5:deda0e693146bec459b272ab9410b53e"
+        },
+        {
+          "source_path": "2_050.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_050.h5/content",
+          "size_bytes": 197066003,
+          "publisher_checksum": "md5:133cfc34520b8cead2c876a596ffb078"
+        },
+        {
+          "source_path": "2_051.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_051.h5/content",
+          "size_bytes": 197643813,
+          "publisher_checksum": "md5:67177faa8f8b1bbfcf5883aa956e0b4b"
+        },
+        {
+          "source_path": "2_052.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_052.h5/content",
+          "size_bytes": 198445669,
+          "publisher_checksum": "md5:b3bcba69b7285400de52c0d1a3c6a1f9"
+        },
+        {
+          "source_path": "2_053.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_053.h5/content",
+          "size_bytes": 507046995,
+          "publisher_checksum": "md5:3afebf624e84ba3652d47c56ef9049be"
+        },
+        {
+          "source_path": "2_054.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_054.h5/content",
+          "size_bytes": 510428694,
+          "publisher_checksum": "md5:3ce707be336ca85433bda1b571f410b8"
+        },
+        {
+          "source_path": "2_055.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_055.h5/content",
+          "size_bytes": 514733556,
+          "publisher_checksum": "md5:cc25f0167085996c34944884781b8f36"
+        },
+        {
+          "source_path": "2_056.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_056.h5/content",
+          "size_bytes": 304001453,
+          "publisher_checksum": "md5:0493bc7639bdc35bb1c1caa94d4cde6a"
+        },
+        {
+          "source_path": "2_057.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_057.h5/content",
+          "size_bytes": 308308970,
+          "publisher_checksum": "md5:9374790e6444369ba1f439800ee7856a"
+        },
+        {
+          "source_path": "2_058.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_058.h5/content",
+          "size_bytes": 175541770,
+          "publisher_checksum": "md5:5e548e0188f7c71d193ae572fd58c201"
+        },
+        {
+          "source_path": "2_059.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_059.h5/content",
+          "size_bytes": 180466118,
+          "publisher_checksum": "md5:663d3fc69832c3af2d59c49bc6dfe6c1"
+        },
+        {
+          "source_path": "2_060.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_060.h5/content",
+          "size_bytes": 181525335,
+          "publisher_checksum": "md5:09549ba5d04c4b8f6a96b7fc8468d381"
+        },
+        {
+          "source_path": "2_061.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_061.h5/content",
+          "size_bytes": 46039843,
+          "publisher_checksum": "md5:8c6e136df25689456d7df4d6401f67d8"
+        },
+        {
+          "source_path": "2_062.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_062.h5/content",
+          "size_bytes": 45887278,
+          "publisher_checksum": "md5:dafa81fdc8b3cf289b5729e0fd1f62b9"
+        },
+        {
+          "source_path": "2_063.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_063.h5/content",
+          "size_bytes": 46120019,
+          "publisher_checksum": "md5:fef440f475afa7005528a68de3f456c7"
+        },
+        {
+          "source_path": "2_067.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_067.h5/content",
+          "size_bytes": 265249068,
+          "publisher_checksum": "md5:4091f1124bf5854c15a0e82ec1ae2be3"
+        },
+        {
+          "source_path": "2_068.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_068.h5/content",
+          "size_bytes": 268688240,
+          "publisher_checksum": "md5:1d1ff658ba902b368e700adf6c84d0b7"
+        },
+        {
+          "source_path": "2_069.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_069.h5/content",
+          "size_bytes": 261614043,
+          "publisher_checksum": "md5:7381665b985379d31920f911ee0eddd8"
+        },
+        {
+          "source_path": "2_070.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_070.h5/content",
+          "size_bytes": 559201819,
+          "publisher_checksum": "md5:5c7c1b673fd009af705b2d61971b563c"
+        },
+        {
+          "source_path": "2_071.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_071.h5/content",
+          "size_bytes": 556931725,
+          "publisher_checksum": "md5:22530a97918a258057f65742c5e06d3a"
+        },
+        {
+          "source_path": "2_072.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_072.h5/content",
+          "size_bytes": 559820950,
+          "publisher_checksum": "md5:0d2d6a3697a09fdf7fef7e938daaca40"
+        },
+        {
+          "source_path": "2_073.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_073.h5/content",
+          "size_bytes": 362207197,
+          "publisher_checksum": "md5:94b72e987c3c619920799cb81362ccb0"
+        },
+        {
+          "source_path": "2_075.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_075.h5/content",
+          "size_bytes": 368070694,
+          "publisher_checksum": "md5:e81c370ff2e7263a021d7ed62c9f7262"
+        },
+        {
+          "source_path": "2_076.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_076.h5/content",
+          "size_bytes": 162039304,
+          "publisher_checksum": "md5:d2fbd7d23a864b6721ac8828ad5a0473"
+        },
+        {
+          "source_path": "2_077.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_077.h5/content",
+          "size_bytes": 163682696,
+          "publisher_checksum": "md5:83b52ea0b08ccd1a5811370dcd8ea0ff"
+        },
+        {
+          "source_path": "2_078.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_078.h5/content",
+          "size_bytes": 165638728,
+          "publisher_checksum": "md5:ae2e5f751b149178787e52383481fdfa"
+        },
+        {
+          "source_path": "2_079.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_079.h5/content",
+          "size_bytes": 315367755,
+          "publisher_checksum": "md5:5cbd1881f7442b9d140b0e2c933bbd83"
+        },
+        {
+          "source_path": "2_080.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_080.h5/content",
+          "size_bytes": 321160837,
+          "publisher_checksum": "md5:5d1584451febe8fb33f4d310bc4ae34f"
+        },
+        {
+          "source_path": "2_081.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_081.h5/content",
+          "size_bytes": 328155196,
+          "publisher_checksum": "md5:9f6b7f14ff8f7f85317e905381b331d0"
+        },
+        {
+          "source_path": "2_082.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_082.h5/content",
+          "size_bytes": 218298825,
+          "publisher_checksum": "md5:2452735e6019a8ab5a44d6e6aaafaf5a"
+        },
+        {
+          "source_path": "2_083.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_083.h5/content",
+          "size_bytes": 220751116,
+          "publisher_checksum": "md5:a81cc96be67e947b3ba7b751cdc686b3"
+        },
+        {
+          "source_path": "2_084.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_084.h5/content",
+          "size_bytes": 225812752,
+          "publisher_checksum": "md5:568b2df7bd852c8dc9088d22b10c75c6"
+        },
+        {
+          "source_path": "2_085.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_085.h5/content",
+          "size_bytes": 675094253,
+          "publisher_checksum": "md5:1e562324f2d77a4921b596350b59dd39"
+        },
+        {
+          "source_path": "2_086.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_086.h5/content",
+          "size_bytes": 675587371,
+          "publisher_checksum": "md5:fbf36c329f5f59d4b7f285f87bc12816"
+        },
+        {
+          "source_path": "2_087.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_087.h5/content",
+          "size_bytes": 675217393,
+          "publisher_checksum": "md5:c8acd38980e9bb38dcf91929a19924e8"
+        },
+        {
+          "source_path": "2_088.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_088.h5/content",
+          "size_bytes": 361534252,
+          "publisher_checksum": "md5:d6c6c050ecbb457e6eadcc80e63dfc52"
+        },
+        {
+          "source_path": "2_089.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_089.h5/content",
+          "size_bytes": 370907934,
+          "publisher_checksum": "md5:6512d89385a6bbb127d1c61e546a5acf"
+        },
+        {
+          "source_path": "2_090.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_090.h5/content",
+          "size_bytes": 370415366,
+          "publisher_checksum": "md5:8d79b4c3173d1160996cb56b3bcc662a"
+        },
+        {
+          "source_path": "2_091.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_091.h5/content",
+          "size_bytes": 325960737,
+          "publisher_checksum": "md5:3e09c9355b5957daf069932f111c07d1"
+        },
+        {
+          "source_path": "2_092.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_092.h5/content",
+          "size_bytes": 34281818,
+          "publisher_checksum": "md5:edaf982b049de1484fce61471412b7be"
+        },
+        {
+          "source_path": "2_093.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_093.h5/content",
+          "size_bytes": 34751291,
+          "publisher_checksum": "md5:e3c39e4b1ee789691f80d9e15c9b6610"
+        },
+        {
+          "source_path": "2_094.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_094.h5/content",
+          "size_bytes": 34735067,
+          "publisher_checksum": "md5:7ad4231a42ed404716d37681f870554f"
+        },
+        {
+          "source_path": "2_095.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_095.h5/content",
+          "size_bytes": 24511414,
+          "publisher_checksum": "md5:83b6aa6466e5cb917f5e9bbdfd720020"
+        },
+        {
+          "source_path": "2_096.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_096.h5/content",
+          "size_bytes": 24087843,
+          "publisher_checksum": "md5:6b7e5719a5e60ed2837c161208f2c9a3"
+        },
+        {
+          "source_path": "2_097.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_097.h5/content",
+          "size_bytes": 23574037,
+          "publisher_checksum": "md5:8e682d827ac9c75e0d5018a8dbbc0ba0"
+        },
+        {
+          "source_path": "2_098.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_098.h5/content",
+          "size_bytes": 124802041,
+          "publisher_checksum": "md5:4daeb89257d6f5af52aecb8305031440"
+        },
+        {
+          "source_path": "2_099.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_099.h5/content",
+          "size_bytes": 128320098,
+          "publisher_checksum": "md5:f07c58bee428a94a496b66f05e029cbe"
+        },
+        {
+          "source_path": "2_100.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_100.h5/content",
+          "size_bytes": 125032530,
+          "publisher_checksum": "md5:56b427593b99170cfe5a87194278ba59"
+        },
+        {
+          "source_path": "2_101.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_101.h5/content",
+          "size_bytes": 107285991,
+          "publisher_checksum": "md5:33119b6381e62f75428bc2d5016ee4ed"
+        },
+        {
+          "source_path": "2_102.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_102.h5/content",
+          "size_bytes": 106887567,
+          "publisher_checksum": "md5:c826f8f1a186d7a866a44ab202f9205b"
+        },
+        {
+          "source_path": "2_103.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_103.h5/content",
+          "size_bytes": 106865739,
+          "publisher_checksum": "md5:f6f9fd3c02232eb18afac37dfe349b5d"
+        },
+        {
+          "source_path": "2_104.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_104.h5/content",
+          "size_bytes": 186143064,
+          "publisher_checksum": "md5:177e018263668c2f09f408d97a3a3961"
+        },
+        {
+          "source_path": "2_105.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_105.h5/content",
+          "size_bytes": 181075079,
+          "publisher_checksum": "md5:0f40daf9a02a5c253075bc08ba3ddb5f"
+        },
+        {
+          "source_path": "2_106.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_106.h5/content",
+          "size_bytes": 181109587,
+          "publisher_checksum": "md5:d2c2ea7bd13f4a4aaf962bd551836d64"
+        },
+        {
+          "source_path": "2_107.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_107.h5/content",
+          "size_bytes": 401753336,
+          "publisher_checksum": "md5:dd35e4d8201ae61eddb99c5f22362fc5"
+        },
+        {
+          "source_path": "2_108.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_108.h5/content",
+          "size_bytes": 143955913,
+          "publisher_checksum": "md5:7eddc63b28e6b572ecefe9550149cec8"
+        },
+        {
+          "source_path": "2_109.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_109.h5/content",
+          "size_bytes": 141437946,
+          "publisher_checksum": "md5:49a72cb7fce3ad8ffc15b320f57e7a59"
+        },
+        {
+          "source_path": "2_110.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_110.h5/content",
+          "size_bytes": 147406987,
+          "publisher_checksum": "md5:81d7488cc6fa982a99f3b30e0f6d4f12"
+        },
+        {
+          "source_path": "2_111.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_111.h5/content",
+          "size_bytes": 182582059,
+          "publisher_checksum": "md5:5f64533df76116e5ed6f30a624771ef4"
+        },
+        {
+          "source_path": "2_112.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_112.h5/content",
+          "size_bytes": 179150869,
+          "publisher_checksum": "md5:e74f5ffdb17bc20a0a7f2f75f7296bac"
+        },
+        {
+          "source_path": "2_113.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_113.h5/content",
+          "size_bytes": 35458503,
+          "publisher_checksum": "md5:caebd810a65d350028a68cc7ec2c4cb9"
+        },
+        {
+          "source_path": "2_114.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_114.h5/content",
+          "size_bytes": 34961000,
+          "publisher_checksum": "md5:22005d66788e7999e3875b7e781cdcca"
+        },
+        {
+          "source_path": "2_115.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_115.h5/content",
+          "size_bytes": 35027604,
+          "publisher_checksum": "md5:84a179af05d984be1b315b1df851e659"
+        },
+        {
+          "source_path": "2_116.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_116.h5/content",
+          "size_bytes": 322857923,
+          "publisher_checksum": "md5:ea4743d64510f1a4c244c2af310fa354"
+        },
+        {
+          "source_path": "2_117.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_117.h5/content",
+          "size_bytes": 323330540,
+          "publisher_checksum": "md5:9f958cf7486356f52f23b49235f9c832"
+        },
+        {
+          "source_path": "2_118.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_118.h5/content",
+          "size_bytes": 326483925,
+          "publisher_checksum": "md5:a0be4409f4ba57ec383f914178bdc70f"
+        },
+        {
+          "source_path": "2_119.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_119.h5/content",
+          "size_bytes": 30437722,
+          "publisher_checksum": "md5:2cec6cbfee3629992d85954e664a1387"
+        },
+        {
+          "source_path": "2_120.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_120.h5/content",
+          "size_bytes": 83512805,
+          "publisher_checksum": "md5:ea935f85f2802cd5d7fbb08613296e06"
+        },
+        {
+          "source_path": "2_121.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_121.h5/content",
+          "size_bytes": 533449292,
+          "publisher_checksum": "md5:d0a9a0842764bbb25274a0d008714a41"
+        },
+        {
+          "source_path": "2_123.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_123.h5/content",
+          "size_bytes": 376140208,
+          "publisher_checksum": "md5:ff86111736657c725fd8dd06919ccea3"
+        },
+        {
+          "source_path": "2_127.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_127.h5/content",
+          "size_bytes": 186834096,
+          "publisher_checksum": "md5:0aea8f54115ad54e8eed0d92b3598939"
+        },
+        {
+          "source_path": "2_128.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_128.h5/content",
+          "size_bytes": 465712511,
+          "publisher_checksum": "md5:cc7354a8b4496e2226fe50ab98768523"
+        },
+        {
+          "source_path": "2_129.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_129.h5/content",
+          "size_bytes": 420361863,
+          "publisher_checksum": "md5:2f16edc08cff75e5c468c1b8686405c3"
+        },
+        {
+          "source_path": "2_130.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_130.h5/content",
+          "size_bytes": 166781475,
+          "publisher_checksum": "md5:ae7ca9db201423aed6bb92feb6be5c7a"
+        },
+        {
+          "source_path": "2_131.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_131.h5/content",
+          "size_bytes": 175999221,
+          "publisher_checksum": "md5:1d24444f235e522b8a409679a3739589"
+        },
+        {
+          "source_path": "2_132.h5",
+          "url": "https://zenodo.org/api/records/7896429/files/2_132.h5/content",
+          "size_bytes": 167910667,
+          "publisher_checksum": "md5:7d567a0ee194347e7236104db560fa2d"
+        },
+        {
+          "source_path": "Galijatovic_2023_Ageing Data of Lithium-ion Panasonic NCR18650B Battery Cells.pdf",
+          "url": "https://zenodo.org/api/records/7896429/files/Galijatovic_2023_Ageing%20Data%20of%20Lithium-ion%20Panasonic%20NCR18650B%20Battery%20Cells.pdf/content",
+          "size_bytes": 731137,
+          "publisher_checksum": "md5:9ff2e0a534cd5f9b1b3ca54b1701c4dd"
+        }
+      ]
+    }
+  ],
+  "mendeley_selected_files": [
+    {
+      "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_0_05C_05degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/76f12d0e-917e-4221-b9ec-ae6feb2fa71f/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_0_05C_05degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 5,
+      "nominal_rate_C": 0.05,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_1C_05degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/9b67ee52-7a18-4477-9ae6-a36d0761f131/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_1C_05degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 5,
+      "nominal_rate_C": 1,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_2C_05degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/f73ad953-73d8-4924-ba04-d3cd5a00ba8f/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_2C_05degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 5,
+      "nominal_rate_C": 2,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_3C_05degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/73e4dee2-4237-4855-8f0e-1563d1c7fedb/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_3C_05degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 5,
+      "nominal_rate_C": 3,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_5C_05degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/ae639390-e7ab-4448-84b6-b0f66f4e0a2b/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/05degC/NCA_k1_5C_05degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 5,
+      "nominal_rate_C": 5,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_0_05C_25degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/e4bf7e8e-f3ef-4e6d-be8c-751bdec075f1/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_0_05C_25degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 25,
+      "nominal_rate_C": 0.05,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_1C_25degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/9ed734d2-2589-42e3-8311-95204e3a79c7/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_1C_25degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 25,
+      "nominal_rate_C": 1,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_2C_25degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/ee70ffd8-1c8e-4255-918c-09bdd8ee9466/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_2C_25degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 25,
+      "nominal_rate_C": 2,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_3C_25degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/35e36e18-81d9-49de-a3ba-205af572a9c2/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_3C_25degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 25,
+      "nominal_rate_C": 3,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_5C_25degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/3e2dea20-3349-4c6b-8b3e-aae43c5deb26/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/25degC/NCA_k1_5C_25degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 25,
+      "nominal_rate_C": 5,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_0_05C_35degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/d7d9aaf5-39a8-463a-b663-177595739e23/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_0_05C_35degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 35,
+      "nominal_rate_C": 0.05,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_1C_35degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/978ff2ea-e13a-47bc-8284-34f8779283bb/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_1C_35degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 35,
+      "nominal_rate_C": 1,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_2C_35degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/658f3d3c-b8e2-4d07-8bb3-0aa9bb8409d7/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_2C_35degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 35,
+      "nominal_rate_C": 2,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_3C_35degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/2ca08fdf-cb26-4a21-82b1-95905877917c/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_3C_35degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 35,
+      "nominal_rate_C": 3,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    },
+    {
+      "label": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_5C_35degC.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/kxsbr4x3j2/files/2ff68215-d1ab-4163-9bba-998911fb11e4/file_downloaded",
+      "source_path": "galvanostatic_discharge_test/NCA/35degC/NCA_k1_5C_35degC.xlsx",
+      "kind": "file",
+      "cell_model": "Panasonic NCR18650B",
+      "material_family": "NCA",
+      "source_sample_id": "k1",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "temperature_C": 35,
+      "nominal_rate_C": 5,
+      "verification": "source_listing",
+      "content_review": "not_read",
+      "note": "Actual source-listed NCA/k1 rate workbook. Discharge-rate and temperature tags follow filename plus primary paper; raw columns, thermal cutoff occurrence and charge phases are not independently read."
+    }
+  ],
+  "documentation_review": {
+    "url": "https://zenodo.org/api/records/7896429/files/Galijatovic_2023_Ageing%20Data%20of%20Lithium-ion%20Panasonic%20NCR18650B%20Battery%20Cells.pdf/content",
+    "size_bytes": 731137,
+    "publisher_md5": "9ff2e0a534cd5f9b1b3ca54b1701c4dd",
+    "sha256": "c487efe395d38fc2338e7563b31db8ff0a40cbee287dbcf2841b968278f9b369",
+    "inspected_pages": [
+      3,
+      4
+    ],
+    "note": "Author PDF text read; protocol table and RTP page rendered/visually checked. PDF remains external. No HDF5 payload read."
+  }
+}

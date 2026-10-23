@@ -6,12 +6,12 @@ Material grouping is a discovery aid, not evidence that tests and parameters bel
 
 ## External datasets
 
-| Dataset / cell | Tests / profiles | Rates and temperatures | License | Parameter match |
-|---|---|---|---|---|
-| [CALCE Samsung INR18650-20R: OCV and dynamic profiles](calce-samsung-20r-dynamic.md) | dynamic, ocv, pulse; US06, DST, FUDS, BJDST | Source describes low-current and incremental-current OCV protocols; no multi-rate CC sweep asserted. Source temperatures: [0, 25, 45] | not-stated | `unmatched` |
-| [CALB L148N58A: characterization, US06 and EIS](calb-l148n58a-2025.md) | constant_current, cccv, pulse, dynamic, eis, ocv; US06, UDDS, WLTP | C/20 charge/discharge characterization; HPPC at 1C and C/3. Pulse rates are not a standalone multi-rate continuous-discharge sweep. Source temperatures: [10, 25, 40] | CC-BY-4.0 | `unmatched` |
-| [University of Malaya: LFP, NCA and NMC dynamic tests](malaya-three-chemistries-2022.md) | dynamic, pulse; US06, DST, FUDS, UDDS, WLTP | HPPC and pulse charge/discharge are described; numeric rates not verified. Source temperatures: not verified | CC-BY-4.0 | `unmatched` |
-| [LG M50LT: measured EIS and grouped parameters](hallemans-m50lt-eis-2025.md) | eis, dynamic;  | 3 mV rms EIS; 9 SOC levels and 65 frequencies (585 measured rows). Source temperatures: [25] | BSD-3-Clause | `same_model_same_study` |
+| Dataset / cell | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |
+|---|---|---|---|---|---|
+| [CALCE Samsung INR18650-20R: OCV and dynamic profiles](calce-samsung-20r-dynamic.md) | dynamic, ocv, pulse; US06, DST, FUDS, BJDST | Source describes low-current and incremental-current OCV protocols; no multi-rate CC sweep asserted. Source temperatures: [0, 25, 45] | Not reported | not-stated | `unmatched` |
+| [CALB L148N58A: characterization, US06 and EIS](calb-l148n58a-2025.md) | constant_current, cccv, pulse, dynamic, eis, ocv; US06, UDDS, WLTP | C/20 charge/discharge characterization; HPPC at 1C and C/3. Pulse rates are not a standalone multi-rate continuous-discharge sweep. Source temperatures: [10, 25, 40] | Not reported | CC-BY-4.0 | `unmatched` |
+| [University of Malaya: LFP, NCA and NMC dynamic tests](malaya-three-chemistries-2022.md) | dynamic, pulse; US06, DST, FUDS, UDDS, WLTP | HPPC and pulse charge/discharge are described; numeric rates not verified. Source temperatures: not verified | Unverified | CC-BY-4.0 | `unmatched` |
+| [LG M50LT: measured EIS and grouped parameters](hallemans-m50lt-eis-2025.md) | eis, dynamic;  | 3 mV rms EIS; 9 SOC levels and 65 frequencies (585 measured rows). Source temperatures: [25] | Not reported | BSD-3-Clause | `same_model_same_study` |
 
 ## Existing packaged tests
 

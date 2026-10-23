@@ -24,6 +24,12 @@ Reported frequency-domain channels: Not verified / not applicable.
 
 Source reports Neware BTS 4000 testing at four temperatures. Numeric setpoints and raw channel definitions were not verified.
 
+## Ageing data
+
+**Unverified**. The archive internals remain uninspected. The reviewed landing-page description does not establish longitudinal ageing coverage for any named model.
+
+[Ageing coverage evidence](https://data.mendeley.com/datasets/29kw38kzwj/1). This status applies to the dataset, not every file. Formation and repeated initial characterization are not a longitudinal ageing series.
+
 ## Parameter association
 
 Match: `unmatched`. Named models and archived per-model test matrix remain separate from catalog studies. Panasonic NCR18650B is not the unidentified Kim2011 nominal design; generic NCA or NMC tags are not joins.

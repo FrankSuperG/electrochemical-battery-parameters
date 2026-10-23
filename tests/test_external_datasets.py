@@ -80,6 +80,80 @@ def test_archive_directory_counts_do_not_become_measurement_or_specimen_claims()
     assert all(item["content_review"] == "not_read" for item in r["file_links"])
 
 
+def test_ncr18650b_sources_keep_parameter_and_half_cell_matching_limits():
+    catalog = Catalog()
+    ids = {"hnei-ncr18650b-2016", "bayreuth-ncr18650b-2023",
+           "virtual-vehicle-ncr18650b-aging-2023", "stanford-ncr18650b-rates-2021"}
+    records = [r for r in catalog.external_datasets if r["id"] in ids]
+    assert len(records) == 4
+    assert all(r["material_families"] == ["NCA"] for r in records)
+    assert all(r["parameter_link"]["match_level"] == "unmatched" for r in records)
+    assert all(not c["record_ids"] for r in records for c in r["parameter_components"].values())
+    hnei = next(r for r in records if r["id"] == "hnei-ncr18650b-2016")
+    half = [f for f in hnei["file_links"] if "/Half cell/" in f["source_path"]]
+    assert {f["source_sample_id"] for f in half} == {"NE", "PE"}
+    assert all(f["verification"] == "archive_directory" and f["content_review"] == "not_read" for f in half)
+    assert hnei["license"]["identifier"] == "CC0-1.0"
+    assert hnei["aging_data"]["status"] == "not_reported"
+    bayreuth = next(r for r in records if r["id"] == "bayreuth-ncr18650b-2023")
+    assert bayreuth["license"]["identifier"] == "not-stated"
+    assert len(bayreuth["file_links"]) == 13
+    assert "ocv" in bayreuth["test_types"] and not bayreuth["parameter_components"]["ocp"]["record_ids"]
+
+
+def test_ncr18650b_discharge_rates_do_not_inherit_other_chemistries():
+    catalog = Catalog()
+    rows = [f for f in catalog.search_dataset_files(material="NCA", test_type="constant_current")
+            if f["dataset_id"] == "stanford-ncr18650b-rates-2021"]
+    assert len(rows) == 15
+    assert {(f["temperature_C"], f["nominal_rate_C"]) for f in rows} == {
+        (t, c) for t in [5, 25, 35] for c in [0.05, 1, 2, 3, 5]
+    }
+    assert all(f["source_sample_id"] == "k1" and "/NCA/" in f["source_path"] for f in rows)
+    assert not any(f["nominal_rate_C"] > 5 or f["profiles"] for f in rows)
+
+
+def test_aging_filters_keep_source_scope_and_documentation_separate(capsys):
+    catalog = Catalog()
+    available = catalog.search_datasets(material="NCA", aging_status="available")
+    assert [r["id"] for r in available] == ["virtual-vehicle-ncr18650b-aging-2023"]
+    record = available[0]
+    h5 = [f for f in record["file_links"] if f["source_path"].endswith(".h5")]
+    assert len(h5) == 116
+    assert all(f["kind"] == "file" and f["content_review"] == "not_read" for f in h5)
+    assert set(record["aging_data"]["file_paths"]) <= {f["source_path"] for f in h5}
+    docs = [f for f in record["file_links"] if f["kind"] == "documentation"]
+    assert len(docs) == 1 and docs[0]["content_review"] == "documentation_reviewed"
+    assert not docs[0]["test_types"] and not docs[0]["profiles"]
+    assert not catalog.search_dataset_files(aging_status="available", test_type="eis")
+    assert catalog.search_datasets(aging_status="available", test_type="dynamic")
+    assert not catalog.search_dataset_files(aging_status="available", test_type="dynamic")
+    assert main(["datasets", "--material", "NCA", "--aging-status", "available", "--json"]) == 0
+    assert json.loads(capsys.readouterr().out) == available
+    assert main(["datasets", "--files", "--aging-status", "available", "--test-type", "constant_current", "--json"]) == 0
+    rows = json.loads(capsys.readouterr().out)
+    assert len(rows) == 116
+    assert all(f["dataset_aging_status"] == "available" for f in rows)
+    unverified = catalog.search_datasets(aging_status="unverified")
+    assert [r["id"] for r in unverified] == ["malaya-three-chemistries-2022"]
+
+
+@pytest.mark.parametrize("fault", ["orphan_path", "unsupported_availability", "boolean_status"])
+def test_aging_availability_requires_concrete_evidence(fault):
+    catalog = Catalog()
+    record = next(r for r in catalog.external_datasets if r["aging_data"]["status"] == "available")
+    if fault == "orphan_path":
+        record["aging_data"]["file_paths"] = ["invented-history.h5"]
+        expected = "ageing evidence references an unknown external source path"
+    else:
+        if fault == "unsupported_availability":
+            record["aging_data"]["file_paths"] = []
+        else:
+            record["aging_data"]["status"] = False
+        expected = "external datasets schema"
+    assert any(expected in error for error in catalog.validate())
+
+
 @pytest.mark.parametrize("fault", ["wrong_component", "intrinsic_group", "member_size", "duplicate_path"])
 def test_file_and_component_associations_require_specific_evidence(fault):
     catalog = Catalog()

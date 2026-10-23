@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.10.0 — 2026-10-23
+
+- Added four Panasonic NCR18650B external source records: HNEI formation/full-cell and harvested half-cell RPT, Bayreuth beginning-of-life pseudo-OCV/pulse/EIS, Virtual Vehicle ageing/reference tests, and the NCA section of Stanford multi-rate discharge tests.
+- Added 151 metadata-only locators, reaching 233 across eleven sources. Kept all new MAT/CSV/XLSX/H5 observations external; preserved source file names, publisher checksums, versioned links, license gaps and unmatched OCP/D/kinetics.
+- Verified the HNEI ZIP directory and same-study half/full-cell file locations without extracting MAT data. No equilibrium OCP, intrinsic D/k or cross-study specimen join is inferred.
+- Added an evidence-backed Ageing data column, viewer/API/CLI filtering and CSV fields. Available, not reported and unverified are distinct; formation, initial repeats and degradation emulations do not count as measured ageing series.
+- Recorded 116 external H5 cell files and protocol-documentation limits, including project-end censoring and ambiguous profile-to-cell IDs. Retained CC0 1.0 / CC BY 4.0 source terms; the Bayreuth record has no stated license in the inspected metadata.
+- Advanced external metadata schema to 1.2 for required ageing evidence and documentation-file review; packaged scientific observations and parameter values are unchanged.
+
 ## 0.9.1 — 2026-10-23
 
 - Audited all seven external records at file/container level; added 82 selected locators, source paths, sample labels and review scope without importing observation payloads.

@@ -24,6 +24,12 @@ Reported frequency-domain channels: Not verified / not applicable.
 
 Protocols are described on the source page. Per-file measured channel headers were not inspected.
 
+## Ageing data
+
+**Not reported**. The reviewed source coverage describes characterization tests; no longitudinal ageing series has been established for this record. This is not proof that no ageing data exist elsewhere.
+
+[Ageing coverage evidence](https://calce.umd.edu/data). This status applies to the dataset, not every file. Formation and repeated initial characterization are not a longitudinal ageing series.
+
 ## Parameter association
 
 Match: `unmatched`. Samsung INR18650-20R has no electrode-characterization parameter package in this catalog. LG M50/M50LT and Mohtat NMC cells are different models/studies.

@@ -116,3 +116,19 @@ def test_full_cell_material_index_preserves_grain_and_complete_file_links(index)
         assert f"data/full-cell/{dataset['id']}.md" in index
         for family in dataset["material_families"]:
             assert dataset["id"] + ".md" in index[f"data/full-cell/{family}.md"].decode()
+
+
+def test_aging_column_preserves_unreported_unknown_and_source_level_grain(index):
+    rows = list(csv.DictReader(io.StringIO(index["data/full-cell/datasets.csv"].decode())))
+    catalog = Catalog()
+    assert {r["aging_data"] for r in rows} == {"available", "not_reported", "unverified"}
+    for row, source in zip(rows, catalog.external_datasets):
+        assert row["aging_data"] == source["aging_data"]["status"]
+        assert row["aging_source_url"] == source["aging_data"]["source_url"]
+    overview = index["data/full-cell/README.md"].decode()
+    assert "| Dataset | Materials | Ageing data | License |" in overview
+    nca = index["data/full-cell/NCA.md"].decode()
+    assert "Ageing data" in nca and "Yes (cycle, calendar)" in nca
+    files = list(csv.DictReader(io.StringIO(index["data/full-cell/files.csv"].decode())))
+    docs = [f for f in files if f["kind"] == "documentation"]
+    assert docs and all(f["dataset_aging_status"] == "available" and not f["test_types"] for f in docs)
