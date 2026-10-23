@@ -8,24 +8,28 @@ versions, reuse terms, parameter associations and missing items. Catalog search,
 exports, the viewer and CI do not fetch these external observations. The existing
 61 packaged branch/test files remain unchanged.
 
-The eleven records describe dataset links, not eleven tests or independent cells.
+The sixteen records describe dataset links, not sixteen tests or independent cells.
 CALCE contributes two cell sections on one page; one multi-material deposit can
-appear under LFP, NMC and NCA. The current file index has 233 selected locators,
+appear under LFP, NMC and NCA. The current file index has 427 selected locators,
 including parent archives, named members, test files and parameter evidence.
-These are not 233 imported measurement files or a complete test matrix.
+These are not 427 imported measurement files or a complete test matrix.
 The [NCR18650B source guide](NCR18650B.md) links four additions and their ageing,
-half-cell and cross-study matching limits.
+half-cell and cross-study matching limits. The [OCP-first screen](OCP_FIRST_EXPANSION.md)
+reviews 21 source families and five further additions.
 
 ## Choose material and test
 
 - [LFP](../data/full-cell/LFP.md): A123 1–4C CCCV charging, UDDS, CALCE combined
   DST/US06/FUDS workbooks, EIS member paths and existing CC data.
 - [NMC](../data/full-cell/NMC.md): CALB CC/US06/EIS locations, CALCE Samsung 20R
-  US06 archives and M50LT same-study impedance/drive-cycle evidence.
+  US06 archives, M50LT same-study impedance/drive-cycle evidence, NEXTBMS harvested
+  half cells with multi-temperature EIS/ageing, LG M50 three-temperature discharge
+  files and cross-study LG MJ1 dynamic ageing.
 - [NCA](../data/full-cell/NCA.md): NCR18650B full/half-cell RPT, initial
   pseudo-OCV/pulse/EIS, ageing and representative multi-rate discharge links.
   The Malaya RAR still has no verified NCA-specific US06 member. No NCR18650B
-  source is joined to the Kim2011 nominal-design parameters.
+  source is joined to the Kim2011 nominal-design parameters. P45B adds published
+  OCP/parameter links, four-temperature WLTP and a separate ageing-checkup source.
 - [LCO](../data/full-cell/LCO.md) and [NCO](../data/full-cell/NCO.md): existing
   observations retain their source labels, digitization and missing channels.
 
@@ -42,8 +46,15 @@ Dataset search uses provider-declared coverage. `--files` searches inspected
 locators and does **not** inherit a dataset's profiles or per-model assignment.
 Consequently NCA/US06 returns the multi-chemistry dataset but no confirmed
 NCA-specific file locator. This is a source-review gap, not proof that no such
-file exists. An archive-member link opens its parent ZIP/RAR; extract the exact
+file exists. An archive-member link opens its parent ZIP/RAR/7z; extract the exact
 named member yourself.
+
+The **OCP anchor** column separates measured external half-cell sources, published
+fitted parameterisation, explicit expression reuse and cross-study references.
+Whole-cell OCV is not electrode OCP. `ocp_anchor.half_cell_temperatures_C` is
+independent of full-cell source temperatures; unknown values remain empty.
+`parameter_components` still describes joins to native catalog curve/parameter
+records, so an external OCP lead does not create a numeric catalog record.
 
 The **Ageing data** column distinguishes `available`, `not_reported` and
 `unverified`. Available sources retain cycle/calendar kinds, evidence and linked
@@ -79,10 +90,17 @@ an external dataset or convert a file locator into normalized observations.
 | [NCR18650B / Bayreuth](../data/full-cell/bayreuth-ncr18650b-2023.md) | All 13 pseudo-OCV, pulse and EIS MAT/CSV links | Beginning-of-life characterization; whole-cell pseudo-OCV is not electrode OCP. Contents unread; license not stated. |
 | [NCR18650B / Virtual Vehicle](../data/full-cell/virtual-vehicle-ncr18650b-aging-2023.md) | All 116 H5 cell files and protocol PDF | Ageing/RTP documented; H5 unread. Censoring and profile-ID conflicts retained; no cross-study specimen join. |
 | [NCR18650B / Stanford](../data/full-cell/stanford-ncr18650b-rates-2021.md) | Fifteen NCA/k1 XLSX paths at 0.05/1/2/3/5C and 5/25/35 degC | Discharge sweep, not a multi-rate charge sweep. Other deposit chemistries are different models; no OCP/D/k join. |
+| [CALB / NEXTBMS](../data/full-cell/nextbms-calb-nmc532-2026.md) | Harvested half-cell CSVs, full-cell characterization and ageing members in three 7z containers | Same study/model, distinct specimens; EIS at four temperature labels. Declared and directory stage counts differ. |
+| [About:Energy P45B](../data/full-cell/aboutenergy-p45b-2026.md) | Published BPX and four-temperature CC/GITT/WLTP ZIP; eVTOL at three temperatures | Published fitted/composite OCP, not independently located raw half-cell points. Experimental/model columns and alternate reports remain separate. |
+| [TUM P45B](../data/full-cell/tum-p45b-halfcell-aging-2026.md) | Five harvested finite-current branches, two reconstructed Si files and one 800-EFC pOCV checkup table | Measured blend/cathode, reconstructed Si and whole-cell checkups retain distinct origins; measurement-data reuse scope unresolved. |
+| [LG M50 / TEC2021](../data/full-cell/tec-lgm50-multitemperature-2021.md) | 48 pinned CSV paths at 0/10/25 degC and 0.1/0.5/1/2C | Explicit reuse of existing Chen2020 OCP expressions; different study and unjoined specimen serials. No WLTP in inspected release. |
+| [LG MJ1 / SNU2024](../data/full-cell/snu-mj1-dynamic-aging-2024.md) | One source-listed 80-cell staged-ageing ZIP | DLR-SINTEF half-cell OCP is a same-model cross-study reference. Inner paths and I/V/T unverified; not a named US06/WLTP trace. |
 
 Open a source's row for the exact path, direct file or parent-container link,
 per-file review level and all missing items. The [dated review](EXTERNAL_FILE_REVIEW.md)
-records primary links, directory counts, transfer scope and the inspected code.
+records the original seven-source audit; the [NCR18650B guide](NCR18650B.md) and
+[OCP-first screen](OCP_FIRST_EXPANSION.md) cover subsequent primary evidence,
+protocol distinctions, temperature scope and source conflicts.
 
 ## Interpretation and reuse
 
@@ -100,7 +118,9 @@ sample labels are retained without inventing serial numbers or phase boundaries.
 `source_listing` verifies a listed path/link. `archive_directory` verifies a
 member name and size, not its contents. `existing_source_audit` refers to data
 already reviewed in the catalog. `content_review=not_read` remains explicit.
-`documentation_reviewed` applies to the protocol PDF, not H5 observations.
+`documentation_reviewed` applies to protocol documents, not observations.
+`parameter_metadata_reviewed` identifies structure/header inspection of the
+external BPX package, not a numerical-array or model-performance audit.
 There is no automatic URL-health certification for every file.
 
 Dataset licenses remain with the providers. CC BY 4.0 applies to the selected
@@ -125,7 +145,8 @@ archive link must not be presented as a standalone member download.
 Include required `aging_data`: status, kinds, source URL/text and representative
 paths already in `file_links`. Use empty kinds/paths for not-reported or unverified
 coverage. Protocol PDFs use kind `documentation`, not experimental-test tags.
-External metadata schema 1.2 makes these fields explicit.
+Include `ocp_anchor` with type, evidence/source URLs, verified paths and a separate
+half-cell temperature list. Schema 1.3 requires these source distinctions.
 
 ```bash
 ebp validate
@@ -134,5 +155,6 @@ python scripts/build_data_index.py
 
 The registry is authored metadata and is not rewritten by source reconstruction.
 An optional [archive-directory inspector](../scripts/inspect_external_archives.py)
-performs bounded header reads only when explicitly invoked by a reviewer. It is
+performs bounded ZIP/RAR5 header reads, plus optional 7z listing with
+`pip install '.[archive-review]'`, only when explicitly invoked by a reviewer. It is
 not called by catalog search, viewer generation, normal reconstruction or CI.

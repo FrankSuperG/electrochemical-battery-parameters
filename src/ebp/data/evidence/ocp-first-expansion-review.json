@@ -1,0 +1,1159 @@
+{
+  "reviewed_on": "2026-10-23",
+  "scope": "OCP-first source screening; metadata, protocol documents, parameter-package structure and archive directories only. No new experimental observation payload is packaged.",
+  "new_dataset_ids": [
+    "nextbms-calb-nmc532-2026",
+    "aboutenergy-p45b-2026",
+    "tum-p45b-halfcell-aging-2026",
+    "tec-lgm50-multitemperature-2021",
+    "snu-mj1-dynamic-aging-2024"
+  ],
+  "archive_methods": [
+    {
+      "source_url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "method": "HTTP Range 7z directory only; no member extraction",
+      "archive_size_bytes": 6328075,
+      "bytes_transferred": 520,
+      "requests": 9,
+      "complete": true
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+      "method": "HTTP Range 7z directory only; no member extraction",
+      "archive_size_bytes": 38145973,
+      "bytes_transferred": 1405,
+      "requests": 9,
+      "complete": true
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+      "method": "HTTP Range 7z directory only; no member extraction",
+      "archive_size_bytes": 4128929522,
+      "bytes_transferred": 7333,
+      "requests": 9,
+      "complete": true
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+      "method": "HTTP Range zip directory only; no member extraction",
+      "archive_size_bytes": 12421433,
+      "bytes_transferred": 5250,
+      "requests": 3,
+      "complete": true
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/4864437/files/brosaplanella/TEC-reduced-model-v1.0.zip/content",
+      "method": "HTTP Range zip directory only; no member extraction",
+      "archive_size_bytes": 23155564,
+      "bytes_transferred": 75588,
+      "requests": 4,
+      "complete": true
+    }
+  ],
+  "github_sources": [
+    {
+      "repository": "tum-ees/DegradationModeAnalysis",
+      "commit_sha": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+      "tree_url": "https://api.github.com/repos/tum-ees/DegradationModeAnalysis/git/trees/402bab94d20258162ff059b8d5d51abe40ec1c30",
+      "files": [
+        {
+          "source_path": "LICENSE",
+          "size_bytes": 1068,
+          "git_blob_sha1": "582729e17a7bc6c21bf5af34b00fd2bf4c1af300"
+        },
+        {
+          "source_path": "README.md",
+          "size_bytes": 8574,
+          "git_blob_sha1": "d9ded8ff733d7f49d64ceac330f05e432fa67d09"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C02.mat",
+          "size_bytes": 139739,
+          "git_blob_sha1": "02c74cfbb2a356d57527563c671ebeb26b319d7a"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Delithiation_0C05.mat",
+          "size_bytes": 75524,
+          "git_blob_sha1": "13d45d73696e53836a982e637264df9a950338a2"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C02.mat",
+          "size_bytes": 141284,
+          "git_blob_sha1": "24070258fd942dbdbfece2bdda2e7ba40ee21ee6"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Anode_Lithiation_0C05.mat",
+          "size_bytes": 80414,
+          "git_blob_sha1": "f0a2e58455583f1220d13e56dcc370347484a8f5"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C02.mat",
+          "size_bytes": 139475,
+          "git_blob_sha1": "868525fcef6dd3e83b1963fa5330abaf38a3e5a8"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Delithiation_0C05.mat",
+          "size_bytes": 78035,
+          "git_blob_sha1": "4c53e999926b14adde812c741d4fa4a119377956"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C02.mat",
+          "size_bytes": 130276,
+          "git_blob_sha1": "4f8c7b1e3fdcebc95fc14ca1531b9b31e8c82c97"
+        },
+        {
+          "source_path": "input_data/LFP/HAIDI18650_Cathode_Lithiation_0C05.mat",
+          "size_bytes": 68792,
+          "git_blob_sha1": "3be540f83a68ac579fce06d873c1f9fa5729b637"
+        },
+        {
+          "source_path": "input_data/LFP/README_additional_citations_necessary.txt",
+          "size_bytes": 966,
+          "git_blob_sha1": "0c5be5edae8e682ee0642ab575e92d72e576bd1e"
+        },
+        {
+          "source_path": "input_data/NCA/1_according silicon-graphite anodes/MoliM35A_NE_Anode_Delithiation_0C02.mat",
+          "size_bytes": 90551,
+          "git_blob_sha1": "7d567377b02f7d7421868cc567cd8d3007f8450c"
+        },
+        {
+          "source_path": "input_data/NCA/1_according silicon-graphite anodes/MoliM35A_NE_Anode_Delithiation_0C04.mat",
+          "size_bytes": 46073,
+          "git_blob_sha1": "7a6e823f8c1b040d0b68b5f2c00cacc07a59d497"
+        },
+        {
+          "source_path": "input_data/NCA/1_according silicon-graphite anodes/MoliM35A_NE_Anode_Lithiation_0C02.mat",
+          "size_bytes": 80511,
+          "git_blob_sha1": "50b07c384720884d9adabf53ac287b3570b9d8c3"
+        },
+        {
+          "source_path": "input_data/NCA/1_according silicon-graphite anodes/MoliM35A_NE_Anode_Lithiation_0C04.mat",
+          "size_bytes": 87177,
+          "git_blob_sha1": "8cd3666f7b102410a0eccd80fc4ddd104c48a453"
+        },
+        {
+          "source_path": "input_data/NCA/GITT_P45b_Cat_NCA_JN_VS_Coin_1_GITT__Extracted_Continuous_pOCP.mat",
+          "size_bytes": 92919,
+          "git_blob_sha1": "1335edc461832590a80735d1330b05415a185cf0"
+        },
+        {
+          "source_path": "input_data/NCA/MoliM35A_PE_Cathode_Delithiation_0C02.mat",
+          "size_bytes": 94442,
+          "git_blob_sha1": "e9b460c19e2f2cc0103e61dfe25ffde297bc147b"
+        },
+        {
+          "source_path": "input_data/NCA/MoliM35A_PE_Cathode_Delithiation_0C04.mat",
+          "size_bytes": 101453,
+          "git_blob_sha1": "07c3f1697897a318182484d900369e250dad5078"
+        },
+        {
+          "source_path": "input_data/NCA/MoliM35A_PE_Cathode_Lithiation_0C02.mat",
+          "size_bytes": 96837,
+          "git_blob_sha1": "c736f8ecd682a9057d0222556d5df11b1c8df2a3"
+        },
+        {
+          "source_path": "input_data/NCA/MoliM35A_PE_Cathode_Lithiation_0C04.mat",
+          "size_bytes": 106838,
+          "git_blob_sha1": "2ae71d7e53248009db78d6145831f145439f1334"
+        },
+        {
+          "source_path": "input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+          "size_bytes": 67176,
+          "git_blob_sha1": "03994ea1ebc4520c9f4ddcb781ecac811efc0386"
+        },
+        {
+          "source_path": "input_data/NCA/README_additional_citations_necessary.txt",
+          "size_bytes": 417,
+          "git_blob_sha1": "5089f94d3371a8347500a06133e884d4944e01fa"
+        },
+        {
+          "source_path": "input_data/NMC/LGM36_PE_coin_Cathode_Delithiation_0C02.mat",
+          "size_bytes": 93737,
+          "git_blob_sha1": "47a29beaf2b721847dbd27ed6de437880f2b5c16"
+        },
+        {
+          "source_path": "input_data/NMC/LGM36_PE_coin_Cathode_Delithiation_0C04.mat",
+          "size_bytes": 55318,
+          "git_blob_sha1": "fedaa009888f9f20d573ce9767d2fa530d6cf0e6"
+        },
+        {
+          "source_path": "input_data/NMC/LGM36_PE_coin_Cathode_Lithiation_0C02.mat",
+          "size_bytes": 96059,
+          "git_blob_sha1": "f4dae3b6199f254e7d1c555d708b1cee3b27917c"
+        },
+        {
+          "source_path": "input_data/NMC/LGM36_PE_coin_Cathode_Lithiation_0C04.mat",
+          "size_bytes": 57259,
+          "git_blob_sha1": "2aada89c48b0e58bee7ba04bdbf00e34c5863347"
+        },
+        {
+          "source_path": "input_data/NMC/README_additional_citations_necessary.txt",
+          "size_bytes": 417,
+          "git_blob_sha1": "6152eeb29b5b9455cf5867259dc5857ca901eca6"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Delithiation_Hossain.mat",
+          "size_bytes": 8071,
+          "git_blob_sha1": "10fa2c529ae1c5284bd47878287b6271495f742a"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Delithiation_Rehm2025.mat",
+          "size_bytes": 139950,
+          "git_blob_sha1": "acc9c09854926df508c6bfdc4762caee61bfb696"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Delithiation_Rehm2026.mat",
+          "size_bytes": 36119,
+          "git_blob_sha1": "9a9189dd01993e23808f77a2cc9853244462a887"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Delithiation_Wetjen.mat",
+          "size_bytes": 1865,
+          "git_blob_sha1": "ac58da9f78843f3627b9578ffcd9f627b482b654"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Lithiation_Hossain.mat",
+          "size_bytes": 14216,
+          "git_blob_sha1": "322b1b0fe9cde3bff4c256d7194df3ddcdaf6ba4"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Lithiation_Rehm2025.mat",
+          "size_bytes": 140818,
+          "git_blob_sha1": "41e74e2a29eba141a5a41c94859c84ffe23f5acf"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Lithiation_Rehm2026.mat",
+          "size_bytes": 35339,
+          "git_blob_sha1": "6bd65dc592d2baa1b7466f92340a737266d33d10"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Lithiation_Schmitt.mat",
+          "size_bytes": 48915,
+          "git_blob_sha1": "7accb8301f221205ebc463e48d46d180b434d1a4"
+        },
+        {
+          "source_path": "input_data/graphite/Gr_Lithiation_Wetjen.mat",
+          "size_bytes": 3436,
+          "git_blob_sha1": "d2140a64f28b2a4189d60bb88268f8f5ae64d678"
+        },
+        {
+          "source_path": "input_data/graphite/README_additional_citations_necessary.txt",
+          "size_bytes": 2537,
+          "git_blob_sha1": "d64811be4b48500771a64d47d7402eebe3555c13"
+        },
+        {
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+          "size_bytes": 94970,
+          "git_blob_sha1": "138f479326d38cccce587c87aef6352837222001"
+        },
+        {
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+          "size_bytes": 60682,
+          "git_blob_sha1": "6d2358147a53858a30f104ae419ae8fee71afe1e"
+        },
+        {
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+          "size_bytes": 83744,
+          "git_blob_sha1": "2714bc4b2069e1bd53b5febe18a6b7009fb1fc13"
+        },
+        {
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+          "size_bytes": 56068,
+          "git_blob_sha1": "22ac5aabf5d0671abbd3bccb370347735ffe4794"
+        },
+        {
+          "source_path": "input_data/silicon-graphite/README_additional_citations_necessary.txt",
+          "size_bytes": 1025,
+          "git_blob_sha1": "d6836e9f6635617cc2996c67e79adbda5b4ce1b0"
+        },
+        {
+          "source_path": "input_data/silicon/README_additional_citations_necessary.txt",
+          "size_bytes": 3924,
+          "git_blob_sha1": "619292178f587354c947c500bb2c92644e26b7b4"
+        },
+        {
+          "source_path": "input_data/silicon/SiReconstr_Delithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "size_bytes": 34584,
+          "git_blob_sha1": "2b79f9f271451575893afd1d02c5a667fa3bf8ab"
+        },
+        {
+          "source_path": "input_data/silicon/SiReconstr_Lithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "size_bytes": 82810,
+          "git_blob_sha1": "38907683c0e26d2ef25fe86135516d2377db5fcf"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Baggetto.mat",
+          "size_bytes": 6578,
+          "git_blob_sha1": "bef0fa746581d2d8b1402a59dc96260d09b13519"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Friedrich.mat",
+          "size_bytes": 135016,
+          "git_blob_sha1": "38c7e5c4158d9dcc98d9c03b543e6b910af508a0"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Jiang.mat",
+          "size_bytes": 10618,
+          "git_blob_sha1": "ceb6832636d454b70d77ee36acff8e61203707bc"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Kunz.mat",
+          "size_bytes": 97129,
+          "git_blob_sha1": "0de77f6aca26f20a3dd961942b8211a5a2d343ac"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Li.mat",
+          "size_bytes": 2548,
+          "git_blob_sha1": "b77a53374e1fbb6aefc2eb42da8c07097a61cdf2"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Lu.mat",
+          "size_bytes": 12020,
+          "git_blob_sha1": "d0ae4af910dc877ed2cce89d94a05f9b5c6431d3"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Sethuraman.mat",
+          "size_bytes": 10127,
+          "git_blob_sha1": "b83523b4720c56d044a86a357dcdd3796a9ea24c"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Delithiation_Wetjen.mat",
+          "size_bytes": 8123,
+          "git_blob_sha1": "2c3e428c8328b4e6e2474fc59cf315f58446ad95"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Baggetto.mat",
+          "size_bytes": 6377,
+          "git_blob_sha1": "8858ec6a6426708ee626f6627ad63d544e01451e"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Friedrich.mat",
+          "size_bytes": 137179,
+          "git_blob_sha1": "fb1a1a933e8d5d87894578f49a1279689a4150fb"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Jiang.mat",
+          "size_bytes": 8950,
+          "git_blob_sha1": "a400ddc5c6eede791fc537dbe538f455bb103f1c"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Kunz.mat",
+          "size_bytes": 87546,
+          "git_blob_sha1": "ace43d801363c01bd7823652a0fcd73f33708520"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Li.mat",
+          "size_bytes": 2028,
+          "git_blob_sha1": "f340dc924a4fca026c06a6fd36d07d9883c389d6"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Lu.mat",
+          "size_bytes": 11628,
+          "git_blob_sha1": "c635ccf5cf4e5084e10b38125db92b067cdd9ff3"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Sethuraman.mat",
+          "size_bytes": 10405,
+          "git_blob_sha1": "cf5130c9570fad970da077c6075d38814cf5bd76"
+        },
+        {
+          "source_path": "input_data/silicon/Si_Lithiation_Wetjen.mat",
+          "size_bytes": 8058,
+          "git_blob_sha1": "df55f5c0573a219d3d0629d5ce74c0b63b43a16f"
+        },
+        {
+          "source_path": "input_data/test_data/P45B_serial23_aging_data_table.mat",
+          "size_bytes": 5013068,
+          "git_blob_sha1": "52d8cfc223aa31b453049d1a1202cee2c1c02607"
+        },
+        {
+          "source_path": "input_data/test_data/README_test_data.txt",
+          "size_bytes": 254,
+          "git_blob_sha1": "4d6aaa2f792f7d5eefb55436842f083d8a50f28b"
+        },
+        {
+          "source_path": "input_data/test_data/results/P45B_DMA.fig",
+          "size_bytes": 31482,
+          "git_blob_sha1": "b652b3b9de409b1946a17376f4e9c826a7a16c2d"
+        },
+        {
+          "source_path": "input_data/test_data/results/P45B_DMA.pdf",
+          "size_bytes": 18077,
+          "git_blob_sha1": "f95461264e82684962f39d47241f1542bd1d1f1f"
+        },
+        {
+          "source_path": "input_data/test_data/results/P45B_parameters.mat",
+          "size_bytes": 898039,
+          "git_blob_sha1": "8d83a03a3f06411d9e268a570ff0aacb7949f0f3"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU1.fig",
+          "size_bytes": 448504,
+          "git_blob_sha1": "b1c8e13e85a9fef6726c503df1aab63682cb1953"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU1.pdf",
+          "size_bytes": 97032,
+          "git_blob_sha1": "4f3629ecc43a2fa9ab0bd2f92dedc93225ebe912"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU1.png",
+          "size_bytes": 382156,
+          "git_blob_sha1": "1833d507d8ab7e4ab7491792d0cd092862a11491"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU2.fig",
+          "size_bytes": 448264,
+          "git_blob_sha1": "622e30f351092354bc3f42a89332d966ae71c008"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU2.pdf",
+          "size_bytes": 110786,
+          "git_blob_sha1": "62a0952e1c46fa4ec16b5401236af86030f93b25"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU2.png",
+          "size_bytes": 383874,
+          "git_blob_sha1": "94f9b258dbeb34fd23c358c306be29fc59b3a5f4"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU3.fig",
+          "size_bytes": 448774,
+          "git_blob_sha1": "216c628d0190b47a66977883dc3e833ef6c1ee34"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU3.pdf",
+          "size_bytes": 111124,
+          "git_blob_sha1": "65cf23bfe3ba61204ed288c5cc616cecda1d166f"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU3.png",
+          "size_bytes": 382422,
+          "git_blob_sha1": "a7db54a3c256cc3c591e8b532c536ce69652cf45"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU4.fig",
+          "size_bytes": 455629,
+          "git_blob_sha1": "85c126eaac670c7181e010d772303d49821adfb8"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU4.pdf",
+          "size_bytes": 111012,
+          "git_blob_sha1": "2ba0b82b31ec3b832768234e30486517a0368e51"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU4.png",
+          "size_bytes": 377337,
+          "git_blob_sha1": "ac9123fc789af310276916f721ea38d6015f2f36"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU5.fig",
+          "size_bytes": 455188,
+          "git_blob_sha1": "ff6f497f4576b1f07a462e4f1c5cea8f949429ef"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU5.pdf",
+          "size_bytes": 111080,
+          "git_blob_sha1": "d72cb3200dcbf72e3a9427f4307f806ab67dc00b"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU5.png",
+          "size_bytes": 379891,
+          "git_blob_sha1": "6e86c78fa5a6536672c28dfb4076398c9311fcec"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU6.fig",
+          "size_bytes": 447730,
+          "git_blob_sha1": "93b33cead599e497c91d35143611c9c428f9f3df"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU6.pdf",
+          "size_bytes": 97140,
+          "git_blob_sha1": "1a4d6ee4cddcb54dd43e08e7938225d2ba1b4ed9"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU6.png",
+          "size_bytes": 381840,
+          "git_blob_sha1": "347919a8f63a6ecfe224f31e8469dae16c50b8db"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU7.fig",
+          "size_bytes": 448116,
+          "git_blob_sha1": "6ec74923632f6df2735f0ef6a1a88ac5747d20f4"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU7.pdf",
+          "size_bytes": 97221,
+          "git_blob_sha1": "705abac77aba4d4c1a67562b1259f54bf10e70a9"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU7.png",
+          "size_bytes": 380257,
+          "git_blob_sha1": "5aa90560a39f07220797d3312f92376703a2205f"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU8.fig",
+          "size_bytes": 455085,
+          "git_blob_sha1": "cd8b1518d22a9755763a108398032334f7baac74"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU8.pdf",
+          "size_bytes": 97696,
+          "git_blob_sha1": "82443f616cb920250811db09bed07efb914dc954"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU8.png",
+          "size_bytes": 384082,
+          "git_blob_sha1": "8396aebe61d7483320720fadcf2151cd8188aff0"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU9.fig",
+          "size_bytes": 455200,
+          "git_blob_sha1": "5949fbfd1fee8b3aa3e9e1ba66a52368e1c99c78"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU9.pdf",
+          "size_bytes": 97242,
+          "git_blob_sha1": "08ff08f90627ef32889d0f712ebb76282cd195ed"
+        },
+        {
+          "source_path": "input_data/test_data/results/parameter/P45B_CU9.png",
+          "size_bytes": 382693,
+          "git_blob_sha1": "3b6bef88c9bf4088815336de1c0e288544145c54"
+        }
+      ]
+    },
+    {
+      "repository": "brosaplanella/TEC-reduced-model",
+      "commit_sha": "978f8c38005892d98f1204b71422f6ff64c32acd",
+      "tree_url": "https://api.github.com/repos/brosaplanella/TEC-reduced-model/git/trees/978f8c38005892d98f1204b71422f6ff64c32acd",
+      "files": [
+        {
+          "source_path": "LICENSE",
+          "size_bytes": 1529,
+          "git_blob_sha1": "ba32697fd0c1e5bdfdb4bff08af994578524ecef"
+        },
+        {
+          "source_path": "README.md",
+          "size_bytes": 3281,
+          "git_blob_sha1": "42f63bb0f26692611fdde87fbe47f05ea1748a0b"
+        },
+        {
+          "source_path": "data/0degC/Cell781_0p1C_0degC.csv",
+          "size_bytes": 26045,
+          "git_blob_sha1": "358745d08d63d2f90afabb59f5fb81cf52bad0dc"
+        },
+        {
+          "source_path": "data/0degC/Cell782_0p1C_0degC.csv",
+          "size_bytes": 240678,
+          "git_blob_sha1": "8fcbddc0ca49e6b8ef230183e40d7a8e9bca99fc"
+        },
+        {
+          "source_path": "data/0degC/Cell783_0p1C_0degC.csv",
+          "size_bytes": 240203,
+          "git_blob_sha1": "795da1bec54786d2ee66f7352c93f655eba9d1f0"
+        },
+        {
+          "source_path": "data/0degC/Cell784_0p1C_0degC.csv",
+          "size_bytes": 239883,
+          "git_blob_sha1": "51b1be7202e461d3b1a5b98da9fca02453c67b40"
+        },
+        {
+          "source_path": "data/0degC/Cell785_0p5C_0degC.csv",
+          "size_bytes": 194007,
+          "git_blob_sha1": "ec46440f5ec7ac1cb3ee36b8b52104de2c42b3a1"
+        },
+        {
+          "source_path": "data/0degC/Cell786_0p5C_0degC.csv",
+          "size_bytes": 146163,
+          "git_blob_sha1": "cae3271842cd6a94ee94bf1f17f0a3f4a0134ce9"
+        },
+        {
+          "source_path": "data/0degC/Cell787_0p5C_0degC.csv",
+          "size_bytes": 147008,
+          "git_blob_sha1": "171995afc2105d113b676c8ab29d062e4353d1fc"
+        },
+        {
+          "source_path": "data/0degC/Cell788_0p5C_0degC.csv",
+          "size_bytes": 146005,
+          "git_blob_sha1": "f69f3e20a03c257bd1a30b5ea275464dbc448f9b"
+        },
+        {
+          "source_path": "data/0degC/Cell789_1C_0degC.csv",
+          "size_bytes": 6874643,
+          "git_blob_sha1": "474cc9e327338746bd46da09f426cf544614669c"
+        },
+        {
+          "source_path": "data/0degC/Cell790_1C_0degC.csv",
+          "size_bytes": 5249755,
+          "git_blob_sha1": "a108cfcd952a24480ea463b8cc14660a262a1700"
+        },
+        {
+          "source_path": "data/0degC/Cell791_1C_0degC.csv",
+          "size_bytes": 5252007,
+          "git_blob_sha1": "97c46d354216d0771461010065ca4a9150974c87"
+        },
+        {
+          "source_path": "data/0degC/Cell792_1C_0degC.csv",
+          "size_bytes": 5243720,
+          "git_blob_sha1": "19e02765db6649594313ac3aab27e220098a4051"
+        },
+        {
+          "source_path": "data/0degC/Cell793_2C_0degC.csv",
+          "size_bytes": 6723825,
+          "git_blob_sha1": "54d3c498b7131a38cfa8cf1ba7da1a8bf8ece9a7"
+        },
+        {
+          "source_path": "data/0degC/Cell794_2C_0degC.csv",
+          "size_bytes": 5011165,
+          "git_blob_sha1": "8b98cee46ef37275a53b610a2d07c2237dbf0113"
+        },
+        {
+          "source_path": "data/0degC/Cell795_2C_0degC.csv",
+          "size_bytes": 4997714,
+          "git_blob_sha1": "5a81bb0526195461e63ebb44199c60d05ae8b79b"
+        },
+        {
+          "source_path": "data/0degC/Cell796_2C_0degC.csv",
+          "size_bytes": 6244937,
+          "git_blob_sha1": "ef0d39449c0c80392a1895d2735709287d2ffd6a"
+        },
+        {
+          "source_path": "data/10degC/Cell781_0p1C_10degC.csv",
+          "size_bytes": 335946,
+          "git_blob_sha1": "d1e7b2cf2844acd1353cec54db858882c4005f37"
+        },
+        {
+          "source_path": "data/10degC/Cell782_0p1C_10degC.csv",
+          "size_bytes": 247320,
+          "git_blob_sha1": "40f426348be6cce0bc1380b852c15ea420ea57dd"
+        },
+        {
+          "source_path": "data/10degC/Cell783_0p1C_10degC.csv",
+          "size_bytes": 247444,
+          "git_blob_sha1": "d53ffa2f54f5b7d2668c980a7b3fa74155281d43"
+        },
+        {
+          "source_path": "data/10degC/Cell784_0p1C_10degC.csv",
+          "size_bytes": 245820,
+          "git_blob_sha1": "ddfee7188c0c190fd3fb65f68b99e210f923f94f"
+        },
+        {
+          "source_path": "data/10degC/Cell785_0p5C_10degC.csv",
+          "size_bytes": 198587,
+          "git_blob_sha1": "5aaaf5df27d288cdceb2f8391e8f60f73b1202ee"
+        },
+        {
+          "source_path": "data/10degC/Cell786_0p5C_10degC.csv",
+          "size_bytes": 150847,
+          "git_blob_sha1": "dd69845002afe663a393890e38e452e754cf2929"
+        },
+        {
+          "source_path": "data/10degC/Cell787_0p5C_10degC.csv",
+          "size_bytes": 150237,
+          "git_blob_sha1": "6165d7819cb639e92243334c4a33f8508b054c27"
+        },
+        {
+          "source_path": "data/10degC/Cell788_0p5C_10degC.csv",
+          "size_bytes": 150086,
+          "git_blob_sha1": "2aa8070a5bfc5fe000274ee78b0e9fc66d972a34"
+        },
+        {
+          "source_path": "data/10degC/Cell789_1C_10degC.csv",
+          "size_bytes": 7013347,
+          "git_blob_sha1": "3f331ae56858df2e746bfe8b81097e18bf92872e"
+        },
+        {
+          "source_path": "data/10degC/Cell790_1C_10degC.csv",
+          "size_bytes": 6460727,
+          "git_blob_sha1": "1cb62f4a584bf52d1ec43c44756c948c82f79817"
+        },
+        {
+          "source_path": "data/10degC/Cell791_1C_10degC.csv",
+          "size_bytes": 5223963,
+          "git_blob_sha1": "3ce9a6300011eb322ebab2489f0d66fdf3dc3154"
+        },
+        {
+          "source_path": "data/10degC/Cell792_1C_10degC.csv",
+          "size_bytes": 6462994,
+          "git_blob_sha1": "c1c0b6345327bb1d9615d93a09d650c1fbb39057"
+        },
+        {
+          "source_path": "data/10degC/Cell793_2C_10degC.csv",
+          "size_bytes": 6647627,
+          "git_blob_sha1": "5dad9c1b1d526f26d84f71397f6aa2768be71861"
+        },
+        {
+          "source_path": "data/10degC/Cell794_2C_10degC.csv",
+          "size_bytes": 4929647,
+          "git_blob_sha1": "2619c241e6b6a05db787075ff5d86542f8304634"
+        },
+        {
+          "source_path": "data/10degC/Cell795_2C_10degC.csv",
+          "size_bytes": 4919834,
+          "git_blob_sha1": "10e760e3d9c18342e0bd04b2c46f2b805fbf9a57"
+        },
+        {
+          "source_path": "data/10degC/Cell796_2C_10degC.csv",
+          "size_bytes": 6106405,
+          "git_blob_sha1": "2b265884b8d6f7a65bac84944d91a82413f16053"
+        },
+        {
+          "source_path": "data/25degC/Cell781_0p1C_25degC.csv",
+          "size_bytes": 319362,
+          "git_blob_sha1": "9f16db4e7d3ec5fb91f45a38b150ee9e60e92215"
+        },
+        {
+          "source_path": "data/25degC/Cell782_0p1C_25degC.csv",
+          "size_bytes": 257412,
+          "git_blob_sha1": "dea9200ac1c52261b1a0e58f8fde87798e5058ed"
+        },
+        {
+          "source_path": "data/25degC/Cell783_0p1C_25degC.csv",
+          "size_bytes": 253748,
+          "git_blob_sha1": "b548493db44f76a8ad78187875e4264539f4d0ef"
+        },
+        {
+          "source_path": "data/25degC/Cell784_0p1C_25degC.csv",
+          "size_bytes": 253216,
+          "git_blob_sha1": "e9ee60cd158be18b63ab380ba17daf6364c855e1"
+        },
+        {
+          "source_path": "data/25degC/Cell785_0p5C_25degC.csv",
+          "size_bytes": 173151,
+          "git_blob_sha1": "92ef2905457198d6091acde642242fd622ed68f6"
+        },
+        {
+          "source_path": "data/25degC/Cell786_0p5C_25degC.csv",
+          "size_bytes": 147534,
+          "git_blob_sha1": "11d514e580d8d427757471163f494610c9e9a801"
+        },
+        {
+          "source_path": "data/25degC/Cell787_0p5C_25degC.csv",
+          "size_bytes": 147620,
+          "git_blob_sha1": "7297b5bdbec0400e56397a851ee68b745adaea39"
+        },
+        {
+          "source_path": "data/25degC/Cell788_0p5C_25degC.csv",
+          "size_bytes": 146893,
+          "git_blob_sha1": "e7549579af5b6dab62ec741e4a79975581c9ff3e"
+        },
+        {
+          "source_path": "data/25degC/Cell789_1C_25degC.csv",
+          "size_bytes": 5758101,
+          "git_blob_sha1": "5fbccd4aba4d9e32aaabd5a910a67b01049a9428"
+        },
+        {
+          "source_path": "data/25degC/Cell790_1C_25degC.csv",
+          "size_bytes": 4928577,
+          "git_blob_sha1": "9b01060dbc022d875cda32a7f6ce507222b7cff6"
+        },
+        {
+          "source_path": "data/25degC/Cell791_1C_25degC.csv",
+          "size_bytes": 4923055,
+          "git_blob_sha1": "d617ca128ede4e9dbadeb46c41e82764004fe913"
+        },
+        {
+          "source_path": "data/25degC/Cell792_1C_25degC.csv",
+          "size_bytes": 4928787,
+          "git_blob_sha1": "2e0b5bf978208f08df5afaa4b0217b41d9d4ca5d"
+        },
+        {
+          "source_path": "data/25degC/Cell793_2C_25degC.csv",
+          "size_bytes": 5361309,
+          "git_blob_sha1": "35eefad9a1dd89953001822298f9c5d43520b06b"
+        },
+        {
+          "source_path": "data/25degC/Cell794_2C_25degC.csv",
+          "size_bytes": 4559617,
+          "git_blob_sha1": "95a24e731382c9f03219b7dfc066e3a4b9a3800f"
+        },
+        {
+          "source_path": "data/25degC/Cell795_2C_25degC.csv",
+          "size_bytes": 4556006,
+          "git_blob_sha1": "bf5cdff21df68dee24783681886c81b449668c1c"
+        },
+        {
+          "source_path": "data/25degC/Cell796_2C_25degC.csv",
+          "size_bytes": 1480069,
+          "git_blob_sha1": "e3594605a302cc73d05dfa7e29feff336908a707"
+        }
+      ]
+    },
+    {
+      "repository": "About-Energy-OpenSource/AEPyBaMM",
+      "commit_sha": "188bd62ee2347cc486b66dc43e31fb9597759db1",
+      "tree_url": "https://api.github.com/repos/About-Energy-OpenSource/AEPyBaMM/git/trees/188bd62ee2347cc486b66dc43e31fb9597759db1",
+      "files": [
+        {
+          "source_path": "LICENSE",
+          "size_bytes": 1507,
+          "git_blob_sha1": "191d3543e7b2a21bfb4007b63a66586fd31b4949"
+        },
+        {
+          "source_path": "README.md",
+          "size_bytes": 1916,
+          "git_blob_sha1": "bd4ec0c4e2ab6490aaedb33dcb3e27d5bce2d07c"
+        },
+        {
+          "source_path": "examples/data/LFP_025degC_1C_Dch.csv",
+          "size_bytes": 103533,
+          "git_blob_sha1": "e9303442dd9985b26f7adb68573ed92885a8a019"
+        },
+        {
+          "source_path": "examples/data/LFP_025degC_Co20_Dch.csv",
+          "size_bytes": 229026,
+          "git_blob_sha1": "64afc9d06571234eb54572bdaf721be63ba486f2"
+        },
+        {
+          "source_path": "examples/data/LFP_025degC_DC_WLTP.csv",
+          "size_bytes": 238638,
+          "git_blob_sha1": "40c2102ec507614b5234473e40bf6d2ab47958fa"
+        },
+        {
+          "source_path": "examples/data/MOLICEL_P45B_025degC_3C_Dch.csv",
+          "size_bytes": 76784,
+          "git_blob_sha1": "09771d185630781ff2188a4c3cf7635185e82fe7"
+        },
+        {
+          "source_path": "examples/data/MOLICEL_P45B_060degC_eVTOL.csv",
+          "size_bytes": 770116,
+          "git_blob_sha1": "d12b258ddde411c812b59d49f0d1b60e60ae57ee"
+        },
+        {
+          "source_path": "examples/data/NMC_025degC_1C_Dch.csv",
+          "size_bytes": 110346,
+          "git_blob_sha1": "1f7d9774b17fea2d932b6cf35aca013cea91eed2"
+        },
+        {
+          "source_path": "examples/data/NMC_025degC_Co20_Dch.csv",
+          "size_bytes": 223260,
+          "git_blob_sha1": "fae0882a19a6a27adde3b8b93ea272318e5f4e65"
+        },
+        {
+          "source_path": "examples/data/NMC_025degC_DC_WLTP.csv",
+          "size_bytes": 248221,
+          "git_blob_sha1": "abdb4e2e40926d6e2e816b6e3060a7881560b7ed"
+        },
+        {
+          "source_path": "examples/params/Molicel_P45B_bpx.json",
+          "size_bytes": 313809,
+          "git_blob_sha1": "20071d30690d3d4691456c3dcef5c3da0c7d2ecb"
+        }
+      ]
+    }
+  ],
+  "source_metadata": [
+    {
+      "source_url": "https://zenodo.org/records/22301764",
+      "metadata_url": "https://zenodo.org/api/records/22301764",
+      "title": "Characterization, ageing and post-mortem dataset of commercial 58Ah prismatic NMC cells",
+      "license_as_reported": {
+        "id": "cc-by-4.0"
+      },
+      "files": [
+        {
+          "source_path": "2_HalfCell.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "size_bytes": 6328075,
+          "publisher_checksum": "md5:222bafc29e16e94752534873d37459b2"
+        },
+        {
+          "source_path": "3_Characterization.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "size_bytes": 38145973,
+          "publisher_checksum": "md5:24daf8c871e4140c5dd1e124dc8ae427"
+        },
+        {
+          "source_path": "5_Documentation.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/5_Documentation.7z/content",
+          "size_bytes": 546824,
+          "publisher_checksum": "md5:313135d27307d95fff7c5dd7c70d7b91"
+        },
+        {
+          "source_path": "1_Teardown.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/1_Teardown.7z/content",
+          "size_bytes": 496036731,
+          "publisher_checksum": "md5:1d8287dde070c30cb64d1fc682fe037c"
+        },
+        {
+          "source_path": "4_Ageing.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "size_bytes": 4128929522,
+          "publisher_checksum": "md5:dd6810cc377a69d1f2dd805b82657c4f"
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/records/5171874",
+      "metadata_url": "https://zenodo.org/api/records/5171874",
+      "title": "Data Repository - Thermal-electrochemical parametrisation of a lithium-ion battery: mapping Li concentration and temperature dependencies",
+      "license_as_reported": {
+        "id": "cc-by-4.0"
+      },
+      "files": [
+        {
+          "source_path": "ORegan 2021 Data Repository.zip",
+          "url": "https://zenodo.org/api/records/5171874/files/ORegan%202021%20Data%20Repository.zip/content",
+          "size_bytes": 479705,
+          "publisher_checksum": "md5:eda6d33a47c4d64c580077077860c8ac"
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/records/4864437",
+      "metadata_url": "https://zenodo.org/api/records/4864437",
+      "title": "brosaplanella/TEC-reduced-model: Published version",
+      "license_as_reported": {
+        "id": "other-open"
+      },
+      "files": [
+        {
+          "source_path": "brosaplanella/TEC-reduced-model-v1.0.zip",
+          "url": "https://zenodo.org/api/records/4864437/files/brosaplanella/TEC-reduced-model-v1.0.zip/content",
+          "size_bytes": 23155564,
+          "publisher_checksum": "md5:f9306803d4a2e2a5e27ad9b43596fa12"
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/records/19052626",
+      "metadata_url": "https://zenodo.org/api/records/19052626",
+      "title": "Data Release - Industry-Standard Parameter Set, Validation Data and Validation Reporting for an Equivalent Circuit Model of the Molicel INR21700-P45B Cylindrical Cell",
+      "license_as_reported": {
+        "id": "cc-by-4.0"
+      },
+      "files": [
+        {
+          "source_path": "Molicel P45B ECM Validation Matrix.xlsx",
+          "url": "https://zenodo.org/api/records/19052626/files/Molicel%20P45B%20ECM%20Validation%20Matrix.xlsx/content",
+          "size_bytes": 57044,
+          "publisher_checksum": "md5:3acb090dbe48829935f0db184b96328c"
+        },
+        {
+          "source_path": "molicel_p45b_data.zip",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "size_bytes": 12421433,
+          "publisher_checksum": "md5:0bd40f92dfabcea679900696cc2c0077"
+        },
+        {
+          "source_path": "Molicel_INR-21700-P45B_ECM-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/Molicel_INR-21700-P45B_ECM-charge.csv/content",
+          "size_bytes": 101668,
+          "publisher_checksum": "md5:fe6583f5d019f26de3933b46824e5cf2"
+        },
+        {
+          "source_path": "Molicel_INR-21700-P45B_ECM.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/Molicel_INR-21700-P45B_ECM.csv/content",
+          "size_bytes": 152462,
+          "publisher_checksum": "md5:2b670bf683b99e59124f4b2454f17a75"
+        },
+        {
+          "source_path": "Molicel P45B Data Release Data Format Documentation.pdf",
+          "url": "https://zenodo.org/api/records/19052626/files/Molicel%20P45B%20Data%20Release%20Data%20Format%20Documentation.pdf/content",
+          "size_bytes": 91444,
+          "publisher_checksum": "md5:addcc323b21e48e147b3833a2a0f7239"
+        },
+        {
+          "source_path": "readme_Molicel_P45B_dataset_AE.txt",
+          "url": "https://zenodo.org/api/records/19052626/files/readme_Molicel_P45B_dataset_AE.txt/content",
+          "size_bytes": 2668,
+          "publisher_checksum": "md5:fe0d319f7ec39825fca2006db8997654"
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/records/13905430",
+      "metadata_url": "https://zenodo.org/api/records/13905430",
+      "title": "Diagnosis of lithium-ion batteries degradation with P2D model parameters identification: a case study on low temperature charging",
+      "license_as_reported": {
+        "id": "cc-by-4.0"
+      },
+      "files": [
+        {
+          "source_path": "README.docx",
+          "url": "https://zenodo.org/api/records/13905430/files/README.docx/content",
+          "size_bytes": 13241,
+          "publisher_checksum": "md5:13baada4e76ce0c8f5b8a3966f38b7b5"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "NEXTBMS source prose and ageing EIS directory counts differ (22/13/17 versus 25/16/20); no explanation is imposed.",
+    "Mendeley MJ1 raw ZIP inner directory is unverified after automated HTTP 403.",
+    "P45B BPX is a published fitted/composite parameterisation; raw harvested half-cell points and temperature were not established.",
+    "P45B -charge CSV cases are alternate model reports; *_sim_* and E_OCV_V are not measured electrode data.",
+    "Git blob SHA-1 identifiers are provider tree identities, not independently computed file-payload hashes."
+  ],
+  "screened_sources": [
+    {
+      "id": "nextbms",
+      "cell_or_material": "CALB generation 3b 58 Ah NMC532/graphite",
+      "decision": "included",
+      "source_url": "https://zenodo.org/records/22301764",
+      "evidence": "Harvested half-cell files; same-study/model CC, dynamic, ageing and multi-temperature EIS; specimen sets differ.",
+      "dataset_id": "nextbms-calb-nmc532-2026"
+    },
+    {
+      "id": "tum-p45b",
+      "cell_or_material": "Molicel P45B harvested blend/cathode",
+      "decision": "included",
+      "source_url": "https://github.com/tum-ees/DegradationModeAnalysis/tree/402bab94d20258162ff059b8d5d51abe40ec1c30",
+      "evidence": "Measured finite-current half-cell branches plus one 800-EFC checkup table; data reuse scope and half-cell temperature unresolved.",
+      "dataset_id": "tum-p45b-halfcell-aging-2026"
+    },
+    {
+      "id": "ae-p45b",
+      "cell_or_material": "Molicel P45B published BPX parameterisation",
+      "decision": "included",
+      "source_url": "https://zenodo.org/records/19052626",
+      "evidence": "Public composite/fitted electrode OCP parameter package with explicitly reused multi-temperature CC/GITT/WLTP/eVTOL experiments; original half-cell points not independently located.",
+      "dataset_id": "aboutenergy-p45b-2026"
+    },
+    {
+      "id": "tec-lgm50",
+      "cell_or_material": "LG M50 / TEC2021",
+      "decision": "included",
+      "source_url": "https://zenodo.org/records/4864437",
+      "evidence": "Explicit reuse of catalog Chen2020 OCP expressions; 48 measured-data file paths at 0/10/25 degC. No named WLTP file in inspected release.",
+      "dataset_id": "tec-lgm50-multitemperature-2021"
+    },
+    {
+      "id": "snu-mj1",
+      "cell_or_material": "LG MJ1 / SNU dynamic ageing",
+      "decision": "included",
+      "source_url": "https://data.mendeley.com/datasets/h2y7mj4kt7/2",
+      "evidence": "80-cell source at 25 degC; cross-study reference to existing DLR-SINTEF half-cell curves only; raw ZIP internals unverified.",
+      "dataset_id": "snu-mj1-dynamic-aging-2024"
+    },
+    {
+      "id": "oregan",
+      "cell_or_material": "LG M50 / ORegan2022",
+      "decision": "parameter_lead",
+      "source_url": "https://zenodo.org/records/5171874",
+      "evidence": "58 previously reviewed diffusivity/kinetic/thermal CSVs; separate source from TEC2021. OCP reuse is not a new independent half-cell measurement.",
+      "dataset_id": null
+    },
+    {
+      "id": "stanford-lfp49",
+      "cell_or_material": "Undisclosed LG Energy Solution 49 Ah LFP pouch",
+      "decision": "excluded_from_ocp_admission",
+      "source_url": "https://www.nature.com/articles/s41524-024-01197-7",
+      "evidence": "Paper reports harvested half-cell OCP but its Code availability explicitly lists OCP among confidential inputs. Public CC/GITT/EV full-cell data do not clear OCP access.",
+      "dataset_id": null
+    },
+    {
+      "id": "folkson",
+      "cell_or_material": "Molicel P45B subzero pulses / Folkson2026",
+      "decision": "request_only",
+      "source_url": "https://wrap.warwick.ac.uk/id/eprint/195594/7/Folkson_2026_J._Electrochem._Soc._173_010501.pdf",
+      "evidence": "Half-cell tests at 23 degC and subzero full-cell pulses are described, but the paper states data are available upon request; no open payload admitted.",
+      "dataset_id": null
+    },
+    {
+      "id": "sordi-bus",
+      "cell_or_material": "Sordi2026 field-aged LFP bus cells",
+      "decision": "unresolved_deposit",
+      "source_url": "https://doi.org/10.1016/j.est.2026.120653",
+      "evidence": "Publisher describes half-cell, fresh/field-aged and EIS work and names Zenodo. Exact matching public deposit was not resolved in this pass.",
+      "dataset_id": null
+    },
+    {
+      "id": "sordi-lowtemp",
+      "cell_or_material": "Sordi2024 low-temperature parameter diagnosis",
+      "decision": "missing_payload",
+      "source_url": "https://zenodo.org/records/13905430",
+      "evidence": "Inspected fixed-record API lists README.docx only. No experimental observation payload is established from that record.",
+      "dataset_id": null
+    },
+    {
+      "id": "haidi",
+      "cell_or_material": "HAIDI18650 LFP/graphite",
+      "decision": "half_cell_only_lead",
+      "source_url": "https://github.com/tum-ees/DegradationModeAnalysis/tree/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/LFP",
+      "evidence": "Eight source-listed low-rate electrode branches. Same-study full-cell files and per-source reuse scope not verified; no forced A123 join.",
+      "dataset_id": null
+    },
+    {
+      "id": "lgm36",
+      "cell_or_material": "LG M36 NMC cathode",
+      "decision": "half_cell_only_lead",
+      "source_url": "https://github.com/tum-ees/DegradationModeAnalysis/tree/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/NMC",
+      "evidence": "Four source-listed cathode branches; matching negative-electrode/full-cell package and reuse terms remain unresolved.",
+      "dataset_id": null
+    },
+    {
+      "id": "molim35a",
+      "cell_or_material": "Molicel M35A NCA/SiGr",
+      "decision": "half_cell_only_lead",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S2352152X24007357",
+      "evidence": "Measured OCP study and author-library paths located; complete same-study full-cell data/reuse scope not yet confirmed.",
+      "dataset_id": null
+    },
+    {
+      "id": "sintef",
+      "cell_or_material": "SINTEF material-only half cells",
+      "decision": "existing_material_source",
+      "source_url": "https://zenodo.org/records/20086298",
+      "evidence": "Metadata covers graphite, Si, SiGr, B/SiGr, LFP, NMC111, NMC532 and LNMO under several protocols. Current catalog imports selected LFP/graphite specimens; material labels do not identify a commercial full cell.",
+      "dataset_id": null
+    },
+    {
+      "id": "hnei-ncr",
+      "cell_or_material": "NCR18650B / HNEI",
+      "decision": "existing_external_source",
+      "source_url": "https://zenodo.org/records/60232",
+      "evidence": "Verified NE/PE and full-cell RPT member locations in one study; no numeric branch import or measured longitudinal ageing series.",
+      "dataset_id": "hnei-ncr18650b-2016"
+    },
+    {
+      "id": "isu-uconn",
+      "cell_or_material": "ISU-UConn LFP/graphite CR2032",
+      "decision": "existing_catalog",
+      "source_url": "https://digitalcommons.lib.uconn.edu/reil_datasets/6/",
+      "evidence": "Existing measured half-cell branches and laboratory full-cell configurations; no universal commercial-cell identity or missing I/t/T filled.",
+      "dataset_id": null
+    },
+    {
+      "id": "jahn",
+      "cell_or_material": "A123 18650M1A / Jahn2024",
+      "decision": "existing_model_derived_source",
+      "source_url": "https://zenodo.org/records/11958572",
+      "evidence": "Catalog OCPn tables are modeled PD-ECM quantities. They remain distinct from measured half-cell OCP under this screen.",
+      "dataset_id": null
+    },
+    {
+      "id": "chen",
+      "cell_or_material": "LG M50 / Chen2020",
+      "decision": "existing_catalog",
+      "source_url": "https://doi.org/10.1149/1945-7111/ab9050",
+      "evidence": "Existing half-cell-derived published OCP expressions and room-temperature full-cell tests. TEC adds external multi-temperature experiments through explicit reuse.",
+      "dataset_id": null
+    },
+    {
+      "id": "dlr-mj1",
+      "cell_or_material": "LG MJ1 / DLR-SINTEF",
+      "decision": "existing_catalog",
+      "source_url": "https://zenodo.org/records/15497193",
+      "evidence": "Existing finite-current harvested half-cell branches and GITT parameter sources; SNU ageing comparison is different study/batch.",
+      "dataset_id": null
+    },
+    {
+      "id": "hallemans",
+      "cell_or_material": "LG M50LT / Hallemans2025",
+      "decision": "existing_reuse_gap",
+      "source_url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+      "evidence": "Same-study EIS/groups/dynamic data exist, but third-party electrode OCP reuse rights remain unresolved.",
+      "dataset_id": "hallemans-m50lt-eis-2025"
+    },
+    {
+      "id": "samsung30q",
+      "cell_or_material": "Samsung INR18650-30Q ageing/EIS",
+      "decision": "full_cell_only_lead",
+      "source_url": "https://data.mendeley.com/datasets/g7ncmhrcrz/1",
+      "evidence": "Open eight-cell ageing/EIS source found. No same-model half-cell OCP anchor was established in this screen.",
+      "dataset_id": null
+    }
+  ]
+}

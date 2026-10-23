@@ -103,5 +103,14 @@
     "evidence": "Replace with source-backed longitudinal cycle/calendar coverage. Formation, repeated initial tests and simulated degradation alone do not establish measured ageing data.",
     "source_url": "https://example.org/replace-with-ageing-evidence",
     "file_paths": []
+  },
+  "ocp_anchor": {
+    "kind": "not_identified",
+    "half_cell_temperatures_C": [],
+    "source_paths": [],
+    "source_urls": [
+      "https://example.org/replace-with-ocp-evidence"
+    ],
+    "evidence": "Identify measured half-cell files, a published parameterisation or explicit curve reuse. Whole-cell OCV and reconstructed silicon curves must retain their distinct origins. Report half-cell temperatures separately from full-cell tests."
   }
 }

@@ -6,12 +6,15 @@ Material grouping is a discovery aid, not evidence that tests and parameters bel
 
 ## External datasets
 
-| Dataset / cell | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |
-|---|---|---|---|---|---|
-| [CALCE Samsung INR18650-20R: OCV and dynamic profiles](calce-samsung-20r-dynamic.md) | dynamic, ocv, pulse; US06, DST, FUDS, BJDST | Source describes low-current and incremental-current OCV protocols; no multi-rate CC sweep asserted. Source temperatures: [0, 25, 45] | Not reported | not-stated | `unmatched` |
-| [CALB L148N58A: characterization, US06 and EIS](calb-l148n58a-2025.md) | constant_current, cccv, pulse, dynamic, eis, ocv; US06, UDDS, WLTP | C/20 charge/discharge characterization; HPPC at 1C and C/3. Pulse rates are not a standalone multi-rate continuous-discharge sweep. Source temperatures: [10, 25, 40] | Not reported | CC-BY-4.0 | `unmatched` |
-| [University of Malaya: LFP, NCA and NMC dynamic tests](malaya-three-chemistries-2022.md) | dynamic, pulse; US06, DST, FUDS, UDDS, WLTP | HPPC and pulse charge/discharge are described; numeric rates not verified. Source temperatures: not verified | Unverified | CC-BY-4.0 | `unmatched` |
-| [LG M50LT: measured EIS and grouped parameters](hallemans-m50lt-eis-2025.md) | eis, dynamic;  | 3 mV rms EIS; 9 SOC levels and 65 frequencies (585 measured rows). Source temperatures: [25] | Not reported | BSD-3-Clause | `same_model_same_study` |
+| Dataset / cell | OCP anchor | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |
+|---|---|---|---|---|---|---|
+| [CALCE Samsung INR18650-20R: OCV and dynamic profiles](calce-samsung-20r-dynamic.md) | Whole-cell OCV only | dynamic, ocv, pulse; US06, DST, FUDS, BJDST | Source describes low-current and incremental-current OCV protocols; no multi-rate CC sweep asserted. Source temperatures: [0, 25, 45] | Not reported | not-stated | `unmatched` |
+| [CALB L148N58A: characterization, US06 and EIS](calb-l148n58a-2025.md) | Not identified | constant_current, cccv, pulse, dynamic, eis, ocv; US06, UDDS, WLTP | C/20 charge/discharge characterization; HPPC at 1C and C/3. Pulse rates are not a standalone multi-rate continuous-discharge sweep. Source temperatures: [10, 25, 40] | Not reported | CC-BY-4.0 | `unmatched` |
+| [University of Malaya: LFP, NCA and NMC dynamic tests](malaya-three-chemistries-2022.md) | Not identified | dynamic, pulse; US06, DST, FUDS, UDDS, WLTP | HPPC and pulse charge/discharge are described; numeric rates not verified. Source temperatures: not verified | Unverified | CC-BY-4.0 | `unmatched` |
+| [LG M50LT: measured EIS and grouped parameters](hallemans-m50lt-eis-2025.md) | Reuse unresolved | eis, dynamic;  | 3 mV rms EIS; 9 SOC levels and 65 frequencies (585 measured rows). Source temperatures: [25] | Not reported | BSD-3-Clause | `same_model_same_study` |
+| [CALB generation 3b 58 Ah: harvested half-cell OCP, multi-temperature tests and ageing](nextbms-calb-nmc532-2026.md) | External half-cell files | constant_current, cccv, pulse, dynamic, eis, ocv;  | Full-cell CC, GITT, dynamic cycles and HPPC plus calendar/cyclic ageing. Characterization EIS source labels: 0/5/25/45 degC. No complete same-state continuous rate-sweep matrix was checked. Source temperatures: [0, 5, 25, 45] | Yes (cycle, calendar) | CC-BY-4.0 | `unmatched` |
+| [LG M50 multi-temperature discharge with explicitly reused Chen2020 electrode OCP](tec-lgm50-multitemperature-2021.md) | Explicitly reused catalog expression | constant_current;  | Four source-listed discharge rates 0.1C, 0.5C, 1C and 2C, four cell labels per rate and three temperatures; 48 CSV filenames. No named WLTP file exists in the inspected v1.0 ZIP. Source temperatures: [0, 10, 25] | Not reported | BSD-3-Clause | `same_model_different_study` |
+| [LG MJ1 dynamic operating-sequence ageing (80 cells)](snu-mj1-dynamic-aging-2024.md) | Cross-study catalog half-cell reference | dynamic;  | Source reports 72 cells across 24 staged 600-cycle operating sequences and eight cells with conditions changed every 25 cycles. This is staged cycle ageing, not an identified US06/WLTP road-current profile. Source temperatures: [25] | Yes (cycle) | CC-BY-4.0 | `same_model_different_study` |
 
 ## Existing packaged tests
 

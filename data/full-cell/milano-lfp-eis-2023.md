@@ -10,6 +10,16 @@ Material families: LFP. 600 mAh LFP per provider; IFR14500 appears in filenames.
 
 DOI: 10.6084/m9.figshare.23736582.v1. Checked: 2026-10-23.
 
+## Electrode OCP anchor
+
+**Not identified**. No matched electrode half-cell file was verified for this external source in this review. Whole-cell OCV, EIS or chemistry alone does not supply electrode OCP.
+
+Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
+
+Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
+
+OCP evidence: [Source 1](https://figshare.com/articles/dataset/Li-ion_Batteries_EIS_measurements/23736582/1)
+
 ## Tests and channels
 
 Types: eis. Profiles: No named drive profile verified.
@@ -34,7 +44,7 @@ Official metadata describes EIS, but archive columns, impedance sign, units and 
 
 Match: `unmatched`. Only 600 mAh LFP is disclosed. No manufacturer/part or electrode-characterization chain establishes a join to catalog LFP OCP, D or kinetics.
 
-Missing components: electrode_ocp, diffusion, kinetics.
+Components without a native catalog join: electrode_ocp, diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|

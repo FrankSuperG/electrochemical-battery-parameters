@@ -10,6 +10,16 @@ Material families: NCA. 116 Panasonic NCR18650B 3.25 Ah cells in the Virtual Veh
 
 DOI: 10.5281/zenodo.7896429. Checked: 2026-10-23.
 
+## Electrode OCP anchor
+
+**Not identified**. No matched electrode half-cell file was verified for this external source in this review. Whole-cell OCV, EIS or chemistry alone does not supply electrode OCP.
+
+Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
+
+Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
+
+OCP evidence: [Source 1](https://zenodo.org/records/7896429)
+
 ## Tests and channels
 
 Types: constant_current, cccv, pulse, dynamic. Profiles: No named drive profile verified.
@@ -34,7 +44,7 @@ Fields are described in the author PDF; HDF5 groups, units, time axes and actual
 
 Match: `unmatched`. The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.
 
-Missing components: electrode_ocp, diffusion, kinetics.
+Components without a native catalog join: electrode_ocp, diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|

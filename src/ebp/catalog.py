@@ -359,6 +359,10 @@ class Catalog:
                 errors.append(f"{dataset['id']}: duplicate external source paths")
             if any(path not in paths for path in dataset["aging_data"]["file_paths"]):
                 errors.append(f"{dataset['id']}: ageing evidence references an unknown external source path")
+            if any(path not in paths for path in dataset["ocp_anchor"]["source_paths"]):
+                errors.append(f"{dataset['id']}: OCP anchor references an unknown external source path")
+            if dataset["ocp_anchor"]["kind"] in {"reused_catalog_expression", "cross_study_catalog_half_cell"} and not dataset["parameter_components"]["ocp"]["record_ids"]:
+                errors.append(f"{dataset['id']}: catalog OCP anchor requires explicit curve records")
             for item in dataset["file_links"]:
                 if item["material_family"] and item["material_family"] not in dataset["material_families"]:
                     errors.append(f"{dataset['id']}: file material family disagrees")

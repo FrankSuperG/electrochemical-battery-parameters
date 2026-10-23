@@ -2469,7 +2469,159 @@
     }
   ],
   "full_cell_tests": [],
-  "external_datasets": [],
+  "external_datasets": [
+    {
+      "id": "snu-mj1-dynamic-aging-2024",
+      "title": "LG MJ1 dynamic operating-sequence ageing (80 cells)",
+      "material_families": [
+        "NMC"
+      ],
+      "cell_identity": "LG Chem INR18650-MJ1 3.5 Ah NMC811/Gr-SiOx. SNU ageing cells are a different study/batch from catalog DLR-SINTEF harvested-electrode half cells.",
+      "test_types": [
+        "dynamic"
+      ],
+      "profiles": [],
+      "rate_summary": "Source reports 72 cells across 24 staged 600-cycle operating sequences and eight cells with conditions changed every 25 cycles. This is staged cycle ageing, not an identified US06/WLTP road-current profile.",
+      "temperatures_C": [
+        25
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "Observation headers and units were not independently read; source conditions remain distinct from measured channels."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://data.mendeley.com/datasets/h2y7mj4kt7/2",
+        "doi": "10.17632/h2y7mj4kt7.2",
+        "version": "2"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://data.mendeley.com/datasets/h2y7mj4kt7/2",
+        "note": "Public source UI states CC BY 4.0. A single source-listed raw ZIP is linked; no data redistributed."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_file_listing",
+        "note": "Normal public UI confirms archive name/UUID and CC BY 4.0. Inner ZIP directory remains uninspected after HTTP 403; no trace, column or completeness claim."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "lg-mj1-dlr-sintef"
+        ],
+        "match_level": "same_model_different_study",
+        "evidence": "Commercial MJ1 model matches the catalog DLR-SINTEF half-cell study, but paper, specimens, manufacturing batch and ageing state differ. Four existing finite-current half-cell OCP branches are a same-model, different-study reference only; no same-study D/i0 transfer or performance claim.",
+        "missing_components": [
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://data.mendeley.com/datasets/h2y7mj4kt7/2"
+      ],
+      "file_links": [
+        {
+          "label": "Battery raw data.zip",
+          "url": "https://data.mendeley.com/public-files/datasets/h2y7mj4kt7/files/deb660ea-9d02-441b-9b04-edda17ea32fc/file_downloaded",
+          "source_path": "Battery raw data.zip",
+          "kind": "archive",
+          "cell_model": "LG INR18650-MJ1",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Single source-listed ageing ZIP. Automated HEAD access returned 403; inner paths, channels and per-cell phase mapping remain unverified. Dataset-level dynamic claims are not assigned to unidentified archive members."
+        }
+      ],
+      "missing_items": [
+        "No half-cell OCP from the SNU ageing study itself; current DLR-SINTEF curves are a cross-study reference only.",
+        "Raw ZIP members, measured I/V/T fields and per-cell rates are unverified; HTTP 403 is an access limitation, not absence of data.",
+        "No matched diffusion/kinetics, multi-temperature matrix, EIS or named road-current cycle established. Dynamic operating sequences are not relabelled US06/WLTP."
+      ],
+      "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "same_model_different_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "mj1-negative-ocp-charging",
+            "mj1-negative-ocp-discharging",
+            "mj1-positive-ocp-charging",
+            "mj1-positive-ocp-discharging"
+          ],
+          "evidence": "Commercial MJ1 model matches the catalog DLR-SINTEF half-cell study, but paper, specimens, manufacturing batch and ageing state differ. Four existing finite-current half-cell OCP branches are a same-model, different-study reference only; no same-study D/i0 transfer or performance claim.",
+          "missing_items": [
+            "No same-study or serialized-specimen match; cross-study reuse does not establish transferable aged-cell parameters."
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "multi_rate_discharge": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "EIS": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        }
+      },
+      "aging_data": {
+        "status": "available",
+        "kinds": [
+          "cycle"
+        ],
+        "evidence": "Primary source identifies an 80-cell cycle-ageing campaign and one raw ZIP. Availability is source-documented; inner per-cell paths, cycle counts and channels remain unread.",
+        "source_url": "https://data.mendeley.com/datasets/h2y7mj4kt7/2",
+        "file_paths": [
+          "Battery raw data.zip"
+        ]
+      },
+      "ocp_anchor": {
+        "kind": "cross_study_catalog_half_cell",
+        "half_cell_temperatures_C": [],
+        "source_paths": [],
+        "source_urls": [
+          "https://zenodo.org/records/15497193",
+          "https://data.mendeley.com/datasets/h2y7mj4kt7/2"
+        ],
+        "evidence": "Commercial MJ1 model matches the catalog DLR-SINTEF half-cell study, but paper, specimens, manufacturing batch and ageing state differ. Four existing finite-current half-cell OCP branches are a same-model, different-study reference only; no same-study D/i0 transfer or performance claim."
+      },
+      "catalog_evidence_paths": [
+        "evidence/ocp-first-expansion-review.json"
+      ]
+    }
+  ],
   "sources": {
     "kuhn-2026-workflows": {
       "kind": "paper",

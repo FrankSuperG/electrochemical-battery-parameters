@@ -10,6 +10,16 @@ Material families: LFP, NMC, NCA. Source names an LFP 18650 3.3 V 1100 mAh cell,
 
 DOI: 10.17632/29kw38kzwj.1. Checked: 2026-10-23.
 
+## Electrode OCP anchor
+
+**Not identified**. No matched electrode half-cell file was verified for this external source in this review. Whole-cell OCV, EIS or chemistry alone does not supply electrode OCP.
+
+Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
+
+Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
+
+OCP evidence: [Source 1](https://data.mendeley.com/datasets/29kw38kzwj/1)
+
 ## Tests and channels
 
 Types: dynamic, pulse. Profiles: US06, DST, FUDS, UDDS, WLTP.
@@ -34,7 +44,7 @@ Source reports Neware BTS 4000 testing at four temperatures. Numeric setpoints a
 
 Match: `unmatched`. Named models and archived per-model test matrix remain separate from catalog studies. Panasonic NCR18650B is not the unidentified Kim2011 nominal design; generic NCA or NMC tags are not joins.
 
-Missing components: electrode_ocp, diffusion, kinetics.
+Components without a native catalog join: electrode_ocp, diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|

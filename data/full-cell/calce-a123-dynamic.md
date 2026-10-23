@@ -10,6 +10,16 @@ Material families: LFP. A123 cylindrical LFP; exact commercial part unresolved. 
 
 DOI: Not assigned in the inspected source. Checked: 2026-10-23.
 
+## Electrode OCP anchor
+
+**Whole-cell OCV only**. The reviewed OCV/pseudo-OCV locators describe the whole cell. No electrode half-cell OCP association is established.
+
+Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
+
+Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
+
+OCP evidence: [Source 1](https://calce.umd.edu/data)
+
 ## Tests and channels
 
 Types: dynamic, ocv. Profiles: DST, FUDS, US06.
@@ -34,7 +44,7 @@ Download table lists these temperature labels. They are not proof of measured pe
 
 Match: `unmatched`. CALCE exact A123 part is unresolved; source specification and sample labels do not establish identity with catalog A123 entries. Same brand and LFP chemistry are insufficient.
 
-Missing components: electrode_ocp, diffusion, kinetics.
+Components without a native catalog join: electrode_ocp, diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "electrochemical-battery-parameters"
-version = "0.10.0"
+version = "0.11.0"
 description = "Traceable lithium-ion battery parameters and test data for DFN/P2D, SPM and SPMe models"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -51,6 +51,7 @@ dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2", "jsonschema>=4.18,<5"]
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "build>=1.2", "pandas>=2.2,<4", "pyarrow>=18,<27"]
 pybamm = ["pybamm>=25.4,<27"]
+archive-review = ["py7zr==1.1.0"]
 
 [project.scripts]
 ebp = "ebp.cli:main"

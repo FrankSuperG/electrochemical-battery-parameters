@@ -1,9 +1,10 @@
-"""Inspect remote ZIP/RAR5 directory metadata without extracting observations.
+"""Inspect remote ZIP/RAR5/7z directory metadata without extracting observations.
 
 Explicit, optional source-review command; never invoked by catalog/viewer/CI.
 ZIP uses its central directory. RAR5 skips packed data using header sizes and
 checks header CRCs, following https://www.rarlab.com/technote.htm.
 Only file names/sizes and transfer statistics are saved; never archive bytes.
+7z listing uses optional py7zr, including encoded headers, without extraction.
 """
 
 import argparse
@@ -132,8 +133,20 @@ def inspect_archive(url, kind, max_bytes=131072):
         with zipfile.ZipFile(reader) as archive:
             files = [{"path": item.filename, "size_bytes": item.file_size,
                       "is_directory": item.is_dir()} for item in archive.infolist()]
-    else:
+    elif kind == "rar5":
         files = rar5_directory(reader)
+    elif kind == "7z":
+        try:
+            import py7zr
+        except ImportError as exc:
+            raise RuntimeError("7z directory review requires the optional archive-review extra") from exc
+        with py7zr.SevenZipFile(reader, mode="r") as archive:
+            if archive.needs_password():
+                raise ValueError("Encrypted archives are not inspected")
+            files = [{"path": item.filename, "size_bytes": item.uncompressed,
+                      "is_directory": item.is_directory} for item in archive.list()]
+    else:
+        raise ValueError("Unknown archive kind")
     return {"source_url": url, "method": f"HTTP Range {kind} directory only; no member extraction",
             "archive_size_bytes": reader.size, "bytes_transferred": reader.transferred,
             "requests": reader.requests, "complete": True, "files": files}
@@ -142,7 +155,7 @@ def inspect_archive(url, kind, max_bytes=131072):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("url")
-    parser.add_argument("--kind", choices=["zip", "rar5"], required=True)
+    parser.add_argument("--kind", choices=["zip", "rar5", "7z"], required=True)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--max-bytes", type=int, default=131072)
     args = parser.parse_args()

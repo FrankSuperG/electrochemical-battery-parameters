@@ -39,6 +39,12 @@ CSV links point to the complete stored observations. Blank channels remain unava
 - `chen-lgm50-cell03`: No missing measurement channels recorded; specimen and validation limits still apply.
 - `chen-lgm50-cell04`: No missing measurement channels recorded; specimen and validation limits still apply.
 
+### External full-cell datasets
+
+These links retain their source licenses and matching evidence; external payloads are not automatically downloaded.
+
+- [LG M50 multi-temperature discharge with explicitly reused Chen2020 electrode OCP](../full-cell/tec-lgm50-multitemperature-2021.md)
+
 ## Cell-level gaps
 
 - Identical characterization/validation specimen not established

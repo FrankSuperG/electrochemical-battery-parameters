@@ -22,7 +22,7 @@ def test_external_search_is_offline_and_does_not_invent_parameter_matches(monkey
     }
     assert not catalog.search_datasets(profile="US06-extra")
     assert not catalog.search_datasets(cell_id="kim2011-nca-nominal-design")
-    assert not catalog.search_datasets(cell_id="lg-m50")
+    assert [r["id"] for r in catalog.search_datasets(cell_id="lg-m50")] == ["tec-lgm50-multitemperature-2021"]
     linked = catalog.search_datasets(cell_id="lg-m50lt-hallemans2025", test_type="eis")
     assert [r["id"] for r in linked] == ["hallemans-m50lt-eis-2025"]
     assert linked[0]["parameter_link"]["match_level"] == "same_model_same_study"
@@ -115,7 +115,7 @@ def test_ncr18650b_discharge_rates_do_not_inherit_other_chemistries():
 
 def test_aging_filters_keep_source_scope_and_documentation_separate(capsys):
     catalog = Catalog()
-    available = catalog.search_datasets(material="NCA", aging_status="available")
+    available = catalog.search_datasets("NCR18650B", material="NCA", aging_status="available")
     assert [r["id"] for r in available] == ["virtual-vehicle-ncr18650b-aging-2023"]
     record = available[0]
     h5 = [f for f in record["file_links"] if f["source_path"].endswith(".h5")]
@@ -125,17 +125,82 @@ def test_aging_filters_keep_source_scope_and_documentation_separate(capsys):
     docs = [f for f in record["file_links"] if f["kind"] == "documentation"]
     assert len(docs) == 1 and docs[0]["content_review"] == "documentation_reviewed"
     assert not docs[0]["test_types"] and not docs[0]["profiles"]
-    assert not catalog.search_dataset_files(aging_status="available", test_type="eis")
-    assert catalog.search_datasets(aging_status="available", test_type="dynamic")
-    assert not catalog.search_dataset_files(aging_status="available", test_type="dynamic")
-    assert main(["datasets", "--material", "NCA", "--aging-status", "available", "--json"]) == 0
+    assert not catalog.search_dataset_files("NCR18650B", aging_status="available", test_type="eis")
+    assert catalog.search_datasets("NCR18650B", aging_status="available", test_type="dynamic")
+    assert not catalog.search_dataset_files("NCR18650B", aging_status="available", test_type="dynamic")
+    assert main(["datasets", "NCR18650B", "--material", "NCA", "--aging-status", "available", "--json"]) == 0
     assert json.loads(capsys.readouterr().out) == available
-    assert main(["datasets", "--files", "--aging-status", "available", "--test-type", "constant_current", "--json"]) == 0
+    assert main(["datasets", "NCR18650B", "--files", "--aging-status", "available", "--test-type", "constant_current", "--json"]) == 0
     rows = json.loads(capsys.readouterr().out)
     assert len(rows) == 116
     assert all(f["dataset_aging_status"] == "available" for f in rows)
     unverified = catalog.search_datasets(aging_status="unverified")
     assert [r["id"] for r in unverified] == ["malaya-three-chemistries-2022"]
+
+
+def test_ocp_first_sources_keep_half_cell_and_temperature_scope():
+    catalog = Catalog()
+    nextbms = next(r for r in catalog.external_datasets if r["id"] == "nextbms-calb-nmc532-2026")
+    assert nextbms["ocp_anchor"]["kind"] == "external_half_cell_files"
+    assert len(nextbms["ocp_anchor"]["source_paths"]) == 6
+    assert all("2_HalfCell/" in p and "OCPDis_" not in p for p in nextbms["ocp_anchor"]["source_paths"])
+    assert not nextbms["ocp_anchor"]["half_cell_temperatures_C"]
+    assert nextbms["temperatures_C"] == [0, 5, 25, 45]
+    assert not nextbms["parameter_link"]["cell_ids"]
+    spectra = [f for f in nextbms["file_links"] if "3_Characterization/" in f["source_path"] and f["test_types"] == ["eis"]]
+    assert len(spectra) == 12
+    assert {f["temperature_C"] for f in spectra} == {0, 5, 25, 45}
+    assert any("25/16/20" in gap for gap in nextbms["missing_items"])
+
+
+def test_p45b_measured_fitted_and_reconstructed_curves_stay_distinct():
+    catalog = Catalog()
+    ae = next(r for r in catalog.external_datasets if r["id"] == "aboutenergy-p45b-2026")
+    assert ae["ocp_anchor"]["kind"] == "published_parameterisation"
+    assert not ae["parameter_components"]["ocp"]["record_ids"]
+    assert {f["temperature_C"] for f in ae["file_links"] if "WLTP" in f["profiles"]} == {10, 25, 40, 60}
+    assert {f["temperature_C"] for f in ae["file_links"] if "eVTOL" in f["profiles"]} == {25, 40, 60}
+    assert "E_OCV_V" in ae["channels"]["note"]
+    tum = next(r for r in catalog.external_datasets if r["id"] == "tum-p45b-halfcell-aging-2026")
+    assert len(tum["ocp_anchor"]["source_paths"]) == 5
+    assert all("SiReconstr_" not in p for p in tum["ocp_anchor"]["source_paths"])
+    assert len([f for f in tum["file_links"] if "SiReconstr_" in f["source_path"]]) == 2
+    half = [f for f in tum["file_links"] if f["source_path"] in tum["ocp_anchor"]["source_paths"]]
+    assert {f["nominal_rate_C"] for f in half} == {0.02, 0.03}
+    assert all(f["temperature_C"] is None for f in half)
+    assert tum["license"]["identifier"] == "not-stated"
+
+
+def test_cross_study_ocp_references_do_not_become_same_study_parameter_sets():
+    catalog = Catalog()
+    tec = catalog.search_datasets(cell_id="lg-m50")[0]
+    assert tec["ocp_anchor"]["kind"] == "reused_catalog_expression"
+    assert tec["parameter_components"]["ocp"]["record_ids"] == ["graphite-chen2020-formula", "nmc811-lgm50-chen2020-formula"]
+    rows = [f for f in tec["file_links"] if f["test_types"] == ["constant_current"]]
+    assert len(rows) == 48
+    assert {f["temperature_C"] for f in rows} == {0, 10, 25}
+    assert {f["nominal_rate_C"] for f in rows} == {0.1, 0.5, 1, 2}
+    assert not tec["profiles"]
+    mj1 = catalog.search_datasets(cell_id="lg-mj1-dlr-sintef")[0]
+    assert mj1["parameter_link"]["match_level"] == "same_model_different_study"
+    assert len(mj1["parameter_components"]["ocp"]["record_ids"]) == 4
+    assert mj1["parameter_components"]["diffusion"]["match_level"] == "missing"
+    assert mj1["parameter_components"]["kinetics"]["match_level"] == "missing"
+    assert len(mj1["file_links"]) == 1 and mj1["file_links"][0]["kind"] == "archive"
+    assert not mj1["profiles"]
+
+
+@pytest.mark.parametrize("fault", ["unknown_path", "empty_catalog_records"])
+def test_ocp_anchor_requires_inspectable_sources(fault):
+    catalog = Catalog()
+    tec = catalog.search_datasets(cell_id="lg-m50")[0]
+    if fault == "unknown_path":
+        tec["ocp_anchor"]["source_paths"] = ["invented-half-cell.csv"]
+        expected = "OCP anchor references an unknown external source path"
+    else:
+        tec["parameter_components"]["ocp"]["record_ids"] = []
+        expected = "catalog OCP anchor requires explicit curve records"
+    assert any(expected in error for error in catalog.validate())
 
 
 @pytest.mark.parametrize("fault", ["orphan_path", "unsupported_availability", "boolean_status"])

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.11.0 — 2026-10-23
+
+- Screened 21 source families using electrode half-cell OCP as the entry point; added five external sources and 194 locators, reaching sixteen sources / 427 locators without adding observation payloads or numeric curve/parameter records.
+- Located NEXTBMS harvested graphite/NMC532 files, full-cell CC/dynamic histories, 41 ageing histories and multi-temperature EIS through bounded 7z header reads; retained disagreement between declared and directory EIS stage counts.
+- Linked About:Energy P45B published composite BPX parameters to explicitly reused CC/GITT/WLTP tests at 10/25/40/60 degC and eVTOL at 25/40/60 degC. Kept fitted OCP, whole-cell pseudo-OCV and simulated columns distinct from raw half-cell observations.
+- Linked TUM P45B measured blend/cathode sources with one ageing checkup table; reconstructed silicon and third-party literature inputs retain separate origins and reuse gaps.
+- Added LG M50 TEC2021 discharge files at 0/10/25 degC with explicit Chen2020 OCP reuse, and LG MJ1 80-cell dynamic ageing with a same-model, different-study reference to existing DLR-SINTEF half-cell curves. No intrinsic-parameter transfer or shared-specimen join is inferred.
+- Added required OCP-anchor metadata, separate half-cell temperature scope and GitHub/viewer/CSV presentation (schema 1.3). Extended the optional archive inspector to 7z through a task-specific extra; no automatic downloads or model simulation.
+
 ## 0.10.0 — 2026-10-23
 
 - Added four Panasonic NCR18650B external source records: HNEI formation/full-cell and harvested half-cell RPT, Bayreuth beginning-of-life pseudo-OCV/pulse/EIS, Virtual Vehicle ageing/reference tests, and the NCA section of Stanford multi-rate discharge tests.

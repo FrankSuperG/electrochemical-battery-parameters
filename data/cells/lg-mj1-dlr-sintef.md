@@ -70,6 +70,12 @@ Read each JSON for branch direction, source conditions and coordinate meaning. G
 
 No matching full-cell observation file imported. A named model or chemistry does not establish a test-data match.
 
+### External full-cell datasets
+
+These links retain their source licenses and matching evidence; external payloads are not automatically downloaded.
+
+- [LG MJ1 dynamic operating-sequence ageing (80 cells)](../full-cell/snu-mj1-dynamic-aging-2024.md)
+
 ## Cell-level gaps
 
 - Exact specimen chain between direct cell #001, GITT electrodes and an intact validation cell unresolved

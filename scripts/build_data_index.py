@@ -31,6 +31,15 @@ def aging_label(record):
             else {"not_reported": "Not reported", "unverified": "Unverified"}[aging["status"]])
 
 
+def ocp_anchor_label(record):
+    return {"external_half_cell_files": "External half-cell files",
+            "published_parameterisation": "Published fitted parameterisation",
+            "reused_catalog_expression": "Explicitly reused catalog expression",
+            "cross_study_catalog_half_cell": "Cross-study catalog half-cell reference",
+            "model_derived_only": "Model-derived only", "reuse_unresolved": "Reuse unresolved",
+            "not_identified": "Not identified", "full_cell_ocv_only": "Whole-cell OCV only"}[record["ocp_anchor"]["kind"]]
+
+
 def csv_bytes(headers, rows):
     handle = io.StringIO(newline="")
     writer = csv.writer(handle, lineterminator="\n")
@@ -77,7 +86,8 @@ def full_cell_index(catalog):
         ["id", "material_families", "cell_identity", "test_types", "profiles", "rate_summary",
          "temperatures_C", "license", "parameter_match", "linked_cell_ids", "source_url",
          "doi", "source_version", "checked_on", "review_level", "missing_items",
-         "aging_data", "aging_kinds", "aging_evidence", "aging_source_url"],
+         "aging_data", "aging_kinds", "aging_evidence", "aging_source_url",
+         "ocp_anchor", "half_cell_temperatures_C", "ocp_anchor_evidence"],
         [[r["id"], ";".join(r["material_families"]), r["cell_identity"], ";".join(r["test_types"]),
           ";".join(r["profiles"]), r["rate_summary"], json.dumps(r["temperatures_C"]),
           r["license"]["identifier"], r["parameter_link"]["match_level"],
@@ -85,7 +95,9 @@ def full_cell_index(catalog):
           r["source"]["version"], r["review"]["checked_on"], r["review"]["level"],
           "; ".join(r["missing_items"]), r["aging_data"]["status"],
           ";".join(r["aging_data"]["kinds"]), r["aging_data"]["evidence"],
-          r["aging_data"]["source_url"]] for r in catalog.external_datasets])
+          r["aging_data"]["source_url"], r["ocp_anchor"]["kind"],
+          json.dumps(r["ocp_anchor"]["half_cell_temperatures_C"]),
+          r["ocp_anchor"]["evidence"]] for r in catalog.external_datasets])
     file_rows = catalog.search_dataset_files()
     output[str(root / "files.csv")] = csv_bytes(
         ["dataset_id", "source_path", "kind", "cell_model", "material_family", "source_sample_id",
@@ -102,6 +114,10 @@ def full_cell_index(catalog):
                  f"Material families: {', '.join(r['material_families'])}. {r['cell_identity']}", "",
                  f"[Open the original dataset]({r['source']['url']}) · Version: `{r['source']['version']}`", "",
                  f"DOI: {r['source']['doi'] or 'Not assigned in the inspected source'}. Checked: {r['review']['checked_on']}.", "",
+                 "## Electrode OCP anchor", "", f"**{ocp_anchor_label(r)}**. {r['ocp_anchor']['evidence']}", "",
+                 f"Reported half-cell temperature labels / degC: {r['ocp_anchor']['half_cell_temperatures_C'] or 'Not independently verified'}. Full-cell temperatures below do not establish half-cell OCP temperature coverage.", "",
+                 "Source paths: " + ("; ".join('`' + path + '`' for path in r['ocp_anchor']['source_paths']) or 'Use the cited catalog curves/source evidence; no verified external half-cell member path.'), "",
+                 "OCP evidence: " + " · ".join(f"[Source {i+1}]({url})" for i, url in enumerate(r['ocp_anchor']['source_urls'])), "",
                  "## Tests and channels", "",
                  f"Types: {', '.join(r['test_types'])}. Profiles: {', '.join(r['profiles']) or 'No named drive profile verified'}.", "",
                  r["rate_summary"], "",
@@ -115,7 +131,7 @@ def full_cell_index(catalog):
                  f"Match: `{r['parameter_link']['match_level']}`. {r['parameter_link']['evidence']}", ""]
         for cid in r["parameter_link"]["cell_ids"]:
             lines += [link(page, Path("data/cells") / f"{cid}.md", catalog.cells[cid]["display_name"]), ""]
-        lines += [f"Missing components: {', '.join(r['parameter_link']['missing_components'])}.", "",
+        lines += [f"Components without a native catalog join: {', '.join(r['parameter_link']['missing_components'])}.", "",
                   "| Component | Match / quantity | Catalog record IDs | Evidence and missing items |",
                   "|---|---|---|---|"]
         for key, component in r["parameter_components"].items():
@@ -162,10 +178,10 @@ def full_cell_index(catalog):
         page = root / f"{family}.md"
         lines = [f"# {family} full-cell tests", "", "[All materials](README.md) · [Access, licenses and limits](../../docs/FULL_CELL_DATASETS.md)", "",
                  "Material grouping is a discovery aid, not evidence that tests and parameters belong together. NCO retains its source label and is not silently classified as NMC or NCA.", "",
-                 "## External datasets", "", "| Dataset / cell | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |", "|---|---|---|---|---|---|"]
+                 "## External datasets", "", "| Dataset / cell | OCP anchor | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |", "|---|---|---|---|---|---|---|"]
         for r in external:
             temperatures = str(r["temperatures_C"]) if r["temperatures_C"] else "not verified"
-            lines += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {text_cell(', '.join(r['test_types']) + '; ' + ', '.join(r['profiles']))} | {text_cell(r['rate_summary'])} Source temperatures: {temperatures} | {aging_label(r)} | {r['license']['identifier']} | `{r['parameter_link']['match_level']}` |"]
+            lines += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {ocp_anchor_label(r)} | {text_cell(', '.join(r['test_types']) + '; ' + ', '.join(r['profiles']))} | {text_cell(r['rate_summary'])} Source temperatures: {temperatures} | {aging_label(r)} | {r['license']['identifier']} | `{r['parameter_link']['match_level']}` |"]
         if not external:
             lines += ["", "No external dataset link curated for this family yet."]
         lines += ["", "## Existing packaged tests", "", "These CSVs already belong to the catalog; this index adds links without duplicating observations.", "",
@@ -179,9 +195,9 @@ def full_cell_index(catalog):
         output[str(page)] = "\n".join(lines).encode()
     overview += ["", "## External dataset availability", "",
                  "Ageing availability applies to a source, not every linked file. `Not reported` is not proof of absence. Formation, repeated initial tests and simulated degradation alone are not measured longitudinal ageing data.", "",
-                 "| Dataset | Materials | Ageing data | License |", "|---|---|---|---|"]
+                 "| Dataset | Materials | OCP anchor | Ageing data | License |", "|---|---|---|---|---|"]
     for r in catalog.external_datasets:
-        overview += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {', '.join(r['material_families'])} | {aging_label(r)} | {r['license']['identifier']} |"]
+        overview += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {', '.join(r['material_families'])} | {ocp_anchor_label(r)} | {aging_label(r)} | {r['license']['identifier']} |"]
     overview += ["", "Test types: `constant_current`, `cccv`, `pulse`, `dynamic`, `eis`, `ocv`. Named profiles can be searched at dataset level with `ebp datasets --profile US06`, or at inspected-file level with `ebp datasets --files --profile US06`. Dataset declarations are not automatically inherited by file locators. `ocv` refers to whole-cell characterization, never an automatically inferred electrode OCP. Use `ebp datasets --aging-status available` for sources with documented ageing data.", ""]
     output[str(root / "README.md")] = "\n".join(overview).encode()
     return output

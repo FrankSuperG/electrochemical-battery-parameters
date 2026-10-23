@@ -10,6 +10,16 @@ Material families: NMC. LG M50LT; same study as the catalog grouped SPMe paramet
 
 DOI: 10.1149/1945-7111/add41b. Checked: 2026-10-23.
 
+## Electrode OCP anchor
+
+**Reuse unresolved**. About:Energy OCP reuse rights remain unresolved; current same-study fitted groups and EIS do not clear the electrode curves.
+
+Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
+
+Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
+
+OCP evidence: [Source 1](https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068)
+
 ## Tests and channels
 
 Types: eis, dynamic. Profiles: No named drive profile verified.
@@ -36,7 +46,7 @@ Match: `same_model_same_study`. Pinned author Figure 10 script connects the meas
 
 [LG M50LT &#124; Hallemans2025 grouped SPMe](../cells/lg-m50lt-hallemans2025.md)
 
-Missing components: electrode_ocp, intrinsic_diffusion, intrinsic_kinetics.
+Components without a native catalog join: electrode_ocp, intrinsic_diffusion, intrinsic_kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|

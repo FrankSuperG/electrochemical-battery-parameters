@@ -1686,7 +1686,1073 @@
       "missing_items": []
     }
   ],
-  "external_datasets": [],
+  "external_datasets": [
+    {
+      "id": "tec-lgm50-multitemperature-2021",
+      "title": "LG M50 multi-temperature discharge with explicitly reused Chen2020 electrode OCP",
+      "material_families": [
+        "NMC"
+      ],
+      "cell_identity": "LG M50 21700 NMC811/graphite-SiOx. Author TEC2021 paper explicitly reuses Chen2020 electrode OCP; cells labelled 781\u2013796 are not joined to Chen2020 specimen serials.",
+      "test_types": [
+        "constant_current"
+      ],
+      "profiles": [],
+      "rate_summary": "Four source-listed discharge rates 0.1C, 0.5C, 1C and 2C, four cell labels per rate and three temperatures; 48 CSV filenames. No named WLTP file exists in the inspected v1.0 ZIP.",
+      "temperatures_C": [
+        0,
+        10,
+        25
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "Observation headers and units were not independently read; source conditions remain distinct from measured channels."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://zenodo.org/records/4864437",
+        "doi": "10.5281/zenodo.4864437",
+        "version": "v1.0; 978f8c38005892d98f1204b71422f6ff64c32acd"
+      },
+      "license": {
+        "identifier": "BSD-3-Clause",
+        "evidence_url": "https://github.com/brosaplanella/TEC-reduced-model/blob/978f8c38005892d98f1204b71422f6ff64c32acd/LICENSE",
+        "note": "Pinned author repository has BSD-3-Clause and explicitly describes code and experimental data. Zenodo API uses other-open; the exact repository license is cited rather than relabelled CC BY. No observations redistributed."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "archive_directory_reviewed",
+        "note": "Complete v1.0 ZIP directory, pinned author tree/README/LICENSE and primary paper inspected. No CSV observation read or author code executed."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "lg-m50"
+        ],
+        "match_level": "same_model_different_study",
+        "evidence": "Primary TEC2021 paper Table 1 attributes the LG M50 electrode OCP to Chen2020. Two existing catalog expressions therefore provide an explicit reused OCP anchor; full-cell experiments are a different study, without shared serials. This does not associate ORegan2022 diffusion/kinetic tables as same-study TEC measurements.",
+        "missing_components": [
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://zenodo.org/records/4864437",
+        "https://github.com/brosaplanella/TEC-reduced-model/tree/978f8c38005892d98f1204b71422f6ff64c32acd",
+        "https://doi.org/10.1016/j.electacta.2021.138524",
+        "https://wrap.warwick.ac.uk/id/eprint/152012/7/WRAP-Systematic-derivation-validation-reduced-thermal-electrochemical-2021.pdf"
+      ],
+      "file_links": [
+        {
+          "label": "data/0degC/Cell781_0p1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell781_0p1C_0degC.csv",
+          "source_path": "data/0degC/Cell781_0p1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell781",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 26045
+        },
+        {
+          "label": "data/0degC/Cell782_0p1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell782_0p1C_0degC.csv",
+          "source_path": "data/0degC/Cell782_0p1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell782",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 240678
+        },
+        {
+          "label": "data/0degC/Cell783_0p1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell783_0p1C_0degC.csv",
+          "source_path": "data/0degC/Cell783_0p1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell783",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 240203
+        },
+        {
+          "label": "data/0degC/Cell784_0p1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell784_0p1C_0degC.csv",
+          "source_path": "data/0degC/Cell784_0p1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell784",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 239883
+        },
+        {
+          "label": "data/0degC/Cell785_0p5C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell785_0p5C_0degC.csv",
+          "source_path": "data/0degC/Cell785_0p5C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell785",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 194007
+        },
+        {
+          "label": "data/0degC/Cell786_0p5C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell786_0p5C_0degC.csv",
+          "source_path": "data/0degC/Cell786_0p5C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell786",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 146163
+        },
+        {
+          "label": "data/0degC/Cell787_0p5C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell787_0p5C_0degC.csv",
+          "source_path": "data/0degC/Cell787_0p5C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell787",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 147008
+        },
+        {
+          "label": "data/0degC/Cell788_0p5C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell788_0p5C_0degC.csv",
+          "source_path": "data/0degC/Cell788_0p5C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell788",
+          "temperature_C": 0,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 146005
+        },
+        {
+          "label": "data/0degC/Cell789_1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell789_1C_0degC.csv",
+          "source_path": "data/0degC/Cell789_1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell789",
+          "temperature_C": 0,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 6874643
+        },
+        {
+          "label": "data/0degC/Cell790_1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell790_1C_0degC.csv",
+          "source_path": "data/0degC/Cell790_1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell790",
+          "temperature_C": 0,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 5249755
+        },
+        {
+          "label": "data/0degC/Cell791_1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell791_1C_0degC.csv",
+          "source_path": "data/0degC/Cell791_1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell791",
+          "temperature_C": 0,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 5252007
+        },
+        {
+          "label": "data/0degC/Cell792_1C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell792_1C_0degC.csv",
+          "source_path": "data/0degC/Cell792_1C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell792",
+          "temperature_C": 0,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 5243720
+        },
+        {
+          "label": "data/0degC/Cell793_2C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell793_2C_0degC.csv",
+          "source_path": "data/0degC/Cell793_2C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell793",
+          "temperature_C": 0,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 6723825
+        },
+        {
+          "label": "data/0degC/Cell794_2C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell794_2C_0degC.csv",
+          "source_path": "data/0degC/Cell794_2C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell794",
+          "temperature_C": 0,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 5011165
+        },
+        {
+          "label": "data/0degC/Cell795_2C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell795_2C_0degC.csv",
+          "source_path": "data/0degC/Cell795_2C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell795",
+          "temperature_C": 0,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4997714
+        },
+        {
+          "label": "data/0degC/Cell796_2C_0degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/0degC/Cell796_2C_0degC.csv",
+          "source_path": "data/0degC/Cell796_2C_0degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell796",
+          "temperature_C": 0,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 6244937
+        },
+        {
+          "label": "data/10degC/Cell781_0p1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell781_0p1C_10degC.csv",
+          "source_path": "data/10degC/Cell781_0p1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell781",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 335946
+        },
+        {
+          "label": "data/10degC/Cell782_0p1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell782_0p1C_10degC.csv",
+          "source_path": "data/10degC/Cell782_0p1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell782",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 247320
+        },
+        {
+          "label": "data/10degC/Cell783_0p1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell783_0p1C_10degC.csv",
+          "source_path": "data/10degC/Cell783_0p1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell783",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 247444
+        },
+        {
+          "label": "data/10degC/Cell784_0p1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell784_0p1C_10degC.csv",
+          "source_path": "data/10degC/Cell784_0p1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell784",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 245820
+        },
+        {
+          "label": "data/10degC/Cell785_0p5C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell785_0p5C_10degC.csv",
+          "source_path": "data/10degC/Cell785_0p5C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell785",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 198587
+        },
+        {
+          "label": "data/10degC/Cell786_0p5C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell786_0p5C_10degC.csv",
+          "source_path": "data/10degC/Cell786_0p5C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell786",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 150847
+        },
+        {
+          "label": "data/10degC/Cell787_0p5C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell787_0p5C_10degC.csv",
+          "source_path": "data/10degC/Cell787_0p5C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell787",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 150237
+        },
+        {
+          "label": "data/10degC/Cell788_0p5C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell788_0p5C_10degC.csv",
+          "source_path": "data/10degC/Cell788_0p5C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell788",
+          "temperature_C": 10,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 150086
+        },
+        {
+          "label": "data/10degC/Cell789_1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell789_1C_10degC.csv",
+          "source_path": "data/10degC/Cell789_1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell789",
+          "temperature_C": 10,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 7013347
+        },
+        {
+          "label": "data/10degC/Cell790_1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell790_1C_10degC.csv",
+          "source_path": "data/10degC/Cell790_1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell790",
+          "temperature_C": 10,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 6460727
+        },
+        {
+          "label": "data/10degC/Cell791_1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell791_1C_10degC.csv",
+          "source_path": "data/10degC/Cell791_1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell791",
+          "temperature_C": 10,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 5223963
+        },
+        {
+          "label": "data/10degC/Cell792_1C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell792_1C_10degC.csv",
+          "source_path": "data/10degC/Cell792_1C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell792",
+          "temperature_C": 10,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 6462994
+        },
+        {
+          "label": "data/10degC/Cell793_2C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell793_2C_10degC.csv",
+          "source_path": "data/10degC/Cell793_2C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell793",
+          "temperature_C": 10,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 6647627
+        },
+        {
+          "label": "data/10degC/Cell794_2C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell794_2C_10degC.csv",
+          "source_path": "data/10degC/Cell794_2C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell794",
+          "temperature_C": 10,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4929647
+        },
+        {
+          "label": "data/10degC/Cell795_2C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell795_2C_10degC.csv",
+          "source_path": "data/10degC/Cell795_2C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell795",
+          "temperature_C": 10,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4919834
+        },
+        {
+          "label": "data/10degC/Cell796_2C_10degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/10degC/Cell796_2C_10degC.csv",
+          "source_path": "data/10degC/Cell796_2C_10degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell796",
+          "temperature_C": 10,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 6106405
+        },
+        {
+          "label": "data/25degC/Cell781_0p1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell781_0p1C_25degC.csv",
+          "source_path": "data/25degC/Cell781_0p1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell781",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 319362
+        },
+        {
+          "label": "data/25degC/Cell782_0p1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell782_0p1C_25degC.csv",
+          "source_path": "data/25degC/Cell782_0p1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell782",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 257412
+        },
+        {
+          "label": "data/25degC/Cell783_0p1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell783_0p1C_25degC.csv",
+          "source_path": "data/25degC/Cell783_0p1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell783",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 253748
+        },
+        {
+          "label": "data/25degC/Cell784_0p1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell784_0p1C_25degC.csv",
+          "source_path": "data/25degC/Cell784_0p1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell784",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.1,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 253216
+        },
+        {
+          "label": "data/25degC/Cell785_0p5C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell785_0p5C_25degC.csv",
+          "source_path": "data/25degC/Cell785_0p5C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell785",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 173151
+        },
+        {
+          "label": "data/25degC/Cell786_0p5C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell786_0p5C_25degC.csv",
+          "source_path": "data/25degC/Cell786_0p5C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell786",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 147534
+        },
+        {
+          "label": "data/25degC/Cell787_0p5C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell787_0p5C_25degC.csv",
+          "source_path": "data/25degC/Cell787_0p5C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell787",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 147620
+        },
+        {
+          "label": "data/25degC/Cell788_0p5C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell788_0p5C_25degC.csv",
+          "source_path": "data/25degC/Cell788_0p5C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell788",
+          "temperature_C": 25,
+          "nominal_rate_C": 0.5,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 146893
+        },
+        {
+          "label": "data/25degC/Cell789_1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell789_1C_25degC.csv",
+          "source_path": "data/25degC/Cell789_1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell789",
+          "temperature_C": 25,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 5758101
+        },
+        {
+          "label": "data/25degC/Cell790_1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell790_1C_25degC.csv",
+          "source_path": "data/25degC/Cell790_1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell790",
+          "temperature_C": 25,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4928577
+        },
+        {
+          "label": "data/25degC/Cell791_1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell791_1C_25degC.csv",
+          "source_path": "data/25degC/Cell791_1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell791",
+          "temperature_C": 25,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4923055
+        },
+        {
+          "label": "data/25degC/Cell792_1C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell792_1C_25degC.csv",
+          "source_path": "data/25degC/Cell792_1C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell792",
+          "temperature_C": 25,
+          "nominal_rate_C": 1.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4928787
+        },
+        {
+          "label": "data/25degC/Cell793_2C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell793_2C_25degC.csv",
+          "source_path": "data/25degC/Cell793_2C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell793",
+          "temperature_C": 25,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 5361309
+        },
+        {
+          "label": "data/25degC/Cell794_2C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell794_2C_25degC.csv",
+          "source_path": "data/25degC/Cell794_2C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell794",
+          "temperature_C": 25,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4559617
+        },
+        {
+          "label": "data/25degC/Cell795_2C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell795_2C_25degC.csv",
+          "source_path": "data/25degC/Cell795_2C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell795",
+          "temperature_C": 25,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 4556006
+        },
+        {
+          "label": "data/25degC/Cell796_2C_25degC.csv",
+          "url": "https://raw.githubusercontent.com/brosaplanella/TEC-reduced-model/978f8c38005892d98f1204b71422f6ff64c32acd/data/25degC/Cell796_2C_25degC.csv",
+          "source_path": "data/25degC/Cell796_2C_25degC.csv",
+          "kind": "file",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell796",
+          "temperature_C": 25,
+          "nominal_rate_C": 2.0,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Pinned author file path agrees with released ZIP directory. Filename rate/temperature and measured-data role are source-supported; raw headers/current sign/temperature channels remain unread.",
+          "size_bytes": 1480069
+        },
+        {
+          "label": "PyBaMM/v25.4.2/Chen2020.py",
+          "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Chen2020.py",
+          "source_path": "PyBaMM/v25.4.2/Chen2020.py",
+          "kind": "parameter_evidence",
+          "cell_model": "LG M50",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Existing Chen2020 OCP implementation, explicitly reused by the TEC2021 paper. This is an expression/source-code link, not new raw half-cell data; do not execute upstream code as part of discovery."
+        }
+      ],
+      "missing_items": [
+        "No new measured half-cell points; explicit published OCP-expression reuse only. No same-specimen join to Chen2020.",
+        "Raw CSV columns, current convention and measured temperature channel not independently read. No full temperature/rate matrix outside listed paths is asserted.",
+        "No WLTP, US06, EIS or longitudinal ageing file located in the inspected v1.0 release.",
+        "ORegan2022 parameter tables (Zenodo 5171874) are a separate parameter study; they are not silently merged with TEC2021 or current Chen D/k."
+      ],
+      "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "same_model_different_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "graphite-chen2020-formula",
+            "nmc811-lgm50-chen2020-formula"
+          ],
+          "evidence": "Primary TEC2021 paper Table 1 attributes the LG M50 electrode OCP to Chen2020. Two existing catalog expressions therefore provide an explicit reused OCP anchor; full-cell experiments are a different study, without shared serials. This does not associate ORegan2022 diffusion/kinetic tables as same-study TEC measurements.",
+          "missing_items": [
+            "No same-study or serialized-specimen match; cross-study reuse does not establish transferable aged-cell parameters."
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "multi_rate_discharge": {
+          "status": "file_located",
+          "evidence": "48 measured-data filenames: 0.1/0.5/1/2C at 0/10/25 degC with source cell labels. Directory-only review, not raw channel verification."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "EIS": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source reports characterization or validation tests without an established longitudinal ageing series.",
+        "source_url": "https://zenodo.org/records/4864437",
+        "file_paths": []
+      },
+      "ocp_anchor": {
+        "kind": "reused_catalog_expression",
+        "half_cell_temperatures_C": [],
+        "source_paths": [
+          "PyBaMM/v25.4.2/Chen2020.py"
+        ],
+        "source_urls": [
+          "https://wrap.warwick.ac.uk/id/eprint/152012/7/WRAP-Systematic-derivation-validation-reduced-thermal-electrochemical-2021.pdf",
+          "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Chen2020.py"
+        ],
+        "evidence": "Primary TEC2021 paper Table 1 attributes the LG M50 electrode OCP to Chen2020. Two existing catalog expressions therefore provide an explicit reused OCP anchor; full-cell experiments are a different study, without shared serials. This does not associate ORegan2022 diffusion/kinetic tables as same-study TEC measurements."
+      },
+      "catalog_evidence_paths": [
+        "evidence/ocp-first-expansion-review.json"
+      ]
+    }
+  ],
   "sources": {
     "chen-2020": {
       "kind": "paper",

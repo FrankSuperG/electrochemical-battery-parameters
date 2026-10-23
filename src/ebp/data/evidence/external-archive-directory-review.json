@@ -4063,6 +4063,3711 @@
           "is_directory": false
         }
       ]
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "method": "HTTP Range 7z directory only; no member extraction",
+      "archive_size_bytes": 6328075,
+      "bytes_transferred": 520,
+      "requests": 9,
+      "complete": true,
+      "files": [
+        {
+          "path": "2_HalfCell",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "2_HalfCell/OCP_data",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Anode_Graphite",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Cathode_NMC532",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
+          "size_bytes": 46164,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv",
+          "size_bytes": 46273,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Anode_Graphite/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-anode.csv",
+          "size_bytes": 37692727,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Anode_Graphite/Sample_image_GITT_graphite-anode-Akzhan.B.jpg",
+          "size_bytes": 2203345,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv",
+          "size_bytes": 56626,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv",
+          "size_bytes": 56016,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Cathode_NMC532/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-cathode.csv",
+          "size_bytes": 11228645,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/Cathode_NMC532/Sample image GITT NMC-Akzhan B.jpg",
+          "size_bytes": 5728395,
+          "is_directory": false
+        },
+        {
+          "path": "2_HalfCell/OCP_data/README_half_cell_OCP.md",
+          "size_bytes": 3555,
+          "is_directory": false
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+      "method": "HTTP Range 7z directory only; no member extraction",
+      "archive_size_bytes": 38145973,
+      "bytes_transferred": 1405,
+      "requests": 9,
+      "complete": true,
+      "files": [
+        {
+          "path": "3_Characterization",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "3_Characterization/Cell_15",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "3_Characterization/Cell_4",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "3_Characterization/Cell_6",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_1-Formation.csv",
+          "size_bytes": 6039856,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_1-Formation_CharacterizationPlot.png",
+          "size_bytes": 71525,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_2-GITT.csv",
+          "size_bytes": 30583704,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_2-GITT_CharacterizationPlot.png",
+          "size_bytes": 79805,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_3-CC_cycles.csv",
+          "size_bytes": 41775949,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_3-CC_cycles_CharacterizationPlot.png",
+          "size_bytes": 92174,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_4-DynamicCycles.csv",
+          "size_bytes": 101302653,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_4-DynamicCycles_CharacterizationPlot.png",
+          "size_bytes": 99871,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_5-HPPC.csv",
+          "size_bytes": 8140253,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/Cell_15_5-HPPC_CharacterizationPlot.png",
+          "size_bytes": 85277,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_0C_impedanceData.csv",
+          "size_bytes": 7988,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_0C_impedanceData_NyquistPlot.png",
+          "size_bytes": 185873,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_0C_timeseriesData.csv",
+          "size_bytes": 1250150,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_25C_impedanceData.csv",
+          "size_bytes": 8029,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_25C_impedanceData_NyquistPlot.png",
+          "size_bytes": 119816,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_25C_timeseriesData.csv",
+          "size_bytes": 772492,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_45C_impedanceData.csv",
+          "size_bytes": 8123,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_45C_impedanceData_NyquistPlot.png",
+          "size_bytes": 121996,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_45C_timeseriesData.csv",
+          "size_bytes": 998726,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_5C_impedanceData.csv",
+          "size_bytes": 8014,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_5C_impedanceData_NyquistPlot.png",
+          "size_bytes": 156036,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_15/EIS/Test_5C_timeseriesData.csv",
+          "size_bytes": 1232752,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_1-Formation.csv",
+          "size_bytes": 6032352,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_1-Formation_CharacterizationPlot.png",
+          "size_bytes": 70049,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_2-GITT.csv",
+          "size_bytes": 30613735,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_2-GITT_CharacterizationPlot.png",
+          "size_bytes": 98791,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_3-CC_cycles.csv",
+          "size_bytes": 16044186,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_3-CC_cycles_CharacterizationPlot.png",
+          "size_bytes": 114002,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_4-DynamicCycles.csv",
+          "size_bytes": 101143231,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_4-DynamicCycles_CharacterizationPlot.png",
+          "size_bytes": 108300,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_5-HPPC.csv",
+          "size_bytes": 8134929,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/Cell_4_5-HPPC_CharacterizationPlot.png",
+          "size_bytes": 110366,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_0C_impedanceData.csv",
+          "size_bytes": 8000,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_0C_impedanceData_NyquistPlot.png",
+          "size_bytes": 217481,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_0C_timeseriesData.csv",
+          "size_bytes": 1255752,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_25C_impedanceData.csv",
+          "size_bytes": 8042,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_25C_impedanceData_NyquistPlot.png",
+          "size_bytes": 124521,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_25C_timeseriesData.csv",
+          "size_bytes": 783649,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_45C_impedanceData.csv",
+          "size_bytes": 8163,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_45C_impedanceData_NyquistPlot.png",
+          "size_bytes": 132136,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_45C_timeseriesData.csv",
+          "size_bytes": 1046596,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_5C_impedanceData.csv",
+          "size_bytes": 8002,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_5C_impedanceData_NyquistPlot.png",
+          "size_bytes": 179969,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_4/EIS/Test_5C_timeseriesData.csv",
+          "size_bytes": 1240019,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_1-Formation.csv",
+          "size_bytes": 6030735,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_1-Formation_CharacterizationPlot.png",
+          "size_bytes": 73141,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_2-GITT.csv",
+          "size_bytes": 30600373,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_2-GITT_CharacterizationPlot.png",
+          "size_bytes": 82567,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_3-CC_cycles.csv",
+          "size_bytes": 41561704,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_3-CC_cycles_CharacterizationPlot.png",
+          "size_bytes": 93018,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_4-DynamicCycles.csv",
+          "size_bytes": 101610872,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_4-DynamicCycles_CharacterizationPlot.png",
+          "size_bytes": 100755,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_5-HPPC.csv",
+          "size_bytes": 8167200,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/Cell_6_5-HPPC_CharacterizationPlot.png",
+          "size_bytes": 86158,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_0C_impedanceData.csv",
+          "size_bytes": 8019,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_0C_impedanceData_NyquistPlot.png",
+          "size_bytes": 193316,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_0C_timeseriesData.csv",
+          "size_bytes": 1268529,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_25C_impedanceData.csv",
+          "size_bytes": 8033,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_25C_impedanceData_NyquistPlot.png",
+          "size_bytes": 144006,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_25C_timeseriesData.csv",
+          "size_bytes": 781989,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_45C_impedanceData.csv",
+          "size_bytes": 8171,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_45C_impedanceData_NyquistPlot.png",
+          "size_bytes": 127068,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_45C_timeseriesData.csv",
+          "size_bytes": 1043516,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_5C_impedanceData.csv",
+          "size_bytes": 8047,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_5C_impedanceData_NyquistPlot.png",
+          "size_bytes": 193971,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/Cell_6/EIS/Test_5C_timeseriesData.csv",
+          "size_bytes": 1252402,
+          "is_directory": false
+        },
+        {
+          "path": "3_Characterization/README_characterization.md",
+          "size_bytes": 2504,
+          "is_directory": false
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+      "method": "HTTP Range 7z directory only; no member extraction",
+      "archive_size_bytes": 4128929522,
+      "bytes_transferred": 7333,
+      "requests": 9,
+      "complete": true,
+      "files": [
+        {
+          "path": "4_Ageing",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_11",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_26",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_28",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_45",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_57",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_1",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_12",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_16",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_22",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_23",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_25",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_27",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_29",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_3",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_30",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_34",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_35",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_40",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_42",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_43",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_46",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_47",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_49",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_5",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_50",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_53",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_56",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_64",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_66",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_70",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_89",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_9",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_93",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/EIS_data",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_11/Cell_11.csv",
+          "size_bytes": 650983310,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_11/Cell_11_CapacityResistanceTrend.png",
+          "size_bytes": 93255,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_11/Cell_11_CheckupDischarge.png",
+          "size_bytes": 200538,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_11/Cell_11_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_11/Cell_11_Overview.png",
+          "size_bytes": 145232,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_11/Cell_11_Resistance.png",
+          "size_bytes": 154446,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_26/Cell_26.csv",
+          "size_bytes": 1337582133,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_26/Cell_26_CapacityResistanceTrend.png",
+          "size_bytes": 96218,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_26/Cell_26_CheckupDischarge.png",
+          "size_bytes": 132665,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_26/Cell_26_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_26/Cell_26_Overview.png",
+          "size_bytes": 132665,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_26/Cell_26_Resistance.png",
+          "size_bytes": 183430,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_28/Cell_28.csv",
+          "size_bytes": 1222031514,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_28/Cell_28_CapacityResistanceTrend.png",
+          "size_bytes": 96434,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_28/Cell_28_CheckupDischarge.png",
+          "size_bytes": 231817,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_28/Cell_28_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_28/Cell_28_Overview.png",
+          "size_bytes": 162845,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_28/Cell_28_Resistance.png",
+          "size_bytes": 156970,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_45/Cell_45.csv",
+          "size_bytes": 1338904657,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_45/Cell_45_CapacityResistanceTrend.png",
+          "size_bytes": 91911,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_45/Cell_45_CheckupDischarge.png",
+          "size_bytes": 97923,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_45/Cell_45_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_45/Cell_45_Overview.png",
+          "size_bytes": 97923,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_45/Cell_45_Resistance.png",
+          "size_bytes": 189248,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_57/Cell_57.csv",
+          "size_bytes": 690816497,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_57/Cell_57_CapacityResistanceTrend.png",
+          "size_bytes": 94272,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_57/Cell_57_CheckupDischarge.png",
+          "size_bytes": 178041,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_57/Cell_57_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_57/Cell_57_Overview.png",
+          "size_bytes": 146182,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/Cell_57/Cell_57_Resistance.png",
+          "size_bytes": 168424,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/CheckupResistanceVsTime_CalendarAgeingEffect_.png",
+          "size_bytes": 547424,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/OverviewCapacityData_5cell.csv",
+          "size_bytes": 5230,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/OverviewResistanceData_5cell.csv",
+          "size_bytes": 5411,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Calendar_ageing_data/RelativeCapacityVsTime_CalendarAgeingEffect_.png",
+          "size_bytes": 387851,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1.csv",
+          "size_bytes": 1362659153,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1_CapacityResistanceTrend.png",
+          "size_bytes": 94232,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1_CheckupDischarge.png",
+          "size_bytes": 153428,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1_dVdtAnalysis.png",
+          "size_bytes": 112878,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1_Overview.png",
+          "size_bytes": 149486,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1_Resistance.png",
+          "size_bytes": 133707,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12.csv",
+          "size_bytes": 783584576,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12_CapacityResistanceTrend.png",
+          "size_bytes": 98069,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12_CheckupDischarge.png",
+          "size_bytes": 251392,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12_dVdtAnalysis.png",
+          "size_bytes": 149069,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12_Overview.png",
+          "size_bytes": 160250,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12_Resistance.png",
+          "size_bytes": 155743,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16.csv",
+          "size_bytes": 720845703,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16_CapacityResistanceTrend.png",
+          "size_bytes": 97884,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16_CheckupDischarge.png",
+          "size_bytes": 202526,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16_dVdtAnalysis.png",
+          "size_bytes": 149985,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16_Overview.png",
+          "size_bytes": 160821,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16_Resistance.png",
+          "size_bytes": 134404,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17.csv",
+          "size_bytes": 2126792279,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17_CapacityResistanceTrend.png",
+          "size_bytes": 95413,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17_CheckupDischarge.png",
+          "size_bytes": 103743,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17_Overview.png",
+          "size_bytes": 103743,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17_Resistance.png",
+          "size_bytes": 179258,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_17/tmpv958ppf_",
+          "size_bytes": 298844273,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22.csv",
+          "size_bytes": 1279111408,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22_CapacityResistanceTrend.png",
+          "size_bytes": 93011,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22_CheckupDischarge.png",
+          "size_bytes": 247935,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22_dVdtAnalysis.png",
+          "size_bytes": 109022,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22_Overview.png",
+          "size_bytes": 158947,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22_Resistance.png",
+          "size_bytes": 118154,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23.csv",
+          "size_bytes": 797762242,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23_CapacityResistanceTrend.png",
+          "size_bytes": 97458,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23_CheckupDischarge.png",
+          "size_bytes": 226915,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23_dVdtAnalysis.png",
+          "size_bytes": 151874,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23_Overview.png",
+          "size_bytes": 163942,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23_Resistance.png",
+          "size_bytes": 157292,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25.csv",
+          "size_bytes": 1749526214,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25_CapacityResistanceTrend.png",
+          "size_bytes": 99241,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25_CheckupDischarge.png",
+          "size_bytes": 288706,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25_dVdtAnalysis.png",
+          "size_bytes": 165357,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25_Overview.png",
+          "size_bytes": 234757,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25_Resistance.png",
+          "size_bytes": 187505,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27.csv",
+          "size_bytes": 761756566,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27_CapacityResistanceTrend.png",
+          "size_bytes": 97848,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27_CheckupDischarge.png",
+          "size_bytes": 229603,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27_dVdtAnalysis.png",
+          "size_bytes": 148003,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27_Overview.png",
+          "size_bytes": 163187,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27_Resistance.png",
+          "size_bytes": 154246,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29.csv",
+          "size_bytes": 1372941362,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29_CapacityResistanceTrend.png",
+          "size_bytes": 93109,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29_CheckupDischarge.png",
+          "size_bytes": 166746,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29_dVdtAnalysis.png",
+          "size_bytes": 109782,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29_Overview.png",
+          "size_bytes": 146815,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29_Resistance.png",
+          "size_bytes": 136788,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3.csv",
+          "size_bytes": 1357155795,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3_CapacityResistanceTrend.png",
+          "size_bytes": 93480,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3_CheckupDischarge.png",
+          "size_bytes": 163122,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3_dVdtAnalysis.png",
+          "size_bytes": 106684,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3_Overview.png",
+          "size_bytes": 158932,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3_Resistance.png",
+          "size_bytes": 131109,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30.csv",
+          "size_bytes": 756520284,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30_CapacityResistanceTrend.png",
+          "size_bytes": 98620,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30_CheckupDischarge.png",
+          "size_bytes": 217572,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30_dVdtAnalysis.png",
+          "size_bytes": 151873,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30_Overview.png",
+          "size_bytes": 161361,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30_Resistance.png",
+          "size_bytes": 154673,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34.csv",
+          "size_bytes": 282472415,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34_CapacityResistanceTrend.png",
+          "size_bytes": 86403,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34_CheckupDischarge.png",
+          "size_bytes": 199296,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34_dVdtAnalysis.png",
+          "size_bytes": 162791,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34_Overview.png",
+          "size_bytes": 161593,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34_Resistance.png",
+          "size_bytes": 90568,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35.csv",
+          "size_bytes": 230322567,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35_CapacityResistanceTrend.png",
+          "size_bytes": 101043,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35_CheckupDischarge.png",
+          "size_bytes": 206442,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35_dVdtAnalysis.png",
+          "size_bytes": 215745,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35_Overview.png",
+          "size_bytes": 264905,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35_Resistance.png",
+          "size_bytes": 118414,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40.csv",
+          "size_bytes": 1389572639,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40_CapacityResistanceTrend.png",
+          "size_bytes": 94372,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40_CheckupDischarge.png",
+          "size_bytes": 179959,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40_dVdtAnalysis.png",
+          "size_bytes": 109729,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40_Overview.png",
+          "size_bytes": 157584,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40_Resistance.png",
+          "size_bytes": 145189,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42.csv",
+          "size_bytes": 3952561974,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42_CapacityResistanceTrend.png",
+          "size_bytes": 91719,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42_CheckupDischarge.png",
+          "size_bytes": 177949,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42_dVdtAnalysis.png",
+          "size_bytes": 105139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42_Overview.png",
+          "size_bytes": 218402,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42_Resistance.png",
+          "size_bytes": 129015,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43.csv",
+          "size_bytes": 785608221,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43_CapacityResistanceTrend.png",
+          "size_bytes": 98956,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43_CheckupDischarge.png",
+          "size_bytes": 266736,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43_dVdtAnalysis.png",
+          "size_bytes": 151176,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43_Overview.png",
+          "size_bytes": 164926,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43_Resistance.png",
+          "size_bytes": 155937,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46.csv",
+          "size_bytes": 6213873569,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46_CapacityResistanceTrend.png",
+          "size_bytes": 96408,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46_CheckupDischarge.png",
+          "size_bytes": 220997,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46_Overview.png",
+          "size_bytes": 230535,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46_Resistance.png",
+          "size_bytes": 158220,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47.csv",
+          "size_bytes": 1339666385,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47_CapacityResistanceTrend.png",
+          "size_bytes": 97333,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47_CheckupDischarge.png",
+          "size_bytes": 307306,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47_dVdtAnalysis.png",
+          "size_bytes": 157804,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47_Overview.png",
+          "size_bytes": 195441,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47_Resistance.png",
+          "size_bytes": 196371,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49.csv",
+          "size_bytes": 1329869982,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49_CapacityResistanceTrend.png",
+          "size_bytes": 96871,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49_CheckupDischarge.png",
+          "size_bytes": 312371,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49_dVdtAnalysis.png",
+          "size_bytes": 157442,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49_Overview.png",
+          "size_bytes": 175625,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49_Resistance.png",
+          "size_bytes": 171681,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5.csv",
+          "size_bytes": 1387292191,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5_CapacityResistanceTrend.png",
+          "size_bytes": 92954,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5_CheckupDischarge.png",
+          "size_bytes": 187105,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5_dVdtAnalysis.png",
+          "size_bytes": 109453,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5_Overview.png",
+          "size_bytes": 154324,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5_Resistance.png",
+          "size_bytes": 118235,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50.csv",
+          "size_bytes": 2079824320,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50_CapacityResistanceTrend.png",
+          "size_bytes": 95108,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50_CheckupDischarge.png",
+          "size_bytes": 259531,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50_Overview.png",
+          "size_bytes": 249451,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50_Resistance.png",
+          "size_bytes": 159665,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53.csv",
+          "size_bytes": 1841722767,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53_CapacityResistanceTrend.png",
+          "size_bytes": 98113,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53_CheckupDischarge.png",
+          "size_bytes": 266128,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53_dVdtAnalysis.png",
+          "size_bytes": 165877,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53_Overview.png",
+          "size_bytes": 202510,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53_Resistance.png",
+          "size_bytes": 168558,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_56/Cell_56.csv",
+          "size_bytes": 262614419,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_56/Cell_56_CheckupDischarge.png",
+          "size_bytes": 152261,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_56/Cell_56_Overview.png",
+          "size_bytes": 198032,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_56/Cell_56_Resistance.png",
+          "size_bytes": 112817,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_56/OCPDis_Cell_56.csv",
+          "size_bytes": 25781,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60.csv",
+          "size_bytes": 820102676,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60_CapacityResistanceTrend.png",
+          "size_bytes": 99409,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60_CheckupDischarge.png",
+          "size_bytes": 238665,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60_dVdtAnalysis.png",
+          "size_bytes": 163462,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60_Overview.png",
+          "size_bytes": 173430,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60_Resistance.png",
+          "size_bytes": 178302,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_60/OCPDis_Cell_60.csv",
+          "size_bytes": 84295,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63.csv",
+          "size_bytes": 813149212,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63_CapacityResistanceTrend.png",
+          "size_bytes": 98588,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63_CheckupDischarge.png",
+          "size_bytes": 219643,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63_dVdtAnalysis.png",
+          "size_bytes": 151681,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63_Overview.png",
+          "size_bytes": 176202,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63_Resistance.png",
+          "size_bytes": 170346,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_63/OCPDis_Cell_63.csv",
+          "size_bytes": 84324,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64.csv",
+          "size_bytes": 1584534814,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64_CapacityResistanceTrend.png",
+          "size_bytes": 96387,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64_CheckupDischarge.png",
+          "size_bytes": 226126,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64_dVdtAnalysis.png",
+          "size_bytes": 186009,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64_Overview.png",
+          "size_bytes": 277858,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64_Resistance.png",
+          "size_bytes": 155467,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66.csv",
+          "size_bytes": 439430474,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66_CapacityResistanceTrend.png",
+          "size_bytes": 90485,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66_CheckupDischarge.png",
+          "size_bytes": 254679,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66_dVdtAnalysis.png",
+          "size_bytes": 163900,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66_Overview.png",
+          "size_bytes": 179713,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66_Resistance.png",
+          "size_bytes": 127365,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68.csv",
+          "size_bytes": 419961233,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68_CapacityResistanceTrend.png",
+          "size_bytes": 109315,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68_CheckupDischarge.png",
+          "size_bytes": 252027,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68_dVdtAnalysis.png",
+          "size_bytes": 198703,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68_Overview.png",
+          "size_bytes": 229573,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68_Resistance.png",
+          "size_bytes": 155406,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_68/OCPDis_Cell_68.csv",
+          "size_bytes": 45347,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70.csv",
+          "size_bytes": 1916565882,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70_CapacityResistanceTrend.png",
+          "size_bytes": 93069,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70_CheckupDischarge.png",
+          "size_bytes": 104417,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70_dVdtAnalysis.png",
+          "size_bytes": 177002,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70_Overview.png",
+          "size_bytes": 104417,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70_Resistance.png",
+          "size_bytes": 133268,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71.csv",
+          "size_bytes": 441353062,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71_CapacityResistanceTrend.png",
+          "size_bytes": 91908,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71_CheckupDischarge.png",
+          "size_bytes": 209594,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71_dVdtAnalysis.png",
+          "size_bytes": 180626,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71_Overview.png",
+          "size_bytes": 183023,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71_Resistance.png",
+          "size_bytes": 130531,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_71/OCPDis_Cell_71.csv",
+          "size_bytes": 45394,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72.csv",
+          "size_bytes": 2639104576,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72_CapacityResistanceTrend.png",
+          "size_bytes": 90794,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72_CheckupDischarge.png",
+          "size_bytes": 202175,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72_dVdtAnalysis.png",
+          "size_bytes": 186569,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72_Overview.png",
+          "size_bytes": 176597,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72_Resistance.png",
+          "size_bytes": 133329,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_72/OCPDis_Cell_72.csv",
+          "size_bytes": 45542,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74.csv",
+          "size_bytes": 3207057515,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74_CapacityResistanceTrend.png",
+          "size_bytes": 87952,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74_CheckupDischarge.png",
+          "size_bytes": 218113,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74_dVdtAnalysis.png",
+          "size_bytes": 21139,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74_Overview.png",
+          "size_bytes": 191597,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74_Resistance.png",
+          "size_bytes": 133582,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_74/OCPDis_Cell_74.csv",
+          "size_bytes": 45162,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8.csv",
+          "size_bytes": 1391165872,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8_CapacityResistanceTrend.png",
+          "size_bytes": 96535,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8_CheckupDischarge.png",
+          "size_bytes": 264148,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8_dVdtAnalysis.png",
+          "size_bytes": 156147,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8_Overview.png",
+          "size_bytes": 154421,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8_Resistance.png",
+          "size_bytes": 182766,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_8/OCPDis_Cell_8.csv",
+          "size_bytes": 69866,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89.csv",
+          "size_bytes": 261919210,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89_CapacityResistanceTrend.png",
+          "size_bytes": 85684,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89_CheckupDischarge.png",
+          "size_bytes": 147524,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89_dVdtAnalysis.png",
+          "size_bytes": 161057,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89_Overview.png",
+          "size_bytes": 210575,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89_Resistance.png",
+          "size_bytes": 109051,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9.csv",
+          "size_bytes": 1369020264,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9_CapacityResistanceTrend.png",
+          "size_bytes": 91840,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9_CheckupDischarge.png",
+          "size_bytes": 173488,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9_dVdtAnalysis.png",
+          "size_bytes": 108826,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9_Overview.png",
+          "size_bytes": 154360,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9_Resistance.png",
+          "size_bytes": 134913,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93.csv",
+          "size_bytes": 262098204,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93_CapacityResistanceTrend.png",
+          "size_bytes": 85174,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93_CheckupDischarge.png",
+          "size_bytes": 156773,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93_dVdtAnalysis.png",
+          "size_bytes": 170560,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93_Overview.png",
+          "size_bytes": 202589,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93_Resistance.png",
+          "size_bytes": 108515,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_AllCells_.png",
+          "size_bytes": 392894,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_AvgSoC_.png",
+          "size_bytes": 440896,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_DriveCycle_.png",
+          "size_bytes": 411129,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_HighVEffect_.png",
+          "size_bytes": 469299,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_StationaryStorage_.png",
+          "size_bytes": 413092,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_VsCrate0DegC_.png",
+          "size_bytes": 472515,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_VsCrate25DegC_.png",
+          "size_bytes": 482086,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_VsCrate45DegC_.png",
+          "size_bytes": 456770,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_VsDoD_.png",
+          "size_bytes": 507004,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/CheckupResistanceVsTime_VsTemperature_.png",
+          "size_bytes": 496206,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/OverviewCapacityData_36cell.csv",
+          "size_bytes": 38790,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/OverviewResistanceData_36cell.csv",
+          "size_bytes": 39851,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_.png",
+          "size_bytes": 495063,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_AvgSoC_.png",
+          "size_bytes": 607815,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_DriveCycle_.png",
+          "size_bytes": 558489,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_HighVEffect_.png",
+          "size_bytes": 576521,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_StationaryStorage_.png",
+          "size_bytes": 578974,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_VsCrate0DegC_.png",
+          "size_bytes": 593643,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_VsCrate25DegC_.png",
+          "size_bytes": 607620,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_VsCrate45DegC_.png",
+          "size_bytes": 586158,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_VsDoD_.png",
+          "size_bytes": 645417,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/Cyclic_ageing_data/RelativeCapacityVsTime_VsTemperature_.png",
+          "size_bytes": 615953,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_11_impedanceData.csv",
+          "size_bytes": 8102,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_11_impedanceData_NyquistPlot.png",
+          "size_bytes": 85513,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_11_timeseriesData.csv",
+          "size_bytes": 446464,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_12_impedanceData.csv",
+          "size_bytes": 8099,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_12_impedanceData_NyquistPlot.png",
+          "size_bytes": 84011,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_12_timeseriesData.csv",
+          "size_bytes": 884736,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_16_impedanceData.csv",
+          "size_bytes": 8055,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_16_impedanceData_NyquistPlot.png",
+          "size_bytes": 86953,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_16_timeseriesData.csv",
+          "size_bytes": 278528,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_22_impedanceData.csv",
+          "size_bytes": 6836,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_22_impedanceData_NyquistPlot.png",
+          "size_bytes": 48602,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_22_timeseriesData.csv",
+          "size_bytes": 2095814,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_23_impedanceData.csv",
+          "size_bytes": 8043,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_23_impedanceData_NyquistPlot.png",
+          "size_bytes": 86548,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_23_timeseriesData.csv",
+          "size_bytes": 393216,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_27_impedanceData.csv",
+          "size_bytes": 8032,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_27_impedanceData_NyquistPlot.png",
+          "size_bytes": 83266,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_27_timeseriesData.csv",
+          "size_bytes": 859874,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_30_impedanceData.csv",
+          "size_bytes": 8016,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_30_impedanceData_NyquistPlot.png",
+          "size_bytes": 88207,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_30_timeseriesData.csv",
+          "size_bytes": 491520,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_34_impedanceData.csv",
+          "size_bytes": 8044,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_34_impedanceData_NyquistPlot.png",
+          "size_bytes": 86265,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_34_timeseriesData.csv",
+          "size_bytes": 360448,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_35_impedanceData.csv",
+          "size_bytes": 8075,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_35_impedanceData_NyquistPlot.png",
+          "size_bytes": 84463,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_35_timeseriesData.csv",
+          "size_bytes": 839680,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_42_impedanceData.csv",
+          "size_bytes": 8022,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_42_impedanceData_NyquistPlot.png",
+          "size_bytes": 87756,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_42_timeseriesData.csv",
+          "size_bytes": 274432,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_43_impedanceData.csv",
+          "size_bytes": 8042,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_43_impedanceData_NyquistPlot.png",
+          "size_bytes": 87516,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_43_timeseriesData.csv",
+          "size_bytes": 540672,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_46_impedanceData.csv",
+          "size_bytes": 8039,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_46_impedanceData_NyquistPlot.png",
+          "size_bytes": 80615,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_46_timeseriesData.csv",
+          "size_bytes": 794624,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_47_impedanceData.csv",
+          "size_bytes": 6921,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_47_impedanceData_NyquistPlot.png",
+          "size_bytes": 48608,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_47_timeseriesData.csv",
+          "size_bytes": 2076252,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_56_impedanceData.csv",
+          "size_bytes": 8053,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_56_impedanceData_NyquistPlot.png",
+          "size_bytes": 84754,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_56_timeseriesData.csv",
+          "size_bytes": 8192,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_57_impedanceData.csv",
+          "size_bytes": 8044,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_57_impedanceData_NyquistPlot.png",
+          "size_bytes": 84302,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_57_timeseriesData.csv",
+          "size_bytes": 73728,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_60_impedanceData.csv",
+          "size_bytes": 8059,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_60_impedanceData_NyquistPlot.png",
+          "size_bytes": 87583,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_60_timeseriesData.csv",
+          "size_bytes": 344064,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_63_impedanceData.csv",
+          "size_bytes": 8054,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_63_impedanceData_NyquistPlot.png",
+          "size_bytes": 85528,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_63_timeseriesData.csv",
+          "size_bytes": 262144,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_66_impedanceData.csv",
+          "size_bytes": 8052,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_66_impedanceData_NyquistPlot.png",
+          "size_bytes": 83070,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_66_timeseriesData.csv",
+          "size_bytes": 770048,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_68_impedanceData.csv",
+          "size_bytes": 8103,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_68_impedanceData_NyquistPlot.png",
+          "size_bytes": 85662,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_68_timeseriesData.csv",
+          "size_bytes": 352256,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_71_impedanceData.csv",
+          "size_bytes": 8054,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_71_impedanceData_NyquistPlot.png",
+          "size_bytes": 90103,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_71_timeseriesData.csv",
+          "size_bytes": 311296,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_72_impedanceData.csv",
+          "size_bytes": 8014,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_72_impedanceData_NyquistPlot.png",
+          "size_bytes": 88011,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_72_timeseriesData.csv",
+          "size_bytes": 544206,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_74_impedanceData.csv",
+          "size_bytes": 8042,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_74_impedanceData_NyquistPlot.png",
+          "size_bytes": 85715,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_74_timeseriesData.csv",
+          "size_bytes": 8192,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_89_impedanceData.csv",
+          "size_bytes": 8024,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_89_impedanceData_NyquistPlot.png",
+          "size_bytes": 87741,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_89_timeseriesData.csv",
+          "size_bytes": 720896,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_93_impedanceData.csv",
+          "size_bytes": 8051,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_93_impedanceData_NyquistPlot.png",
+          "size_bytes": 86832,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_93_timeseriesData.csv",
+          "size_bytes": 720896,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_9_impedanceData.csv",
+          "size_bytes": 6842,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_9_impedanceData_NyquistPlot.png",
+          "size_bytes": 51188,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/1_BOL_EIS/Cell_9_timeseriesData.csv",
+          "size_bytes": 2082842,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_11_impedanceData.csv",
+          "size_bytes": 8060,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_11_impedanceData_NyquistPlot.png",
+          "size_bytes": 84896,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_11_timeseriesData.csv",
+          "size_bytes": 1038083,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_12_impedanceData.csv",
+          "size_bytes": 8078,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_12_impedanceData_NyquistPlot.png",
+          "size_bytes": 83896,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_12_timeseriesData.csv",
+          "size_bytes": 1026866,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_16_impedanceData.csv",
+          "size_bytes": 8039,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_16_impedanceData_NyquistPlot.png",
+          "size_bytes": 87593,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_16_timeseriesData.csv",
+          "size_bytes": 1033116,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_22_impedanceData.csv",
+          "size_bytes": 6774,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_22_impedanceData_NyquistPlot.png",
+          "size_bytes": 49910,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_22_timeseriesData.csv",
+          "size_bytes": 2215161,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_23_impedanceData.csv",
+          "size_bytes": 8031,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_23_impedanceData_NyquistPlot.png",
+          "size_bytes": 86835,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_23_timeseriesData.csv",
+          "size_bytes": 1035372,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_27_impedanceData.csv",
+          "size_bytes": 8021,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_27_impedanceData_NyquistPlot.png",
+          "size_bytes": 82958,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_27_timeseriesData.csv",
+          "size_bytes": 1026065,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_30_impedanceData.csv",
+          "size_bytes": 8036,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_30_impedanceData_NyquistPlot.png",
+          "size_bytes": 86735,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_30_timeseriesData.csv",
+          "size_bytes": 1045436,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_42_impedanceData.csv",
+          "size_bytes": 8033,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_42_impedanceData_NyquistPlot.png",
+          "size_bytes": 82923,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_42_timeseriesData.csv",
+          "size_bytes": 1067675,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_43_impedanceData.csv",
+          "size_bytes": 8028,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_43_impedanceData_NyquistPlot.png",
+          "size_bytes": 89698,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_43_timeseriesData.csv",
+          "size_bytes": 1018622,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_46_impedanceData.csv",
+          "size_bytes": 8049,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_46_impedanceData_NyquistPlot.png",
+          "size_bytes": 83042,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_46_timeseriesData.csv",
+          "size_bytes": 1027519,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_47_impedanceData.csv",
+          "size_bytes": 6878,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_47_impedanceData_NyquistPlot.png",
+          "size_bytes": 56521,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_47_timeseriesData.csv",
+          "size_bytes": 1967304,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_57_impedanceData.csv",
+          "size_bytes": 8053,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_57_impedanceData_NyquistPlot.png",
+          "size_bytes": 90266,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_57_timeseriesData.csv",
+          "size_bytes": 1033855,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_60_impedanceData.csv",
+          "size_bytes": 8035,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_60_impedanceData_NyquistPlot.png",
+          "size_bytes": 92305,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_60_timeseriesData.csv",
+          "size_bytes": 1029449,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_63_impedanceData.csv",
+          "size_bytes": 8036,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_63_impedanceData_NyquistPlot.png",
+          "size_bytes": 82492,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_63_timeseriesData.csv",
+          "size_bytes": 1036883,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_68_impedanceData.csv",
+          "size_bytes": 7978,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_68_impedanceData_NyquistPlot.png",
+          "size_bytes": 95931,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_68_timeseriesData.csv",
+          "size_bytes": 921441,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_9_impedanceData.csv",
+          "size_bytes": 6782,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_9_impedanceData_NyquistPlot.png",
+          "size_bytes": 49791,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/2_MOL_EIS/Cell_9_timeseriesData.csv",
+          "size_bytes": 2036763,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_11_impedanceData.csv",
+          "size_bytes": 8020,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_11_impedanceData_NyquistPlot.png",
+          "size_bytes": 100281,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_11_timeseriesData.csv",
+          "size_bytes": 1047173,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_12_impedanceData.csv",
+          "size_bytes": 8057,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_12_impedanceData_NyquistPlot.png",
+          "size_bytes": 98081,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_12_timeseriesData.csv",
+          "size_bytes": 1021554,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_16_impedanceData.csv",
+          "size_bytes": 8037,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_16_impedanceData_NyquistPlot.png",
+          "size_bytes": 95981,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_16_timeseriesData.csv",
+          "size_bytes": 1037625,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_22_impedanceData.csv",
+          "size_bytes": 6891,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_22_impedanceData_NyquistPlot.png",
+          "size_bytes": 57660,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_22_timeseriesData.csv",
+          "size_bytes": 2278055,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_23_impedanceData.csv",
+          "size_bytes": 8026,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_23_impedanceData_NyquistPlot.png",
+          "size_bytes": 99162,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_23_timeseriesData.csv",
+          "size_bytes": 1032909,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_27_impedanceData.csv",
+          "size_bytes": 8010,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_27_impedanceData_NyquistPlot.png",
+          "size_bytes": 104251,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_27_timeseriesData.csv",
+          "size_bytes": 1030027,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_30_impedanceData.csv",
+          "size_bytes": 8028,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_30_impedanceData_NyquistPlot.png",
+          "size_bytes": 98041,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_30_timeseriesData.csv",
+          "size_bytes": 299008,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_34_impedanceData.csv",
+          "size_bytes": 7982,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_34_impedanceData_NyquistPlot.png",
+          "size_bytes": 114753,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_34_timeseriesData.csv",
+          "size_bytes": 798267,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_35_impedanceData.csv",
+          "size_bytes": 7948,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_35_impedanceData_NyquistPlot.png",
+          "size_bytes": 114421,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_35_timeseriesData.csv",
+          "size_bytes": 1007022,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_42_impedanceData.csv",
+          "size_bytes": 8040,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_42_impedanceData_NyquistPlot.png",
+          "size_bytes": 103524,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_42_timeseriesData.csv",
+          "size_bytes": 303104,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_43_impedanceData.csv",
+          "size_bytes": 8046,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_43_impedanceData_NyquistPlot.png",
+          "size_bytes": 96580,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_43_timeseriesData.csv",
+          "size_bytes": 598016,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_46_impedanceData.csv",
+          "size_bytes": 8038,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_46_impedanceData_NyquistPlot.png",
+          "size_bytes": 83861,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_46_timeseriesData.csv",
+          "size_bytes": 573440,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_47_impedanceData.csv",
+          "size_bytes": 6936,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_47_impedanceData_NyquistPlot.png",
+          "size_bytes": 51530,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_47_timeseriesData.csv",
+          "size_bytes": 1516619,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_56_impedanceData.csv",
+          "size_bytes": 8015,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_56_impedanceData_NyquistPlot.png",
+          "size_bytes": 97588,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_56_timeseriesData.csv",
+          "size_bytes": 278528,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_57_impedanceData.csv",
+          "size_bytes": 8029,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_57_impedanceData_NyquistPlot.png",
+          "size_bytes": 97944,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_57_timeseriesData.csv",
+          "size_bytes": 245760,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_60_impedanceData.csv",
+          "size_bytes": 8021,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_60_impedanceData_NyquistPlot.png",
+          "size_bytes": 108309,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_60_timeseriesData.csv",
+          "size_bytes": 229376,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_63_impedanceData.csv",
+          "size_bytes": 8042,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_63_impedanceData_NyquistPlot.png",
+          "size_bytes": 97508,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_63_timeseriesData.csv",
+          "size_bytes": 327680,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_89_impedanceData.csv",
+          "size_bytes": 8048,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_89_impedanceData_NyquistPlot.png",
+          "size_bytes": 99122,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_89_timeseriesData.csv",
+          "size_bytes": 548864,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_93_impedanceData.csv",
+          "size_bytes": 8056,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_93_impedanceData_NyquistPlot.png",
+          "size_bytes": 91889,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_93_timeseriesData.csv",
+          "size_bytes": 540672,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_9_impedanceData.csv",
+          "size_bytes": 6927,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_9_impedanceData_NyquistPlot.png",
+          "size_bytes": 54926,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/3_EOL_EIS/Cell_9_timeseriesData.csv",
+          "size_bytes": 1554062,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/EIS_data/EIS_DataOverview.md",
+          "size_bytes": 2682,
+          "is_directory": false
+        },
+        {
+          "path": "4_Ageing/README_ageing.md",
+          "size_bytes": 8813,
+          "is_directory": false
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+      "method": "HTTP Range zip directory only; no member extraction",
+      "archive_size_bytes": 12421433,
+      "bytes_transferred": 5250,
+      "requests": 3,
+      "complete": true,
+      "files": [
+        {
+          "path": "MOLICEL_P45B_010degC_1C_Dch.csv",
+          "size_bytes": 457673,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_3C_Ch.csv",
+          "size_bytes": 112627,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_3C_Ch-charge.csv",
+          "size_bytes": 112633,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_3C_Dch.csv",
+          "size_bytes": 148782,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_10C_Dch.csv",
+          "size_bytes": 22630,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_Co30_Ch.csv",
+          "size_bytes": 124815,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_Co30_Dch.csv",
+          "size_bytes": 138131,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_GITT_Ch.csv",
+          "size_bytes": 3683369,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_GITT_Dch.csv",
+          "size_bytes": 3345944,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_WLTP.csv",
+          "size_bytes": 3246264,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_1C_Ch.csv",
+          "size_bytes": 458521,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_1C_Ch-charge.csv",
+          "size_bytes": 458983,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_1C_Dch.csv",
+          "size_bytes": 481045,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_3C_Ch.csv",
+          "size_bytes": 119987,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_3C_Ch-charge.csv",
+          "size_bytes": 119952,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_3C_Dch.csv",
+          "size_bytes": 154680,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_10C_Dch.csv",
+          "size_bytes": 38760,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_Co30_Ch.csv",
+          "size_bytes": 127725,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_Co30_Dch.csv",
+          "size_bytes": 139378,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_eVTOL.csv",
+          "size_bytes": 771916,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_GITT_Ch.csv",
+          "size_bytes": 3755984,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_GITT_Dch.csv",
+          "size_bytes": 3516570,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_025degC_WLTP.csv",
+          "size_bytes": 3374036,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_1C_Ch.csv",
+          "size_bytes": 479816,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_1C_Ch-charge.csv",
+          "size_bytes": 480066,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_1C_Dch.csv",
+          "size_bytes": 496755,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_3C_Ch.csv",
+          "size_bytes": 127009,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_3C_Ch-charge.csv",
+          "size_bytes": 127052,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_3C_Dch.csv",
+          "size_bytes": 161219,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_10C_Dch.csv",
+          "size_bytes": 45171,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_Co30_Ch.csv",
+          "size_bytes": 129350,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_Co30_Dch.csv",
+          "size_bytes": 138445,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_eVTOL.csv",
+          "size_bytes": 773376,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_GITT_Ch.csv",
+          "size_bytes": 3828899,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_GITT_Dch.csv",
+          "size_bytes": 3662128,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_040degC_WLTP.csv",
+          "size_bytes": 3408420,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_1C_Ch.csv",
+          "size_bytes": 502054,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_1C_Ch-charge.csv",
+          "size_bytes": 502267,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_1C_Dch.csv",
+          "size_bytes": 518165,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_3C_Ch.csv",
+          "size_bytes": 130978,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_3C_Ch-charge.csv",
+          "size_bytes": 130891,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_3C_Dch.csv",
+          "size_bytes": 165082,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_10C_Dch.csv",
+          "size_bytes": 45491,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_Co30_Ch.csv",
+          "size_bytes": 132061,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_Co30_Dch.csv",
+          "size_bytes": 137153,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_eVTOL.csv",
+          "size_bytes": 770116,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_GITT_Ch.csv",
+          "size_bytes": 3779761,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_GITT_Dch.csv",
+          "size_bytes": 3658680,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_060degC_WLTP.csv",
+          "size_bytes": 3335725,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_1C_Ch.csv",
+          "size_bytes": 418829,
+          "is_directory": false
+        },
+        {
+          "path": "MOLICEL_P45B_010degC_1C_Ch-charge.csv",
+          "size_bytes": 419175,
+          "is_directory": false
+        }
+      ]
+    },
+    {
+      "source_url": "https://zenodo.org/api/records/4864437/files/brosaplanella/TEC-reduced-model-v1.0.zip/content",
+      "method": "HTTP Range zip directory only; no member extraction",
+      "archive_size_bytes": 23155564,
+      "bytes_transferred": 75588,
+      "requests": 4,
+      "complete": true,
+      "files": [
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/.flake8",
+          "size_bytes": 863,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/.gitignore",
+          "size_bytes": 1872,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/LICENSE",
+          "size_bytes": 1529,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/README.md",
+          "size_bytes": 3281,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell781_0p1C_0degC.csv",
+          "size_bytes": 26045,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell782_0p1C_0degC.csv",
+          "size_bytes": 240678,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell783_0p1C_0degC.csv",
+          "size_bytes": 240203,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell784_0p1C_0degC.csv",
+          "size_bytes": 239883,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell785_0p5C_0degC.csv",
+          "size_bytes": 194007,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell786_0p5C_0degC.csv",
+          "size_bytes": 146163,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell787_0p5C_0degC.csv",
+          "size_bytes": 147008,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell788_0p5C_0degC.csv",
+          "size_bytes": 146005,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell789_1C_0degC.csv",
+          "size_bytes": 6874643,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell790_1C_0degC.csv",
+          "size_bytes": 5249755,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell791_1C_0degC.csv",
+          "size_bytes": 5252007,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell792_1C_0degC.csv",
+          "size_bytes": 5243720,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell793_2C_0degC.csv",
+          "size_bytes": 6723825,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell794_2C_0degC.csv",
+          "size_bytes": 5011165,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell795_2C_0degC.csv",
+          "size_bytes": 4997714,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/0degC/Cell796_2C_0degC.csv",
+          "size_bytes": 6244937,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell781_0p1C_10degC.csv",
+          "size_bytes": 335946,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell782_0p1C_10degC.csv",
+          "size_bytes": 247320,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell783_0p1C_10degC.csv",
+          "size_bytes": 247444,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell784_0p1C_10degC.csv",
+          "size_bytes": 245820,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell785_0p5C_10degC.csv",
+          "size_bytes": 198587,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell786_0p5C_10degC.csv",
+          "size_bytes": 150847,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell787_0p5C_10degC.csv",
+          "size_bytes": 150237,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell788_0p5C_10degC.csv",
+          "size_bytes": 150086,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell789_1C_10degC.csv",
+          "size_bytes": 7013347,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell790_1C_10degC.csv",
+          "size_bytes": 6460727,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell791_1C_10degC.csv",
+          "size_bytes": 5223963,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell792_1C_10degC.csv",
+          "size_bytes": 6462994,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell793_2C_10degC.csv",
+          "size_bytes": 6647627,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell794_2C_10degC.csv",
+          "size_bytes": 4929647,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell795_2C_10degC.csv",
+          "size_bytes": 4919834,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/10degC/Cell796_2C_10degC.csv",
+          "size_bytes": 6106405,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell781_0p1C_25degC.csv",
+          "size_bytes": 319362,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell782_0p1C_25degC.csv",
+          "size_bytes": 257412,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell783_0p1C_25degC.csv",
+          "size_bytes": 253748,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell784_0p1C_25degC.csv",
+          "size_bytes": 253216,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell785_0p5C_25degC.csv",
+          "size_bytes": 173151,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell786_0p5C_25degC.csv",
+          "size_bytes": 147534,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell787_0p5C_25degC.csv",
+          "size_bytes": 147620,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell788_0p5C_25degC.csv",
+          "size_bytes": 146893,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell789_1C_25degC.csv",
+          "size_bytes": 5758101,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell790_1C_25degC.csv",
+          "size_bytes": 4928577,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell791_1C_25degC.csv",
+          "size_bytes": 4923055,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell792_1C_25degC.csv",
+          "size_bytes": 4928787,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell793_2C_25degC.csv",
+          "size_bytes": 5361309,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell794_2C_25degC.csv",
+          "size_bytes": 4559617,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell795_2C_25degC.csv",
+          "size_bytes": 4556006,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/data/25degC/Cell796_2C_25degC.csv",
+          "size_bytes": 1480069,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/figures/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/figures/comp_exp_0degC.png",
+          "size_bytes": 317605,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/figures/comp_exp_10degC.png",
+          "size_bytes": 317347,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/figures/comp_exp_25degC.png",
+          "size_bytes": 308460,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/figures/comp_models_0degC.png",
+          "size_bytes": 220721,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/figures/comp_models_10degC.png",
+          "size_bytes": 220852,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/figures/comp_models_25degC.png",
+          "size_bytes": 220417,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/notebooks/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/notebooks/compare_TSPMe_TDFN.ipynb",
+          "size_bytes": 84625,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/notebooks/compare_TSPMe_data.ipynb",
+          "size_bytes": 61609,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/notebooks/plot_experimental_data.ipynb",
+          "size_bytes": 114062,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/requirements.txt",
+          "size_bytes": 62,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/scripts/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/scripts/compare_TSPMe_TDFN.py",
+          "size_bytes": 5672,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/scripts/compare_TSPMe_data.py",
+          "size_bytes": 7905,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/scripts/compare_TSPMe_data_mean.py",
+          "size_bytes": 8394,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/scripts/compare_mesh_points.py",
+          "size_bytes": 1378,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/scripts/plot_OCVs.py",
+          "size_bytes": 898,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/scripts/time_TSPMe_TDFN.py",
+          "size_bytes": 2153,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/setup.py",
+          "size_bytes": 692,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/tec_reduced_model/",
+          "size_bytes": 0,
+          "is_directory": true
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/tec_reduced_model/__init__.py",
+          "size_bytes": 0,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/tec_reduced_model/process_experimental_data.py",
+          "size_bytes": 2621,
+          "is_directory": false
+        },
+        {
+          "path": "brosaplanella-TEC-reduced-model-978f8c3/tec_reduced_model/set_parameters.py",
+          "size_bytes": 2112,
+          "is_directory": false
+        }
+      ]
     }
   ]
 }

@@ -10,6 +10,16 @@ Material families: NCA. Panasonic NCR18650B 3350 mAh NCA/graphite; only the NCA 
 
 DOI: 10.17632/kxsbr4x3j2.2. Checked: 2026-10-23.
 
+## Electrode OCP anchor
+
+**Not identified**. No matched electrode half-cell file was verified for this external source in this review. Whole-cell OCV, EIS or chemistry alone does not supply electrode OCP.
+
+Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
+
+Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
+
+OCP evidence: [Source 1](https://data.mendeley.com/datasets/kxsbr4x3j2/2)
+
 ## Tests and channels
 
 Types: constant_current, cccv. Profiles: No named drive profile verified.
@@ -34,7 +44,7 @@ The primary paper describes Excel time, current, voltage and thermocouple surfac
 
 Match: `unmatched`. The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.
 
-Missing components: electrode_ocp, diffusion, kinetics.
+Components without a native catalog join: electrode_ocp, diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|

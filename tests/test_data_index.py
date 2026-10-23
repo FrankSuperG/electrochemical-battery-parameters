@@ -126,9 +126,14 @@ def test_aging_column_preserves_unreported_unknown_and_source_level_grain(index)
         assert row["aging_data"] == source["aging_data"]["status"]
         assert row["aging_source_url"] == source["aging_data"]["source_url"]
     overview = index["data/full-cell/README.md"].decode()
-    assert "| Dataset | Materials | Ageing data | License |" in overview
+    assert "| Dataset | Materials | OCP anchor | Ageing data | License |" in overview
     nca = index["data/full-cell/NCA.md"].decode()
     assert "Ageing data" in nca and "Yes (cycle, calendar)" in nca
     files = list(csv.DictReader(io.StringIO(index["data/full-cell/files.csv"].decode())))
     docs = [f for f in files if f["kind"] == "documentation"]
-    assert docs and all(f["dataset_aging_status"] == "available" and not f["test_types"] for f in docs)
+    assert docs and all(not f["test_types"] for f in docs)
+    ageing_docs = [f for f in docs if f["dataset_id"] == "virtual-vehicle-ncr18650b-aging-2023"]
+    assert len(ageing_docs) == 1 and ageing_docs[0]["dataset_aging_status"] == "available"
+    for row, source in zip(rows, catalog.external_datasets):
+        assert row["ocp_anchor"] == source["ocp_anchor"]["kind"]
+        assert json.loads(row["half_cell_temperatures_C"]) == source["ocp_anchor"]["half_cell_temperatures_C"]

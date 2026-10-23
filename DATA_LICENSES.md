@@ -23,6 +23,24 @@ Source MD5 values identify external objects, not independent payload verificatio
 Article terms remain distinct from dataset terms. See [the source guide](docs/NCR18650B.md)
 for exact records, matching limits and reuse evidence.
 
+## OCP-first external links in v0.11
+
+NEXTBMS Zenodo 22301764 and P45B experimental release 19052626 state CC BY 4.0.
+The P45B README retains copyright/liability notices; its separately linked BPX
+parameter package is in the pinned BSD-3-Clause AEPyBaMM repository. TEC2021 data
+and code are linked from the BSD-3-Clause author repository; its Zenodo record
+uses the less-specific `other-open` label. LG MJ1 SNU v2 states CC BY 4.0.
+
+TUM's MATLAB framework is MIT, but its README explicitly asks users to check
+licenses and attribution for published input data. No blanket measurement-data
+grant is imposed on that collection; data reuse remains unresolved in the
+external record. The Python mirror's BSD license is not substituted for it.
+Third-party curves and reconstructed silicon retain their respective origins.
+
+All additions are links and review metadata. No new experimental observations,
+BPX arrays, source scripts or document payloads are redistributed or executed.
+See [the OCP-first source ledger](docs/OCP_FIRST_EXPANSION.md).
+
 ## LG MJ1 / DLR-SINTEF addition in v0.8
 
 Selected laboratory workbook cells, original Parquet, JSON/JSON-LD and Python evidence files are

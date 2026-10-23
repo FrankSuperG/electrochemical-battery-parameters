@@ -10,6 +10,16 @@ Material families: NMC. Samsung INR18650-20R, 2 Ah; LiNiMnCo/graphite as stated 
 
 DOI: Not assigned in the inspected source. Checked: 2026-10-23.
 
+## Electrode OCP anchor
+
+**Whole-cell OCV only**. The reviewed OCV/pseudo-OCV locators describe the whole cell. No electrode half-cell OCP association is established.
+
+Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
+
+Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
+
+OCP evidence: [Source 1](https://calce.umd.edu/data)
+
 ## Tests and channels
 
 Types: dynamic, ocv, pulse. Profiles: US06, DST, FUDS, BJDST.
@@ -34,7 +44,7 @@ Protocols are described on the source page. Per-file measured channel headers we
 
 Match: `unmatched`. Samsung INR18650-20R has no electrode-characterization parameter package in this catalog. LG M50/M50LT and Mohtat NMC cells are different models/studies.
 
-Missing components: electrode_ocp, diffusion, kinetics.
+Components without a native catalog join: electrode_ocp, diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|

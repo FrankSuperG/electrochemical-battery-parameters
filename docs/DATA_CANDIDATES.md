@@ -86,6 +86,12 @@ verified; this remains an explicit gap rather than an inferred join.
 
 ## 5. O'Regan / LG M50 characterization tables
 
+Follow-up on 2026-10-23: the primary O'Regan paper points to Zenodo 4864437 for
+full-cell comparison data. Its v1.0 TEC2021 archive and author repository have
+now been indexed at 0/10/25 degC with explicit Chen2020 OCP reuse. They remain a
+separate experiment/parameter source; no shared specimen or new independent OCP
+measurement is implied. See [the OCP-first review](OCP_FIRST_EXPANSION.md).
+
 The [Zenodo API](https://zenodo.org/api/records/5171874) specifies CC BY 4.0.
 The 479,705-byte ZIP was downloaded and inspected: 58 CSVs cover two electrode
 specimens, direction and temperature-dependent diffusivities, exchange-current

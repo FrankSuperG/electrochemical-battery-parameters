@@ -2,6 +2,12 @@
 
 Large full-cell datasets can be contributed as [external-link metadata](templates/external-dataset.json), with source versions, test types, material families, licensing and explicit parameter-match evidence. Include `aging_data` with source-backed availability, cycle/calendar kinds and exact linked evidence paths; use `not_reported` or `unverified` for unresolved coverage. Formation or repeated initial tests alone are not measured ageing data. Follow the [source-review guide](docs/FULL_CELL_DATASETS.md); no raw payload or model simulation is needed.
 
+Include `ocp_anchor` (schema 1.3): distinguish measured half-cell sources,
+published fitted parameterisation, reused expressions, cross-study references
+and unresolved reuse. Keep half-cell temperatures separate from full-cell test
+temperatures. Whole-cell OCV and reconstructed pure-silicon curves must not be
+relabeled measured electrode OCP. See the [OCP-first screen](docs/OCP_FIRST_EXPANSION.md).
+
 Contributions are welcome: electrode OCP, diffusion, reaction kinetics, geometry,
 transport, thermal properties and the full-cell experiments that help interpret
 them. A useful contribution can be one well-documented curve or a source lead;

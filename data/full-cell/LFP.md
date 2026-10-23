@@ -6,12 +6,12 @@ Material grouping is a discovery aid, not evidence that tests and parameters bel
 
 ## External datasets
 
-| Dataset / cell | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |
-|---|---|---|---|---|---|
-| [A123 26650 M1B: multi-rate charging and UDDS](uccs-a123-26650m1b-2021.md) | constant_current, cccv, dynamic, pulse, ocv; UDDS | CCCV charging at 1C, 2C, 3C and 4C (25 degC); other tests retain their source protocols. Source temperatures: [-25, -15, -5, 5, 15, 25, 35, 45] | Not reported | CC-BY-4.0 | `unmatched` |
-| [CALCE A123 LFP: OCV, DST and FUDS](calce-a123-dynamic.md) | dynamic, ocv; DST, FUDS, US06 | Low-current OCV and dynamic tests; no source-supported multi-rate CC sweep asserted. Source temperatures: [-10, 0, 10, 20, 25, 30, 40, 50] | Not reported | not-stated | `unmatched` |
-| [University of Malaya: LFP, NCA and NMC dynamic tests](malaya-three-chemistries-2022.md) | dynamic, pulse; US06, DST, FUDS, UDDS, WLTP | HPPC and pulse charge/discharge are described; numeric rates not verified. Source temperatures: not verified | Unverified | CC-BY-4.0 | `unmatched` |
-| [600 mAh LFP cells: SOC-dependent EIS](milano-lfp-eis-2023.md) | eis;  | Repeated EIS across SOC and charging cycles; no CC rate sweep verified. Source temperatures: not verified | Not reported | CC-BY-4.0 | `unmatched` |
+| Dataset / cell | OCP anchor | Tests / profiles | Rates and temperatures | Ageing data | License | Parameter match |
+|---|---|---|---|---|---|---|
+| [A123 26650 M1B: multi-rate charging and UDDS](uccs-a123-26650m1b-2021.md) | Whole-cell OCV only | constant_current, cccv, dynamic, pulse, ocv; UDDS | CCCV charging at 1C, 2C, 3C and 4C (25 degC); other tests retain their source protocols. Source temperatures: [-25, -15, -5, 5, 15, 25, 35, 45] | Not reported | CC-BY-4.0 | `unmatched` |
+| [CALCE A123 LFP: OCV, DST and FUDS](calce-a123-dynamic.md) | Whole-cell OCV only | dynamic, ocv; DST, FUDS, US06 | Low-current OCV and dynamic tests; no source-supported multi-rate CC sweep asserted. Source temperatures: [-10, 0, 10, 20, 25, 30, 40, 50] | Not reported | not-stated | `unmatched` |
+| [University of Malaya: LFP, NCA and NMC dynamic tests](malaya-three-chemistries-2022.md) | Not identified | dynamic, pulse; US06, DST, FUDS, UDDS, WLTP | HPPC and pulse charge/discharge are described; numeric rates not verified. Source temperatures: not verified | Unverified | CC-BY-4.0 | `unmatched` |
+| [600 mAh LFP cells: SOC-dependent EIS](milano-lfp-eis-2023.md) | Not identified | eis;  | Repeated EIS across SOC and charging cycles; no CC rate sweep verified. Source temperatures: not verified | Not reported | CC-BY-4.0 | `unmatched` |
 
 ## Existing packaged tests
 
