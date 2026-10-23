@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "electrochemical-battery-parameters"
-version = "0.8.0"
+version = "0.9.0"
 description = "Traceable lithium-ion battery parameters and test data for DFN/P2D, SPM and SPMe models"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -32,6 +32,13 @@ keywords = [
     "NMC",
     "full-cell testing",
     "data provenance",
+    "NCA",
+    "electrochemical impedance spectroscopy",
+    "EIS",
+    "US06",
+    "UDDS",
+    "WLTP",
+    "multi-rate charge/discharge",
 ]
 classifiers = [
     "Intended Audience :: Science/Research",

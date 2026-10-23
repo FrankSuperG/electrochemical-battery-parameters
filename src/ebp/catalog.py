@@ -9,7 +9,7 @@ import json
 
 import numpy as np
 from scipy.interpolate import PchipInterpolator
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 from . import expression
 from .parameter import Parameter
@@ -172,6 +172,8 @@ class Catalog:
         self.cells = self._load("cells.json")
         self.parameters = self._load("parameters.json")["records"]
         self.full_cell_tests = self._load("full_cell_tests.json")["records"]
+        self.external_document = self._load("external_datasets.json")
+        self.external_datasets = self.external_document["records"]
         self.matching_audit = self._load("matching_audit.json")
         self._records = self.document.get("records", [])
 
@@ -232,6 +234,28 @@ class Catalog:
     def linked_tests(self, cell_id):
         return [test for test in self.full_cell_tests if test["cell_id"] == cell_id]
 
+    def cell_material_family(self, cell_id):
+        """Group by the source positive-electrode label; preserve NCO separately."""
+        chemistry = self.cells[cell_id]["chemistry"].upper()
+        return next((family for family in ("LFP", "NMC", "NCA", "LCO", "NCO")
+                     if chemistry.startswith(family)), "Unknown")
+
+    def search_datasets(self, query="", material=None, test_type=None, profile=None,
+                        cell_id=None):
+        """Find external dataset metadata without downloading any observations.
+
+        A record describes dataset-level coverage, not a measured file or an
+        independently identified specimen. Only explicit parameter joins count.
+        """
+        return [r for r in self.external_datasets
+                if (not material or material.casefold() in
+                    [m.casefold() for m in r["material_families"]])
+                and (not test_type or test_type.casefold() in r["test_types"])
+                and (not profile or profile.casefold() in
+                     [p.casefold() for p in r["profiles"]])
+                and (not cell_id or cell_id in r["parameter_link"]["cell_ids"])
+                and (not query or query.casefold() in json.dumps(r).casefold())]
+
     def full_cell_data(self, test_id, normalized=False):
         """Read CSV rows, retaining source or explicitly normalized column names.
 
@@ -274,6 +298,32 @@ class Catalog:
         )
         if errors:
             return errors
+        external_schema = self._load("schema/external-datasets.schema.json")
+        errors.extend(
+            f"external datasets schema: {error.json_path}: {error.message}"
+            for error in Draft202012Validator(
+                external_schema, format_checker=FormatChecker()
+            ).iter_errors({**self.external_document, "records": self.external_datasets})
+        )
+        if errors:
+            return errors
+        dataset_ids = [r["id"] for r in self.external_datasets]
+        if len(dataset_ids) != len(set(dataset_ids)):
+            errors.append("Duplicate external dataset IDs")
+        for dataset in self.external_datasets:
+            joined = dataset["parameter_link"]["cell_ids"]
+            level = dataset["parameter_link"]["match_level"]
+            if bool(joined) == (level == "unmatched"):
+                errors.append(f"{dataset['id']}: external parameter match requires explicit cell links")
+            for cid in joined:
+                if cid not in self.cells:
+                    errors.append(f"{dataset['id']}: unknown external-dataset cell {cid}")
+                elif self.cell_material_family(cid) not in dataset["material_families"]:
+                    errors.append(f"{dataset['id']}: linked cell material family disagrees")
+            for relative in dataset.get("catalog_evidence_paths", []):
+                path = (self.root / relative).resolve()
+                if not path.is_relative_to(self.root.resolve()) or not path.is_file():
+                    errors.append(f"{dataset['id']}: invalid catalog evidence path")
         ids = [r["id"] for r in self._records]
         if len(ids) != len(set(ids)):
             errors.append("Duplicate record IDs")

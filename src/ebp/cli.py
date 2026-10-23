@@ -35,6 +35,13 @@ def main(argv=None):
     sub.add_parser("cells", help="List cell IDs, chemistry and match levels")
     tests = sub.add_parser("tests", help="List full-cell tests linked to a cell model")
     tests.add_argument("--cell", default="lg-m50")
+    datasets = sub.add_parser("datasets", help="Find external full-cell dataset links; no data download")
+    datasets.add_argument("query", nargs="?", default="")
+    datasets.add_argument("--material", choices=["LFP", "NMC", "NCA", "LCO", "NCO", "Other", "Unknown"])
+    datasets.add_argument("--test-type", choices=["constant_current", "cccv", "pulse", "dynamic", "eis", "ocv"])
+    datasets.add_argument("--profile", help="Exact profile name, for example US06 or UDDS")
+    datasets.add_argument("--cell", help="Only datasets explicitly linked to this catalog cell")
+    datasets.add_argument("--json", action="store_true")
     export = sub.add_parser("export")
     export.add_argument("id")
     export.add_argument("--output", required=True, type=Path)
@@ -115,6 +122,16 @@ def main(argv=None):
                     catalog.linked_tests(args.cell), ensure_ascii=False, indent=2
                 )
             )
+        elif args.command == "datasets":
+            records = catalog.search_datasets(args.query, material=args.material,
+                test_type=args.test_type, profile=args.profile, cell_id=args.cell)
+            if args.json:
+                print(json.dumps(records, indent=2, ensure_ascii=False))
+            else:
+                for record in records:
+                    print("{} | {} | {}\n  {}".format(record["id"],
+                        ", ".join(record["material_families"]),
+                        ", ".join(record["test_types"]), record["source"]["url"]))
         elif args.command == "export":
             curve = catalog.get(args.id)
             if args.format == "json":
@@ -145,7 +162,7 @@ def main(argv=None):
                     print(error)
                 return 1
             print(
-                f"OK: {len(catalog.search())} OCP curves, {len(catalog.parameters)} other parameters, {len(catalog.full_cell_tests)} full-cell tests; schemas, references, axes, values, and SHA-256 verified"
+                f"OK: {len(catalog.search())} OCP curves, {len(catalog.parameters)} other parameters, {len(catalog.full_cell_tests)} full-cell tests, {len(catalog.external_datasets)} external dataset links; data schemas, references, axes, values, and packaged SHA-256 verified; remote payloads not downloaded"
             )
         else:
             from .site import build_site

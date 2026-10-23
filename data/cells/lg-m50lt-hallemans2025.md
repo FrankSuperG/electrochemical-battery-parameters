@@ -34,6 +34,12 @@ CSV links point to the complete stored observations. Blank channels remain unava
 
 - `hallemans2025-m50lt-drive-80to20`: About:Energy M50LT OCP redistribution permission unresolved; no OCP imported; Absolute measured temperature; Ambient temperature trace; Independent full-cell model reproduction not performed; Intrinsic solid diffusivity and reaction-rate prefactors not identified separately; Measured cell and ambient temperature traces absent; Serialized specimen mapping between OCP half-cells, EIS cell and drive-cycle cell unresolved; Standalone CC charge/discharge observations not deposited in the reviewed file set
 
+### External full-cell datasets
+
+These links retain their source licenses and matching evidence; external payloads are not automatically downloaded.
+
+- [LG M50LT: measured EIS and grouped parameters](../full-cell/hallemans-m50lt-eis-2025.md)
+
 ### Additional study evidence
 
 - [Download CSV](../../src/ebp/data/evidence/hallemans2025-m50lt-eis.csv): EIS: 65 frequencies x 9 SOCs; measured complex impedance, full-cell OCV and seven-SOC model fit; 585 rows. Imaginary part retains source sign, not -Im(Z). License: BSD-3-Clause.

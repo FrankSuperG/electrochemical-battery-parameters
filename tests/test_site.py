@@ -13,6 +13,9 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
     assert len(data["records"]) == 59
     assert len(data["parameters"]) == 397
     assert len(data["full_cell_tests"]) == 61
+    assert data["external_datasets"] == c.external_datasets
+    assert data["cell_material_families"] == {cid: c.cell_material_family(cid) for cid in c.cells}
+    assert json.loads((tmp_path / "downloads/external-datasets.json").read_text())["records"] == c.external_datasets
     for record in data["records"]:
         downloaded = json.loads(
             (tmp_path / "downloads" / f"{record['id']}.json").read_text()
@@ -28,6 +31,7 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
         assert all(t["cell_id"] == cid for t in package["full_cell_tests"])
         assert all(r["cell_link"]["cell_id"] == cid for r in package["ocp_records"])
         assert not package["independent_full_cell_validation"]
+        assert package["external_datasets"] == c.search_datasets(cell_id=cid)
     for test in data["full_cell_tests"]:
         for relative in filter(
             None,

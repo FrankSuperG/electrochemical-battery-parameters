@@ -2,7 +2,7 @@
 
 Start here when browsing on GitHub. No Python installation or hosted website is required to find files.
 
-1. Choose a cell below, or [browse OCP by material](ocp/README.md).
+1. Choose a cell below, [browse OCP by material](ocp/README.md), or [find full-cell tests by material](full-cell/README.md).
 2. Open the linked **CSV** for data and **JSON** for definitions, source evidence and missing items.
 3. Use the file page's **Raw / download raw file** controls to save the complete file. GitHub previews may not display large files. Keep the metadata and source license with your copy.
 
@@ -34,7 +34,7 @@ Snapshot: 59 OCP records, 397 other parameter records, 61 full-cell test files.
 |---|---|
 | LFP or another material's OCP | [OCP index](ocp/README.md), with CSV and per-record JSON links |
 | Diffusion, kinetics, geometry, transport or thermal values | [Cell parameter CSV/JSON exports](parameters/); filter CSV by `name` / `category` and inspect `definition`, units, conditions and origin |
-| Current / voltage / temperature and CC tests | Choose a cell above, then its Full-cell tests table; [stored test files](../src/ebp/data/full_cell/) |
+| CC, multi-rate charging, US06/UDDS/WLTP, pulses or EIS | [Full-cell tests by material](full-cell/README.md), with external dataset links and existing packaged files |
 | Original Mohtat MATs and author files | [Packaged evidence](../src/ebp/data/evidence/) and [source audit](../docs/MOHTAT2020.md) |
 | Matching evidence and missing items | Cell pages above and the [matching audit](../src/ebp/data/matching_audit.json) |
 | Primary papers, datasets, versions and hashes | [Sources](../src/ebp/data/sources.json), [assets](../src/ebp/data/assets.json) and each export's metadata |

@@ -10,8 +10,8 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#library"><img src="logo.png" alt="E-BatP — Electrochemical Battery Parameters"></a>
-    <nav aria-label="Main navigation"><a href="#library" class="active">OCP curves</a><a href="#cell-package">Cell packages</a><a href="#sources">Sources</a><a href="#guide">Guide</a></nav>
-    <span class="version">Local viewer <i></i> v0.5</span>
+    <nav aria-label="Main navigation"><a href="#library" class="active">OCP curves</a><a href="#cell-package">Cell packages</a><a href="#test-datasets">Full-cell datasets</a><a href="#sources">Sources</a><a href="#guide">Guide</a></nav>
+    <span class="version">Local viewer <i></i> v0.9</span>
   </header>
   <main>
     <section class="intro"><div><div class="eyebrow">ELECTRODES → PARAMETERS → FULL-CELL TESTS</div><h1>Find the parameter.<br>Know the cell behind it.</h1><p>Explore electrochemical data across LFP, layered oxides, spinels and silicon-based anodes with source definitions, model assumptions and explicit evidence for every cell match.</p><p>This catalog provides parameters and associated experimental data. Model simulation, fitting and validation are outside its scope.</p></div><div class="intro-aside"><span class="large-number" id="total">—</span><span>OCP records<br><small>Inspect · compare · download</small></span></div></section>
@@ -29,6 +29,7 @@
     </section>
     <section class="detail" id="detail" aria-live="polite"></section>
     <section id="cell-package" class="cell-package"><div class="section-label">Cells · parameters · experiments <span>02</span></div>
+      <label for="cell-material">Material family</label><select id="cell-material"><option value="">All materials</option></select>
       <label for="cell-select">Cell or study family</label><select id="cell-select"></select>
       <div class="detail-top"><div><h2 id="cell-title"></h2><p class="muted compact" id="cell-context"></p></div><div class="actions" id="cell-downloads"></div></div>
       <p class="link-note" id="cell-match"></p><div id="cell-coverage" class="coverage"></div><div id="cell-evidence"></div><p class="muted compact" id="cell-note"></p>
@@ -36,8 +37,22 @@
       <div class="parameter-scroll"><table class="parameter-table"><thead><tr><th>Parameter / upstream definition</th><th>Value</th><th>Unit</th></tr></thead><tbody id="parameter-rows"></tbody></table></div><div id="parameter-detail" class="parameter-detail"></div></div>
       <div><div class="test-toolbar"><label for="test-sample">Full-cell test</label><select id="test-sample"></select></div><p class="muted compact" id="test-description"></p><div id="fullcell-chart"></div><div id="test-downloads" class="actions"></div><p class="axis-note" id="test-note"></p></div></div>
     </section>
-    <section class="sources-section" id="sources"><div class="section-label">Sources & attribution <span>03</span></div><h2>Every value has a traceable origin.</h2><p class="muted">Papers, deposited observations and software distributions have distinct roles. Repeated specimens and branches are not independent studies; sampled formulas are not measurements.</p><p><a href="downloads/matching-audit.json" download>Download full-cell matching audit and open gaps (JSON)</a></p><div id="source-cards" class="source-cards"></div></section>
-    <section id="guide" class="guide"><div class="section-label">Start using the data <span>04</span></div><div class="guide-grid"><div><h2>Read it in Python.</h2><pre><code>from ebp import Catalog
+    <section id="test-datasets" class="guide">
+      <div class="section-label">Full-cell dataset links <span>03</span></div>
+      <h2>Find a test. Download it from the source.</h2>
+      <p>Browse multi-rate charge/discharge, drive cycles, pulse tests and EIS by material. Large files stay with their providers. Dataset-level coverage does not imply every protocol exists for every cell or temperature, or that parameters are matched.</p>
+      <div class="dataset-filters">
+        <label>Material<select id="dataset-material"><option value="">All materials</option></select></label>
+        <label>Test type<select id="dataset-type"><option value="">All test types</option></select></label>
+        <label>Profile<select id="dataset-profile"><option value="">All profiles</option></select></label>
+        <label>Search<input id="dataset-query" type="search" placeholder="Cell, provider, parameter match…"></label>
+      </div>
+      <p id="dataset-count" class="muted" aria-live="polite"></p>
+      <p><a href="downloads/external-datasets.json" download>Download link metadata (JSON)</a>. This file contains metadata only; opening the viewer does not fetch remote datasets.</p>
+      <div id="dataset-cards" class="source-cards"></div>
+    </section>
+    <section class="sources-section" id="sources"><div class="section-label">Sources & attribution <span>04</span></div><h2>Every value has a traceable origin.</h2><p class="muted">Papers, deposited observations and software distributions have distinct roles. Repeated specimens and branches are not independent studies; sampled formulas are not measurements.</p><p><a href="downloads/matching-audit.json" download>Download full-cell matching audit and open gaps (JSON)</a></p><div id="source-cards" class="source-cards"></div></section>
+    <section id="guide" class="guide"><div class="section-label">Start using the data <span>05</span></div><div class="guide-grid"><div><h2>Read it in Python.</h2><pre><code>from ebp import Catalog
 
 catalog = Catalog()
 curve = catalog.get("bpx-lfp18650-lfp-ocp")
@@ -47,7 +62,7 @@ parameters = catalog.search_parameters(
     category="diffusion",
 )
 tests = catalog.linked_tests("a123-amp20m1hd-a")</code></pre></div><div><h2>Use the right assumptions.</h2><ul><li>C/50 measurements are pseudo-OCP branches with finite-current polarization.</li><li>BPX OCP fits retain their supplied operating stoichiometry bounds.</li><li>The AMP20 diffusivity is derived from a fitted time and an assumed radius; both electrodes share that effective time.</li><li>Volumetric kinetics, surface exchange-current densities and BPX rate constants have different definitions.</li><li>A shared cell model or study does not establish identical specimens.</li><li>Missing measurements remain empty; unknown identities, conditions and licenses remain explicit gaps.</li></ul></div></div></section>
-    <section id="contribute" class="guide"><div class="section-label">Contribute &amp; collaborate <span>05</span></div><div class="guide-grid"><div><h2>Add the next dataset.</h2><p>Contribute electrode OCP, diffusion, kinetics, other electrochemical parameters or matched full-cell experiments. Partial packages and source suggestions are welcome.</p><p>The contribution templates cover sources, reuse terms, units, cell-match evidence and missing measurements.</p><p><a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/templates/data-contribution.md">Data contribution template</a> · <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/tree/main/templates">CSV templates &amp; guide</a> · <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/CONTRIBUTING.md">Contribution workflow</a></p><p>For access questions or an unpublished-data inquiry, contact the maintainer by email.</p></div><div><h2>Feng Guo</h2><p>Feng Guo conducts battery research at VITO and UHasselt in Belgium as an FWO Senior Postdoctoral Fellow. He works on electrochemical models for battery management, with interests in parameter identification, state estimation, fault diagnosis and control.</p><p>Collaboration is welcome on parameter curation, source matching, electrochemical testing, data sharing and open-source research tools.</p><p><a href="mailto:feng.guo@vito.be">feng.guo@vito.be</a><br><a href="https://scholar.google.com/citations?user=z2SHUxkAAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://franksuperg.github.io/feng-guo-academic/">Academic homepage</a> · <a href="https://github.com/FrankSuperG/CPG-SPMT">CPG-SPMT</a></p></div></div></section>
+    <section id="contribute" class="guide"><div class="section-label">Contribute &amp; collaborate <span>06</span></div><div class="guide-grid"><div><h2>Add the next dataset.</h2><p>Contribute electrode OCP, diffusion, kinetics, other electrochemical parameters or matched full-cell experiments. Partial packages and source suggestions are welcome.</p><p>The contribution templates cover sources, reuse terms, units, cell-match evidence and missing measurements.</p><p><a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/templates/data-contribution.md">Data contribution template</a> · <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/tree/main/templates">CSV templates &amp; guide</a> · <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/CONTRIBUTING.md">Contribution workflow</a></p><p>For access questions or an unpublished-data inquiry, contact the maintainer by email.</p></div><div><h2>Feng Guo</h2><p>Feng Guo conducts battery research at VITO and UHasselt in Belgium as an FWO Senior Postdoctoral Fellow. He works on electrochemical models for battery management, with interests in parameter identification, state estimation, fault diagnosis and control.</p><p>Collaboration is welcome on parameter curation, source matching, electrochemical testing, data sharing and open-source research tools.</p><p><a href="mailto:feng.guo@vito.be">feng.guo@vito.be</a><br><a href="https://scholar.google.com/citations?user=z2SHUxkAAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://franksuperg.github.io/feng-guo-academic/">Academic homepage</a> · <a href="https://github.com/FrankSuperG/CPG-SPMT">CPG-SPMT</a></p></div></div></section>
   </main>
-  <footer><span>E-BatP · Electrochemical Battery Parameters <b>v0.5.0</b> · <a href="#contribute">Contribute &amp; contact</a></span><span>Project code MIT · upstream data and implementations retain their own licenses</span></footer>
+  <footer><span>E-BatP · Electrochemical Battery Parameters <b>v0.9.0</b> · <a href="#contribute">Contribute &amp; contact</a></span><span>Project code MIT · upstream data and implementations retain their own licenses</span></footer>
 </body></html>

@@ -1,0 +1,501 @@
+{
+  "schema_version": "1.0",
+  "description": "External full-cell dataset links; records describe dataset coverage, not imported files or independent specimens. No payload is fetched by catalog, viewer, export or CI.",
+  "records": [
+    {
+      "id": "uccs-a123-26650m1b-2021",
+      "title": "A123 26650 M1B: multi-rate charging and UDDS",
+      "material_families": [
+        "LFP"
+      ],
+      "cell_identity": "A123 26650 m1b, 2.5 Ah cylindrical cell; source spelling retained",
+      "test_types": [
+        "constant_current",
+        "cccv",
+        "dynamic",
+        "pulse",
+        "ocv"
+      ],
+      "profiles": [
+        "UDDS"
+      ],
+      "rate_summary": "CCCV charging at 1C, 2C, 3C and 4C (25 degC); other tests retain their source protocols.",
+      "temperatures_C": [
+        -25,
+        -15,
+        -5,
+        5,
+        15,
+        25,
+        35,
+        45
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "OCVdata, DYNdata, CCCV and Miscellaneous folders are described by the author. Raw channel names not inspected; chamber setpoints are not measured temperature traces."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://data.mendeley.com/datasets/p8kf893yv3/1",
+        "doi": "10.17632/p8kf893yv3.1",
+        "version": "1"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://data.mendeley.com/datasets/p8kf893yv3/1",
+        "note": "Source dataset terms apply to downloaded files; cite the dataset and associated study."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_metadata_only",
+        "note": "Primary description and reuse terms reviewed. Raw payload not downloaded; headers, row counts and per-file availability are not certified."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://data.mendeley.com/datasets/p8kf893yv3/1",
+        "https://doi.org/10.1109/APEC39645.2020.9124431",
+        "https://doi.org/10.23919/ACC50511.2021.9483433"
+      ],
+      "file_links": [],
+      "missing_items": [
+        "No same-study electrode OCP, intrinsic diffusion or reaction-kinetic parameter join established in this catalog.",
+        "No exact specimen join to existing catalog cells.",
+        "Raw file headers, units and sampling details require review before use.",
+        "Whole-cell OCV characterization is not electrode-resolved OCP.",
+        "UDDS is reported at 25 and 35 degC; do not apply the wider OCV/DYN temperature grid to every test.",
+        "Not A123 18650M1A, AMP20M1HD-A or the catalog 9 Ah pouch."
+      ]
+    },
+    {
+      "id": "calce-samsung-20r-dynamic",
+      "title": "CALCE Samsung INR18650-20R: OCV and dynamic profiles",
+      "material_families": [
+        "NMC"
+      ],
+      "cell_identity": "Samsung INR18650-20R, 2 Ah; LiNiMnCo/graphite as stated by CALCE",
+      "test_types": [
+        "dynamic",
+        "ocv",
+        "pulse"
+      ],
+      "profiles": [
+        "US06",
+        "DST",
+        "FUDS",
+        "BJDST"
+      ],
+      "rate_summary": "Source describes low-current and incremental-current OCV protocols; no multi-rate CC sweep asserted.",
+      "temperatures_C": [
+        0,
+        25,
+        45
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "Protocols are described on the source page. Per-file measured channel headers were not inspected."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://calce.umd.edu/data",
+        "doi": null,
+        "version": "unversioned page; reviewed 2026-10-23"
+      },
+      "license": {
+        "identifier": "not-stated",
+        "evidence_url": "https://calce.umd.edu/data",
+        "note": "CALCE provides open access and requests citation of the experiment papers; no standard redistribution license was identified on the page. Link only."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_metadata_only",
+        "note": "Primary description and reuse terms reviewed. Raw payload not downloaded; headers, row counts and per-file availability are not certified."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://calce.umd.edu/data"
+      ],
+      "file_links": [],
+      "missing_items": [
+        "No same-study electrode OCP, intrinsic diffusion or reaction-kinetic parameter join established in this catalog.",
+        "No exact specimen join to existing catalog cells.",
+        "Raw file headers, units and sampling details require review before use.",
+        "Dynamic tests start at 80% and 50% battery level; exact specimen chain to OCV tests not verified.",
+        "No standard reuse license verified; obtain terms from the provider before redistributing payloads."
+      ]
+    },
+    {
+      "id": "calce-a123-dynamic",
+      "title": "CALCE A123 LFP: OCV, DST and FUDS",
+      "material_families": [
+        "LFP"
+      ],
+      "cell_identity": "A123 cylindrical LFP; exact commercial part unresolved. Page reports 1110 mAh and 25.4 mm diameter; do not infer a model number.",
+      "test_types": [
+        "dynamic",
+        "ocv"
+      ],
+      "profiles": [
+        "DST",
+        "FUDS"
+      ],
+      "rate_summary": "Low-current OCV and dynamic tests; no source-supported multi-rate CC sweep asserted.",
+      "temperatures_C": [
+        -10,
+        0,
+        10,
+        20,
+        25,
+        30,
+        40,
+        50
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "Download table lists these temperature labels. They are not proof of measured per-row temperature channels."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://calce.umd.edu/data",
+        "doi": null,
+        "version": "unversioned page; reviewed 2026-10-23"
+      },
+      "license": {
+        "identifier": "not-stated",
+        "evidence_url": "https://calce.umd.edu/data",
+        "note": "CALCE provides open access and requests paper citations; no standard redistribution license identified. Link only."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_metadata_only",
+        "note": "Primary description and reuse terms reviewed. Raw payload not downloaded; headers, row counts and per-file availability are not certified."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://calce.umd.edu/data"
+      ],
+      "file_links": [],
+      "missing_items": [
+        "No same-study electrode OCP, intrinsic diffusion or reaction-kinetic parameter join established in this catalog.",
+        "No exact specimen join to existing catalog cells.",
+        "Raw file headers, units and sampling details require review before use.",
+        "Narrative temperature range differs from the download-table labels; listed values describe the table, not a verified complete test matrix.",
+        "Do not join to an A123 model based on brand, dimensions or chemistry alone."
+      ]
+    },
+    {
+      "id": "calb-l148n58a-2025",
+      "title": "CALB L148N58A: characterization, US06 and EIS",
+      "material_families": [
+        "NMC"
+      ],
+      "cell_identity": "Eleven B-grade CALB L148N58A prismatic cells, nominal 58 Ah; graphite/NMC identified in the associated paper",
+      "test_types": [
+        "constant_current",
+        "cccv",
+        "pulse",
+        "dynamic",
+        "eis",
+        "ocv"
+      ],
+      "profiles": [
+        "US06",
+        "UDDS",
+        "WLTP"
+      ],
+      "rate_summary": "C/20 charge/discharge characterization; HPPC at 1C and C/3. Pulse rates are not a standalone multi-rate continuous-discharge sweep.",
+      "temperatures_C": [
+        10,
+        25,
+        40
+      ],
+      "channels": {
+        "time_series": [
+          "time",
+          "terminal_voltage",
+          "current",
+          "surface_temperature"
+        ],
+        "frequency_domain": [
+          "impedance"
+        ],
+        "note": "Dataset description reports Arbin voltage/current and T-type surface thermocouples; Gamry EIS. Raw XLSX and processed MAT headers have not been independently checked."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://data.mendeley.com/datasets/ycx459r5c3/2",
+        "doi": "10.17632/ycx459r5c3.2",
+        "version": "2"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://data.mendeley.com/datasets/ycx459r5c3/2",
+        "note": "Source dataset terms apply to downloaded files; cite the dataset and associated study."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_metadata_only",
+        "note": "Primary description and reuse terms reviewed. Raw payload not downloaded; headers, row counts and per-file availability are not certified."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://data.mendeley.com/datasets/ycx459r5c3/2",
+        "https://doi.org/10.1016/j.dib.2025.111301",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11795635/"
+      ],
+      "file_links": [],
+      "missing_items": [
+        "No same-study electrode OCP, intrinsic diffusion or reaction-kinetic parameter join established in this catalog.",
+        "No exact specimen join to existing catalog cells.",
+        "Raw file headers, units and sampling details require review before use.",
+        "Paper points to deposit v1; this link pins v2. No file-by-file v1/v2 equivalence is asserted.",
+        "Article processing-folder HPPC labels and pulse-rate descriptions require checking against the protocol before selecting a folder.",
+        "SOC-dependent whole-cell EIS does not uniquely identify electrode diffusivity or exchange-current laws."
+      ]
+    },
+    {
+      "id": "malaya-three-chemistries-2022",
+      "title": "University of Malaya: LFP, NCA and NMC dynamic tests",
+      "material_families": [
+        "LFP",
+        "NMC",
+        "NCA"
+      ],
+      "cell_identity": "Source names an LFP 18650 3.3 V 1100 mAh cell, Panasonic NCR18650B 3400 mAh and Murata VTC6 18650 3000 mAh; per-model chemistry/profile matrix not independently inspected",
+      "test_types": [
+        "dynamic",
+        "pulse"
+      ],
+      "profiles": [
+        "US06",
+        "DST",
+        "FUDS",
+        "UDDS",
+        "WLTP"
+      ],
+      "rate_summary": "HPPC and pulse charge/discharge are described; numeric rates not verified.",
+      "temperatures_C": [],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "Source reports Neware BTS 4000 testing at four temperatures. Numeric setpoints and raw channel definitions were not verified."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://data.mendeley.com/datasets/29kw38kzwj/1",
+        "doi": "10.17632/29kw38kzwj.1",
+        "version": "1"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://data.mendeley.com/datasets/29kw38kzwj/1",
+        "note": "Source dataset terms apply to downloaded files; cite the dataset and associated study."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_metadata_only",
+        "note": "Primary description and reuse terms reviewed. Raw payload not downloaded; headers, row counts and per-file availability are not certified."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://data.mendeley.com/datasets/29kw38kzwj/1",
+        "https://doi.org/10.1016/j.est.2022.106049"
+      ],
+      "file_links": [],
+      "missing_items": [
+        "No same-study electrode OCP, intrinsic diffusion or reaction-kinetic parameter join established in this catalog.",
+        "No exact specimen join to existing catalog cells.",
+        "Raw file headers, units and sampling details require review before use.",
+        "Material/profile coverage is dataset-level; no assertion that every named profile is available for every cell or temperature.",
+        "Numeric temperatures, per-cell filenames and rates await source-file inspection.",
+        "Not linked to Kim2011 nominal NCA parameters; chemistry alone does not establish a parameter match."
+      ]
+    },
+    {
+      "id": "milano-lfp-eis-2023",
+      "title": "600 mAh LFP cells: SOC-dependent EIS",
+      "material_families": [
+        "LFP"
+      ],
+      "cell_identity": "600 mAh LFP batteries; manufacturer and commercial part not supplied in the inspected metadata",
+      "test_types": [
+        "eis"
+      ],
+      "profiles": [],
+      "rate_summary": "Repeated EIS across SOC and charging cycles; no CC rate sweep verified.",
+      "temperatures_C": [],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [
+          "impedance"
+        ],
+        "note": "Official metadata describes EIS, but archive columns, impedance sign, units and frequency range were not inspected."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://figshare.com/articles/dataset/Li-ion_Batteries_EIS_measurements/23736582/1",
+        "doi": "10.6084/m9.figshare.23736582.v1",
+        "version": "1"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://figshare.com/articles/dataset/Li-ion_Batteries_EIS_measurements/23736582/1",
+        "note": "Source dataset terms apply to downloaded files; cite the dataset and associated study."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "source_metadata_only",
+        "note": "Official Figshare JSON metadata and license reviewed; HTML returned HTTP 403. Archive not fetched; MD5 and size are publisher-reported, not independently calculated."
+      },
+      "parameter_link": {
+        "cell_ids": [],
+        "match_level": "unmatched",
+        "evidence": "No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.",
+        "missing_components": [
+          "electrode_ocp",
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://figshare.com/articles/dataset/Li-ion_Batteries_EIS_measurements/23736582/1",
+        "https://api.figshare.com/v2/articles/23736582"
+      ],
+      "file_links": [
+        {
+          "label": "Measurements.rar (external; 465799 bytes)",
+          "url": "https://ndownloader.figshare.com/files/41673360",
+          "size_bytes": 465799,
+          "md5": "94a817377b3f5148806e65d4bb68b29a"
+        }
+      ],
+      "missing_items": [
+        "No same-study electrode OCP, intrinsic diffusion or reaction-kinetic parameter join established in this catalog.",
+        "No exact specimen join to existing catalog cells.",
+        "Raw file headers, units and sampling details require review before use.",
+        "Exact cell model, temperature, frequency grid, SOC values and complex-impedance convention not verified.",
+        "EIS payload is not a time/current/voltage discharge trace."
+      ]
+    },
+    {
+      "id": "hallemans-m50lt-eis-2025",
+      "title": "LG M50LT: measured EIS and grouped parameters",
+      "material_families": [
+        "NMC"
+      ],
+      "cell_identity": "LG M50LT; same study as the catalog grouped SPMe parameters; exact serialized specimen chain unresolved",
+      "test_types": [
+        "eis"
+      ],
+      "profiles": [],
+      "rate_summary": "3 mV rms EIS; 9 SOC levels and 65 frequencies (585 measured rows).",
+      "temperatures_C": [
+        25
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [
+          "frequency_Hz",
+          "measured_Z_real_Ohm",
+          "measured_Z_imag_Ohm"
+        ],
+        "note": "Measured whole-cell spectrum from the existing source audit. Setpoint is not a measured temperature trace. Seven-SOC fitting slice is separate from all nine measured SOCs."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+        "doi": "10.1149/1945-7111/add41b",
+        "version": "3308a34396b8b56cd614291dd151c3405577c068"
+      },
+      "license": {
+        "identifier": "BSD-3-Clause",
+        "evidence_url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/blob/3308a34396b8b56cd614291dd151c3405577c068/LICENSE",
+        "note": "Pinned author BSD-3-Clause notice applies to author-owned observations; it does not clear third-party About:Energy OCP rights."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "existing_source_audit",
+        "note": "Uses the catalog pinned Hallemans source audit; no additional raw file downloaded. Existing 585-row EIS evidence CSV remains available."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "lg-m50lt-hallemans2025"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Pinned author Figure 10 script connects the measured EIS file to the same grouped SPMe fit. Exact specimen identity across EIS, drive-cycle and harvested-electrode characterization is not established.",
+        "missing_components": [
+          "electrode_ocp",
+          "intrinsic_diffusion",
+          "intrinsic_kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+        "https://arxiv.org/html/2412.10896v4"
+      ],
+      "file_links": [
+        {
+          "label": "Measured EIS MAT (external pinned original)",
+          "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+          "sha256": "5f06cf0b495eeb2d5704b41a6e3c93b8e480e977b71809d5b8f5e39c643ad8c5"
+        }
+      ],
+      "missing_items": [
+        "OCP redistribution permission unresolved.",
+        "Grouped diffusion/charge-transfer times are not intrinsic D or reaction-rate prefactors.",
+        "Exact specimen mapping and measured temperature traces unresolved.",
+        "No standalone CC observations found in the reviewed author files."
+      ],
+      "catalog_evidence_paths": [
+        "evidence/hallemans2025-m50lt-eis.csv"
+      ]
+    }
+  ]
+}

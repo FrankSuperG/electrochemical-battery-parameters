@@ -8,3 +8,5 @@
 .evidence-scroll{overflow-x:auto;margin:12px 0}.evidence-scroll table{min-width:640px}#cell-evidence{margin:18px 0}#cell-evidence summary{cursor:pointer;font-size:12px;font-weight:600}#cell-evidence td{vertical-align:top;white-space:normal;overflow-wrap:anywhere}.test-toolbar select{max-width:100%}#test-downloads{flex-wrap:wrap}
 
 .parameter-toolbar{flex-wrap:wrap}.parameter-toolbar select{max-width:100%}
+
+.dataset-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,2fr);gap:16px;margin:24px 0}.dataset-filters label{display:flex;flex-direction:column;gap:6px;font-size:12px}.dataset-filters select,.dataset-filters input{width:100%;box-sizing:border-box;padding:9px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);font:inherit}#dataset-cards .source-card{overflow-wrap:anywhere}#dataset-cards details{font-size:12px}#cell-material{margin-bottom:12px}@media(max-width:800px){.dataset-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.dataset-filters{grid-template-columns:1fr}}

@@ -4,7 +4,7 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.8.0-287b78" alt="Version 0.8.0">
+  <img src="https://img.shields.io/badge/version-0.9.0-287b78" alt="Version 0.9.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
@@ -15,7 +15,9 @@ Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-curr
 
 **Project scope:** curate, document and export electrochemical parameters and associated experimental data. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
-**v0.8.0: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+**v0.9.0: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+
+New full-cell discovery: **[LFP](data/full-cell/LFP.md) · [NMC](data/full-cell/NMC.md) · [NCA](data/full-cell/NCA.md) · [LCO](data/full-cell/LCO.md) · [NCO](data/full-cell/NCO.md)**. Seven external dataset links cover multi-rate charging, US06/UDDS/WLTP, pulse tests and EIS where reported. Large new payloads stay with their providers; these links are separate from the 61 existing packaged test files. [Review sources, licenses and matching limits](docs/FULL_CELL_DATASETS.md).
 
 New characterization package: [LG MJ1 / DLR-SINTEF](data/cells/lg-mj1-dlr-sintef.md): four pseudo-OCP branches, 22 scalar/specification records and 20 native parameter tables, including model/direction-specific GITT fits. Read the [MJ1 source and matching review](docs/LG_MJ1.md). **Same-study intact-cell test data remain missing.** The [public-release readiness review](docs/RELEASE_READINESS.md) records checked boundaries and remaining gaps.
 
@@ -25,7 +27,7 @@ New LFP packages: [ISU-UConn laboratory half/full-cells](data/cells/isu-uconn-lf
 
 ## Get the data
 
-**[Browse all data](data/README.md) · [OCP by material](data/ocp/README.md) · [How to download and use](docs/DATA_ACCESS.md)**
+**[Browse all data](data/README.md) · [OCP by material](data/ocp/README.md) · [Full-cell tests by material](data/full-cell/README.md) · [How to download and use](docs/DATA_ACCESS.md)**
 
 No installation is needed to browse or download files from GitHub. Choose a cell below, then click its CSV or JSON links. For LFP and other material-level OCP measurements, use the **OCP by material** index. On a file page, use **Raw / download raw file** to save the complete file; keep its metadata and license. See the [download guide](docs/DATA_ACCESS.md) for examples.
 
@@ -155,6 +157,9 @@ ebp search --material LFP
 ebp search --cell bpx-lfp-18650-2ah-undisclosed
 ebp parameters --cell a123-amp20m1hd-a --category kinetics --json
 ebp tests --cell a123-high-power-pouch-9ah
+ebp datasets --material NMC --test-type dynamic --profile US06
+ebp datasets --material LFP --test-type cccv
+ebp datasets --test-type eis --json
 ebp show a123-amp20-effective-diffusivity-soc50
 ebp export bpx-lfp18650-lfp-ocp --output formula.csv --count 2001
 ```
@@ -209,7 +214,8 @@ src/ebp/data/             Authoritative packaged catalog
   catalog.json           Electrode OCP records and representations
   parameters.json        Scalars and kinetic functions
   cells.json             Identities, coverage and match evidence
-  full_cell_tests.json    Test metadata, channels, processing and links
+  full_cell_tests.json    Packaged-test metadata, channels, processing and links
+  external_datasets.json Metadata-only links to large external full-cell datasets
   matching_audit.json     Component match matrix, open gaps and research leads
   sources.json           Papers, datasets and software roles
   assets.json            Original URLs, versions and checksums

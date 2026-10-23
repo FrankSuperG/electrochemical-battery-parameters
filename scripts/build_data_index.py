@@ -54,6 +54,92 @@ def parameter_csv(parameters):
     )
 
 
+def full_cell_index(catalog):
+    """Metadata-only external links plus source-preserving local test navigation."""
+    output = {}
+    root = Path("data/full-cell")
+
+    def link(page, target, label):
+        return f"[{text_cell(label)}]({Path(os.path.relpath(target, page.parent)).as_posix()})"
+
+    families = sorted(set(catalog.cell_material_family(cid) for cid in catalog.cells)
+                      | {m for r in catalog.external_datasets for m in r["material_families"]},
+                      key=lambda m: (("LFP", "NMC", "NCA", "LCO", "NCO").index(m)
+                                     if m in ("LFP", "NMC", "NCA", "LCO", "NCO") else 99, m))
+    output[str(root / "datasets.json")] = json_bytes(catalog.external_document)
+    output[str(root / "datasets.csv")] = csv_bytes(
+        ["id", "material_families", "cell_identity", "test_types", "profiles", "rate_summary",
+         "temperatures_C", "license", "parameter_match", "linked_cell_ids", "source_url",
+         "doi", "source_version", "checked_on", "review_level", "missing_items"],
+        [[r["id"], ";".join(r["material_families"]), r["cell_identity"], ";".join(r["test_types"]),
+          ";".join(r["profiles"]), r["rate_summary"], json.dumps(r["temperatures_C"]),
+          r["license"]["identifier"], r["parameter_link"]["match_level"],
+          ";".join(r["parameter_link"]["cell_ids"]), r["source"]["url"], r["source"]["doi"],
+          r["source"]["version"], r["review"]["checked_on"], r["review"]["level"],
+          "; ".join(r["missing_items"])] for r in catalog.external_datasets])
+    for r in catalog.external_datasets:
+        page = root / (r["id"] + ".md")
+        lines = [f"# {r['title']}", "", "[Full-cell index](README.md) · [Usage and review notes](../../docs/FULL_CELL_DATASETS.md)", "",
+                 f"Dataset link ID: `{r['id']}`. Storage: **external link**. This entry is not an imported measurement file.", "",
+                 f"Material families: {', '.join(r['material_families'])}. {r['cell_identity']}", "",
+                 f"[Open the original dataset]({r['source']['url']}) · Version: `{r['source']['version']}`", "",
+                 f"DOI: {r['source']['doi'] or 'Not assigned in the inspected source'}. Checked: {r['review']['checked_on']}.", "",
+                 "## Tests and channels", "",
+                 f"Types: {', '.join(r['test_types'])}. Profiles: {', '.join(r['profiles']) or 'No named drive profile verified'}.", "",
+                 r["rate_summary"], "",
+                 f"Reported temperature labels / degC: {r['temperatures_C'] or 'Not verified'}. These are source conditions, not measured temperature channels.", "",
+                 f"Reported time-series channels: {', '.join(r['channels']['time_series']) or 'Raw headers not inspected'}.", "",
+                 f"Reported frequency-domain channels: {', '.join(r['channels']['frequency_domain']) or 'Not verified / not applicable'}.", "",
+                 r["channels"]["note"], "", "## Parameter association", "",
+                 f"Match: `{r['parameter_link']['match_level']}`. {r['parameter_link']['evidence']}", ""]
+        for cid in r["parameter_link"]["cell_ids"]:
+            lines += [link(page, Path("data/cells") / f"{cid}.md", catalog.cells[cid]["display_name"]), ""]
+        lines += [f"Missing components: {', '.join(r['parameter_link']['missing_components'])}.", "",
+                  "## Reuse and access", "",
+                  f"License: **{r['license']['identifier']}**. [Source terms]({r['license']['evidence_url']}). {r['license']['note']}", "",
+                  f"Review level: `{r['review']['level']}`. {r['review']['note']}", ""]
+        for item in r["file_links"]:
+            lines += [f"- [{item['label']}]({item['url']})"]
+            for algorithm in ("md5", "sha256"):
+                if algorithm in item:
+                    lines += [f"  Publisher/pinned {algorithm.upper()}: `{item[algorithm]}`."]
+        for path in r.get("catalog_evidence_paths", []):
+            lines += ["", link(page, Path("src/ebp/data") / path, "Previously curated supporting evidence (CSV)"), ""]
+        lines += ["", "## Missing items and limits", ""] + [f"- {item}" for item in r["missing_items"]]
+        lines += ["", "## Evidence", ""] + [f"- [Primary source {i + 1}]({url})" for i, url in enumerate(r["evidence_urls"])]
+        lines += ["", "No external payload is fetched by the library, viewer or CI. Dataset coverage does not assert a complete cell × temperature × profile matrix. Whole-cell OCV is not electrode OCP; EIS is frequency-domain evidence, not a current/voltage drive-cycle trace.", ""]
+        output[str(page)] = "\n".join(lines).encode()
+    overview = ["# Full-cell tests by material", "", "[All data](../README.md) · [How to use external links](../../docs/FULL_CELL_DATASETS.md)", "",
+                f"{len(catalog.full_cell_tests)} existing packaged branch/test files and {len(catalog.external_datasets)} external dataset-link records. External records are not imported files or independent specimens. One multi-chemistry dataset can appear under several materials.", "",
+                "Large observations remain with the original provider. [Metadata CSV](datasets.csv) · [Complete metadata JSON](datasets.json). No automatic download occurs.", "",
+                "| Material family | Packaged test files | External datasets | Browse |", "|---|---:|---:|---|"]
+    for family in families:
+        local = [t for t in catalog.full_cell_tests if catalog.cell_material_family(t["cell_id"]) == family]
+        external = catalog.search_datasets(material=family)
+        overview += [f"| {family} | {len(local)} | {len(external)} | [{family}]({family}.md) |"]
+        page = root / f"{family}.md"
+        lines = [f"# {family} full-cell tests", "", "[All materials](README.md) · [Access, licenses and limits](../../docs/FULL_CELL_DATASETS.md)", "",
+                 "Material grouping is a discovery aid, not evidence that tests and parameters belong together. NCO retains its source label and is not silently classified as NMC or NCA.", "",
+                 "## External datasets", "", "| Dataset / cell | Tests / profiles | Rates and temperatures | License | Parameter match |", "|---|---|---|---|---|"]
+        for r in external:
+            temperatures = str(r["temperatures_C"]) if r["temperatures_C"] else "not verified"
+            lines += [f"| [{text_cell(r['title'])}]({r['id']}.md) | {text_cell(', '.join(r['test_types']) + '; ' + ', '.join(r['profiles']))} | {text_cell(r['rate_summary'])} Source temperatures: {temperatures} | {r['license']['identifier']} | `{r['parameter_link']['match_level']}` |"]
+        if not external:
+            lines += ["", "No external dataset link curated for this family yet."]
+        lines += ["", "## Existing packaged tests", "", "These CSVs already belong to the catalog; this index adds links without duplicating observations.", "",
+                  "| Test | Cell / metadata | Source protocol | CSV | Parameter match |", "|---|---|---|---|---|"]
+        for t in local:
+            target = Path("src/ebp/data") / t["normalized_path"]
+            lines += [f"| `{t['id']}` | {link(page, Path('data/cells') / (t['cell_id'] + '.md'), catalog.cells[t['cell_id']]['display_name'])} | {text_cell(t['protocol'])} | {link(page, target, 'Download')} | `{t['relationship_to_parameters']}` |"]
+        if not local:
+            lines += ["", "No packaged full-cell file for this family. External links do not fill missing parameter matches."]
+        lines += [""]
+        output[str(page)] = "\n".join(lines).encode()
+    overview += ["", "Test types: `constant_current`, `cccv`, `pulse`, `dynamic`, `eis`, `ocv`. Named profiles such as US06, UDDS and WLTP can be searched with `ebp datasets --profile US06`. `ocv` refers to whole-cell characterization, never an automatically inferred electrode OCP.", ""]
+    output[str(root / "README.md")] = "\n".join(overview).encode()
+    return output
+
+
 def render_index(repo=REPO):
     """Return relative output paths and deterministic bytes; never mutate sources."""
     repo = Path(repo)
@@ -62,6 +148,7 @@ def render_index(repo=REPO):
     if errors:
         raise ValueError("; ".join(errors))
     output = {}
+    output.update(full_cell_index(catalog))
 
     def relative(page, target):
         return Path(os.path.relpath(target, Path(page).parent)).as_posix()
@@ -142,6 +229,7 @@ def render_index(repo=REPO):
         output[str(json_path)] = json_bytes({
                 "cell_id": cid, "cell": cell, "parameters": parameters,
                 "ocp_records": [c.record for c in curves], "full_cell_tests": tests,
+                "external_datasets": catalog.search_datasets(cell_id=cid),
                 "sources": {s: catalog.sources[s] for s in sorted(source_ids)},
                 "upstream_assets": {a: catalog.assets[a] for a in sorted(asset_ids)},
                 "canonical_data_root": "../../src/ebp/data",
@@ -206,6 +294,12 @@ def render_index(repo=REPO):
                     lines.append(f"  - {link(page, source_path(side['path']), 'Separate temperature-rise CSV')}; its own timebase is retained, not absolute cell temperature.")
         else:
             lines += ["No matching full-cell observation file imported. A named model or chemistry does not establish a test-data match."]
+        linked_external = catalog.search_datasets(cell_id=cid)
+        if linked_external:
+            lines += ["", "### External full-cell datasets", "",
+                      "These links retain their source licenses and matching evidence; external payloads are not automatically downloaded.", ""]
+            for dataset in linked_external:
+                lines += ["- " + link(page, Path("data/full-cell") / (dataset["id"] + ".md"), dataset["title"])]
         if cell.get("supporting_files"):
             lines += ["", "### Additional study evidence", ""]
             for item in cell["supporting_files"]:
@@ -246,7 +340,7 @@ def render_index(repo=REPO):
     page = Path("data/README.md")
     lines = ["# Browse and download the data", "",
              "Start here when browsing on GitHub. No Python installation or hosted website is required to find files.", "",
-             "1. Choose a cell below, or [browse OCP by material](ocp/README.md).",
+             "1. Choose a cell below, [browse OCP by material](ocp/README.md), or [find full-cell tests by material](full-cell/README.md).",
              "2. Open the linked **CSV** for data and **JSON** for definitions, source evidence and missing items.",
              "3. Use the file page's **Raw / download raw file** controls to save the complete file. GitHub previews may not display large files. Keep the metadata and source license with your copy.", "",
              "See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.", "",
@@ -256,7 +350,7 @@ def render_index(repo=REPO):
              "| Need | Entry point |", "|---|---|",
              "| LFP or another material's OCP | [OCP index](ocp/README.md), with CSV and per-record JSON links |",
              "| Diffusion, kinetics, geometry, transport or thermal values | [Cell parameter CSV/JSON exports](parameters/); filter CSV by `name` / `category` and inspect `definition`, units, conditions and origin |",
-             "| Current / voltage / temperature and CC tests | Choose a cell above, then its Full-cell tests table; [stored test files](../src/ebp/data/full_cell/) |",
+             "| CC, multi-rate charging, US06/UDDS/WLTP, pulses or EIS | [Full-cell tests by material](full-cell/README.md), with external dataset links and existing packaged files |",
              "| Original Mohtat MATs and author files | [Packaged evidence](../src/ebp/data/evidence/) and [source audit](../docs/MOHTAT2020.md) |",
              "| Matching evidence and missing items | Cell pages above and the [matching audit](../src/ebp/data/matching_audit.json) |",
              "| Primary papers, datasets, versions and hashes | [Sources](../src/ebp/data/sources.json), [assets](../src/ebp/data/assets.json) and each export's metadata |", "",

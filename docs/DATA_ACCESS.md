@@ -1,5 +1,7 @@
 # Find, download and use data
 
+For multi-rate CC/CCCV, dynamic profiles such as US06, and EIS, start with [full-cell tests by material](../data/full-cell/README.md). Seven external dataset links are metadata-only; [the source review](FULL_CELL_DATASETS.md) distinguishes linked datasets from the existing packaged files and documents license/matching gaps.
+
 Start at **[Browse all data](../data/README.md)**. You can use the GitHub file
 links without installing Python or running a website. If repository access is
 restricted, sign in with an account that has access.

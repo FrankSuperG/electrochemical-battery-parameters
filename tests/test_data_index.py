@@ -92,3 +92,22 @@ def test_formula_csvs_are_marked_as_calculated_and_match_metadata(index):
         assert len(points) == metadata["export"]["sample_count"] == 2001
         np.testing.assert_allclose(points["potential_V"], curve(points["x"]),
                                    rtol=2e-9, atol=2e-9)
+
+
+def test_full_cell_material_index_preserves_grain_and_complete_file_links(index):
+    catalog = Catalog()
+    registry = json.loads(index["data/full-cell/datasets.json"])
+    assert registry["records"] == catalog.external_datasets
+    assert len(list(csv.DictReader(io.StringIO(index["data/full-cell/datasets.csv"].decode())))) == len(catalog.external_datasets)
+    for test in catalog.full_cell_tests:
+        family = catalog.cell_material_family(test["cell_id"])
+        page = index[f"data/full-cell/{family}.md"].decode()
+        assert test["normalized_path"] in page
+        assert f"`{test['id']}`" in page
+    assert not any(name.startswith("data/full-cell/") and name.endswith(".csv")
+                   and name != "data/full-cell/datasets.csv" for name in index)
+    assert "No packaged full-cell file" in index["data/full-cell/NCA.md"].decode()
+    for dataset in catalog.external_datasets:
+        assert f"data/full-cell/{dataset['id']}.md" in index
+        for family in dataset["material_families"]:
+            assert dataset["id"] + ".md" in index[f"data/full-cell/{family}.md"].decode()

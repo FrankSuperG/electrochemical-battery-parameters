@@ -1,5 +1,7 @@
 # Data contribution templates
 
+For large full-cell datasets, use [the external-link JSON template](external-dataset.json) and [the source-review guide](../docs/FULL_CELL_DATASETS.md). Submit metadata and provider links without adding raw payloads. The placeholder template is not an imported record.
+
 Use these files to propose electrochemical parameters and associated full-cell
 tests. Partial packages and well-documented source leads are welcome.
 

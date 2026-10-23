@@ -1,5 +1,7 @@
 # Contributing to E-BatP
 
+Large full-cell datasets can be contributed as [external-link metadata](templates/external-dataset.json), with source versions, test types, material families, licensing and explicit parameter-match evidence. Follow the [source-review guide](docs/FULL_CELL_DATASETS.md); no raw payload or model simulation is needed.
+
 Contributions are welcome: electrode OCP, diffusion, reaction kinetics, geometry,
 transport, thermal properties and the full-cell experiments that help interpret
 them. A useful contribution can be one well-documented curve or a source lead;

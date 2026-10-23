@@ -1218,6 +1218,81 @@
       }
     }
   ],
+  "external_datasets": [
+    {
+      "id": "hallemans-m50lt-eis-2025",
+      "title": "LG M50LT: measured EIS and grouped parameters",
+      "material_families": [
+        "NMC"
+      ],
+      "cell_identity": "LG M50LT; same study as the catalog grouped SPMe parameters; exact serialized specimen chain unresolved",
+      "test_types": [
+        "eis"
+      ],
+      "profiles": [],
+      "rate_summary": "3 mV rms EIS; 9 SOC levels and 65 frequencies (585 measured rows).",
+      "temperatures_C": [
+        25
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [
+          "frequency_Hz",
+          "measured_Z_real_Ohm",
+          "measured_Z_imag_Ohm"
+        ],
+        "note": "Measured whole-cell spectrum from the existing source audit. Setpoint is not a measured temperature trace. Seven-SOC fitting slice is separate from all nine measured SOCs."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+        "doi": "10.1149/1945-7111/add41b",
+        "version": "3308a34396b8b56cd614291dd151c3405577c068"
+      },
+      "license": {
+        "identifier": "BSD-3-Clause",
+        "evidence_url": "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/blob/3308a34396b8b56cd614291dd151c3405577c068/LICENSE",
+        "note": "Pinned author BSD-3-Clause notice applies to author-owned observations; it does not clear third-party About:Energy OCP rights."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "existing_source_audit",
+        "note": "Uses the catalog pinned Hallemans source audit; no additional raw file downloaded. Existing 585-row EIS evidence CSV remains available."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "lg-m50lt-hallemans2025"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Pinned author Figure 10 script connects the measured EIS file to the same grouped SPMe fit. Exact specimen identity across EIS, drive-cycle and harvested-electrode characterization is not established.",
+        "missing_components": [
+          "electrode_ocp",
+          "intrinsic_diffusion",
+          "intrinsic_kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://github.com/Battery-Intelligence-Lab/Hallemans-2025-JES/tree/3308a34396b8b56cd614291dd151c3405577c068",
+        "https://arxiv.org/html/2412.10896v4"
+      ],
+      "file_links": [
+        {
+          "label": "Measured EIS MAT (external pinned original)",
+          "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+          "sha256": "5f06cf0b495eeb2d5704b41a6e3c93b8e480e977b71809d5b8f5e39c643ad8c5"
+        }
+      ],
+      "missing_items": [
+        "OCP redistribution permission unresolved.",
+        "Grouped diffusion/charge-transfer times are not intrinsic D or reaction-rate prefactors.",
+        "Exact specimen mapping and measured temperature traces unresolved.",
+        "No standalone CC observations found in the reviewed author files."
+      ],
+      "catalog_evidence_paths": [
+        "evidence/hallemans2025-m50lt-eis.csv"
+      ]
+    }
+  ],
   "sources": {
     "aboutenergy-m50lt-ocp-lead": {
       "kind": "external_data_lead",

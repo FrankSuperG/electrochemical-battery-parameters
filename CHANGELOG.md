@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.9.0 — 2026-10-23
+
+- Added seven metadata-only external dataset links for multi-rate charging, dynamic profiles including US06/UDDS/WLTP, pulses and EIS, with explicit review levels, licenses, parameter matches and missing items. No new raw test files were imported.
+- Added LFP/NMC/NCA/LCO/NCO full-cell navigation, machine-readable link exports, `Catalog.search_datasets()` and `ebp datasets` filters.
+- Added viewer material, test-type and drive-profile filters. External links remain separate from the 61 existing packaged files; NCO retains its original label and multi-chemistry coverage stays at dataset grain.
 
 - Focused the project on parameter and experimental-data curation, provenance,
   matching and export. Removed the CPG-SPMT validation plan and benchmark roadmap.

@@ -494,6 +494,14 @@ def main(download=False):
 
     extend_mj1(download=download)
 
+    # The manually reviewed external-link registry is committed metadata. It is
+    # never fetched here; reconstructing observations must not download its payloads.
+    from ebp import __version__
+
+    document = json.loads((DATA / "catalog.json").read_text())
+    document["release"] = __version__
+    write_json("catalog.json", document)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

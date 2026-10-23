@@ -69,7 +69,16 @@ const cellOrder=[...preferredCells.filter(id=>data.cells[id]),...Object.keys(dat
 const materialNames=[...new Set(data.records.map(r=>r.material))].sort((a,b)=>a.localeCompare(b));
 $("material").innerHTML='<option value="">All materials</option>'+materialNames.map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join("");
 $("material").value="LFP";
-$("cell-select").innerHTML=cellOrder.map(id=>`<option value="${id}">${esc(data.cells[id].display_name)}</option>`).join("");
+const cellFamilies=[...new Set(Object.values(data.cell_material_families))].sort();
+$("cell-material").innerHTML='<option value="">All materials</option>'+cellFamilies.map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join("");
+function renderCellChoices() {
+  const prior=$("cell-select").value,family=$("cell-material").value;
+  const ids=cellOrder.filter(id=>!family||data.cell_material_families[id]===family);
+  $("cell-select").innerHTML=ids.map(id=>`<option value="${esc(id)}">${esc(data.cells[id].display_name)}</option>`).join("");
+  if(ids.includes(prior))$("cell-select").value=prior;
+}
+$("cell-material").addEventListener("change",()=>{renderCellChoices();renderCell();});
+renderCellChoices();
 function renderCell() {
   const id=$("cell-select").value,cell=data.cells[id],parameters=data.parameters.filter(p=>p.cell_id===id),tests=data.full_cell_tests.filter(t=>t.cell_id===id);
   $("cell-title").textContent=cell.display_name;
@@ -107,3 +116,22 @@ $("parameter-category").addEventListener("change",renderParameters);
 $("parameter-variant").addEventListener("change",renderParameters);
 $("test-sample").addEventListener("change",renderFullCell);
 render();renderDetail();renderCell();
+
+// External dataset filters inspect metadata only. No remote payload is fetched.
+const datasets=data.external_datasets;
+for(const [id,values] of [
+  ["dataset-material",[...new Set(datasets.flatMap(r=>r.material_families))]],
+  ["dataset-type",[...new Set(datasets.flatMap(r=>r.test_types))]],
+  ["dataset-profile",[...new Set(datasets.flatMap(r=>r.profiles))]],
+]) {
+  $(id).innerHTML+=[...values].sort().map(v=>`<option value="${esc(v)}">${esc(words(v))}</option>`).join("");
+  $(id).addEventListener("change",renderDatasets);
+}
+function renderDatasets() {
+  const material=$("dataset-material").value,type=$("dataset-type").value,profile=$("dataset-profile").value,query=$("dataset-query").value.trim().toLowerCase();
+  const rows=datasets.filter(r=>(!material||r.material_families.includes(material))&&(!type||r.test_types.includes(type))&&(!profile||r.profiles.includes(profile))&&(!query||JSON.stringify(r).toLowerCase().includes(query)));
+  $("dataset-count").textContent=`${rows.length} / ${datasets.length} external dataset links. These are not imported test-file counts.`;
+  $("dataset-cards").innerHTML=rows.map(r=>`<article class="source-card"><span class="tag">${esc(r.material_families.join(" / "))} · external link</span><h3>${esc(r.title)}</h3><p>${esc(r.cell_identity)}</p><p><b>Tests:</b> ${esc(r.test_types.map(words).join(", "))}<br><b>Profiles:</b> ${esc(r.profiles.join(", ")||"No named drive profile verified")}</p><p>${esc(r.rate_summary)}<br>Source temperature labels / °C: ${esc(r.temperatures_C.length?r.temperatures_C.join(", "):"Not verified")}</p><p><b>Parameter match:</b> ${esc(words(r.parameter_link.match_level))}<br>${esc(r.parameter_link.evidence)}</p><p><b>License:</b> <a href="${safeUrl(r.license.evidence_url)}" target="_blank" rel="noopener noreferrer">${esc(r.license.identifier)}</a><br>${esc(r.license.note)}</p><details><summary>Source review and missing items</summary><p>Version: ${esc(r.source.version)} · Checked: ${esc(r.review.checked_on)} · ${esc(words(r.review.level))}</p><p>${esc(r.review.note)}</p><p>${esc(r.channels.note)}</p><p>Missing components: ${esc(r.parameter_link.missing_components.join(", "))}</p><ul>${r.missing_items.map(item=>`<li>${esc(item)}</li>`).join("")}</ul></details><p><a class="button" href="${safeUrl(r.source.url)}" target="_blank" rel="noopener noreferrer">Open original dataset ↗</a></p>${r.file_links.map(item=>`<p><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.label)} ↗</a></p>`).join("")}</article>`).join("")||'<p class="empty">No curated external dataset matches these filters.</p>';
+}
+$("dataset-query").addEventListener("input",renderDatasets);
+renderDatasets();

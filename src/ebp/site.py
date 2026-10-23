@@ -71,6 +71,7 @@ def build_site(catalog, output):
 
     records = []
     write_json("matching-audit.json", catalog.matching_audit)
+    write_json("external-datasets.json", {"schema_version": "1.0", "records": catalog.external_datasets})
     for curve in catalog.search():
         record = copy.deepcopy(curve.record)
         x, y = curve.sample(801)
@@ -121,6 +122,7 @@ def build_site(catalog, output):
                 "parameters": parameters,
                 "ocp_records": ocp,
                 "full_cell_tests": tests,
+                "external_datasets": catalog.search_datasets(cell_id=cid),
                 "sources": {sid: catalog.sources[sid] for sid in sorted(source_ids)},
                 "upstream_assets": {
                     aid: catalog.assets[aid] for aid in sorted(asset_ids)
@@ -173,9 +175,11 @@ def build_site(catalog, output):
         "experiments": catalog.experiments,
         "materials": catalog.materials,
         "cells": catalog.cells,
+        "cell_material_families": {cid: catalog.cell_material_family(cid) for cid in catalog.cells},
         "assets": catalog.assets,
         "parameters": catalog.parameters,
         "full_cell_tests": copy.deepcopy(catalog.full_cell_tests),
+        "external_datasets": catalog.external_datasets,
     }
     for test in data["full_cell_tests"]:
         for key in ("path", "normalized_path"):

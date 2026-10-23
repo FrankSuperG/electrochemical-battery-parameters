@@ -1,0 +1,52 @@
+{
+  "id": "replace-with-dataset-id",
+  "title": "Replace with a short factual title",
+  "material_families": [
+    "Unknown"
+  ],
+  "cell_identity": "Not verified",
+  "test_types": [
+    "dynamic"
+  ],
+  "profiles": [],
+  "rate_summary": "Not verified",
+  "temperatures_C": [],
+  "channels": {
+    "time_series": [],
+    "frequency_domain": [],
+    "note": "Not verified"
+  },
+  "storage": "external_link",
+  "source": {
+    "url": "https://example.org/replace-with-primary-source",
+    "doi": null,
+    "version": "Not verified"
+  },
+  "license": {
+    "identifier": "not-stated",
+    "evidence_url": "https://example.org/replace-with-source-terms",
+    "note": "Resolve reuse terms; no raw redistribution implied."
+  },
+  "review": {
+    "checked_on": "YYYY-MM-DD",
+    "level": "source_metadata_only",
+    "note": "Describe exactly which primary metadata, files and terms were inspected."
+  },
+  "parameter_link": {
+    "cell_ids": [],
+    "match_level": "unmatched",
+    "evidence": "No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.",
+    "missing_components": [
+      "electrode_ocp",
+      "diffusion",
+      "kinetics"
+    ]
+  },
+  "evidence_urls": [
+    "https://example.org/replace-with-primary-evidence"
+  ],
+  "file_links": [],
+  "missing_items": [
+    "Replace with concrete unresolved identity, channel, license and matching gaps."
+  ]
+}

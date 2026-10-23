@@ -241,3 +241,13 @@ synthesized. Model OCPn is not raw electrode OCP. No source code is executed and
 no prediction accuracy is claimed. See [curation details](docs/LFP_STUDIES.md),
 `scripts/lfp_study_assets.json`, `ISU-UConn-data-notice.txt` and
 `Jahn2024-data-code-notice.txt`. Source authors have not endorsed E-BatP.
+
+## External dataset links
+
+`src/ebp/data/external_datasets.json` and the generated `data/full-cell/` index
+contain authored discovery metadata and source links, not copies of the linked
+raw observations. The linked datasets retain their provider licenses. Each
+record states the observed terms and evidence; `not-stated` is not permission
+to redistribute. The library, viewer and CI do not fetch these external payloads.
+Previously packaged source data and supporting evidence retain the notices
+listed above. See [the source review](docs/FULL_CELL_DATASETS.md).

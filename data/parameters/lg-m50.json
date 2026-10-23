@@ -1686,6 +1686,7 @@
       "missing_items": []
     }
   ],
+  "external_datasets": [],
   "sources": {
     "chen-2020": {
       "kind": "paper",

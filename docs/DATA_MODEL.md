@@ -124,3 +124,25 @@ fractions at the **low/high native coordinate endpoints**. The adapter uses
 `theta = theta_start + (x-lo)/(hi-lo)*(theta_end-theta_start)` and records
 `mapping_source_domain`. This matters for source axes such as MJ1 NMC 0.21..1;
 a missing part of the native domain is not implicitly treated as observed.
+
+## External full-cell datasets
+
+`external_datasets.json` is an authored metadata-only registry governed by
+`schema/external-datasets.schema.json`. Its records are dataset links, not
+imported test files, independent specimens or fitted model inputs. Each record
+retains source version/DOI, material families, cell identity, test/profile tags,
+reported conditions, channel-review scope, reuse terms and missing items.
+`parameter_link` holds explicit catalog cell IDs, evidence and match level. An
+`unmatched` record has no cell join; a chemistry category alone cannot add one.
+
+`Catalog.search_datasets()` and `ebp datasets` inspect this metadata offline.
+`full_cell_tests.json`, `linked_tests()` and `full_cell_data()` retain their
+packaged-observation meaning. No library, viewer, seed or CI step fetches
+external-link payloads. Existing source reconstruction downloads remain separate.
+The material index derives packaged-test families from the source chemistry
+labels; NCO is preserved separately from NMC/NCA. A multi-material external
+dataset can appear in multiple groups but remains one registry record.
+
+Read [the full-cell link review](FULL_CELL_DATASETS.md) before using a linked
+file. A source temperature setpoint is not a measured trace; a whole-cell OCV
+curve is not electrode OCP; EIS belongs to the frequency domain.
