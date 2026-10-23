@@ -28,6 +28,22 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 | `gitt-spme-delithiation` | 2 | [Download CSV](../parameters/lg-mj1-dlr-sintef--gitt-spme-delithiation.csv) |
 | `gitt-spme-lithiation` | 2 | [Download CSV](../parameters/lg-mj1-dlr-sintef--gitt-spme-lithiation.csv) |
 
+### Diffusion parameters
+
+[18 diffusion records (CSV)](../parameters/lg-mj1-dlr-sintef--diffusion.csv)
+
+Four workbook GITT tables, twelve model/direction-dependent GITT fit tables with source error bounds, and two SOC-specific activation energies.
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[6 kinetics records (CSV)](../parameters/lg-mj1-dlr-sintef--kinetics.csv)
+
+Four EIS-derived exchange-current tables and two SOC-specific activation energies; area-basis and concentration/temperature extension remain unresolved.
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ### Native parameter tables
 
 Linear interpolation is available only within each retained native domain. Source SOC and stoichiometry coordinates require explicit mapping before model use.

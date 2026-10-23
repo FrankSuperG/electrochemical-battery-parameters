@@ -14,6 +14,22 @@ Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not app
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
+### Diffusion parameters
+
+[2 diffusion records (CSV)](../parameters/kokam-slpb75106100-ecker2015--diffusion.csv)
+
+Two stoichiometry/temperature diffusivity fits; Ecker/Richardson lineage
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[2 kinetics records (CSV)](../parameters/kokam-slpb75106100-ecker2015--kinetics.csv)
+
+Two concentration/temperature exchange-current laws; Ecker/Richardson lineage
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ## OCP curves
 
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |

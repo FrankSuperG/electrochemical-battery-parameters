@@ -5,10 +5,15 @@ and observation catalog**, with the source, coordinate, variant and missing-item
 labels retained. This review does not change repository visibility. It does not
 certify complete interchangeable parameter sets or new predictive model accuracy.
 
-Current scope: **59 electrode curves, 397 other parameter records, 61 full-cell
+Scope at that review: **59 electrode curves, 397 other parameter records, 61 full-cell
 exports, 13 material labels and 13 cell/study entries**. File, branch and parameter
 counts are not independent-cell or independent-study counts. MJ1 adds no intact
 full-cell test; existing test counts are unchanged.
+
+For the subsequent v0.12 additions (72 curves/fits, 457 other parameters and
+16 cell/study entries), see the [extraction and storage review](PARAMETER_STORAGE.md)
+and [current battery-model index](../data/batteries/README.md). This dated v0.8
+review is retained as history; current source-level gaps remain authoritative.
 
 ## Findings resolved in this revision
 

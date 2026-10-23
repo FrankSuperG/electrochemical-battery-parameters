@@ -81,6 +81,34 @@ def test_parameter_exports_keep_source_values_and_separate_alternatives(index):
         }
 
 
+def test_battery_model_index_covers_every_package_and_external_source(index):
+    catalog = Catalog()
+    root = index["README.md"].decode()
+    overview = index["data/batteries/README.md"].decode()
+    for cid in catalog.cells:
+        assert f"data/batteries/{cid}.md" in index
+        assert f"data/batteries/{cid}.md" in root
+        for category in ["diffusion", "kinetics"]:
+            params = [p for p in catalog.parameters if p["cell_id"] == cid and p["category"] == category]
+            path = f"data/parameters/{cid}--{category}.csv"
+            if params:
+                rows = list(csv.DictReader(io.StringIO(index[path].decode())))
+                assert {r["id"] for r in rows} == {p["id"] for p in params}
+            else:
+                assert path not in index
+    hubs = {name: body.decode() for name, body in index.items() if name.startswith("data/batteries/") and name.endswith(".md") and not name.endswith("README.md")}
+    for source in catalog.external_datasets:
+        assert sum(f"{source['id']}.md#file-locations" in body for body in hubs.values()) == 1
+    ncr = hubs["data/batteries/panasonic-ncr18650b-hnei2016.md"]
+    assert all(name in ncr for name in ["hnei-ncr18650b-2016", "bayreuth-ncr18650b-2023", "virtual-vehicle-ncr18650b-aging-2023", "stanford-ncr18650b-rates-2021"])
+    assert "same_model_different_study" in ncr
+    assert "kim2011" not in ncr
+    assert "Not extracted" in ncr  # D and kinetics remain absent.
+    p45b = hubs["data/batteries/molicel-p45b-aboutenergy2026.md"]
+    assert "tum-p45b-halfcell-aging-2026" in p45b and "no native parameter join" in p45b
+    assert "multi-T" in overview and "ageing" in overview and "EIS" in overview
+
+
 def test_formula_csvs_are_marked_as_calculated_and_match_metadata(index):
     catalog = Catalog()
     for curve in catalog.search(representation="expression"):

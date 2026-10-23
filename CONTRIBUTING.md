@@ -1,8 +1,13 @@
 # Contributing to E-BatP
 
+**Storage rule:** OCP and reusable electrochemical parameters should be extracted
+into the native CSV/JSON records after permission and definitions are confirmed.
+New full-cell observations should use descriptions and external file links.
+See [fixed formats and extraction examples](docs/PARAMETER_STORAGE.md).
+
 Large full-cell datasets can be contributed as [external-link metadata](templates/external-dataset.json), with source versions, test types, material families, licensing and explicit parameter-match evidence. Include `aging_data` with source-backed availability, cycle/calendar kinds and exact linked evidence paths; use `not_reported` or `unverified` for unresolved coverage. Formation or repeated initial tests alone are not measured ageing data. Follow the [source-review guide](docs/FULL_CELL_DATASETS.md); no raw payload or model simulation is needed.
 
-Include `ocp_anchor` (schema 1.3): distinguish measured half-cell sources,
+Include `ocp_anchor` (schema 1.4): distinguish imported half-cell branches, external measured half-cell sources,
 published fitted parameterisation, reused expressions, cross-study references
 and unresolved reuse. Keep half-cell temperatures separate from full-cell test
 temperatures. Whole-cell OCV and reconstructed pure-silicon curves must not be
@@ -76,8 +81,9 @@ than placing a submission CSV directly into the catalog:
 
 - Add source and asset metadata with stable versions, checksums and notices.
 - Add or reuse material, experiment and cell identities with supporting evidence.
-- Add OCP to `catalog.json`, other inputs to `parameters.json`, and experiments
-  to `full_cell_tests.json`, with their referenced files.
+- Add OCP to `catalog.json` and other inputs to `parameters.json`, with their
+  referenced files. New full-cell datasets use `external_datasets.json` with
+  descriptions and exact file links; existing packaged tests are retained.
 - Update cell coverage and `matching_audit.json`, including unresolved gaps.
 - Run `python scripts/build_data_index.py` to refresh GitHub CSV/JSON exports,
   per-cell pages and README links. Include the generated `data/` changes in the

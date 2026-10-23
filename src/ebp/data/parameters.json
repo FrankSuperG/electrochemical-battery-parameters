@@ -13478,6 +13478,2016 @@
         "y_column": "value",
         "default_interpolation": "linear"
       }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-density-kg-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermal",
+      "name": "Parameterisation/Cell/Density [kg.m-3]",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Density [kg.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Density [kg.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2721.9776713580627
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-specific-heat-capacity-j-k-1-kg-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermal",
+      "name": "Parameterisation/Cell/Specific heat capacity [J.K-1.kg-1]",
+      "unit": "J.K-1.kg-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Specific heat capacity [J.K-1.kg-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Specific heat capacity [J.K-1.kg-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 790
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-external-surface-area-m2",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/External surface area [m2]",
+      "unit": "m2",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/External surface area [m2]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/External surface area [m2]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.005345
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-volume-m3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/Volume [m3]",
+      "unit": "m3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Volume [m3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Volume [m3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.4514e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-number-of-electrode-pairs-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/Number of electrode pairs connected in parallel to make a cell",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Number of electrode pairs connected in parallel to make a cell",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Number of electrode pairs connected in parallel to make a cell"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "operating_limits",
+      "name": "Parameterisation/Cell/Lower voltage cut-off [V]",
+      "unit": "V",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Lower voltage cut-off [V]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Lower voltage cut-off [V]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "operating_limits",
+      "name": "Parameterisation/Cell/Upper voltage cut-off [V]",
+      "unit": "V",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Upper voltage cut-off [V]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Upper voltage cut-off [V]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "operating_limits",
+      "name": "Parameterisation/Cell/Nominal cell capacity [A.h]",
+      "unit": "A.h",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Nominal cell capacity [A.h]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Nominal cell capacity [A.h]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.5
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-reference-temperature-k",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermal",
+      "name": "Parameterisation/Cell/Reference temperature [K]",
+      "unit": "K",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Reference temperature [K]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Reference temperature [K]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-electrode-area-m2",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/Electrode area [m2]",
+      "unit": "m2",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Electrode area [m2]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Electrode area [m2]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.1647
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Thickness [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Thickness [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Thickness [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.1e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Porosity",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Porosity",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Porosity"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.27325
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Negative electrode/Transport efficiency",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Transport efficiency",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Transport efficiency"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.14283
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Negative electrode/Conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Conductivity [S.m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Conductivity [S.m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 7.2675
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Maximum concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Maximum concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Maximum concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 30526.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-particle-radius-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Particle radius [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Particle radius [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Particle radius [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.78e-06
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity [m2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity [m2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 6.1788e-14
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-entropic-change-coefficient-v-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermodynamics",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Entropic change coefficient [V.K-1]",
+      "unit": "V.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Entropic change coefficient [V.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Entropic change coefficient [V.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/aepy-p45b-parameterisation-negative-electrode-particle-graphite-entropic-change-coefficient-v-k-1.csv",
+        "sha256": "e8259d2746be2cfa57c997b5d7e0aa92be39812622b2017782296c69be3dcb85",
+        "point_count": 83,
+        "x": {
+          "column": "source_sto",
+          "variable": "sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.0,
+            1.0
+          ],
+          "definition": "Native particle stoichiometry."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 107490.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 20125.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Surface area per unit volume [m-1]",
+      "unit": "m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Surface area per unit volume [m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Surface area per unit volume [m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 315280.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Minimum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Minimum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Minimum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0011077
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Maximum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Maximum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Maximum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.88312
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant [mol.m-2.s-1]",
+      "unit": "mol.m-2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant [mol.m-2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3.3109e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 125330.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-particle-radius-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Particle radius [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Particle radius [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Particle radius [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.78e-06
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity [m2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity [m2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 7.5137e-14
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-ocp-hysteresis-decay-constant",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP hysteresis decay constant",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP hysteresis decay constant",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP hysteresis decay constant"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 24.677
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-entropic-change-coefficient-v-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermodynamics",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Entropic change coefficient [V.K-1]",
+      "unit": "V.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Entropic change coefficient [V.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Entropic change coefficient [V.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-entropic-change-coefficient-v-k-1.csv",
+        "sha256": "590468bbaa7b2771fe421ab68c8c9141548e703150358475cbb0f68394ad1773",
+        "point_count": 201,
+        "x": {
+          "column": "source_sto",
+          "variable": "sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.0,
+            1.0
+          ],
+          "definition": "Native particle stoichiometry."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 62702.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 20103.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Surface area per unit volume [m-1]",
+      "unit": "m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Surface area per unit volume [m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Surface area per unit volume [m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 19171.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Minimum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Minimum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Minimum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.054502
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.84072
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant [mol.m-2.s-1]",
+      "unit": "mol.m-2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant [mol.m-2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.00032716
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Positive electrode/Thickness [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Thickness [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Thickness [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Porosity",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Porosity",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Porosity"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.20608
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Positive electrode/Transport efficiency",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Transport efficiency",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Transport efficiency"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.093552
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Positive electrode/Conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Conductivity [S.m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Conductivity [S.m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.79392
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Maximum concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Maximum concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Maximum concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 49334.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-particle-radius-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Positive electrode/Particle radius [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Particle radius [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Particle radius [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 6.38e-06
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Positive electrode/Diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Diffusivity [m2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Diffusivity [m2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0991e-13
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-entropic-change-coefficient-v-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermodynamics",
+      "name": "Parameterisation/Positive electrode/Entropic change coefficient [V.K-1]",
+      "unit": "V.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Entropic change coefficient [V.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Entropic change coefficient [V.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Positive electrode/Diffusivity activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Diffusivity activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 7214.4
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Positive electrode/Reaction rate constant activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Reaction rate constant activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 31062.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Positive electrode/Surface area per unit volume [m-1]",
+      "unit": "m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Surface area per unit volume [m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Surface area per unit volume [m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 337100.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Minimum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Minimum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Minimum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.21608
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Maximum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Maximum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Maximum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.937
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Positive electrode/Reaction rate constant [mol.m-2.s-1]",
+      "unit": "mol.m-2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Reaction rate constant [mol.m-2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.7128e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-separator-thickness-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Separator/Thickness [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Separator/Thickness [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Separator/Thickness [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-separator-porosity",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Separator/Porosity",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Separator/Porosity",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Separator/Porosity"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.47
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-separator-transport-efficiency",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Separator/Transport efficiency",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Separator/Transport efficiency",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Separator/Transport efficiency"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.32222
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-electrolyte-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial electrolyte concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial electrolyte concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial electrolyte concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-graphite",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial hysteresis state: Negative electrode/Graphite",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial hysteresis state: Negative electrode/Graphite",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial hysteresis state: Negative electrode/Graphite"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-silicon-additive",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial hysteresis state: Negative electrode/Silicon Additive",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial hysteresis state: Negative electrode/Silicon Additive",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial hysteresis state: Negative electrode/Silicon Additive"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-hysteresis-state-positive-electrode",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial hysteresis state: Positive electrode",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial hysteresis state: Positive electrode",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial hysteresis state: Positive electrode"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-state-of-charge",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial state-of-charge",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial state-of-charge",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial state-of-charge"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-temperature-k",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial temperature [K]",
+      "unit": "K",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial temperature [K]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial temperature [K]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "aepy-p45b-state-thermal-environment-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Thermal environment/Ambient temperature [K]",
+      "unit": "K",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Thermal environment/Ambient temperature [K]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Thermal environment/Ambient temperature [K]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "aepy-p45b-state-thermal-environment-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Thermal environment/Heat transfer coefficient [W.m-2.K-1]",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Thermal environment/Heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Thermal environment/Heat transfer coefficient [W.m-2.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
     }
   ]
 }

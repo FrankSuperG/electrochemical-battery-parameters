@@ -1,0 +1,3841 @@
+{
+  "cell_id": "molicel-p45b-aboutenergy2026",
+  "cell": {
+    "manufacturer": "Molicel",
+    "model": "INR21700-P45B",
+    "display_name": "Molicel P45B | About:Energy2026 BPX",
+    "chemistry": "NCA/graphite-SiOx",
+    "format": "Source cell format; half-cell and full-cell configurations differ",
+    "nominal_capacity_Ah": null,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "aepy-p45b-2026"
+    ],
+    "model_context": "Partial electrochemical parameter/source package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Source names this cell/model within one study; full-cell observations stay externally linked and same-specimen mapping remains unresolved.",
+    "note": "Other studies sharing a model name are separate sources, not a single measured parameter set.",
+    "coverage": {
+      "ocp": "Published BPX phase-specific fits; original measured half-cell points not located.",
+      "diffusion": "Three phase-specific D inputs and three activation energies in BPX.",
+      "kinetics": "BPX-native reaction coefficients and activation energies; no automatic i0/k conversion.",
+      "full_cell_tests": "External dataset links only; no new full-cell observations packaged."
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
+    ],
+    "parameter_ids": [
+      "aepy-p45b-parameterisation-cell-density-kg-m-3",
+      "aepy-p45b-parameterisation-cell-specific-heat-capacity-j-k-1-kg-1",
+      "aepy-p45b-parameterisation-cell-external-surface-area-m2",
+      "aepy-p45b-parameterisation-cell-volume-m3",
+      "aepy-p45b-parameterisation-cell-number-of-electrode-pairs-connected-in-parallel-to-make-a-cell",
+      "aepy-p45b-parameterisation-cell-lower-voltage-cut-off-v",
+      "aepy-p45b-parameterisation-cell-upper-voltage-cut-off-v",
+      "aepy-p45b-parameterisation-cell-nominal-cell-capacity-a-h",
+      "aepy-p45b-parameterisation-cell-reference-temperature-k",
+      "aepy-p45b-parameterisation-cell-electrode-area-m2",
+      "aepy-p45b-parameterisation-negative-electrode-thickness-m",
+      "aepy-p45b-parameterisation-negative-electrode-porosity",
+      "aepy-p45b-parameterisation-negative-electrode-transport-efficiency",
+      "aepy-p45b-parameterisation-negative-electrode-conductivity-s-m-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-concentration-mol-m-3",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-particle-radius-m",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-entropic-change-coefficient-v-k-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-surface-area-per-unit-volume-m-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-minimum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-concentration-mol-m-3",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-particle-radius-m",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-ocp-hysteresis-decay-constant",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-entropic-change-coefficient-v-k-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-surface-area-per-unit-volume-m-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-minimum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+      "aepy-p45b-parameterisation-positive-electrode-thickness-m",
+      "aepy-p45b-parameterisation-positive-electrode-porosity",
+      "aepy-p45b-parameterisation-positive-electrode-transport-efficiency",
+      "aepy-p45b-parameterisation-positive-electrode-conductivity-s-m-1",
+      "aepy-p45b-parameterisation-positive-electrode-maximum-concentration-mol-m-3",
+      "aepy-p45b-parameterisation-positive-electrode-particle-radius-m",
+      "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+      "aepy-p45b-parameterisation-positive-electrode-entropic-change-coefficient-v-k-1",
+      "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-positive-electrode-surface-area-per-unit-volume-m-1",
+      "aepy-p45b-parameterisation-positive-electrode-minimum-stoichiometry",
+      "aepy-p45b-parameterisation-positive-electrode-maximum-stoichiometry",
+      "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "aepy-p45b-parameterisation-separator-thickness-m",
+      "aepy-p45b-parameterisation-separator-porosity",
+      "aepy-p45b-parameterisation-separator-transport-efficiency",
+      "aepy-p45b-state-initial-conditions-initial-electrolyte-concentration-mol-m-3",
+      "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-graphite",
+      "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-silicon-additive",
+      "aepy-p45b-state-initial-conditions-initial-hysteresis-state-positive-electrode",
+      "aepy-p45b-state-initial-conditions-initial-state-of-charge",
+      "aepy-p45b-state-initial-conditions-initial-temperature-k",
+      "aepy-p45b-state-thermal-environment-ambient-temperature-k",
+      "aepy-p45b-state-thermal-environment-heat-transfer-coefficient-w-m-2-k-1"
+    ],
+    "ocp_record_ids": [
+      "aepy-p45b-negative-graphite-ocp-v",
+      "aepy-p45b-negative-silicon-ocp-v",
+      "aepy-p45b-negative-silicon-ocp-delithiation-v",
+      "aepy-p45b-negative-silicon-ocp-lithiation-v",
+      "aepy-p45b-positive-nca-ocp-v"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "aepy-p45b-negative-graphite-ocp-v",
+          "aepy-p45b-negative-silicon-ocp-v",
+          "aepy-p45b-negative-silicon-ocp-delithiation-v",
+          "aepy-p45b-negative-silicon-ocp-lithiation-v",
+          "aepy-p45b-positive-nca-ocp-v"
+        ],
+        "source_ids": [
+          "aepy-p45b-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Published BPX phase-specific fits; original measured half-cell points not located.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+          "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1"
+        ],
+        "source_ids": [
+          "aepy-p45b-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Three phase-specific D inputs and three activation energies in BPX.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+          "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1"
+        ],
+        "source_ids": [
+          "aepy-p45b-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "BPX-native reaction coefficients and activation energies; no automatic i0/k conversion.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "External dataset links only; no new full-cell observations packaged.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    }
+  },
+  "parameters": [
+    {
+      "id": "aepy-p45b-parameterisation-cell-density-kg-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermal",
+      "name": "Parameterisation/Cell/Density [kg.m-3]",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Density [kg.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Density [kg.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2721.9776713580627
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-specific-heat-capacity-j-k-1-kg-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermal",
+      "name": "Parameterisation/Cell/Specific heat capacity [J.K-1.kg-1]",
+      "unit": "J.K-1.kg-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Specific heat capacity [J.K-1.kg-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Specific heat capacity [J.K-1.kg-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 790
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-external-surface-area-m2",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/External surface area [m2]",
+      "unit": "m2",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/External surface area [m2]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/External surface area [m2]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.005345
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-volume-m3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/Volume [m3]",
+      "unit": "m3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Volume [m3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Volume [m3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.4514e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-number-of-electrode-pairs-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/Number of electrode pairs connected in parallel to make a cell",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Number of electrode pairs connected in parallel to make a cell",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Number of electrode pairs connected in parallel to make a cell"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "operating_limits",
+      "name": "Parameterisation/Cell/Lower voltage cut-off [V]",
+      "unit": "V",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Lower voltage cut-off [V]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Lower voltage cut-off [V]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "operating_limits",
+      "name": "Parameterisation/Cell/Upper voltage cut-off [V]",
+      "unit": "V",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Upper voltage cut-off [V]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Upper voltage cut-off [V]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "operating_limits",
+      "name": "Parameterisation/Cell/Nominal cell capacity [A.h]",
+      "unit": "A.h",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Nominal cell capacity [A.h]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Nominal cell capacity [A.h]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.5
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-reference-temperature-k",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermal",
+      "name": "Parameterisation/Cell/Reference temperature [K]",
+      "unit": "K",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Reference temperature [K]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Reference temperature [K]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-cell-electrode-area-m2",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Cell/Electrode area [m2]",
+      "unit": "m2",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Cell/Electrode area [m2]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Cell/Electrode area [m2]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.1647
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Thickness [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Thickness [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Thickness [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.1e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Porosity",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Porosity",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Porosity"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.27325
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Negative electrode/Transport efficiency",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Transport efficiency",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Transport efficiency"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.14283
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Negative electrode/Conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Conductivity [S.m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Conductivity [S.m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 7.2675
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Maximum concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Maximum concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Maximum concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 30526.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-particle-radius-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Particle radius [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Particle radius [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Particle radius [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.78e-06
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity [m2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity [m2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 6.1788e-14
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-entropic-change-coefficient-v-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermodynamics",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Entropic change coefficient [V.K-1]",
+      "unit": "V.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Entropic change coefficient [V.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Entropic change coefficient [V.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/aepy-p45b-parameterisation-negative-electrode-particle-graphite-entropic-change-coefficient-v-k-1.csv",
+        "sha256": "e8259d2746be2cfa57c997b5d7e0aa92be39812622b2017782296c69be3dcb85",
+        "point_count": 83,
+        "x": {
+          "column": "source_sto",
+          "variable": "sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.0,
+            1.0
+          ],
+          "definition": "Native particle stoichiometry."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Diffusivity activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 107490.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 20125.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Surface area per unit volume [m-1]",
+      "unit": "m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Surface area per unit volume [m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Surface area per unit volume [m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 315280.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Minimum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Minimum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Minimum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0011077
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Maximum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Maximum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Maximum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.88312
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant [mol.m-2.s-1]",
+      "unit": "mol.m-2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/Reaction rate constant [mol.m-2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3.3109e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 125330.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-particle-radius-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Particle radius [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Particle radius [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Particle radius [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.78e-06
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity [m2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity [m2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 7.5137e-14
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-ocp-hysteresis-decay-constant",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP hysteresis decay constant",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP hysteresis decay constant",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP hysteresis decay constant"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 24.677
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-entropic-change-coefficient-v-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermodynamics",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Entropic change coefficient [V.K-1]",
+      "unit": "V.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Entropic change coefficient [V.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Entropic change coefficient [V.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "table",
+        "path": "parameter_tables/aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-entropic-change-coefficient-v-k-1.csv",
+        "sha256": "590468bbaa7b2771fe421ab68c8c9141548e703150358475cbb0f68394ad1773",
+        "point_count": 201,
+        "x": {
+          "column": "source_sto",
+          "variable": "sto",
+          "unit": "1",
+          "kind": "source_reported_stoichiometry",
+          "domain": [
+            0.0,
+            1.0
+          ],
+          "definition": "Native particle stoichiometry."
+        },
+        "y_column": "value",
+        "default_interpolation": "linear"
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Diffusivity activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 62702.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 20103.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Surface area per unit volume [m-1]",
+      "unit": "m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Surface area per unit volume [m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Surface area per unit volume [m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 19171.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Minimum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Minimum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Minimum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.054502
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Maximum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.84072
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant [mol.m-2.s-1]",
+      "unit": "mol.m-2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/Reaction rate constant [mol.m-2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.00032716
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Positive electrode/Thickness [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Thickness [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Thickness [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Porosity",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Porosity",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Porosity"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.20608
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Positive electrode/Transport efficiency",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Transport efficiency",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Transport efficiency"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.093552
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Positive electrode/Conductivity [S.m-1]",
+      "unit": "S.m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Conductivity [S.m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Conductivity [S.m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.79392
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-maximum-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Maximum concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Maximum concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Maximum concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 49334.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-particle-radius-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Positive electrode/Particle radius [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Particle radius [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Particle radius [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 6.38e-06
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Positive electrode/Diffusivity [m2.s-1]",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Diffusivity [m2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Diffusivity [m2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0991e-13
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-entropic-change-coefficient-v-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "thermodynamics",
+      "name": "Parameterisation/Positive electrode/Entropic change coefficient [V.K-1]",
+      "unit": "V.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Entropic change coefficient [V.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Entropic change coefficient [V.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "diffusion",
+      "name": "Parameterisation/Positive electrode/Diffusivity activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Diffusivity activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Diffusivity activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 7214.4
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Positive electrode/Reaction rate constant activation energy [J.mol-1]",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Reaction rate constant activation energy [J.mol-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Reaction rate constant activation energy [J.mol-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 31062.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-surface-area-per-unit-volume-m-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Positive electrode/Surface area per unit volume [m-1]",
+      "unit": "m-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Surface area per unit volume [m-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Surface area per unit volume [m-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 337100.0
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-minimum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Minimum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Minimum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Minimum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.21608
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-maximum-stoichiometry",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Positive electrode/Maximum stoichiometry",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Maximum stoichiometry",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Maximum stoichiometry"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.937
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "kinetics",
+      "name": "Parameterisation/Positive electrode/Reaction rate constant [mol.m-2.s-1]",
+      "unit": "mol.m-2.s-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Positive electrode/Reaction rate constant [mol.m-2.s-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Positive electrode/Reaction rate constant [mol.m-2.s-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.7128e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-separator-thickness-m",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "geometry",
+      "name": "Parameterisation/Separator/Thickness [m]",
+      "unit": "m",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Separator/Thickness [m]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Separator/Thickness [m]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.2e-05
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-separator-porosity",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "electrode",
+      "name": "Parameterisation/Separator/Porosity",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Separator/Porosity",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Separator/Porosity"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.47
+      }
+    },
+    {
+      "id": "aepy-p45b-parameterisation-separator-transport-efficiency",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "transport",
+      "name": "Parameterisation/Separator/Transport efficiency",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "Parameterisation/Separator/Transport efficiency",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "Parameterisation/Separator/Transport efficiency"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.32222
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-electrolyte-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial electrolyte concentration [mol.m-3]",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial electrolyte concentration [mol.m-3]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial electrolyte concentration [mol.m-3]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-graphite",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial hysteresis state: Negative electrode/Graphite",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial hysteresis state: Negative electrode/Graphite",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial hysteresis state: Negative electrode/Graphite"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-silicon-additive",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial hysteresis state: Negative electrode/Silicon Additive",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial hysteresis state: Negative electrode/Silicon Additive",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial hysteresis state: Negative electrode/Silicon Additive"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-hysteresis-state-positive-electrode",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial hysteresis state: Positive electrode",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial hysteresis state: Positive electrode",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial hysteresis state: Positive electrode"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-state-of-charge",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial state-of-charge",
+      "unit": "1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial state-of-charge",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial state-of-charge"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1
+      }
+    },
+    {
+      "id": "aepy-p45b-state-initial-conditions-initial-temperature-k",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Initial conditions/Initial temperature [K]",
+      "unit": "K",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Initial conditions/Initial temperature [K]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Initial conditions/Initial temperature [K]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "aepy-p45b-state-thermal-environment-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Thermal environment/Ambient temperature [K]",
+      "unit": "K",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Thermal environment/Ambient temperature [K]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Thermal environment/Ambient temperature [K]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "aepy-p45b-state-thermal-environment-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "category": "initial_state",
+      "name": "State/Thermal environment/Heat transfer coefficient [W.m-2.K-1]",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "provenance": {
+        "asset_id": "aepy-p45b-bpx",
+        "location": "State/Thermal environment/Heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_BPX_model_input"
+      },
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "definition": "Native BPX 1.1 model input, with source particle path and units retained; no conversion to another kinetic convention.",
+      "conditions": {
+        "parameterization_variant": "aepy-bpx-1.1-dfn",
+        "reference_temperature_K": 298.15,
+        "source_pointer": "State/Thermal environment/Heat transfer coefficient [W.m-2.K-1]"
+      },
+      "limitations": [
+        "Published parameterisation, not an independent measurement of every input.",
+        "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
+        "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    }
+  ],
+  "ocp_records": [
+    {
+      "id": "aepy-p45b-negative-graphite-ocp-v",
+      "version": "1",
+      "title": "aepy p45b negative graphite ocp v",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "aepy-p45b-negative-graphite-ocp-v-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0011125213468379,
+          0.880643398272419
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-graphite-ocp-v.csv",
+        "sha256": "ff25f2bbb2572699a8ac6c52a86692449d730b675e141520d25810348f96bf67",
+        "point_count": 1140,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/OCP [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/OCP [V]",
+          "source_nodes": 1318,
+          "source_particle_bounds": [
+            0.0011077,
+            0.88312
+          ],
+          "excluded_outside_particle_bounds": 178,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-negative-silicon-ocp-v",
+      "version": "1",
+      "title": "aepy p45b negative silicon ocp v",
+      "parameter": "electrode_ocp",
+      "material": "silicon",
+      "material_id": "aepy-p45b-negative-silicon-ocp-v-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.054504455,
+          0.840496595
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-silicon-ocp-v.csv",
+        "sha256": "132ee37c8798a4578b378735ced1b82244856111b9dfa3c57e385944d86a06fa",
+        "point_count": 1573,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP [V]",
+          "source_nodes": 2001,
+          "source_particle_bounds": [
+            0.054502,
+            0.84072
+          ],
+          "excluded_outside_particle_bounds": 428,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-negative-silicon-ocp-delithiation-v",
+      "version": "1",
+      "title": "aepy p45b negative silicon ocp delithiation v",
+      "parameter": "electrode_ocp",
+      "material": "silicon",
+      "material_id": "aepy-p45b-negative-silicon-ocp-delithiation-v-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0545609206432044,
+          0.84
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-silicon-ocp-delithiation-v.csv",
+        "sha256": "8ba00deef389fa667d54c730c7d78f4c92c14d9294ce0e02a1b150002dc65e91",
+        "point_count": 942,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (delithiation) [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (delithiation) [V]",
+          "source_nodes": 3161,
+          "source_particle_bounds": [
+            0.054502,
+            0.84072
+          ],
+          "excluded_outside_particle_bounds": 2219,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-negative-silicon-ocp-lithiation-v",
+      "version": "1",
+      "title": "aepy p45b negative silicon ocp lithiation v",
+      "parameter": "electrode_ocp",
+      "material": "silicon",
+      "material_id": "aepy-p45b-negative-silicon-ocp-lithiation-v-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0547977268563917,
+          0.84
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-silicon-ocp-lithiation-v.csv",
+        "sha256": "9142c8daeac18232327546f5c1184c87a073d6d55836179112dc74ebad71813d",
+        "point_count": 509,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (lithiation) [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (lithiation) [V]",
+          "source_nodes": 2983,
+          "source_particle_bounds": [
+            0.054502,
+            0.84072
+          ],
+          "excluded_outside_particle_bounds": 2474,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-positive-nca-ocp-v",
+      "version": "1",
+      "title": "aepy p45b positive nca ocp v",
+      "parameter": "electrode_ocp",
+      "material": "NCA",
+      "material_id": "aepy-p45b-positive-nca-ocp-v-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.216085984349077,
+          0.935944628026975
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-positive-nca-ocp-v.csv",
+        "sha256": "49bb9c34a74cfef0f15c9dc8af6c46e19b0360ff2db9c9a77cf26ffcc8d599a7",
+        "point_count": 883,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Positive electrode/OCP [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Positive electrode/OCP [V]",
+          "source_nodes": 1318,
+          "source_particle_bounds": [
+            0.21608,
+            0.937
+          ],
+          "excluded_outside_particle_bounds": 435,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    }
+  ],
+  "full_cell_tests": [],
+  "external_datasets": [
+    {
+      "id": "aboutenergy-p45b-2026",
+      "title": "Molicel P45B: published DFN OCP/parameters and multi-temperature CC, WLTP and eVTOL",
+      "material_families": [
+        "NCA"
+      ],
+      "cell_identity": "Molicel INR21700-P45B 4.5 Ah, NCA/graphite-SiOx according to published BPX header. DFN paper explicitly reuses the earlier public ECM validation dataset; same model and declared reuse, not a demonstrated shared serialized specimen.",
+      "test_types": [
+        "constant_current",
+        "pulse",
+        "dynamic",
+        "ocv"
+      ],
+      "profiles": [
+        "WLTP",
+        "eVTOL"
+      ],
+      "rate_summary": "CC charge at C/30, 1C, 3C and discharge at C/30, 1C, 3C, 10C; GITT and WLTP at 10/25/40/60 degC. eVTOL is limited to 25/40/60 degC. Alternate -charge.csv files retain a charge-optimised model case, not independent experiments.",
+      "temperatures_C": [
+        10,
+        25,
+        40,
+        60
+      ],
+      "channels": {
+        "time_series": [
+          "t_s",
+          "I_exp_A",
+          "V_exp_V",
+          "T_exp_degC"
+        ],
+        "frequency_domain": [],
+        "note": "Author format PDF defines these experimental columns, positive charge current and Peltier-controlled surface temperature. I_sim_A, V_sim_V, SOC_sim, E_OCV_V, T_sim_degC and Q_sim_W are simulated columns. E_OCV_V is predicted whole-cell OCV, not measured electrode OCP. CSV headers/numerical data remain unchecked."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://zenodo.org/records/19052626",
+        "doi": "10.5281/zenodo.19052626",
+        "version": "fixed record 19052626; BPX at 188bd62ee2347cc486b66dc43e31fb9597759db1"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://zenodo.org/api/records/19052626",
+        "note": "Zenodo states CC BY 4.0 for the test release; its README retains copyright/all-rights-reserved and liability notices. BPX is separately in the BSD-3-Clause author repository. Do not transfer license scope between these objects; no source payload is redistributed."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "existing_source_audit",
+        "note": "All 51 ZIP member names/sizes, release metadata, README and two-page format PDF reviewed; BPX header/structure inspected. No observation CSV read. Published model parameters and measured/raw data are not merged. Follow-up: selected half-cell/parameter originals were read, pinned and extracted by scripts/seed_parameter_sources.py. Full-cell observation payloads remain unread and external."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "molicel-p45b-aboutenergy2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.",
+        "missing_components": []
+      },
+      "evidence_urls": [
+        "https://zenodo.org/records/19052626",
+        "https://zenodo.org/api/records/19052626",
+        "https://doi.org/10.1149/1945-7111/aea1c1",
+        "https://www.aboutenergy.io/post/molicel-p45b-electrochemical-model-open-source-dfn-parameter-set",
+        "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json",
+        "https://github.com/About-Energy-OpenSource/AEPyBaMM/tree/188bd62ee2347cc486b66dc43e31fb9597759db1"
+      ],
+      "file_links": [
+        {
+          "label": "molicel_p45b_data.zip",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip",
+          "kind": "archive",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Parent archive only; no observation payload downloaded.",
+          "size_bytes": 12421433
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_1C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_1C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 457673
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_3C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_3C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 112627
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_3C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_3C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 112633
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_3C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_3C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 148782
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_10C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_10C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 10.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 22630
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_Co30_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_Co30_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 124815
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_Co30_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_Co30_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 138131
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_GITT_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_GITT_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3683369
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_GITT_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_GITT_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3345944
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_WLTP.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_WLTP.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [
+            "WLTP"
+          ],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3246264
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_1C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_1C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 458521
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_1C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_1C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 458983
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_1C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_1C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 481045
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_3C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_3C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 119987
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_3C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_3C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 119952
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_3C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_3C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 154680
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_10C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_10C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 10.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 38760
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_Co30_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_Co30_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 127725
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_Co30_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_Co30_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 139378
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_eVTOL.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_eVTOL.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [
+            "eVTOL"
+          ],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 771916
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_GITT_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_GITT_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3755984
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_GITT_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_GITT_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3516570
+        },
+        {
+          "label": "MOLICEL_P45B_025degC_WLTP.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_025degC_WLTP.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [
+            "WLTP"
+          ],
+          "source_sample_id": null,
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3374036
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_1C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_1C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 479816
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_1C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_1C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 480066
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_1C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_1C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 496755
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_3C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_3C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 127009
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_3C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_3C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 127052
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_3C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_3C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 161219
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_10C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_10C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 10.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 45171
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_Co30_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_Co30_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 129350
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_Co30_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_Co30_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 138445
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_eVTOL.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_eVTOL.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [
+            "eVTOL"
+          ],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 773376
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_GITT_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_GITT_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3828899
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_GITT_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_GITT_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3662128
+        },
+        {
+          "label": "MOLICEL_P45B_040degC_WLTP.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_040degC_WLTP.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [
+            "WLTP"
+          ],
+          "source_sample_id": null,
+          "temperature_C": 40,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3408420
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_1C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_1C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 502054
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_1C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_1C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 502267
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_1C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_1C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 518165
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_3C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_3C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 130978
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_3C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_3C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 130891
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_3C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_3C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 3.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 165082
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_10C_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_10C_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 10.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 45491
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_Co30_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_Co30_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 132061
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_Co30_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_Co30_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": 0.03333333333333333,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 137153
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_eVTOL.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_eVTOL.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [
+            "eVTOL"
+          ],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 770116
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_GITT_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_GITT_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3779761
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_GITT_Dch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_GITT_Dch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3658680
+        },
+        {
+          "label": "MOLICEL_P45B_060degC_WLTP.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_060degC_WLTP.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [
+            "WLTP"
+          ],
+          "source_sample_id": null,
+          "temperature_C": 60,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 3335725
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_1C_Ch.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_1C_Ch.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 418829
+        },
+        {
+          "label": "MOLICEL_P45B_010degC_1C_Ch-charge.csv",
+          "url": "https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content",
+          "source_path": "molicel_p45b_data.zip::MOLICEL_P45B_010degC_1C_Ch-charge.csv",
+          "kind": "archive_member",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": 10,
+          "nominal_rate_C": 1.0,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.",
+          "size_bytes": 419175
+        },
+        {
+          "label": "examples/params/Molicel_P45B_bpx.json",
+          "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json",
+          "source_path": "examples/params/Molicel_P45B_bpx.json",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "existing_source_audit",
+          "note": "Published BPX 1.1 DFN parameter package with graphite/silicon-additive particle branches, cathode OCP, diffusion and kinetic entries. Fitted/tuned parameterisation, not independently measured pure-silicon OCP or a native E-BatP import. Structure/header inspected; numerical arrays/units not audited. BSD-3-Clause author repository. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
+          "size_bytes": 313809
+        },
+        {
+          "label": "Molicel P45B Data Release Data Format Documentation.pdf",
+          "url": "https://zenodo.org/api/records/19052626/files/Molicel%20P45B%20Data%20Release%20Data%20Format%20Documentation.pdf/content",
+          "source_path": "Molicel P45B Data Release Data Format Documentation.pdf",
+          "kind": "documentation",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "documentation_reviewed",
+          "note": "Author README or format documentation inspected; no experimental observations in this locator.",
+          "size_bytes": 91444
+        },
+        {
+          "label": "readme_Molicel_P45B_dataset_AE.txt",
+          "url": "https://zenodo.org/api/records/19052626/files/readme_Molicel_P45B_dataset_AE.txt/content",
+          "source_path": "readme_Molicel_P45B_dataset_AE.txt",
+          "kind": "documentation",
+          "cell_model": "Molicel INR21700-P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "documentation_reviewed",
+          "note": "Author README or format documentation inspected; no experimental observations in this locator.",
+          "size_bytes": 2668
+        }
+      ],
+      "missing_items": [
+        "Original harvested half-cell observations and their temperature not independently located; composite/silicon fitted OCP is not a measured pure-material curve.",
+        "No eVTOL at 10 degC in the checked ZIP, no US06/EIS or longitudinal ageing source in this release.",
+        "No independent-cell count from 51 files; measured/model columns and alternate model cases must remain separate.",
+        "Five OCP fits and 60 non-OCP BPX inputs imported; source electrolyte placeholder zeros and 71 custom-law coefficients remain in original BPX only.",
+        "OCP export retains only native nodes within source particle bounds; extreme endpoint extrapolations remain in original BPX, not catalog evaluation domain.",
+        "BPX-native molar reaction coefficients retain source units; no conversion to intrinsic k or exchange-current density law is inferred."
+      ],
+      "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "aepy-p45b-negative-graphite-ocp-v",
+            "aepy-p45b-negative-silicon-ocp-v",
+            "aepy-p45b-negative-silicon-ocp-delithiation-v",
+            "aepy-p45b-negative-silicon-ocp-lithiation-v",
+            "aepy-p45b-positive-nca-ocp-v"
+          ],
+          "evidence": "Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements.",
+          "missing_items": [
+            "Identical half-cell/full-cell serialized specimen unresolved",
+            "Original raw half-cell points not located"
+          ]
+        },
+        "diffusion": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "model_diffusivity",
+          "record_ids": [
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1"
+          ],
+          "evidence": "Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements.",
+          "missing_items": [
+            "Identical serialized specimen unresolved"
+          ]
+        },
+        "kinetics": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "kinetic_coefficient",
+          "record_ids": [
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+            "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1"
+          ],
+          "evidence": "Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements.",
+          "missing_items": [
+            "Identical serialized specimen unresolved"
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "archive_member_located",
+          "evidence": "The ZIP explicitly contains C/30, 1C and 3C charge and C/30, 1C, 3C and 10C discharge filename cases across four temperatures. -charge alternates are not independent experiments."
+        },
+        "multi_rate_discharge": {
+          "status": "archive_member_located",
+          "evidence": "The ZIP explicitly contains C/30, 1C and 3C charge and C/30, 1C, 3C and 10C discharge filename cases across four temperatures. -charge alternates are not independent experiments."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "EIS": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        }
+      },
+      "aging_data": {
+        "status": "not_reported",
+        "kinds": [],
+        "evidence": "The reviewed source reports characterization or validation tests without an established longitudinal ageing series.",
+        "source_url": "https://zenodo.org/records/19052626",
+        "file_paths": []
+      },
+      "ocp_anchor": {
+        "kind": "published_parameterisation",
+        "half_cell_temperatures_C": [],
+        "source_paths": [
+          "examples/params/Molicel_P45B_bpx.json"
+        ],
+        "source_urls": [
+          "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json",
+          "https://www.aboutenergy.io/post/molicel-p45b-electrochemical-model-open-source-dfn-parameter-set"
+        ],
+        "evidence": "Published composite/fitted BPX electrode OCPs are linked externally. The authors explicitly connect this DFN set to the released full-cell tests. This review does not establish access to the original harvested half-cell observation points or independently validate the fitted curves. Five fitted phase/branch OCP tables are now extracted inside source particle bounds; the original BPX and 60 non-OCP inputs are retained."
+      },
+      "catalog_evidence_paths": [
+        "evidence/ocp-first-expansion-review.json"
+      ]
+    }
+  ],
+  "sources": {
+    "aepy-p45b-2026": {
+      "kind": "software",
+      "title": "About:Energy Molicel P45B BPX 1.1 parameterisation",
+      "authors": [
+        "About:Energy Limited"
+      ],
+      "year": 2026,
+      "url": "https://github.com/About-Energy-OpenSource/AEPyBaMM/tree/188bd62ee2347cc486b66dc43e31fb9597759db1",
+      "license": "BSD-3-Clause",
+      "version": "188bd62ee2347cc486b66dc43e31fb9597759db1",
+      "role": "Original BPX model inputs and author BSD notice retained; fitted OCP is not raw half-cell measurement."
+    }
+  },
+  "upstream_assets": {
+    "aepy-p45b-bpx": {
+      "filename": "aepy-Molicel_P45B_bpx.json",
+      "path": "evidence/aepy-Molicel_P45B_bpx.json",
+      "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json",
+      "source_id": "aepy-p45b-2026",
+      "license": "BSD-3-Clause",
+      "sha256": "25acf02faa9c20b57382b5d678ccf0ba4cb384ab632d395f50fd97e80a42db66"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

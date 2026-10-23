@@ -1,0 +1,136 @@
+{
+  "record": {
+    "id": "hnei-ncr18650b-ne-lithiation",
+    "version": "1",
+    "title": "hnei ncr18650b ne lithiation",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "hnei-ncr18650b-ne-lithiation-material",
+    "electrode_role": "negative",
+    "direction": "lithiation",
+    "measurement": "pseudo_ocp",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "normalized_branch_capacity",
+      "symbol": "x",
+      "unit": "1",
+      "domain": [
+        -0.0,
+        1.0
+      ],
+      "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+      "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/hnei-ncr18650b-ne-lithiation.csv",
+      "sha256": "d93e2f1d14a940d60ff5f7d7794fef214940c9dbd626622e750335bc4f9a60fb",
+      "point_count": 3582,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "hnei-ncr-2016-data",
+      "devie-dubarry-2016"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "panasonic-ncr18650b-hnei2016",
+      "relationship": "same_model",
+      "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+    },
+    "provenance": {
+      "asset_ids": [
+        "hnei-ncr-ne"
+      ],
+      "derivation": "finite_current_half_cell_branch",
+      "location": "dis_data[0,0] (zero-based MATLAB-cell-array indices)",
+      "processing": {
+        "script": "scripts/seed_parameter_sources.py",
+        "field": "dis_data",
+        "cell_array_row_zero_based": 0,
+        "cell_array_column_zero_based": 0,
+        "source_columns": [
+          "capacity_Ah",
+          "potential_V",
+          "time_s",
+          "current_A"
+        ],
+        "source_rate_denominator": 40.0,
+        "selection": "Lowest-rate complete main branch; initial short charge, remnant-capacity column and all higher-rate branches excluded.",
+        "source_rows": 3582,
+        "omitted_rows": 0
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "relative_capacity_only",
+      "raw_data": "external_checksum_pinned",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+      "Same study/model does not establish identical half-cell/full-cell specimens.",
+      "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+      "No independent electrochemical-model validation is claimed.",
+      "Paper names C/40; positive-electrode MAT rate field is 39. Both labels retained.",
+      "Column units are inferred from exact current-time charge integration and the documented voltage windows; no MAT column header is supplied."
+    ],
+    "license": "CC0-1.0"
+  },
+  "sources": {
+    "hnei-ncr-2016-data": {
+      "kind": "dataset",
+      "title": "Panasonic NCR18650B formation, RPT and half cell data set",
+      "authors": [
+        "Matthieu Dubarry"
+      ],
+      "year": 2016,
+      "url": "https://zenodo.org/records/60232",
+      "doi": "10.5281/zenodo.60232",
+      "license": "CC0-1.0",
+      "version": "v1; fixed record 60232",
+      "license_evidence": "Packaged Zenodo metadata reports cc-zero; fixed-record export identifies CC0 1.0.",
+      "role": "Two original half-cell MAT members only; full-cell tests stay external."
+    },
+    "devie-dubarry-2016": {
+      "kind": "paper",
+      "title": "Durability and Reliability of Electric Vehicle Batteries under Electric Utility Grid Operations. Part 1: Cell-to-Cell Variations and Preliminary Testing",
+      "authors": [
+        "Arnaud Devie",
+        "Matthieu Dubarry"
+      ],
+      "year": 2016,
+      "url": "https://doi.org/10.3390/batteries2030028",
+      "doi": "10.3390/batteries2030028",
+      "role": "Methods p3 confirms Li reference/counter, harvested electrodes and RPT rates."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "hnei-ncr-ne": {
+      "filename": "hnei-ncr18650b-NE-RPT.mat",
+      "path": "evidence/hnei-ncr18650b-NE-RPT.mat",
+      "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+      "source_id": "hnei-ncr-2016-data",
+      "license": "CC0-1.0",
+      "sha256": "72409a23626c60457cd44964b8e2791c4881bc7da3c64d25cc3654b0dc507303",
+      "archive_member": "Upload/Half cell/NE/[01] RPT.mat"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

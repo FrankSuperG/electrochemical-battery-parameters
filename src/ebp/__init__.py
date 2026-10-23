@@ -4,4 +4,4 @@ from .catalog import Catalog, Curve, StoichiometryMapping
 from .parameter import Parameter
 
 __all__ = ["Catalog", "Curve", "StoichiometryMapping", "Parameter"]
-__version__ = "0.11.0"
+__version__ = "0.12.0"

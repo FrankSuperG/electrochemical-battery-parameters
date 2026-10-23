@@ -361,7 +361,7 @@ class Catalog:
                 errors.append(f"{dataset['id']}: ageing evidence references an unknown external source path")
             if any(path not in paths for path in dataset["ocp_anchor"]["source_paths"]):
                 errors.append(f"{dataset['id']}: OCP anchor references an unknown external source path")
-            if dataset["ocp_anchor"]["kind"] in {"reused_catalog_expression", "cross_study_catalog_half_cell"} and not dataset["parameter_components"]["ocp"]["record_ids"]:
+            if dataset["ocp_anchor"]["kind"] in {"catalog_half_cell", "reused_catalog_expression", "cross_study_catalog_half_cell"} and not dataset["parameter_components"]["ocp"]["record_ids"]:
                 errors.append(f"{dataset['id']}: catalog OCP anchor requires explicit curve records")
             for item in dataset["file_links"]:
                 if item["material_family"] and item["material_family"] not in dataset["material_families"]:
@@ -391,7 +391,7 @@ class Catalog:
                         component != "ocp" and record["category"] != component
                     ):
                         errors.append(f"{dataset['id']}: invalid {component} component record {rid}")
-                    elif association["quantity_kind"] == "intrinsic_diffusivity" and record["unit"] == "s":
+                    elif association["quantity_kind"] in {"intrinsic_diffusivity", "model_diffusivity"} and record["unit"] == "s":
                         errors.append(f"{dataset['id']}: diffusion time scale cannot be intrinsic diffusivity")
         ids = [r["id"] for r in self._records]
         if len(ids) != len(set(ids)):

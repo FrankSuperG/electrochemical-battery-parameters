@@ -494,6 +494,10 @@ def main(download=False):
 
     extend_mj1(download=download)
 
+    from seed_parameter_sources import extend as extend_parameter_sources
+
+    extend_parameter_sources()
+
     # The manually reviewed external-link registry is committed metadata. It is
     # never fetched here; reconstructing observations must not download its payloads.
     from ebp import __version__

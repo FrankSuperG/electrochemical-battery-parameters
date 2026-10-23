@@ -6,7 +6,7 @@ were partially imported in v0.6.0; see [LFP curation](LFP_STUDIES.md).
 [its reuse/definition review](HALLEMANS2025.md). OCP remains external only.
 LG MJ1 is partially imported in v0.8.0; [its review](LG_MJ1.md) documents
 four pseudo-OCP branches and 42 parameter records, without an intact-cell test.
-O'Regan remains a candidate. Current counts are 59 electrode curves, 397 other
+O'Regan remains a candidate. Current counts are 72 electrode curves, 457 other
 parameters and 61 full-cell exports. Licenses, model definitions and specimen
 matching remain distinct from data availability.
 

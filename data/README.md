@@ -8,9 +8,13 @@ Start here when browsing on GitHub. No Python installation or hosted website is 
 
 See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.
 
-Snapshot: 59 OCP records, 397 other parameter records, 61 full-cell test files.
+Snapshot: 72 OCP records, 457 other parameter records, 61 full-cell test files.
 
-## Choose a cell or study
+## Choose a battery model
+
+[Battery model index: OCP, diffusion, kinetics and full-cell source coverage](batteries/README.md)
+
+## Native cell or study packages
 
 | Cell / study entry | OCP | Other parameters | Full-cell tests | Match level |
 |---|---|---|---|---|
@@ -27,6 +31,9 @@ Snapshot: 59 OCP records, 397 other parameter records, 61 full-cell test files.
 | [A123 18650M1A &#124; Jahn2024 LFP/graphite](cells/a123-18650m1a-jahn2024.md) | [2 records](cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not imported | [14 files](cells/a123-18650m1a-jahn2024.md#full-cell-tests) | `same_model_same_study` |
 | [LG M50LT &#124; Hallemans2025 grouped SPMe](cells/lg-m50lt-hallemans2025.md) | Not linked | [18 records](cells/lg-m50lt-hallemans2025.md#parameters) | [1 file](cells/lg-m50lt-hallemans2025.md#full-cell-tests) | `same_model_same_study` |
 | [LG MJ1 &#124; DLR-SINTEF harvested-electrode characterization](cells/lg-mj1-dlr-sintef.md) | [4 records](cells/lg-mj1-dlr-sintef.md#ocp-curves) | [42 records](cells/lg-mj1-dlr-sintef.md#parameters) | Not imported | `same_model_same_study` |
+| [Panasonic NCR18650B &#124; HNEI2016](cells/panasonic-ncr18650b-hnei2016.md) | [4 records](cells/panasonic-ncr18650b-hnei2016.md#ocp-curves) | Not imported | Not imported | `same_model_same_study` |
+| [CALB generation 3b &#124; NEXTBMS2026](cells/calb-gen3b-nextbms2026.md) | [4 records](cells/calb-gen3b-nextbms2026.md#ocp-curves) | Not imported | Not imported | `same_model_same_study` |
+| [Molicel P45B &#124; About:Energy2026 BPX](cells/molicel-p45b-aboutenergy2026.md) | [5 records](cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [60 records](cells/molicel-p45b-aboutenergy2026.md#parameters) | Not imported | `same_model_same_study` |
 
 ## Find data by type
 

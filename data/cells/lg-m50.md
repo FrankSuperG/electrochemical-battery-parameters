@@ -14,6 +14,22 @@ Parameters and full-cell tests are linked at same-model/same-study level. No exa
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
+### Diffusion parameters
+
+[2 diffusion records (CSV)](../parameters/lg-m50--diffusion.csv)
+
+Two scalar particle diffusivities in upstream implementation
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[2 kinetics records (CSV)](../parameters/lg-m50--kinetics.csv)
+
+Two exchange-current density laws
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ## OCP curves
 
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |

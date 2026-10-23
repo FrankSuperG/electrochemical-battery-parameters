@@ -639,5 +639,66 @@
     "url": "https://pubs.rsc.org/en/content/articlehtml/2025/dd/d5dd00247h",
     "license": "CC-BY-3.0",
     "role": "Digital Discovery 2026, 5, 177-192; first published 2025-11-05. Section 3.4 establishes harvested/reassembled three-electrode configuration, replacement separator and 25 degC chamber."
+  },
+  "hnei-ncr-2016-data": {
+    "kind": "dataset",
+    "title": "Panasonic NCR18650B formation, RPT and half cell data set",
+    "authors": [
+      "Matthieu Dubarry"
+    ],
+    "year": 2016,
+    "url": "https://zenodo.org/records/60232",
+    "doi": "10.5281/zenodo.60232",
+    "license": "CC0-1.0",
+    "version": "v1; fixed record 60232",
+    "license_evidence": "Packaged Zenodo metadata reports cc-zero; fixed-record export identifies CC0 1.0.",
+    "role": "Two original half-cell MAT members only; full-cell tests stay external."
+  },
+  "devie-dubarry-2016": {
+    "kind": "paper",
+    "title": "Durability and Reliability of Electric Vehicle Batteries under Electric Utility Grid Operations. Part 1: Cell-to-Cell Variations and Preliminary Testing",
+    "authors": [
+      "Arnaud Devie",
+      "Matthieu Dubarry"
+    ],
+    "year": 2016,
+    "url": "https://doi.org/10.3390/batteries2030028",
+    "doi": "10.3390/batteries2030028",
+    "role": "Methods p3 confirms Li reference/counter, harvested electrodes and RPT rates."
+  },
+  "nextbms-calb-2026-data": {
+    "kind": "dataset",
+    "title": "NEXTBMS CALB generation 3b NMC532 half-cell and full-cell dataset",
+    "year": 2026,
+    "authors": [
+      "Robinson Medina",
+      "Alessio Alberto Lodge",
+      "Feye Hoekstra",
+      "Steven Wilkins",
+      "Damian Cupid",
+      "Akzhan Bekzhanov",
+      "Dominik Dvorak",
+      "Hansjorg Kapeller",
+      "Joze Moskon",
+      "Igor Mele",
+      "Tomaz Katrasnik"
+    ],
+    "doi": "10.5281/zenodo.22301764",
+    "url": "https://zenodo.org/records/22301764",
+    "license": "CC-BY-4.0",
+    "version": "Fixed record 22301764",
+    "role": "Four slow half-cell sweeps and author README retained; full-cell characterization and ageing remain external."
+  },
+  "aepy-p45b-2026": {
+    "kind": "software",
+    "title": "About:Energy Molicel P45B BPX 1.1 parameterisation",
+    "authors": [
+      "About:Energy Limited"
+    ],
+    "year": 2026,
+    "url": "https://github.com/About-Energy-OpenSource/AEPyBaMM/tree/188bd62ee2347cc486b66dc43e31fb9597759db1",
+    "license": "BSD-3-Clause",
+    "version": "188bd62ee2347cc486b66dc43e31fb9597759db1",
+    "role": "Original BPX model inputs and author BSD notice retained; fitted OCP is not raw half-cell measurement."
   }
 }

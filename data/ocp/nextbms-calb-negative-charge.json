@@ -1,0 +1,133 @@
+{
+  "record": {
+    "id": "nextbms-calb-negative-charge",
+    "version": "1",
+    "title": "nextbms calb negative charge",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "nextbms-calb-negative-charge-material",
+    "electrode_role": "negative",
+    "direction": "unspecified",
+    "measurement": "pseudo_ocp",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "normalized_branch_capacity",
+      "symbol": "x",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+      "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/nextbms-calb-negative-charge.csv",
+      "sha256": "2f1514e0edc0cd3ac7cd0158f24de8c075c0f29a862f69f9cc826a8afe1b823f",
+      "point_count": 2641,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "nextbms-calb-2026-data"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "calb-gen3b-nextbms2026",
+      "relationship": "same_model",
+      "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+    },
+    "provenance": {
+      "asset_ids": [
+        "nextbms-anode-nextbms-fcharge",
+        "nextbms-half-readme"
+      ],
+      "derivation": "finite_current_half_cell_branch",
+      "location": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
+      "processing": {
+        "script": "scripts/seed_parameter_sources.py",
+        "source_branch": "charge",
+        "source_rows": 2657,
+        "duplicate_coordinate_rows_omitted": 16,
+        "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "relative_capacity_only",
+      "raw_data": "external_checksum_pinned",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+      "Same study/model does not establish identical half-cell/full-cell specimens.",
+      "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+      "No independent electrochemical-model validation is claimed.",
+      "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+      "Half-cell separator/electrolyte differ from the intact commercial full cell."
+    ],
+    "license": "CC-BY-4.0"
+  },
+  "sources": {
+    "nextbms-calb-2026-data": {
+      "kind": "dataset",
+      "title": "NEXTBMS CALB generation 3b NMC532 half-cell and full-cell dataset",
+      "year": 2026,
+      "authors": [
+        "Robinson Medina",
+        "Alessio Alberto Lodge",
+        "Feye Hoekstra",
+        "Steven Wilkins",
+        "Damian Cupid",
+        "Akzhan Bekzhanov",
+        "Dominik Dvorak",
+        "Hansjorg Kapeller",
+        "Joze Moskon",
+        "Igor Mele",
+        "Tomaz Katrasnik"
+      ],
+      "doi": "10.5281/zenodo.22301764",
+      "url": "https://zenodo.org/records/22301764",
+      "license": "CC-BY-4.0",
+      "version": "Fixed record 22301764",
+      "role": "Four slow half-cell sweeps and author README retained; full-cell characterization and ageing remain external."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "nextbms-anode-nextbms-fcharge": {
+      "filename": "nextbms-anode_NExtBMS_fCharge.csv",
+      "path": "evidence/nextbms-anode_NExtBMS_fCharge.csv",
+      "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "source_id": "nextbms-calb-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "032d4c574801ed463372ef6d05991a9ac90e47968aa768e78cdf209c4342ffb6",
+      "archive_member": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv"
+    },
+    "nextbms-half-readme": {
+      "filename": "nextbms-README_half_cell_OCP.md",
+      "path": "evidence/nextbms-README_half_cell_OCP.md",
+      "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "source_id": "nextbms-calb-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "5fb2dfd37ba096d880e5cdee4b817af5efcd463966aed6ec29814af4a577ab94",
+      "archive_member": "2_HalfCell/OCP_data/README_half_cell_OCP.md"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

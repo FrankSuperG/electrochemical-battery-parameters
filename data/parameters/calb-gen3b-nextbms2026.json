@@ -1,0 +1,2084 @@
+{
+  "cell_id": "calb-gen3b-nextbms2026",
+  "cell": {
+    "manufacturer": "CALB",
+    "model": null,
+    "display_name": "CALB generation 3b | NEXTBMS2026",
+    "chemistry": "NMC532/graphite",
+    "format": "Source cell format; half-cell and full-cell configurations differ",
+    "nominal_capacity_Ah": null,
+    "identity_level": "study_cell_family",
+    "source_ids": [
+      "nextbms-calb-2026-data"
+    ],
+    "model_context": "Partial electrochemical parameter/source package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Source names this cell/model within one study; full-cell observations stay externally linked and same-specimen mapping remains unresolved.",
+    "note": "Other studies sharing a model name are separate sources, not a single measured parameter set.",
+    "coverage": {
+      "ocp": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+      "diffusion": "No matched diffusivity values imported.",
+      "kinetics": "No matched intrinsic kinetic values imported.",
+      "full_cell_tests": "External dataset links only; no new full-cell observations packaged."
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Commercial part number unresolved",
+      "Matching full-cell charge/discharge observations not imported",
+      "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
+    ],
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "nextbms-calb-negative-charge",
+      "nextbms-calb-negative-discharge",
+      "nextbms-calb-positive-charge",
+      "nextbms-calb-positive-discharge"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "nextbms-calb-negative-charge",
+          "nextbms-calb-negative-discharge",
+          "nextbms-calb-positive-charge",
+          "nextbms-calb-positive-discharge"
+        ],
+        "source_ids": [
+          "nextbms-calb-2026-data"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched diffusivity values imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched intrinsic kinetic values imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "External dataset links only; no new full-cell observations packaged.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    }
+  },
+  "parameters": [],
+  "ocp_records": [
+    {
+      "id": "nextbms-calb-negative-charge",
+      "version": "1",
+      "title": "nextbms calb negative charge",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "nextbms-calb-negative-charge-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-negative-charge.csv",
+        "sha256": "2f1514e0edc0cd3ac7cd0158f24de8c075c0f29a862f69f9cc826a8afe1b823f",
+        "point_count": 2641,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-anode-nextbms-fcharge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "charge",
+          "source_rows": 2657,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "nextbms-calb-negative-discharge",
+      "version": "1",
+      "title": "nextbms calb negative discharge",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "nextbms-calb-negative-discharge-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-negative-discharge.csv",
+        "sha256": "38e4e91ed5efb73a70dd590eae26c20476e71e57a5911f8f61151230d2c2f816",
+        "point_count": 2645,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-anode-nextbms-fdischarge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "discharge",
+          "source_rows": 2661,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "nextbms-calb-positive-charge",
+      "version": "1",
+      "title": "nextbms calb positive charge",
+      "parameter": "electrode_ocp",
+      "material": "NMC532",
+      "material_id": "nextbms-calb-positive-charge-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-positive-charge.csv",
+        "sha256": "064fea194cbeddd7d9e21334aff7ce0e4f7c001e18897927bd11442284818933",
+        "point_count": 3293,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-cathode-nextbms-fcharge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "charge",
+          "source_rows": 3309,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "nextbms-calb-positive-discharge",
+      "version": "1",
+      "title": "nextbms calb positive discharge",
+      "parameter": "electrode_ocp",
+      "material": "NMC532",
+      "material_id": "nextbms-calb-positive-discharge-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-positive-discharge.csv",
+        "sha256": "a4b1ad46e4ddef81ff2d68234f2e9c3b2944ef5f5e7f9b8100a875e69c24a2f8",
+        "point_count": 3252,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-cathode-nextbms-fdischarge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "discharge",
+          "source_rows": 3268,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "full_cell_tests": [],
+  "external_datasets": [
+    {
+      "id": "nextbms-calb-nmc532-2026",
+      "title": "CALB generation 3b 58 Ah: harvested half-cell OCP, multi-temperature tests and ageing",
+      "material_families": [
+        "NMC"
+      ],
+      "cell_identity": "CALB generation 3b 58 Ah prismatic NMC532/graphite. Half-cell donor Cell_96; characterization Cell_4/6/15; 41 ageing cells. Exact commercial part is not supplied; do not equate this with L148N58A by capacity/dimensions alone.",
+      "test_types": [
+        "constant_current",
+        "cccv",
+        "pulse",
+        "dynamic",
+        "eis",
+        "ocv"
+      ],
+      "profiles": [],
+      "rate_summary": "Full-cell CC, GITT, dynamic cycles and HPPC plus calendar/cyclic ageing. Characterization EIS source labels: 0/5/25/45 degC. No complete same-state continuous rate-sweep matrix was checked.",
+      "temperatures_C": [
+        0,
+        5,
+        25,
+        45
+      ],
+      "channels": {
+        "time_series": [
+          "Time",
+          "Voltage [V]",
+          "Current [A]",
+          "Cell temp [degC]",
+          "Chamber temp [degC]"
+        ],
+        "frequency_domain": [
+          "frequency",
+          "real_impedance",
+          "imaginary_impedance"
+        ],
+        "note": "Source-documented fields only. Time starts with one absolute timestamp, followed by incremental seconds; cumulative reconstruction is required. Characterization header has trailing whitespace. Source reports sub-second increments and isolated voltage spikes. Half-cell CSVs, time units, EIS segmentation and actual headers remain unread."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://zenodo.org/records/22301764",
+        "doi": "10.5281/zenodo.22301764",
+        "version": "fixed record 22301764"
+      },
+      "license": {
+        "identifier": "CC-BY-4.0",
+        "evidence_url": "https://zenodo.org/api/records/22301764",
+        "note": "Primary metadata explicitly states CC BY 4.0 for data. Separate author analysis code is MIT. Only metadata and external links are packaged."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "existing_source_audit",
+        "note": "Complete 2_HalfCell, 3_Characterization and 4_Ageing 7z directories inspected with py7zr 1.1.0 via bounded HTTP ranges. Only 520/1405/7333 metadata bytes read respectively; no member extracted. Source/documented counts and directory counts are kept separate. Follow-up: selected half-cell/parameter originals were read, pinned and extracted by scripts/seed_parameter_sources.py. Full-cell observation payloads remain unread and external."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "calb-gen3b-nextbms2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.",
+        "missing_components": [
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://zenodo.org/records/22301764",
+        "https://zenodo.org/api/records/22301764",
+        "https://arxiv.org/abs/2610.23049",
+        "https://github.com/robinson-medina/Analysis_Of_NMC_Dataset"
+      ],
+      "file_links": [
+        {
+          "label": "2_HalfCell.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "source_path": "2_HalfCell.7z",
+          "kind": "archive",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Parent archive only; no observation payload downloaded.",
+          "size_bytes": 6328075
+        },
+        {
+          "label": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "source_path": "2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_96 (harvested donor)",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
+          "size_bytes": 46164
+        },
+        {
+          "label": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "source_path": "2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_96 (harvested donor)",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
+          "size_bytes": 46273
+        },
+        {
+          "label": "2_HalfCell/OCP_data/Anode_Graphite/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-anode.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "source_path": "2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-anode.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_96 (harvested donor)",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.",
+          "size_bytes": 37692727
+        },
+        {
+          "label": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "source_path": "2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_96 (harvested donor)",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
+          "size_bytes": 56626
+        },
+        {
+          "label": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "source_path": "2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_96 (harvested donor)",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
+          "size_bytes": 56016
+        },
+        {
+          "label": "2_HalfCell/OCP_data/Cathode_NMC532/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-cathode.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+          "source_path": "2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-cathode.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_96 (harvested donor)",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.",
+          "size_bytes": 11228645
+        },
+        {
+          "label": "3_Characterization.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z",
+          "kind": "archive",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Parent archive only; no observation payload downloaded.",
+          "size_bytes": 38145973
+        },
+        {
+          "label": "3_Characterization/Cell_15/Cell_15_2-GITT.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/Cell_15_2-GITT.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 30583704
+        },
+        {
+          "label": "3_Characterization/Cell_15/Cell_15_3-CC_cycles.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/Cell_15_3-CC_cycles.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 41775949
+        },
+        {
+          "label": "3_Characterization/Cell_15/Cell_15_4-DynamicCycles.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/Cell_15_4-DynamicCycles.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Named DynamicCycles member; no road-cycle name (US06/WLTP) or phase boundaries inferred.",
+          "size_bytes": 101302653
+        },
+        {
+          "label": "3_Characterization/Cell_15/Cell_15_5-HPPC.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/Cell_15_5-HPPC.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8140253
+        },
+        {
+          "label": "3_Characterization/Cell_15/EIS/Test_0C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/EIS/Test_0C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": 0,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 7988
+        },
+        {
+          "label": "3_Characterization/Cell_15/EIS/Test_25C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/EIS/Test_25C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8029
+        },
+        {
+          "label": "3_Characterization/Cell_15/EIS/Test_45C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/EIS/Test_45C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": 45,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8123
+        },
+        {
+          "label": "3_Characterization/Cell_15/EIS/Test_5C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_15/EIS/Test_5C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_15",
+          "temperature_C": 5,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8014
+        },
+        {
+          "label": "3_Characterization/Cell_4/Cell_4_2-GITT.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/Cell_4_2-GITT.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 30613735
+        },
+        {
+          "label": "3_Characterization/Cell_4/Cell_4_3-CC_cycles.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/Cell_4_3-CC_cycles.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 16044186
+        },
+        {
+          "label": "3_Characterization/Cell_4/Cell_4_4-DynamicCycles.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/Cell_4_4-DynamicCycles.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Named DynamicCycles member; no road-cycle name (US06/WLTP) or phase boundaries inferred.",
+          "size_bytes": 101143231
+        },
+        {
+          "label": "3_Characterization/Cell_4/Cell_4_5-HPPC.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/Cell_4_5-HPPC.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8134929
+        },
+        {
+          "label": "3_Characterization/Cell_4/EIS/Test_0C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/EIS/Test_0C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": 0,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8000
+        },
+        {
+          "label": "3_Characterization/Cell_4/EIS/Test_25C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/EIS/Test_25C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8042
+        },
+        {
+          "label": "3_Characterization/Cell_4/EIS/Test_45C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/EIS/Test_45C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": 45,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8163
+        },
+        {
+          "label": "3_Characterization/Cell_4/EIS/Test_5C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_4/EIS/Test_5C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_4",
+          "temperature_C": 5,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8002
+        },
+        {
+          "label": "3_Characterization/Cell_6/Cell_6_2-GITT.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/Cell_6_2-GITT.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 30600373
+        },
+        {
+          "label": "3_Characterization/Cell_6/Cell_6_3-CC_cycles.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/Cell_6_3-CC_cycles.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "constant_current"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 41561704
+        },
+        {
+          "label": "3_Characterization/Cell_6/Cell_6_4-DynamicCycles.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/Cell_6_4-DynamicCycles.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Named DynamicCycles member; no road-cycle name (US06/WLTP) or phase boundaries inferred.",
+          "size_bytes": 101610872
+        },
+        {
+          "label": "3_Characterization/Cell_6/Cell_6_5-HPPC.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/Cell_6_5-HPPC.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "pulse"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8167200
+        },
+        {
+          "label": "3_Characterization/Cell_6/EIS/Test_0C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/EIS/Test_0C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": 0,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8019
+        },
+        {
+          "label": "3_Characterization/Cell_6/EIS/Test_25C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/EIS/Test_25C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8033
+        },
+        {
+          "label": "3_Characterization/Cell_6/EIS/Test_45C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/EIS/Test_45C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": 45,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8171
+        },
+        {
+          "label": "3_Characterization/Cell_6/EIS/Test_5C_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content",
+          "source_path": "3_Characterization.7z::3_Characterization/Cell_6/EIS/Test_5C_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_6",
+          "temperature_C": 5,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Name/size verified from archive headers only; columns and payload checksum remain unverified.",
+          "size_bytes": 8047
+        },
+        {
+          "label": "4_Ageing.7z",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z",
+          "kind": "archive",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Parent archive only; no observation payload downloaded.",
+          "size_bytes": 4128929522
+        },
+        {
+          "label": "4_Ageing/Calendar_ageing_data/Cell_11/Cell_11.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Calendar_ageing_data/Cell_11/Cell_11.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_11",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 650983310
+        },
+        {
+          "label": "4_Ageing/Calendar_ageing_data/Cell_26/Cell_26.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Calendar_ageing_data/Cell_26/Cell_26.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_26",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1337582133
+        },
+        {
+          "label": "4_Ageing/Calendar_ageing_data/Cell_28/Cell_28.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Calendar_ageing_data/Cell_28/Cell_28.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_28",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1222031514
+        },
+        {
+          "label": "4_Ageing/Calendar_ageing_data/Cell_45/Cell_45.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Calendar_ageing_data/Cell_45/Cell_45.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_45",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1338904657
+        },
+        {
+          "label": "4_Ageing/Calendar_ageing_data/Cell_57/Cell_57.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Calendar_ageing_data/Cell_57/Cell_57.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_57",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 690816497
+        },
+        {
+          "label": "4_Ageing/Calendar_ageing_data/OverviewCapacityData_5cell.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Calendar_ageing_data/OverviewCapacityData_5cell.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Derived overview table of checkup capacity/resistance; not a raw voltage/current trace.",
+          "size_bytes": 5230
+        },
+        {
+          "label": "4_Ageing/Calendar_ageing_data/OverviewResistanceData_5cell.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Calendar_ageing_data/OverviewResistanceData_5cell.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Derived overview table of checkup capacity/resistance; not a raw voltage/current trace.",
+          "size_bytes": 5411
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_1/Cell_1.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_1",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1362659153
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_12/Cell_12.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_12",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 783584576
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_16/Cell_16.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_16",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 720845703
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_17/Cell_17.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_17",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 2126792279
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_22",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1279111408
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_23/Cell_23.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_23",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 797762242
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_25/Cell_25.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_25",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1749526214
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_27/Cell_27.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_27",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 761756566
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_29/Cell_29.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_29",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1372941362
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_3/Cell_3.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_3",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1357155795
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_30/Cell_30.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_30",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 756520284
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_34/Cell_34.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_34",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 282472415
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_35/Cell_35.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_35",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 230322567
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_40/Cell_40.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_40",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1389572639
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_42/Cell_42.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_42",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 3952561974
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_43/Cell_43.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_43",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 785608221
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_46/Cell_46.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_46",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 6213873569
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_47/Cell_47.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_47",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1339666385
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_49/Cell_49.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_49",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1329869982
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_5/Cell_5.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_5",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1387292191
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_50/Cell_50.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_50",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 2079824320
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_53/Cell_53.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_53",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1841722767
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_56/Cell_56.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_56/Cell_56.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_56",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 262614419
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_60/Cell_60.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_60",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 820102676
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_63/Cell_63.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_63",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 813149212
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_64/Cell_64.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_64",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1584534814
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_66/Cell_66.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_66",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 439430474
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_68/Cell_68.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_68",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 419961233
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_70/Cell_70.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_70",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1916565882
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_71/Cell_71.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_71",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 441353062
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_72/Cell_72.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_72",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 2639104576
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_74/Cell_74.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_74",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 3207057515
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_8/Cell_8.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_8",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1391165872
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_89/Cell_89.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_89",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 261919210
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_9/Cell_9.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_9",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 1369020264
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_93/Cell_93.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": "Cell_93",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Per-cell ageing/history container. Source-documentation conditions are not assigned by filename; time increments, columns and within-file phases remain unchecked.",
+          "size_bytes": 262098204
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/OverviewCapacityData_36cell.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/OverviewCapacityData_36cell.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Derived overview table of checkup capacity/resistance; not a raw voltage/current trace.",
+          "size_bytes": 38790
+        },
+        {
+          "label": "4_Ageing/Cyclic_ageing_data/OverviewResistanceData_36cell.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/OverviewResistanceData_36cell.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Derived overview table of checkup capacity/resistance; not a raw voltage/current trace.",
+          "size_bytes": 39851
+        },
+        {
+          "label": "4_Ageing/EIS_data/1_BOL_EIS/Cell_22_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/EIS_data/1_BOL_EIS/Cell_22_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_22",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Same source cell label at this BoL/MoL/EoL stage; spectrum columns and exact sampling conditions remain unread.",
+          "size_bytes": 6836
+        },
+        {
+          "label": "4_Ageing/EIS_data/2_MOL_EIS/Cell_22_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/EIS_data/2_MOL_EIS/Cell_22_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_22",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Same source cell label at this BoL/MoL/EoL stage; spectrum columns and exact sampling conditions remain unread.",
+          "size_bytes": 6774
+        },
+        {
+          "label": "4_Ageing/EIS_data/3_EOL_EIS/Cell_22_impedanceData.csv",
+          "url": "https://zenodo.org/api/records/22301764/files/4_Ageing.7z/content",
+          "source_path": "4_Ageing.7z::4_Ageing/EIS_data/3_EOL_EIS/Cell_22_impedanceData.csv",
+          "kind": "archive_member",
+          "cell_model": "CALB generation 3b 58 Ah",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "source_sample_id": "Cell_22",
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "archive_directory",
+          "content_review": "not_read",
+          "note": "Same source cell label at this BoL/MoL/EoL stage; spectrum columns and exact sampling conditions remain unread.",
+          "size_bytes": 6891
+        }
+      ],
+      "missing_items": [
+        "Source prose lists 22/13/17 ageing-EIS cells at BoL/MoL/EoL; the archive has 25/16/20 impedance CSV names. The extra labels are not characterization Cell_4/6/15. No silent reconciliation or completeness claim.",
+        "OCPDis_Cell_*.csv in cyclic ageing are whole-cell checkup extracts, not harvested-electrode OCP.",
+        "No US06 name or complete multi-rate charge/discharge matrix verified. Gen3b is not equated to an existing CALB model by nominal capacity.",
+        "Four slow-sweep half-cell branches imported; GITT rest-endpoint extraction and intrinsic D/kinetics remain absent.",
+        "Half-cell reference versus lithium is established by packaged README; absolute stoichiometry, half-cell temperature and donor-to-characterization serial identity remain unresolved."
+      ],
+      "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "nextbms-calb-negative-charge",
+            "nextbms-calb-negative-discharge",
+            "nextbms-calb-positive-charge",
+            "nextbms-calb-positive-discharge"
+          ],
+          "evidence": "Four finite-current half-cell branches extracted from the pinned same-study originals. Original source units and rows retained; no absolute lithium-fraction mapping inferred.",
+          "missing_items": [
+            "Identical serialized specimen unresolved"
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "multi_rate_discharge": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "EIS": {
+          "status": "archive_member_located",
+          "evidence": "Twelve characterization impedance CSVs across three source cells and four temperature labels; Cell_22 has all three ageing-stage impedance filenames. Raw spectra and SoC segments remain unread."
+        }
+      },
+      "aging_data": {
+        "status": "available",
+        "kinds": [
+          "cycle",
+          "calendar"
+        ],
+        "evidence": "Primary source reports five calendar and 36 cyclic cells. Forty-one per-cell history filenames and overview files are located; stage-specific Cell_22 EIS paths also exist. Stage cohort counts in source prose and archive differ and are not reconciled.",
+        "source_url": "https://zenodo.org/records/22301764",
+        "file_paths": [
+          "4_Ageing.7z::4_Ageing/Calendar_ageing_data/Cell_11/Cell_11.csv",
+          "4_Ageing.7z::4_Ageing/Cyclic_ageing_data/Cell_22/Cell_22.csv"
+        ]
+      },
+      "ocp_anchor": {
+        "kind": "catalog_half_cell",
+        "half_cell_temperatures_C": [],
+        "source_paths": [
+          "2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
+          "2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv",
+          "2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-anode.csv",
+          "2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv",
+          "2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv",
+          "2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-cathode.csv"
+        ],
+        "source_urls": [
+          "https://zenodo.org/records/22301764",
+          "https://zenodo.org/api/records/22301764"
+        ],
+        "evidence": "Six harvested graphite/NMC532 slow-cycle and GITT CSV members are located from donor Cell_96. Same study and model as full-cell characterization/ageing, different specimens. Half-cell temperature and numerical OCP extraction remain unverified. Four finite-current branches are now extracted into the native catalog."
+      },
+      "catalog_evidence_paths": [
+        "evidence/ocp-first-expansion-review.json"
+      ]
+    }
+  ],
+  "sources": {
+    "nextbms-calb-2026-data": {
+      "kind": "dataset",
+      "title": "NEXTBMS CALB generation 3b NMC532 half-cell and full-cell dataset",
+      "year": 2026,
+      "authors": [
+        "Robinson Medina",
+        "Alessio Alberto Lodge",
+        "Feye Hoekstra",
+        "Steven Wilkins",
+        "Damian Cupid",
+        "Akzhan Bekzhanov",
+        "Dominik Dvorak",
+        "Hansjorg Kapeller",
+        "Joze Moskon",
+        "Igor Mele",
+        "Tomaz Katrasnik"
+      ],
+      "doi": "10.5281/zenodo.22301764",
+      "url": "https://zenodo.org/records/22301764",
+      "license": "CC-BY-4.0",
+      "version": "Fixed record 22301764",
+      "role": "Four slow half-cell sweeps and author README retained; full-cell characterization and ageing remain external."
+    }
+  },
+  "upstream_assets": {
+    "nextbms-anode-nextbms-fcharge": {
+      "filename": "nextbms-anode_NExtBMS_fCharge.csv",
+      "path": "evidence/nextbms-anode_NExtBMS_fCharge.csv",
+      "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "source_id": "nextbms-calb-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "032d4c574801ed463372ef6d05991a9ac90e47968aa768e78cdf209c4342ffb6",
+      "archive_member": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv"
+    },
+    "nextbms-anode-nextbms-fdischarge": {
+      "filename": "nextbms-anode_NExtBMS_fDischarge.csv",
+      "path": "evidence/nextbms-anode_NExtBMS_fDischarge.csv",
+      "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "source_id": "nextbms-calb-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "bb7a3d68fda7189f4982d993500b8cd01451f0ab1ad7e0ff58430879ed02251b",
+      "archive_member": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv"
+    },
+    "nextbms-cathode-nextbms-fcharge": {
+      "filename": "nextbms-cathode_NExtBMS_fCharge.csv",
+      "path": "evidence/nextbms-cathode_NExtBMS_fCharge.csv",
+      "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "source_id": "nextbms-calb-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "a4e574f57587e32fd9f6180842593cd565e8a4ecfc3ee9680644ecb9f3777f7a",
+      "archive_member": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv"
+    },
+    "nextbms-cathode-nextbms-fdischarge": {
+      "filename": "nextbms-cathode_NExtBMS_fDischarge.csv",
+      "path": "evidence/nextbms-cathode_NExtBMS_fDischarge.csv",
+      "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "source_id": "nextbms-calb-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "89f838c3d3fed34d5933c03a1071595497ac6b3ecd4e980c27ddc14f4ef34162",
+      "archive_member": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv"
+    },
+    "nextbms-half-readme": {
+      "filename": "nextbms-README_half_cell_OCP.md",
+      "path": "evidence/nextbms-README_half_cell_OCP.md",
+      "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+      "source_id": "nextbms-calb-2026-data",
+      "license": "CC-BY-4.0",
+      "sha256": "5fb2dfd37ba096d880e5cdee4b817af5efcd463966aed6ec29814af4a577ab94",
+      "archive_member": "2_HalfCell/OCP_data/README_half_cell_OCP.md"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

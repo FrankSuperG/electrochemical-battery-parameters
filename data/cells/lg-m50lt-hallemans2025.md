@@ -16,6 +16,22 @@ M50LT is separate from Chen2020 LG M50. No intrinsic D or exchange-current law i
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
+### Diffusion parameters
+
+[2 diffusion records (CSV)](../parameters/lg-m50lt-hallemans2025--diffusion.csv)
+
+Two fitted R^2/D particle time scales; not independent solid diffusivities. EIS Z/f/SOC exactly matches fit MAT selection.
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[4 kinetics records (CSV)](../parameters/lg-m50lt-hallemans2025--kinetics.csv)
+
+Two fitted F*R/(m*sqrt(c_e0)) groups and two electrode capacitances; no intrinsic k or exchange-current density law.
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ## OCP curves
 
 No electrode-resolved OCP record linked to this cell. Full-cell pseudo-OCV and unrelated same-chemistry curves do not fill this gap.

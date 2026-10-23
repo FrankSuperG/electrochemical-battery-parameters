@@ -14,6 +14,22 @@ Do not label the full-cell pseudo-OCV as an LFP half-cell OCP, or assign a share
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
+### Diffusion parameters
+
+[6 diffusion records (CSV)](../parameters/a123-amp20m1hd-a--diffusion.csv)
+
+Fitted shared diffusion times at three SOCs; effective D derived using the model's assumed radius
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[6 kinetics records (CSV)](../parameters/a123-amp20m1hd-a--kinetics.csv)
+
+Fitted volumetric exchange-current density and activation energy at three SOCs
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ## OCP curves
 
 No electrode-resolved OCP record linked to this cell. Full-cell pseudo-OCV and unrelated same-chemistry curves do not fill this gap.

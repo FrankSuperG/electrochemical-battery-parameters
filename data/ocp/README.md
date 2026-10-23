@@ -39,6 +39,11 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `isu-uconn-graphite-s2-b6-lithiation` | negative / graphite | pseudo_ocp / unresolved | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/isu-uconn-graphite-s2-b6-lithiation.csv) | [JSON](isu-uconn-graphite-s2-b6-lithiation.json) |
 | `isu-uconn-graphite-s2-b7-delithiation` | negative / graphite | pseudo_ocp / unresolved | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/isu-uconn-graphite-s2-b7-delithiation.csv) | [JSON](isu-uconn-graphite-s2-b7-delithiation.json) |
 | `jahn-a123-graphite-model-ocpn` | negative / graphite | model_ocp / Li/Li+ | model_soc; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/jahn-a123-graphite-model-ocpn.csv) | [JSON](jahn-a123-graphite-model-ocpn.json) |
+| `hnei-ncr18650b-ne-lithiation` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [-0.0, 1.0] | [Retained table](../../src/ebp/data/curves/hnei-ncr18650b-ne-lithiation.csv) | [JSON](hnei-ncr18650b-ne-lithiation.json) |
+| `hnei-ncr18650b-ne-delithiation` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/hnei-ncr18650b-ne-delithiation.csv) | [JSON](hnei-ncr18650b-ne-delithiation.json) |
+| `nextbms-calb-negative-charge` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/nextbms-calb-negative-charge.csv) | [JSON](nextbms-calb-negative-charge.json) |
+| `nextbms-calb-negative-discharge` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/nextbms-calb-negative-discharge.csv) | [JSON](nextbms-calb-negative-discharge.json) |
+| `aepy-p45b-negative-graphite-ocp-v` | negative / graphite | literature_table / Li/Li+ | source_reported_stoichiometry; [0.0011125213468379, 0.880643398272419] | [Retained table](../../src/ebp/data/curves/aepy-p45b-negative-graphite-ocp-v.csv) | [JSON](aepy-p45b-negative-graphite-ocp-v.json) |
 
 ## Graphite-SiOx
 
@@ -68,6 +73,9 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
 |---|---|---|---|---|---|
 | `nca-kim2011-nca-ocp` | positive / NCA | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](nca-kim2011-nca-ocp-sampled.csv) | [JSON](nca-kim2011-nca-ocp.json) |
+| `hnei-ncr18650b-pe-lithiation` | positive / NCA | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [-0.0, 1.0] | [Retained table](../../src/ebp/data/curves/hnei-ncr18650b-pe-lithiation.csv) | [JSON](hnei-ncr18650b-pe-lithiation.json) |
+| `hnei-ncr18650b-pe-delithiation` | positive / NCA | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/hnei-ncr18650b-pe-delithiation.csv) | [JSON](hnei-ncr18650b-pe-delithiation.json) |
+| `aepy-p45b-positive-nca-ocp-v` | positive / NCA | literature_table / Li/Li+ | source_reported_stoichiometry; [0.216085984349077, 0.935944628026975] | [Retained table](../../src/ebp/data/curves/aepy-p45b-positive-nca-ocp-v.csv) | [JSON](aepy-p45b-positive-nca-ocp-v.json) |
 
 ## NCO
 
@@ -101,6 +109,8 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `sintef-nmc532-ee86d1-c3-lithiation` | positive / NMC532 | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/sintef-nmc532-ee86d1-c3-lithiation.csv) | [JSON](sintef-nmc532-ee86d1-c3-lithiation.json) |
 | `mohtat2020-nmc532-ocp` | positive / NMC532 | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](mohtat2020-nmc532-ocp-sampled.csv) | [JSON](mohtat2020-nmc532-ocp.json) |
 | `mohtat-author-nmc532-ocp` | positive / NMC532 | literature_formula / Li/Li+ | stoichiometry; [0.0335, 0.8907] | [Generated samples](mohtat-author-nmc532-ocp-sampled.csv) | [JSON](mohtat-author-nmc532-ocp.json) |
+| `nextbms-calb-positive-charge` | positive / NMC532 | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/nextbms-calb-positive-charge.csv) | [JSON](nextbms-calb-positive-charge.json) |
+| `nextbms-calb-positive-discharge` | positive / NMC532 | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/nextbms-calb-positive-discharge.csv) | [JSON](nextbms-calb-positive-discharge.json) |
 
 ## NMC811
 
@@ -116,6 +126,9 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `sintef-silicon-931301-c3-delithiation` | negative / silicon | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/sintef-silicon-931301-c3-delithiation.csv) | [JSON](sintef-silicon-931301-c3-delithiation.json) |
 | `sintef-silicon-2c4b6a-c3-lithiation` | negative / silicon | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/sintef-silicon-2c4b6a-c3-lithiation.csv) | [JSON](sintef-silicon-2c4b6a-c3-lithiation.json) |
 | `sintef-silicon-2c4b6a-c3-delithiation` | negative / silicon | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/sintef-silicon-2c4b6a-c3-delithiation.csv) | [JSON](sintef-silicon-2c4b6a-c3-delithiation.json) |
+| `aepy-p45b-negative-silicon-ocp-v` | negative / silicon | literature_table / Li/Li+ | source_reported_stoichiometry; [0.054504455, 0.840496595] | [Retained table](../../src/ebp/data/curves/aepy-p45b-negative-silicon-ocp-v.csv) | [JSON](aepy-p45b-negative-silicon-ocp-v.json) |
+| `aepy-p45b-negative-silicon-ocp-delithiation-v` | negative / silicon | literature_table / Li/Li+ | source_reported_stoichiometry; [0.0545609206432044, 0.84] | [Retained table](../../src/ebp/data/curves/aepy-p45b-negative-silicon-ocp-delithiation-v.csv) | [JSON](aepy-p45b-negative-silicon-ocp-delithiation-v.json) |
+| `aepy-p45b-negative-silicon-ocp-lithiation-v` | negative / silicon | literature_table / Li/Li+ | source_reported_stoichiometry; [0.0547977268563917, 0.84] | [Retained table](../../src/ebp/data/curves/aepy-p45b-negative-silicon-ocp-lithiation-v.csv) | [JSON](aepy-p45b-negative-silicon-ocp-lithiation-v.json) |
 
 ## silicon-graphite
 

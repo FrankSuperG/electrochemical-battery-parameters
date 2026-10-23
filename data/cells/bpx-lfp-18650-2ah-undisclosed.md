@@ -14,6 +14,22 @@ Do not match this example to another 2 Ah LFP cell using nominal capacity alone.
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
+### Diffusion parameters
+
+[5 diffusion records (CSV)](../parameters/bpx-lfp-18650-2ah-undisclosed--diffusion.csv)
+
+Two particle diffusivities and activation energies available
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[4 kinetics records (CSV)](../parameters/bpx-lfp-18650-2ah-undisclosed--kinetics.csv)
+
+BPX-defined rate constants; not exchange-current densities
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ## OCP curves
 
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |

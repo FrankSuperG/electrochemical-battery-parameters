@@ -12,7 +12,7 @@ DOI: 10.5281/zenodo.22301764. Checked: 2026-10-23.
 
 ## Electrode OCP anchor
 
-**External half-cell files**. Six harvested graphite/NMC532 slow-cycle and GITT CSV members are located from donor Cell_96. Same study and model as full-cell characterization/ageing, different specimens. Half-cell temperature and numerical OCP extraction remain unverified.
+**Imported half-cell branches**. Six harvested graphite/NMC532 slow-cycle and GITT CSV members are located from donor Cell_96. Same study and model as full-cell characterization/ageing, different specimens. Half-cell temperature and numerical OCP extraction remain unverified. Four finite-current branches are now extracted into the native catalog.
 
 Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
 
@@ -42,15 +42,17 @@ Source-documented fields only. Time starts with one absolute timestamp, followed
 
 ## Parameter association
 
-Match: `unmatched`. No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.
+Match: `same_model_same_study`. Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.
 
-Components without a native catalog join: electrode_ocp, diffusion, kinetics.
+[CALB generation 3b &#124; NEXTBMS2026](../cells/calb-gen3b-nextbms2026.md)
+
+Components without a native catalog join: diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|
-| ocp | `missing` / `missing` | None | Six harvested graphite/NMC532 slow-cycle and GITT CSV members are located from donor Cell_96. Same study and model as full-cell characterization/ageing, different specimens. Half-cell temperature and numerical OCP extraction remain unverified. Missing: No verified current-catalog record for this component and study. |
-| diffusion | `missing` / `missing` | None | No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters. Missing: No verified current-catalog record for this component and study. |
-| kinetics | `missing` / `missing` | None | No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters. Missing: No verified current-catalog record for this component and study. |
+| ocp | `same_model_same_study` / `electrode_ocp` | `nextbms-calb-negative-charge`, `nextbms-calb-negative-discharge`, `nextbms-calb-positive-charge`, `nextbms-calb-positive-discharge` | Four finite-current half-cell branches extracted from the pinned same-study originals. Original source units and rows retained; no absolute lithium-fraction mapping inferred. Missing: Identical serialized specimen unresolved |
+| diffusion | `missing` / `missing` | None | No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient. Missing: No verified current-catalog record for this component and study. |
+| kinetics | `missing` / `missing` | None | No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient. Missing: No verified current-catalog record for this component and study. |
 
 ## Requested-test coverage
 
@@ -70,11 +72,11 @@ An archive-member link downloads its parent container; extract the named member 
 | Source path / member | Cell / source label | Test / profile | Temperature / rate | Review | Link |
 |---|---|---|---|---|---|
 | `2_HalfCell.7z` | CALB generation 3b 58 Ah / No sample ID | ;  | Temperature unknown | `source_listing`; content `not_read` | [Open source file](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
-| `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
-| `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
+| `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `existing_source_audit` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
+| `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `existing_source_audit` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
 | `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-anode.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
-| `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
-| `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
+| `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `existing_source_audit` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
+| `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `existing_source_audit` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
 | `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-cathode.csv` | CALB generation 3b 58 Ah / Cell_96 (harvested donor) | ;  | Temperature unknown | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content) |
 | `3_Characterization.7z` | CALB generation 3b 58 Ah / No sample ID | ;  | Temperature unknown | `source_listing`; content `not_read` | [Open source file](https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content) |
 | `3_Characterization.7z::3_Characterization/Cell_15/Cell_15_2-GITT.csv` | CALB generation 3b 58 Ah / Cell_15 | pulse;  | Temperature unknown | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/22301764/files/3_Characterization.7z/content) |
@@ -154,11 +156,11 @@ An archive-member link downloads its parent container; extract the named member 
 File notes:
 
 - `2_HalfCell.7z`: Parent archive only; no observation payload downloaded.
-- `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.
-- `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.
+- `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.
+- `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.
 - `2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-anode.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.
-- `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.
-- `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.
+- `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.
+- `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.
 - `2_HalfCell.7z::2_HalfCell/OCP_data/Cathode_NMC532/NEXTMBS-full-charge-discharge-GITT-full0charge-discharge-NMC-cathode.csv`: Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.
 - `3_Characterization.7z`: Parent archive only; no observation payload downloaded.
 - `3_Characterization.7z::3_Characterization/Cell_15/Cell_15_2-GITT.csv`: Name/size verified from archive headers only; columns and payload checksum remain unverified.
@@ -239,7 +241,7 @@ File notes:
 
 License: **CC-BY-4.0**. [Source terms](https://zenodo.org/api/records/22301764). Primary metadata explicitly states CC BY 4.0 for data. Separate author analysis code is MIT. Only metadata and external links are packaged.
 
-Review level: `archive_directory_reviewed`. Complete 2_HalfCell, 3_Characterization and 4_Ageing 7z directories inspected with py7zr 1.1.0 via bounded HTTP ranges. Only 520/1405/7333 metadata bytes read respectively; no member extracted. Source/documented counts and directory counts are kept separate.
+Review level: `existing_source_audit`. Complete 2_HalfCell, 3_Characterization and 4_Ageing 7z directories inspected with py7zr 1.1.0 via bounded HTTP ranges. Only 520/1405/7333 metadata bytes read respectively; no member extracted. Source/documented counts and directory counts are kept separate. Follow-up: selected half-cell/parameter originals were read, pinned and extracted by scripts/seed_parameter_sources.py. Full-cell observation payloads remain unread and external.
 
 - [2_HalfCell.7z](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content)
 - [2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv](https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content)
@@ -328,11 +330,11 @@ Review level: `archive_directory_reviewed`. Complete 2_HalfCell, 3_Characterizat
 
 ## Missing items and limits
 
-- No current-catalog OCP/D/kinetics records for this cell/study; GITT paths do not themselves supply audited intrinsic D.
-- Half-cell temperatures, reference/coordinate definitions, raw columns and specimen-donor mapping beyond source labels remain unchecked.
 - Source prose lists 22/13/17 ageing-EIS cells at BoL/MoL/EoL; the archive has 25/16/20 impedance CSV names. The extra labels are not characterization Cell_4/6/15. No silent reconciliation or completeness claim.
 - OCPDis_Cell_*.csv in cyclic ageing are whole-cell checkup extracts, not harvested-electrode OCP.
 - No US06 name or complete multi-rate charge/discharge matrix verified. Gen3b is not equated to an existing CALB model by nominal capacity.
+- Four slow-sweep half-cell branches imported; GITT rest-endpoint extraction and intrinsic D/kinetics remain absent.
+- Half-cell reference versus lithium is established by packaged README; absolute stoichiometry, half-cell temperature and donor-to-characterization serial identity remain unresolved.
 
 ## Evidence
 

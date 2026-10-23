@@ -53,8 +53,9 @@ The **OCP anchor** column separates measured external half-cell sources, publish
 fitted parameterisation, explicit expression reuse and cross-study references.
 Whole-cell OCV is not electrode OCP. `ocp_anchor.half_cell_temperatures_C` is
 independent of full-cell source temperatures; unknown values remain empty.
-`parameter_components` still describes joins to native catalog curve/parameter
-records, so an external OCP lead does not create a numeric catalog record.
+`parameter_components` describes joins to native catalog curve/parameter records.
+Imported OCP and parameter values are stored locally; other leads retain their
+admission gaps. Read the [fixed storage/extraction rules](PARAMETER_STORAGE.md).
 
 The **Ageing data** column distinguishes `available`, `not_reported` and
 `unverified`. Available sources retain cycle/calendar kinds, evidence and linked
@@ -86,12 +87,12 @@ an external dataset or convert a file locator into normalized observations.
 | [University of Malaya](../data/full-cell/malaya-three-chemistries-2022.md) | One source-listed `Battery Test Data.rar` | LFP/NCA/NMC and US06 are collective source declarations. Inner paths and the per-model/profile matrix remain uninspected; direct automated header access returned 403. No parameter join. |
 | [600 mAh LFP / Figshare](../data/full-cell/milano-lfp-eis-2023.md) | `Measurements.rar::Measurements/Bxx/EIS measurements/Test_n/Hioki/...csv` | Complete directory has 440 EIS CSV, 11 capacity CSV and 10 BMP. Eleven sample labels and IFR14500 filenames do not establish manufacturer/part, temperature or intrinsic parameters. CSV contents were not read. |
 | [LG M50LT / Hallemans](../data/full-cell/hallemans-m50lt-eis-2025.md) | Pinned author EIS MAT, fitted-group MAT and unnamed drive-cycle MAT | Same model/study as six catalog diffusion/kinetic group records. OCP reuse permission, intrinsic D/k and serialized-specimen joins remain missing. Drive cycle is not labeled US06. |
-| [NCR18650B / HNEI](../data/full-cell/hnei-ncr18650b-2016.md) | ZIP with harvested NE/PE and selected full-cell FORM/RPT members | Same-study half/full-cell locations; MAT branches unread. CC0 1.0; no catalog OCP/D/k join. |
+| [NCR18650B / HNEI](../data/full-cell/hnei-ncr18650b-2016.md) | ZIP with harvested NE/PE and selected full-cell FORM/RPT members | Four low-rate native half-cell branches extracted under CC0 1.0; same-study full-cell FORM/RPT links remain external. D/kinetics and donor serial unresolved. |
 | [NCR18650B / Bayreuth](../data/full-cell/bayreuth-ncr18650b-2023.md) | All 13 pseudo-OCV, pulse and EIS MAT/CSV links | Beginning-of-life characterization; whole-cell pseudo-OCV is not electrode OCP. Contents unread; license not stated. |
 | [NCR18650B / Virtual Vehicle](../data/full-cell/virtual-vehicle-ncr18650b-aging-2023.md) | All 116 H5 cell files and protocol PDF | Ageing/RTP documented; H5 unread. Censoring and profile-ID conflicts retained; no cross-study specimen join. |
 | [NCR18650B / Stanford](../data/full-cell/stanford-ncr18650b-rates-2021.md) | Fifteen NCA/k1 XLSX paths at 0.05/1/2/3/5C and 5/25/35 degC | Discharge sweep, not a multi-rate charge sweep. Other deposit chemistries are different models; no OCP/D/k join. |
-| [CALB / NEXTBMS](../data/full-cell/nextbms-calb-nmc532-2026.md) | Harvested half-cell CSVs, full-cell characterization and ageing members in three 7z containers | Same study/model, distinct specimens; EIS at four temperature labels. Declared and directory stage counts differ. |
-| [About:Energy P45B](../data/full-cell/aboutenergy-p45b-2026.md) | Published BPX and four-temperature CC/GITT/WLTP ZIP; eVTOL at three temperatures | Published fitted/composite OCP, not independently located raw half-cell points. Experimental/model columns and alternate reports remain separate. |
+| [CALB / NEXTBMS](../data/full-cell/nextbms-calb-nmc532-2026.md) | Harvested half-cell CSVs, full-cell characterization and ageing members in three 7z containers | Four half-cell branches now imported; same study/model, distinct specimens; full-cell EIS at four temperature labels. Declared and directory stage counts differ. |
+| [About:Energy P45B](../data/full-cell/aboutenergy-p45b-2026.md) | Published BPX and four-temperature CC/GITT/WLTP ZIP; eVTOL at three temperatures | Five fitted OCP tables and 60 BPX inputs imported; original raw half-cell points not independently located. Experimental/model columns and alternate reports remain separate. |
 | [TUM P45B](../data/full-cell/tum-p45b-halfcell-aging-2026.md) | Five harvested finite-current branches, two reconstructed Si files and one 800-EFC pOCV checkup table | Measured blend/cathode, reconstructed Si and whole-cell checkups retain distinct origins; measurement-data reuse scope unresolved. |
 | [LG M50 / TEC2021](../data/full-cell/tec-lgm50-multitemperature-2021.md) | 48 pinned CSV paths at 0/10/25 degC and 0.1/0.5/1/2C | Explicit reuse of existing Chen2020 OCP expressions; different study and unjoined specimen serials. No WLTP in inspected release. |
 | [LG MJ1 / SNU2024](../data/full-cell/snu-mj1-dynamic-aging-2024.md) | One source-listed 80-cell staged-ageing ZIP | DLR-SINTEF half-cell OCP is a same-model cross-study reference. Inner paths and I/V/T unverified; not a named US06/WLTP trace. |
@@ -146,7 +147,7 @@ Include required `aging_data`: status, kinds, source URL/text and representative
 paths already in `file_links`. Use empty kinds/paths for not-reported or unverified
 coverage. Protocol PDFs use kind `documentation`, not experimental-test tags.
 Include `ocp_anchor` with type, evidence/source URLs, verified paths and a separate
-half-cell temperature list. Schema 1.3 requires these source distinctions.
+half-cell temperature list. Schema 1.4 also distinguishes imported half-cell branches, model diffusivity inputs and native kinetic coefficients. These quantity labels preserve source definitions and do not assert independent measurement.
 
 ```bash
 ebp validate

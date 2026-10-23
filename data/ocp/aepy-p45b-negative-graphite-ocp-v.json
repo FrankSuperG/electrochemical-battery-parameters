@@ -1,0 +1,115 @@
+{
+  "record": {
+    "id": "aepy-p45b-negative-graphite-ocp-v",
+    "version": "1",
+    "title": "aepy p45b negative graphite ocp v",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "aepy-p45b-negative-graphite-ocp-v-material",
+    "electrode_role": "negative",
+    "direction": "unspecified",
+    "measurement": "literature_table",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "source_reported_stoichiometry",
+      "symbol": "x",
+      "unit": "1",
+      "domain": [
+        0.0011125213468379,
+        0.880643398272419
+      ],
+      "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+      "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/aepy-p45b-negative-graphite-ocp-v.csv",
+      "sha256": "ff25f2bbb2572699a8ac6c52a86692449d730b675e141520d25810348f96bf67",
+      "point_count": 1140,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "aepy-p45b-2026"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "molicel-p45b-aboutenergy2026",
+      "relationship": "same_parameter_set",
+      "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+    },
+    "provenance": {
+      "asset_ids": [
+        "aepy-p45b-bpx"
+      ],
+      "derivation": "published_BPX_fit_nodes",
+      "location": "Parameterisation/Negative electrode/Particle/Graphite/OCP [V]",
+      "processing": {
+        "script": "scripts/seed_parameter_sources.py",
+        "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/OCP [V]",
+        "source_nodes": 1318,
+        "source_particle_bounds": [
+          0.0011077,
+          0.88312
+        ],
+        "excluded_outside_particle_bounds": 178,
+        "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "source_reported_stoichiometry",
+      "raw_data": "published_table_not_instrument_raw",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Published fitted nodes, not independently measured raw half-cell points.",
+      "Same study/model does not establish identical half-cell/full-cell specimens.",
+      "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+      "No independent electrochemical-model validation is claimed.",
+      "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+      "Three negative silicon branches are model inputs, not three independent measured experiments."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "aepy-p45b-2026": {
+      "kind": "software",
+      "title": "About:Energy Molicel P45B BPX 1.1 parameterisation",
+      "authors": [
+        "About:Energy Limited"
+      ],
+      "year": 2026,
+      "url": "https://github.com/About-Energy-OpenSource/AEPyBaMM/tree/188bd62ee2347cc486b66dc43e31fb9597759db1",
+      "license": "BSD-3-Clause",
+      "version": "188bd62ee2347cc486b66dc43e31fb9597759db1",
+      "role": "Original BPX model inputs and author BSD notice retained; fitted OCP is not raw half-cell measurement."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "aepy-p45b-bpx": {
+      "filename": "aepy-Molicel_P45B_bpx.json",
+      "path": "evidence/aepy-Molicel_P45B_bpx.json",
+      "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json",
+      "source_id": "aepy-p45b-2026",
+      "license": "BSD-3-Clause",
+      "sha256": "25acf02faa9c20b57382b5d678ccf0ba4cb384ab632d395f50fd97e80a42db66"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

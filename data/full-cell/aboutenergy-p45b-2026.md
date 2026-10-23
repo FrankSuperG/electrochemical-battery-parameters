@@ -12,7 +12,7 @@ DOI: 10.5281/zenodo.19052626. Checked: 2026-10-23.
 
 ## Electrode OCP anchor
 
-**Published fitted parameterisation**. Published composite/fitted BPX electrode OCPs are linked externally. The authors explicitly connect this DFN set to the released full-cell tests. This review does not establish access to the original harvested half-cell observation points or independently validate the fitted curves.
+**Published fitted parameterisation**. Published composite/fitted BPX electrode OCPs are linked externally. The authors explicitly connect this DFN set to the released full-cell tests. This review does not establish access to the original harvested half-cell observation points or independently validate the fitted curves. Five fitted phase/branch OCP tables are now extracted inside source particle bounds; the original BPX and 60 non-OCP inputs are retained.
 
 Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
 
@@ -42,15 +42,17 @@ Author format PDF defines these experimental columns, positive charge current an
 
 ## Parameter association
 
-Match: `unmatched`. No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.
+Match: `same_model_same_study`. Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.
 
-Components without a native catalog join: electrode_ocp, diffusion, kinetics.
+[Molicel P45B &#124; About:Energy2026 BPX](../cells/molicel-p45b-aboutenergy2026.md)
+
+Components without a native catalog join: .
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|
-| ocp | `missing` / `missing` | None | Published composite/fitted BPX electrode OCPs are linked externally. The authors explicitly connect this DFN set to the released full-cell tests. This review does not establish access to the original harvested half-cell observation points or independently validate the fitted curves. Missing: No verified current-catalog record for this component and study. |
-| diffusion | `missing` / `missing` | None | No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters. Missing: No verified current-catalog record for this component and study. |
-| kinetics | `missing` / `missing` | None | No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters. Missing: No verified current-catalog record for this component and study. |
+| ocp | `same_model_same_study` / `electrode_ocp` | `aepy-p45b-negative-graphite-ocp-v`, `aepy-p45b-negative-silicon-ocp-v`, `aepy-p45b-negative-silicon-ocp-delithiation-v`, `aepy-p45b-negative-silicon-ocp-lithiation-v`, `aepy-p45b-positive-nca-ocp-v` | Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements. Missing: Identical half-cell/full-cell serialized specimen unresolved; Original raw half-cell points not located |
+| diffusion | `same_model_same_study` / `model_diffusivity` | `aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1`, `aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1`, `aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1`, `aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1`, `aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1`, `aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1` | Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements. Missing: Identical serialized specimen unresolved |
+| kinetics | `same_model_same_study` / `kinetic_coefficient` | `aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1`, `aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1`, `aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1`, `aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1`, `aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1`, `aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1` | Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements. Missing: Identical serialized specimen unresolved |
 
 ## Requested-test coverage
 
@@ -121,7 +123,7 @@ An archive-member link downloads its parent container; extract the named member 
 | `molicel_p45b_data.zip::MOLICEL_P45B_060degC_WLTP.csv` | Molicel INR21700-P45B / No sample ID | dynamic; WLTP | 60 degC | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content) |
 | `molicel_p45b_data.zip::MOLICEL_P45B_010degC_1C_Ch.csv` | Molicel INR21700-P45B / No sample ID | constant_current;  | 10 degC; 1.0C | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content) |
 | `molicel_p45b_data.zip::MOLICEL_P45B_010degC_1C_Ch-charge.csv` | Molicel INR21700-P45B / No sample ID | constant_current;  | 10 degC; 1.0C | `archive_directory`; content `not_read` | [Parent archive](https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content) |
-| `examples/params/Molicel_P45B_bpx.json` | Molicel INR21700-P45B / No sample ID | ;  | Temperature unknown | `source_listing`; content `parameter_metadata_reviewed` | [Open source file](https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json) |
+| `examples/params/Molicel_P45B_bpx.json` | Molicel INR21700-P45B / No sample ID | ;  | Temperature unknown | `source_listing`; content `existing_source_audit` | [Open source file](https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json) |
 | `Molicel P45B Data Release Data Format Documentation.pdf` | Molicel INR21700-P45B / No sample ID | ;  | Temperature unknown | `source_listing`; content `documentation_reviewed` | [Open source file](https://zenodo.org/api/records/19052626/files/Molicel%20P45B%20Data%20Release%20Data%20Format%20Documentation.pdf/content) |
 | `readme_Molicel_P45B_dataset_AE.txt` | Molicel INR21700-P45B / No sample ID | ;  | Temperature unknown | `source_listing`; content `documentation_reviewed` | [Open source file](https://zenodo.org/api/records/19052626/files/readme_Molicel_P45B_dataset_AE.txt/content) |
 
@@ -179,7 +181,7 @@ File notes:
 - `molicel_p45b_data.zip::MOLICEL_P45B_060degC_WLTP.csv`: Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.
 - `molicel_p45b_data.zip::MOLICEL_P45B_010degC_1C_Ch.csv`: Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.
 - `molicel_p45b_data.zip::MOLICEL_P45B_010degC_1C_Ch-charge.csv`: Experimental and optional simulated columns coexist according to the author PDF. -charge.csv is an alternate model case. Whole-cell Co30 and E_OCV_V must not be labelled electrode OCP; no CSV content read.
-- `examples/params/Molicel_P45B_bpx.json`: Published BPX 1.1 DFN parameter package with graphite/silicon-additive particle branches, cathode OCP, diffusion and kinetic entries. Fitted/tuned parameterisation, not independently measured pure-silicon OCP or a native E-BatP import. Structure/header inspected; numerical arrays/units not audited. BSD-3-Clause author repository.
+- `examples/params/Molicel_P45B_bpx.json`: Published BPX 1.1 DFN parameter package with graphite/silicon-additive particle branches, cathode OCP, diffusion and kinetic entries. Fitted/tuned parameterisation, not independently measured pure-silicon OCP or a native E-BatP import. Structure/header inspected; numerical arrays/units not audited. BSD-3-Clause author repository. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.
 - `Molicel P45B Data Release Data Format Documentation.pdf`: Author README or format documentation inspected; no experimental observations in this locator.
 - `readme_Molicel_P45B_dataset_AE.txt`: Author README or format documentation inspected; no experimental observations in this locator.
 
@@ -187,7 +189,7 @@ File notes:
 
 License: **CC-BY-4.0**. [Source terms](https://zenodo.org/api/records/19052626). Zenodo states CC BY 4.0 for the test release; its README retains copyright/all-rights-reserved and liability notices. BPX is separately in the BSD-3-Clause author repository. Do not transfer license scope between these objects; no source payload is redistributed.
 
-Review level: `archive_directory_reviewed`. All 51 ZIP member names/sizes, release metadata, README and two-page format PDF reviewed; BPX header/structure inspected. No observation CSV read. Published model parameters and measured/raw data are not merged.
+Review level: `existing_source_audit`. All 51 ZIP member names/sizes, release metadata, README and two-page format PDF reviewed; BPX header/structure inspected. No observation CSV read. Published model parameters and measured/raw data are not merged. Follow-up: selected half-cell/parameter originals were read, pinned and extracted by scripts/seed_parameter_sources.py. Full-cell observation payloads remain unread and external.
 
 - [molicel_p45b_data.zip](https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content)
 - [MOLICEL_P45B_010degC_1C_Dch.csv](https://zenodo.org/api/records/19052626/files/molicel_p45b_data.zip/content)
@@ -250,10 +252,12 @@ Review level: `archive_directory_reviewed`. All 51 ZIP member names/sizes, relea
 
 ## Missing items and limits
 
-- No native catalog OCP/D/kinetics records for P45B; BPX arrays and parameter origins/units remain externally reviewable leads.
 - Original harvested half-cell observations and their temperature not independently located; composite/silicon fitted OCP is not a measured pure-material curve.
 - No eVTOL at 10 degC in the checked ZIP, no US06/EIS or longitudinal ageing source in this release.
 - No independent-cell count from 51 files; measured/model columns and alternate model cases must remain separate.
+- Five OCP fits and 60 non-OCP BPX inputs imported; source electrolyte placeholder zeros and 71 custom-law coefficients remain in original BPX only.
+- OCP export retains only native nodes within source particle bounds; extreme endpoint extrapolations remain in original BPX, not catalog evaluation domain.
+- BPX-native molar reaction coefficients retain source units; no conversion to intrinsic k or exchange-current density law is inferred.
 
 ## Evidence
 

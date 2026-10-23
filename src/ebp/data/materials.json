@@ -135,5 +135,70 @@
     "name": "NMC",
     "family": "NMC",
     "note": "Source MJ1 harvested electrode; NMC ratio differs between laboratory workbook and later paper, so no exact composition is assigned."
+  },
+  "hnei-ncr18650b-ne-lithiation-material": {
+    "label": "graphite",
+    "cell_id": "panasonic-ncr18650b-hnei2016",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "hnei-ncr18650b-ne-delithiation-material": {
+    "label": "graphite",
+    "cell_id": "panasonic-ncr18650b-hnei2016",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "hnei-ncr18650b-pe-lithiation-material": {
+    "label": "NCA",
+    "cell_id": "panasonic-ncr18650b-hnei2016",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "hnei-ncr18650b-pe-delithiation-material": {
+    "label": "NCA",
+    "cell_id": "panasonic-ncr18650b-hnei2016",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "nextbms-calb-negative-charge-material": {
+    "label": "graphite",
+    "cell_id": "calb-gen3b-nextbms2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "nextbms-calb-negative-discharge-material": {
+    "label": "graphite",
+    "cell_id": "calb-gen3b-nextbms2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "nextbms-calb-positive-charge-material": {
+    "label": "NMC532",
+    "cell_id": "calb-gen3b-nextbms2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "nextbms-calb-positive-discharge-material": {
+    "label": "NMC532",
+    "cell_id": "calb-gen3b-nextbms2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "aepy-p45b-negative-graphite-ocp-v-material": {
+    "label": "graphite",
+    "cell_id": "molicel-p45b-aboutenergy2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "aepy-p45b-negative-silicon-ocp-v-material": {
+    "label": "silicon",
+    "cell_id": "molicel-p45b-aboutenergy2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "aepy-p45b-negative-silicon-ocp-delithiation-v-material": {
+    "label": "silicon",
+    "cell_id": "molicel-p45b-aboutenergy2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "aepy-p45b-negative-silicon-ocp-lithiation-v-material": {
+    "label": "silicon",
+    "cell_id": "molicel-p45b-aboutenergy2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "aepy-p45b-positive-nca-ocp-v-material": {
+    "label": "NCA",
+    "cell_id": "molicel-p45b-aboutenergy2026",
+    "note": "Source-specific phase/electrode; not a universal material curve."
   }
 }

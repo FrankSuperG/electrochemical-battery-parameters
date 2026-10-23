@@ -29,9 +29,9 @@ def test_material_families_specimens_and_cell_associations():
         "NCA",
         "NCO",
     }
-    assert len(c.search()) == 59
+    assert len(c.search()) == 72
     assert len(c.experiments) == 18
-    assert len(c.search(representation="table")) == 44
+    assert len(c.search(representation="table")) == 57
     for material, role in [
         ("NMC111", "positive"),
         ("NMC532", "positive"),
@@ -42,6 +42,8 @@ def test_material_families_specimens_and_cell_associations():
         for curve in c.search(material=material, representation="table"):
             r = curve.record
             assert r["electrode_role"] == role
+            if not curve.id.startswith("sintef-"):
+                continue  # Study-linked NEXTBMS/BPX nodes have separate source tests.
             assert r["cell_link"]["cell_id"] is None
             assert r["x"]["kind"] == "normalized_branch_capacity"
             assert c.experiments[r["experiment_id"]]["known_issues"] == []

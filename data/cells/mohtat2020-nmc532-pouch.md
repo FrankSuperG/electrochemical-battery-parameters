@@ -21,6 +21,22 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 | `original_author_mpm` | 33 | [Download CSV](../parameters/mohtat2020-nmc532-pouch--original_author_mpm.csv) |
 | `pybamm_v25_4_2` | 38 | [Download CSV](../parameters/mohtat2020-nmc532-pouch--pybamm_v25_4_2.csv) |
 
+### Diffusion parameters
+
+[4 diffusion records (CSV)](../parameters/mohtat2020-nmc532-pouch--diffusion.csv)
+
+Original author D_n=5e-15 and D_p=8e-15 m2/s; PyBaMM same reference values with added Arrhenius dependence.
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[4 kinetics records (CSV)](../parameters/mohtat2020-nmc532-pouch--kinetics.csv)
+
+Original k0_n=1.1e-11 and k0_p=5e-11 with source i0 definition; PyBaMM exchange-current prefactors are rounded/unit-converted and have added temperature dependence.
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ## OCP curves
 
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |

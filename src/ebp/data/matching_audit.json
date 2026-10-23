@@ -1,5 +1,5 @@
 {
-  "checked_date": "2026-10-17",
+  "checked_date": "2026-10-23",
   "scope": "Imported sources and investigated leads; not an exhaustive claim about all available literature",
   "cell_matches": {
     "lg-m50": {
@@ -1232,6 +1232,219 @@
         "No same-study intact commercial MJ1 full-cell I/V/T validation series verified",
         "No standalone intact-cell constant-current charge/discharge observations imported",
         "Source SOC/stoichiometry coordinates need explicit balancing before model use"
+      ]
+    },
+    "panasonic-ncr18650b-hnei2016": {
+      "display_name": "Panasonic NCR18650B | HNEI2016",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "hnei-ncr18650b-ne-lithiation",
+            "hnei-ncr18650b-ne-delithiation",
+            "hnei-ncr18650b-pe-lithiation",
+            "hnei-ncr18650b-pe-delithiation"
+          ],
+          "source_ids": [
+            "devie-dubarry-2016",
+            "hnei-ncr-2016-data"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matched diffusivity values imported.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matched intrinsic kinetic values imported.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "External dataset links only; no new full-cell observations packaged.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Matching full-cell charge/discharge observations not imported",
+        "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
+      ]
+    },
+    "calb-gen3b-nextbms2026": {
+      "display_name": "CALB generation 3b | NEXTBMS2026",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "nextbms-calb-negative-charge",
+            "nextbms-calb-negative-discharge",
+            "nextbms-calb-positive-charge",
+            "nextbms-calb-positive-discharge"
+          ],
+          "source_ids": [
+            "nextbms-calb-2026-data"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matched diffusivity values imported.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matched intrinsic kinetic values imported.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "External dataset links only; no new full-cell observations packaged.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Commercial part number unresolved",
+        "Matching full-cell charge/discharge observations not imported",
+        "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
+      ]
+    },
+    "molicel-p45b-aboutenergy2026": {
+      "display_name": "Molicel P45B | About:Energy2026 BPX",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "aepy-p45b-negative-graphite-ocp-v",
+            "aepy-p45b-negative-silicon-ocp-v",
+            "aepy-p45b-negative-silicon-ocp-delithiation-v",
+            "aepy-p45b-negative-silicon-ocp-lithiation-v",
+            "aepy-p45b-positive-nca-ocp-v"
+          ],
+          "source_ids": [
+            "aepy-p45b-2026"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Published BPX phase-specific fits; original measured half-cell points not located.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1"
+          ],
+          "source_ids": [
+            "aepy-p45b-2026"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Three phase-specific D inputs and three activation energies in BPX.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+            "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1"
+          ],
+          "source_ids": [
+            "aepy-p45b-2026"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "BPX-native reaction coefficients and activation energies; no automatic i0/k conversion.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "External dataset links only; no new full-cell observations packaged.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Matching full-cell charge/discharge observations not imported",
+        "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
       ]
     }
   },

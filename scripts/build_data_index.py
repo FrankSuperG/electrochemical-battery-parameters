@@ -33,6 +33,7 @@ def aging_label(record):
 
 def ocp_anchor_label(record):
     return {"external_half_cell_files": "External half-cell files",
+            "catalog_half_cell": "Imported half-cell branches",
             "published_parameterisation": "Published fitted parameterisation",
             "reused_catalog_expression": "Explicitly reused catalog expression",
             "cross_study_catalog_half_cell": "Cross-study catalog half-cell reference",
@@ -67,6 +68,129 @@ def parameter_csv(parameters):
             for p in parameters
         ],
     )
+
+
+def battery_model_index(catalog):
+    """Group explicit cell identities for navigation without changing scientific joins."""
+    output, groups, assigned = {}, [], set()
+    # A same-model source may be discoverable here while its native data reuse is unresolved.
+    extra = {"molicel-p45b-aboutenergy2026": ["tum-p45b-halfcell-aging-2026"]}
+    names = {"uccs-a123-26650m1b-2021": "A123 26650 m1b / UCCS",
+             "calce-samsung-20r-dynamic": "Samsung INR18650-20R / CALCE",
+             "calce-a123-dynamic": "A123 cylindrical LFP / part unresolved",
+             "calb-l148n58a-2025": "CALB L148N58A",
+             "milano-lfp-eis-2023": "LFP IFR14500 labels / manufacturer unresolved",
+             "malaya-three-chemistries-2022": "Malaya three-model archive / per-model files unverified"}
+    for cid, cell in catalog.cells.items():
+        sources = [r for r in catalog.external_datasets
+                   if cid in r["parameter_link"]["cell_ids"] or r["id"] in extra.get(cid, [])]
+        assigned.update(r["id"] for r in sources)
+        groups.append({"id": cid, "title": cell["display_name"], "family": catalog.cell_material_family(cid),
+                       "cell": cell, "sources": sources})
+    for r in catalog.external_datasets:
+        if r["id"] not in assigned:
+            groups.append({"id": r["id"], "title": names.get(r["id"], r["cell_identity"]),
+                           "family": "/".join(r["material_families"]), "cell": None, "sources": [r]})
+
+    def link(page, target, label):
+        target, sep, anchor = str(target).partition("#")
+        href = Path(os.path.relpath(target, page.parent)).as_posix()+(sep+anchor if sep else "")
+        return f"[{text_cell(label)}]({href})"
+
+    def component_links(group, page):
+        cid, cell = group["id"], group["cell"]
+        curves = catalog.search(cell_id=cid) if cell else []
+        kinds = {r.record["measurement"] for r in curves}
+        label = ("modeled OCPn" if kinds == {"model_ocp"} else "pseudo-OCP" if kinds == {"pseudo_ocp"} else
+                 "tables / fits" if kinds == {"literature_table"} else "expressions" if kinds == {"literature_formula"} else "curve records")
+        ocp = (link(page, f"data/cells/{cid}.md#ocp-curves", f"{len(curves)} {label}") if curves else
+               link(page, f"data/cells/{cid}.md#ocp-curves", "Reuse unresolved") if cell and cid == "lg-m50lt-hallemans2025" else "Not extracted")
+        if not curves:
+            leads = [r for r in group["sources"] if r["ocp_anchor"]["kind"] in {"external_half_cell_files", "published_parameterisation"}]
+            if leads:
+                ocp = "<br>".join(link(page, f"data/full-cell/{r['id']}.md#electrode-ocp-anchor", "External only; reuse/definition gap") for r in leads)
+        values = [ocp]
+        for category in ["diffusion", "kinetics"]:
+            subset = [p for p in catalog.parameters if cell and p["cell_id"] == cid and p["category"] == category]
+            label = f"{len(subset)} records"
+            if cid == "lg-m50lt-hallemans2025":label += " (groups)"
+            values.append(link(page, f"data/parameters/{cid}--{category}.csv", label) if subset else "Not extracted")
+        return values
+
+    def coverage(group):
+        kinds = []
+        sources = group["sources"]
+        if any(len(r["temperatures_C"]) > 1 for r in sources):kinds.append("multi-T")
+        local = catalog.linked_tests(group["id"]) if group["cell"] else []
+        if any("dynamic" in r["test_types"] for r in sources) or any("drive" in t["protocol"].lower() for t in local):kinds.append("dynamic")
+        if any(r["aging_data"]["status"] == "available" for r in sources):kinds.append("ageing")
+        if any("eis" in r["test_types"] for r in sources):kinds.append("EIS")
+        return ", ".join(kinds) if kinds else "See test conditions / gaps"
+
+    for group in groups:
+        page = Path(f"data/batteries/{group['id']}.md")
+        cell = group["cell"]
+        lines = [f"# {group['title']}", "", "[All battery models](README.md) · [Storage and reuse rules](../../docs/DATA_ACCESS.md)", "",
+                 f"Material grouping: **{group['family']}**. This is a navigation group; studies and specimens remain separate.", "",
+                 "## OCP and model parameters", "",
+                 "OCP and reusable model parameters are extracted into versioned CSV/JSON records. Unresolved reuse or definitions remain explicit; full-cell OCV is not electrode OCP.", "",
+                 "| OCP | Diffusion | Kinetics |", "|---|---|---|", "| "+" | ".join(component_links(group, page))+" |", ""]
+        if cell:
+            cid = group["id"]
+            lines += [link(page, f"data/cells/{cid}.md", "Full cell/study package: definitions, all parameters, sources and gaps"), "",
+                      link(page, f"data/parameters/{cid}.json", "Machine-readable package (JSON)"), ""]
+            for category in ["ocp", "diffusion", "kinetics"]:
+                lines += [f"- **{category.upper() if category == 'ocp' else category.title()}:** {cell['coverage'][category]}"]
+        lines += ["", "## Full-cell tests", "",
+                  "New full-cell observations remain at their providers. Links below lead to descriptions, exact file locations, source licenses and missing channels. Existing packaged tests are retained for compatibility.", ""]
+        local = catalog.linked_tests(group["id"]) if cell else []
+        if local:
+            lines += [link(page, f"data/cells/{group['id']}.md#full-cell-tests", f"{len(local)} existing packaged test files with per-file conditions"), "", cell["coverage"]["full_cell_tests"], ""]
+        if group["sources"]:
+            lines += ["| Source / files | CC / rate coverage | Full-cell temperatures / °C | Dynamic | Ageing | EIS | Parameter relationship |", "|---|---|---|---|---|---|---|"]
+            for r in group["sources"]:
+                source = f"data/full-cell/{r['id']}.md"
+                cc = link(page, source+"#requested-test-coverage", "Source rates / limits") if "constant_current" in r["test_types"] or "cccv" in r["test_types"] else "Not separately verified"
+                dynamic = (", ".join(r["profiles"]) or "Unnamed / staged") if "dynamic" in r["test_types"] else "Not reported"
+                assoc = r["parameter_link"]["match_level"]
+                if group["id"] not in r["parameter_link"]["cell_ids"] and cell:assoc = "Same model; other study, no native parameter join"
+                lines += ["| "+" | ".join([link(page, source+"#file-locations", r["id"]), cc,
+                    "/".join(str(t) for t in r["temperatures_C"]) or "Unverified", text_cell(dynamic),
+                    link(page, source+"#ageing-data", aging_label(r)), "Located / source-listed" if "eis" in r["test_types"] else "Not reported", text_cell(assoc)])+" |"]
+        else:lines += ["No external full-cell dataset curated for this entry."]
+        lines += ["", "Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.", "",
+                  "## Matching and gaps", "",
+                  "A shared commercial model permits discovery across studies; it does not establish shared batches, specimens, ageing state or transferable parameters. Grouped diffusion/kinetics and BPX phase coefficients retain their definitions.", ""]
+        if cell:lines += [f"- Native package match: `{cell['match_level']}`. {cell['match_evidence']}"]
+        for r in group["sources"]:
+            lines += [f"- **{r['id']}**: {r['parameter_link']['evidence']}",
+                      "  "+link(page, f"data/full-cell/{r['id']}.md#missing-items-and-limits", "Missing items, source terms and review limits")]
+        lines += [""]
+        output[str(page)] = "\n".join(lines).encode()
+
+    def table(page, level):
+        lines = ["OCP and parameter links open repository data. Full-cell links open source descriptions and downloads. **Not extracted** means no reusable native record is curated; it is not a claim that no measurement exists.", "",
+                 "Coverage labels below are source-level discovery aids. Read each model page for study, temperature, profile, licence and specimen limits. Half-cell temperature is tracked separately.", ""]
+        families = sorted({g["family"] for g in groups}, key=lambda f: (("LFP", "NMC", "NCA", "LCO", "NCO").index(f) if f in ("LFP", "NMC", "NCA", "LCO", "NCO") else 99, f))
+        for family in families:
+            lines += ["#"*level+" "+family, "", "| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |", "|---|---|---|---|---|---|"]
+            for g in sorted((g for g in groups if g["family"] == family), key=lambda g: ("ncr18650b" not in g["id"], g["title"].casefold())):
+                target=f"data/batteries/{g['id']}.md"
+                count=len(catalog.linked_tests(g["id"])) if g["cell"] else 0
+                n_sources=len(g["sources"])
+                label=" + ".join(([f"{count} packaged"] if count else [])+([f"{n_sources} external {'source' if n_sources == 1 else 'sources'}"] if n_sources else [])) or "Not linked"
+                tests=link(page, target+"#full-cell-tests", label)
+                limits=link(page, target+"#matching-and-gaps", "Match / gaps")
+                match = ("Cross-study / mixed sources" if g["cell"] and any(r["parameter_link"]["match_level"] != "same_model_same_study" for r in g["sources"]) else
+                         g["cell"]["match_level"].replace("_", " ") if g["cell"] else "Parameters unmatched")
+                lines += ["| "+" | ".join([link(page,target,g["title"]),*component_links(g,page),tests,coverage(g)+"<br>"+match+" · "+limits])+" |"]
+            lines += [""]
+        lines += ["Material-only curves without a verified battery model remain in "+link(page,"data/ocp/README.md","the OCP material index")+"; no commercial-cell assignment is inferred.", ""]
+        return "\n".join(lines)
+
+    page=Path("data/batteries/README.md")
+    output[str(page)]=( "# Battery model index\n\n[Repository README](../../README.md) · [All data](../README.md)\n\n"+table(page,2)).encode()
+    return output, table(Path("README.md"),3)
 
 
 def full_cell_index(catalog):
@@ -212,6 +336,8 @@ def render_index(repo=REPO):
         raise ValueError("; ".join(errors))
     output = {}
     output.update(full_cell_index(catalog))
+    model_pages, model_table = battery_model_index(catalog)
+    output.update(model_pages)
 
     def relative(page, target):
         return Path(os.path.relpath(target, Path(page).parent)).as_posix()
@@ -317,6 +443,15 @@ def render_index(repo=REPO):
         else:
             lines += ["No non-OCP parameters imported for this entry. No placeholder parameter values are supplied.", "",
                       link(page, json_path, "Cell package: OCP, tests, sources and missing items (JSON)"), ""]
+        for category in ["diffusion", "kinetics"]:
+            subset = [p for p in parameters if p["category"] == category]
+            lines += [f"### {category.title()} parameters", ""]
+            if subset:
+                target = Path("data/parameters") / f"{cid}--{category}.csv"
+                output[str(target)] = parameter_csv(subset)
+                lines += [link(page, target, f"{len(subset)} {category} records (CSV)"), "", cell["coverage"][category], "",
+                          "Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.", ""]
+            else:lines += ["Not extracted for this cell/study.", ""]
         tabulated = [p for p in parameters if p["representation"]["kind"] == "table"]
         if tabulated:
             lines += ["### Native parameter tables", "", "Linear interpolation is available only within each retained native domain. Source SOC and stoichiometry coordinates require explicit mapping before model use.", "",
@@ -408,7 +543,8 @@ def render_index(repo=REPO):
              "3. Use the file page's **Raw / download raw file** controls to save the complete file. GitHub previews may not display large files. Keep the metadata and source license with your copy.", "",
              "See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.", "",
              f"Snapshot: {len(catalog.search())} OCP records, {len(catalog.parameters)} other parameter records, {len(catalog.full_cell_tests)} full-cell test files.", "",
-             "## Choose a cell or study", "", cells_table(page), "",
+             "## Choose a battery model", "", "[Battery model index: OCP, diffusion, kinetics and full-cell source coverage](batteries/README.md)", "",
+             "## Native cell or study packages", "", cells_table(page), "",
              "## Find data by type", "",
              "| Need | Entry point |", "|---|---|",
              "| LFP or another material's OCP | [OCP index](ocp/README.md), with CSV and per-record JSON links |",
@@ -425,7 +561,7 @@ def render_index(repo=REPO):
     readme = (repo / "README.md").read_text(encoding="utf-8")
     if START not in readme or END not in readme:
         raise ValueError("README data-navigation markers are missing")
-    replacement = START + "\n\n" + cells_table(Path("README.md")) + "\n\n" + END
+    replacement = START + "\n\n" + model_table + "\n" + END
     output["README.md"] = re.sub(re.escape(START) + r".*?" + re.escape(END),
                                  lambda _: replacement, readme, flags=re.DOTALL).encode("utf-8")
     return output

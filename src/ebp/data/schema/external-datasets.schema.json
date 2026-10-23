@@ -10,7 +10,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "1.3"
+      "const": "1.4"
     },
     "description": {
       "type": "string",
@@ -466,7 +466,9 @@
                       "intrinsic_diffusivity",
                       "grouped_time_scale",
                       "kinetic_law",
-                      "grouped_kinetics"
+                      "grouped_kinetics",
+                      "model_diffusivity",
+                      "kinetic_coefficient"
                     ]
                   },
                   "record_ids": {
@@ -518,7 +520,9 @@
                       "intrinsic_diffusivity",
                       "grouped_time_scale",
                       "kinetic_law",
-                      "grouped_kinetics"
+                      "grouped_kinetics",
+                      "model_diffusivity",
+                      "kinetic_coefficient"
                     ]
                   },
                   "record_ids": {
@@ -570,7 +574,9 @@
                       "intrinsic_diffusivity",
                       "grouped_time_scale",
                       "kinetic_law",
-                      "grouped_kinetics"
+                      "grouped_kinetics",
+                      "model_diffusivity",
+                      "kinetic_coefficient"
                     ]
                   },
                   "record_ids": {
@@ -836,7 +842,8 @@
                   "model_derived_only",
                   "reuse_unresolved",
                   "not_identified",
-                  "full_cell_ocv_only"
+                  "full_cell_ocv_only",
+                  "catalog_half_cell"
                 ]
               },
               "half_cell_temperatures_C": {

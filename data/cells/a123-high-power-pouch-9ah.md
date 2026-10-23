@@ -14,6 +14,14 @@ No non-OCP parameters imported for this entry. No placeholder parameter values a
 
 [Cell package: OCP, tests, sources and missing items (JSON)](../parameters/a123-high-power-pouch-9ah.json)
 
+### Diffusion parameters
+
+Not extracted for this cell/study.
+
+### Kinetics parameters
+
+Not extracted for this cell/study.
+
 ## OCP curves
 
 No electrode-resolved OCP record linked to this cell. Full-cell pseudo-OCV and unrelated same-chemistry curves do not fill this gap.

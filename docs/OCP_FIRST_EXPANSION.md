@@ -1,5 +1,11 @@
 # OCP-first expansion screen — 2026-10-23
 
+**v0.11 screening snapshot.** The subsequent v0.12 follow-up extracted HNEI and
+NEXTBMS half-cell branches plus P45B fitted OCP/model parameters. Read the
+[current storage/extraction guide](PARAMETER_STORAGE.md) and
+[battery model index](../data/batteries/README.md) for native records and updated
+matches. The screening decisions below describe the earlier pass.
+
 [Full-cell sources with OCP and ageing columns](../data/full-cell/README.md) · [NMC](../data/full-cell/NMC.md) · [NCA](../data/full-cell/NCA.md) · [Machine-readable evidence](../src/ebp/data/evidence/ocp-first-expansion-review.json)
 
 This pass screened **21 source families** and added **five external records / 194 selected locators**. The registry now contains sixteen records and 427 locators. All new observations remain external. Native counts stay at 59 electrode-curve records, 397 other parameters and 61 packaged full-cell files. A locator is not an independent experiment.

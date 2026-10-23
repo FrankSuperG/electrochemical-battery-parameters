@@ -1092,5 +1092,92 @@
       "mj1-workbook"
     ],
     "excluded_content": "Entire OCV sheet, including third-party silicon literature columns, and electrolyte sheet"
+  },
+  "hnei-ncr-ne": {
+    "filename": "hnei-ncr18650b-NE-RPT.mat",
+    "path": "evidence/hnei-ncr18650b-NE-RPT.mat",
+    "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+    "source_id": "hnei-ncr-2016-data",
+    "license": "CC0-1.0",
+    "sha256": "72409a23626c60457cd44964b8e2791c4881bc7da3c64d25cc3654b0dc507303",
+    "archive_member": "Upload/Half cell/NE/[01] RPT.mat"
+  },
+  "hnei-ncr-pe": {
+    "filename": "hnei-ncr18650b-PE-RPT.mat",
+    "path": "evidence/hnei-ncr18650b-PE-RPT.mat",
+    "url": "https://zenodo.org/api/records/60232/files/Panasonic_NCR18650B_formation_and_RPT_tests.zip/content",
+    "source_id": "hnei-ncr-2016-data",
+    "license": "CC0-1.0",
+    "sha256": "4bf3623295d2491732a92e3e2e53bc8151f9993808df141d989b8babe914fac0",
+    "archive_member": "Upload/Half cell/PE/[02] RPT.mat"
+  },
+  "hnei-ncr-metadata": {
+    "filename": "hnei-ncr18650b-60232-metadata.json",
+    "path": "evidence/hnei-ncr18650b-60232-metadata.json",
+    "url": "https://zenodo.org/api/records/60232",
+    "source_id": "hnei-ncr-2016-data",
+    "license": "CC0-1.0",
+    "sha256": "3399f8e9c226dd9c9f6f645a68234334fdb1a2b86ca522a9bd332373845ffdfe"
+  },
+  "nextbms-anode-nextbms-fcharge": {
+    "filename": "nextbms-anode_NExtBMS_fCharge.csv",
+    "path": "evidence/nextbms-anode_NExtBMS_fCharge.csv",
+    "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+    "source_id": "nextbms-calb-2026-data",
+    "license": "CC-BY-4.0",
+    "sha256": "032d4c574801ed463372ef6d05991a9ac90e47968aa768e78cdf209c4342ffb6",
+    "archive_member": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv"
+  },
+  "nextbms-anode-nextbms-fdischarge": {
+    "filename": "nextbms-anode_NExtBMS_fDischarge.csv",
+    "path": "evidence/nextbms-anode_NExtBMS_fDischarge.csv",
+    "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+    "source_id": "nextbms-calb-2026-data",
+    "license": "CC-BY-4.0",
+    "sha256": "bb7a3d68fda7189f4982d993500b8cd01451f0ab1ad7e0ff58430879ed02251b",
+    "archive_member": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv"
+  },
+  "nextbms-cathode-nextbms-fcharge": {
+    "filename": "nextbms-cathode_NExtBMS_fCharge.csv",
+    "path": "evidence/nextbms-cathode_NExtBMS_fCharge.csv",
+    "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+    "source_id": "nextbms-calb-2026-data",
+    "license": "CC-BY-4.0",
+    "sha256": "a4e574f57587e32fd9f6180842593cd565e8a4ecfc3ee9680644ecb9f3777f7a",
+    "archive_member": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv"
+  },
+  "nextbms-cathode-nextbms-fdischarge": {
+    "filename": "nextbms-cathode_NExtBMS_fDischarge.csv",
+    "path": "evidence/nextbms-cathode_NExtBMS_fDischarge.csv",
+    "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+    "source_id": "nextbms-calb-2026-data",
+    "license": "CC-BY-4.0",
+    "sha256": "89f838c3d3fed34d5933c03a1071595497ac6b3ecd4e980c27ddc14f4ef34162",
+    "archive_member": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv"
+  },
+  "nextbms-half-readme": {
+    "filename": "nextbms-README_half_cell_OCP.md",
+    "path": "evidence/nextbms-README_half_cell_OCP.md",
+    "url": "https://zenodo.org/api/records/22301764/files/2_HalfCell.7z/content",
+    "source_id": "nextbms-calb-2026-data",
+    "license": "CC-BY-4.0",
+    "sha256": "5fb2dfd37ba096d880e5cdee4b817af5efcd463966aed6ec29814af4a577ab94",
+    "archive_member": "2_HalfCell/OCP_data/README_half_cell_OCP.md"
+  },
+  "aepy-p45b-bpx": {
+    "filename": "aepy-Molicel_P45B_bpx.json",
+    "path": "evidence/aepy-Molicel_P45B_bpx.json",
+    "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json",
+    "source_id": "aepy-p45b-2026",
+    "license": "BSD-3-Clause",
+    "sha256": "25acf02faa9c20b57382b5d678ccf0ba4cb384ab632d395f50fd97e80a42db66"
+  },
+  "aepy-p45b-license": {
+    "filename": "aepy-LICENSE.txt",
+    "path": "evidence/aepy-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/LICENSE",
+    "source_id": "aepy-p45b-2026",
+    "license": "BSD-3-Clause",
+    "sha256": "646468643dab43bcc4cea9acffb0178c922bc3196273ea4b280388a00dc6f4e8"
   }
 }

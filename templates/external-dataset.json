@@ -112,5 +112,6 @@
       "https://example.org/replace-with-ocp-evidence"
     ],
     "evidence": "Identify measured half-cell files, a published parameterisation or explicit curve reuse. Whole-cell OCV and reconstructed silicon curves must retain their distinct origins. Report half-cell temperatures separately from full-cell tests."
-  }
+  },
+  "schema_version": "1.4"
 }

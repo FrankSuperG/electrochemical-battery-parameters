@@ -2147,5 +2147,358 @@
       "No standalone intact-cell constant-current charge/discharge observations imported",
       "Source SOC/stoichiometry coordinates need explicit balancing before model use"
     ]
+  },
+  "panasonic-ncr18650b-hnei2016": {
+    "manufacturer": "Panasonic",
+    "model": "NCR18650B",
+    "display_name": "Panasonic NCR18650B | HNEI2016",
+    "chemistry": "NCA/graphite",
+    "format": "Source cell format; half-cell and full-cell configurations differ",
+    "nominal_capacity_Ah": null,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "hnei-ncr-2016-data"
+    ],
+    "model_context": "Partial electrochemical parameter/source package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Source names this cell/model within one study; full-cell observations stay externally linked and same-specimen mapping remains unresolved.",
+    "note": "Other studies sharing a model name are separate sources, not a single measured parameter set.",
+    "coverage": {
+      "ocp": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+      "diffusion": "No matched diffusivity values imported.",
+      "kinetics": "No matched intrinsic kinetic values imported.",
+      "full_cell_tests": "External dataset links only; no new full-cell observations packaged."
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
+    ],
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "hnei-ncr18650b-ne-lithiation",
+      "hnei-ncr18650b-ne-delithiation",
+      "hnei-ncr18650b-pe-lithiation",
+      "hnei-ncr18650b-pe-delithiation"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "hnei-ncr18650b-ne-lithiation",
+          "hnei-ncr18650b-ne-delithiation",
+          "hnei-ncr18650b-pe-lithiation",
+          "hnei-ncr18650b-pe-delithiation"
+        ],
+        "source_ids": [
+          "devie-dubarry-2016",
+          "hnei-ncr-2016-data"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched diffusivity values imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched intrinsic kinetic values imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "External dataset links only; no new full-cell observations packaged.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    }
+  },
+  "calb-gen3b-nextbms2026": {
+    "manufacturer": "CALB",
+    "model": null,
+    "display_name": "CALB generation 3b | NEXTBMS2026",
+    "chemistry": "NMC532/graphite",
+    "format": "Source cell format; half-cell and full-cell configurations differ",
+    "nominal_capacity_Ah": null,
+    "identity_level": "study_cell_family",
+    "source_ids": [
+      "nextbms-calb-2026-data"
+    ],
+    "model_context": "Partial electrochemical parameter/source package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Source names this cell/model within one study; full-cell observations stay externally linked and same-specimen mapping remains unresolved.",
+    "note": "Other studies sharing a model name are separate sources, not a single measured parameter set.",
+    "coverage": {
+      "ocp": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+      "diffusion": "No matched diffusivity values imported.",
+      "kinetics": "No matched intrinsic kinetic values imported.",
+      "full_cell_tests": "External dataset links only; no new full-cell observations packaged."
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Commercial part number unresolved",
+      "Matching full-cell charge/discharge observations not imported",
+      "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
+    ],
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "nextbms-calb-negative-charge",
+      "nextbms-calb-negative-discharge",
+      "nextbms-calb-positive-charge",
+      "nextbms-calb-positive-discharge"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "nextbms-calb-negative-charge",
+          "nextbms-calb-negative-discharge",
+          "nextbms-calb-positive-charge",
+          "nextbms-calb-positive-discharge"
+        ],
+        "source_ids": [
+          "nextbms-calb-2026-data"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched diffusivity values imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matched intrinsic kinetic values imported.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "External dataset links only; no new full-cell observations packaged.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    }
+  },
+  "molicel-p45b-aboutenergy2026": {
+    "manufacturer": "Molicel",
+    "model": "INR21700-P45B",
+    "display_name": "Molicel P45B | About:Energy2026 BPX",
+    "chemistry": "NCA/graphite-SiOx",
+    "format": "Source cell format; half-cell and full-cell configurations differ",
+    "nominal_capacity_Ah": null,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "aepy-p45b-2026"
+    ],
+    "model_context": "Partial electrochemical parameter/source package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Source names this cell/model within one study; full-cell observations stay externally linked and same-specimen mapping remains unresolved.",
+    "note": "Other studies sharing a model name are separate sources, not a single measured parameter set.",
+    "coverage": {
+      "ocp": "Published BPX phase-specific fits; original measured half-cell points not located.",
+      "diffusion": "Three phase-specific D inputs and three activation energies in BPX.",
+      "kinetics": "BPX-native reaction coefficients and activation energies; no automatic i0/k conversion.",
+      "full_cell_tests": "External dataset links only; no new full-cell observations packaged."
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "Half-cell measurement temperature and identical donor/full-cell serial mapping unresolved"
+    ],
+    "parameter_ids": [
+      "aepy-p45b-parameterisation-cell-density-kg-m-3",
+      "aepy-p45b-parameterisation-cell-specific-heat-capacity-j-k-1-kg-1",
+      "aepy-p45b-parameterisation-cell-external-surface-area-m2",
+      "aepy-p45b-parameterisation-cell-volume-m3",
+      "aepy-p45b-parameterisation-cell-number-of-electrode-pairs-connected-in-parallel-to-make-a-cell",
+      "aepy-p45b-parameterisation-cell-lower-voltage-cut-off-v",
+      "aepy-p45b-parameterisation-cell-upper-voltage-cut-off-v",
+      "aepy-p45b-parameterisation-cell-nominal-cell-capacity-a-h",
+      "aepy-p45b-parameterisation-cell-reference-temperature-k",
+      "aepy-p45b-parameterisation-cell-electrode-area-m2",
+      "aepy-p45b-parameterisation-negative-electrode-thickness-m",
+      "aepy-p45b-parameterisation-negative-electrode-porosity",
+      "aepy-p45b-parameterisation-negative-electrode-transport-efficiency",
+      "aepy-p45b-parameterisation-negative-electrode-conductivity-s-m-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-concentration-mol-m-3",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-particle-radius-m",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-entropic-change-coefficient-v-k-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-surface-area-per-unit-volume-m-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-minimum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-maximum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-concentration-mol-m-3",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-particle-radius-m",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-ocp-hysteresis-decay-constant",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-entropic-change-coefficient-v-k-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-surface-area-per-unit-volume-m-1",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-minimum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-maximum-stoichiometry",
+      "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+      "aepy-p45b-parameterisation-positive-electrode-thickness-m",
+      "aepy-p45b-parameterisation-positive-electrode-porosity",
+      "aepy-p45b-parameterisation-positive-electrode-transport-efficiency",
+      "aepy-p45b-parameterisation-positive-electrode-conductivity-s-m-1",
+      "aepy-p45b-parameterisation-positive-electrode-maximum-concentration-mol-m-3",
+      "aepy-p45b-parameterisation-positive-electrode-particle-radius-m",
+      "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+      "aepy-p45b-parameterisation-positive-electrode-entropic-change-coefficient-v-k-1",
+      "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+      "aepy-p45b-parameterisation-positive-electrode-surface-area-per-unit-volume-m-1",
+      "aepy-p45b-parameterisation-positive-electrode-minimum-stoichiometry",
+      "aepy-p45b-parameterisation-positive-electrode-maximum-stoichiometry",
+      "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1",
+      "aepy-p45b-parameterisation-separator-thickness-m",
+      "aepy-p45b-parameterisation-separator-porosity",
+      "aepy-p45b-parameterisation-separator-transport-efficiency",
+      "aepy-p45b-state-initial-conditions-initial-electrolyte-concentration-mol-m-3",
+      "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-graphite",
+      "aepy-p45b-state-initial-conditions-initial-hysteresis-state-negative-electrode-silicon-additive",
+      "aepy-p45b-state-initial-conditions-initial-hysteresis-state-positive-electrode",
+      "aepy-p45b-state-initial-conditions-initial-state-of-charge",
+      "aepy-p45b-state-initial-conditions-initial-temperature-k",
+      "aepy-p45b-state-thermal-environment-ambient-temperature-k",
+      "aepy-p45b-state-thermal-environment-heat-transfer-coefficient-w-m-2-k-1"
+    ],
+    "ocp_record_ids": [
+      "aepy-p45b-negative-graphite-ocp-v",
+      "aepy-p45b-negative-silicon-ocp-v",
+      "aepy-p45b-negative-silicon-ocp-delithiation-v",
+      "aepy-p45b-negative-silicon-ocp-lithiation-v",
+      "aepy-p45b-positive-nca-ocp-v"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "aepy-p45b-negative-graphite-ocp-v",
+          "aepy-p45b-negative-silicon-ocp-v",
+          "aepy-p45b-negative-silicon-ocp-delithiation-v",
+          "aepy-p45b-negative-silicon-ocp-lithiation-v",
+          "aepy-p45b-positive-nca-ocp-v"
+        ],
+        "source_ids": [
+          "aepy-p45b-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Published BPX phase-specific fits; original measured half-cell points not located.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+          "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1"
+        ],
+        "source_ids": [
+          "aepy-p45b-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Three phase-specific D inputs and three activation energies in BPX.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+          "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+          "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1"
+        ],
+        "source_ids": [
+          "aepy-p45b-2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "BPX-native reaction coefficients and activation energies; no automatic i0/k conversion.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "External dataset links only; no new full-cell observations packaged.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    }
   }
 }

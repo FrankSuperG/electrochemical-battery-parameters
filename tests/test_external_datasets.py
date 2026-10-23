@@ -87,18 +87,21 @@ def test_ncr18650b_sources_keep_parameter_and_half_cell_matching_limits():
     records = [r for r in catalog.external_datasets if r["id"] in ids]
     assert len(records) == 4
     assert all(r["material_families"] == ["NCA"] for r in records)
-    assert all(r["parameter_link"]["match_level"] == "unmatched" for r in records)
-    assert all(not c["record_ids"] for r in records for c in r["parameter_components"].values())
+    assert all(r["parameter_link"]["cell_ids"] == ["panasonic-ncr18650b-hnei2016"] for r in records)
+    assert all(len(r["parameter_components"]["ocp"]["record_ids"]) == 4 for r in records)
+    assert all(not r["parameter_components"][key]["record_ids"] for r in records for key in ["diffusion", "kinetics"])
     hnei = next(r for r in records if r["id"] == "hnei-ncr18650b-2016")
     half = [f for f in hnei["file_links"] if "/Half cell/" in f["source_path"]]
     assert {f["source_sample_id"] for f in half} == {"NE", "PE"}
-    assert all(f["verification"] == "archive_directory" and f["content_review"] == "not_read" for f in half)
+    assert all(f["verification"] == "archive_directory" and f["content_review"] == "existing_source_audit" for f in half)
     assert hnei["license"]["identifier"] == "CC0-1.0"
     assert hnei["aging_data"]["status"] == "not_reported"
     bayreuth = next(r for r in records if r["id"] == "bayreuth-ncr18650b-2023")
     assert bayreuth["license"]["identifier"] == "not-stated"
     assert len(bayreuth["file_links"]) == 13
-    assert "ocv" in bayreuth["test_types"] and not bayreuth["parameter_components"]["ocp"]["record_ids"]
+    assert "ocv" in bayreuth["test_types"]
+    assert bayreuth["parameter_components"]["ocp"]["match_level"] == "same_model_different_study"
+    assert bayreuth["ocp_anchor"]["kind"] == "cross_study_catalog_half_cell"
 
 
 def test_ncr18650b_discharge_rates_do_not_inherit_other_chemistries():
@@ -141,12 +144,13 @@ def test_aging_filters_keep_source_scope_and_documentation_separate(capsys):
 def test_ocp_first_sources_keep_half_cell_and_temperature_scope():
     catalog = Catalog()
     nextbms = next(r for r in catalog.external_datasets if r["id"] == "nextbms-calb-nmc532-2026")
-    assert nextbms["ocp_anchor"]["kind"] == "external_half_cell_files"
+    assert nextbms["ocp_anchor"]["kind"] == "catalog_half_cell"
     assert len(nextbms["ocp_anchor"]["source_paths"]) == 6
     assert all("2_HalfCell/" in p and "OCPDis_" not in p for p in nextbms["ocp_anchor"]["source_paths"])
     assert not nextbms["ocp_anchor"]["half_cell_temperatures_C"]
     assert nextbms["temperatures_C"] == [0, 5, 25, 45]
-    assert not nextbms["parameter_link"]["cell_ids"]
+    assert nextbms["parameter_link"]["cell_ids"] == ["calb-gen3b-nextbms2026"]
+    assert len(nextbms["parameter_components"]["ocp"]["record_ids"]) == 4
     spectra = [f for f in nextbms["file_links"] if "3_Characterization/" in f["source_path"] and f["test_types"] == ["eis"]]
     assert len(spectra) == 12
     assert {f["temperature_C"] for f in spectra} == {0, 5, 25, 45}
@@ -157,7 +161,8 @@ def test_p45b_measured_fitted_and_reconstructed_curves_stay_distinct():
     catalog = Catalog()
     ae = next(r for r in catalog.external_datasets if r["id"] == "aboutenergy-p45b-2026")
     assert ae["ocp_anchor"]["kind"] == "published_parameterisation"
-    assert not ae["parameter_components"]["ocp"]["record_ids"]
+    assert len(ae["parameter_components"]["ocp"]["record_ids"]) == 5
+    assert ae["parameter_components"]["kinetics"]["quantity_kind"] == "kinetic_coefficient"
     assert {f["temperature_C"] for f in ae["file_links"] if "WLTP" in f["profiles"]} == {10, 25, 40, 60}
     assert {f["temperature_C"] for f in ae["file_links"] if "eVTOL" in f["profiles"]} == {25, 40, 60}
     assert "E_OCV_V" in ae["channels"]["note"]

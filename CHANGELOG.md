@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.12.0 — 2026-10-23
+
+- Added a generated README battery-model index and per-model pages combining OCP, separate diffusion/kinetics CSVs and full-cell source coverage, conditions, matching and missing items. All native packages and external sources remain reachable.
+- Extracted four HNEI NCR18650B low-rate half-cell branches from pinned CC0 MAT members and four NEXTBMS CALB branches from CC BY 4.0 source CSVs. Preserved source coordinates and rows; no equilibrium or absolute-stoichiometry claim.
+- Extracted five About:Energy P45B fitted BPX OCP tables inside configured particle bounds and 60 non-OCP records, preserving composite phases and native kinetic units. Packaged original BPX/BSD notice; placeholder electrolyte zeros and custom-law coefficients remain in source BPX only.
+- Native totals: 72 electrode curves/fits, 457 other parameter records, 16 cell/study entries; existing 61 full-cell files unchanged. New full-cell observations remain external links.
+- Updated source associations and schema 1.4; other NCR18650B studies reference HNEI curves across studies without claiming shared specimens, batches or transferable parameters.
+
 ## 0.11.0 — 2026-10-23
 
 - Screened 21 source families using electrode half-cell OCP as the entry point; added five external sources and 194 locators, reaching sixteen sources / 427 locators without adding observation payloads or numeric curve/parameter records.

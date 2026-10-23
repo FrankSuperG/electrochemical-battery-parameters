@@ -1,0 +1,83 @@
+# Parameter storage and battery-model navigation
+
+[Battery model index](../data/batteries/README.md) · [NCR18650B extraction](NCR18650B.md)
+
+## Storage rule
+
+Reusable **electrode OCP and model parameters are extracted and stored in this
+repository** after source definitions and reuse terms are checked. New
+**full-cell tests remain external links**, with descriptions, test conditions,
+exact file locations, licensing, matching and missing items. Existing packaged
+full-cell files are retained for compatibility. A discovery link alone is not an
+imported parameter record.
+
+## Fixed representations
+
+| Item | Authoritative representation | Download / interpretation |
+|---|---|---|
+| Measured finite-current half-cell branch | `src/ebp/data/curves/*.csv` plus `catalog.json` metadata | Required `x,potential_V`; preserve native capacity, source row and other verified fields. Normalized branch progress is not absolute lithium fraction. |
+| Published fitted OCP table | Same curve CSV/JSON format, explicitly labeled `literature_table` with fitted origin | Retain native nodes and source validity bounds; never label it a new measurement. |
+| Analytical OCP | Expression in `catalog.json`; generated `data/ocp/*-sampled.csv` for convenience | Generated points remain labeled formula samples. |
+| Other scalar or expression parameter | `parameters.json`; generated per-cell and category CSVs | Keep unit, definition, independent variables, conditions, source and origin. |
+| Tabulated model parameter | `src/ebp/data/parameter_tables/*.csv` plus parameter JSON | Preserve source coordinate, missingness, domain and any error bounds. |
+| Large full-cell measurement set | `external_datasets.json`; linked source pages under `data/full-cell/` | Store links and verified metadata. No automatic observation download. |
+
+The generated **battery-model index** places OCP, diffusion, kinetics and full-cell
+links in one row. Every model hub separates source studies and lists CC/rates,
+full-cell temperatures, named/unnamed dynamic tests, ageing, EIS and the parameter
+relationship. Material-only records remain in the OCP material index. A shared
+model name is not a shared batch, specimen or ageing state.
+
+## v0.12 extraction scope
+
+- **NCR18650B / HNEI:** four low-rate NE/PE branches, 11,854 source points. Two
+  original MAT members are retained under CC0. Source columns have no headers;
+  exact current/time charge integration and paper voltage windows corroborate
+  units. PE's source rate denominator 39 differs from the paper's C/40 label.
+  No diffusion or kinetic coefficients are inferred from rate tests.
+- **CALB generation 3b / NEXTBMS:** four C/20 slow-sweep source branches, 11,831
+  retained points. The author README confirms harvested Cell_96 electrodes
+  against lithium and documents the specific-capacity units. Sixteen repeated
+  zero-capacity rows per file are omitted from the interpolation table using
+  the last source occurrence; all original CSV rows remain available. The
+  source naming text is ambiguous about physical directions, so charge/discharge
+  names are preserved and lithiation direction remains unspecified. GITT files
+  do not automatically become intrinsic diffusivity values.
+- **Molicel P45B / About:Energy:** five fitted phase/branch OCP tables, 5,047
+  retained nodes, plus 60 BPX inputs (58 scalars and two entropy tables).
+  Graphite, silicon additive and NCA remain separate. Each OCP keeps only native
+  nodes inside its particle's configured stoichiometry bounds. The original BPX
+  includes extreme endpoint extrapolations and is preserved unchanged; those
+  extrapolations are outside catalog evaluation domains. Six diffusion records
+  mean three D inputs plus three activation energies; the six kinetic records
+  likewise include coefficients and activation energies. BPX coefficients in
+  `mol.m-2.s-1` are not relabeled intrinsic k or A/m2 exchange current.
+
+The complete P45B BPX is retained with the author BSD notice. Its five standard
+electrolyte placeholder zeros are **not** imported as measured zero transport;
+71 user-defined law coefficients stay in the original BPX rather than being
+misrepresented as standalone scalar physical properties. No upstream author
+code is executed. Partial exports are not drop-in complete model inputs.
+
+**Not extracted:** TUM P45B measurement inputs and M50LT third-party OCP remain
+external while reuse scope is unresolved. Other half-cell-only candidate sources
+retain their documented admission gaps. Unknown half-cell temperature is never
+filled from full-cell test setpoints.
+
+## Reproduce and check
+
+`scripts/parameter_source_assets.json` pins original file/member URLs and hashes.
+`scripts/seed_parameter_sources.py` reads packaged half-cell/BPX originals offline.
+It is included in the normal catalog reconstruction, which leaves the manually
+reviewed external-link registry intact. Tests compare each extracted voltage,
+capacity and parameter to original rows or BPX pointers, check coordinate handling
+and confirm that no new full-cell observations are packaged.
+
+Packaged original README files preserve source-relative links unchanged; use the
+project model/source pages for working navigation within this repository.
+
+```bash
+python scripts/seed_parameter_sources.py
+ebp validate
+python scripts/build_data_index.py
+```

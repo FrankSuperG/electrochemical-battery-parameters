@@ -14,6 +14,22 @@ The upstream set names a Kokam model but borrows Dualfoil electrode functions. M
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
+### Diffusion parameters
+
+[2 diffusion records (CSV)](../parameters/kokam-slpb78205130h-marquis2019--diffusion.csv)
+
+Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
+### Kinetics parameters
+
+[2 kinetics records (CSV)](../parameters/kokam-slpb78205130h-marquis2019--kinetics.csv)
+
+Two concentration/temperature exchange-current laws; source area and concentration convention retained
+
+Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
+
 ## OCP curves
 
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |

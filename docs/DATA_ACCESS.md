@@ -1,6 +1,12 @@
 # Find, download and use data
 
-For multi-rate CC/CCCV, dynamic profiles such as US06, and EIS, start with [full-cell tests by material](../data/full-cell/README.md). Seven external dataset links are metadata-only; [the source review](FULL_CELL_DATASETS.md) distinguishes linked datasets from the existing packaged files and documents license/matching gaps.
+Start with the **[battery model index](../data/batteries/README.md)** to find OCP,
+diffusion, kinetics and full-cell tests together. Model pages separate study,
+temperature, dynamic, ageing and EIS coverage. OCP and reusable parameters are
+stored as CSV/JSON; new full-cell observations stay external. Read the
+[fixed formats and extraction rules](PARAMETER_STORAGE.md).
+
+For material-based discovery, use [full-cell tests by material](../data/full-cell/README.md). Sixteen external dataset links are metadata-only; [the source review](FULL_CELL_DATASETS.md) documents license and matching gaps.
 
 Start at **[Browse all data](../data/README.md)**. You can use the GitHub file
 links without installing Python or running a website. If repository access is
@@ -12,7 +18,8 @@ restricted, sign in with an account that has access.
 |---|---|---|
 | Different LFP electrode OCP curves | [LFP OCP index](../data/ocp/README.md#lfp) | Each curve has a CSV and JSON definitions/source record; material-level measurements are not automatically commercial-cell matches |
 | Another material's OCP | [All OCP materials](../data/ocp/README.md) | Separate material, electrode and coordinate labels |
-| Parameters and tests for a particular cell | [Cell index](../data/README.md#choose-a-cell-or-study) | A page with parameter CSV/JSON, OCP links, complete test CSVs, original files, matching evidence and gaps |
+| Parameters and tests for a particular battery | [Battery model index](../data/batteries/README.md) | OCP and category-specific parameter CSVs, existing test files and external full-cell sources, with matching and gaps |
+| Panasonic NCR18650B | [NCR18650B model hub](../data/batteries/panasonic-ncr18650b-hnei2016.md) | Four extracted HNEI half-cell branches plus four full-cell sources for CC, multi-temperature, dynamic, ageing and EIS |
 | A practical same-model/same-study starting case | [LG M50](../data/cells/lg-m50.md) | Two OCP expressions, 38 other inputs and three current/voltage/temperature test files |
 | LFP parameters with a full-cell discharge | [A123 AMP20](../data/cells/a123-amp20m1hd-a.md) | Fitted/derived inputs and one 4C trace; electrode OCP remains missing |
 | LFP CC charge/discharge tests | [A123 9 Ah study family](../data/cells/a123-high-power-pouch-9ah.md) | Ten files at 2/4/6/8/10C; finite diffusion/kinetic inputs and reusable electrode OCP remain missing |

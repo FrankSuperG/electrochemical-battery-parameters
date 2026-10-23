@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "description": "External full-cell dataset links; records describe dataset coverage, not imported files or independent specimens. No payload is fetched by catalog, viewer, export or CI.",
   "records": [
     {
@@ -2645,15 +2645,16 @@
       },
       "review": {
         "checked_on": "2026-10-23",
-        "level": "archive_directory_reviewed",
-        "note": "Zenodo API/export license and file metadata, primary paper and complete ZIP central directory inspected. Three range requests read 20,604 directory bytes; no MAT member extracted. There are 158 MAT files (100 FORM, 56 full-cell RPT, two half-cell RPT), not 158 independent cells."
+        "level": "existing_source_audit",
+        "note": "Zenodo API/export license and file metadata, primary paper and complete ZIP central directory inspected. Three range requests read 20,604 directory bytes; no MAT member extracted. There are 158 MAT files (100 FORM, 56 full-cell RPT, two half-cell RPT), not 158 independent cells. Follow-up: selected half-cell/parameter originals were read, pinned and extracted by scripts/seed_parameter_sources.py. Full-cell observation payloads remain unread and external."
       },
       "parameter_link": {
-        "cell_ids": [],
-        "match_level": "unmatched",
-        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "cell_ids": [
+          "panasonic-ncr18650b-hnei2016"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.",
         "missing_components": [
-          "electrode_ocp",
           "diffusion",
           "kinetics"
         ]
@@ -2699,8 +2700,8 @@
           "temperature_C": null,
           "nominal_rate_C": null,
           "verification": "archive_directory",
-          "content_review": "not_read",
-          "note": "Harvested NE half-cell RPT from the same study as the full-cell tests; finite-current characterization is an electrode OCP lead, not an imported equilibrium OCP. Exact donor serial, columns and branches remain unchecked.",
+          "content_review": "existing_source_audit",
+          "note": "Harvested NE half-cell RPT from the same study as the full-cell tests; finite-current characterization is an electrode OCP lead, not an imported equilibrium OCP. Exact donor serial, columns and branches remain unchecked. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
           "size_bytes": 806973
         },
         {
@@ -2718,8 +2719,8 @@
           "temperature_C": null,
           "nominal_rate_C": null,
           "verification": "archive_directory",
-          "content_review": "not_read",
-          "note": "Harvested PE half-cell RPT from the same study as the full-cell tests; finite-current characterization is an electrode OCP lead, not an imported equilibrium OCP. Exact donor serial, columns and branches remain unchecked.",
+          "content_review": "existing_source_audit",
+          "note": "Harvested PE half-cell RPT from the same study as the full-cell tests; finite-current characterization is an electrode OCP lead, not an imported equilibrium OCP. Exact donor serial, columns and branches remain unchecked. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
           "size_bytes": 708175
         },
         {
@@ -2781,28 +2782,33 @@
         }
       ],
       "missing_items": [
-        "Harvested NE/PE curves are external leads only; equilibrium/pseudo-OCP branches and coordinates are not imported or inspected.",
-        "No independently verified intrinsic diffusion or kinetic-law values or current-catalog parameter association.",
-        "No exact harvested-donor to NCRBxxx serial mapping; other studies share a commercial model only.",
-        "No measured longitudinal ageing series identified; paper degradation emulations are not measured ageing files.",
-        "Raw MAT channels, rate/step mapping, temperature and payload checksums remain unverified."
+        "Absolute lithium-fraction endpoint calibration and identical harvested-donor/full-cell serial mapping unresolved.",
+        "No intrinsic diffusion or kinetic-law parameters extracted.",
+        "Half-cell measurement temperature not independently verified; MAT columns have no headers; units corroborated by charge/current integration and paper voltage windows.",
+        "Positive-electrode MAT denominator 39 differs from paper C/40 label; both retained.",
+        "Full-cell payloads remain external and unread; no longitudinal measured ageing series identified in this record."
       ],
       "inventory_scope": "Parent ZIP and five selected members. The complete persisted directory records 262 entries, including 158 MAT files. This is a locator selection, not all rate branches or specimens.",
       "parameter_components": {
         "ocp": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "Same-study NE and PE half-cell RPT member paths are located and linked alongside full-cell FORM/RPT paths. Their finite-current branches have not been read or imported, so no catalog electrode-OCP association is asserted.",
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "hnei-ncr18650b-ne-lithiation",
+            "hnei-ncr18650b-ne-delithiation",
+            "hnei-ncr18650b-pe-lithiation",
+            "hnei-ncr18650b-pe-delithiation"
+          ],
+          "evidence": "Four finite-current half-cell branches extracted from the pinned same-study originals. Original source units and rows retained; no absolute lithium-fraction mapping inferred.",
           "missing_items": [
-            "MAT branch extraction, reference/coordinate verification and catalog OCP records are missing."
+            "Identical serialized specimen unresolved"
           ]
         },
         "diffusion": {
           "match_level": "missing",
           "quantity_kind": "missing",
           "record_ids": [],
-          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "evidence": "No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient.",
           "missing_items": [
             "No verified current-catalog parameter record for this model and study."
           ]
@@ -2811,7 +2817,7 @@
           "match_level": "missing",
           "quantity_kind": "missing",
           "record_ids": [],
-          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "evidence": "No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient.",
           "missing_items": [
             "No verified current-catalog parameter record for this model and study."
           ]
@@ -2846,7 +2852,7 @@
         "file_paths": []
       },
       "ocp_anchor": {
-        "kind": "external_half_cell_files",
+        "kind": "catalog_half_cell",
         "half_cell_temperatures_C": [],
         "source_paths": [
           "Panasonic_NCR18650B_formation_and_RPT_tests.zip::Upload/Half cell/NE/[01] RPT.mat",
@@ -2855,7 +2861,7 @@
         "source_urls": [
           "https://zenodo.org/records/60232"
         ],
-        "evidence": "Harvested NE/PE finite-current RPT files are linked to same-study full-cell tests. MAT branches, donor serials, reference/coordinates and half-cell temperature remain unverified."
+        "evidence": "Harvested NE/PE finite-current RPT files are linked to same-study full-cell tests. MAT branches, donor serials, reference/coordinates and half-cell temperature remain unverified. Four finite-current branches are now extracted into the native catalog."
       }
     },
     {
@@ -2888,7 +2894,7 @@
           "Z_real_Ohm",
           "Z_imag_Ohm"
         ],
-        "note": "Field names/units are documented on the source page, not verified from CSV/MAT contents. Pseudo-OCV curves are interpolated to 5000 SOC points. EIS: 50% SOC, four-hour rest, 250 mA excitation, 0.01 Hz–10 kHz. Pulses follow two-hour rest. 25 degC is a chamber condition, not a measured temperature trace; no pulse current trace is claimed."
+        "note": "Field names/units are documented on the source page, not verified from CSV/MAT contents. Pseudo-OCV curves are interpolated to 5000 SOC points. EIS: 50% SOC, four-hour rest, 250 mA excitation, 0.01 Hz\u201310 kHz. Pulses follow two-hour rest. 25 degC is a chamber condition, not a measured temperature trace; no pulse current trace is claimed."
       },
       "storage": "external_link",
       "source": {
@@ -2907,11 +2913,12 @@
         "note": "Primary metadata and listed file paths inspected; no experimental file contents read or imported."
       },
       "parameter_link": {
-        "cell_ids": [],
-        "match_level": "unmatched",
-        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "cell_ids": [
+          "panasonic-ncr18650b-hnei2016"
+        ],
+        "match_level": "same_model_different_study",
+        "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established.",
         "missing_components": [
-          "electrode_ocp",
           "diffusion",
           "kinetics"
         ]
@@ -3192,17 +3199,24 @@
         "No stated dataset reuse license identified.",
         "Whole-cell pseudo-OCV is not electrode OCP; no matched intrinsic D or kinetic-law records.",
         "No longitudinal ageing series, US06 or multi-rate continuous charge/discharge sweep reported in the reviewed source.",
-        "Raw matrix dimensions, row identity across companion files and measured temperature/current traces remain unchecked."
+        "Raw matrix dimensions, row identity across companion files and measured temperature/current traces remain unchecked.",
+        "HNEI electrode OCP is a cross-study same-model reference only; no intrinsic diffusion/kinetics or identical specimen is joined."
       ],
       "inventory_scope": "All 13 source-listed files: three MAT containers and ten CSV companions. CSV and MAT are alternative representations, not additional specimens or independent tests.",
       "parameter_components": {
         "ocp": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "match_level": "same_model_different_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "hnei-ncr18650b-ne-lithiation",
+            "hnei-ncr18650b-ne-delithiation",
+            "hnei-ncr18650b-pe-lithiation",
+            "hnei-ncr18650b-pe-delithiation"
+          ],
+          "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established.",
           "missing_items": [
-            "No verified current-catalog parameter record for this model and study."
+            "Same-study half-cell OCP absent",
+            "No cross-study specimen/batch/SoH correspondence"
           ]
         },
         "diffusion": {
@@ -3253,13 +3267,13 @@
         "file_paths": []
       },
       "ocp_anchor": {
-        "kind": "full_cell_ocv_only",
+        "kind": "cross_study_catalog_half_cell",
         "half_cell_temperatures_C": [],
         "source_paths": [],
         "source_urls": [
-          "https://zenodo.org/records/8369275"
+          "https://zenodo.org/records/60232"
         ],
-        "evidence": "The reviewed OCV/pseudo-OCV locators describe the whole cell. No electrode half-cell OCP association is established."
+        "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established. Source whole-cell OCV, when present, remains distinct from electrode OCP."
       }
     },
     {
@@ -3317,11 +3331,12 @@
         "note": "Complete Zenodo file metadata (116 H5 plus one PDF) and author PDF text reviewed; Table 2 and RTP page visually checked. No H5 observations read. Experiment ends at 70% remaining capacity or project end, so not every cell is certified to reach EOL."
       },
       "parameter_link": {
-        "cell_ids": [],
-        "match_level": "unmatched",
-        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "cell_ids": [
+          "panasonic-ncr18650b-hnei2016"
+        ],
+        "match_level": "same_model_different_study",
+        "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established.",
         "missing_components": [
-          "electrode_ocp",
           "diffusion",
           "kinetics"
         ]
@@ -5911,17 +5926,24 @@
         "Table 2 reuses cell IDs 2_013/2_014/2_015 across distinct profile rows (L35/L26 and L205); L221 prints 2_57 rather than the listed 2_057.h5. No authoritative per-cell profile map is imported or silently corrected.",
         "The stopping rule permits project-end censoring; do not label every cell as measured through EOL.",
         "No named US06 or EIS measurement file identified. Pulse resistance is not EIS.",
-        "The other NCR18650B deposits share a commercial model only, not a verified study, batch, state of health or specimen."
+        "The other NCR18650B deposits share a commercial model only, not a verified study, batch, state of health or specimen.",
+        "HNEI electrode OCP is a cross-study same-model reference only; no intrinsic diffusion/kinetics or identical specimen is joined."
       ],
       "inventory_scope": "All 116 external HDF5 cell-file links and the source documentation PDF. One H5 contains multiple tests of one source cell; file count is not a test/cycle count. The 27.1 GB payload remains external.",
       "parameter_components": {
         "ocp": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "match_level": "same_model_different_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "hnei-ncr18650b-ne-lithiation",
+            "hnei-ncr18650b-ne-delithiation",
+            "hnei-ncr18650b-pe-lithiation",
+            "hnei-ncr18650b-pe-delithiation"
+          ],
+          "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established.",
           "missing_items": [
-            "No verified current-catalog parameter record for this model and study."
+            "Same-study half-cell OCP absent",
+            "No cross-study specimen/batch/SoH correspondence"
           ]
         },
         "diffusion": {
@@ -5979,13 +6001,13 @@
         ]
       },
       "ocp_anchor": {
-        "kind": "not_identified",
+        "kind": "cross_study_catalog_half_cell",
         "half_cell_temperatures_C": [],
         "source_paths": [],
         "source_urls": [
-          "https://zenodo.org/records/7896429"
+          "https://zenodo.org/records/60232"
         ],
-        "evidence": "No matched electrode half-cell file was verified for this external source in this review. Whole-cell OCV, EIS or chemistry alone does not supply electrode OCP."
+        "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established. Source whole-cell OCV, when present, remains distinct from electrode OCP."
       }
     },
     {
@@ -6033,11 +6055,12 @@
         "note": "Primary paper, public Mendeley UI and NCA temperature folders inspected. Retained fifteen exact k1 workbook links across five rates and three temperatures. Automated landing-page HTTP access returned 403; normal public UI exposed links. No workbook downloaded."
       },
       "parameter_link": {
-        "cell_ids": [],
-        "match_level": "unmatched",
-        "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+        "cell_ids": [
+          "panasonic-ncr18650b-hnei2016"
+        ],
+        "match_level": "same_model_different_study",
+        "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established.",
         "missing_components": [
-          "electrode_ocp",
           "diffusion",
           "kinetics"
         ]
@@ -6320,20 +6343,26 @@
         }
       ],
       "missing_items": [
-        "No verified current-catalog OCP/D/kinetics association for NCR18650B; other same-model studies are different specimens.",
         "No US06, EIS or longitudinal ageing series reported in the reviewed source.",
         "Only representative k1 links retained; six samples per chemistry in the paper does not certify a complete six-by-five-by-three source matrix.",
-        "Workbook phase boundaries, measured channel units and thermal cutoffs remain unchecked."
+        "Workbook phase boundaries, measured channel units and thermal cutoffs remain unchecked.",
+        "HNEI electrode OCP is a cross-study same-model reference only; no intrinsic diffusion/kinetics or identical specimen is joined."
       ],
       "inventory_scope": "Fifteen selected source-listed NCA k1 workbooks (five rates by three temperatures). This is not a certified six-cell matrix or an import of the LFP/NMC source sections.",
       "parameter_components": {
         "ocp": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.",
+          "match_level": "same_model_different_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "hnei-ncr18650b-ne-lithiation",
+            "hnei-ncr18650b-ne-delithiation",
+            "hnei-ncr18650b-pe-lithiation",
+            "hnei-ncr18650b-pe-delithiation"
+          ],
+          "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established.",
           "missing_items": [
-            "No verified current-catalog parameter record for this model and study."
+            "Same-study half-cell OCP absent",
+            "No cross-study specimen/batch/SoH correspondence"
           ]
         },
         "diffusion": {
@@ -6384,13 +6413,13 @@
         "file_paths": []
       },
       "ocp_anchor": {
-        "kind": "not_identified",
+        "kind": "cross_study_catalog_half_cell",
         "half_cell_temperatures_C": [],
         "source_paths": [],
         "source_urls": [
-          "https://data.mendeley.com/datasets/kxsbr4x3j2/2"
+          "https://zenodo.org/records/60232"
         ],
-        "evidence": "No matched electrode half-cell file was verified for this external source in this review. Whole-cell OCV, EIS or chemistry alone does not supply electrode OCP."
+        "evidence": "Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established. Source whole-cell OCV, when present, remains distinct from electrode OCP."
       }
     },
     {
@@ -6444,15 +6473,16 @@
       },
       "review": {
         "checked_on": "2026-10-23",
-        "level": "archive_directory_reviewed",
-        "note": "Complete 2_HalfCell, 3_Characterization and 4_Ageing 7z directories inspected with py7zr 1.1.0 via bounded HTTP ranges. Only 520/1405/7333 metadata bytes read respectively; no member extracted. Source/documented counts and directory counts are kept separate."
+        "level": "existing_source_audit",
+        "note": "Complete 2_HalfCell, 3_Characterization and 4_Ageing 7z directories inspected with py7zr 1.1.0 via bounded HTTP ranges. Only 520/1405/7333 metadata bytes read respectively; no member extracted. Source/documented counts and directory counts are kept separate. Follow-up: selected half-cell/parameter originals were read, pinned and extracted by scripts/seed_parameter_sources.py. Full-cell observation payloads remain unread and external."
       },
       "parameter_link": {
-        "cell_ids": [],
-        "match_level": "unmatched",
-        "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+        "cell_ids": [
+          "calb-gen3b-nextbms2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.",
         "missing_components": [
-          "electrode_ocp",
           "diffusion",
           "kinetics"
         ]
@@ -6494,8 +6524,8 @@
           "temperature_C": null,
           "nominal_rate_C": null,
           "verification": "archive_directory",
-          "content_review": "not_read",
-          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
           "size_bytes": 46164
         },
         {
@@ -6511,8 +6541,8 @@
           "temperature_C": null,
           "nominal_rate_C": null,
           "verification": "archive_directory",
-          "content_review": "not_read",
-          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
           "size_bytes": 46273
         },
         {
@@ -6545,8 +6575,8 @@
           "temperature_C": null,
           "nominal_rate_C": null,
           "verification": "archive_directory",
-          "content_review": "not_read",
-          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
           "size_bytes": 56626
         },
         {
@@ -6562,8 +6592,8 @@
           "temperature_C": null,
           "nominal_rate_C": null,
           "verification": "archive_directory",
-          "content_review": "not_read",
-          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read.",
+          "content_review": "existing_source_audit",
+          "note": "Harvested half-cell slow cycle/GITT source. This is electrode evidence, not a full-cell test; numerical branches, reference, coordinates and temperature have not been independently read. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
           "size_bytes": 56016
         },
         {
@@ -7897,28 +7927,33 @@
         }
       ],
       "missing_items": [
-        "No current-catalog OCP/D/kinetics records for this cell/study; GITT paths do not themselves supply audited intrinsic D.",
-        "Half-cell temperatures, reference/coordinate definitions, raw columns and specimen-donor mapping beyond source labels remain unchecked.",
         "Source prose lists 22/13/17 ageing-EIS cells at BoL/MoL/EoL; the archive has 25/16/20 impedance CSV names. The extra labels are not characterization Cell_4/6/15. No silent reconciliation or completeness claim.",
         "OCPDis_Cell_*.csv in cyclic ageing are whole-cell checkup extracts, not harvested-electrode OCP.",
-        "No US06 name or complete multi-rate charge/discharge matrix verified. Gen3b is not equated to an existing CALB model by nominal capacity."
+        "No US06 name or complete multi-rate charge/discharge matrix verified. Gen3b is not equated to an existing CALB model by nominal capacity.",
+        "Four slow-sweep half-cell branches imported; GITT rest-endpoint extraction and intrinsic D/kinetics remain absent.",
+        "Half-cell reference versus lithium is established by packaged README; absolute stoichiometry, half-cell temperature and donor-to-characterization serial identity remain unresolved."
       ],
       "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
       "parameter_components": {
         "ocp": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "Six harvested graphite/NMC532 slow-cycle and GITT CSV members are located from donor Cell_96. Same study and model as full-cell characterization/ageing, different specimens. Half-cell temperature and numerical OCP extraction remain unverified.",
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "nextbms-calb-negative-charge",
+            "nextbms-calb-negative-discharge",
+            "nextbms-calb-positive-charge",
+            "nextbms-calb-positive-discharge"
+          ],
+          "evidence": "Four finite-current half-cell branches extracted from the pinned same-study originals. Original source units and rows retained; no absolute lithium-fraction mapping inferred.",
           "missing_items": [
-            "No verified current-catalog record for this component and study."
+            "Identical serialized specimen unresolved"
           ]
         },
         "diffusion": {
           "match_level": "missing",
           "quantity_kind": "missing",
           "record_ids": [],
-          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "evidence": "No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient.",
           "missing_items": [
             "No verified current-catalog record for this component and study."
           ]
@@ -7927,7 +7962,7 @@
           "match_level": "missing",
           "quantity_kind": "missing",
           "record_ids": [],
-          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "evidence": "No intrinsic diffusion or kinetic coefficient transcribed from this study; GITT/rate capability alone does not uniquely identify a coefficient.",
           "missing_items": [
             "No verified current-catalog record for this component and study."
           ]
@@ -7965,7 +8000,7 @@
         ]
       },
       "ocp_anchor": {
-        "kind": "external_half_cell_files",
+        "kind": "catalog_half_cell",
         "half_cell_temperatures_C": [],
         "source_paths": [
           "2_HalfCell.7z::2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
@@ -7979,7 +8014,7 @@
           "https://zenodo.org/records/22301764",
           "https://zenodo.org/api/records/22301764"
         ],
-        "evidence": "Six harvested graphite/NMC532 slow-cycle and GITT CSV members are located from donor Cell_96. Same study and model as full-cell characterization/ageing, different specimens. Half-cell temperature and numerical OCP extraction remain unverified."
+        "evidence": "Six harvested graphite/NMC532 slow-cycle and GITT CSV members are located from donor Cell_96. Same study and model as full-cell characterization/ageing, different specimens. Half-cell temperature and numerical OCP extraction remain unverified. Four finite-current branches are now extracted into the native catalog."
       },
       "catalog_evidence_paths": [
         "evidence/ocp-first-expansion-review.json"
@@ -8032,18 +8067,16 @@
       },
       "review": {
         "checked_on": "2026-10-23",
-        "level": "archive_directory_reviewed",
-        "note": "All 51 ZIP member names/sizes, release metadata, README and two-page format PDF reviewed; BPX header/structure inspected. No observation CSV read. Published model parameters and measured/raw data are not merged."
+        "level": "existing_source_audit",
+        "note": "All 51 ZIP member names/sizes, release metadata, README and two-page format PDF reviewed; BPX header/structure inspected. No observation CSV read. Published model parameters and measured/raw data are not merged. Follow-up: selected half-cell/parameter originals were read, pinned and extracted by scripts/seed_parameter_sources.py. Full-cell observation payloads remain unread and external."
       },
       "parameter_link": {
-        "cell_ids": [],
-        "match_level": "unmatched",
-        "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
-        "missing_components": [
-          "electrode_ocp",
-          "diffusion",
-          "kinetics"
-        ]
+        "cell_ids": [
+          "molicel-p45b-aboutenergy2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.",
+        "missing_components": []
       },
       "evidence_urls": [
         "https://zenodo.org/records/19052626",
@@ -9067,8 +9100,8 @@
           "temperature_C": null,
           "nominal_rate_C": null,
           "verification": "source_listing",
-          "content_review": "parameter_metadata_reviewed",
-          "note": "Published BPX 1.1 DFN parameter package with graphite/silicon-additive particle branches, cathode OCP, diffusion and kinetic entries. Fitted/tuned parameterisation, not independently measured pure-silicon OCP or a native E-BatP import. Structure/header inspected; numerical arrays/units not audited. BSD-3-Clause author repository.",
+          "content_review": "existing_source_audit",
+          "note": "Published BPX 1.1 DFN parameter package with graphite/silicon-additive particle branches, cathode OCP, diffusion and kinetic entries. Fitted/tuned parameterisation, not independently measured pure-silicon OCP or a native E-BatP import. Structure/header inspected; numerical arrays/units not audited. BSD-3-Clause author repository. Selected OCP/parameter values are now retained in native records with pinned original-source evidence.",
           "size_bytes": 313809
         },
         {
@@ -9107,38 +9140,61 @@
         }
       ],
       "missing_items": [
-        "No native catalog OCP/D/kinetics records for P45B; BPX arrays and parameter origins/units remain externally reviewable leads.",
         "Original harvested half-cell observations and their temperature not independently located; composite/silicon fitted OCP is not a measured pure-material curve.",
         "No eVTOL at 10 degC in the checked ZIP, no US06/EIS or longitudinal ageing source in this release.",
-        "No independent-cell count from 51 files; measured/model columns and alternate model cases must remain separate."
+        "No independent-cell count from 51 files; measured/model columns and alternate model cases must remain separate.",
+        "Five OCP fits and 60 non-OCP BPX inputs imported; source electrolyte placeholder zeros and 71 custom-law coefficients remain in original BPX only.",
+        "OCP export retains only native nodes within source particle bounds; extreme endpoint extrapolations remain in original BPX, not catalog evaluation domain.",
+        "BPX-native molar reaction coefficients retain source units; no conversion to intrinsic k or exchange-current density law is inferred."
       ],
       "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
       "parameter_components": {
         "ocp": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "Published composite/fitted BPX electrode OCPs are linked externally. The authors explicitly connect this DFN set to the released full-cell tests. This review does not establish access to the original harvested half-cell observation points or independently validate the fitted curves.",
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "aepy-p45b-negative-graphite-ocp-v",
+            "aepy-p45b-negative-silicon-ocp-v",
+            "aepy-p45b-negative-silicon-ocp-delithiation-v",
+            "aepy-p45b-negative-silicon-ocp-lithiation-v",
+            "aepy-p45b-positive-nca-ocp-v"
+          ],
+          "evidence": "Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements.",
           "missing_items": [
-            "No verified current-catalog record for this component and study."
+            "Identical half-cell/full-cell serialized specimen unresolved",
+            "Original raw half-cell points not located"
           ]
         },
         "diffusion": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "match_level": "same_model_same_study",
+          "quantity_kind": "model_diffusivity",
+          "record_ids": [
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-diffusivity-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-diffusivity-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-positive-electrode-diffusivity-m2-s-1",
+            "aepy-p45b-parameterisation-positive-electrode-diffusivity-activation-energy-j-mol-1"
+          ],
+          "evidence": "Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements.",
           "missing_items": [
-            "No verified current-catalog record for this component and study."
+            "Identical serialized specimen unresolved"
           ]
         },
         "kinetics": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "match_level": "same_model_same_study",
+          "quantity_kind": "kinetic_coefficient",
+          "record_ids": [
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-graphite-reaction-rate-constant-mol-m-2-s-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-negative-electrode-particle-silicon-additive-reaction-rate-constant-mol-m-2-s-1",
+            "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
+            "aepy-p45b-parameterisation-positive-electrode-reaction-rate-constant-mol-m-2-s-1"
+          ],
+          "evidence": "Extracted native records preserve source coordinates, units, particle definitions and row/node provenance; full-cell observations remain external. Published BPX fits/inputs are not independent measurements.",
           "missing_items": [
-            "No verified current-catalog record for this component and study."
+            "Identical serialized specimen unresolved"
           ]
         }
       },
@@ -9177,7 +9233,7 @@
           "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/examples/params/Molicel_P45B_bpx.json",
           "https://www.aboutenergy.io/post/molicel-p45b-electrochemical-model-open-source-dfn-parameter-set"
         ],
-        "evidence": "Published composite/fitted BPX electrode OCPs are linked externally. The authors explicitly connect this DFN set to the released full-cell tests. This review does not establish access to the original harvested half-cell observation points or independently validate the fitted curves."
+        "evidence": "Published composite/fitted BPX electrode OCPs are linked externally. The authors explicitly connect this DFN set to the released full-cell tests. This review does not establish access to the original harvested half-cell observation points or independently validate the fitted curves. Five fitted phase/branch OCP tables are now extracted inside source particle bounds; the original BPX and 60 non-OCP inputs are retained."
       },
       "catalog_evidence_paths": [
         "evidence/ocp-first-expansion-review.json"
@@ -9464,7 +9520,7 @@
       "material_families": [
         "NMC"
       ],
-      "cell_identity": "LG M50 21700 NMC811/graphite-SiOx. Author TEC2021 paper explicitly reuses Chen2020 electrode OCP; cells labelled 781–796 are not joined to Chen2020 specimen serials.",
+      "cell_identity": "LG M50 21700 NMC811/graphite-SiOx. Author TEC2021 paper explicitly reuses Chen2020 electrode OCP; cells labelled 781\u2013796 are not joined to Chen2020 specimen serials.",
       "test_types": [
         "constant_current"
       ],

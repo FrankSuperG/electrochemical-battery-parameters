@@ -4,7 +4,7 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.11.0-287b78" alt="Version 0.11.0">
+  <img src="https://img.shields.io/badge/version-0.12.0-287b78" alt="Version 0.12.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
@@ -15,7 +15,7 @@ Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-curr
 
 **Project scope:** curate, document and export electrochemical parameters and associated experimental data. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
-**v0.11.0: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+**v0.12.0: 72 electrode-curve records · 13 material labels · 457 other parameter records · 61 full-cell branch/test files · 16 cell or study entries.** Curves comprise 48 measured pseudo-OCP branches, 7 published tables/fits, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
 File-level follow-up: **[OCP-first search: 21 source families and five additions](docs/OCP_FIRST_EXPANSION.md)** · [Panasonic NCR18650B: four sources, tests and ageing](docs/NCR18650B.md) · [original seven-source review](docs/EXTERNAL_FILE_REVIEW.md) · [selected file/container locations](data/full-cell/files.csv). Source-listed filenames, archive-directory evidence and reviewed contents remain separate. OCP, diffusion and kinetics associations are recorded independently.
 
@@ -27,31 +27,77 @@ Earlier matched study: [LG M50LT / Hallemans2025](data/cells/lg-m50lt-hallemans2
 
 New LFP packages: [ISU-UConn laboratory half/full-cells](data/cells/isu-uconn-lfp-graphite-lab.md) and [A123 18650M1A / Jahn2024](data/cells/a123-18650m1a-jahn2024.md). Read the [selection, matching and missing-channel notes](docs/LFP_STUDIES.md), including ISU's unresolved reference details and A123's modeled OCPn representation.
 
-## Get the data
+## Battery model index
 
-**[Browse all data](data/README.md) · [OCP by material](data/ocp/README.md) · [Full-cell tests by material](data/full-cell/README.md) · [How to download and use](docs/DATA_ACCESS.md)**
+**[Browse by battery model](data/batteries/README.md) · [Browse all data](data/README.md) · [OCP by material](data/ocp/README.md) · [Full-cell tests by material](data/full-cell/README.md) · [How to download and use](docs/DATA_ACCESS.md)**
 
-No installation is needed to browse or download files from GitHub. Choose a cell below, then click its CSV or JSON links. For LFP and other material-level OCP measurements, use the **OCP by material** index. On a file page, use **Raw / download raw file** to save the complete file; keep its metadata and license. See the [download guide](docs/DATA_ACCESS.md) for examples.
+**Storage rule:** extract reusable OCP and model parameters into source-traceable CSV/JSON records in this repository; retain new full-cell tests as descriptions and external download links. Permission or definition gaps remain explicit. Existing packaged full-cell tests are retained. [Fixed formats and extraction scope](docs/PARAMETER_STORAGE.md).
+
+No installation is needed to browse or download files from GitHub. Choose a battery below: OCP and category-specific diffusion/kinetics links open repository data; full-cell links open per-source conditions and file locations. For LFP and other material-level OCP measurements, use the **OCP by material** index. On a file page, use **Raw / download raw file** to save the complete file; keep its metadata and license. See the [download guide](docs/DATA_ACCESS.md) for examples.
 
 <!-- DATA_QUICKLINKS_START -->
 
-| Cell / study entry | OCP | Other parameters | Full-cell tests | Match level |
-|---|---|---|---|---|
-| [LG M50 &#124; 5 Ah NMC811/graphite-SiOx](data/cells/lg-m50.md) | [2 records](data/cells/lg-m50.md#ocp-curves) | [38 records](data/cells/lg-m50.md#parameters) | [3 files](data/cells/lg-m50.md#full-cell-tests) | `same_model_same_study` |
-| [Undisclosed LFP/graphite 18650, 2 Ah (BPX)](data/cells/bpx-lfp-18650-2ah-undisclosed.md) | [2 records](data/cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [46 records](data/cells/bpx-lfp-18650-2ah-undisclosed.md#parameters) | Not imported | `unmatched` |
-| [A123 AMP20M1HD-A &#124; 20 Ah LFP pouch](data/cells/a123-amp20m1hd-a.md) | Not linked | [30 records](data/cells/a123-amp20m1hd-a.md#parameters) | [1 file](data/cells/a123-amp20m1hd-a.md#full-cell-tests) | `same_model_same_study` |
-| [A123 high-power LFP pouch &#124; 9 Ah &#124; part undisclosed](data/cells/a123-high-power-pouch-9ah.md) | Not linked | Not imported | [10 files](data/cells/a123-high-power-pouch-9ah.md#full-cell-tests) | `same_study_cell_family` |
-| [SLPB78205130H &#124; LCO/graphite &#124; 0.680616 Ah model input](data/cells/kokam-slpb78205130h-marquis2019.md) | [2 records](data/cells/kokam-slpb78205130h-marquis2019.md#ocp-curves) | [38 records](data/cells/kokam-slpb78205130h-marquis2019.md#parameters) | Not imported | `parameter_set_only` |
-| [UMBL Mohtat2020 &#124; 5 Ah NMC/graphite research pouch](data/cells/mohtat2020-nmc532-pouch.md) | [4 records](data/cells/mohtat2020-nmc532-pouch.md#ocp-curves) | [71 records](data/cells/mohtat2020-nmc532-pouch.md#parameters) | [5 files](data/cells/mohtat2020-nmc532-pouch.md#full-cell-tests) | `same_study_cell_family` |
-| [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](data/cells/kim2011-nca-nominal-design.md) | [2 records](data/cells/kim2011-nca-nominal-design.md#ocp-curves) | [38 records](data/cells/kim2011-nca-nominal-design.md#parameters) | Not imported | `unmatched` |
-| [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](data/cells/kokam-slpb75106100-ecker2015.md) | [2 records](data/cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [38 records](data/cells/kokam-slpb75106100-ecker2015.md#parameters) | [2 files](data/cells/kokam-slpb75106100-ecker2015.md#full-cell-tests) | `same_model_same_study` |
-| [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](data/cells/enertech-lco-pouch-ai2020.md) | [2 records](data/cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [38 records](data/cells/enertech-lco-pouch-ai2020.md#parameters) | [4 files](data/cells/enertech-lco-pouch-ai2020.md#full-cell-tests) | `same_study_cell_family` |
-| [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](data/cells/isu-uconn-lfp-graphite-lab.md) | [4 records](data/cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not imported | [21 files](data/cells/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | `same_study_cell_family` |
-| [A123 18650M1A &#124; Jahn2024 LFP/graphite](data/cells/a123-18650m1a-jahn2024.md) | [2 records](data/cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not imported | [14 files](data/cells/a123-18650m1a-jahn2024.md#full-cell-tests) | `same_model_same_study` |
-| [LG M50LT &#124; Hallemans2025 grouped SPMe](data/cells/lg-m50lt-hallemans2025.md) | Not linked | [18 records](data/cells/lg-m50lt-hallemans2025.md#parameters) | [1 file](data/cells/lg-m50lt-hallemans2025.md#full-cell-tests) | `same_model_same_study` |
-| [LG MJ1 &#124; DLR-SINTEF harvested-electrode characterization](data/cells/lg-mj1-dlr-sintef.md) | [4 records](data/cells/lg-mj1-dlr-sintef.md#ocp-curves) | [42 records](data/cells/lg-mj1-dlr-sintef.md#parameters) | Not imported | `same_model_same_study` |
+OCP and parameter links open repository data. Full-cell links open source descriptions and downloads. **Not extracted** means no reusable native record is curated; it is not a claim that no measurement exists.
+
+Coverage labels below are source-level discovery aids. Read each model page for study, temperature, profile, licence and specimen limits. Half-cell temperature is tracked separately.
+
+### LFP
+
+| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
+|---|---|---|---|---|---|
+| [A123 18650M1A &#124; Jahn2024 LFP/graphite](data/batteries/a123-18650m1a-jahn2024.md) | [2 modeled OCPn](data/cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not extracted | Not extracted | [14 packaged](data/batteries/a123-18650m1a-jahn2024.md#full-cell-tests) | See test conditions / gaps<br>same model same study · [Match / gaps](data/batteries/a123-18650m1a-jahn2024.md#matching-and-gaps) |
+| [A123 26650 m1b / UCCS](data/batteries/uccs-a123-26650m1b-2021.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/uccs-a123-26650m1b-2021.md#full-cell-tests) | multi-T, dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/uccs-a123-26650m1b-2021.md#matching-and-gaps) |
+| [A123 AMP20M1HD-A &#124; 20 Ah LFP pouch](data/batteries/a123-amp20m1hd-a.md) | Not extracted | [6 records](data/parameters/a123-amp20m1hd-a--diffusion.csv) | [6 records](data/parameters/a123-amp20m1hd-a--kinetics.csv) | [1 packaged](data/batteries/a123-amp20m1hd-a.md#full-cell-tests) | See test conditions / gaps<br>same model same study · [Match / gaps](data/batteries/a123-amp20m1hd-a.md#matching-and-gaps) |
+| [A123 cylindrical LFP / part unresolved](data/batteries/calce-a123-dynamic.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/calce-a123-dynamic.md#full-cell-tests) | multi-T, dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/calce-a123-dynamic.md#matching-and-gaps) |
+| [A123 high-power LFP pouch &#124; 9 Ah &#124; part undisclosed](data/batteries/a123-high-power-pouch-9ah.md) | Not extracted | Not extracted | Not extracted | [10 packaged](data/batteries/a123-high-power-pouch-9ah.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/a123-high-power-pouch-9ah.md#matching-and-gaps) |
+| [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](data/batteries/isu-uconn-lfp-graphite-lab.md) | [4 pseudo-OCP](data/cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not extracted | Not extracted | [21 packaged](data/batteries/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/isu-uconn-lfp-graphite-lab.md#matching-and-gaps) |
+| [LFP IFR14500 labels / manufacturer unresolved](data/batteries/milano-lfp-eis-2023.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/milano-lfp-eis-2023.md#full-cell-tests) | EIS<br>Parameters unmatched · [Match / gaps](data/batteries/milano-lfp-eis-2023.md#matching-and-gaps) |
+| [Undisclosed LFP/graphite 18650, 2 Ah (BPX)](data/batteries/bpx-lfp-18650-2ah-undisclosed.md) | [2 expressions](data/cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [5 records](data/parameters/bpx-lfp-18650-2ah-undisclosed--diffusion.csv) | [4 records](data/parameters/bpx-lfp-18650-2ah-undisclosed--kinetics.csv) | [Not linked](data/batteries/bpx-lfp-18650-2ah-undisclosed.md#full-cell-tests) | See test conditions / gaps<br>unmatched · [Match / gaps](data/batteries/bpx-lfp-18650-2ah-undisclosed.md#matching-and-gaps) |
+
+### NMC
+
+| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
+|---|---|---|---|---|---|
+| [CALB generation 3b &#124; NEXTBMS2026](data/batteries/calb-gen3b-nextbms2026.md) | [4 pseudo-OCP](data/cells/calb-gen3b-nextbms2026.md#ocp-curves) | Not extracted | Not extracted | [1 external source](data/batteries/calb-gen3b-nextbms2026.md#full-cell-tests) | multi-T, dynamic, ageing, EIS<br>same model same study · [Match / gaps](data/batteries/calb-gen3b-nextbms2026.md#matching-and-gaps) |
+| [CALB L148N58A](data/batteries/calb-l148n58a-2025.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/calb-l148n58a-2025.md#full-cell-tests) | multi-T, dynamic, EIS<br>Parameters unmatched · [Match / gaps](data/batteries/calb-l148n58a-2025.md#matching-and-gaps) |
+| [LG M50 &#124; 5 Ah NMC811/graphite-SiOx](data/batteries/lg-m50.md) | [2 expressions](data/cells/lg-m50.md#ocp-curves) | [2 records](data/parameters/lg-m50--diffusion.csv) | [2 records](data/parameters/lg-m50--kinetics.csv) | [3 packaged + 1 external source](data/batteries/lg-m50.md#full-cell-tests) | multi-T<br>Cross-study / mixed sources · [Match / gaps](data/batteries/lg-m50.md#matching-and-gaps) |
+| [LG M50LT &#124; Hallemans2025 grouped SPMe](data/batteries/lg-m50lt-hallemans2025.md) | [Reuse unresolved](data/cells/lg-m50lt-hallemans2025.md#ocp-curves) | [2 records (groups)](data/parameters/lg-m50lt-hallemans2025--diffusion.csv) | [4 records (groups)](data/parameters/lg-m50lt-hallemans2025--kinetics.csv) | [1 packaged + 1 external source](data/batteries/lg-m50lt-hallemans2025.md#full-cell-tests) | dynamic, EIS<br>same model same study · [Match / gaps](data/batteries/lg-m50lt-hallemans2025.md#matching-and-gaps) |
+| [LG MJ1 &#124; DLR-SINTEF harvested-electrode characterization](data/batteries/lg-mj1-dlr-sintef.md) | [4 pseudo-OCP](data/cells/lg-mj1-dlr-sintef.md#ocp-curves) | [18 records](data/parameters/lg-mj1-dlr-sintef--diffusion.csv) | [6 records](data/parameters/lg-mj1-dlr-sintef--kinetics.csv) | [1 external source](data/batteries/lg-mj1-dlr-sintef.md#full-cell-tests) | dynamic, ageing<br>Cross-study / mixed sources · [Match / gaps](data/batteries/lg-mj1-dlr-sintef.md#matching-and-gaps) |
+| [Samsung INR18650-20R / CALCE](data/batteries/calce-samsung-20r-dynamic.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/calce-samsung-20r-dynamic.md#full-cell-tests) | multi-T, dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/calce-samsung-20r-dynamic.md#matching-and-gaps) |
+| [UMBL Mohtat2020 &#124; 5 Ah NMC/graphite research pouch](data/batteries/mohtat2020-nmc532-pouch.md) | [4 expressions](data/cells/mohtat2020-nmc532-pouch.md#ocp-curves) | [4 records](data/parameters/mohtat2020-nmc532-pouch--diffusion.csv) | [4 records](data/parameters/mohtat2020-nmc532-pouch--kinetics.csv) | [5 packaged](data/batteries/mohtat2020-nmc532-pouch.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/mohtat2020-nmc532-pouch.md#matching-and-gaps) |
+
+### NCA
+
+| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
+|---|---|---|---|---|---|
+| [Panasonic NCR18650B &#124; HNEI2016](data/batteries/panasonic-ncr18650b-hnei2016.md) | [4 pseudo-OCP](data/cells/panasonic-ncr18650b-hnei2016.md#ocp-curves) | Not extracted | Not extracted | [4 external sources](data/batteries/panasonic-ncr18650b-hnei2016.md#full-cell-tests) | multi-T, dynamic, ageing, EIS<br>Cross-study / mixed sources · [Match / gaps](data/batteries/panasonic-ncr18650b-hnei2016.md#matching-and-gaps) |
+| [Molicel P45B &#124; About:Energy2026 BPX](data/batteries/molicel-p45b-aboutenergy2026.md) | [5 tables / fits](data/cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [6 records](data/parameters/molicel-p45b-aboutenergy2026--diffusion.csv) | [6 records](data/parameters/molicel-p45b-aboutenergy2026--kinetics.csv) | [2 external sources](data/batteries/molicel-p45b-aboutenergy2026.md#full-cell-tests) | multi-T, dynamic, ageing<br>Cross-study / mixed sources · [Match / gaps](data/batteries/molicel-p45b-aboutenergy2026.md#matching-and-gaps) |
+| [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](data/batteries/kim2011-nca-nominal-design.md) | [2 expressions](data/cells/kim2011-nca-nominal-design.md#ocp-curves) | [2 records](data/parameters/kim2011-nca-nominal-design--diffusion.csv) | [2 records](data/parameters/kim2011-nca-nominal-design--kinetics.csv) | [Not linked](data/batteries/kim2011-nca-nominal-design.md#full-cell-tests) | See test conditions / gaps<br>unmatched · [Match / gaps](data/batteries/kim2011-nca-nominal-design.md#matching-and-gaps) |
+
+### LCO
+
+| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
+|---|---|---|---|---|---|
+| [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](data/batteries/enertech-lco-pouch-ai2020.md) | [2 tables / fits](data/cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [2 records](data/parameters/enertech-lco-pouch-ai2020--diffusion.csv) | [2 records](data/parameters/enertech-lco-pouch-ai2020--kinetics.csv) | [4 packaged](data/batteries/enertech-lco-pouch-ai2020.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/enertech-lco-pouch-ai2020.md#matching-and-gaps) |
+| [SLPB78205130H &#124; LCO/graphite &#124; 0.680616 Ah model input](data/batteries/kokam-slpb78205130h-marquis2019.md) | [2 expressions](data/cells/kokam-slpb78205130h-marquis2019.md#ocp-curves) | [2 records](data/parameters/kokam-slpb78205130h-marquis2019--diffusion.csv) | [2 records](data/parameters/kokam-slpb78205130h-marquis2019--kinetics.csv) | [Not linked](data/batteries/kokam-slpb78205130h-marquis2019.md#full-cell-tests) | See test conditions / gaps<br>parameter set only · [Match / gaps](data/batteries/kokam-slpb78205130h-marquis2019.md#matching-and-gaps) |
+
+### NCO
+
+| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
+|---|---|---|---|---|---|
+| [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](data/batteries/kokam-slpb75106100-ecker2015.md) | [2 expressions](data/cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [2 records](data/parameters/kokam-slpb75106100-ecker2015--diffusion.csv) | [2 records](data/parameters/kokam-slpb75106100-ecker2015--kinetics.csv) | [2 packaged](data/batteries/kokam-slpb75106100-ecker2015.md#full-cell-tests) | See test conditions / gaps<br>same model same study · [Match / gaps](data/batteries/kokam-slpb75106100-ecker2015.md#matching-and-gaps) |
+
+### LFP/NMC/NCA
+
+| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
+|---|---|---|---|---|---|
+| [Malaya three-model archive / per-model files unverified](data/batteries/malaya-three-chemistries-2022.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/malaya-three-chemistries-2022.md#full-cell-tests) | dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/malaya-three-chemistries-2022.md#matching-and-gaps) |
+
+Material-only curves without a verified battery model remain in [the OCP material index](data/ocp/README.md); no commercial-cell assignment is inferred.
 
 <!-- DATA_QUICKLINKS_END -->
+
+NCR18650B includes four extracted HNEI half-cell branches and four full-cell sources; [read the extraction notes](docs/NCR18650B.md). P45B includes native BPX fits/parameters; the separate TUM half-cell reuse scope remains unresolved.
 
 Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaMM parameter variants; choose one. Generated formula samples are labeled and are not measurements.
 
@@ -65,15 +111,17 @@ Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaM
 | Material family | Measured branches | Published tables | Expressions | Modeled OCPn | Identity / interpretation |
 |---|---:|---:|---:|---:|---|
 | LFP | 6 | 0 | 2 | 1 | SINTEF and ISU laboratory electrodes; A123 PD-ECM model; Afshar and BPX expressions |
-| Graphite | 6 | 1 | 7 | 1 | Distinct measured, modeled, figure-fitted and borrowed inputs; reference/coordinate labels retained |
+| Graphite | 10 | 2 | 7 | 1 | Distinct measured, modeled, figure-fitted and borrowed inputs; reference/coordinate labels retained |
 | NMC111 | 4 | 0 | 0 | 0 | SINTEF specimens; commercial full-cell identity unresolved |
-| NMC532 | 4 | 0 | 2 | 0 | SINTEF electrodes and Mohtat pouch remain separate sources |
+| NMC532 | 6 | 0 | 2 | 0 | SINTEF electrodes, NEXTBMS harvested CALB and Mohtat pouch remain separate sources |
 | NMC811 | 0 | 0 | 1 | 0 | LG M50 positive OCP linked to Chen2020 tests |
+| NMC (MJ1 source label) | 2 | 0 | 0 | 0 | DLR-SINTEF MJ1 positive half-cell branches |
+| Graphite-SiOx | 2 | 0 | 0 | 0 | DLR-SINTEF MJ1 negative half-cell branches |
 | LNMO | 4 | 0 | 0 | 0 | High-voltage spinel specimens; distinct from LMO |
-| Silicon | 4 | 0 | 0 | 0 | Si-AQ-1 laboratory specimens |
+| Silicon | 4 | 3 | 0 | 0 | Si-AQ-1 laboratory specimens plus three P45B fitted silicon branches |
 | Silicon–graphite | 8 | 0 | 0 | 0 | SiGr-AQ-1 and SiGr-AQ-2 formulations retained separately |
 | LCO | 0 | 1 | 1 | 0 | Enertech published table; separate borrowed Marquis/Dualfoil expression |
-| NCA | 0 | 0 | 1 | 0 | Kim2011 nominal design; no commercial-model match |
+| NCA | 2 | 1 | 1 | 0 | HNEI NCR18650B branches; About:Energy P45B fitted input; separate Kim2011 nominal design |
 | NCO | 0 | 0 | 1 | 0 | Ecker/Kokam upstream label; no NMC/NCA composition ratio inferred |
 
 LMO and LTO are deferred until a reusable source and its definitions can be verified; LNMO is not relabeled as LMO. All measured branches retain their own direction and relative-throughput coordinate. Formula domains describe numerical evaluation and do not establish experimental fit validity.

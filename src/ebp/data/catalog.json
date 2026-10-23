@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "release": "0.11.0",
+  "release": "0.12.0",
   "records": [
     {
       "id": "lfp-afshar2017-formula",
@@ -4827,6 +4827,1071 @@
         "Reference versus lithium is documented in source JSON-LD; copied generic graphite descriptions for NMC are not used as material evidence."
       ],
       "license": "CC-BY-4.0"
+    },
+    {
+      "id": "hnei-ncr18650b-ne-lithiation",
+      "version": "1",
+      "title": "hnei ncr18650b ne lithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "hnei-ncr18650b-ne-lithiation-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          -0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/hnei-ncr18650b-ne-lithiation.csv",
+        "sha256": "d93e2f1d14a940d60ff5f7d7794fef214940c9dbd626622e750335bc4f9a60fb",
+        "point_count": 3582,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "hnei-ncr-2016-data",
+        "devie-dubarry-2016"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "panasonic-ncr18650b-hnei2016",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "hnei-ncr-ne"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "dis_data[0,0] (zero-based MATLAB-cell-array indices)",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "field": "dis_data",
+          "cell_array_row_zero_based": 0,
+          "cell_array_column_zero_based": 0,
+          "source_columns": [
+            "capacity_Ah",
+            "potential_V",
+            "time_s",
+            "current_A"
+          ],
+          "source_rate_denominator": 40.0,
+          "selection": "Lowest-rate complete main branch; initial short charge, remnant-capacity column and all higher-rate branches excluded.",
+          "source_rows": 3582,
+          "omitted_rows": 0
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Paper names C/40; positive-electrode MAT rate field is 39. Both labels retained.",
+        "Column units are inferred from exact current-time charge integration and the documented voltage windows; no MAT column header is supplied."
+      ],
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "hnei-ncr18650b-ne-delithiation",
+      "version": "1",
+      "title": "hnei ncr18650b ne delithiation",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "hnei-ncr18650b-ne-delithiation-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/hnei-ncr18650b-ne-delithiation.csv",
+        "sha256": "0982cc06ed87934d58a9fbefe1dc31fce751bc1a09413ba1f108fe7b684dd135",
+        "point_count": 2929,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "hnei-ncr-2016-data",
+        "devie-dubarry-2016"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "panasonic-ncr18650b-hnei2016",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "hnei-ncr-ne"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "ch_data[1,0] (zero-based MATLAB-cell-array indices)",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "field": "ch_data",
+          "cell_array_row_zero_based": 1,
+          "cell_array_column_zero_based": 0,
+          "source_columns": [
+            "capacity_Ah",
+            "potential_V",
+            "time_s",
+            "current_A"
+          ],
+          "source_rate_denominator": 40.0,
+          "selection": "Lowest-rate complete main branch; initial short charge, remnant-capacity column and all higher-rate branches excluded.",
+          "source_rows": 2929,
+          "omitted_rows": 0
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Paper names C/40; positive-electrode MAT rate field is 39. Both labels retained.",
+        "Column units are inferred from exact current-time charge integration and the documented voltage windows; no MAT column header is supplied."
+      ],
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "hnei-ncr18650b-pe-lithiation",
+      "version": "1",
+      "title": "hnei ncr18650b pe lithiation",
+      "parameter": "electrode_ocp",
+      "material": "NCA",
+      "material_id": "hnei-ncr18650b-pe-lithiation-material",
+      "electrode_role": "positive",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          -0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/hnei-ncr18650b-pe-lithiation.csv",
+        "sha256": "570c9f3f3925de29961764f2ddb5a19660ff8c7b0b8438a24f98a5714e9b73b2",
+        "point_count": 2692,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "hnei-ncr-2016-data",
+        "devie-dubarry-2016"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "panasonic-ncr18650b-hnei2016",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "hnei-ncr-pe"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "dis_data[0,0] (zero-based MATLAB-cell-array indices)",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "field": "dis_data",
+          "cell_array_row_zero_based": 0,
+          "cell_array_column_zero_based": 0,
+          "source_columns": [
+            "capacity_Ah",
+            "potential_V",
+            "time_s",
+            "current_A"
+          ],
+          "source_rate_denominator": 39.0,
+          "selection": "Lowest-rate complete main branch; initial short charge, remnant-capacity column and all higher-rate branches excluded.",
+          "source_rows": 2692,
+          "omitted_rows": 0
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Paper names C/40; positive-electrode MAT rate field is 39. Both labels retained.",
+        "Column units are inferred from exact current-time charge integration and the documented voltage windows; no MAT column header is supplied."
+      ],
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "hnei-ncr18650b-pe-delithiation",
+      "version": "1",
+      "title": "hnei ncr18650b pe delithiation",
+      "parameter": "electrode_ocp",
+      "material": "NCA",
+      "material_id": "hnei-ncr18650b-pe-delithiation-material",
+      "electrode_role": "positive",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/hnei-ncr18650b-pe-delithiation.csv",
+        "sha256": "6209267d97e42de175db0536016e6875df5d72c0ceace822bc0bedddde0cb53c",
+        "point_count": 2651,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "hnei-ncr-2016-data",
+        "devie-dubarry-2016"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "panasonic-ncr18650b-hnei2016",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "hnei-ncr-pe"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "ch_data[1,0] (zero-based MATLAB-cell-array indices)",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "field": "ch_data",
+          "cell_array_row_zero_based": 1,
+          "cell_array_column_zero_based": 0,
+          "source_columns": [
+            "capacity_Ah",
+            "potential_V",
+            "time_s",
+            "current_A"
+          ],
+          "source_rate_denominator": 39.0,
+          "selection": "Lowest-rate complete main branch; initial short charge, remnant-capacity column and all higher-rate branches excluded.",
+          "source_rows": 2651,
+          "omitted_rows": 0
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Paper names C/40; positive-electrode MAT rate field is 39. Both labels retained.",
+        "Column units are inferred from exact current-time charge integration and the documented voltage windows; no MAT column header is supplied."
+      ],
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "nextbms-calb-negative-charge",
+      "version": "1",
+      "title": "nextbms calb negative charge",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "nextbms-calb-negative-charge-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-negative-charge.csv",
+        "sha256": "2f1514e0edc0cd3ac7cd0158f24de8c075c0f29a862f69f9cc826a8afe1b823f",
+        "point_count": 2641,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-anode-nextbms-fcharge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fCharge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "charge",
+          "source_rows": 2657,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "nextbms-calb-negative-discharge",
+      "version": "1",
+      "title": "nextbms calb negative discharge",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "nextbms-calb-negative-discharge-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-negative-discharge.csv",
+        "sha256": "38e4e91ed5efb73a70dd590eae26c20476e71e57a5911f8f61151230d2c2f816",
+        "point_count": 2645,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-anode-nextbms-fdischarge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Anode_Graphite/anode_NExtBMS_fDischarge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "discharge",
+          "source_rows": 2661,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "nextbms-calb-positive-charge",
+      "version": "1",
+      "title": "nextbms calb positive charge",
+      "parameter": "electrode_ocp",
+      "material": "NMC532",
+      "material_id": "nextbms-calb-positive-charge-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-positive-charge.csv",
+        "sha256": "064fea194cbeddd7d9e21334aff7ce0e4f7c001e18897927bd11442284818933",
+        "point_count": 3293,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-cathode-nextbms-fcharge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fCharge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "charge",
+          "source_rows": 3309,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "nextbms-calb-positive-discharge",
+      "version": "1",
+      "title": "nextbms calb positive discharge",
+      "parameter": "electrode_ocp",
+      "material": "NMC532",
+      "material_id": "nextbms-calb-positive-discharge-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Passed capacity normalized independently over this branch; not absolute lithium fraction or full-cell SOC.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/nextbms-calb-positive-discharge.csv",
+        "sha256": "a4b1ad46e4ddef81ff2d68234f2e9c3b2944ef5f5e7f9b8100a875e69c24a2f8",
+        "point_count": 3252,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "nextbms-calb-2026-data"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "calb-gen3b-nextbms2026",
+        "relationship": "same_model",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "nextbms-cathode-nextbms-fdischarge",
+          "nextbms-half-readme"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "2_HalfCell/OCP_data/Cathode_NMC532/cathode_NExtBMS_fDischarge.csv",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_branch": "discharge",
+          "source_rows": 3268,
+          "duplicate_coordinate_rows_omitted": 16,
+          "selection": "Last source occurrence per capacity; one-based CSV line includes header; no smoothing or resampling."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "external_checksum_pinned",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source charge/discharge labels are retained; physical direction left unspecified because source naming text is ambiguous.",
+        "Half-cell separator/electrolyte differ from the intact commercial full cell."
+      ],
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "aepy-p45b-negative-graphite-ocp-v",
+      "version": "1",
+      "title": "aepy p45b negative graphite ocp v",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "aepy-p45b-negative-graphite-ocp-v-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0011125213468379,
+          0.880643398272419
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-graphite-ocp-v.csv",
+        "sha256": "ff25f2bbb2572699a8ac6c52a86692449d730b675e141520d25810348f96bf67",
+        "point_count": 1140,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Graphite/OCP [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Graphite/OCP [V]",
+          "source_nodes": 1318,
+          "source_particle_bounds": [
+            0.0011077,
+            0.88312
+          ],
+          "excluded_outside_particle_bounds": 178,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-negative-silicon-ocp-v",
+      "version": "1",
+      "title": "aepy p45b negative silicon ocp v",
+      "parameter": "electrode_ocp",
+      "material": "silicon",
+      "material_id": "aepy-p45b-negative-silicon-ocp-v-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.054504455,
+          0.840496595
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-silicon-ocp-v.csv",
+        "sha256": "132ee37c8798a4578b378735ced1b82244856111b9dfa3c57e385944d86a06fa",
+        "point_count": 1573,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP [V]",
+          "source_nodes": 2001,
+          "source_particle_bounds": [
+            0.054502,
+            0.84072
+          ],
+          "excluded_outside_particle_bounds": 428,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-negative-silicon-ocp-delithiation-v",
+      "version": "1",
+      "title": "aepy p45b negative silicon ocp delithiation v",
+      "parameter": "electrode_ocp",
+      "material": "silicon",
+      "material_id": "aepy-p45b-negative-silicon-ocp-delithiation-v-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0545609206432044,
+          0.84
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-silicon-ocp-delithiation-v.csv",
+        "sha256": "8ba00deef389fa667d54c730c7d78f4c92c14d9294ce0e02a1b150002dc65e91",
+        "point_count": 942,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (delithiation) [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (delithiation) [V]",
+          "source_nodes": 3161,
+          "source_particle_bounds": [
+            0.054502,
+            0.84072
+          ],
+          "excluded_outside_particle_bounds": 2219,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-negative-silicon-ocp-lithiation-v",
+      "version": "1",
+      "title": "aepy p45b negative silicon ocp lithiation v",
+      "parameter": "electrode_ocp",
+      "material": "silicon",
+      "material_id": "aepy-p45b-negative-silicon-ocp-lithiation-v-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0547977268563917,
+          0.84
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-negative-silicon-ocp-lithiation-v.csv",
+        "sha256": "9142c8daeac18232327546f5c1184c87a073d6d55836179112dc74ebad71813d",
+        "point_count": 509,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (lithiation) [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Negative electrode/Particle/Silicon Additive/OCP (lithiation) [V]",
+          "source_nodes": 2983,
+          "source_particle_bounds": [
+            0.054502,
+            0.84072
+          ],
+          "excluded_outside_particle_bounds": 2474,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "aepy-p45b-positive-nca-ocp-v",
+      "version": "1",
+      "title": "aepy p45b positive nca ocp v",
+      "parameter": "electrode_ocp",
+      "material": "NCA",
+      "material_id": "aepy-p45b-positive-nca-ocp-v-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_table",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "source_reported_stoichiometry",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.216085984349077,
+          0.935944628026975
+        ],
+        "definition": "Native BPX particle stoichiometry; graphite and silicon are separate phases.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/aepy-p45b-positive-nca-ocp-v.csv",
+        "sha256": "49bb9c34a74cfef0f15c9dc8af6c46e19b0360ff2db9c9a77cf26ffcc8d599a7",
+        "point_count": 883,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "aepy-p45b-2026"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "molicel-p45b-aboutenergy2026",
+        "relationship": "same_parameter_set",
+        "evidence": "Explicit source model and study; no common serialized specimen asserted across studies."
+      },
+      "provenance": {
+        "asset_ids": [
+          "aepy-p45b-bpx"
+        ],
+        "derivation": "published_BPX_fit_nodes",
+        "location": "Parameterisation/Positive electrode/OCP [V]",
+        "processing": {
+          "script": "scripts/seed_parameter_sources.py",
+          "source_pointer": "Parameterisation/Positive electrode/OCP [V]",
+          "source_nodes": 1318,
+          "source_particle_bounds": [
+            0.21608,
+            0.937
+          ],
+          "excluded_outside_particle_bounds": 435,
+          "selection": "Keep native nodes inside configured particle min/max stoichiometry; no extrapolation or boundary insertion."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "source_reported_stoichiometry",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Published fitted nodes, not independently measured raw half-cell points.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
+        "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
     }
   ]
 }

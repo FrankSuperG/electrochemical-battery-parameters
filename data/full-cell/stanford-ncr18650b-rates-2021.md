@@ -12,13 +12,13 @@ DOI: 10.17632/kxsbr4x3j2.2. Checked: 2026-10-23.
 
 ## Electrode OCP anchor
 
-**Not identified**. No matched electrode half-cell file was verified for this external source in this review. Whole-cell OCV, EIS or chemistry alone does not supply electrode OCP.
+**Cross-study catalog half-cell reference**. Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established. Source whole-cell OCV, when present, remains distinct from electrode OCP.
 
 Reported half-cell temperature labels / degC: Not independently verified. Full-cell temperatures below do not establish half-cell OCP temperature coverage.
 
 Source paths: Use the cited catalog curves/source evidence; no verified external half-cell member path.
 
-OCP evidence: [Source 1](https://data.mendeley.com/datasets/kxsbr4x3j2/2)
+OCP evidence: [Source 1](https://zenodo.org/records/60232)
 
 ## Tests and channels
 
@@ -42,13 +42,15 @@ The primary paper describes Excel time, current, voltage and thermocouple surfac
 
 ## Parameter association
 
-Match: `unmatched`. The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set.
+Match: `same_model_different_study`. Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established.
 
-Components without a native catalog join: electrode_ocp, diffusion, kinetics.
+[Panasonic NCR18650B &#124; HNEI2016](../cells/panasonic-ncr18650b-hnei2016.md)
+
+Components without a native catalog join: diffusion, kinetics.
 
 | Component | Match / quantity | Catalog record IDs | Evidence and missing items |
 |---|---|---|---|
-| ocp | `missing` / `missing` | None | The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set. Missing: No verified current-catalog parameter record for this model and study. |
+| ocp | `same_model_different_study` / `electrode_ocp` | `hnei-ncr18650b-ne-lithiation`, `hnei-ncr18650b-ne-delithiation`, `hnei-ncr18650b-pe-lithiation`, `hnei-ncr18650b-pe-delithiation` | Explicit Panasonic NCR18650B identity permits a cross-study reference to HNEI half-cell curves. No shared specimen, batch, ageing state or transferable D/kinetics is established. Missing: Same-study half-cell OCP absent; No cross-study specimen/batch/SoH correspondence |
 | diffusion | `missing` / `missing` | None | The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set. Missing: No verified current-catalog parameter record for this model and study. |
 | kinetics | `missing` / `missing` | None | The source identifies Panasonic NCR18650B, but no existing catalog OCP/D/kinetics record is verified for this model and study. The Kim2011 nominal NCA design has no verified NCR18650B identity. Same commercial model in other deposits does not establish a shared batch, specimen or transferable parameter set. Missing: No verified current-catalog parameter record for this model and study. |
 
@@ -130,10 +132,10 @@ Review level: `source_file_listing`. Primary paper, public Mendeley UI and NCA t
 
 ## Missing items and limits
 
-- No verified current-catalog OCP/D/kinetics association for NCR18650B; other same-model studies are different specimens.
 - No US06, EIS or longitudinal ageing series reported in the reviewed source.
 - Only representative k1 links retained; six samples per chemistry in the paper does not certify a complete six-by-five-by-three source matrix.
 - Workbook phase boundaries, measured channel units and thermal cutoffs remain unchecked.
+- HNEI electrode OCP is a cross-study same-model reference only; no intrinsic diffusion/kinetics or identical specimen is joined.
 
 ## Evidence
 

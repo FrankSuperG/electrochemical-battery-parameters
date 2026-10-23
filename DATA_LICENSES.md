@@ -3,11 +3,33 @@
 The root MIT license applies to original project code and documentation, not to
 third-party experimental observations or formula implementations.
 
-Python distribution metadata lists `MIT AND BSD-3-Clause AND CC-BY-4.0` for the
+Python distribution metadata lists `MIT AND BSD-3-Clause AND CC-BY-4.0 AND CC0-1.0` for the
 combined shipped contents. This does not relicense individual files: original
 project software remains MIT and each data/implementation record keeps its
 source-specific terms. Other external sources and their notices remain scoped
 to the provenance identified below.
+
+## Extracted OCP and parameter sources in v0.12
+
+Two original HNEI NCR18650B half-cell MAT members and four extracted branches
+retain the dataset's **CC0 1.0** terms (Zenodo 60232). Packaged API metadata and
+the fixed-record export identify the grant; the paper is cited separately.
+
+Four NEXTBMS CALB half-cell sweep CSVs and the author half-cell README are
+retained under **CC BY 4.0** from Zenodo 22301764. Changes: keep source voltage
+and specific capacity; retain the last row at repeated capacity for a strictly
+increasing normalized branch coordinate; store original row references. The
+unmodified originals preserve the omitted startup voltages.
+
+The pinned AEPyBaMM Molicel P45B BPX, five fitted OCP exports and 60 non-OCP
+records retain **BSD-3-Clause**. The full About:Energy notice is retained in
+`src/ebp/licenses/AEPyBaMM-BSD-3-Clause.txt` and in pinned evidence. OCP exports
+select native nodes inside source particle bounds without numerical refitting.
+Source-defined phases, units and model-input origins remain explicit.
+
+These grants do not extend to TUM literature input data or M50LT third-party
+OCP. Those remain external with unresolved reuse scope. No new full-cell payload
+is redistributed. [Extraction details](docs/PARAMETER_STORAGE.md).
 
 ## NCR18650B external links in v0.10
 
@@ -17,8 +39,9 @@ for their datasets. No license was found in the inspected page, API or export
 for Bayreuth Zenodo 8369275; its observations remain links pending clarification.
 Open access alone is not a reuse grant.
 
-Only attributed metadata, directory evidence and external locators are packaged.
-None of these new observations or the author protocol PDF are redistributed.
+At v0.10, only metadata, directory evidence and external locators were packaged.
+The v0.12 half-cell extraction is described above; other full-cell observations
+and the author protocol PDF remain external.
 Source MD5 values identify external objects, not independent payload verification.
 Article terms remain distinct from dataset terms. See [the source guide](docs/NCR18650B.md)
 for exact records, matching limits and reuse evidence.
@@ -37,8 +60,9 @@ grant is imposed on that collection; data reuse remains unresolved in the
 external record. The Python mirror's BSD license is not substituted for it.
 Third-party curves and reconstructed silicon retain their respective origins.
 
-All additions are links and review metadata. No new experimental observations,
-BPX arrays, source scripts or document payloads are redistributed or executed.
+At v0.11, these additions were links and review metadata only. The v0.12
+half-cell/BPX extraction is described above; full-cell observations stay external
+and no author code is executed.
 See [the OCP-first source ledger](docs/OCP_FIRST_EXPANSION.md).
 
 ## LG MJ1 / DLR-SINTEF addition in v0.8
