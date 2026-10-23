@@ -48,5 +48,53 @@
   "file_links": [],
   "missing_items": [
     "Replace with concrete unresolved identity, channel, license and matching gaps."
-  ]
+  ],
+  "inventory_scope": "Selected verified file/container locators, not an exhaustive test matrix. Repeated basenames are distinct when source_path differs.",
+  "parameter_components": {
+    "ocp": {
+      "match_level": "missing",
+      "quantity_kind": "missing",
+      "record_ids": [],
+      "evidence": "Replace with explicit source and model-matching evidence; chemistry alone is insufficient.",
+      "missing_items": [
+        "No verified same-study, same-model catalog record for this component."
+      ]
+    },
+    "diffusion": {
+      "match_level": "missing",
+      "quantity_kind": "missing",
+      "record_ids": [],
+      "evidence": "Replace with explicit source and model-matching evidence; chemistry alone is insufficient.",
+      "missing_items": [
+        "No verified same-study, same-model catalog record for this component."
+      ]
+    },
+    "kinetics": {
+      "match_level": "missing",
+      "quantity_kind": "missing",
+      "record_ids": [],
+      "evidence": "Replace with explicit source and model-matching evidence; chemistry alone is insufficient.",
+      "missing_items": [
+        "No verified same-study, same-model catalog record for this component."
+      ]
+    }
+  },
+  "test_coverage": {
+    "multi_rate_charge": {
+      "status": "not_located",
+      "evidence": "Replace with the exact inspected source folder, file or archive member and remaining gaps."
+    },
+    "multi_rate_discharge": {
+      "status": "not_located",
+      "evidence": "Replace with the exact inspected source folder, file or archive member and remaining gaps."
+    },
+    "US06": {
+      "status": "not_located",
+      "evidence": "Replace with the exact inspected source folder, file or archive member and remaining gaps."
+    },
+    "EIS": {
+      "status": "not_located",
+      "evidence": "Replace with the exact inspected source folder, file or archive member and remaining gaps."
+    }
+  }
 }

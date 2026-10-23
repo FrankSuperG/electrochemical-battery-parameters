@@ -1227,7 +1227,8 @@
       ],
       "cell_identity": "LG M50LT; same study as the catalog grouped SPMe parameters; exact serialized specimen chain unresolved",
       "test_types": [
-        "eis"
+        "eis",
+        "dynamic"
       ],
       "profiles": [],
       "rate_summary": "3 mV rms EIS; 9 SOC levels and 65 frequencies (585 measured rows).",
@@ -1235,13 +1236,17 @@
         25
       ],
       "channels": {
-        "time_series": [],
+        "time_series": [
+          "t (s)",
+          "i (A; charge-positive)",
+          "v (V)"
+        ],
         "frequency_domain": [
           "frequency_Hz",
           "measured_Z_real_Ohm",
           "measured_Z_imag_Ohm"
         ],
-        "note": "Measured whole-cell spectrum from the existing source audit. Setpoint is not a measured temperature trace. Seven-SOC fitting slice is separate from all nine measured SOCs."
+        "note": "Existing audited author MAT t/i/v drive-cycle channels and measured whole-cell EIS evidence. Source u is not used as measured voltage/current. The 25 degC EIS setpoint is not a measured temperature trace or a drive-cycle condition. Seven-SOC fitting subset is distinct from all nine measured EIS SOCs."
       },
       "storage": "external_link",
       "source": {
@@ -1277,9 +1282,59 @@
       ],
       "file_links": [
         {
-          "label": "Measured EIS MAT (external pinned original)",
+          "label": "impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
           "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+          "source_path": "Data/LGM50LT/impedanceLGM50LT_Hybrid_4h_3mVrms.mat",
+          "kind": "file",
+          "cell_model": "LG M50LT",
+          "material_family": "NMC",
+          "test_types": [
+            "eis"
+          ],
+          "profiles": [],
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Previously audited measured whole-cell EIS. Ambient 25 degC is a source setpoint; no per-row measured temperature trace.",
           "sha256": "5f06cf0b495eeb2d5704b41a6e3c93b8e480e977b71809d5b8f5e39c643ad8c5"
+        },
+        {
+          "label": "Zhat3mV_SOC_SPMe_LGM50LT.mat",
+          "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/Zhat3mV_SOC_SPMe_LGM50LT.mat",
+          "source_path": "Data/LGM50LT/Zhat3mV_SOC_SPMe_LGM50LT.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "LG M50LT",
+          "material_family": "NMC",
+          "test_types": [],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Source fitted-group vector, not measured EIS or independent model results; existing audit ties it to the catalog grouped values.",
+          "sha256": "b451a9c009479efe6b5f3a13989d424d35ae4d20f033371a4ecb87b95d6840df"
+        },
+        {
+          "label": "DrivecycleMeasurement_80to20.mat",
+          "url": "https://raw.githubusercontent.com/Battery-Intelligence-Lab/Hallemans-2025-JES/3308a34396b8b56cd614291dd151c3405577c068/Data/LGM50LT/DrivecycleMeasurement_80to20.mat",
+          "source_path": "Data/LGM50LT/DrivecycleMeasurement_80to20.mat",
+          "kind": "file",
+          "cell_model": "LG M50LT",
+          "material_family": "NMC",
+          "test_types": [
+            "dynamic"
+          ],
+          "profiles": [],
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "source_sample_id": null,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Previously curated same-study measured t/i/v drive cycle. No named US06 designation and no measured temperature trace.",
+          "sha256": "981e5b045556a226ad7c08ed1401004f980d7983cafa45592f291833bfd9e0d0"
         }
       ],
       "missing_items": [
@@ -1290,7 +1345,65 @@
       ],
       "catalog_evidence_paths": [
         "evidence/hallemans2025-m50lt-eis.csv"
-      ]
+      ],
+      "inventory_scope": "Selected verified file/container locators, not an exhaustive test matrix. Repeated basenames are distinct when source_path differs.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "Third-party OCP permission unresolved; no electrode OCP imported.",
+          "missing_items": [
+            "About:Energy OCP redistribution permission and a reusable same-study electrode OCP record."
+          ]
+        },
+        "diffusion": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "grouped_time_scale",
+          "record_ids": [
+            "hallemans2025-tau-d-p",
+            "hallemans2025-tau-d-n"
+          ],
+          "evidence": "Same source fitted vector supplies electrode particle diffusion time scales R^2/D. Radius and intrinsic D are not separately identified.",
+          "missing_items": [
+            "Independent particle radius and intrinsic diffusivity per electrode.",
+            "Exact serialized specimen chain."
+          ]
+        },
+        "kinetics": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "grouped_kinetics",
+          "record_ids": [
+            "hallemans2025-tau-ct-p",
+            "hallemans2025-tau-ct-n",
+            "hallemans2025-c-p",
+            "hallemans2025-c-n"
+          ],
+          "evidence": "Same fitted vector supplies grouped charge-transfer times and electrode capacitances, not an independently identified reaction-rate prefactor or exchange-current law.",
+          "missing_items": [
+            "Intrinsic reaction-rate or exchange-current law and its independent concentration/area inputs.",
+            "Exact serialized specimen chain."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_located",
+          "evidence": "No specifically verified file of this class in this selected review; not proof of absence."
+        },
+        "multi_rate_discharge": {
+          "status": "not_located",
+          "evidence": "No specifically verified file of this class in this selected review; not proof of absence."
+        },
+        "US06": {
+          "status": "not_established",
+          "evidence": "Same-study drive cycle is available but no source evidence names it US06."
+        },
+        "EIS": {
+          "status": "previously_audited",
+          "evidence": "Pinned author MAT and existing 585-row measured EIS evidence CSV, same model/study as six linked diffusion/kinetic group records."
+        }
+      }
     }
   ],
   "sources": {

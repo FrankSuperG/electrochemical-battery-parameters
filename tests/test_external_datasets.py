@@ -43,6 +43,63 @@ def test_external_cli_filters_combine_and_keep_dataset_grain(capsys):
     assert [r["id"] for r in records] == ["uccs-a123-26650m1b-2021"]
 
 
+def test_file_search_does_not_inherit_uninspected_dataset_profile_claims(capsys):
+    catalog = Catalog()
+    assert catalog.search_datasets(material="NCA", profile="US06")
+    assert not catalog.search_dataset_files(material="NCA", profile="US06")
+    assert main(["datasets", "--files", "--material", "NMC", "--profile", "US06", "--json"]) == 0
+    rows = json.loads(capsys.readouterr().out)
+    assert {r["dataset_id"] for r in rows} == {"calce-samsung-20r-dynamic", "calb-l148n58a-2025"}
+    assert len(rows) == 6
+    assert all(r["content_review"] == "not_read" for r in rows)
+
+
+def test_charge_rates_and_combined_us06_workbooks_keep_source_labels():
+    catalog = Catalog()
+    files = catalog.search_dataset_files(material="LFP", test_type="cccv")
+    assert len(files) == 5
+    assert {r["nominal_rate_C"] for r in files} == {1, 2, 3, 4}
+    assert all(r["temperature_C"] == 25 and r["source_sample_id"] == "A002" for r in files)
+    a123 = [r for r in catalog.search_dataset_files(material="LFP", profile="US06")
+            if r["kind"] == "archive_member"]
+    assert {r["source_sample_id"] for r in a123} == {"A1-007", "A1-008"}
+    assert all("DST-US06-FUDS" in r["source_path"] for r in a123)
+    assert all(r["parameter_match"] == "unmatched" for r in a123)
+
+
+def test_archive_directory_counts_do_not_become_measurement_or_specimen_claims():
+    catalog = Catalog()
+    evidence = catalog._load("evidence/external-archive-directory-review.json")
+    rar = next(r for r in evidence["checks"] if r["source_url"].endswith("41673360"))
+    eis = [f for f in rar["files"] if "/EIS measurements/" in f["path"] and f["path"].endswith(".csv")]
+    assert len(eis) == 440
+    assert len({f["path"].split("/")[1] for f in eis}) == 11
+    assert rar["complete"] and rar["bytes_transferred"] < rar["archive_size_bytes"]
+    r = next(r for r in catalog.external_datasets if r["id"] == "milano-lfp-eis-2023")
+    assert not r["parameter_link"]["cell_ids"]
+    assert all(item["content_review"] == "not_read" for item in r["file_links"])
+
+
+@pytest.mark.parametrize("fault", ["wrong_component", "intrinsic_group", "member_size", "duplicate_path"])
+def test_file_and_component_associations_require_specific_evidence(fault):
+    catalog = Catalog()
+    matched = next(r for r in catalog.external_datasets if r["id"] == "hallemans-m50lt-eis-2025")
+    if fault == "wrong_component":
+        matched["parameter_components"]["kinetics"]["record_ids"] = ["hallemans2025-tau-d-p"]
+        expected = "invalid kinetics component record"
+    elif fault == "intrinsic_group":
+        matched["parameter_components"]["diffusion"]["quantity_kind"] = "intrinsic_diffusivity"
+        expected = "time scale cannot be intrinsic diffusivity"
+    elif fault == "member_size":
+        r = next(r for r in catalog.external_datasets if r["id"] == "milano-lfp-eis-2023")
+        r["file_links"][1]["size_bytes"] += 1
+        expected = "archive member lacks matching directory evidence"
+    else:
+        catalog.external_datasets[0]["file_links"].append(copy.deepcopy(catalog.external_datasets[0]["file_links"][0]))
+        expected = "duplicate external source paths"
+    assert any(expected in error for error in catalog.validate())
+
+
 @pytest.mark.parametrize("fault", ["duplicate", "missing_join", "unknown_cell", "wrong_material", "local_payload", "bad_date"])
 def test_integrity_check_rejects_misleading_external_metadata(fault):
     catalog = Catalog()

@@ -15,7 +15,7 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
     assert len(data["full_cell_tests"]) == 61
     assert data["external_datasets"] == c.external_datasets
     assert data["cell_material_families"] == {cid: c.cell_material_family(cid) for cid in c.cells}
-    assert json.loads((tmp_path / "downloads/external-datasets.json").read_text())["records"] == c.external_datasets
+    assert json.loads((tmp_path / "downloads/external-datasets.json").read_text()) == c.external_document
     for record in data["records"]:
         downloaded = json.loads(
             (tmp_path / "downloads" / f"{record['id']}.json").read_text()

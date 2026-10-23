@@ -42,6 +42,7 @@ def main(argv=None):
     datasets.add_argument("--profile", help="Exact profile name, for example US06 or UDDS")
     datasets.add_argument("--cell", help="Only datasets explicitly linked to this catalog cell")
     datasets.add_argument("--json", action="store_true")
+    datasets.add_argument("--files", action="store_true", help="List inspected file/container locators; do not inherit dataset-level profiles")
     export = sub.add_parser("export")
     export.add_argument("id")
     export.add_argument("--output", required=True, type=Path)
@@ -123,10 +124,15 @@ def main(argv=None):
                 )
             )
         elif args.command == "datasets":
-            records = catalog.search_datasets(args.query, material=args.material,
+            search = catalog.search_dataset_files if args.files else catalog.search_datasets
+            records = search(args.query, material=args.material,
                 test_type=args.test_type, profile=args.profile, cell_id=args.cell)
             if args.json:
                 print(json.dumps(records, indent=2, ensure_ascii=False))
+            elif args.files:
+                for record in records:
+                    print("{} | {} | {}\n  {}".format(record["dataset_id"],
+                        record["source_path"], record["verification"], record["url"]))
             else:
                 for record in records:
                     print("{} | {} | {}\n  {}".format(record["id"],

@@ -4,7 +4,7 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.9.0-287b78" alt="Version 0.9.0">
+  <img src="https://img.shields.io/badge/version-0.9.1-287b78" alt="Version 0.9.1">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
@@ -15,7 +15,9 @@ Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-curr
 
 **Project scope:** curate, document and export electrochemical parameters and associated experimental data. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
-**v0.9.0: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+**v0.9.1: 59 electrode-curve records · 13 material labels · 397 other parameter records · 61 full-cell branch/test files · 13 cell or study entries.** Curves comprise 40 measured pseudo-OCP branches, 2 published tables, 15 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+
+File-level follow-up: **[Inspect the seven-source review](docs/EXTERNAL_FILE_REVIEW.md)** or [browse selected file/container locations](data/full-cell/files.csv). The review separates source-listed filenames, archive-directory evidence and previously audited content. OCP, diffusion and kinetics associations are recorded independently.
 
 New full-cell discovery: **[LFP](data/full-cell/LFP.md) · [NMC](data/full-cell/NMC.md) · [NCA](data/full-cell/NCA.md) · [LCO](data/full-cell/LCO.md) · [NCO](data/full-cell/NCO.md)**. Seven external dataset links cover multi-rate charging, US06/UDDS/WLTP, pulse tests and EIS where reported. Large new payloads stay with their providers; these links are separate from the 61 existing packaged test files. [Review sources, licenses and matching limits](docs/FULL_CELL_DATASETS.md).
 
@@ -160,6 +162,8 @@ ebp tests --cell a123-high-power-pouch-9ah
 ebp datasets --material NMC --test-type dynamic --profile US06
 ebp datasets --material LFP --test-type cccv
 ebp datasets --test-type eis --json
+ebp datasets --files --material NMC --profile US06
+ebp datasets --files --material LFP --test-type cccv --json
 ebp show a123-amp20-effective-diffusivity-soc50
 ebp export bpx-lfp18650-lfp-ocp --output formula.csv --count 2001
 ```

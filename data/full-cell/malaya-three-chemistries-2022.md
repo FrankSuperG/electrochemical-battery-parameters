@@ -26,16 +26,46 @@ Source reports Neware BTS 4000 testing at four temperatures. Numeric setpoints a
 
 ## Parameter association
 
-Match: `unmatched`. No verified join to the catalog parameter studies. Matching chemistry or manufacturer alone is insufficient.
+Match: `unmatched`. Named models and archived per-model test matrix remain separate from catalog studies. Panasonic NCR18650B is not the unidentified Kim2011 nominal design; generic NCA or NMC tags are not joins.
 
 Missing components: electrode_ocp, diffusion, kinetics.
+
+| Component | Match / quantity | Catalog record IDs | Evidence and missing items |
+|---|---|---|---|
+| ocp | `missing` / `missing` | None | Named models and archived per-model test matrix remain separate from catalog studies. Panasonic NCR18650B is not the unidentified Kim2011 nominal design; generic NCA or NMC tags are not joins. Missing: No verified same-study, same-model catalog record for this component. |
+| diffusion | `missing` / `missing` | None | Named models and archived per-model test matrix remain separate from catalog studies. Panasonic NCR18650B is not the unidentified Kim2011 nominal design; generic NCA or NMC tags are not joins. Missing: No verified same-study, same-model catalog record for this component. |
+| kinetics | `missing` / `missing` | None | Named models and archived per-model test matrix remain separate from catalog studies. Panasonic NCR18650B is not the unidentified Kim2011 nominal design; generic NCA or NMC tags are not joins. Missing: No verified same-study, same-model catalog record for this component. |
+
+## Requested-test coverage
+
+| Test class | Review result | Evidence / limits |
+|---|---|---|
+| multi_rate_charge | `not_located` | No specifically verified file of this class in this selected review; not proof of absence. |
+| multi_rate_discharge | `not_located` | No specifically verified file of this class in this selected review; not proof of absence. |
+| US06 | `container_only` | Dataset description names US06 collectively, but the only exposed file is a RAR. Per-cell US06 filenames not verified. |
+| EIS | `not_located` | No specifically verified file of this class in this selected review; not proof of absence. |
+
+## File locations
+
+Selected verified file/container locators, not an exhaustive test matrix. Repeated basenames are distinct when source_path differs.
+
+An archive-member link downloads its parent container; extract the named member yourself. Listed files do not certify raw columns or model accuracy.
+
+| Source path / member | Cell / source label | Test / profile | Temperature / rate | Review | Link |
+|---|---|---|---|---|---|
+| `Battery Test Data.rar` | Unresolved / No sample ID | ;  | Temperature unknown | `source_listing`; content `not_read` | [Open source file](https://data.mendeley.com/public-files/datasets/29kw38kzwj/files/a221e3ba-df1d-4f46-aed9-f1222296baca/file_downloaded) |
+
+File notes:
+
+- `Battery Test Data.rar`: Only one 98 MB RAR listed in the source UI. Inner per-model files, profiles, rates and temperatures remain unresolved. Direct automated header request returned HTTP 403; no archive downloaded.
 
 ## Reuse and access
 
 License: **CC-BY-4.0**. [Source terms](https://data.mendeley.com/datasets/29kw38kzwj/1). Source dataset terms apply to downloaded files; cite the dataset and associated study.
 
-Review level: `source_metadata_only`. Primary description and reuse terms reviewed. Raw payload not downloaded; headers, row counts and per-file availability are not certified.
+Review level: `source_file_listing`. Source UI confirms the single archive filename and stable download link, not an exposed per-model directory. Dataset-level chemistry/profile declarations do not establish the archived cell-by-profile matrix.
 
+- [Battery Test Data.rar](https://data.mendeley.com/public-files/datasets/29kw38kzwj/files/a221e3ba-df1d-4f46-aed9-f1222296baca/file_downloaded)
 
 ## Missing items and limits
 

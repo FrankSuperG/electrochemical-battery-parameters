@@ -146,3 +146,11 @@ dataset can appear in multiple groups but remains one registry record.
 Read [the full-cell link review](FULL_CELL_DATASETS.md) before using a linked
 file. A source temperature setpoint is not a measured trace; a whole-cell OCV
 curve is not electrode OCP; EIS belongs to the frequency domain.
+
+External registry schema 1.1 adds source paths, inspection scope, per-component
+record joins and requested-test coverage. File/container locators are keyed by
+dataset ID plus complete source path. Archive members require matching persisted
+directory evidence and sizes. `search_dataset_files()` filters file tags without
+inheriting dataset declarations. `evidence/external-archive-directory-review.json`
+contains directory metadata only, not extracted observations. Whole-schema JSON
+exports preserve the authoritative registry version and description.

@@ -105,7 +105,12 @@ def test_full_cell_material_index_preserves_grain_and_complete_file_links(index)
         assert test["normalized_path"] in page
         assert f"`{test['id']}`" in page
     assert not any(name.startswith("data/full-cell/") and name.endswith(".csv")
-                   and name != "data/full-cell/datasets.csv" for name in index)
+                   and name not in {"data/full-cell/datasets.csv", "data/full-cell/files.csv"} for name in index)
+    files = list(csv.DictReader(io.StringIO(index["data/full-cell/files.csv"].decode())))
+    assert len(files) == len(catalog.search_dataset_files())
+    assert {(r["dataset_id"], r["source_path"]) for r in files} == {
+        (r["dataset_id"], r["source_path"]) for r in catalog.search_dataset_files()
+    }
     assert "No packaged full-cell file" in index["data/full-cell/NCA.md"].decode()
     for dataset in catalog.external_datasets:
         assert f"data/full-cell/{dataset['id']}.md" in index

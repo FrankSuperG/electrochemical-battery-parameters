@@ -77,6 +77,14 @@ def full_cell_index(catalog):
           ";".join(r["parameter_link"]["cell_ids"]), r["source"]["url"], r["source"]["doi"],
           r["source"]["version"], r["review"]["checked_on"], r["review"]["level"],
           "; ".join(r["missing_items"])] for r in catalog.external_datasets])
+    file_rows = catalog.search_dataset_files()
+    output[str(root / "files.csv")] = csv_bytes(
+        ["dataset_id", "source_path", "kind", "cell_model", "material_family", "source_sample_id",
+         "test_types", "profiles", "temperature_C", "nominal_rate_C", "verification", "content_review",
+         "parameter_match", "url", "note"],
+        [[r["dataset_id"], r["source_path"], r["kind"], r["cell_model"], r["material_family"], r["source_sample_id"],
+          ";".join(r["test_types"]), ";".join(r["profiles"]), r["temperature_C"], r["nominal_rate_C"],
+          r["verification"], r["content_review"], r["parameter_match"], r["url"], r["note"]] for r in file_rows])
     for r in catalog.external_datasets:
         page = root / (r["id"] + ".md")
         lines = [f"# {r['title']}", "", "[Full-cell index](README.md) · [Usage and review notes](../../docs/FULL_CELL_DATASETS.md)", "",
@@ -95,6 +103,27 @@ def full_cell_index(catalog):
         for cid in r["parameter_link"]["cell_ids"]:
             lines += [link(page, Path("data/cells") / f"{cid}.md", catalog.cells[cid]["display_name"]), ""]
         lines += [f"Missing components: {', '.join(r['parameter_link']['missing_components'])}.", "",
+                  "| Component | Match / quantity | Catalog record IDs | Evidence and missing items |",
+                  "|---|---|---|---|"]
+        for key, component in r["parameter_components"].items():
+            lines += [f"| {key} | `{component['match_level']}` / `{component['quantity_kind']}` | {', '.join('`' + rid + '`' for rid in component['record_ids']) or 'None'} | {text_cell(component['evidence'])} Missing: {text_cell('; '.join(component['missing_items']))} |"]
+        lines += ["", "## Requested-test coverage", "", "| Test class | Review result | Evidence / limits |", "|---|---|---|"]
+        for key, coverage in r["test_coverage"].items():
+            lines += [f"| {key} | `{coverage['status']}` | {text_cell(coverage['evidence'])} |"]
+        lines += ["", "## File locations", "", r["inventory_scope"], "",
+                  "An archive-member link downloads its parent container; extract the named member yourself. Listed files do not certify raw columns or model accuracy.", "",
+                  "| Source path / member | Cell / source label | Test / profile | Temperature / rate | Review | Link |",
+                  "|---|---|---|---|---|---|"]
+        for item in r["file_links"]:
+            conditions = f"{item['temperature_C']} degC" if item["temperature_C"] is not None else "Temperature unknown"
+            if item["nominal_rate_C"] is not None:
+                conditions += f"; {item['nominal_rate_C']}C"
+            label = "Parent archive" if item["kind"] == "archive_member" else "Open source file"
+            lines += [f"| `{text_cell(item['source_path'])}` | {text_cell(item['cell_model'] or 'Unresolved')} / {text_cell(item['source_sample_id'] or 'No sample ID')} | {text_cell(', '.join(item['test_types']) + '; ' + ', '.join(item['profiles']))} | {conditions} | `{item['verification']}`; content `{item['content_review']}` | [{label}]({item['url']}) |"]
+        lines += ["", "File notes:", ""]
+        for item in r["file_links"]:
+            lines += [f"- `{text_cell(item['source_path'])}`: {item['note']}"]
+        lines += ["",
                   "## Reuse and access", "",
                   f"License: **{r['license']['identifier']}**. [Source terms]({r['license']['evidence_url']}). {r['license']['note']}", "",
                   f"Review level: `{r['review']['level']}`. {r['review']['note']}", ""]
@@ -104,14 +133,14 @@ def full_cell_index(catalog):
                 if algorithm in item:
                     lines += [f"  Publisher/pinned {algorithm.upper()}: `{item[algorithm]}`."]
         for path in r.get("catalog_evidence_paths", []):
-            lines += ["", link(page, Path("src/ebp/data") / path, "Previously curated supporting evidence (CSV)"), ""]
+            lines += ["", link(page, Path("src/ebp/data") / path, "Supporting evidence (" + Path(path).suffix.lstrip('.').upper() + ")"), ""]
         lines += ["", "## Missing items and limits", ""] + [f"- {item}" for item in r["missing_items"]]
         lines += ["", "## Evidence", ""] + [f"- [Primary source {i + 1}]({url})" for i, url in enumerate(r["evidence_urls"])]
         lines += ["", "No external payload is fetched by the library, viewer or CI. Dataset coverage does not assert a complete cell × temperature × profile matrix. Whole-cell OCV is not electrode OCP; EIS is frequency-domain evidence, not a current/voltage drive-cycle trace.", ""]
         output[str(page)] = "\n".join(lines).encode()
     overview = ["# Full-cell tests by material", "", "[All data](../README.md) · [How to use external links](../../docs/FULL_CELL_DATASETS.md)", "",
                 f"{len(catalog.full_cell_tests)} existing packaged branch/test files and {len(catalog.external_datasets)} external dataset-link records. External records are not imported files or independent specimens. One multi-chemistry dataset can appear under several materials.", "",
-                "Large observations remain with the original provider. [Metadata CSV](datasets.csv) · [Complete metadata JSON](datasets.json). No automatic download occurs.", "",
+                f"Large observations remain with the original provider. [Dataset metadata CSV](datasets.csv) · [Complete metadata JSON](datasets.json) · [{len(file_rows)} selected file/container locators (CSV)](files.csv). No automatic download occurs.", "",
                 "| Material family | Packaged test files | External datasets | Browse |", "|---|---:|---:|---|"]
     for family in families:
         local = [t for t in catalog.full_cell_tests if catalog.cell_material_family(t["cell_id"]) == family]
@@ -135,7 +164,7 @@ def full_cell_index(catalog):
             lines += ["", "No packaged full-cell file for this family. External links do not fill missing parameter matches."]
         lines += [""]
         output[str(page)] = "\n".join(lines).encode()
-    overview += ["", "Test types: `constant_current`, `cccv`, `pulse`, `dynamic`, `eis`, `ocv`. Named profiles such as US06, UDDS and WLTP can be searched with `ebp datasets --profile US06`. `ocv` refers to whole-cell characterization, never an automatically inferred electrode OCP.", ""]
+    overview += ["", "Test types: `constant_current`, `cccv`, `pulse`, `dynamic`, `eis`, `ocv`. Named profiles can be searched at dataset level with `ebp datasets --profile US06`, or at inspected-file level with `ebp datasets --files --profile US06`. Dataset declarations are not automatically inherited by file locators. `ocv` refers to whole-cell characterization, never an automatically inferred electrode OCP.", ""]
     output[str(root / "README.md")] = "\n".join(overview).encode()
     return output
 

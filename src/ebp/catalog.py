@@ -256,6 +256,28 @@ class Catalog:
                 and (not cell_id or cell_id in r["parameter_link"]["cell_ids"])
                 and (not query or query.casefold() in json.dumps(r).casefold())]
 
+    def search_dataset_files(self, query="", material=None, test_type=None,
+                             profile=None, cell_id=None):
+        """Return inspected file/container locators, never inherit dataset profiles.
+
+        An archive member links to its parent archive. No observation is fetched.
+        Unknown per-model coverage in a mixed-chemistry archive stays unknown.
+        """
+        rows = []
+        for dataset in self.search_datasets(material=material, cell_id=cell_id):
+            for item in dataset["file_links"]:
+                if material and (item["material_family"] or "").casefold() != material.casefold():
+                    continue
+                if test_type and test_type.casefold() not in item["test_types"]:
+                    continue
+                if profile and profile.casefold() not in [p.casefold() for p in item["profiles"]]:
+                    continue
+                if query and query.casefold() not in (dataset["title"] + " " + json.dumps(item)).casefold():
+                    continue
+                rows.append({"dataset_id": dataset["id"], "dataset_title": dataset["title"],
+                             "parameter_match": dataset["parameter_link"]["match_level"], **item})
+        return rows
+
     def full_cell_data(self, test_id, normalized=False):
         """Read CSV rows, retaining source or explicitly normalized column names.
 
@@ -310,6 +332,9 @@ class Catalog:
         dataset_ids = [r["id"] for r in self.external_datasets]
         if len(dataset_ids) != len(set(dataset_ids)):
             errors.append("Duplicate external dataset IDs")
+        archive_reviews = self._load("evidence/external-archive-directory-review.json")["checks"]
+        archive_members = {review["source_url"]: {item["path"]: item for item in review["files"]}
+                           for review in archive_reviews}
         for dataset in self.external_datasets:
             joined = dataset["parameter_link"]["cell_ids"]
             level = dataset["parameter_link"]["match_level"]
@@ -324,6 +349,39 @@ class Catalog:
                 path = (self.root / relative).resolve()
                 if not path.is_relative_to(self.root.resolve()) or not path.is_file():
                     errors.append(f"{dataset['id']}: invalid catalog evidence path")
+            paths = [item["source_path"] for item in dataset["file_links"]]
+            if len(paths) != len(set(paths)):
+                errors.append(f"{dataset['id']}: duplicate external source paths")
+            for item in dataset["file_links"]:
+                if item["material_family"] and item["material_family"] not in dataset["material_families"]:
+                    errors.append(f"{dataset['id']}: file material family disagrees")
+                if item["kind"] == "archive_member" and (
+                    "::" not in item["source_path"] or item["verification"] != "archive_directory"
+                ):
+                    errors.append(f"{dataset['id']}: archive member requires directory evidence and parent path")
+                elif item["kind"] == "archive_member":
+                    member = item["source_path"].split("::", 1)[1]
+                    evidence = archive_members.get(item["url"], {}).get(member)
+                    if not evidence or item.get("size_bytes") != evidence["size_bytes"]:
+                        errors.append(f"{dataset['id']}: archive member lacks matching directory evidence")
+            for component, association in dataset["parameter_components"].items():
+                record_ids = association["record_ids"]
+                matched = association["match_level"] not in ("missing", "unmatched")
+                if matched != bool(record_ids):
+                    errors.append(f"{dataset['id']}: {component} association requires explicit record IDs")
+                for rid in record_ids:
+                    if component == "ocp":
+                        record = next((r for r in self._records if r["id"] == rid), None)
+                        cid = record["cell_link"]["cell_id"] if record else None
+                    else:
+                        record = next((p for p in self.parameters if p["id"] == rid), None)
+                        cid = record["cell_id"] if record else None
+                    if not record or cid not in joined or (
+                        component != "ocp" and record["category"] != component
+                    ):
+                        errors.append(f"{dataset['id']}: invalid {component} component record {rid}")
+                    elif association["quantity_kind"] == "intrinsic_diffusivity" and record["unit"] == "s":
+                        errors.append(f"{dataset['id']}: diffusion time scale cannot be intrinsic diffusivity")
         ids = [r["id"] for r in self._records]
         if len(ids) != len(set(ids)):
             errors.append("Duplicate record IDs")

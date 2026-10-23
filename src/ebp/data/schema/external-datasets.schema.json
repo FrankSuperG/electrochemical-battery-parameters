@@ -10,7 +10,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "1.0"
+      "const": "1.1"
     },
     "description": {
       "type": "string",
@@ -38,7 +38,10 @@
           "parameter_link",
           "evidence_urls",
           "file_links",
-          "missing_items"
+          "missing_items",
+          "inventory_scope",
+          "parameter_components",
+          "test_coverage"
         ],
         "properties": {
           "id": {
@@ -205,7 +208,9 @@
               "level": {
                 "enum": [
                   "source_metadata_only",
-                  "existing_source_audit"
+                  "existing_source_audit",
+                  "source_file_listing",
+                  "archive_directory_reviewed"
                 ]
               },
               "note": {
@@ -270,7 +275,19 @@
               "additionalProperties": false,
               "required": [
                 "label",
-                "url"
+                "url",
+                "source_path",
+                "kind",
+                "cell_model",
+                "material_family",
+                "test_types",
+                "profiles",
+                "temperature_C",
+                "nominal_rate_C",
+                "source_sample_id",
+                "verification",
+                "content_review",
+                "note"
               ],
               "properties": {
                 "label": {
@@ -292,6 +309,100 @@
                 "sha256": {
                   "type": "string",
                   "pattern": "^[a-f0-9]{64}$"
+                },
+                "source_path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "kind": {
+                  "enum": [
+                    "file",
+                    "archive",
+                    "archive_member",
+                    "directory",
+                    "parameter_evidence"
+                  ]
+                },
+                "cell_model": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "material_family": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "enum": [
+                    "LFP",
+                    "NMC",
+                    "NCA",
+                    "LCO",
+                    "NCO",
+                    "Other",
+                    "Unknown",
+                    null
+                  ]
+                },
+                "test_types": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "enum": [
+                      "constant_current",
+                      "cccv",
+                      "pulse",
+                      "dynamic",
+                      "eis",
+                      "ocv"
+                    ]
+                  }
+                },
+                "profiles": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "temperature_C": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "nominal_rate_C": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "exclusiveMinimum": 0
+                },
+                "source_sample_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "verification": {
+                  "enum": [
+                    "source_listing",
+                    "archive_directory",
+                    "existing_source_audit",
+                    "source_documentation"
+                  ]
+                },
+                "content_review": {
+                  "enum": [
+                    "not_read",
+                    "existing_source_audit"
+                  ]
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 1
                 }
               }
             }
@@ -312,6 +423,315 @@
               "minLength": 1
             },
             "uniqueItems": true
+          },
+          "parameter_components": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "ocp",
+              "diffusion",
+              "kinetics"
+            ],
+            "properties": {
+              "ocp": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "match_level",
+                  "quantity_kind",
+                  "record_ids",
+                  "evidence",
+                  "missing_items"
+                ],
+                "properties": {
+                  "match_level": {
+                    "enum": [
+                      "missing",
+                      "unmatched",
+                      "same_model_different_study",
+                      "same_model_same_study",
+                      "same_specimen"
+                    ]
+                  },
+                  "quantity_kind": {
+                    "enum": [
+                      "missing",
+                      "electrode_ocp",
+                      "intrinsic_diffusivity",
+                      "grouped_time_scale",
+                      "kinetic_law",
+                      "grouped_kinetics"
+                    ]
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "missing_items": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              },
+              "diffusion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "match_level",
+                  "quantity_kind",
+                  "record_ids",
+                  "evidence",
+                  "missing_items"
+                ],
+                "properties": {
+                  "match_level": {
+                    "enum": [
+                      "missing",
+                      "unmatched",
+                      "same_model_different_study",
+                      "same_model_same_study",
+                      "same_specimen"
+                    ]
+                  },
+                  "quantity_kind": {
+                    "enum": [
+                      "missing",
+                      "electrode_ocp",
+                      "intrinsic_diffusivity",
+                      "grouped_time_scale",
+                      "kinetic_law",
+                      "grouped_kinetics"
+                    ]
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "missing_items": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              },
+              "kinetics": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "match_level",
+                  "quantity_kind",
+                  "record_ids",
+                  "evidence",
+                  "missing_items"
+                ],
+                "properties": {
+                  "match_level": {
+                    "enum": [
+                      "missing",
+                      "unmatched",
+                      "same_model_different_study",
+                      "same_model_same_study",
+                      "same_specimen"
+                    ]
+                  },
+                  "quantity_kind": {
+                    "enum": [
+                      "missing",
+                      "electrode_ocp",
+                      "intrinsic_diffusivity",
+                      "grouped_time_scale",
+                      "kinetic_law",
+                      "grouped_kinetics"
+                    ]
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "missing_items": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "test_coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "multi_rate_charge",
+              "multi_rate_discharge",
+              "US06",
+              "EIS"
+            ],
+            "properties": {
+              "multi_rate_charge": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "evidence"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "not_located",
+                      "not_established",
+                      "file_located",
+                      "archive_member_located",
+                      "container_only",
+                      "previously_audited"
+                    ]
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "multi_rate_discharge": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "evidence"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "not_located",
+                      "not_established",
+                      "file_located",
+                      "archive_member_located",
+                      "container_only",
+                      "previously_audited"
+                    ]
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "US06": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "evidence"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "not_located",
+                      "not_established",
+                      "file_located",
+                      "archive_member_located",
+                      "container_only",
+                      "previously_audited"
+                    ]
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "EIS": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "evidence"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "not_located",
+                      "not_established",
+                      "file_located",
+                      "archive_member_located",
+                      "container_only",
+                      "previously_audited"
+                    ]
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          },
+          "inventory_scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "directory_checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "source_url",
+                "method",
+                "archive_size_bytes",
+                "bytes_transferred"
+              ],
+              "properties": {
+                "source_url": {
+                  "type": "string",
+                  "pattern": "^https://"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "archive_size_bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "bytes_transferred": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
           }
         }
       }

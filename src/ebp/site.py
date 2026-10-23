@@ -71,7 +71,7 @@ def build_site(catalog, output):
 
     records = []
     write_json("matching-audit.json", catalog.matching_audit)
-    write_json("external-datasets.json", {"schema_version": "1.0", "records": catalog.external_datasets})
+    write_json("external-datasets.json", catalog.external_document)
     for curve in catalog.search():
         record = copy.deepcopy(curve.record)
         x, y = curve.sample(801)

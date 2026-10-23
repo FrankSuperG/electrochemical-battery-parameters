@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.9.1 — 2026-10-23
+
+- Audited all seven external records at file/container level; added 82 selected locators, source paths, sample labels and review scope without importing observation payloads.
+- Located A123 1–4C CCCV and UDDS MAT files, CALB processed/raw CC/US06/EIS files and source-table CALCE ZIP links. Verified representative CALCE inner filenames and a complete LFP EIS RAR directory using bounded range reads.
+- Added CALCE A123 US06 coverage based on two combined DST-US06-FUDS workbook filenames, without asserting phase boundaries or exact commercial-cell identity.
+- Recorded 440 EIS CSV paths across B01–B11, two runs and twenty SOC filename labels in the 600 mAh LFP source; IFR14500 remains a filename designation, not a verified manufacturer part.
+- Linked M50LT EIS to six same-study diffusion/kinetic group records; preserved missing electrode OCP rights and intrinsic D/k. Other external sources remain unmatched to catalog parameters.
+- Added per-component and requested-test coverage, file-level filtering (`ebp datasets --files`), a file-locator CSV and an optional archive-directory inspector. Dataset-level profile declarations are not inherited by uninspected file locators.
+
 ## 0.9.0 — 2026-10-23
 
 - Added seven metadata-only external dataset links for multi-rate charging, dynamic profiles including US06/UDDS/WLTP, pulses and EIS, with explicit review levels, licenses, parameter matches and missing items. No new raw test files were imported.
