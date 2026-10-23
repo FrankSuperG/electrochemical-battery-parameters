@@ -2207,6 +2207,77 @@
         ],
         "status": "All non-OCP numeric and analytic entries in this pinned dictionary are represented, including explicitly labeled optional submodels; string/citation metadata excluded."
       }
+    },
+    "molicel-p45b-tum-rehm2026": {
+      "display_name": "Molicel P45B | TUM Rehm2026 measured half-cells",
+      "match_level": "same_model_same_study",
+      "components": {
+        "ocp": {
+          "record_ids": [
+            "tum-rehm2026-p45b-cathode-delithiation-0c03",
+            "tum-rehm2026-p45b-anode-delithiation-0c02",
+            "tum-rehm2026-p45b-anode-delithiation-0c03",
+            "tum-rehm2026-p45b-anode-lithiation-0c02",
+            "tum-rehm2026-p45b-anode-lithiation-0c03"
+          ],
+          "source_ids": [
+            "rehm-2026",
+            "tum-rehm2026-v2"
+          ],
+          "match_level": "same_model_same_study",
+          "evidence": "Five native finite-current pseudo-OCP branches, original nodes retained; Li/Li+ reference confirmed in Section 2.4.",
+          "missing_items": [
+            "Same-specimen measurement provenance unresolved"
+          ]
+        },
+        "diffusion": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No same-study intrinsic diffusivity admitted.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "kinetics": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No same-study intrinsic kinetic law admitted.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "full_cell_tests": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "External serial23 ageing pOCV checkups only; continuous I/V/T, dynamic/EIS and multi-temperature matrices not established.",
+          "missing_items": [
+            "No matching imported records"
+          ]
+        },
+        "basic_charge_discharge": {
+          "record_ids": [],
+          "source_ids": [],
+          "match_level": "missing",
+          "evidence": "No matching imported basic test",
+          "missing_items": [
+            "Matching CC charge/discharge observations"
+          ]
+        }
+      },
+      "missing_items": [
+        "Identical characterization/validation specimen not established",
+        "Independent full-cell model reproduction not performed",
+        "Matching full-cell charge/discharge observations not imported",
+        "Exact harvested donor to serial23 mapping unresolved",
+        "Numeric half-cell temperature not established",
+        "Absolute half-cell capacity and stoichiometric balancing not supplied",
+        "Same-study intrinsic D and kinetic coefficients not located",
+        "0C03 filename rate is 0.03C; original paper protocol states 0.033C",
+        "Full-cell tests are external links; 25 C is a paper condition, not a verified measured temperature channel"
+      ]
     }
   },
   "unmatched_material_records": [
@@ -2277,7 +2348,9 @@
         "sintef-graphite-1d5628-c3-lithiation",
         "sintef-graphite-1d5628-c3-delithiation",
         "sintef-graphite-4ccc47-c3-lithiation",
-        "sintef-graphite-4ccc47-c3-delithiation"
+        "sintef-graphite-4ccc47-c3-delithiation",
+        "tum-rehm2026-gr-delithiation-rehm2026",
+        "tum-rehm2026-gr-lithiation-rehm2026"
       ],
       "match_level": "material_only",
       "missing_items": [

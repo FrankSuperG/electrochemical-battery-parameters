@@ -61,9 +61,9 @@ thermodynamic, kinetic and contact-resistance records; coefficient flags remain
 source metadata. No upstream author
 code is executed. Partial exports are not drop-in complete model inputs.
 
-**Not extracted:** TUM P45B measurement inputs and M50LT third-party OCP remain
-external while reuse scope is unresolved. Other half-cell-only candidate sources
-retain their documented admission gaps. Unknown half-cell temperature is never
+**At v0.12:** TUM P45B measurement inputs and M50LT third-party OCP were
+external pending reuse checks. The seven-file TUM first-party subset is admitted
+in v0.14 below; M50LT and other candidate sources retain documented gaps. Unknown half-cell temperature is never
 filled from full-cell test setpoints.
 
 ## v0.13 completion
@@ -97,3 +97,16 @@ python scripts/seed_parameter_sources.py
 ebp validate
 python scripts/build_data_index.py
 ```
+
+## v0.14 TUM admission
+
+The native inventory is now 83 curves/fits and 1,041 other parameters across
+19 cell/study packages. Seven first-party TUM branches retain 40,378 original
+points under the fixed release MIT evidence: five harvested P45B and two
+material-only laboratory graphite curves. Each CSV also retains the original
+normalized capacity and one-based MAT row; branch progress is not stoichiometry.
+
+See [rights, source definitions and holds](TUM_OCP_RIGHTS.md). Serial23 ageing
+checkups remain external at same-model/same-study match, with exact donor and
+measured temperature channels unresolved. M50LT, HAIDI and third-party TUM
+inputs remain held where permission or definitions cannot be established.

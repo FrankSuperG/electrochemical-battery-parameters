@@ -1,0 +1,138 @@
+{
+  "checked_on": "2026-10-23",
+  "scope": "M50LT and TUM OCP admission; no author contact, public release or new full-cell payload",
+  "admission": {
+    "license": "MIT",
+    "basis": [
+      "Fixed Zenodo record 19555109 identifies v2.0.0 with MIT license.",
+      "Bundled root notice names Mathias Rehm; per-folder notices identify Rehm2026/P45B tables as first-party data published with the tool.",
+      "Original paper Section 2.4 identifies harvested P45B and laboratory graphite measurements against lithium; Data availability directs data to author repository."
+    ],
+    "interpretation": "Scoped combined evidence for seven first-party release members, not a blanket grant for cited third-party literature files. Article CC BY is not substituted for data terms.",
+    "source_url": "https://zenodo.org/records/19555109",
+    "archive_md5": "0f2c702fab98561dcc5eee8a09f90166",
+    "archive_prefix": "tum-ees-DegradationModeAnalysis-d2e80c7/",
+    "paper_doi": "10.1016/j.jpowsour.2026.239418",
+    "paper_text_access": "Author-uploaded original paper text; publisher PDF could not be retrieved. No PDF rendering claimed.",
+    "author_paper_url": "https://www.researchgate.net/publication/403407038_How_to_determine_the_degradation_modes_of_lithium-ion_batteries_with_silicon-graphite_blend_electrodes",
+    "files": [
+      {
+        "asset_id": "tum-rehm2026-p45b-cathode-delithiation-0c03",
+        "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+        "sha256": "a1d6e755d3484633c6f5a35ea37afa641b62d0526c668c13ee906eaff4167b18",
+        "github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "github_blob_sha1": "03994ea1ebc4520c9f4ddcb781ecac811efc0386",
+        "cross_version_status": "Byte-identical to pinned author GitHub MAT; fixed-release source remains canonical."
+      },
+      {
+        "asset_id": "tum-rehm2026-gr-delithiation-rehm2026",
+        "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/graphite/Gr_Delithiation_Rehm2026.mat",
+        "sha256": "1fc439df7bd43f64d0795dc619a365bc08ea3eb164bb95124f44700b022a9ba4",
+        "github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "github_blob_sha1": "9a9189dd01993e23808f77a2cc9853244462a887",
+        "cross_version_status": "Byte-identical to pinned author GitHub MAT; fixed-release source remains canonical."
+      },
+      {
+        "asset_id": "tum-rehm2026-gr-lithiation-rehm2026",
+        "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/graphite/Gr_Lithiation_Rehm2026.mat",
+        "sha256": "95ef0a80415a0f64bdc21e74d0093e7f3758904b34fcd2ea7f78c6fe0733dd96",
+        "github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "github_blob_sha1": "6bd65dc592d2baa1b7466f92340a737266d33d10",
+        "cross_version_status": "Byte-identical to pinned author GitHub MAT; fixed-release source remains canonical."
+      },
+      {
+        "asset_id": "tum-rehm2026-p45b-anode-delithiation-0c02",
+        "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+        "sha256": "842566a20a04a7f9ac692edb86d96d7e54500a82b85e8da773dbbde753dd322a",
+        "github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "github_blob_sha1": "138f479326d38cccce587c87aef6352837222001",
+        "cross_version_status": "Byte-identical to pinned author GitHub MAT; fixed-release source remains canonical."
+      },
+      {
+        "asset_id": "tum-rehm2026-p45b-anode-delithiation-0c03",
+        "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+        "sha256": "16fc04228b4f96e5f2402cec5045c0ed5622df2384a43d5c7d7d052332f642c4",
+        "github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "github_blob_sha1": "6d2358147a53858a30f104ae419ae8fee71afe1e",
+        "cross_version_status": "Byte-identical to pinned author GitHub MAT; fixed-release source remains canonical."
+      },
+      {
+        "asset_id": "tum-rehm2026-p45b-anode-lithiation-0c02",
+        "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+        "sha256": "9574d3ed73fe4b220c87884a7e7e08db240f4b9bd8eb90a301a80c09828d9af9",
+        "github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "github_blob_sha1": "2714bc4b2069e1bd53b5febe18a6b7009fb1fc13",
+        "cross_version_status": "Byte-identical to pinned author GitHub MAT; fixed-release source remains canonical."
+      },
+      {
+        "asset_id": "tum-rehm2026-p45b-anode-lithiation-0c03",
+        "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+        "sha256": "56297a7c053aeca120fbbc9f947e5b9a12df5ac43f342bcb198b04c790f087b2",
+        "github_revision": "402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "github_blob_sha1": "22ac5aabf5d0671abbd3bccb370347735ffe4794",
+        "cross_version_status": "Byte-identical to pinned author GitHub MAT; fixed-release source remains canonical."
+      }
+    ]
+  },
+  "held_sources": [
+    {
+      "id": "m50lt-hallemans",
+      "doi": "10.1149/1945-7111/add41b",
+      "author_revision": "3308a34396b8b56cd614291dd151c3405577c068",
+      "reason": "Section 7 attributes OCP to About:Energy personal communication; third-party redistribution grant not located. Author BSD-3-Clause does not independently establish sublicensing rights.",
+      "url": "https://arxiv.org/html/2412.10896v4"
+    },
+    {
+      "id": "aboutenergy-public-repositories",
+      "repositories": [
+        {
+          "name": "About-Energy-BPX-Parameterisation",
+          "revision": "8efd45a7495ad8d3a4d72b547e657322a4baabd2",
+          "result": "Public NMC example is 12.5 Ah NMC111 pouch, not M50LT."
+        },
+        {
+          "name": "AEPyBaMM",
+          "revision": "188bd62ee2347cc486b66dc43e31fb9597759db1",
+          "result": "P45B and generic LFP/NMC examples; no M50LT OCP grant located."
+        }
+      ],
+      "reason": "Different-model permission cannot clear M50LT personal-communication inputs."
+    },
+    {
+      "id": "stapf-m50lt-2025",
+      "doi": "10.1149/1945-7111/add112",
+      "title": "Is Silicon Replaceable? A Physical, Chemical, and Electrochemical Analysis of Different Commercial Lithium-Ion Battery Cells",
+      "article_license": "CC-BY-4.0",
+      "data_access": "Raw data available from corresponding author on reasonable request, per original paper statement; no open raw deposit resolved in this review.",
+      "reason": "Alternative M50/M50T/M50LT study, not the Hallemans source. No raw tables or plot-digitized curves admitted."
+    },
+    {
+      "id": "haidi-lfp-graphite",
+      "paper_doi": "10.1016/j.jpowsour.2025.236290",
+      "dataset_doi": "10.14459/2024mp1762675",
+      "metadata_url": "https://api.datacite.org/dois/10.14459/2024mp1762675",
+      "dataset_url": "https://mediatum.ub.tum.de/1762675",
+      "registered_rightsList": [],
+      "reason": "DOI resolved in DataCite, but rightsList empty; provider returned HTTP 429/timeouts. Article CC BY is not a dataset grant. Negative-electrode direction uses full-cell convention in derivative notice and still needs original definition review."
+    },
+    {
+      "id": "tum-m35a-m36",
+      "reason": "First-party attribution exists, but original publication/protocol/reference and full-cell donor chain not resolved for these branches. No definition inferred just from filenames."
+    },
+    {
+      "id": "tum-third-party-literature",
+      "reason": "Root MIT is not applied to externally cited Wetjen/Schmitt/Hossain and other literature digitizations. Source-specific permission/definition review incomplete."
+    },
+    {
+      "id": "tum-reconstructed-silicon",
+      "reason": "Not measured pure-material OCP. Version-specific reconstruction and documented later boundary/zero-fill changes require separate review; not admitted in this measured-branch extraction."
+    }
+  ],
+  "missing_items": [
+    "Numeric half-cell temperature",
+    "Absolute capacity/stoichiometric balancing",
+    "Identical harvested donor/full-cell serial mapping",
+    "Same-study intrinsic diffusivity and kinetic coefficients",
+    "Continuous full-cell I/V/T history; dynamic/EIS/multi-temperature matrix not established"
+  ]
+}

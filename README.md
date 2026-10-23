@@ -4,7 +4,7 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.13.0-287b78" alt="Version 0.13.0">
+  <img src="https://img.shields.io/badge/version-0.14.0-287b78" alt="Version 0.14.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
@@ -15,7 +15,7 @@ Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-curr
 
 **Project scope:** curate, document and export electrochemical parameters and associated experimental data. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
-**v0.13.0: 76 electrode-curve records · 13 material labels · 1,041 other parameter records · 61 full-cell branch/test files · 18 cell or study entries.** Curves comprise 48 measured pseudo-OCP branches, 7 published tables/fits, 19 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+**v0.14.0: 83 electrode-curve records · 13 material labels · 1,041 other parameter records · 61 full-cell branch/test files · 19 cell or study entries.** Curves comprise 55 measured pseudo-OCP branches, 7 published tables/fits, 19 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
 File-level follow-up: **[OCP-first search: 21 source families and five additions](docs/OCP_FIRST_EXPANSION.md)** · [Panasonic NCR18650B: four sources, tests and ageing](docs/NCR18650B.md) · [original seven-source review](docs/EXTERNAL_FILE_REVIEW.md) · [selected file/container locations](data/full-cell/files.csv). Source-listed filenames, archive-directory evidence and reviewed contents remain separate. OCP, diffusion and kinetics associations are recorded independently.
 
@@ -77,7 +77,8 @@ Record counts include published assumptions, borrowed functions, activation ener
 | Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
 |---|---|---|---|---|---|
 | [Panasonic NCR18650B &#124; HNEI2016](data/batteries/panasonic-ncr18650b-hnei2016.md) | [4 pseudo-OCP](data/cells/panasonic-ncr18650b-hnei2016.md#ocp-curves) | Not extracted | Not extracted | [4 external sources](data/batteries/panasonic-ncr18650b-hnei2016.md#full-cell-tests) | multi-T, dynamic, ageing, EIS<br>Cross-study / mixed sources · [Match / gaps](data/batteries/panasonic-ncr18650b-hnei2016.md#matching-and-gaps) |
-| [Molicel P45B &#124; About:Energy2026 BPX](data/batteries/molicel-p45b-aboutenergy2026.md) | [5 tables / fits](data/cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [7 records](data/parameters/molicel-p45b-aboutenergy2026--diffusion.csv) | [8 records](data/parameters/molicel-p45b-aboutenergy2026--kinetics.csv) | [2 external sources](data/batteries/molicel-p45b-aboutenergy2026.md#full-cell-tests) | multi-T, dynamic, ageing<br>Cross-study / mixed sources · [Match / gaps](data/batteries/molicel-p45b-aboutenergy2026.md#matching-and-gaps) |
+| [Molicel P45B &#124; About:Energy2026 BPX](data/batteries/molicel-p45b-aboutenergy2026.md) | [5 tables / fits](data/cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [7 records](data/parameters/molicel-p45b-aboutenergy2026--diffusion.csv) | [8 records](data/parameters/molicel-p45b-aboutenergy2026--kinetics.csv) | [2 external sources](data/batteries/molicel-p45b-aboutenergy2026.md#full-cell-tests) | multi-T, dynamic, ageing<br>same model same study · [Match / gaps](data/batteries/molicel-p45b-aboutenergy2026.md#matching-and-gaps) |
+| [Molicel P45B &#124; TUM Rehm2026 measured half-cells](data/batteries/molicel-p45b-tum-rehm2026.md) | [5 pseudo-OCP](data/cells/molicel-p45b-tum-rehm2026.md#ocp-curves) | Not extracted | Not extracted | [1 external source](data/batteries/molicel-p45b-tum-rehm2026.md#full-cell-tests) | ageing<br>same model same study · [Match / gaps](data/batteries/molicel-p45b-tum-rehm2026.md#matching-and-gaps) |
 | [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](data/batteries/kim2011-nca-nominal-design.md) | [2 expressions](data/cells/kim2011-nca-nominal-design.md#ocp-curves) | [6 records](data/parameters/kim2011-nca-nominal-design--diffusion.csv) | [7 records](data/parameters/kim2011-nca-nominal-design--kinetics.csv) | [Not linked](data/batteries/kim2011-nca-nominal-design.md#full-cell-tests) | See test conditions / gaps<br>unmatched · [Match / gaps](data/batteries/kim2011-nca-nominal-design.md#matching-and-gaps) |
 
 ### LCO
@@ -103,7 +104,7 @@ Material-only curves without a verified battery model remain in [the OCP materia
 
 <!-- DATA_QUICKLINKS_END -->
 
-NCR18650B includes four extracted HNEI half-cell branches and four full-cell sources; [read the extraction notes](docs/NCR18650B.md). P45B includes native BPX fits/parameters; the separate TUM half-cell reuse scope remains unresolved.
+NCR18650B includes four extracted HNEI half-cell branches and four full-cell sources; [read the extraction notes](docs/NCR18650B.md). P45B includes separate About:Energy BPX fits/parameters and [TUM Rehm2026 measured half-cell branches](data/batteries/molicel-p45b-tum-rehm2026.md). [The TUM rights/definition review](docs/TUM_OCP_RIGHTS.md) admits seven first-party curves only; third-party literature inputs remain excluded.
 
 Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaMM parameter variants; choose one. Generated formula samples are labeled and are not measurements.
 
@@ -117,7 +118,7 @@ Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaM
 | Material family | Measured branches | Published tables | Expressions | Modeled OCPn | Identity / interpretation |
 |---|---:|---:|---:|---:|---|
 | LFP | 6 | 0 | 3 | 1 | SINTEF and ISU laboratory electrodes; A123 PD-ECM model; Afshar and BPX expressions |
-| Graphite | 10 | 2 | 9 | 1 | Distinct measured, modeled, figure-fitted and borrowed inputs; reference/coordinate labels retained |
+| Graphite | 12 | 2 | 9 | 1 | Distinct measured, modeled, figure-fitted and borrowed inputs; reference/coordinate labels retained |
 | NMC111 | 4 | 0 | 0 | 0 | SINTEF specimens; commercial full-cell identity unresolved |
 | NMC532 | 6 | 0 | 2 | 0 | SINTEF electrodes, NEXTBMS harvested CALB and Mohtat pouch remain separate sources |
 | NMC811 | 0 | 0 | 2 | 0 | Chen2020 M50 positive OCP and its explicitly reused O'Regan model expression |
@@ -125,9 +126,9 @@ Missing OCP or tests are marked explicitly. Mohtat has separate author and PyBaM
 | Graphite-SiOx | 2 | 0 | 0 | 0 | DLR-SINTEF MJ1 negative half-cell branches |
 | LNMO | 4 | 0 | 0 | 0 | High-voltage spinel specimens; distinct from LMO |
 | Silicon | 4 | 3 | 0 | 0 | Si-AQ-1 laboratory specimens plus three P45B fitted silicon branches |
-| Silicon–graphite | 8 | 0 | 0 | 0 | SiGr-AQ-1 and SiGr-AQ-2 formulations retained separately |
+| Silicon–graphite | 12 | 0 | 0 | 0 | SINTEF SiGr-AQ-1/2 and four TUM P45B harvested branches remain separate |
 | LCO | 0 | 1 | 1 | 0 | Enertech published table; separate borrowed Marquis/Dualfoil expression |
-| NCA | 2 | 1 | 1 | 0 | HNEI NCR18650B branches; About:Energy P45B fitted input; separate Kim2011 nominal design |
+| NCA | 3 | 1 | 1 | 0 | HNEI NCR18650B and TUM P45B measured branches; About:Energy P45B fit; Kim2011 nominal design |
 | NCO | 0 | 0 | 1 | 0 | Ecker/Kokam upstream label; no NMC/NCA composition ratio inferred |
 
 LMO and LTO are deferred until a reusable source and its definitions can be verified; LNMO is not relabeled as LMO. All measured branches retain their own direction and relative-throughput coordinate. Formula domains describe numerical evaluation and do not establish experimental fit validity.
@@ -136,7 +137,7 @@ LMO and LTO are deferred until a reusable source and its definitions can be veri
 
 Use the [battery model index](data/batteries/README.md) for OCP, diffusion,
 kinetics and full-cell links together. The [per-model extraction audit](docs/PARAMETER_AUDIT.md)
-shows all 18 native packages, remaining source-only leads and why a component
+shows all 19 native packages, remaining source-only leads and why a component
 has not been admitted. Each cell page carries its definitions, provenance,
 parameter variants, full-cell association and missing items.
 
@@ -145,7 +146,8 @@ stored. Their values include borrowed laws, circuit/thermal defaults and optiona
 SEI/plating/mechanics assumptions; record counts are not a count of independent
 measurements. O'Regan experimental tables and published model inputs are distinct
 variants. The Prada nominal LFP package does not identify an A123 commercial part.
-TUM measurement-data and M50LT third-party OCP permission gaps remain explicit.
+Seven first-party TUM branches are admitted; remaining TUM source gaps and
+M50LT third-party OCP permission remain explicit.
 These records do not establish an independently validated, drop-in full-cell model.
 
 The strongest LFP association is [Lin et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938860/) and its [Oxford experiment deposit](https://ora.ox.ac.uk/objects/uuid:5f4abb09-c993-4799-9cb1-980218bde513). Its fitted diffusion time is shared by both electrodes. We expose `D = r²/t_d` using the implementation's **assumed 5 µm radius**, with that condition attached; it is not an independently measured intrinsic LFP diffusivity. The deposited full-discharge trace is retained as associated experimental data.

@@ -486,5 +486,36 @@
       "Reference chemistry not independently verified",
       "No current/time/temperature columns"
     ]
+  },
+  "tum-rehm2026-p45b-coincell": {
+    "source_id": "tum-rehm2026-v2",
+    "asset_id": "tum-rehm2026-p45b-cathode-delithiation-0c03",
+    "asset_ids": [
+      "tum-rehm2026-p45b-cathode-delithiation-0c03",
+      "tum-rehm2026-p45b-anode-delithiation-0c02",
+      "tum-rehm2026-p45b-anode-delithiation-0c03",
+      "tum-rehm2026-p45b-anode-lithiation-0c02",
+      "tum-rehm2026-p45b-anode-lithiation-0c03"
+    ],
+    "configuration": "CR2032 half-cell versus metallic lithium",
+    "protocol": "Two cycles each at 0.05C, 0.033C and 0.02C; supplied filenames use 0.03C/0.02C. PE 3.0-4.3 V; SiGr 0.05-1.7 V vs Li.",
+    "cycle_selected": null,
+    "temperature_K": null,
+    "known_issues": [],
+    "selection": "All seven allowlisted author-processed branches; exact cycle index not supplied."
+  },
+  "tum-rehm2026-graphite-coincell": {
+    "source_id": "tum-rehm2026-v2",
+    "asset_id": "tum-rehm2026-gr-delithiation-rehm2026",
+    "asset_ids": [
+      "tum-rehm2026-gr-delithiation-rehm2026",
+      "tum-rehm2026-gr-lithiation-rehm2026"
+    ],
+    "configuration": "CR2032 half-cell versus metallic lithium",
+    "protocol": "SGL Carbon laboratory graphite at 0.0145C; protocol 0.01-1.5 V vs Li. Supplied branches can cover a narrower voltage interval.",
+    "cycle_selected": null,
+    "temperature_K": null,
+    "known_issues": [],
+    "selection": "All seven allowlisted author-processed branches; exact cycle index not supplied."
   }
 }

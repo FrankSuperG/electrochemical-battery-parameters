@@ -9,6 +9,25 @@ project software remains MIT and each data/implementation record keeps its
 source-specific terms. Other external sources and their notices remain scoped
 to the provenance identified below.
 
+## First-party TUM admission in v0.14
+
+Seven original Rehm2026 half-cell MATs and derived tables retain **MIT**, scoped
+to author-origin files in fixed Zenodo release 19555109. The release metadata,
+Mathias Rehm notice, per-folder first-party attribution and original paper
+provide the combined admission basis. The [rights review](docs/TUM_OCP_RIGHTS.md)
+and [asset manifest](scripts/tum_ocp_assets.json) identify every admitted member.
+The author copyright/permission notice is packaged unchanged. Original normalized
+capacity and source-row columns preserve all nodes; only the uniform branch
+coordinate and ordering change. No whole-cell payload is added.
+
+This decision does not clear third-party literature digitizations, reconstructed
+silicon as measured data, or M50LT personal-communication inputs. Article access
+is not used as a blanket data license. Original publication attribution remains
+required. Public [Zenodo metadata](https://about.zenodo.org/policies/) and
+[DataCite metadata](https://support.datacite.org/docs/datacite-data-file-use-policy)
+are retained under their CC0 metadata terms, separately from the MAT
+data; an empty dataset rightsList does not acquire the metadata's reuse terms.
+
 ## Extraction follow-up in v0.13
 
 O'Regan's 55 parameter-table derivatives and original parameter ZIP are **CC BY
@@ -72,8 +91,9 @@ uses the less-specific `other-open` label. LG MJ1 SNU v2 states CC BY 4.0.
 
 TUM's MATLAB framework is MIT, but its README explicitly asks users to check
 licenses and attribution for published input data. No blanket measurement-data
-grant is imposed on that collection; data reuse remains unresolved in the
-external record. The Python mirror's BSD license is not substituted for it.
+grant is imposed on that collection. The v0.14 first-party subset is cleared
+separately above; the remaining literature inputs stay unresolved. The Python
+mirror's BSD license is not substituted for it.
 Third-party curves and reconstructed silicon retain their respective origins.
 
 At v0.11, these additions were links and review metadata only. The v0.12

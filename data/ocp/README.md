@@ -47,6 +47,8 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `aepy-p45b-negative-graphite-ocp-v` | negative / graphite | literature_table / Li/Li+ | source_reported_stoichiometry; [0.0011125213468379, 0.880643398272419] | [Retained table](../../src/ebp/data/curves/aepy-p45b-negative-graphite-ocp-v.csv) | [JSON](aepy-p45b-negative-graphite-ocp-v.json) |
 | `oregan-model-negative-electrode-ocp-v` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](oregan-model-negative-electrode-ocp-v-sampled.csv) | [JSON](oregan-model-negative-electrode-ocp-v.json) |
 | `prada2013-negative-borrowed-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](prada2013-negative-borrowed-ocp-sampled.csv) | [JSON](prada2013-negative-borrowed-ocp.json) |
+| `tum-rehm2026-gr-delithiation-rehm2026` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-gr-delithiation-rehm2026.csv) | [JSON](tum-rehm2026-gr-delithiation-rehm2026.json) |
+| `tum-rehm2026-gr-lithiation-rehm2026` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-gr-lithiation-rehm2026.csv) | [JSON](tum-rehm2026-gr-lithiation-rehm2026.json) |
 
 ## Graphite-SiOx
 
@@ -79,6 +81,7 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `hnei-ncr18650b-pe-lithiation` | positive / NCA | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [-0.0, 1.0] | [Retained table](../../src/ebp/data/curves/hnei-ncr18650b-pe-lithiation.csv) | [JSON](hnei-ncr18650b-pe-lithiation.json) |
 | `hnei-ncr18650b-pe-delithiation` | positive / NCA | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/hnei-ncr18650b-pe-delithiation.csv) | [JSON](hnei-ncr18650b-pe-delithiation.json) |
 | `aepy-p45b-positive-nca-ocp-v` | positive / NCA | literature_table / Li/Li+ | source_reported_stoichiometry; [0.216085984349077, 0.935944628026975] | [Retained table](../../src/ebp/data/curves/aepy-p45b-positive-nca-ocp-v.csv) | [JSON](aepy-p45b-positive-nca-ocp-v.json) |
+| `tum-rehm2026-p45b-cathode-delithiation-0c03` | positive / NCA | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-p45b-cathode-delithiation-0c03.csv) | [JSON](tum-rehm2026-p45b-cathode-delithiation-0c03.json) |
 
 ## NCO
 
@@ -146,3 +149,7 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `sintef-silicon-graphite-f4569b-c3-delithiation` | negative / silicon-graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/sintef-silicon-graphite-f4569b-c3-delithiation.csv) | [JSON](sintef-silicon-graphite-f4569b-c3-delithiation.json) |
 | `sintef-silicon-graphite-0cf06a-c3-lithiation` | negative / silicon-graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/sintef-silicon-graphite-0cf06a-c3-lithiation.csv) | [JSON](sintef-silicon-graphite-0cf06a-c3-lithiation.json) |
 | `sintef-silicon-graphite-0cf06a-c3-delithiation` | negative / silicon-graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/sintef-silicon-graphite-0cf06a-c3-delithiation.csv) | [JSON](sintef-silicon-graphite-0cf06a-c3-delithiation.json) |
+| `tum-rehm2026-p45b-anode-delithiation-0c02` | negative / silicon-graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-p45b-anode-delithiation-0c02.csv) | [JSON](tum-rehm2026-p45b-anode-delithiation-0c02.json) |
+| `tum-rehm2026-p45b-anode-delithiation-0c03` | negative / silicon-graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-p45b-anode-delithiation-0c03.csv) | [JSON](tum-rehm2026-p45b-anode-delithiation-0c03.json) |
+| `tum-rehm2026-p45b-anode-lithiation-0c02` | negative / silicon-graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-p45b-anode-lithiation-0c02.csv) | [JSON](tum-rehm2026-p45b-anode-lithiation-0c02.json) |
+| `tum-rehm2026-p45b-anode-lithiation-0c03` | negative / silicon-graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/tum-rehm2026-p45b-anode-lithiation-0c03.csv) | [JSON](tum-rehm2026-p45b-anode-lithiation-0c03.json) |

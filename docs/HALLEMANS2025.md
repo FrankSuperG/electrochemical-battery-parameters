@@ -52,6 +52,22 @@ remain external checksum-pinned leads, without packaged bytes, sampled curves
 or substitute Chen2020 OCPs. An explicit M50LT grant or documented rights-holder
 clarification would allow this decision to be revisited. No author was contacted.
 
+## OCP follow-up — 2026-10-23
+
+The pinned author repository remains at the revision above. The official
+About:Energy BPX repository was checked at
+`8efd45a7495ad8d3a4d72b547e657322a4baabd2` and AEPyBaMM at
+`188bd62ee2347cc486b66dc43e31fb9597759db1`. Public generic NMC/LFP examples and
+P45B parameters do not contain a resolved M50LT-specific grant. M50, M50T and
+M50LT identities remain separate; Chen2020 is not substituted.
+
+An alternative original study, Stapf et al., [Is Silicon Replaceable?](https://doi.org/10.1149/1945-7111/add112),
+compares M50 variants, but its raw-data statement provides data on reasonable
+request. The article is CC BY 4.0; no open raw deposit was resolved here. This
+is a separate lead, not a source identity match to Hallemans. No raw table or
+digitized figure is imported. See [the combined rights audit](TUM_OCP_RIGHTS.md)
+for primary sources, checked revisions and remaining evidence needed.
+
 ## Group definitions and model conventions
 
 Values are extracted directly from `thetahat`, with the order independently

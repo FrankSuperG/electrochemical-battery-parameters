@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "description": "External full-cell dataset links; records describe dataset coverage, not imported files or independent specimens. No payload is fetched by catalog, viewer, export or CI.",
   "records": [
     {
@@ -2894,7 +2894,7 @@
           "Z_real_Ohm",
           "Z_imag_Ohm"
         ],
-        "note": "Field names/units are documented on the source page, not verified from CSV/MAT contents. Pseudo-OCV curves are interpolated to 5000 SOC points. EIS: 50% SOC, four-hour rest, 250 mA excitation, 0.01 Hz\u201310 kHz. Pulses follow two-hour rest. 25 degC is a chamber condition, not a measured temperature trace; no pulse current trace is claimed."
+        "note": "Field names/units are documented on the source page, not verified from CSV/MAT contents. Pseudo-OCV curves are interpolated to 5000 SOC points. EIS: 50% SOC, four-hour rest, 250 mA excitation, 0.01 Hz–10 kHz. Pulses follow two-hour rest. 25 degC is a chamber condition, not a measured temperature trace; no pulse current trace is claimed."
       },
       "storage": "external_link",
       "source": {
@@ -9250,12 +9250,14 @@
         "ocv"
       ],
       "profiles": [],
-      "rate_summary": "Measured blend half-cell filenames use 0C02/0C03 = 0.02C/0.03C, not temperatures. Full-cell table contains charge/discharge pOCV checkups over a reported 800 EFC; it is not a complete 800-cycle I/V/T history.",
-      "temperatures_C": [],
+      "rate_summary": "Half-cell filenames use 0C02/0C03 = 0.02C/0.03C; paper Section 2.4 writes 0.02C/0.033C. Full-cell ageing protocol: 1C CCCV charge, 1.5C CC discharge at 25 C; pOCV checkups 0.033C. Protocol descriptions do not certify a complete cycling I/V/T file.",
+      "temperatures_C": [
+        25
+      ],
       "channels": {
         "time_series": [],
         "frequency_domain": [],
-        "note": "Observation headers and units were not independently read; source conditions remain distinct from measured channels."
+        "note": "25 C is the original paper full-cell ageing condition, not a verified measured temperature channel. Full-cell MAT observation headers/units remain unread."
       },
       "storage": "external_link",
       "source": {
@@ -9264,21 +9266,22 @@
         "version": "402bab94d20258162ff059b8d5d51abe40ec1c30"
       },
       "license": {
-        "identifier": "not-stated",
-        "evidence_url": "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/README.md",
-        "note": "Root framework LICENSE is MIT, but the README requires checking licenses/attribution for input_data from published sources. No separate blanket measurement-data license was established; retain links and per-source citation context. Do not apply the PyDMA Python mirror BSD license to this MATLAB dataset."
+        "identifier": "MIT",
+        "evidence_url": "https://zenodo.org/records/19555109",
+        "note": "Scoped to first-party Rehm2026/P45B release data and the author serial23 example. Fixed v2.0.0 metadata, bundled Mathias Rehm MIT notice and per-folder own-measurement attribution provide the combined basis. Not a blanket license for third-party literature inputs or other-model curves. Seven half-cell originals only are packaged; full-cell observations remain external."
       },
       "review": {
         "checked_on": "2026-10-23",
-        "level": "source_file_listing",
-        "note": "Primary metadata, source documentation and file locations reviewed. No observation payload imported or source code executed."
+        "level": "existing_source_audit",
+        "note": "Seven allowlisted first-party half-cell MATs read numerically against fixed v2.0.0; paper definitions and release license reviewed. Full-cell table contents remain unread; no full-cell payload packaged or author code executed."
       },
       "parameter_link": {
-        "cell_ids": [],
-        "match_level": "unmatched",
-        "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+        "cell_ids": [
+          "molicel-p45b-tum-rehm2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Five native harvested P45B pseudo-OCP branches and serial23 checkups share the Rehm2026 study/model. Same serialized donor is unresolved. About:Energy BPX is a separate study.",
         "missing_components": [
-          "electrode_ocp",
           "diffusion",
           "kinetics"
         ]
@@ -9287,7 +9290,8 @@
         "https://github.com/tum-ees/DegradationModeAnalysis/tree/402bab94d20258162ff059b8d5d51abe40ec1c30",
         "https://doi.org/10.1016/j.jpowsour.2026.239418",
         "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/README_additional_citations_necessary.txt",
-        "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/README_test_data.txt"
+        "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/README_test_data.txt",
+        "https://zenodo.org/records/19555109"
       ],
       "file_links": [
         {
@@ -9302,9 +9306,9 @@
           "source_sample_id": null,
           "temperature_C": null,
           "nominal_rate_C": 0.03,
-          "verification": "source_listing",
-          "content_review": "not_read",
-          "note": "Measured finite-current harvested-electrode curve according to source README; MAT arrays/coordinates/reference and temperature remain unread.",
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
           "size_bytes": 67176
         },
         {
@@ -9319,9 +9323,9 @@
           "source_sample_id": null,
           "temperature_C": null,
           "nominal_rate_C": 0.02,
-          "verification": "source_listing",
-          "content_review": "not_read",
-          "note": "Measured finite-current harvested-electrode curve according to source README; MAT arrays/coordinates/reference and temperature remain unread.",
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
           "size_bytes": 94970
         },
         {
@@ -9336,9 +9340,9 @@
           "source_sample_id": null,
           "temperature_C": null,
           "nominal_rate_C": 0.03,
-          "verification": "source_listing",
-          "content_review": "not_read",
-          "note": "Measured finite-current harvested-electrode curve according to source README; MAT arrays/coordinates/reference and temperature remain unread.",
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
           "size_bytes": 60682
         },
         {
@@ -9353,9 +9357,9 @@
           "source_sample_id": null,
           "temperature_C": null,
           "nominal_rate_C": 0.02,
-          "verification": "source_listing",
-          "content_review": "not_read",
-          "note": "Measured finite-current harvested-electrode curve according to source README; MAT arrays/coordinates/reference and temperature remain unread.",
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
           "size_bytes": 83744
         },
         {
@@ -9370,9 +9374,9 @@
           "source_sample_id": null,
           "temperature_C": null,
           "nominal_rate_C": 0.03,
-          "verification": "source_listing",
-          "content_review": "not_read",
-          "note": "Measured finite-current harvested-electrode curve according to source README; MAT arrays/coordinates/reference and temperature remain unread.",
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
           "size_bytes": 56068
         },
         {
@@ -9421,29 +9425,38 @@
           ],
           "profiles": [],
           "source_sample_id": "serial23",
-          "temperature_C": null,
+          "temperature_C": 25,
           "nominal_rate_C": null,
           "verification": "source_listing",
           "content_review": "not_read",
-          "note": "Whole-cell ageing pOCV checkup table; source reports 800 EFC. Raw continuous cycling I/V/T not established.",
+          "note": "Source-listed ageing pOCV checkups. 25 C is paper ageing condition; measured temperature, raw current/time channels and continuous cycling history not inspected. Same half-cell donor unresolved.",
           "size_bytes": 5013068
         }
       ],
       "missing_items": [
-        "Measurement reuse scope needs clarification; framework code license is not used as a blanket relicensing of input_data.",
-        "No raw MAT numerical inspection, verified half-cell temperature, donor-to-serial23 mapping, intrinsic D/k or native catalog parameter association.",
-        "Ageing table contains checkup curves, not a verified continuous current/voltage/temperature ageing log. No dynamic road cycle, EIS or multi-temperature matrix established.",
-        "Reconstructed silicon and third-party literature curves are not counted as measured pure-material OCP."
+        "Exact harvested donor-to-serial23 chain, half-cell numeric temperature and absolute stoichiometric balancing unresolved.",
+        "No same-study intrinsic D/k imported; About:Energy fitted parameters are not transferred.",
+        "Ageing table is a source-listed checkup file, not an inspected continuous current/voltage/temperature ageing log. No dynamic road cycle, EIS or multi-temperature matrix established.",
+        "Reconstructed silicon and third-party literature curves excluded from measured OCP admission.",
+        "Filename 0.03C and paper 0.033C labels retained separately."
       ],
       "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
       "parameter_components": {
         "ocp": {
-          "match_level": "missing",
-          "quantity_kind": "missing",
-          "record_ids": [],
-          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "tum-rehm2026-p45b-cathode-delithiation-0c03",
+            "tum-rehm2026-p45b-anode-delithiation-0c02",
+            "tum-rehm2026-p45b-anode-delithiation-0c03",
+            "tum-rehm2026-p45b-anode-lithiation-0c02",
+            "tum-rehm2026-p45b-anode-lithiation-0c03"
+          ],
+          "evidence": "Five finite-current harvested P45B half-cell branches, not equilibrium certification. Native source nodes, Li reference and branch-progress processing are documented.",
           "missing_items": [
-            "No verified current-catalog record for this component and study."
+            "Numeric half-cell temperature",
+            "Absolute stoichiometric endpoints",
+            "Identical donor-to-serial23 mapping"
           ]
         },
         "diffusion": {
@@ -9495,7 +9508,7 @@
         "evidence": "Source README identifies serial23 pOCV checkups through 800 EFC, one of the paper's four cycled cells. No full continuous cycling log or same-specimen half-cell donor is certified."
       },
       "ocp_anchor": {
-        "kind": "external_half_cell_files",
+        "kind": "catalog_half_cell",
         "half_cell_temperatures_C": [],
         "source_paths": [
           "input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
@@ -9506,12 +9519,14 @@
         ],
         "source_urls": [
           "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/README_additional_citations_necessary.txt",
-          "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/README_test_data.txt"
+          "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/README_test_data.txt",
+          "https://zenodo.org/records/19555109"
         ],
-        "evidence": "Four harvested SiGr-anode branches and one cathode branch are source-listed; measured blend OCP stays distinct from reconstructed silicon and other literature curves in the repository. Same study/model as serial23 checkups, different/unresolved donors."
+        "evidence": "Five harvested P45B pseudo-OCP branches are native under the scoped first-party MIT admission. Same paper/model as serial23 checkups; exact donor mapping unresolved. Laboratory graphite comparator remains material-only."
       },
       "catalog_evidence_paths": [
-        "evidence/ocp-first-expansion-review.json"
+        "evidence/ocp-first-expansion-review.json",
+        "evidence/tum-rehm2026/rights-review.json"
       ]
     },
     {
@@ -9520,7 +9535,7 @@
       "material_families": [
         "NMC"
       ],
-      "cell_identity": "LG M50 21700 NMC811/graphite-SiOx. Author TEC2021 paper explicitly reuses Chen2020 electrode OCP; cells labelled 781\u2013796 are not joined to Chen2020 specimen serials.",
+      "cell_identity": "LG M50 21700 NMC811/graphite-SiOx. Author TEC2021 paper explicitly reuses Chen2020 electrode OCP; cells labelled 781–796 are not joined to Chen2020 specimen serials.",
       "test_types": [
         "constant_current"
       ],

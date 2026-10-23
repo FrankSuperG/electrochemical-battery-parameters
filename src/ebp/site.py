@@ -9,6 +9,22 @@ import math
 import zipfile
 
 
+def _ocp_license_url(record):
+    source_notices = {
+        "tum-rehm2026-v2": "TUM-Rehm2026-MIT.txt",
+        "aepy-p45b-2026": "AEPyBaMM-BSD-3-Clause.txt",
+    }
+    for sid in record["source_ids"]:
+        if sid in source_notices:
+            return "licenses/" + source_notices[sid]
+    return {
+        "BSD-3-Clause": "licenses/PyBaMM-BSD-3-Clause.txt",
+        "MIT": "licenses/BPX-MIT.txt",
+        "CC-BY-4.0": "licenses/CC-BY-4.0.txt",
+        "CC0-1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
+    }[record["license"]]
+
+
 def _preview(test, samples):
     """Display decimation only: downloads always retain every observation."""
     if test["path"] is None:
@@ -74,6 +90,7 @@ def build_site(catalog, output):
     write_json("external-datasets.json", catalog.external_document)
     for curve in catalog.search():
         record = copy.deepcopy(curve.record)
+        record["license_url"] = _ocp_license_url(record)
         x, y = curve.sample(801)
         record["display_points"] = [[float(a), float(b)] for a, b in zip(x, y)]
         record["display_note"] = (

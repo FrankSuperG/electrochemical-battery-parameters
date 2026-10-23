@@ -33,7 +33,7 @@ Ageing availability applies to a source, not every linked file. `Not reported` i
 | [Panasonic NCR18650B multi-rate discharge and surface-temperature data](stanford-ncr18650b-rates-2021.md) | NCA | Cross-study catalog half-cell reference | Not reported | CC-BY-4.0 |
 | [CALB generation 3b 58 Ah: harvested half-cell OCP, multi-temperature tests and ageing](nextbms-calb-nmc532-2026.md) | NMC | Imported half-cell branches | Yes (cycle, calendar) | CC-BY-4.0 |
 | [Molicel P45B: published DFN OCP/parameters and multi-temperature CC, WLTP and eVTOL](aboutenergy-p45b-2026.md) | NCA | Published fitted parameterisation | Not reported | CC-BY-4.0 |
-| [Molicel P45B harvested half-cell curves and 800-EFC checkup pseudo-OCV](tum-p45b-halfcell-aging-2026.md) | NCA | External half-cell files | Yes (cycle) | not-stated |
+| [Molicel P45B harvested half-cell curves and 800-EFC checkup pseudo-OCV](tum-p45b-halfcell-aging-2026.md) | NCA | Imported half-cell branches | Yes (cycle) | MIT |
 | [LG M50 multi-temperature discharge with explicitly reused Chen2020 electrode OCP](tec-lgm50-multitemperature-2021.md) | NMC | Explicitly reused catalog expression | Not reported | BSD-3-Clause |
 | [LG MJ1 dynamic operating-sequence ageing (80 cells)](snu-mj1-dynamic-aging-2024.md) | NMC | Cross-study catalog half-cell reference | Yes (cycle) | CC-BY-4.0 |
 

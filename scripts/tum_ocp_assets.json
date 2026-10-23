@@ -1,0 +1,143 @@
+{
+  "tum-rehm2026-p45b-cathode-delithiation-0c03": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--NCA--P45B_Cathode_Delithiation_0C03.mat",
+    "path": "evidence/tum-rehm2026/input_data--NCA--P45B_Cathode_Delithiation_0C03.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+    "license": "MIT",
+    "sha256": "a1d6e755d3484633c6f5a35ea37afa641b62d0526c668c13ee906eaff4167b18"
+  },
+  "tum-rehm2026-gr-delithiation-rehm2026": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--graphite--Gr_Delithiation_Rehm2026.mat",
+    "path": "evidence/tum-rehm2026/input_data--graphite--Gr_Delithiation_Rehm2026.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/graphite/Gr_Delithiation_Rehm2026.mat",
+    "license": "MIT",
+    "sha256": "1fc439df7bd43f64d0795dc619a365bc08ea3eb164bb95124f44700b022a9ba4"
+  },
+  "tum-rehm2026-gr-lithiation-rehm2026": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--graphite--Gr_Lithiation_Rehm2026.mat",
+    "path": "evidence/tum-rehm2026/input_data--graphite--Gr_Lithiation_Rehm2026.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/graphite/Gr_Lithiation_Rehm2026.mat",
+    "license": "MIT",
+    "sha256": "95ef0a80415a0f64bdc21e74d0093e7f3758904b34fcd2ea7f78c6fe0733dd96"
+  },
+  "tum-rehm2026-p45b-anode-delithiation-0c02": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--silicon-graphite--P45B_Anode_Delithiation_0C02.mat",
+    "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Delithiation_0C02.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+    "license": "MIT",
+    "sha256": "842566a20a04a7f9ac692edb86d96d7e54500a82b85e8da773dbbde753dd322a"
+  },
+  "tum-rehm2026-p45b-anode-delithiation-0c03": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--silicon-graphite--P45B_Anode_Delithiation_0C03.mat",
+    "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Delithiation_0C03.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+    "license": "MIT",
+    "sha256": "16fc04228b4f96e5f2402cec5045c0ed5622df2384a43d5c7d7d052332f642c4"
+  },
+  "tum-rehm2026-p45b-anode-lithiation-0c02": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--silicon-graphite--P45B_Anode_Lithiation_0C02.mat",
+    "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Lithiation_0C02.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+    "license": "MIT",
+    "sha256": "9574d3ed73fe4b220c87884a7e7e08db240f4b9bd8eb90a301a80c09828d9af9"
+  },
+  "tum-rehm2026-p45b-anode-lithiation-0c03": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--silicon-graphite--P45B_Anode_Lithiation_0C03.mat",
+    "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Lithiation_0C03.mat",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+    "license": "MIT",
+    "sha256": "56297a7c053aeca120fbbc9f947e5b9a12df5ac43f342bcb198b04c790f087b2"
+  },
+  "tum-rehm2026-license": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "LICENSE",
+    "path": "evidence/tum-rehm2026/LICENSE",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/LICENSE",
+    "license": "MIT",
+    "sha256": "915996305aa25e59f372dca7b9133c4a07a29002bed30d905e80564f0ce9671a"
+  },
+  "tum-rehm2026-readme-md": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "README.md",
+    "path": "evidence/tum-rehm2026/README.md",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/README.md",
+    "license": "MIT",
+    "sha256": "c7f2256c8f2bdcfe120327239a2ed471d4462d9ddf42b0583a23f0ff83394930"
+  },
+  "tum-rehm2026-input-data--graphite--readme-additional-citations-necessary-txt": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--graphite--README_additional_citations_necessary.txt",
+    "path": "evidence/tum-rehm2026/input_data--graphite--README_additional_citations_necessary.txt",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/graphite/README_additional_citations_necessary.txt",
+    "license": "MIT",
+    "sha256": "4538d9ba0d5ba22801be1c79da5c217e80551a49f2bc847a9f81d83fded65b16"
+  },
+  "tum-rehm2026-input-data--nca--readme-additional-citations-necessary-txt": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--NCA--README_additional_citations_necessary.txt",
+    "path": "evidence/tum-rehm2026/input_data--NCA--README_additional_citations_necessary.txt",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/NCA/README_additional_citations_necessary.txt",
+    "license": "MIT",
+    "sha256": "9401bcac7b1993536a101b65edf8413a334fbdc2888b503eba3461a15391f5d5"
+  },
+  "tum-rehm2026-input-data--silicon-graphite--readme-additional-citations-necessary-txt": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--silicon-graphite--README_additional_citations_necessary.txt",
+    "path": "evidence/tum-rehm2026/input_data--silicon-graphite--README_additional_citations_necessary.txt",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/README_additional_citations_necessary.txt",
+    "license": "MIT",
+    "sha256": "ad8c57b77e29be57c28578415bf96b5ea62c2089bba2aa11f9443c88e5355481"
+  },
+  "tum-rehm2026-input-data--test-data--readme-test-data-txt": {
+    "source_id": "tum-rehm2026-v2",
+    "filename": "input_data--test_data--README_test_data.txt",
+    "path": "evidence/tum-rehm2026/input_data--test_data--README_test_data.txt",
+    "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+    "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/test_data/README_test_data.txt",
+    "license": "MIT",
+    "sha256": "47f41fe7d968c9e627099d5d0954461d34a549efa494a7f7f7cd1d1fa279c440"
+  },
+  "tum-review-zenodo-19555109": {
+    "source_id": "tum-rights-review-2026",
+    "filename": "zenodo-19555109.json",
+    "path": "evidence/tum-rehm2026/zenodo-19555109.json",
+    "url": "https://zenodo.org/api/records/19555109",
+    "license": "CC0-1.0",
+    "sha256": "dae21eefd10424036d371e13d966e596f035162725ac8d715e8afb6dc2823c5a"
+  },
+  "tum-review-haidi-datacite": {
+    "source_id": "tum-rights-review-2026",
+    "filename": "haidi-datacite.json",
+    "path": "evidence/tum-rehm2026/haidi-datacite.json",
+    "url": "https://api.datacite.org/dois/10.14459/2024mp1762675",
+    "license": "CC0-1.0",
+    "sha256": "09bb76ce7b08b986fd3d00a1d0628913e5e4a71cbc90f57d6771e4061ddfbe08"
+  },
+  "tum-rights-review": {
+    "source_id": "tum-rights-review-2026",
+    "filename": "rights-review.json",
+    "path": "evidence/tum-rehm2026/rights-review.json",
+    "url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/TUM_OCP_RIGHTS.md",
+    "license": "MIT",
+    "sha256": "0059cd294d74d4828d9c2ec25fe932d7f568147ab2eebd77ae25227977832eeb"
+  }
+}

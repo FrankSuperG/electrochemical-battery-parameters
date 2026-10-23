@@ -10,13 +10,22 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
     build_site(c, tmp_path)
     script = (tmp_path / "catalog.js").read_text()
     data = json.loads(script.removeprefix("window.EBP_DATA = ").removesuffix(";\n"))
-    assert len(data["records"]) == 76
+    assert len(data["records"]) == 83
     assert len(data["parameters"]) == 1041
     assert len(data["full_cell_tests"]) == 61
     assert data["external_datasets"] == c.external_datasets
     assert data["cell_material_families"] == {cid: c.cell_material_family(cid) for cid in c.cells}
     assert json.loads((tmp_path / "downloads/external-datasets.json").read_text()) == c.external_document
     for record in data["records"]:
+        license_url = record["license_url"]
+        if license_url.startswith("licenses/"):
+            assert (tmp_path/license_url).is_file()
+        else:
+            assert license_url == "https://creativecommons.org/publicdomain/zero/1.0/"
+        if "tum-rehm2026-v2" in record["source_ids"]:
+            assert "Copyright (c) 2025 Mathias Rehm" in (tmp_path/license_url).read_text()
+        if "aepy-p45b-2026" in record["source_ids"]:
+            assert "About:Energy" in (tmp_path/license_url).read_text()
         downloaded = json.loads(
             (tmp_path / "downloads" / f"{record['id']}.json").read_text()
         )
@@ -60,6 +69,8 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
         source = (tmp_path / filename).read_text()
         assert "cdn." not in source
         assert not re.search(r"[\u4e00-\u9fff]", source)
+    for source in data["sources"].values():
+        assert isinstance(source["authors"], list)
     assert '<html lang="en">' in (tmp_path / "index.html").read_text()
     assert (
         json.loads((tmp_path / "downloads/matching-audit.json").read_text())

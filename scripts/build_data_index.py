@@ -73,7 +73,7 @@ def parameter_csv(parameters):
 def battery_model_index(catalog):
     """Group explicit cell identities for navigation without changing scientific joins."""
     output, groups, assigned = {}, [], set()
-    # A same-model source may be discoverable here while its native data reuse is unresolved.
+    # Navigation may cross studies; scientific parameter joins remain separately explicit.
     extra = {"molicel-p45b-aboutenergy2026": ["tum-p45b-halfcell-aging-2026"],
              "lg-m50-oregan2022": ["tec-lgm50-multitemperature-2021"]}
     names = {"uccs-a123-26650m1b-2021": "A123 26650 m1b / UCCS",

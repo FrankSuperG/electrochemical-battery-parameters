@@ -506,6 +506,10 @@ def main(download=False):
 
     extend_model_completeness()
 
+    from seed_tum_ocp import extend as extend_tum_ocp
+
+    extend_tum_ocp()
+
     # The manually reviewed external-link registry is committed metadata. It is
     # never fetched here; reconstructing observations must not download its payloads.
     from ebp import __version__

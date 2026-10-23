@@ -9,5 +9,6 @@
 # Preserve experimental files byte-for-byte, including source line endings.
 *.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 src/ebp/data/evidence/* -text -whitespace
+src/ebp/data/evidence/tum-rehm2026/* -text -whitespace
 # Keep the publisher's license text as obtained.
 src/ebp/licenses/* -text -whitespace

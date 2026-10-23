@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "electrochemical-battery-parameters"
-version = "0.13.0"
+version = "0.14.0"
 description = "Traceable lithium-ion battery parameters and test data for DFN/P2D, SPM and SPMe models"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -67,7 +67,7 @@ Issues = "https://github.com/FrankSuperG/electrochemical-battery-parameters/issu
 where = ["src"]
 
 [tool.setuptools.package-data]
-ebp = ["data/*.json", "data/curves/*.csv", "data/parameter_tables/*.csv", "data/full_cell/*.csv", "data/evidence/*", "data/schema/*.json", "web/*", "licenses/*"]
+ebp = ["data/*.json", "data/curves/*.csv", "data/parameter_tables/*.csv", "data/full_cell/*.csv", "data/evidence/*", "data/evidence/tum-rehm2026/*", "data/schema/*.json", "web/*", "licenses/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -731,5 +731,49 @@
     "doi": "10.1016/j.electacta.2022.140700",
     "url": "https://doi.org/10.1016/j.electacta.2022.140700",
     "role": "LG M50 study context. Native formulas redistributed from BSD-licensed PyBaMM, not the article PDF."
+  },
+  "tum-rehm2026-v2": {
+    "kind": "dataset",
+    "title": "First-party Rehm2026 half-cell tables bundled with DegradationModeAnalysis v2.0.0",
+    "authors": [
+      "Mathias Rehm",
+      "Josef Eizenhammer",
+      "Moritz Guenthner"
+    ],
+    "year": 2026,
+    "url": "https://zenodo.org/records/19555109",
+    "doi": "10.5281/zenodo.19555109",
+    "version": "v2.0.0; archive d2e80c7",
+    "license": "MIT",
+    "license_evidence": "Fixed release metadata states MIT; bundled Mathias Rehm MIT notice and per-folder own-measurement attribution retained. Admission is limited to seven Rehm2026 first-party MATs, not third-party literature inputs.",
+    "role": "Five harvested P45B branches and two laboratory graphite branches. Full-cell data remain externally linked."
+  },
+  "rehm-2026": {
+    "kind": "paper",
+    "title": "How to determine the degradation modes of lithium-ion batteries with silicon-graphite blend electrodes",
+    "authors": [
+      "Mathias Rehm",
+      "Johannes Natterer",
+      "Josef Eizenhammer",
+      "Moritz Guenthner",
+      "Simon Kuecher",
+      "Can Korkmaz",
+      "Franz Roehrer",
+      "Andreas Jossen"
+    ],
+    "year": 2026,
+    "doi": "10.1016/j.jpowsour.2026.239418",
+    "url": "https://doi.org/10.1016/j.jpowsour.2026.239418",
+    "role": "Methods Section 2.4 establishes lithium-counter coin-cell measurements; Data availability points to author GitHub. Article license is not used to relicense external tables."
+  },
+  "tum-rights-review-2026": {
+    "kind": "documentation",
+    "title": "M50LT and TUM OCP reuse/definition audit, 2026-10-23",
+    "authors": [
+      "E-BatP maintainers"
+    ],
+    "url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/blob/main/docs/TUM_OCP_RIGHTS.md",
+    "year": 2026,
+    "role": "Fixed-release metadata and unresolved third-party-source review; no third-party MAT files admitted."
   }
 }

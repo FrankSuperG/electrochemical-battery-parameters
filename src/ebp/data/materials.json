@@ -216,5 +216,40 @@
   "prada2013-positive-borrowed-ocp-material": {
     "chemistry": "LFP",
     "description": "Borrowed Afshar2017 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+  },
+  "tum-rehm2026-p45b-cathode-delithiation-0c03-material": {
+    "label": "NCA",
+    "cell_id": "molicel-p45b-tum-rehm2026",
+    "note": "Source-specific measured electrode, not a universal material curve."
+  },
+  "tum-rehm2026-p45b-anode-delithiation-0c02-material": {
+    "label": "silicon-graphite",
+    "cell_id": "molicel-p45b-tum-rehm2026",
+    "note": "Source-specific measured electrode, not a universal material curve."
+  },
+  "tum-rehm2026-p45b-anode-delithiation-0c03-material": {
+    "label": "silicon-graphite",
+    "cell_id": "molicel-p45b-tum-rehm2026",
+    "note": "Source-specific measured electrode, not a universal material curve."
+  },
+  "tum-rehm2026-p45b-anode-lithiation-0c02-material": {
+    "label": "silicon-graphite",
+    "cell_id": "molicel-p45b-tum-rehm2026",
+    "note": "Source-specific measured electrode, not a universal material curve."
+  },
+  "tum-rehm2026-p45b-anode-lithiation-0c03-material": {
+    "label": "silicon-graphite",
+    "cell_id": "molicel-p45b-tum-rehm2026",
+    "note": "Source-specific measured electrode, not a universal material curve."
+  },
+  "tum-rehm2026-gr-delithiation-rehm2026-material": {
+    "label": "graphite",
+    "cell_id": null,
+    "note": "Source-specific measured electrode, not a universal material curve."
+  },
+  "tum-rehm2026-gr-lithiation-rehm2026-material": {
+    "label": "graphite",
+    "cell_id": null,
+    "note": "Source-specific measured electrode, not a universal material curve."
   }
 }

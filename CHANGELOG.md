@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.14.0 — 2026-10-23
+
+- Admitted seven first-party TUM Rehm2026 pseudo-OCP branches (40,378 original nodes) under narrowly scoped fixed-release MIT evidence. Five harvested P45B branches form a new same-study/model package; two laboratory graphite curves remain material-only.
+- Preserved original MATs, capacity/row columns and all voltages. Explicit branch-progress normalization/orientation, file-variable aliases, 0.03C versus paper 0.033C labels and missing half-cell temperature are recorded.
+- Linked the P45B package to external serial23 ageing checkups without asserting a common donor or importing whole-cell observations. Same-study D/k, absolute stoichiometry and measured temperature channels remain unresolved.
+- Rechecked M50LT author/company repositories and original papers; no third-party M50LT OCP grant established. Recorded the request-based Stapf study, empty HAIDI DOI rights metadata and remaining third-party/reconstruction holds.
+- Updated battery/model and material indexes, source audit and offline importer. Native totals: 83 curves/fits, 1,041 other parameters, 19 cell/study packages; 61 existing full-cell files unchanged.
+- External-link schema 1.5 allows scoped MIT source terms. Viewer license links now select the TUM/About:Energy author notice and a valid CC0 reference instead of a generic or missing link.
+
 ## 0.13.0 — 2026-10-23
 
 - Added 55 O'Regan LG M50 experimental parameter tables with native source rows, temperatures, specimens, directions, R-squared and explicit i0/entropy unit conversions. Three suspect Cp files remain quarantined; 73 separately labeled published model inputs and two reused Chen OCP expressions are stored.

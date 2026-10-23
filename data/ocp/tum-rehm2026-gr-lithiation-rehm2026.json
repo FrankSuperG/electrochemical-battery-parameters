@@ -1,0 +1,163 @@
+{
+  "record": {
+    "id": "tum-rehm2026-gr-lithiation-rehm2026",
+    "version": "1",
+    "title": "SGL Carbon laboratory graphite | lithiation | 0.0145C | Rehm2026",
+    "parameter": "electrode_ocp",
+    "material": "graphite",
+    "material_id": "tum-rehm2026-gr-lithiation-rehm2026-material",
+    "electrode_role": "negative",
+    "direction": "lithiation",
+    "measurement": "pseudo_ocp",
+    "temperature": {
+      "value_K": null,
+      "description": "Half-cell numeric temperature not independently confirmed; the paper's 25 C full-cell ageing condition is not transferred."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "normalized_branch_capacity",
+      "symbol": "x",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Branch progress normalized to [0,1], oriented by the named electrode lithiation/delithiation direction; not absolute stoichiometry or full-cell SOC. Original normalizedCapacity and row positions are retained in auxiliary CSV columns.",
+      "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "table",
+      "path": "curves/tum-rehm2026-gr-lithiation-rehm2026.csv",
+      "sha256": "b2c22efa1007270cecd771f0d76a2b507d4decd79071a503f8c26b5d771be6c0",
+      "point_count": 2450,
+      "default_interpolation": "linear"
+    },
+    "source_ids": [
+      "tum-rehm2026-v2",
+      "rehm-2026"
+    ],
+    "experiment_id": "tum-rehm2026-graphite-coincell",
+    "cell_link": {
+      "cell_id": null,
+      "relationship": "material_only",
+      "evidence": "Laboratory graphite electrode; not a harvested P45B graphite phase or a commercial full-cell identification."
+    },
+    "provenance": {
+      "asset_ids": [
+        "tum-rehm2026-gr-lithiation-rehm2026"
+      ],
+      "derivation": "finite_current_half_cell_branch",
+      "location": "Gr_Lithiation_Kuecher",
+      "processing": {
+        "script": "scripts/seed_tum_ocp.py",
+        "source_variable": "Gr_Lithiation_Kuecher",
+        "source_fields": [
+          "normalizedCapacity",
+          "voltage"
+        ],
+        "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/graphite/Gr_Lithiation_Rehm2026.mat",
+        "source_rows": 2450,
+        "omitted_rows": 0,
+        "source_capacity_bounds": [
+          0.0,
+          1.0
+        ],
+        "reverse_normalized_axis": false,
+        "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+        "orientation_basis": "Author filename electrode direction and endpoint potentials: potential decreases on lithiation, increases on delithiation. This is a curation coordinate, not a reconstruction of chronological acquisition order.",
+        "nominal_rate_C": 0.0145,
+        "nominal_rate_basis": "Original paper Section 2.4 laboratory graphite protocol",
+        "paper_protocol_rate_C": 0.0145,
+        "selection": "Entire author-processed branch, without smoothing, interpolation, clipping, row deletion or endpoint insertion. Source row is one-based in the original MAT vector."
+      }
+    },
+    "quality": {
+      "source_review": "raw_file_checked",
+      "axis_status": "relative_capacity_only",
+      "raw_data": "published_table_not_instrument_raw",
+      "model_status": "requires_stoichiometry_mapping",
+      "independent_validation": false
+    },
+    "limitations": [
+      "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+      "Same study/model does not establish identical half-cell/full-cell specimens.",
+      "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+      "No independent electrochemical-model validation is claimed.",
+      "Author-processed normalized-capacity/potential table; time, measured current and absolute capacity are absent.",
+      "Protocol voltage cutoffs do not establish that each supplied table contains every protocol endpoint."
+    ],
+    "license": "MIT"
+  },
+  "sources": {
+    "tum-rehm2026-v2": {
+      "kind": "dataset",
+      "title": "First-party Rehm2026 half-cell tables bundled with DegradationModeAnalysis v2.0.0",
+      "authors": [
+        "Mathias Rehm",
+        "Josef Eizenhammer",
+        "Moritz Guenthner"
+      ],
+      "year": 2026,
+      "url": "https://zenodo.org/records/19555109",
+      "doi": "10.5281/zenodo.19555109",
+      "version": "v2.0.0; archive d2e80c7",
+      "license": "MIT",
+      "license_evidence": "Fixed release metadata states MIT; bundled Mathias Rehm MIT notice and per-folder own-measurement attribution retained. Admission is limited to seven Rehm2026 first-party MATs, not third-party literature inputs.",
+      "role": "Five harvested P45B branches and two laboratory graphite branches. Full-cell data remain externally linked."
+    },
+    "rehm-2026": {
+      "kind": "paper",
+      "title": "How to determine the degradation modes of lithium-ion batteries with silicon-graphite blend electrodes",
+      "authors": [
+        "Mathias Rehm",
+        "Johannes Natterer",
+        "Josef Eizenhammer",
+        "Moritz Guenthner",
+        "Simon Kuecher",
+        "Can Korkmaz",
+        "Franz Roehrer",
+        "Andreas Jossen"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.jpowsour.2026.239418",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.239418",
+      "role": "Methods Section 2.4 establishes lithium-counter coin-cell measurements; Data availability points to author GitHub. Article license is not used to relicense external tables."
+    }
+  },
+  "experiment": {
+    "source_id": "tum-rehm2026-v2",
+    "asset_id": "tum-rehm2026-gr-delithiation-rehm2026",
+    "asset_ids": [
+      "tum-rehm2026-gr-delithiation-rehm2026",
+      "tum-rehm2026-gr-lithiation-rehm2026"
+    ],
+    "configuration": "CR2032 half-cell versus metallic lithium",
+    "protocol": "SGL Carbon laboratory graphite at 0.0145C; protocol 0.01-1.5 V vs Li. Supplied branches can cover a narrower voltage interval.",
+    "cycle_selected": null,
+    "temperature_K": null,
+    "known_issues": [],
+    "selection": "All seven allowlisted author-processed branches; exact cycle index not supplied."
+  },
+  "upstream_assets": {
+    "tum-rehm2026-gr-lithiation-rehm2026": {
+      "source_id": "tum-rehm2026-v2",
+      "filename": "input_data--graphite--Gr_Lithiation_Rehm2026.mat",
+      "path": "evidence/tum-rehm2026/input_data--graphite--Gr_Lithiation_Rehm2026.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/graphite/Gr_Lithiation_Rehm2026.mat",
+      "license": "MIT",
+      "sha256": "95ef0a80415a0f64bdc21e74d0093e7f3758904b34fcd2ea7f78c6fe0733dd96"
+    }
+  },
+  "export": {
+    "kind": "retained_source_table",
+    "sample_count": null,
+    "significant_digits": null,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

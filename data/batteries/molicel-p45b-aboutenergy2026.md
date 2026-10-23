@@ -27,7 +27,7 @@ New full-cell observations remain at their providers. Links below lead to descri
 | Source / files | CC / rate coverage | Full-cell temperatures / °C | Dynamic | Ageing | EIS | Parameter relationship |
 |---|---|---|---|---|---|---|
 | [aboutenergy-p45b-2026](../full-cell/aboutenergy-p45b-2026.md#file-locations) | [Source rates / limits](../full-cell/aboutenergy-p45b-2026.md#requested-test-coverage) | 10/25/40/60 | WLTP, eVTOL | [Not reported](../full-cell/aboutenergy-p45b-2026.md#ageing-data) | Not reported | same_model_same_study |
-| [tum-p45b-halfcell-aging-2026](../full-cell/tum-p45b-halfcell-aging-2026.md#file-locations) | Not separately verified | Unverified | Not reported | [Yes (cycle)](../full-cell/tum-p45b-halfcell-aging-2026.md#ageing-data) | Not reported | Same model; other study, no native parameter join |
+| [tum-p45b-halfcell-aging-2026](../full-cell/tum-p45b-halfcell-aging-2026.md#file-locations) | Not separately verified | 25 | Not reported | [Yes (cycle)](../full-cell/tum-p45b-halfcell-aging-2026.md#ageing-data) | Not reported | Same model; other study, no native parameter join |
 
 [Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
 
@@ -40,5 +40,5 @@ A shared commercial model permits discovery across studies; it does not establis
 - Native package match: `same_model_same_study`. Source names this cell/model within one study; full-cell observations stay externally linked and same-specimen mapping remains unresolved.
 - **aboutenergy-p45b-2026**: Native extracted OCP/parameter records and external full-cell tests are linked by explicit study/model identity. No identical serialized specimen is asserted.
   [Missing items, source terms and review limits](../full-cell/aboutenergy-p45b-2026.md#missing-items-and-limits)
-- **tum-p45b-halfcell-aging-2026**: No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.
+- **tum-p45b-halfcell-aging-2026**: Five native harvested P45B pseudo-OCP branches and serial23 checkups share the Rehm2026 study/model. Same serialized donor is unresolved. About:Energy BPX is a separate study.
   [Missing items, source terms and review limits](../full-cell/tum-p45b-halfcell-aging-2026.md#missing-items-and-limits)

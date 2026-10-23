@@ -1,10 +1,10 @@
 # OCP-first expansion screen — 2026-10-23
 
-**v0.11 screening snapshot.** See the [v0.13 comprehensive extraction audit](PARAMETER_AUDIT.md) for current decisions. The subsequent v0.12 follow-up extracted HNEI and
+**v0.11 screening snapshot.** See the [current comprehensive extraction audit](PARAMETER_AUDIT.md) for current decisions. The subsequent v0.12 follow-up extracted HNEI and
 NEXTBMS half-cell branches plus P45B fitted OCP/model parameters. Read the
 [current storage/extraction guide](PARAMETER_STORAGE.md) and
 [battery model index](../data/batteries/README.md) for native records and updated
-matches. The screening decisions below describe the earlier pass.
+matches. The screening decisions below describe the earlier pass. The [v0.14 TUM review](TUM_OCP_RIGHTS.md) subsequently admits seven first-party branches; the old unresolved TUM entries below are historical, not the current admission decision.
 
 [Full-cell sources with OCP and ageing columns](../data/full-cell/README.md) · [NMC](../data/full-cell/NMC.md) · [NCA](../data/full-cell/NCA.md) · [Machine-readable evidence](../src/ebp/data/evidence/ocp-first-expansion-review.json)
 

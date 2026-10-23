@@ -173,7 +173,7 @@ def test_p45b_measured_fitted_and_reconstructed_curves_stay_distinct():
     half = [f for f in tum["file_links"] if f["source_path"] in tum["ocp_anchor"]["source_paths"]]
     assert {f["nominal_rate_C"] for f in half} == {0.02, 0.03}
     assert all(f["temperature_C"] is None for f in half)
-    assert tum["license"]["identifier"] == "not-stated"
+    assert tum["license"]["identifier"] == "MIT"
 
 
 def test_cross_study_ocp_references_do_not_become_same_study_parameter_sets():

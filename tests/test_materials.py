@@ -29,9 +29,9 @@ def test_material_families_specimens_and_cell_associations():
         "NCA",
         "NCO",
     }
-    assert len(c.search()) == 76
-    assert len(c.experiments) == 18
-    assert len(c.search(representation="table")) == 57
+    assert len(c.search()) == 83
+    assert len(c.experiments) == 20
+    assert len(c.search(representation="table")) == 64
     for material, role in [
         ("NMC111", "positive"),
         ("NMC532", "positive"),
@@ -53,7 +53,7 @@ def test_material_families_specimens_and_cell_associations():
                 c.experiments[r.record["experiment_id"]]["electrode_metadata"][
                     "Public Labels"
                 ]
-                for r in c.search(material="silicon-graphite")
+                for r in c.search(material="silicon-graphite") if r.id.startswith("sintef-")
             }
         )
         == 2

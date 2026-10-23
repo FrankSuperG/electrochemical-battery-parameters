@@ -1,0 +1,951 @@
+{
+  "cell_id": "molicel-p45b-tum-rehm2026",
+  "cell": {
+    "manufacturer": "Molicel",
+    "model": "INR21700-P45B",
+    "display_name": "Molicel P45B | TUM Rehm2026 measured half-cells",
+    "format": "21700 cylindrical; harvested electrodes in CR2032 half-cells",
+    "chemistry": "NCA/silicon-graphite",
+    "nominal_capacity_Ah": 4.5,
+    "identity_level": "explicit_commercial_model",
+    "source_ids": [
+      "tum-rehm2026-v2",
+      "rehm-2026"
+    ],
+    "model_context": "Partial measured pseudo-OCP source package",
+    "match_level": "same_model_same_study",
+    "match_evidence": "Five harvested P45B half-cell branches and external serial23 checkups share paper/model; exact donor/serial identity unresolved. About:Energy P45B parameters are a separate study.",
+    "coverage": {
+      "ocp": "Five native finite-current pseudo-OCP branches, original nodes retained; Li/Li+ reference confirmed in Section 2.4.",
+      "diffusion": "No same-study intrinsic diffusivity admitted.",
+      "kinetics": "No same-study intrinsic kinetic law admitted.",
+      "full_cell_tests": "External serial23 ageing pOCV checkups only; continuous I/V/T, dynamic/EIS and multi-temperature matrices not established."
+    },
+    "note": "Laboratory graphite comparator is material-only; reconstructed silicon is not a measured pure-material half cell.",
+    "parameter_ids": [],
+    "ocp_record_ids": [
+      "tum-rehm2026-p45b-cathode-delithiation-0c03",
+      "tum-rehm2026-p45b-anode-delithiation-0c02",
+      "tum-rehm2026-p45b-anode-delithiation-0c03",
+      "tum-rehm2026-p45b-anode-lithiation-0c02",
+      "tum-rehm2026-p45b-anode-lithiation-0c03"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "tum-rehm2026-p45b-cathode-delithiation-0c03",
+          "tum-rehm2026-p45b-anode-delithiation-0c02",
+          "tum-rehm2026-p45b-anode-delithiation-0c03",
+          "tum-rehm2026-p45b-anode-lithiation-0c02",
+          "tum-rehm2026-p45b-anode-lithiation-0c03"
+        ],
+        "source_ids": [
+          "rehm-2026",
+          "tum-rehm2026-v2"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Five native finite-current pseudo-OCP branches, original nodes retained; Li/Li+ reference confirmed in Section 2.4.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No same-study intrinsic diffusivity admitted.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No same-study intrinsic kinetic law admitted.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "External serial23 ageing pOCV checkups only; continuous I/V/T, dynamic/EIS and multi-temperature matrices not established.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Matching full-cell charge/discharge observations not imported",
+      "Exact harvested donor to serial23 mapping unresolved",
+      "Numeric half-cell temperature not established",
+      "Absolute half-cell capacity and stoichiometric balancing not supplied",
+      "Same-study intrinsic D and kinetic coefficients not located",
+      "0C03 filename rate is 0.03C; original paper protocol states 0.033C",
+      "Full-cell tests are external links; 25 C is a paper condition, not a verified measured temperature channel"
+    ]
+  },
+  "parameters": [],
+  "ocp_records": [
+    {
+      "id": "tum-rehm2026-p45b-cathode-delithiation-0c03",
+      "version": "1",
+      "title": "Molicel P45B harvested NCA | delithiation | 0.03C | Rehm2026",
+      "parameter": "electrode_ocp",
+      "material": "NCA",
+      "material_id": "tum-rehm2026-p45b-cathode-delithiation-0c03-material",
+      "electrode_role": "positive",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Half-cell numeric temperature not independently confirmed; the paper's 25 C full-cell ageing condition is not transferred."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Branch progress normalized to [0,1], oriented by the named electrode lithiation/delithiation direction; not absolute stoichiometry or full-cell SOC. Original normalizedCapacity and row positions are retained in auxiliary CSV columns.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/tum-rehm2026-p45b-cathode-delithiation-0c03.csv",
+        "sha256": "e538d03e2843d3a20726dfdd6397d2474c7600c53c912d82807bff3ae9511a4d",
+        "point_count": 5481,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "tum-rehm2026-v2",
+        "rehm-2026"
+      ],
+      "experiment_id": "tum-rehm2026-p45b-coincell",
+      "cell_link": {
+        "cell_id": "molicel-p45b-tum-rehm2026",
+        "relationship": "same_model",
+        "evidence": "Harvested P45B electrodes in the same study as serial23 ageing checkups; exact donor-to-serial mapping unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "tum-rehm2026-p45b-cathode-delithiation-0c03"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "P45B_Cathode_Delithiation_0C03",
+        "processing": {
+          "script": "scripts/seed_tum_ocp.py",
+          "source_variable": "P45B_Cathode_Delithiation_0C03",
+          "source_fields": [
+            "normalizedCapacity",
+            "voltage"
+          ],
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+          "source_rows": 5481,
+          "omitted_rows": 0,
+          "source_capacity_bounds": [
+            -1.2087673253486609e-08,
+            0.9999999758246533
+          ],
+          "reverse_normalized_axis": false,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author filename electrode direction and endpoint potentials: potential decreases on lithiation, increases on delithiation. This is a curation coordinate, not a reconstruction of chronological acquisition order.",
+          "nominal_rate_C": 0.03,
+          "nominal_rate_basis": "Source filename and author folder notice",
+          "paper_protocol_rate_C": 0.033,
+          "selection": "Entire author-processed branch, without smoothing, interpolation, clipping, row deletion or endpoint insertion. Source row is one-based in the original MAT vector."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Author-processed normalized-capacity/potential table; time, measured current and absolute capacity are absent.",
+        "Filename 0C03 means 0.03C per author notice; paper Section 2.4 states 0.033C. Both labels retained; no numerical rate correction.",
+        "Protocol voltage cutoffs do not establish that each supplied table contains every protocol endpoint."
+      ],
+      "license": "MIT"
+    },
+    {
+      "id": "tum-rehm2026-p45b-anode-delithiation-0c02",
+      "version": "1",
+      "title": "Molicel P45B harvested silicon-graphite | delithiation | 0.02C | Rehm2026",
+      "parameter": "electrode_ocp",
+      "material": "silicon-graphite",
+      "material_id": "tum-rehm2026-p45b-anode-delithiation-0c02-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Half-cell numeric temperature not independently confirmed; the paper's 25 C full-cell ageing condition is not transferred."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Branch progress normalized to [0,1], oriented by the named electrode lithiation/delithiation direction; not absolute stoichiometry or full-cell SOC. Original normalizedCapacity and row positions are retained in auxiliary CSV columns.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/tum-rehm2026-p45b-anode-delithiation-0c02.csv",
+        "sha256": "f07ded9f9a054e352256f053df41343332104e9b39638b5db3777e1c06dfda90",
+        "point_count": 9386,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "tum-rehm2026-v2",
+        "rehm-2026"
+      ],
+      "experiment_id": "tum-rehm2026-p45b-coincell",
+      "cell_link": {
+        "cell_id": "molicel-p45b-tum-rehm2026",
+        "relationship": "same_model",
+        "evidence": "Harvested P45B electrodes in the same study as serial23 ageing checkups; exact donor-to-serial mapping unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "tum-rehm2026-p45b-anode-delithiation-0c02"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "P45B_Anode_Delithiation_0C02",
+        "processing": {
+          "script": "scripts/seed_tum_ocp.py",
+          "source_variable": "P45B_Anode_Delithiation_0C02",
+          "source_fields": [
+            "normalizedCapacity",
+            "voltage"
+          ],
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+          "source_rows": 9386,
+          "omitted_rows": 0,
+          "source_capacity_bounds": [
+            5.312126516443527e-09,
+            1.0
+          ],
+          "reverse_normalized_axis": true,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author filename electrode direction and endpoint potentials: potential decreases on lithiation, increases on delithiation. This is a curation coordinate, not a reconstruction of chronological acquisition order.",
+          "nominal_rate_C": 0.02,
+          "nominal_rate_basis": "Source filename and author folder notice",
+          "paper_protocol_rate_C": 0.02,
+          "selection": "Entire author-processed branch, without smoothing, interpolation, clipping, row deletion or endpoint insertion. Source row is one-based in the original MAT vector."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Author-processed normalized-capacity/potential table; time, measured current and absolute capacity are absent.",
+        "Protocol voltage cutoffs do not establish that each supplied table contains every protocol endpoint."
+      ],
+      "license": "MIT"
+    },
+    {
+      "id": "tum-rehm2026-p45b-anode-delithiation-0c03",
+      "version": "1",
+      "title": "Molicel P45B harvested silicon-graphite | delithiation | 0.03C | Rehm2026",
+      "parameter": "electrode_ocp",
+      "material": "silicon-graphite",
+      "material_id": "tum-rehm2026-p45b-anode-delithiation-0c03-material",
+      "electrode_role": "negative",
+      "direction": "delithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Half-cell numeric temperature not independently confirmed; the paper's 25 C full-cell ageing condition is not transferred."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Branch progress normalized to [0,1], oriented by the named electrode lithiation/delithiation direction; not absolute stoichiometry or full-cell SOC. Original normalizedCapacity and row positions are retained in auxiliary CSV columns.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/tum-rehm2026-p45b-anode-delithiation-0c03.csv",
+        "sha256": "a92e5c3f22c14034ef798c537402cc9adf301a464f808a29615a21b337ce731d",
+        "point_count": 5579,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "tum-rehm2026-v2",
+        "rehm-2026"
+      ],
+      "experiment_id": "tum-rehm2026-p45b-coincell",
+      "cell_link": {
+        "cell_id": "molicel-p45b-tum-rehm2026",
+        "relationship": "same_model",
+        "evidence": "Harvested P45B electrodes in the same study as serial23 ageing checkups; exact donor-to-serial mapping unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "tum-rehm2026-p45b-anode-delithiation-0c03"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "P45B_Anode_Delithiation_0C03",
+        "processing": {
+          "script": "scripts/seed_tum_ocp.py",
+          "source_variable": "P45B_Anode_Delithiation_0C03",
+          "source_fields": [
+            "normalizedCapacity",
+            "voltage"
+          ],
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+          "source_rows": 5579,
+          "omitted_rows": 0,
+          "source_capacity_bounds": [
+            8.941487994462705e-09,
+            1.0
+          ],
+          "reverse_normalized_axis": true,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author filename electrode direction and endpoint potentials: potential decreases on lithiation, increases on delithiation. This is a curation coordinate, not a reconstruction of chronological acquisition order.",
+          "nominal_rate_C": 0.03,
+          "nominal_rate_basis": "Source filename and author folder notice",
+          "paper_protocol_rate_C": 0.033,
+          "selection": "Entire author-processed branch, without smoothing, interpolation, clipping, row deletion or endpoint insertion. Source row is one-based in the original MAT vector."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Author-processed normalized-capacity/potential table; time, measured current and absolute capacity are absent.",
+        "Filename 0C03 means 0.03C per author notice; paper Section 2.4 states 0.033C. Both labels retained; no numerical rate correction.",
+        "Protocol voltage cutoffs do not establish that each supplied table contains every protocol endpoint."
+      ],
+      "license": "MIT"
+    },
+    {
+      "id": "tum-rehm2026-p45b-anode-lithiation-0c02",
+      "version": "1",
+      "title": "Molicel P45B harvested silicon-graphite | lithiation | 0.02C | Rehm2026",
+      "parameter": "electrode_ocp",
+      "material": "silicon-graphite",
+      "material_id": "tum-rehm2026-p45b-anode-lithiation-0c02-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Half-cell numeric temperature not independently confirmed; the paper's 25 C full-cell ageing condition is not transferred."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Branch progress normalized to [0,1], oriented by the named electrode lithiation/delithiation direction; not absolute stoichiometry or full-cell SOC. Original normalizedCapacity and row positions are retained in auxiliary CSV columns.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/tum-rehm2026-p45b-anode-lithiation-0c02.csv",
+        "sha256": "5b51f0b8505df02aae3c129f9af9fcc484728855d5e5b24213bf7e6c1c159cac",
+        "point_count": 9400,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "tum-rehm2026-v2",
+        "rehm-2026"
+      ],
+      "experiment_id": "tum-rehm2026-p45b-coincell",
+      "cell_link": {
+        "cell_id": "molicel-p45b-tum-rehm2026",
+        "relationship": "same_model",
+        "evidence": "Harvested P45B electrodes in the same study as serial23 ageing checkups; exact donor-to-serial mapping unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "tum-rehm2026-p45b-anode-lithiation-0c02"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "P45B_Anode_Lithiation_0C02",
+        "processing": {
+          "script": "scripts/seed_tum_ocp.py",
+          "source_variable": "P45B_Anode_Lithiation_0C02",
+          "source_fields": [
+            "normalizedCapacity",
+            "voltage"
+          ],
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+          "source_rows": 9400,
+          "omitted_rows": 0,
+          "source_capacity_bounds": [
+            5.608461040029766e-08,
+            1.0000000280423051
+          ],
+          "reverse_normalized_axis": false,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author filename electrode direction and endpoint potentials: potential decreases on lithiation, increases on delithiation. This is a curation coordinate, not a reconstruction of chronological acquisition order.",
+          "nominal_rate_C": 0.02,
+          "nominal_rate_basis": "Source filename and author folder notice",
+          "paper_protocol_rate_C": 0.02,
+          "selection": "Entire author-processed branch, without smoothing, interpolation, clipping, row deletion or endpoint insertion. Source row is one-based in the original MAT vector."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Author-processed normalized-capacity/potential table; time, measured current and absolute capacity are absent.",
+        "Protocol voltage cutoffs do not establish that each supplied table contains every protocol endpoint."
+      ],
+      "license": "MIT"
+    },
+    {
+      "id": "tum-rehm2026-p45b-anode-lithiation-0c03",
+      "version": "1",
+      "title": "Molicel P45B harvested silicon-graphite | lithiation | 0.03C | Rehm2026",
+      "parameter": "electrode_ocp",
+      "material": "silicon-graphite",
+      "material_id": "tum-rehm2026-p45b-anode-lithiation-0c03-material",
+      "electrode_role": "negative",
+      "direction": "lithiation",
+      "measurement": "pseudo_ocp",
+      "temperature": {
+        "value_K": null,
+        "description": "Half-cell numeric temperature not independently confirmed; the paper's 25 C full-cell ageing condition is not transferred."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "normalized_branch_capacity",
+        "symbol": "x",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Branch progress normalized to [0,1], oriented by the named electrode lithiation/delithiation direction; not absolute stoichiometry or full-cell SOC. Original normalizedCapacity and row positions are retained in auxiliary CSV columns.",
+        "domain_basis": "Retained native nodes only; no extrapolation, resampling or endpoint insertion."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "table",
+        "path": "curves/tum-rehm2026-p45b-anode-lithiation-0c03.csv",
+        "sha256": "a3d219ee57e2ddc1c51f32f12702e98c2b4cef0f8c20bc2d4291e8a8e9c7aabc",
+        "point_count": 5601,
+        "default_interpolation": "linear"
+      },
+      "source_ids": [
+        "tum-rehm2026-v2",
+        "rehm-2026"
+      ],
+      "experiment_id": "tum-rehm2026-p45b-coincell",
+      "cell_link": {
+        "cell_id": "molicel-p45b-tum-rehm2026",
+        "relationship": "same_model",
+        "evidence": "Harvested P45B electrodes in the same study as serial23 ageing checkups; exact donor-to-serial mapping unresolved."
+      },
+      "provenance": {
+        "asset_ids": [
+          "tum-rehm2026-p45b-anode-lithiation-0c03"
+        ],
+        "derivation": "finite_current_half_cell_branch",
+        "location": "P45B_Anode_Lithiation_0C03",
+        "processing": {
+          "script": "scripts/seed_tum_ocp.py",
+          "source_variable": "P45B_Anode_Lithiation_0C03",
+          "source_fields": [
+            "normalizedCapacity",
+            "voltage"
+          ],
+          "source_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+          "source_rows": 5601,
+          "omitted_rows": 0,
+          "source_capacity_bounds": [
+            3.144578220037886e-08,
+            1.000000015722891
+          ],
+          "reverse_normalized_axis": false,
+          "coordinate_transform": "q01=(q-min(q))/(max(q)-min(q)); x=1-q01 if reverse_normalized_axis else q01; stable sort ascending x",
+          "orientation_basis": "Author filename electrode direction and endpoint potentials: potential decreases on lithiation, increases on delithiation. This is a curation coordinate, not a reconstruction of chronological acquisition order.",
+          "nominal_rate_C": 0.03,
+          "nominal_rate_basis": "Source filename and author folder notice",
+          "paper_protocol_rate_C": 0.033,
+          "selection": "Entire author-processed branch, without smoothing, interpolation, clipping, row deletion or endpoint insertion. Source row is one-based in the original MAT vector."
+        }
+      },
+      "quality": {
+        "source_review": "raw_file_checked",
+        "axis_status": "relative_capacity_only",
+        "raw_data": "published_table_not_instrument_raw",
+        "model_status": "requires_stoichiometry_mapping",
+        "independent_validation": false
+      },
+      "limitations": [
+        "Finite-current pseudo-OCP; polarization and branch hysteresis are retained, not a certified equilibrium OCP.",
+        "Same study/model does not establish identical half-cell/full-cell specimens.",
+        "Half-cell temperature not independently established; full-cell temperature settings are not transferred.",
+        "No independent electrochemical-model validation is claimed.",
+        "Author-processed normalized-capacity/potential table; time, measured current and absolute capacity are absent.",
+        "Filename 0C03 means 0.03C per author notice; paper Section 2.4 states 0.033C. Both labels retained; no numerical rate correction.",
+        "Protocol voltage cutoffs do not establish that each supplied table contains every protocol endpoint."
+      ],
+      "license": "MIT"
+    }
+  ],
+  "full_cell_tests": [],
+  "external_datasets": [
+    {
+      "id": "tum-p45b-halfcell-aging-2026",
+      "title": "Molicel P45B harvested half-cell curves and 800-EFC checkup pseudo-OCV",
+      "material_families": [
+        "NCA"
+      ],
+      "cell_identity": "Molicel P45B; harvested blend-anode and cathode source files with one serial23 ageing checkup table. Author input folder labels cathode NCA. Different study from About:Energy P45B; no shared specimen or transfer of fitted parameters asserted.",
+      "test_types": [
+        "ocv"
+      ],
+      "profiles": [],
+      "rate_summary": "Half-cell filenames use 0C02/0C03 = 0.02C/0.03C; paper Section 2.4 writes 0.02C/0.033C. Full-cell ageing protocol: 1C CCCV charge, 1.5C CC discharge at 25 C; pOCV checkups 0.033C. Protocol descriptions do not certify a complete cycling I/V/T file.",
+      "temperatures_C": [
+        25
+      ],
+      "channels": {
+        "time_series": [],
+        "frequency_domain": [],
+        "note": "25 C is the original paper full-cell ageing condition, not a verified measured temperature channel. Full-cell MAT observation headers/units remain unread."
+      },
+      "storage": "external_link",
+      "source": {
+        "url": "https://github.com/tum-ees/DegradationModeAnalysis/tree/402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "doi": "10.1016/j.jpowsour.2026.239418",
+        "version": "402bab94d20258162ff059b8d5d51abe40ec1c30"
+      },
+      "license": {
+        "identifier": "MIT",
+        "evidence_url": "https://zenodo.org/records/19555109",
+        "note": "Scoped to first-party Rehm2026/P45B release data and the author serial23 example. Fixed v2.0.0 metadata, bundled Mathias Rehm MIT notice and per-folder own-measurement attribution provide the combined basis. Not a blanket license for third-party literature inputs or other-model curves. Seven half-cell originals only are packaged; full-cell observations remain external."
+      },
+      "review": {
+        "checked_on": "2026-10-23",
+        "level": "existing_source_audit",
+        "note": "Seven allowlisted first-party half-cell MATs read numerically against fixed v2.0.0; paper definitions and release license reviewed. Full-cell table contents remain unread; no full-cell payload packaged or author code executed."
+      },
+      "parameter_link": {
+        "cell_ids": [
+          "molicel-p45b-tum-rehm2026"
+        ],
+        "match_level": "same_model_same_study",
+        "evidence": "Five native harvested P45B pseudo-OCP branches and serial23 checkups share the Rehm2026 study/model. Same serialized donor is unresolved. About:Energy BPX is a separate study.",
+        "missing_components": [
+          "diffusion",
+          "kinetics"
+        ]
+      },
+      "evidence_urls": [
+        "https://github.com/tum-ees/DegradationModeAnalysis/tree/402bab94d20258162ff059b8d5d51abe40ec1c30",
+        "https://doi.org/10.1016/j.jpowsour.2026.239418",
+        "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/README_additional_citations_necessary.txt",
+        "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/README_test_data.txt",
+        "https://zenodo.org/records/19555109"
+      ],
+      "file_links": [
+        {
+          "label": "input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+          "source_path": "input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": 0.03,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
+          "size_bytes": 67176
+        },
+        {
+          "label": "input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": 0.02,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
+          "size_bytes": 94970
+        },
+        {
+          "label": "input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": 0.03,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
+          "size_bytes": 60682
+        },
+        {
+          "label": "input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": 0.02,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
+          "size_bytes": 83744
+        },
+        {
+          "label": "input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+          "source_path": "input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": 0.03,
+          "verification": "existing_source_audit",
+          "content_review": "existing_source_audit",
+          "note": "Numerical MAT branch extracted to native catalog; relative capacity, Li reference and author direction checked. Numeric half-cell temperature unresolved. 0C03 filename says 0.03C; paper protocol says 0.033C.",
+          "size_bytes": 56068
+        },
+        {
+          "label": "input_data/silicon/SiReconstr_Delithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon/SiReconstr_Delithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "source_path": "input_data/silicon/SiReconstr_Delithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Reconstructed silicon curve, not a measured pure-silicon half cell; excluded from measured-half-cell anchor.",
+          "size_bytes": 34584
+        },
+        {
+          "label": "input_data/silicon/SiReconstr_Lithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon/SiReconstr_Lithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "source_path": "input_data/silicon/SiReconstr_Lithiation_Rehm2026_P45B_Anode_0C03.mat",
+          "kind": "parameter_evidence",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [],
+          "profiles": [],
+          "source_sample_id": null,
+          "temperature_C": null,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Reconstructed silicon curve, not a measured pure-silicon half cell; excluded from measured-half-cell anchor.",
+          "size_bytes": 82810
+        },
+        {
+          "label": "input_data/test_data/P45B_serial23_aging_data_table.mat",
+          "url": "https://raw.githubusercontent.com/tum-ees/DegradationModeAnalysis/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/P45B_serial23_aging_data_table.mat",
+          "source_path": "input_data/test_data/P45B_serial23_aging_data_table.mat",
+          "kind": "file",
+          "cell_model": "Molicel P45B",
+          "material_family": "NCA",
+          "test_types": [
+            "ocv"
+          ],
+          "profiles": [],
+          "source_sample_id": "serial23",
+          "temperature_C": 25,
+          "nominal_rate_C": null,
+          "verification": "source_listing",
+          "content_review": "not_read",
+          "note": "Source-listed ageing pOCV checkups. 25 C is paper ageing condition; measured temperature, raw current/time channels and continuous cycling history not inspected. Same half-cell donor unresolved.",
+          "size_bytes": 5013068
+        }
+      ],
+      "missing_items": [
+        "Exact harvested donor-to-serial23 chain, half-cell numeric temperature and absolute stoichiometric balancing unresolved.",
+        "No same-study intrinsic D/k imported; About:Energy fitted parameters are not transferred.",
+        "Ageing table is a source-listed checkup file, not an inspected continuous current/voltage/temperature ageing log. No dynamic road cycle, EIS or multi-temperature matrix established.",
+        "Reconstructed silicon and third-party literature curves excluded from measured OCP admission.",
+        "Filename 0.03C and paper 0.033C labels retained separately."
+      ],
+      "inventory_scope": "Selected confirmed source paths and parameter evidence. Counts describe locators, not independent experiments or a complete cell-by-temperature matrix.",
+      "parameter_components": {
+        "ocp": {
+          "match_level": "same_model_same_study",
+          "quantity_kind": "electrode_ocp",
+          "record_ids": [
+            "tum-rehm2026-p45b-cathode-delithiation-0c03",
+            "tum-rehm2026-p45b-anode-delithiation-0c02",
+            "tum-rehm2026-p45b-anode-delithiation-0c03",
+            "tum-rehm2026-p45b-anode-lithiation-0c02",
+            "tum-rehm2026-p45b-anode-lithiation-0c03"
+          ],
+          "evidence": "Five finite-current harvested P45B half-cell branches, not equilibrium certification. Native source nodes, Li reference and branch-progress processing are documented.",
+          "missing_items": [
+            "Numeric half-cell temperature",
+            "Absolute stoichiometric endpoints",
+            "Identical donor-to-serial23 mapping"
+          ]
+        },
+        "diffusion": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        },
+        "kinetics": {
+          "match_level": "missing",
+          "quantity_kind": "missing",
+          "record_ids": [],
+          "evidence": "No current catalog OCP/D/kinetics record is verified for this model/study. External half-cell files or published parameter packages are source leads, not silently imported parameters.",
+          "missing_items": [
+            "No verified current-catalog record for this component and study."
+          ]
+        }
+      },
+      "test_coverage": {
+        "multi_rate_charge": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "multi_rate_discharge": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "US06": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        },
+        "EIS": {
+          "status": "not_located",
+          "evidence": "No file for this requested class was identified in the inspected source; this does not establish absence elsewhere."
+        }
+      },
+      "aging_data": {
+        "status": "available",
+        "kinds": [
+          "cycle"
+        ],
+        "source_url": "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/README_test_data.txt",
+        "file_paths": [
+          "input_data/test_data/P45B_serial23_aging_data_table.mat"
+        ],
+        "evidence": "Source README identifies serial23 pOCV checkups through 800 EFC, one of the paper's four cycled cells. No full continuous cycling log or same-specimen half-cell donor is certified."
+      },
+      "ocp_anchor": {
+        "kind": "catalog_half_cell",
+        "half_cell_temperatures_C": [],
+        "source_paths": [
+          "input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+          "input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+          "input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+          "input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+          "input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat"
+        ],
+        "source_urls": [
+          "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/silicon-graphite/README_additional_citations_necessary.txt",
+          "https://github.com/tum-ees/DegradationModeAnalysis/blob/402bab94d20258162ff059b8d5d51abe40ec1c30/input_data/test_data/README_test_data.txt",
+          "https://zenodo.org/records/19555109"
+        ],
+        "evidence": "Five harvested P45B pseudo-OCP branches are native under the scoped first-party MIT admission. Same paper/model as serial23 checkups; exact donor mapping unresolved. Laboratory graphite comparator remains material-only."
+      },
+      "catalog_evidence_paths": [
+        "evidence/ocp-first-expansion-review.json",
+        "evidence/tum-rehm2026/rights-review.json"
+      ]
+    }
+  ],
+  "sources": {
+    "rehm-2026": {
+      "kind": "paper",
+      "title": "How to determine the degradation modes of lithium-ion batteries with silicon-graphite blend electrodes",
+      "authors": [
+        "Mathias Rehm",
+        "Johannes Natterer",
+        "Josef Eizenhammer",
+        "Moritz Guenthner",
+        "Simon Kuecher",
+        "Can Korkmaz",
+        "Franz Roehrer",
+        "Andreas Jossen"
+      ],
+      "year": 2026,
+      "doi": "10.1016/j.jpowsour.2026.239418",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.239418",
+      "role": "Methods Section 2.4 establishes lithium-counter coin-cell measurements; Data availability points to author GitHub. Article license is not used to relicense external tables."
+    },
+    "tum-rehm2026-v2": {
+      "kind": "dataset",
+      "title": "First-party Rehm2026 half-cell tables bundled with DegradationModeAnalysis v2.0.0",
+      "authors": [
+        "Mathias Rehm",
+        "Josef Eizenhammer",
+        "Moritz Guenthner"
+      ],
+      "year": 2026,
+      "url": "https://zenodo.org/records/19555109",
+      "doi": "10.5281/zenodo.19555109",
+      "version": "v2.0.0; archive d2e80c7",
+      "license": "MIT",
+      "license_evidence": "Fixed release metadata states MIT; bundled Mathias Rehm MIT notice and per-folder own-measurement attribution retained. Admission is limited to seven Rehm2026 first-party MATs, not third-party literature inputs.",
+      "role": "Five harvested P45B branches and two laboratory graphite branches. Full-cell data remain externally linked."
+    }
+  },
+  "upstream_assets": {
+    "tum-rehm2026-p45b-anode-delithiation-0c02": {
+      "source_id": "tum-rehm2026-v2",
+      "filename": "input_data--silicon-graphite--P45B_Anode_Delithiation_0C02.mat",
+      "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Delithiation_0C02.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C02.mat",
+      "license": "MIT",
+      "sha256": "842566a20a04a7f9ac692edb86d96d7e54500a82b85e8da773dbbde753dd322a"
+    },
+    "tum-rehm2026-p45b-anode-delithiation-0c03": {
+      "source_id": "tum-rehm2026-v2",
+      "filename": "input_data--silicon-graphite--P45B_Anode_Delithiation_0C03.mat",
+      "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Delithiation_0C03.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Delithiation_0C03.mat",
+      "license": "MIT",
+      "sha256": "16fc04228b4f96e5f2402cec5045c0ed5622df2384a43d5c7d7d052332f642c4"
+    },
+    "tum-rehm2026-p45b-anode-lithiation-0c02": {
+      "source_id": "tum-rehm2026-v2",
+      "filename": "input_data--silicon-graphite--P45B_Anode_Lithiation_0C02.mat",
+      "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Lithiation_0C02.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C02.mat",
+      "license": "MIT",
+      "sha256": "9574d3ed73fe4b220c87884a7e7e08db240f4b9bd8eb90a301a80c09828d9af9"
+    },
+    "tum-rehm2026-p45b-anode-lithiation-0c03": {
+      "source_id": "tum-rehm2026-v2",
+      "filename": "input_data--silicon-graphite--P45B_Anode_Lithiation_0C03.mat",
+      "path": "evidence/tum-rehm2026/input_data--silicon-graphite--P45B_Anode_Lithiation_0C03.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/silicon-graphite/P45B_Anode_Lithiation_0C03.mat",
+      "license": "MIT",
+      "sha256": "56297a7c053aeca120fbbc9f947e5b9a12df5ac43f342bcb198b04c790f087b2"
+    },
+    "tum-rehm2026-p45b-cathode-delithiation-0c03": {
+      "source_id": "tum-rehm2026-v2",
+      "filename": "input_data--NCA--P45B_Cathode_Delithiation_0C03.mat",
+      "path": "evidence/tum-rehm2026/input_data--NCA--P45B_Cathode_Delithiation_0C03.mat",
+      "url": "https://zenodo.org/api/records/19555109/files/tum-ees/DegradationModeAnalysis-v2.0.0.zip/content",
+      "archive_member": "tum-ees-DegradationModeAnalysis-d2e80c7/input_data/NCA/P45B_Cathode_Delithiation_0C03.mat",
+      "license": "MIT",
+      "sha256": "a1d6e755d3484633c6f5a35ea37afa641b62d0526c668c13ee906eaff4167b18"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}
