@@ -38,7 +38,7 @@
     "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
     "version": "v25.4.2",
     "license": "BSD-3-Clause",
-    "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+    "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
   },
   "sintef-2026-v3": {
     "kind": "dataset",
@@ -700,5 +700,36 @@
     "license": "BSD-3-Clause",
     "version": "188bd62ee2347cc486b66dc43e31fb9597759db1",
     "role": "Original BPX model inputs and author BSD notice retained; fitted OCP is not raw half-cell measurement."
+  },
+  "oregan-2021-data": {
+    "kind": "dataset",
+    "title": "O'Regan thermal-electrochemical characterisation parameter tables",
+    "authors": [
+      "Kieran O'Regan",
+      "Ferran Brosa-Planella",
+      "W. Dhammika Widanage",
+      "Emma Kendrick"
+    ],
+    "year": 2021,
+    "url": "https://zenodo.org/records/5171874",
+    "doi": "10.5281/zenodo.5171874",
+    "version": "1.0; fixed record 5171874",
+    "license": "CC-BY-4.0",
+    "license_evidence": "Packaged fixed-record API metadata reports cc-by-4.0; source archive checksum preserved.",
+    "role": "55 native experimental parameter tables; three suspect Cp files quarantined in original archive; no full-cell traces in this ZIP."
+  },
+  "oregan-2022": {
+    "kind": "paper",
+    "title": "Thermal-electrochemical parameters of a high energy lithium-ion cylindrical battery",
+    "authors": [
+      "Kieran O'Regan",
+      "Ferran Brosa-Planella",
+      "W. Dhammika Widanage",
+      "Emma Kendrick"
+    ],
+    "year": 2022,
+    "doi": "10.1016/j.electacta.2022.140700",
+    "url": "https://doi.org/10.1016/j.electacta.2022.140700",
+    "role": "LG M50 study context. Native formulas redistributed from BSD-licensed PyBaMM, not the article PDF."
   }
 }

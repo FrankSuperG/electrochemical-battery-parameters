@@ -9,6 +9,22 @@ project software remains MIT and each data/implementation record keeps its
 source-specific terms. Other external sources and their notices remain scoped
 to the provenance identified below.
 
+## Extraction follow-up in v0.13
+
+O'Regan's 55 parameter-table derivatives and original parameter ZIP are **CC BY
+4.0**, with original authors, DOI and fixed-record license metadata retained.
+Three Cp CSVs remain unmodified in the archive but are excluded as physical Cp
+tables because their definition is unresolved. Model formulas/scalars come
+separately from **BSD-3-Clause PyBaMM v25.4.2**; the paper PDF is not redistributed.
+
+The completed Chen, Marquis, Mohtat, Kim, Ai, Ecker and Prada implementation
+inputs retain the existing PyBaMM BSD-3-Clause notice. Borrowed formulas and
+optional SEI/plating/mechanics assumptions are not relabeled measured cell data.
+The three BPX LFP reference-law expressions retain the original **MIT** terms.
+P45B's seven additional custom-law/contact records and pinned author parser/helper
+files retain **BSD-3-Clause**, with the About:Energy notice already packaged.
+No new full-cell payload or unclear third-party OCP is redistributed.
+
 ## Extracted OCP and parameter sources in v0.12
 
 Two original HNEI NCR18650B half-cell MAT members and four extracted branches

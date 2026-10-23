@@ -10,7 +10,7 @@ OCP and reusable model parameters are extracted into versioned CSV/JSON records.
 
 | OCP | Diffusion | Kinetics |
 |---|---|---|
-| [2 expressions](../cells/lg-m50.md#ocp-curves) | [2 records](../parameters/lg-m50--diffusion.csv) | [2 records](../parameters/lg-m50--kinetics.csv) |
+| [2 expressions](../cells/lg-m50.md#ocp-curves) | [6 records](../parameters/lg-m50--diffusion.csv) | [7 records](../parameters/lg-m50--kinetics.csv) |
 
 [Full cell/study package: definitions, all parameters, sources and gaps](../cells/lg-m50.md)
 
@@ -31,6 +31,8 @@ Three same-model validation samples
 | Source / files | CC / rate coverage | Full-cell temperatures / °C | Dynamic | Ageing | EIS | Parameter relationship |
 |---|---|---|---|---|---|---|
 | [tec-lgm50-multitemperature-2021](../full-cell/tec-lgm50-multitemperature-2021.md#file-locations) | [Source rates / limits](../full-cell/tec-lgm50-multitemperature-2021.md#requested-test-coverage) | 0/10/25 | Not reported | [Not reported](../full-cell/tec-lgm50-multitemperature-2021.md#ageing-data) | Not reported | same_model_different_study |
+
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
 
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 

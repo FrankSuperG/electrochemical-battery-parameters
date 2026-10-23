@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "release": "0.12.0",
+  "release": "0.13.0",
   "records": [
     {
       "id": "lfp-afshar2017-formula",
@@ -5890,6 +5890,306 @@
         "No independent electrochemical-model validation is claimed.",
         "Source fits contain extreme extrapolated potentials near 0/1; complete original BPX retained, catalog domain restricted to configured particle bounds.",
         "Three negative silicon branches are model inputs, not three independent measured experiments."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "oregan-model-negative-electrode-ocp-v",
+      "version": "1",
+      "title": "graphite | graphite_LGM50_ocp_Chen2020 | implementation expression",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "oregan-model-negative-electrode-ocp-v-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+        "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "1.9793 * exp(-39.3631 * x) + 0.2482 - 0.0909 * tanh(29.8538 * (x - 0.1234)) - 0.04478 * tanh(14.9159 * (x - 0.2769)) - 0.0205 * tanh(30.4444 * (x - 0.6103))",
+        "functions": [
+          "exp",
+          "tanh"
+        ],
+        "source_function": "graphite_LGM50_ocp_Chen2020"
+      },
+      "source_ids": [
+        "pybamm-25-4-2",
+        "chen-2020",
+        "oregan-2022"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-m50-oregan2022",
+        "relationship": "material_only",
+        "evidence": "O'Regan2022 explicitly reuses Chen2020 OCP functions; no new O'Regan half-cell OCP measurement is deposited."
+      },
+      "provenance": {
+        "asset_ids": [
+          "oregan-pybamm-code"
+        ],
+        "derivation": "borrowed_Chen2020_model_expression",
+        "location": "graphite_LGM50_ocp_Chen2020",
+        "processing": {
+          "script": "scripts/seed_oregan.py",
+          "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "An implementation expression, not original measured points or a newly fitted curve.",
+        "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+        "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+        "O'Regan2022 explicitly reuses Chen2020 OCP functions; no new O'Regan half-cell OCP measurement is deposited."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "oregan-model-positive-electrode-ocp-v",
+      "version": "1",
+      "title": "NMC811 | nmc_LGM50_ocp_Chen2020 | implementation expression",
+      "parameter": "electrode_ocp",
+      "material": "NMC811",
+      "material_id": "oregan-model-positive-electrode-ocp-v-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+        "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "-0.809 * x + 4.4875 - 0.0428 * tanh(18.5138 * (x - 0.5542)) - 17.7326 * tanh(15.789 * (x - 0.3117)) + 17.5842 * tanh(15.9308 * (x - 0.312))",
+        "functions": [
+          "tanh"
+        ],
+        "source_function": "nmc_LGM50_ocp_Chen2020"
+      },
+      "source_ids": [
+        "pybamm-25-4-2",
+        "chen-2020",
+        "oregan-2022"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "lg-m50-oregan2022",
+        "relationship": "material_only",
+        "evidence": "O'Regan2022 explicitly reuses Chen2020 OCP functions; no new O'Regan half-cell OCP measurement is deposited."
+      },
+      "provenance": {
+        "asset_ids": [
+          "oregan-pybamm-code"
+        ],
+        "derivation": "borrowed_Chen2020_model_expression",
+        "location": "nmc_LGM50_ocp_Chen2020",
+        "processing": {
+          "script": "scripts/seed_oregan.py",
+          "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "An implementation expression, not original measured points or a newly fitted curve.",
+        "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+        "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+        "O'Regan2022 explicitly reuses Chen2020 OCP functions; no new O'Regan half-cell OCP measurement is deposited."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "prada2013-negative-borrowed-ocp",
+      "version": "1",
+      "title": "graphite | graphite_LGM50_ocp_Chen2020 | implementation expression",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "prada2013-negative-borrowed-ocp-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+        "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "1.9793 * exp(-39.3631 * x) + 0.2482 - 0.0909 * tanh(29.8538 * (x - 0.1234)) - 0.04478 * tanh(14.9159 * (x - 0.2769)) - 0.0205 * tanh(30.4444 * (x - 0.6103))",
+        "functions": [
+          "exp",
+          "tanh"
+        ],
+        "source_function": "graphite_LGM50_ocp_Chen2020"
+      },
+      "source_ids": [
+        "pybamm-25-4-2",
+        "chen-2020"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "prada2013-lfp-nominal-design",
+        "relationship": "material_only",
+        "evidence": "Borrowed Chen2020 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-prada-code"
+        ],
+        "derivation": "borrowed_implementation_function",
+        "location": "graphite_LGM50_ocp_Chen2020",
+        "processing": {
+          "script": "scripts/seed_model_completeness.py",
+          "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "An implementation expression, not original measured points or a newly fitted curve.",
+        "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+        "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+        "Borrowed Chen2020 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "prada2013-positive-borrowed-ocp",
+      "version": "1",
+      "title": "LFP | LFP_ocp_Afshar2017 | implementation expression",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "prada2013-positive-borrowed-ocp-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+        "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "3.4077 - 0.020269 * x + 0.5 * exp(-150 * x) - 0.9 * exp(-30 * (1 - x))",
+        "functions": [
+          "exp"
+        ],
+        "source_function": "LFP_ocp_Afshar2017"
+      },
+      "source_ids": [
+        "pybamm-25-4-2",
+        "afshar-2017"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "prada2013-lfp-nominal-design",
+        "relationship": "material_only",
+        "evidence": "Borrowed Afshar2017 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-prada-code"
+        ],
+        "derivation": "borrowed_implementation_function",
+        "location": "LFP_ocp_Afshar2017",
+        "processing": {
+          "script": "scripts/seed_model_completeness.py",
+          "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "An implementation expression, not original measured points or a newly fitted curve.",
+        "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+        "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+        "Borrowed Afshar2017 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
       ],
       "license": "BSD-3-Clause"
     }

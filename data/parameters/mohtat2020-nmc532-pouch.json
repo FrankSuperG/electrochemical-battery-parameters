@@ -94,7 +94,74 @@
       "mohtat-author-zeta-n-1",
       "mohtat-author-zeta-n-2",
       "mohtat-author-zeta-n-3",
-      "mohtat-author-zeta-n-4"
+      "mohtat-author-zeta-n-4",
+      "model-completion-mohtat2020-lithium-metal-partial-molar-volume-m3-mol-1",
+      "model-completion-mohtat2020-exchange-current-density-for-plating-a-m-2",
+      "model-completion-mohtat2020-initial-plated-lithium-concentration-mol-m-3",
+      "model-completion-mohtat2020-typical-plated-lithium-concentration-mol-m-3",
+      "model-completion-mohtat2020-lithium-plating-transfer-coefficient",
+      "model-completion-mohtat2020-ratio-of-lithium-moles-to-sei-moles",
+      "model-completion-mohtat2020-sei-partial-molar-volume-m3-mol-1",
+      "model-completion-mohtat2020-sei-reaction-exchange-current-density-a-m-2",
+      "model-completion-mohtat2020-sei-resistivity-ohm-m",
+      "model-completion-mohtat2020-sei-solvent-diffusivity-m2-s-1",
+      "model-completion-mohtat2020-bulk-solvent-concentration-mol-m-3",
+      "model-completion-mohtat2020-sei-open-circuit-potential-v",
+      "model-completion-mohtat2020-sei-electron-conductivity-s-m-1",
+      "model-completion-mohtat2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "model-completion-mohtat2020-lithium-interstitial-reference-concentration-mol-m-3",
+      "model-completion-mohtat2020-initial-sei-thickness-m",
+      "model-completion-mohtat2020-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "model-completion-mohtat2020-ec-diffusivity-m2-s-1",
+      "model-completion-mohtat2020-sei-kinetic-rate-constant-m-s-1",
+      "model-completion-mohtat2020-sei-growth-activation-energy-j-mol-1",
+      "model-completion-mohtat2020-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-mohtat2020-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-mohtat2020-negative-current-collector-conductivity-s-m-1",
+      "model-completion-mohtat2020-positive-current-collector-conductivity-s-m-1",
+      "model-completion-mohtat2020-negative-current-collector-density-kg-m-3",
+      "model-completion-mohtat2020-positive-current-collector-density-kg-m-3",
+      "model-completion-mohtat2020-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-mohtat2020-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-mohtat2020-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-mohtat2020-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-mohtat2020-current-function-a",
+      "model-completion-mohtat2020-contact-resistance-ohm",
+      "model-completion-mohtat2020-negative-electrode-bruggeman-coefficient-electrode",
+      "model-completion-mohtat2020-negative-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-mohtat2020-negative-electrode-transport-efficiency",
+      "model-completion-mohtat2020-negative-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+      "model-completion-mohtat2020-negative-electrode-charge-transfer-coefficient",
+      "model-completion-mohtat2020-negative-electrode-double-layer-capacity-f-m-2",
+      "model-completion-mohtat2020-negative-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-mohtat2020-positive-electrode-bruggeman-coefficient-electrode",
+      "model-completion-mohtat2020-positive-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-mohtat2020-positive-electrode-transport-efficiency",
+      "model-completion-mohtat2020-positive-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+      "model-completion-mohtat2020-positive-electrode-charge-transfer-coefficient",
+      "model-completion-mohtat2020-positive-electrode-double-layer-capacity-f-m-2",
+      "model-completion-mohtat2020-positive-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-mohtat2020-separator-porosity",
+      "model-completion-mohtat2020-separator-bruggeman-coefficient-electrolyte",
+      "model-completion-mohtat2020-separator-transport-efficiency",
+      "model-completion-mohtat2020-cation-transference-number",
+      "model-completion-mohtat2020-thermodynamic-factor",
+      "model-completion-mohtat2020-typical-lithium-ion-diffusivity-m2-s-1",
+      "model-completion-mohtat2020-electrolyte-diffusivity-m2-s-1",
+      "model-completion-mohtat2020-electrolyte-conductivity-s-m-1",
+      "model-completion-mohtat2020-reference-temperature-k",
+      "model-completion-mohtat2020-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-mohtat2020-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-mohtat2020-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-mohtat2020-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-mohtat2020-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-mohtat2020-total-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-mohtat2020-ambient-temperature-k",
+      "model-completion-mohtat2020-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "model-completion-mohtat2020-number-of-cells-connected-in-series-to-make-a-battery",
+      "model-completion-mohtat2020-open-circuit-voltage-at-0-soc-v",
+      "model-completion-mohtat2020-open-circuit-voltage-at-100-soc-v",
+      "model-completion-mohtat2020-initial-temperature-k"
     ],
     "ocp_record_ids": [
       "mohtat2020-graphite-ocp",
@@ -134,7 +201,12 @@
           "mohtat2020-negative-diffusivity",
           "mohtat2020-positive-diffusivity",
           "mohtat-author-ds-n",
-          "mohtat-author-ds-p"
+          "mohtat-author-ds-p",
+          "model-completion-mohtat2020-sei-solvent-diffusivity-m2-s-1",
+          "model-completion-mohtat2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+          "model-completion-mohtat2020-ec-diffusivity-m2-s-1",
+          "model-completion-mohtat2020-typical-lithium-ion-diffusivity-m2-s-1",
+          "model-completion-mohtat2020-electrolyte-diffusivity-m2-s-1"
         ],
         "source_ids": [
           "mohtat-2020",
@@ -142,7 +214,7 @@
           "pybamm-25-4-2"
         ],
         "match_level": "same_study_cell_family",
-        "evidence": "Original author D_n=5e-15 and D_p=8e-15 m2/s; PyBaMM same reference values with added Arrhenius dependence.",
+        "evidence": "Original author D_n=5e-15 and D_p=8e-15 m2/s; PyBaMM same reference values with added Arrhenius dependence. Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved",
           "Author and PyBaMM variants require explicit selection; not identical parameterizations"
@@ -153,7 +225,15 @@
           "mohtat2020-negative-exchange-current-density",
           "mohtat2020-positive-exchange-current-density",
           "mohtat-author-k0-n",
-          "mohtat-author-k0-p"
+          "mohtat-author-k0-p",
+          "model-completion-mohtat2020-exchange-current-density-for-plating-a-m-2",
+          "model-completion-mohtat2020-sei-kinetic-rate-constant-m-s-1",
+          "model-completion-mohtat2020-negative-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+          "model-completion-mohtat2020-negative-electrode-charge-transfer-coefficient",
+          "model-completion-mohtat2020-negative-electrode-double-layer-capacity-f-m-2",
+          "model-completion-mohtat2020-positive-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+          "model-completion-mohtat2020-positive-electrode-charge-transfer-coefficient",
+          "model-completion-mohtat2020-positive-electrode-double-layer-capacity-f-m-2"
         ],
         "source_ids": [
           "mohtat-2020",
@@ -161,7 +241,7 @@
           "pybamm-25-4-2"
         ],
         "match_level": "same_study_cell_family",
-        "evidence": "Original k0_n=1.1e-11 and k0_p=5e-11 with source i0 definition; PyBaMM exchange-current prefactors are rounded/unit-converted and have added temperature dependence.",
+        "evidence": "Original k0_n=1.1e-11 and k0_p=5e-11 with source i0 definition; PyBaMM exchange-current prefactors are rounded/unit-converted and have added temperature dependence. Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved",
           "Author and PyBaMM variants require explicit selection; not identical parameterizations"
@@ -263,6 +343,79 @@
         }
       ],
       "source_review": "main.m, Battery_MPM_Electrolyte_DAE.m, Plot_data_only.m, README; no upstream code executed"
+    },
+    "implementation_completion": {
+      "source_asset_id": "pybamm-mohtat2020-code",
+      "parameter_ids": [
+        "model-completion-mohtat2020-lithium-metal-partial-molar-volume-m3-mol-1",
+        "model-completion-mohtat2020-exchange-current-density-for-plating-a-m-2",
+        "model-completion-mohtat2020-initial-plated-lithium-concentration-mol-m-3",
+        "model-completion-mohtat2020-typical-plated-lithium-concentration-mol-m-3",
+        "model-completion-mohtat2020-lithium-plating-transfer-coefficient",
+        "model-completion-mohtat2020-ratio-of-lithium-moles-to-sei-moles",
+        "model-completion-mohtat2020-sei-partial-molar-volume-m3-mol-1",
+        "model-completion-mohtat2020-sei-reaction-exchange-current-density-a-m-2",
+        "model-completion-mohtat2020-sei-resistivity-ohm-m",
+        "model-completion-mohtat2020-sei-solvent-diffusivity-m2-s-1",
+        "model-completion-mohtat2020-bulk-solvent-concentration-mol-m-3",
+        "model-completion-mohtat2020-sei-open-circuit-potential-v",
+        "model-completion-mohtat2020-sei-electron-conductivity-s-m-1",
+        "model-completion-mohtat2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+        "model-completion-mohtat2020-lithium-interstitial-reference-concentration-mol-m-3",
+        "model-completion-mohtat2020-initial-sei-thickness-m",
+        "model-completion-mohtat2020-ec-initial-concentration-in-electrolyte-mol-m-3",
+        "model-completion-mohtat2020-ec-diffusivity-m2-s-1",
+        "model-completion-mohtat2020-sei-kinetic-rate-constant-m-s-1",
+        "model-completion-mohtat2020-sei-growth-activation-energy-j-mol-1",
+        "model-completion-mohtat2020-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-mohtat2020-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-mohtat2020-negative-current-collector-conductivity-s-m-1",
+        "model-completion-mohtat2020-positive-current-collector-conductivity-s-m-1",
+        "model-completion-mohtat2020-negative-current-collector-density-kg-m-3",
+        "model-completion-mohtat2020-positive-current-collector-density-kg-m-3",
+        "model-completion-mohtat2020-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-mohtat2020-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-mohtat2020-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-mohtat2020-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-mohtat2020-current-function-a",
+        "model-completion-mohtat2020-contact-resistance-ohm",
+        "model-completion-mohtat2020-negative-electrode-bruggeman-coefficient-electrode",
+        "model-completion-mohtat2020-negative-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-mohtat2020-negative-electrode-transport-efficiency",
+        "model-completion-mohtat2020-negative-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+        "model-completion-mohtat2020-negative-electrode-charge-transfer-coefficient",
+        "model-completion-mohtat2020-negative-electrode-double-layer-capacity-f-m-2",
+        "model-completion-mohtat2020-negative-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-mohtat2020-positive-electrode-bruggeman-coefficient-electrode",
+        "model-completion-mohtat2020-positive-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-mohtat2020-positive-electrode-transport-efficiency",
+        "model-completion-mohtat2020-positive-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+        "model-completion-mohtat2020-positive-electrode-charge-transfer-coefficient",
+        "model-completion-mohtat2020-positive-electrode-double-layer-capacity-f-m-2",
+        "model-completion-mohtat2020-positive-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-mohtat2020-separator-porosity",
+        "model-completion-mohtat2020-separator-bruggeman-coefficient-electrolyte",
+        "model-completion-mohtat2020-separator-transport-efficiency",
+        "model-completion-mohtat2020-cation-transference-number",
+        "model-completion-mohtat2020-thermodynamic-factor",
+        "model-completion-mohtat2020-typical-lithium-ion-diffusivity-m2-s-1",
+        "model-completion-mohtat2020-electrolyte-diffusivity-m2-s-1",
+        "model-completion-mohtat2020-electrolyte-conductivity-s-m-1",
+        "model-completion-mohtat2020-reference-temperature-k",
+        "model-completion-mohtat2020-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-mohtat2020-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-mohtat2020-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-mohtat2020-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-mohtat2020-edge-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-mohtat2020-total-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-mohtat2020-ambient-temperature-k",
+        "model-completion-mohtat2020-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+        "model-completion-mohtat2020-number-of-cells-connected-in-series-to-make-a-battery",
+        "model-completion-mohtat2020-open-circuit-voltage-at-0-soc-v",
+        "model-completion-mohtat2020-open-circuit-voltage-at-100-soc-v",
+        "model-completion-mohtat2020-initial-temperature-k"
+      ],
+      "status": "All non-OCP numeric and analytic entries in this pinned dictionary are represented, including explicitly labeled optional submodels; string/citation metadata excluded."
     }
   },
   "parameters": [
@@ -2572,6 +2725,2265 @@
         "Partial author-model inputs, not a complete validated drop-in DFN/SPM/SPMe set. Multiparticle radii and fractions are distinct inputs; no effective radius is inferred.",
         "Source uses constant D and k0; PyBaMM adds temperature-dependent laws. Same study does not mean identical implementation."
       ]
+    },
+    {
+      "id": "model-completion-mohtat2020-lithium-metal-partial-molar-volume-m3-mol-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Lithium metal partial molar volume [m3.mol-1]",
+      "category": "geometry",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Lithium metal partial molar volume [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium metal partial molar volume [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.3e-05
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-exchange-current-density-for-plating-a-m-2",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Exchange-current density for plating [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Exchange-current density for plating [A.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Exchange-current density for plating [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.001
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-initial-plated-lithium-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Initial plated lithium concentration [mol.m-3]",
+      "category": "initial_state",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Initial plated lithium concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Initial plated lithium concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-typical-plated-lithium-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Typical plated lithium concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Typical plated lithium concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Typical plated lithium concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-lithium-plating-transfer-coefficient",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Lithium plating transfer coefficient",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Lithium plating transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium plating transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.7
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-ratio-of-lithium-moles-to-sei-moles",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Ratio of lithium moles to SEI moles",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Ratio of lithium moles to SEI moles",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Ratio of lithium moles to SEI moles; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-partial-molar-volume-m3-mol-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI partial molar volume [m3.mol-1]",
+      "category": "geometry",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI partial molar volume [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI partial molar volume [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 9.585e-05
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-reaction-exchange-current-density-a-m-2",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI reaction exchange current density [A.m-2]",
+      "category": "thermal",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI reaction exchange current density [A.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI reaction exchange current density [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5e-07
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-resistivity-ohm-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI resistivity [Ohm.m]",
+      "category": "electrode",
+      "unit": "Ohm.m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI resistivity [Ohm.m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI resistivity [Ohm.m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 200000.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-solvent-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI solvent diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI solvent diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI solvent diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-22
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-bulk-solvent-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Bulk solvent concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Bulk solvent concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Bulk solvent concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2636.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-open-circuit-potential-v",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI open-circuit potential [V]",
+      "category": "electrode",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI open-circuit potential [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI open-circuit potential [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-electron-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI electron conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI electron conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI electron conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.95e-14
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI lithium interstitial diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI lithium interstitial diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI lithium interstitial diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-20
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-lithium-interstitial-reference-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Lithium interstitial reference concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Lithium interstitial reference concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium interstitial reference concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 15.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-initial-sei-thickness-m",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Initial SEI thickness [m]",
+      "category": "initial_state",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Initial SEI thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Initial SEI thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-09
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "EC initial concentration in electrolyte [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::EC initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC initial concentration in electrolyte [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4541.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-ec-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "EC diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::EC diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-18
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-kinetic-rate-constant-m-s-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI kinetic rate constant [m.s-1]",
+      "category": "kinetics",
+      "unit": "m.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI kinetic rate constant [m.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI kinetic rate constant [m.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-12
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-sei-growth-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "SEI growth activation energy [J.mol-1]",
+      "category": "electrode",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::SEI growth activation energy [J.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI growth activation energy [J.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Negative electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Positive electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 59600000.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 35500000.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8954.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2707.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 385.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 897.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 401.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 237.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-current-function-a",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Current function [A]",
+      "category": "operating_limits",
+      "unit": "A",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Current function [A]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Current function [A]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-contact-resistance-ohm",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Contact resistance [Ohm]",
+      "category": "operating_limits",
+      "unit": "Ohm",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Contact resistance [Ohm]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Contact resistance [Ohm]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode transport efficiency",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode transport efficiency",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode transport efficiency; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.16
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode reference exchange-current density [A.m-2(m3.mol)1.5]",
+      "category": "kinetics",
+      "unit": "A.m-2(m3.mol)1.5",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode reference exchange-current density [A.m-2(m3.mol)1.5]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode reference exchange-current density [A.m-2(m3.mol)1.5]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.061e-06
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::graphite_entropic_change_PeymanMPM",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "graphite_entropic_change_PeymanMPM",
+        "source_argument_aliases": {
+          "sto": "sto"
+        },
+        "source_function_docstring": "Graphite entropic change in open-circuit potential (OCP) at a temperature of\n298.15K as a function of the stoichiometry taken from [1]\n\nReferences\n----------\n.. [1] K.E. Thomas, J. Newman, \"Heats of mixing and entropy in porous insertion\n       electrode\", J. of Power Sources 119 (2003) 844-849\n\nParameters\n----------\nsto : :class:`pybamm.Symbol`\n    stoichiometry of material (li-fraction)"
+      },
+      "definition": "Negative electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "0.001 * (0.28 - 1.56 * sto - 8.92 * sto ** 2 + 57.21 * sto ** 3 - 110.7 * sto ** 4 + 90.71 * sto ** 5 - 27.14 * sto ** 6)",
+        "variables": {
+          "sto": "1"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-transport-efficiency",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode transport efficiency",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode transport efficiency",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode transport efficiency; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.16
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-reference-exchange-current-density-a-m-2-m3-mol-1-5",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode reference exchange-current density [A.m-2(m3.mol)1.5]",
+      "category": "kinetics",
+      "unit": "A.m-2(m3.mol)1.5",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode reference exchange-current density [A.m-2(m3.mol)1.5]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode reference exchange-current density [A.m-2(m3.mol)1.5]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.824e-06
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::NMC_entropic_change_PeymanMPM",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "NMC_entropic_change_PeymanMPM",
+        "source_argument_aliases": {
+          "sto": "sto"
+        },
+        "source_function_docstring": "Nickel Manganese Cobalt (NMC) entropic change in open-circuit potential (OCP) at\na temperature of 298.15K as a function of the OCP. The fit is taken from [1].\n\nReferences\n----------\n.. [1] W. Le, I. Belharouak, D. Vissers, K. Amine, \"In situ thermal study of\nli1+ x [ni1/ 3co1/ 3mn1/ 3] 1- x o2 using isothermal micro-clorimetric\ntechniques\",\nJ. of the Electrochemical Society 153 (11) (2006) A2147\u2013A2151.\n\nParameters\n----------\nsto : :class:`pybamm.Symbol`\n    stoichiometry of material (li-fraction)"
+      },
+      "definition": "Positive electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "(-800 + 779 * (4.3452 - 1.6518 * sto + 1.6225 * sto ** 2 - 2.0843 * sto ** 3 + 3.5146 * sto ** 4 - 5.623e-05 * exp(109.451 * sto - 100.006)) - 284 * (4.3452 - 1.6518 * sto + 1.6225 * sto ** 2 - 2.0843 * sto ** 3 + 3.5146 * sto ** 4 - 5.623e-05 * exp(109.451 * sto - 100.006)) ** 2 + 46 * (4.3452 - 1.6518 * sto + 1.6225 * sto ** 2 - 2.0843 * sto ** 3 + 3.5146 * sto ** 4 - 5.623e-05 * exp(109.451 * sto - 100.006)) ** 3 - 2.8 * (4.3452 - 1.6518 * sto + 1.6225 * sto ** 2 - 2.0843 * sto ** 3 + 3.5146 * sto ** 4 - 5.623e-05 * exp(109.451 * sto - 100.006)) ** 4) * 0.001",
+        "variables": {
+          "sto": "1"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-separator-porosity",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Separator porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Separator porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-separator-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Separator Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Separator Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-separator-transport-efficiency",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Separator transport efficiency ",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Separator transport efficiency ",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator transport efficiency ; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.25
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-cation-transference-number",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Cation transference number",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Cation transference number; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.38
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-thermodynamic-factor",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Thermodynamic factor",
+      "category": "thermodynamics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Thermodynamic factor",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Thermodynamic factor; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-typical-lithium-ion-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Typical lithium ion diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Typical lithium ion diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Typical lithium ion diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.34e-10
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-electrolyte-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Electrolyte diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::electrolyte_diffusivity_PeymanMPM",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_diffusivity_PeymanMPM",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Diffusivity of LiPF6 in EC:DMC as a function of ion concentration. The original data\nis from [1]. The fit from Dualfoil [2].\n\nReferences\n----------\n.. [1] C Capiglia et al. 7Li and 19F diffusion coefficients and thermal\nproperties of non-aqueous electrolyte solutions for rechargeable lithium batteries.\nJournal of power sources 81 (1999): 859-862.\n.. [2] John Newman, Dualfoil\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Electrolyte diffusivity"
+      },
+      "definition": "Electrolyte diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "5.35e-10 * exp(4454.8880308646785 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-electrolyte-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Electrolyte conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::electrolyte_conductivity_PeymanMPM",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_conductivity_PeymanMPM",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Conductivity of LiPF6 in EC:DMC as a function of ion concentration. The original\ndata is from [1]. The fit is from Dualfoil [2].\n\nReferences\n----------\n.. [1] C Capiglia et al. 7Li and 19F diffusion coefficients and thermal\nproperties of non-aqueous electrolyte solutions for rechargeable lithium batteries.\nJournal of power sources 81 (1999): 859-862.\n.. [2] John Newman, Dualfoil\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Electrolyte conductivity"
+      },
+      "definition": "Electrolyte conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "1.3 * exp(4173.450720059513 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-reference-temperature-k",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Reference temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Reference temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Reference temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Negative tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Negative tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Positive tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Positive tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Edge heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Edge heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Edge heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-total-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Total heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Total heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Total heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Ambient temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Ambient temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Ambient temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Number of electrodes connected in parallel to make a cell",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Number of electrodes connected in parallel to make a cell",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of electrodes connected in parallel to make a cell; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-number-of-cells-connected-in-series-to-make-a-battery",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Number of cells connected in series to make a battery",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Number of cells connected in series to make a battery",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of cells connected in series to make a battery; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-open-circuit-voltage-at-0-soc-v",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Open-circuit voltage at 0% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Open-circuit voltage at 0% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 0% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.8
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-open-circuit-voltage-at-100-soc-v",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Open-circuit voltage at 100% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Open-circuit voltage at 100% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 100% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      }
+    },
+    {
+      "id": "model-completion-mohtat2020-initial-temperature-k",
+      "version": "1",
+      "cell_id": "mohtat2020-nmc532-pouch",
+      "name": "Initial temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-mohtat2020-code",
+        "location": "Mohtat2020.py::get_parameter_values::Initial temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "pybamm_v25_4_2",
+        "model_set": "Mohtat2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a composition assay in this deposit. Author and PyBaMM graphite OCP offsets, thermal geometry and temperature laws differ. Capacity-axis charge files have measured voltage/temperature but no exported current/time. Source Cover2 rate description conflicts are retained.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
     }
   ],
   "ocp_records": [
@@ -3498,7 +5910,7 @@
       "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
       "version": "v25.4.2",
       "license": "BSD-3-Clause",
-      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
     }
   },
   "upstream_assets": {
@@ -3597,7 +6009,8 @@
       "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Mohtat2020.py",
       "sha256": "89c2acb9533912c54492063dad111c5feeff57402d8130f6b153f9f67d8df835",
       "source_id": "pybamm-25-4-2",
-      "license": "BSD-3-Clause"
+      "license": "BSD-3-Clause",
+      "path": "evidence/Mohtat2020-v25.4.2.py"
     }
   },
   "canonical_data_root": "../../src/ebp/data",

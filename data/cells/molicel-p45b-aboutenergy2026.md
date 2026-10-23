@@ -10,13 +10,13 @@ Other studies sharing a model name are separate sources, not a single measured p
 
 ## Parameters
 
-[All 60 parameter records (CSV)](../parameters/molicel-p45b-aboutenergy2026.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/molicel-p45b-aboutenergy2026.json)
+[All 67 parameter records (CSV)](../parameters/molicel-p45b-aboutenergy2026.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/molicel-p45b-aboutenergy2026.json)
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
 ### Diffusion parameters
 
-[6 diffusion records (CSV)](../parameters/molicel-p45b-aboutenergy2026--diffusion.csv)
+[7 diffusion records (CSV)](../parameters/molicel-p45b-aboutenergy2026--diffusion.csv)
 
 Three phase-specific D inputs and three activation energies in BPX.
 
@@ -24,9 +24,9 @@ Keep source units, variants and origins. A category can contain activation energ
 
 ### Kinetics parameters
 
-[6 kinetics records (CSV)](../parameters/molicel-p45b-aboutenergy2026--kinetics.csv)
+[8 kinetics records (CSV)](../parameters/molicel-p45b-aboutenergy2026--kinetics.csv)
 
-BPX-native reaction coefficients and activation energies; no automatic i0/k conversion.
+BPX-native reaction coefficients/activation energies and two author-defined negative-phase i0 laws with explicitly checked F*k and modifier convention.
 
 Keep source units, variants and origins. A category can contain activation energies, fitted groups or borrowed functions; records are not automatically interchangeable.
 

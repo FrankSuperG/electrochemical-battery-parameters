@@ -26,9 +26,9 @@ def cached(catalog, asset_id):
 
 def test_lfp_coverage_and_match_limits():
     c = Catalog()
-    assert len(c.parameters) == 457
+    assert len(c.parameters) == 1041
     assert len(c.full_cell_tests) == 61
-    assert len(c.cells) == 16
+    assert len(c.cells) == 18
     amp = c.cells["a123-amp20m1hd-a"]
     assert amp["model"] == "AMP20M1HD-A"
     assert amp["match_level"] == "same_model_same_study"
@@ -101,7 +101,13 @@ def test_bpx_operating_domains_and_scalar_fidelity():
             curve(0)
     for p in c.search_parameters(cell_id="bpx-lfp-18650-2ah-undisclosed"):
         _, component, name = p.record["provenance"]["location"].split("/")
-        assert p.value == bpx["Parameterisation"][component][name]
+        original=bpx["Parameterisation"][component][name]
+        if p.record["representation"]["kind"]=="scalar":
+            assert p.value == original
+        else:
+            variable=next(iter(p.record["representation"]["variables"]))
+            nodes=np.array([700.,1100.,1500.]) if variable=="c_e" else np.array([.1,.5,.9])
+            np.testing.assert_allclose(p(**{variable:nodes}),evaluate(original,nodes),rtol=1e-14)
     positive = c.get_parameter(
         "bpx-lfp18650-positive-electrode-reaction-rate-constant-mol-m-2-s-1"
     )

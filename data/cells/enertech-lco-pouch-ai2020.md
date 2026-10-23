@@ -10,13 +10,13 @@ OCP tables have Ai/Rieger attribution. Diffusivity and kinetics functions explic
 
 ## Parameters
 
-[All 38 parameter records (CSV)](../parameters/enertech-lco-pouch-ai2020.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/enertech-lco-pouch-ai2020.json)
+[All 123 parameter records (CSV)](../parameters/enertech-lco-pouch-ai2020.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/enertech-lco-pouch-ai2020.json)
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
 ### Diffusion parameters
 
-[2 diffusion records (CSV)](../parameters/enertech-lco-pouch-ai2020--diffusion.csv)
+[6 diffusion records (CSV)](../parameters/enertech-lco-pouch-ai2020--diffusion.csv)
 
 Two borrowed Dualfoil Arrhenius diffusivity functions; not same-cell measured D
 
@@ -24,7 +24,7 @@ Keep source units, variants and origins. A category can contain activation energ
 
 ### Kinetics parameters
 
-[2 kinetics records (CSV)](../parameters/enertech-lco-pouch-ai2020--kinetics.csv)
+[7 kinetics records (CSV)](../parameters/enertech-lco-pouch-ai2020--kinetics.csv)
 
 Two borrowed Dualfoil exchange-current laws; not same-cell measured kinetics
 

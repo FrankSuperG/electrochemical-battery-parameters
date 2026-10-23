@@ -1,0 +1,139 @@
+{
+  "record": {
+    "id": "oregan-model-positive-electrode-ocp-v",
+    "version": "1",
+    "title": "NMC811 | nmc_LGM50_ocp_Chen2020 | implementation expression",
+    "parameter": "electrode_ocp",
+    "material": "NMC811",
+    "material_id": "oregan-model-positive-electrode-ocp-v-material",
+    "electrode_role": "positive",
+    "direction": "unspecified",
+    "measurement": "literature_formula",
+    "temperature": {
+      "value_K": null,
+      "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+    },
+    "reference": "Li/Li+",
+    "x": {
+      "kind": "stoichiometry",
+      "symbol": "theta",
+      "unit": "1",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+      "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+    },
+    "y": {
+      "unit": "V",
+      "definition": "Working electrode potential versus Li/Li+"
+    },
+    "representation": {
+      "kind": "expression",
+      "expression": "-0.809 * x + 4.4875 - 0.0428 * tanh(18.5138 * (x - 0.5542)) - 17.7326 * tanh(15.789 * (x - 0.3117)) + 17.5842 * tanh(15.9308 * (x - 0.312))",
+      "functions": [
+        "tanh"
+      ],
+      "source_function": "nmc_LGM50_ocp_Chen2020"
+    },
+    "source_ids": [
+      "pybamm-25-4-2",
+      "chen-2020",
+      "oregan-2022"
+    ],
+    "experiment_id": null,
+    "cell_link": {
+      "cell_id": "lg-m50-oregan2022",
+      "relationship": "material_only",
+      "evidence": "O'Regan2022 explicitly reuses Chen2020 OCP functions; no new O'Regan half-cell OCP measurement is deposited."
+    },
+    "provenance": {
+      "asset_ids": [
+        "oregan-pybamm-code"
+      ],
+      "derivation": "borrowed_Chen2020_model_expression",
+      "location": "nmc_LGM50_ocp_Chen2020",
+      "processing": {
+        "script": "scripts/seed_oregan.py",
+        "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+      }
+    },
+    "quality": {
+      "source_review": "upstream_code_checked",
+      "axis_status": "upstream_stoichiometry",
+      "raw_data": "not_deposited_with_formula",
+      "model_status": "ocp_component_only",
+      "independent_validation": false
+    },
+    "limitations": [
+      "An implementation expression, not original measured points or a newly fitted curve.",
+      "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+      "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+      "O'Regan2022 explicitly reuses Chen2020 OCP functions; no new O'Regan half-cell OCP measurement is deposited."
+    ],
+    "license": "BSD-3-Clause"
+  },
+  "sources": {
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
+    },
+    "chen-2020": {
+      "kind": "paper",
+      "title": "Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models",
+      "authors": [
+        "Chang-Hui Chen",
+        "Ferran Brosa Planella",
+        "Kieran O'Regan",
+        "Dominika Gastol",
+        "W. Dhammika Widanage",
+        "Emma Kendrick"
+      ],
+      "year": 2020,
+      "doi": "10.1149/1945-7111/ab9050",
+      "url": "https://doi.org/10.1149/1945-7111/ab9050",
+      "role": "Scientific attribution of the LG M50 graphite OCP and non-OCP parameter implementations; individual measurement/fit/borrowing origins not independently audited."
+    },
+    "oregan-2022": {
+      "kind": "paper",
+      "title": "Thermal-electrochemical parameters of a high energy lithium-ion cylindrical battery",
+      "authors": [
+        "Kieran O'Regan",
+        "Ferran Brosa-Planella",
+        "W. Dhammika Widanage",
+        "Emma Kendrick"
+      ],
+      "year": 2022,
+      "doi": "10.1016/j.electacta.2022.140700",
+      "url": "https://doi.org/10.1016/j.electacta.2022.140700",
+      "role": "LG M50 study context. Native formulas redistributed from BSD-licensed PyBaMM, not the article PDF."
+    }
+  },
+  "experiment": null,
+  "upstream_assets": {
+    "oregan-pybamm-code": {
+      "source_id": "pybamm-25-4-2",
+      "filename": "ORegan2022-v25.4.2.py",
+      "path": "evidence/ORegan2022-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/ORegan2022.py",
+      "license": "BSD-3-Clause",
+      "sha256": "52c12f0117d7c3e0679de8887bab6a7e9af2407d67a2f3ee04225e765cd6ff47"
+    }
+  },
+  "export": {
+    "kind": "generated_formula_samples",
+    "sample_count": 2001,
+    "significant_digits": 12,
+    "canonical_data_root": "../../src/ebp/data",
+    "note": "Formula samples are calculated, not measurements. Read the record's coordinate, direction, conditions and license."
+  }
+}

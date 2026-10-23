@@ -180,7 +180,7 @@ def extract_bpx(pins):
                                   "source_pointer": pointer},
                    "limitations": ["Published parameterisation, not an independent measurement of every input.",
                                    "Composite graphite/silicon particles must remain distinct; rate constants retain BPX units and are not automatically intrinsic k or A/m2 i0.",
-                                   "Electrolyte placeholder zeros and 71 user-defined coefficients are excluded from native records; full BPX preserves them. Use author definitions before building a model."]}
+                                   "Electrolyte placeholder zeros are excluded. Seven additional native records transcribe the user-defined transport, thermodynamic, kinetic and contact-resistance definitions; full BPX retains all coefficients and selector flags."]}
             if isinstance(value, dict):
                 x, y = np.array(value["x"]), np.array(value["y"])
                 rel = f"parameter_tables/{rid}.csv"
@@ -194,6 +194,8 @@ def extract_bpx(pins):
             params.append(rec)
     walk(p, "Parameterisation")
     walk(bpx["State"], "State")
+    from extract_p45b_functions import extract
+    params += extract(DATA, pins)
     return curves, params
 
 
@@ -237,7 +239,7 @@ def extend(download=False):
             "note": "Other studies sharing a model name are separate sources, not a single measured parameter set.",
             "coverage": {"ocp": "Published BPX phase-specific fits; original measured half-cell points not located." if cid == P45B else "Four extracted finite-current half-cell branches, with original coordinates and source rows retained.",
                          "diffusion": "Three phase-specific D inputs and three activation energies in BPX." if cid == P45B else "No matched diffusivity values imported.",
-                         "kinetics": "BPX-native reaction coefficients and activation energies; no automatic i0/k conversion." if cid == P45B else "No matched intrinsic kinetic values imported.",
+                         "kinetics": "BPX-native reaction coefficients/activation energies and two author-defined negative-phase i0 laws with explicitly checked F*k and modifier convention." if cid == P45B else "No matched intrinsic kinetic values imported.",
                          "full_cell_tests": "External dataset links only; no new full-cell observations packaged."},
             "missing_items": ["Identical half-cell/full-cell serialized specimen mapping unresolved", "Half-cell OCP measurement temperature not independently verified", "Independent model validation not performed"]}
     audit_links(new_cells, doc["records"], params, [])

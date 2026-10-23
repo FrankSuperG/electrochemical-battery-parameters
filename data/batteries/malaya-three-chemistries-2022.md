@@ -21,6 +21,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 |---|---|---|---|---|---|---|
 | [malaya-three-chemistries-2022](../full-cell/malaya-three-chemistries-2022.md#file-locations) | Not separately verified | Unverified | US06, DST, FUDS, UDDS, WLTP | [Unverified](../full-cell/malaya-three-chemistries-2022.md#ageing-data) | Not reported | unmatched |
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

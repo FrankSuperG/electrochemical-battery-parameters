@@ -19,6 +19,7 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `isu-uconn-lfp-s2-b6-delithiation` | positive / LFP | pseudo_ocp / unresolved | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/isu-uconn-lfp-s2-b6-delithiation.csv) | [JSON](isu-uconn-lfp-s2-b6-delithiation.json) |
 | `isu-uconn-lfp-s2-b7-lithiation` | positive / LFP | pseudo_ocp / unresolved | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/isu-uconn-lfp-s2-b7-lithiation.csv) | [JSON](isu-uconn-lfp-s2-b7-lithiation.json) |
 | `jahn-a123-lfp-model-ocpn` | positive / LFP | model_ocp / Li/Li+ | model_soc; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/jahn-a123-lfp-model-ocpn.csv) | [JSON](jahn-a123-lfp-model-ocpn.json) |
+| `prada2013-positive-borrowed-ocp` | positive / LFP | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](prada2013-positive-borrowed-ocp-sampled.csv) | [JSON](prada2013-positive-borrowed-ocp.json) |
 
 ## graphite
 
@@ -44,6 +45,8 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | `nextbms-calb-negative-charge` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/nextbms-calb-negative-charge.csv) | [JSON](nextbms-calb-negative-charge.json) |
 | `nextbms-calb-negative-discharge` | negative / graphite | pseudo_ocp / Li/Li+ | normalized_branch_capacity; [0.0, 1.0] | [Retained table](../../src/ebp/data/curves/nextbms-calb-negative-discharge.csv) | [JSON](nextbms-calb-negative-discharge.json) |
 | `aepy-p45b-negative-graphite-ocp-v` | negative / graphite | literature_table / Li/Li+ | source_reported_stoichiometry; [0.0011125213468379, 0.880643398272419] | [Retained table](../../src/ebp/data/curves/aepy-p45b-negative-graphite-ocp-v.csv) | [JSON](aepy-p45b-negative-graphite-ocp-v.json) |
+| `oregan-model-negative-electrode-ocp-v` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](oregan-model-negative-electrode-ocp-v-sampled.csv) | [JSON](oregan-model-negative-electrode-ocp-v.json) |
+| `prada2013-negative-borrowed-ocp` | negative / graphite | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](prada2013-negative-borrowed-ocp-sampled.csv) | [JSON](prada2013-negative-borrowed-ocp.json) |
 
 ## Graphite-SiOx
 
@@ -117,6 +120,7 @@ Material-level measurements are not automatically linked to a commercial cell. W
 | Record | Electrode / material | Type / reference | Coordinate and domain | CSV | Metadata |
 |---|---|---|---|---|---|
 | `nmc811-lgm50-chen2020-formula` | positive / NMC811 | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](nmc811-lgm50-chen2020-formula-sampled.csv) | [JSON](nmc811-lgm50-chen2020-formula.json) |
+| `oregan-model-positive-electrode-ocp-v` | positive / NMC811 | literature_formula / Li/Li+ | stoichiometry; [0.0, 1.0] | [Generated samples](oregan-model-positive-electrode-ocp-v-sampled.csv) | [JSON](oregan-model-positive-electrode-ocp-v.json) |
 
 ## silicon
 

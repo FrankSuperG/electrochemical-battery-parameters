@@ -10,13 +10,13 @@ A nominal design, not an identified commercial cell. Upstream thermal properties
 
 ## Parameters
 
-[All 38 parameter records (CSV)](../parameters/kim2011-nca-nominal-design.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/kim2011-nca-nominal-design.json)
+[All 100 parameter records (CSV)](../parameters/kim2011-nca-nominal-design.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/kim2011-nca-nominal-design.json)
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
 ### Diffusion parameters
 
-[2 diffusion records (CSV)](../parameters/kim2011-nca-nominal-design--diffusion.csv)
+[6 diffusion records (CSV)](../parameters/kim2011-nca-nominal-design--diffusion.csv)
 
 Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained
 
@@ -24,7 +24,7 @@ Keep source units, variants and origins. A category can contain activation energ
 
 ### Kinetics parameters
 
-[2 kinetics records (CSV)](../parameters/kim2011-nca-nominal-design--kinetics.csv)
+[7 kinetics records (CSV)](../parameters/kim2011-nca-nominal-design--kinetics.csv)
 
 Two concentration/temperature exchange-current laws; source area and concentration convention retained
 

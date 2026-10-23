@@ -155,7 +155,7 @@ def test_new_parameter_math_matches_pinned_source(name, cid):
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     upstream = module.get_parameter_values()
-    for p in c.search_parameters(cell_id=cid):
+    for p in [p for p in c.search_parameters(cell_id=cid) if not p.id.startswith("model-completion-")]:
         if p.record["representation"]["kind"] == "scalar":
             assert p.value == upstream[p.record["name"]]
         else:

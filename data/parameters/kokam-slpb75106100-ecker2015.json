@@ -64,7 +64,74 @@
       "ecker2015-negative-diffusivity",
       "ecker2015-negative-exchange-current-density",
       "ecker2015-positive-diffusivity",
-      "ecker2015-positive-exchange-current-density"
+      "ecker2015-positive-exchange-current-density",
+      "model-completion-ecker2015-lithium-metal-partial-molar-volume-m3-mol-1",
+      "model-completion-ecker2015-lithium-plating-kinetic-rate-constant-m-s-1",
+      "model-completion-ecker2015-exchange-current-density-for-plating-a-m-2",
+      "model-completion-ecker2015-exchange-current-density-for-stripping-a-m-2",
+      "model-completion-ecker2015-initial-plated-lithium-concentration-mol-m-3",
+      "model-completion-ecker2015-typical-plated-lithium-concentration-mol-m-3",
+      "model-completion-ecker2015-lithium-plating-transfer-coefficient",
+      "model-completion-ecker2015-dead-lithium-decay-constant-s-1",
+      "model-completion-ecker2015-dead-lithium-decay-rate-s-1",
+      "model-completion-ecker2015-ratio-of-lithium-moles-to-sei-moles",
+      "model-completion-ecker2015-sei-partial-molar-volume-m3-mol-1",
+      "model-completion-ecker2015-sei-reaction-exchange-current-density-a-m-2",
+      "model-completion-ecker2015-sei-resistivity-ohm-m",
+      "model-completion-ecker2015-sei-solvent-diffusivity-m2-s-1",
+      "model-completion-ecker2015-bulk-solvent-concentration-mol-m-3",
+      "model-completion-ecker2015-sei-open-circuit-potential-v",
+      "model-completion-ecker2015-sei-electron-conductivity-s-m-1",
+      "model-completion-ecker2015-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "model-completion-ecker2015-lithium-interstitial-reference-concentration-mol-m-3",
+      "model-completion-ecker2015-initial-sei-thickness-m",
+      "model-completion-ecker2015-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "model-completion-ecker2015-ec-diffusivity-m2-s-1",
+      "model-completion-ecker2015-sei-kinetic-rate-constant-m-s-1",
+      "model-completion-ecker2015-sei-growth-activation-energy-j-mol-1",
+      "model-completion-ecker2015-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-ecker2015-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-ecker2015-negative-tab-width-m",
+      "model-completion-ecker2015-negative-tab-centre-y-coordinate-m",
+      "model-completion-ecker2015-negative-tab-centre-z-coordinate-m",
+      "model-completion-ecker2015-positive-tab-width-m",
+      "model-completion-ecker2015-positive-tab-centre-y-coordinate-m",
+      "model-completion-ecker2015-positive-tab-centre-z-coordinate-m",
+      "model-completion-ecker2015-negative-current-collector-conductivity-s-m-1",
+      "model-completion-ecker2015-positive-current-collector-conductivity-s-m-1",
+      "model-completion-ecker2015-negative-current-collector-density-kg-m-3",
+      "model-completion-ecker2015-positive-current-collector-density-kg-m-3",
+      "model-completion-ecker2015-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-ecker2015-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-ecker2015-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-ecker2015-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-ecker2015-current-function-a",
+      "model-completion-ecker2015-contact-resistance-ohm",
+      "model-completion-ecker2015-negative-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-ecker2015-negative-electrode-bruggeman-coefficient-electrode",
+      "model-completion-ecker2015-negative-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-ecker2015-positive-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-ecker2015-positive-electrode-bruggeman-coefficient-electrode",
+      "model-completion-ecker2015-positive-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-ecker2015-separator-porosity",
+      "model-completion-ecker2015-separator-bruggeman-coefficient-electrolyte",
+      "model-completion-ecker2015-cation-transference-number",
+      "model-completion-ecker2015-thermodynamic-factor",
+      "model-completion-ecker2015-electrolyte-diffusivity-m2-s-1",
+      "model-completion-ecker2015-electrolyte-conductivity-s-m-1",
+      "model-completion-ecker2015-reference-temperature-k",
+      "model-completion-ecker2015-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-ecker2015-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-ecker2015-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-ecker2015-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-ecker2015-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-ecker2015-total-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-ecker2015-ambient-temperature-k",
+      "model-completion-ecker2015-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "model-completion-ecker2015-number-of-cells-connected-in-series-to-make-a-battery",
+      "model-completion-ecker2015-open-circuit-voltage-at-0-soc-v",
+      "model-completion-ecker2015-open-circuit-voltage-at-100-soc-v",
+      "model-completion-ecker2015-initial-temperature-k"
     ],
     "ocp_record_ids": [
       "ecker2015-graphite-ocp",
@@ -95,7 +162,11 @@
       "diffusion": {
         "record_ids": [
           "ecker2015-negative-diffusivity",
-          "ecker2015-positive-diffusivity"
+          "ecker2015-positive-diffusivity",
+          "model-completion-ecker2015-sei-solvent-diffusivity-m2-s-1",
+          "model-completion-ecker2015-sei-lithium-interstitial-diffusivity-m2-s-1",
+          "model-completion-ecker2015-ec-diffusivity-m2-s-1",
+          "model-completion-ecker2015-electrolyte-diffusivity-m2-s-1"
         ],
         "source_ids": [
           "ecker-2015-i",
@@ -104,7 +175,7 @@
           "richardson-2020"
         ],
         "match_level": "same_model_same_study",
-        "evidence": "Two stoichiometry/temperature diffusivity fits; Ecker/Richardson lineage",
+        "evidence": "Two stoichiometry/temperature diffusivity fits; Ecker/Richardson lineage Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -112,7 +183,11 @@
       "kinetics": {
         "record_ids": [
           "ecker2015-negative-exchange-current-density",
-          "ecker2015-positive-exchange-current-density"
+          "ecker2015-positive-exchange-current-density",
+          "model-completion-ecker2015-lithium-plating-kinetic-rate-constant-m-s-1",
+          "model-completion-ecker2015-exchange-current-density-for-plating-a-m-2",
+          "model-completion-ecker2015-exchange-current-density-for-stripping-a-m-2",
+          "model-completion-ecker2015-sei-kinetic-rate-constant-m-s-1"
         ],
         "source_ids": [
           "ecker-2015-i",
@@ -121,7 +196,7 @@
           "richardson-2020"
         ],
         "match_level": "same_model_same_study",
-        "evidence": "Two concentration/temperature exchange-current laws; Ecker/Richardson lineage",
+        "evidence": "Two concentration/temperature exchange-current laws; Ecker/Richardson lineage Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -163,7 +238,80 @@
     "missing_items": [
       "Identical characterization/validation specimen not established",
       "Independent full-cell model reproduction not performed"
-    ]
+    ],
+    "implementation_completion": {
+      "source_asset_id": "pybamm-ecker2015-code",
+      "parameter_ids": [
+        "model-completion-ecker2015-lithium-metal-partial-molar-volume-m3-mol-1",
+        "model-completion-ecker2015-lithium-plating-kinetic-rate-constant-m-s-1",
+        "model-completion-ecker2015-exchange-current-density-for-plating-a-m-2",
+        "model-completion-ecker2015-exchange-current-density-for-stripping-a-m-2",
+        "model-completion-ecker2015-initial-plated-lithium-concentration-mol-m-3",
+        "model-completion-ecker2015-typical-plated-lithium-concentration-mol-m-3",
+        "model-completion-ecker2015-lithium-plating-transfer-coefficient",
+        "model-completion-ecker2015-dead-lithium-decay-constant-s-1",
+        "model-completion-ecker2015-dead-lithium-decay-rate-s-1",
+        "model-completion-ecker2015-ratio-of-lithium-moles-to-sei-moles",
+        "model-completion-ecker2015-sei-partial-molar-volume-m3-mol-1",
+        "model-completion-ecker2015-sei-reaction-exchange-current-density-a-m-2",
+        "model-completion-ecker2015-sei-resistivity-ohm-m",
+        "model-completion-ecker2015-sei-solvent-diffusivity-m2-s-1",
+        "model-completion-ecker2015-bulk-solvent-concentration-mol-m-3",
+        "model-completion-ecker2015-sei-open-circuit-potential-v",
+        "model-completion-ecker2015-sei-electron-conductivity-s-m-1",
+        "model-completion-ecker2015-sei-lithium-interstitial-diffusivity-m2-s-1",
+        "model-completion-ecker2015-lithium-interstitial-reference-concentration-mol-m-3",
+        "model-completion-ecker2015-initial-sei-thickness-m",
+        "model-completion-ecker2015-ec-initial-concentration-in-electrolyte-mol-m-3",
+        "model-completion-ecker2015-ec-diffusivity-m2-s-1",
+        "model-completion-ecker2015-sei-kinetic-rate-constant-m-s-1",
+        "model-completion-ecker2015-sei-growth-activation-energy-j-mol-1",
+        "model-completion-ecker2015-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-ecker2015-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-ecker2015-negative-tab-width-m",
+        "model-completion-ecker2015-negative-tab-centre-y-coordinate-m",
+        "model-completion-ecker2015-negative-tab-centre-z-coordinate-m",
+        "model-completion-ecker2015-positive-tab-width-m",
+        "model-completion-ecker2015-positive-tab-centre-y-coordinate-m",
+        "model-completion-ecker2015-positive-tab-centre-z-coordinate-m",
+        "model-completion-ecker2015-negative-current-collector-conductivity-s-m-1",
+        "model-completion-ecker2015-positive-current-collector-conductivity-s-m-1",
+        "model-completion-ecker2015-negative-current-collector-density-kg-m-3",
+        "model-completion-ecker2015-positive-current-collector-density-kg-m-3",
+        "model-completion-ecker2015-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-ecker2015-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-ecker2015-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-ecker2015-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-ecker2015-current-function-a",
+        "model-completion-ecker2015-contact-resistance-ohm",
+        "model-completion-ecker2015-negative-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-ecker2015-negative-electrode-bruggeman-coefficient-electrode",
+        "model-completion-ecker2015-negative-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-ecker2015-positive-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-ecker2015-positive-electrode-bruggeman-coefficient-electrode",
+        "model-completion-ecker2015-positive-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-ecker2015-separator-porosity",
+        "model-completion-ecker2015-separator-bruggeman-coefficient-electrolyte",
+        "model-completion-ecker2015-cation-transference-number",
+        "model-completion-ecker2015-thermodynamic-factor",
+        "model-completion-ecker2015-electrolyte-diffusivity-m2-s-1",
+        "model-completion-ecker2015-electrolyte-conductivity-s-m-1",
+        "model-completion-ecker2015-reference-temperature-k",
+        "model-completion-ecker2015-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-ecker2015-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-ecker2015-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-ecker2015-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-ecker2015-edge-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-ecker2015-total-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-ecker2015-ambient-temperature-k",
+        "model-completion-ecker2015-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+        "model-completion-ecker2015-number-of-cells-connected-in-series-to-make-a-battery",
+        "model-completion-ecker2015-open-circuit-voltage-at-0-soc-v",
+        "model-completion-ecker2015-open-circuit-voltage-at-100-soc-v",
+        "model-completion-ecker2015-initial-temperature-k"
+      ],
+      "status": "All non-OCP numeric and analytic entries in this pinned dictionary are represented, including explicitly labeled optional submodels; string/citation metadata excluded."
+    }
   },
   "parameters": [
     {
@@ -1421,6 +1569,2284 @@
         "Not a measured current or a newly estimated parameter; source mathematical operations retained by AST substitution.",
         "Fitted functions retain the upstream Ecker/Richardson attribution; original fit data and instrument records are distinct from these expressions."
       ]
+    },
+    {
+      "id": "model-completion-ecker2015-lithium-metal-partial-molar-volume-m3-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Lithium metal partial molar volume [m3.mol-1]",
+      "category": "geometry",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Lithium metal partial molar volume [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium metal partial molar volume [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.3e-05
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-lithium-plating-kinetic-rate-constant-m-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Lithium plating kinetic rate constant [m.s-1]",
+      "category": "kinetics",
+      "unit": "m.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Lithium plating kinetic rate constant [m.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium plating kinetic rate constant [m.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-10
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-exchange-current-density-for-plating-a-m-2",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Exchange-current density for plating [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::plating_exchange_current_density_OKane2020",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input",
+        "source_function": "plating_exchange_current_density_OKane2020",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "c_Li": "c_Li",
+          "T": "T"
+        },
+        "source_function_docstring": "Exchange-current density for Li plating reaction [A.m-2].\nReferences\n----------\n.. [1] O\u2019Kane, Simon EJ, Ian D. Campbell, Mohamed WJ Marzook, Gregory J. Offer, and\nMonica Marinescu. \"Physical origin of the differential voltage minimum associated\nwith lithium plating in Li-ion batteries.\" Journal of The Electrochemical Society\n167, no. 9 (2020): 090540.\nParameters\n----------\nc_e : :class:`pybamm.Symbol`\n    Electrolyte concentration [mol.m-3]\nc_Li : :class:`pybamm.Symbol`\n    Plated lithium concentration [mol.m-3]\nT : :class:`pybamm.Symbol`\n    Temperature [K]\nReturns\n-------\n:class:`pybamm.Symbol`\n    Exchange-current density [A.m-2]"
+      },
+      "definition": "Exchange-current density for plating [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "9.648533212331002e-06 * c_e",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_Li": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-exchange-current-density-for-stripping-a-m-2",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Exchange-current density for stripping [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::stripping_exchange_current_density_OKane2020",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input",
+        "source_function": "stripping_exchange_current_density_OKane2020",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "c_Li": "c_Li",
+          "T": "T"
+        },
+        "source_function_docstring": "Exchange-current density for Li stripping reaction [A.m-2].\n\nReferences\n----------\n\n.. [1] O\u2019Kane, Simon EJ, Ian D. Campbell, Mohamed WJ Marzook, Gregory J. Offer, and\nMonica Marinescu. \"Physical origin of the differential voltage minimum associated\nwith lithium plating in Li-ion batteries.\" Journal of The Electrochemical Society\n167, no. 9 (2020): 090540.\n\nParameters\n----------\n\nc_e : :class:`pybamm.Symbol`\n    Electrolyte concentration [mol.m-3]\nc_Li : :class:`pybamm.Symbol`\n    Plated lithium concentration [mol.m-3]\nT : :class:`pybamm.Symbol`\n    Temperature [K]\n\nReturns\n-------\n\n:class:`pybamm.Symbol`\n    Exchange-current density [A.m-2]"
+      },
+      "definition": "Exchange-current density for stripping [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "9.648533212331002e-06 * c_Li",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_Li": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-initial-plated-lithium-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Initial plated lithium concentration [mol.m-3]",
+      "category": "initial_state",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Initial plated lithium concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Initial plated lithium concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-typical-plated-lithium-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Typical plated lithium concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Typical plated lithium concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Typical plated lithium concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1000.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-lithium-plating-transfer-coefficient",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Lithium plating transfer coefficient",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Lithium plating transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium plating transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-dead-lithium-decay-constant-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Dead lithium decay constant [s-1]",
+      "category": "electrode",
+      "unit": "s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Dead lithium decay constant [s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Dead lithium decay constant [s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-06
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-dead-lithium-decay-rate-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Dead lithium decay rate [s-1]",
+      "category": "electrode",
+      "unit": "s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::SEI_limited_dead_lithium_OKane2022",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input",
+        "source_function": "SEI_limited_dead_lithium_OKane2022",
+        "source_argument_aliases": {
+          "L_sei": "L_sei"
+        },
+        "source_function_docstring": "Decay rate for dead lithium formation [s-1].\nReferences\n----------\n.. [1] Simon E. J. O'Kane, Weilong Ai, Ganesh Madabattula, Diega Alonso-Alvarez,\nRobert Timms, Valentin Sulzer, Jaqueline Sophie Edge, Billy Wu, Gregory J. Offer\nand Monica Marinescu. \"Lithium-ion battery degradation: how to model it.\"\nPhysical Chemistry: Chemical Physics 24, no. 13 (2022): 7909-7922.\nParameters\n----------\nL_sei : :class:`pybamm.Symbol`\n    Total SEI thickness [m]\nReturns\n-------\n:class:`pybamm.Symbol`\n    Dead lithium decay rate [s-1]"
+      },
+      "definition": "Dead lithium decay rate [s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "5e-15 / L_sei",
+        "variables": {
+          "L_sei": "m"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-ratio-of-lithium-moles-to-sei-moles",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Ratio of lithium moles to SEI moles",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Ratio of lithium moles to SEI moles",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Ratio of lithium moles to SEI moles; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-partial-molar-volume-m3-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI partial molar volume [m3.mol-1]",
+      "category": "geometry",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI partial molar volume [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI partial molar volume [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 9.585e-05
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-reaction-exchange-current-density-a-m-2",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI reaction exchange current density [A.m-2]",
+      "category": "thermal",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI reaction exchange current density [A.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI reaction exchange current density [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5e-07
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-resistivity-ohm-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI resistivity [Ohm.m]",
+      "category": "electrode",
+      "unit": "Ohm.m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI resistivity [Ohm.m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI resistivity [Ohm.m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 200000.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-solvent-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI solvent diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI solvent diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI solvent diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-22
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-bulk-solvent-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Bulk solvent concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Bulk solvent concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Bulk solvent concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2636.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-open-circuit-potential-v",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI open-circuit potential [V]",
+      "category": "electrode",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI open-circuit potential [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI open-circuit potential [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-electron-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI electron conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI electron conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI electron conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.95e-14
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI lithium interstitial diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI lithium interstitial diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI lithium interstitial diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-20
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-lithium-interstitial-reference-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Lithium interstitial reference concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Lithium interstitial reference concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium interstitial reference concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 15.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-initial-sei-thickness-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Initial SEI thickness [m]",
+      "category": "initial_state",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Initial SEI thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Initial SEI thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-09
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "EC initial concentration in electrolyte [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::EC initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC initial concentration in electrolyte [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4541.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-ec-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "EC diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::EC diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-18
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-kinetic-rate-constant-m-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI kinetic rate constant [m.s-1]",
+      "category": "kinetics",
+      "unit": "m.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI kinetic rate constant [m.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI kinetic rate constant [m.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-12
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-sei-growth-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "SEI growth activation energy [J.mol-1]",
+      "category": "electrode",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::SEI growth activation energy [J.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI growth activation energy [J.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Negative electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Positive electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-tab-width-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative tab width [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative tab width [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab width [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.007
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-tab-centre-y-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative tab centre y-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative tab centre y-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab centre y-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0045
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-tab-centre-z-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative tab centre z-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative tab centre z-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab centre z-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.101
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-tab-width-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive tab width [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive tab width [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab width [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0069
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-tab-centre-y-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive tab centre y-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive tab centre y-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab centre y-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0309
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-tab-centre-z-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive tab centre z-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive tab centre z-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab centre z-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.101
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 58411000.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 36914000.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8933.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2702.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 385.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 903.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 398.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 238.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-current-function-a",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Current function [A]",
+      "category": "operating_limits",
+      "unit": "A",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Current function [A]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Current function [A]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.15652
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-contact-resistance-ohm",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Contact resistance [Ohm]",
+      "category": "operating_limits",
+      "unit": "Ohm",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Contact resistance [Ohm]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Contact resistance [Ohm]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.6372789338386007
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5442267190786427
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-separator-porosity",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Separator porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Separator porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.508
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-separator-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Separator Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Separator Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.9804586773134945
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-cation-transference-number",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Cation transference number",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Cation transference number; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.26
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-thermodynamic-factor",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Thermodynamic factor",
+      "category": "thermodynamics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Thermodynamic factor",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Thermodynamic factor; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-electrolyte-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Electrolyte diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::electrolyte_diffusivity_Ecker2015",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_diffusivity_Ecker2015",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Diffusivity of LiPF6 in EC:DMC as a function of ion concentration [1, 2, 3].\n\nReferences\n----------\n.. [1] Ecker, Madeleine, et al. \"Parameterization of a physico-chemical model of\na lithium-ion battery i. determination of parameters.\" Journal of the\nElectrochemical Society 162.9 (2015): A1836-A1848.\n.. [2] Ecker, Madeleine, et al. \"Parameterization of a physico-chemical model of\na lithium-ion battery ii. model validation.\" Journal of The Electrochemical\nSociety 162.9 (2015): A1849-A1857.\n.. [3] Richardson, Giles, et. al. \"Generalised single particle models for\nhigh-rate operation of graded lithium-ion electrodes: Systematic derivation\nand validation.\" Electrochemica Acta 339 (2020): 135862\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "8.931236564675002e-10 * (296 * exp(6.948166456988244) * (0.2667 * (0.001 * c_e) ** 3 - 1.2983 * (0.001 * c_e) ** 2 + 1.7919 * (0.001 * c_e) + 0.1726) * exp(-17100.0 / (8.314462618 * T)) / T) * T / c_e",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-electrolyte-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Electrolyte conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::electrolyte_conductivity_Ecker2015",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_conductivity_Ecker2015",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Conductivity of LiPF6 in EC:DMC as a function of ion concentration [1, 2, 3].\n\nReferences\n----------\n.. [1] Ecker, Madeleine, et al. \"Parameterization of a physico-chemical model of\na lithium-ion battery i. determination of parameters.\" Journal of the\nElectrochemical Society 162.9 (2015): A1836-A1848.\n.. [2] Ecker, Madeleine, et al. \"Parameterization of a physico-chemical model of\na lithium-ion battery ii. model validation.\" Journal of The Electrochemical\nSociety 162.9 (2015): A1849-A1857.\n.. [3] Richardson, Giles, et. al. \"Generalised single particle models for\nhigh-rate operation of graded lithium-ion electrodes: Systematic derivation\nand validation.\" Electrochemica Acta 339 (2020): 135862\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "296 * exp(6.948166456988244) * (0.2667 * (0.001 * c_e) ** 3 - 1.2983 * (0.001 * c_e) ** 2 + 1.7919 * (0.001 * c_e) + 0.1726) * exp(-17100.0 / (8.314462618 * T)) / T",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-reference-temperature-k",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Reference temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Reference temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Reference temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 296.15
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Negative tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Negative tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Positive tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Positive tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Edge heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Edge heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Edge heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-total-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Total heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Total heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Total heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Ambient temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Ambient temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Ambient temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Number of electrodes connected in parallel to make a cell",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Number of electrodes connected in parallel to make a cell",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of electrodes connected in parallel to make a cell; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-number-of-cells-connected-in-series-to-make-a-battery",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Number of cells connected in series to make a battery",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Number of cells connected in series to make a battery",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of cells connected in series to make a battery; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-open-circuit-voltage-at-0-soc-v",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Open-circuit voltage at 0% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Open-circuit voltage at 0% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 0% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-open-circuit-voltage-at-100-soc-v",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Open-circuit voltage at 100% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Open-circuit voltage at 100% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 100% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      }
+    },
+    {
+      "id": "model-completion-ecker2015-initial-temperature-k",
+      "version": "1",
+      "cell_id": "kokam-slpb75106100-ecker2015",
+      "name": "Initial temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-ecker2015-code",
+        "location": "Ecker2015.py::get_parameter_values::Initial temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "ecker2015-pybamm-v25-4-2",
+        "model_set": "Ecker2015",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not apply full-cell current directly to the reduced implementation without reviewing scaling. NCO label follows upstream; composition ratio unresolved. Thermal values are borrowed from another 5 Ah Kokam.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
     }
   ],
   "ocp_records": [
@@ -1806,7 +4232,7 @@
       "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
       "version": "v25.4.2",
       "license": "BSD-3-Clause",
-      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
     },
     "pybamm-data-1-0-2": {
       "kind": "dataset",
@@ -1859,7 +4285,8 @@
       "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ecker2015.py",
       "sha256": "d8a1cfd49b4956c5af2d1ca5c7f1f3e507c20821591b2084cf6a1bf595d77d92",
       "license": "BSD-3-Clause",
-      "source_id": "pybamm-25-4-2"
+      "source_id": "pybamm-25-4-2",
+      "path": "evidence/Ecker2015-v25.4.2.py"
     }
   },
   "canonical_data_root": "../../src/ebp/data",

@@ -67,7 +67,10 @@
       "bpx-lfp18650-positive-electrode-reaction-rate-constant-activation-energy-j-mol-1",
       "bpx-lfp18650-separator-thickness-m",
       "bpx-lfp18650-separator-porosity",
-      "bpx-lfp18650-separator-transport-efficiency"
+      "bpx-lfp18650-separator-transport-efficiency",
+      "model-completion-bpx-lfp-electrolyte-conductivity-s-m-1",
+      "model-completion-bpx-lfp-electrolyte-diffusivity-m2-s-1",
+      "model-completion-bpx-lfp-negative-electrode-entropic-change-coefficient-v-k-1"
     ],
     "full_cell_test_ids": [],
     "ocp_record_ids": [
@@ -95,13 +98,14 @@
           "bpx-lfp18650-negative-electrode-diffusivity-m2-s-1",
           "bpx-lfp18650-negative-electrode-diffusivity-activation-energy-j-mol-1",
           "bpx-lfp18650-positive-electrode-diffusivity-m2-s-1",
-          "bpx-lfp18650-positive-electrode-diffusivity-activation-energy-j-mol-1"
+          "bpx-lfp18650-positive-electrode-diffusivity-activation-energy-j-mol-1",
+          "model-completion-bpx-lfp-electrolyte-diffusivity-m2-s-1"
         ],
         "source_ids": [
           "bpx-lfp-2022"
         ],
         "match_level": "unmatched",
-        "evidence": "Two particle diffusivities and activation energies available",
+        "evidence": "Two particle diffusivities and activation energies available Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -117,7 +121,7 @@
           "bpx-lfp-2022"
         ],
         "match_level": "unmatched",
-        "evidence": "BPX-defined rate constants; not exchange-current densities",
+        "evidence": "BPX-defined rate constants; not exchange-current densities Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -1531,6 +1535,114 @@
         "Commercial part number and matching experimental files are undisclosed.",
         "BPX v0.1 parameter definitions apply. Do not interchange rate constants, volumetric kinetics, and surface exchange-current densities."
       ]
+    },
+    {
+      "id": "model-completion-bpx-lfp-electrolyte-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Electrolyte: Conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "license": "MIT",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Electrolyte/Conductivity [S.m-1]",
+        "origin_status": "borrowed_Nyman2008_electrolyte_or_ORegan2022_entropic_fit; source header attribution"
+      },
+      "definition": "BPX v0.1 reference-temperature expression. x renamed to electrolyte concentration in mol/m3 or electrode lithium fraction; no additional Arrhenius factor applied here.",
+      "conditions": {
+        "parameterization_variant": "bpx-0.1-example",
+        "reference_temperature_K": 298.15
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "0.1297 * (c_e / 1000) ** 3 - 2.51 * (c_e / 1000) ** 1.5 + 3.329 * (c_e / 1000)",
+        "variables": {
+          "c_e": "mol.m-3"
+        },
+        "domain": "Reference-temperature law only; c_e>=0 or 0<=sto<=1. Experimental validity not established.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "limitations": [
+        "Do not match this example to another 2 Ah LFP cell using nominal capacity alone.",
+        "Borrowed reference law, not a new measurement of this undisclosed cell. BPX activation-energy scalars are separate inputs; the expression itself is a reference-temperature law."
+      ]
+    },
+    {
+      "id": "model-completion-bpx-lfp-electrolyte-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Electrolyte: Diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "license": "MIT",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Electrolyte/Diffusivity [m2.s-1]",
+        "origin_status": "borrowed_Nyman2008_electrolyte_or_ORegan2022_entropic_fit; source header attribution"
+      },
+      "definition": "BPX v0.1 reference-temperature expression. x renamed to electrolyte concentration in mol/m3 or electrode lithium fraction; no additional Arrhenius factor applied here.",
+      "conditions": {
+        "parameterization_variant": "bpx-0.1-example",
+        "reference_temperature_K": 298.15
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "8.794e-11 * (c_e / 1000) ** 2 - 3.972e-10 * (c_e / 1000) + 4.862e-10",
+        "variables": {
+          "c_e": "mol.m-3"
+        },
+        "domain": "Reference-temperature law only; c_e>=0 or 0<=sto<=1. Experimental validity not established.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "limitations": [
+        "Do not match this example to another 2 Ah LFP cell using nominal capacity alone.",
+        "Borrowed reference law, not a new measurement of this undisclosed cell. BPX activation-energy scalars are separate inputs; the expression itself is a reference-temperature law."
+      ]
+    },
+    {
+      "id": "model-completion-bpx-lfp-negative-electrode-entropic-change-coefficient-v-k-1",
+      "version": "1",
+      "cell_id": "bpx-lfp-18650-2ah-undisclosed",
+      "name": "Negative electrode: Entropic change coefficient [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "bpx-lfp-2022"
+      ],
+      "license": "MIT",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "bpx-lfp-example",
+        "location": "Parameterisation/Negative electrode/Entropic change coefficient [V.K-1]",
+        "origin_status": "borrowed_Nyman2008_electrolyte_or_ORegan2022_entropic_fit; source header attribution"
+      },
+      "definition": "BPX v0.1 reference-temperature expression. x renamed to electrolyte concentration in mol/m3 or electrode lithium fraction; no additional Arrhenius factor applied here.",
+      "conditions": {
+        "parameterization_variant": "bpx-0.1-example",
+        "reference_temperature_K": 298.15
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "(-0.1112 * sto + 0.02914 + 0.3561 * exp(-(sto - 0.08309) ** 2 / 0.004616)) / 1000",
+        "variables": {
+          "sto": "1"
+        },
+        "domain": "Reference-temperature law only; c_e>=0 or 0<=sto<=1. Experimental validity not established.",
+        "gas_constant_J_mol_K": 8.314462618
+      },
+      "limitations": [
+        "Do not match this example to another 2 Ah LFP cell using nominal capacity alone.",
+        "Borrowed reference law, not a new measurement of this undisclosed cell. BPX activation-energy scalars are separate inputs; the expression itself is a reference-temperature law."
+      ]
     }
   ],
   "ocp_records": [
@@ -1704,7 +1816,8 @@
       "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json",
       "source_id": "bpx-lfp-2022",
       "license": "MIT",
-      "sha256": "fd6d0c992a641c30edad7a76dd988fac1162434c7f8302961fc8f587da1f62a5"
+      "sha256": "fd6d0c992a641c30edad7a76dd988fac1162434c7f8302961fc8f587da1f62a5",
+      "path": "evidence/bpx-lfp18650.json"
     }
   },
   "canonical_data_root": "../../src/ebp/data",

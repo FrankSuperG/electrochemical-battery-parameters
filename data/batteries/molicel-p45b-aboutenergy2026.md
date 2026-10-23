@@ -10,7 +10,7 @@ OCP and reusable model parameters are extracted into versioned CSV/JSON records.
 
 | OCP | Diffusion | Kinetics |
 |---|---|---|
-| [5 tables / fits](../cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [6 records](../parameters/molicel-p45b-aboutenergy2026--diffusion.csv) | [6 records](../parameters/molicel-p45b-aboutenergy2026--kinetics.csv) |
+| [5 tables / fits](../cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [7 records](../parameters/molicel-p45b-aboutenergy2026--diffusion.csv) | [8 records](../parameters/molicel-p45b-aboutenergy2026--kinetics.csv) |
 
 [Full cell/study package: definitions, all parameters, sources and gaps](../cells/molicel-p45b-aboutenergy2026.md)
 
@@ -18,7 +18,7 @@ OCP and reusable model parameters are extracted into versioned CSV/JSON records.
 
 - **OCP:** Published BPX phase-specific fits; original measured half-cell points not located.
 - **Diffusion:** Three phase-specific D inputs and three activation energies in BPX.
-- **Kinetics:** BPX-native reaction coefficients and activation energies; no automatic i0/k conversion.
+- **Kinetics:** BPX-native reaction coefficients/activation energies and two author-defined negative-phase i0 laws with explicitly checked F*k and modifier convention.
 
 ## Full-cell tests
 
@@ -28,6 +28,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 |---|---|---|---|---|---|---|
 | [aboutenergy-p45b-2026](../full-cell/aboutenergy-p45b-2026.md#file-locations) | [Source rates / limits](../full-cell/aboutenergy-p45b-2026.md#requested-test-coverage) | 10/25/40/60 | WLTP, eVTOL | [Not reported](../full-cell/aboutenergy-p45b-2026.md#ageing-data) | Not reported | same_model_same_study |
 | [tum-p45b-halfcell-aging-2026](../full-cell/tum-p45b-halfcell-aging-2026.md#file-locations) | Not separately verified | Unverified | Not reported | [Yes (cycle)](../full-cell/tum-p45b-halfcell-aging-2026.md#ageing-data) | Not reported | Same model; other study, no native parameter join |
+
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
 
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 

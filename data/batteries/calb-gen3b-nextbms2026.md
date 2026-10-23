@@ -28,6 +28,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 |---|---|---|---|---|---|---|
 | [nextbms-calb-nmc532-2026](../full-cell/nextbms-calb-nmc532-2026.md#file-locations) | [Source rates / limits](../full-cell/nextbms-calb-nmc532-2026.md#requested-test-coverage) | 0/5/25/45 | Unnamed / staged | [Yes (cycle, calendar)](../full-cell/nextbms-calb-nmc532-2026.md#ageing-data) | Located / source-listed | same_model_same_study |
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

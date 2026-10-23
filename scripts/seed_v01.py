@@ -498,6 +498,14 @@ def main(download=False):
 
     extend_parameter_sources()
 
+    from seed_oregan import extend as extend_oregan
+
+    extend_oregan()
+
+    from seed_model_completeness import extend as extend_model_completeness
+
+    extend_model_completeness()
+
     # The manually reviewed external-link registry is committed metadata. It is
     # never fetched here; reconstructing observations must not download its payloads.
     from ebp import __version__

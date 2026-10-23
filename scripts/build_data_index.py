@@ -74,7 +74,8 @@ def battery_model_index(catalog):
     """Group explicit cell identities for navigation without changing scientific joins."""
     output, groups, assigned = {}, [], set()
     # A same-model source may be discoverable here while its native data reuse is unresolved.
-    extra = {"molicel-p45b-aboutenergy2026": ["tum-p45b-halfcell-aging-2026"]}
+    extra = {"molicel-p45b-aboutenergy2026": ["tum-p45b-halfcell-aging-2026"],
+             "lg-m50-oregan2022": ["tec-lgm50-multitemperature-2021"]}
     names = {"uccs-a123-26650m1b-2021": "A123 26650 m1b / UCCS",
              "calce-samsung-20r-dynamic": "Samsung INR18650-20R / CALCE",
              "calce-a123-dynamic": "A123 cylindrical LFP / part unresolved",
@@ -103,6 +104,8 @@ def battery_model_index(catalog):
         kinds = {r.record["measurement"] for r in curves}
         label = ("modeled OCPn" if kinds == {"model_ocp"} else "pseudo-OCP" if kinds == {"pseudo_ocp"} else
                  "tables / fits" if kinds == {"literature_table"} else "expressions" if kinds == {"literature_formula"} else "curve records")
+        if cid in {"lg-m50-oregan2022","prada2013-lfp-nominal-design"}:
+            label="reused expressions"
         ocp = (link(page, f"data/cells/{cid}.md#ocp-curves", f"{len(curves)} {label}") if curves else
                link(page, f"data/cells/{cid}.md#ocp-curves", "Reuse unresolved") if cell and cid == "lg-m50lt-hallemans2025" else "Not extracted")
         if not curves:
@@ -158,7 +161,8 @@ def battery_model_index(catalog):
                     "/".join(str(t) for t in r["temperatures_C"]) or "Unverified", text_cell(dynamic),
                     link(page, source+"#ageing-data", aging_label(r)), "Located / source-listed" if "eis" in r["test_types"] else "Not reported", text_cell(assoc)])+" |"]
         else:lines += ["No external full-cell dataset curated for this entry."]
-        lines += ["", "Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.", "",
+        lines += ["", link(page,"docs/PARAMETER_AUDIT.md","Parameter extraction audit: stored records, unresolved reuse and definitions"), "",
+                  "Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.", "",
                   "## Matching and gaps", "",
                   "A shared commercial model permits discovery across studies; it does not establish shared batches, specimens, ageing state or transferable parameters. Grouped diffusion/kinetics and BPX phase coefficients retain their definitions.", ""]
         if cell:lines += [f"- Native package match: `{cell['match_level']}`. {cell['match_evidence']}"]
@@ -170,7 +174,9 @@ def battery_model_index(catalog):
 
     def table(page, level):
         lines = ["OCP and parameter links open repository data. Full-cell links open source descriptions and downloads. **Not extracted** means no reusable native record is curated; it is not a claim that no measurement exists.", "",
-                 "Coverage labels below are source-level discovery aids. Read each model page for study, temperature, profile, licence and specimen limits. Half-cell temperature is tracked separately.", ""]
+                 "Coverage labels below are source-level discovery aids. Read each model page for study, temperature, profile, licence and specimen limits. Half-cell temperature is tracked separately.", "",
+                 link(page,"docs/PARAMETER_AUDIT.md","Extraction audit for every battery/study: stored / reuse unresolved / definition unresolved / not located"), "",
+                 "Record counts include published assumptions, borrowed functions, activation energies and optional submodel inputs, not a count of independent measurements or solid-electrode coefficients. Read parameter names and origin fields before selecting a model input.", ""]
         families = sorted({g["family"] for g in groups}, key=lambda f: (("LFP", "NMC", "NCA", "LCO", "NCO").index(f) if f in ("LFP", "NMC", "NCA", "LCO", "NCO") else 99, f))
         for family in families:
             lines += ["#"*level+" "+family, "", "| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |", "|---|---|---|---|---|---|"]
@@ -336,7 +342,12 @@ def render_index(repo=REPO):
         raise ValueError("; ".join(errors))
     output = {}
     output.update(full_cell_index(catalog))
+    if __package__:
+        from .parameter_audit import render as render_parameter_audit
+    else:
+        from parameter_audit import render as render_parameter_audit
     model_pages, model_table = battery_model_index(catalog)
+    output["docs/PARAMETER_AUDIT.md"] = render_parameter_audit(catalog)
     output.update(model_pages)
 
     def relative(page, target):

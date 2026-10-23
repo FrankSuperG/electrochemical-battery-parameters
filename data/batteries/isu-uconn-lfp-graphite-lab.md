@@ -30,6 +30,8 @@ Eleven author-selected charge branches and available following discharge branche
 
 No external full-cell dataset curated for this entry.
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

@@ -28,7 +28,7 @@ full-cell temperatures, named/unnamed dynamic tests, ageing, EIS and the paramet
 relationship. Material-only records remain in the OCP material index. A shared
 model name is not a shared batch, specimen or ageing state.
 
-## v0.12 extraction scope
+## v0.12 extraction scope (historical)
 
 - **NCR18650B / HNEI:** four low-rate NE/PE branches, 11,854 source points. Two
   original MAT members are retained under CC0. Source columns have no headers;
@@ -55,14 +55,30 @@ model name is not a shared batch, specimen or ageing state.
 
 The complete P45B BPX is retained with the author BSD notice. Its five standard
 electrolyte placeholder zeros are **not** imported as measured zero transport;
-71 user-defined law coefficients stay in the original BPX rather than being
-misrepresented as standalone scalar physical properties. No upstream author
+71 user-defined law coefficients were initially retained in the original BPX.
+In v0.13 their checked definitions also produce seven native transport,
+thermodynamic, kinetic and contact-resistance records; coefficient flags remain
+source metadata. No upstream author
 code is executed. Partial exports are not drop-in complete model inputs.
 
 **Not extracted:** TUM P45B measurement inputs and M50LT third-party OCP remain
 external while reuse scope is unresolved. Other half-cell-only candidate sources
 retain their documented admission gaps. Unknown half-cell temperature is never
 filled from full-cell test setpoints.
+
+## v0.13 completion
+
+See the [per-model audit](PARAMETER_AUDIT.md) and [O'Regan review](OREGAN2022.md).
+The native inventory is 76 OCP/fit records and 1,041 other parameters across
+18 cell/study packages. The four added OCP records are explicitly reused
+expressions for O'Regan and Prada model variants, not new measurements.
+Seven PyBaMM dictionaries now have all numeric/analytic non-OCP inputs stored,
+including labeled assumptions and optional submodel defaults. Three BPX LFP
+reference laws and seven P45B extension inputs are also native.
+
+O'Regan adds 55 experimental tables and 73 separate model inputs. Three suspect
+Cp files remain quarantined in the original archive. Full-cell observations added
+in this release remain descriptions and external links.
 
 ## Reproduce and check
 

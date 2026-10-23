@@ -109,24 +109,19 @@
                   "additionalProperties": {
                     "type": "string"
                   },
-                  "oneOf": [
-                    {
-                      "required": [
-                        "c_e",
-                        "c_s_surf",
-                        "c_s_max",
-                        "T"
-                      ],
-                      "maxProperties": 4
-                    },
-                    {
-                      "required": [
-                        "sto",
-                        "T"
-                      ],
-                      "maxProperties": 2
-                    }
-                  ]
+                  "propertyNames": {
+                    "enum": [
+                      "sto",
+                      "T",
+                      "c_e",
+                      "c_s_surf",
+                      "c_s_max",
+                      "c_Li",
+                      "L_sei"
+                    ]
+                  },
+                  "minProperties": 1,
+                  "maxProperties": 6
                 },
                 "domain": {
                   "type": "string"
@@ -188,7 +183,8 @@
                     "kind": {
                       "enum": [
                         "source_electrode_soc",
-                        "source_reported_stoichiometry"
+                        "source_reported_stoichiometry",
+                        "source_temperature"
                       ]
                     },
                     "definition": {

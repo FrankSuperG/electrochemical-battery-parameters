@@ -10,7 +10,7 @@ OCP and reusable model parameters are extracted into versioned CSV/JSON records.
 
 | OCP | Diffusion | Kinetics |
 |---|---|---|
-| [2 expressions](../cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [5 records](../parameters/bpx-lfp-18650-2ah-undisclosed--diffusion.csv) | [4 records](../parameters/bpx-lfp-18650-2ah-undisclosed--kinetics.csv) |
+| [2 expressions](../cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [6 records](../parameters/bpx-lfp-18650-2ah-undisclosed--diffusion.csv) | [4 records](../parameters/bpx-lfp-18650-2ah-undisclosed--kinetics.csv) |
 
 [Full cell/study package: definitions, all parameters, sources and gaps](../cells/bpx-lfp-18650-2ah-undisclosed.md)
 
@@ -25,6 +25,8 @@ OCP and reusable model parameters are extracted into versioned CSV/JSON records.
 New full-cell observations remain at their providers. Links below lead to descriptions, exact file locations, source licenses and missing channels. Existing packaged tests are retained for compatibility.
 
 No external full-cell dataset curated for this entry.
+
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
 
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 

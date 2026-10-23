@@ -28,6 +28,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 |---|---|---|---|---|---|---|
 | [snu-mj1-dynamic-aging-2024](../full-cell/snu-mj1-dynamic-aging-2024.md#file-locations) | Not separately verified | 25 | Unnamed / staged | [Yes (cycle)](../full-cell/snu-mj1-dynamic-aging-2024.md#ageing-data) | Not reported | same_model_different_study |
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

@@ -45,7 +45,7 @@ def test_official_mat_arrays_keep_paired_capacity_voltage_temperature():
 def test_author_parameterization_is_separate_from_pybamm_variant():
     c = Catalog()
     assert len(c.search_parameters(cell_id=CID, variant="original_author_mpm")) == 33
-    assert len(c.search_parameters(cell_id=CID, variant="pybamm_v25_4_2")) == 38
+    assert len(c.search_parameters(cell_id=CID, variant="pybamm_v25_4_2")) == 105
     params = c.search_parameters(cell_id=CID)
     assert (
         len(
@@ -67,7 +67,7 @@ def test_author_parameterization_is_separate_from_pybamm_variant():
                 == "pybamm_v25_4_2"
             ]
         )
-        == 38
+        == 105
     )
     assert c.get_parameter("mohtat-author-ds-n").value == 5e-15
     assert c.get_parameter("mohtat-author-ds-p").value == 8e-15

@@ -32,6 +32,8 @@ One same-study measured drive-cycle t/i/v series (164953 rows), nominal 80-20% S
 |---|---|---|---|---|---|---|
 | [hallemans-m50lt-eis-2025](../full-cell/hallemans-m50lt-eis-2025.md#file-locations) | Not separately verified | 25 | Unnamed / staged | [Not reported](../full-cell/hallemans-m50lt-eis-2025.md#ageing-data) | Located / source-listed | same_model_same_study |
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

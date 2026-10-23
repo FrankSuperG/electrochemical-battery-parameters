@@ -10,8 +10,8 @@ exports, 13 material labels and 13 cell/study entries**. File, branch and parame
 counts are not independent-cell or independent-study counts. MJ1 adds no intact
 full-cell test; existing test counts are unchanged.
 
-For the subsequent v0.12 additions (72 curves/fits, 457 other parameters and
-16 cell/study entries), see the [extraction and storage review](PARAMETER_STORAGE.md)
+For the subsequent v0.13 inventory (76 curves/fits, 1,041 other parameters and
+18 cell/study entries), see the [extraction and storage review](PARAMETER_STORAGE.md)
 and [current battery-model index](../data/batteries/README.md). This dated v0.8
 review is retained as history; current source-level gaps remain authoritative.
 

@@ -1,0 +1,26 @@
+{
+  "oregan-data-archive": {
+    "source_id": "oregan-2021-data",
+    "filename": "oregan-2021-parameters.zip",
+    "path": "evidence/oregan-2021-parameters.zip",
+    "url": "https://zenodo.org/api/records/5171874/files/ORegan%202021%20Data%20Repository.zip/content",
+    "license": "CC-BY-4.0",
+    "sha256": "1c5052e8af198429c29b6784681e7b1b7d8a4e48dfca03c6fc23df639ce084de"
+  },
+  "oregan-data-metadata": {
+    "source_id": "oregan-2021-data",
+    "filename": "oregan-5171874-metadata.json",
+    "path": "evidence/oregan-5171874-metadata.json",
+    "url": "https://zenodo.org/api/records/5171874",
+    "license": "CC-BY-4.0",
+    "sha256": "641ffaca6ac90fbbc2ca8a3d162b0e31849ee922721537972a9114962d033ca1"
+  },
+  "oregan-pybamm-code": {
+    "source_id": "pybamm-25-4-2",
+    "filename": "ORegan2022-v25.4.2.py",
+    "path": "evidence/ORegan2022-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/ORegan2022.py",
+    "license": "BSD-3-Clause",
+    "sha256": "52c12f0117d7c3e0679de8887bab6a7e9af2407d67a2f3ee04225e765cd6ff47"
+  }
+}

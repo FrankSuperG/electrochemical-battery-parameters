@@ -1,6 +1,6 @@
 # OCP-first expansion screen — 2026-10-23
 
-**v0.11 screening snapshot.** The subsequent v0.12 follow-up extracted HNEI and
+**v0.11 screening snapshot.** See the [v0.13 comprehensive extraction audit](PARAMETER_AUDIT.md) for current decisions. The subsequent v0.12 follow-up extracted HNEI and
 NEXTBMS half-cell branches plus P45B fitted OCP/model parameters. Read the
 [current storage/extraction guide](PARAMETER_STORAGE.md) and
 [battery model index](../data/batteries/README.md) for native records and updated

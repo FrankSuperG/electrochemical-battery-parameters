@@ -10,7 +10,7 @@ OCP and reusable model parameters are extracted into versioned CSV/JSON records.
 
 | OCP | Diffusion | Kinetics |
 |---|---|---|
-| [2 expressions](../cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [2 records](../parameters/kokam-slpb75106100-ecker2015--diffusion.csv) | [2 records](../parameters/kokam-slpb75106100-ecker2015--kinetics.csv) |
+| [2 expressions](../cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [6 records](../parameters/kokam-slpb75106100-ecker2015--diffusion.csv) | [6 records](../parameters/kokam-slpb75106100-ecker2015--kinetics.csv) |
 
 [Full cell/study package: definitions, all parameters, sources and gaps](../cells/kokam-slpb75106100-ecker2015.md)
 
@@ -29,6 +29,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 Two digitized CC discharges: 1C and 5C; time/voltage only
 
 No external full-cell dataset curated for this entry.
+
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
 
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 

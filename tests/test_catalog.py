@@ -18,10 +18,10 @@ def catalog():
 
 def test_complete_catalog_and_link_integrity(catalog):
     assert catalog.validate() == []
-    assert len(catalog.search(material="LFP")) == 9
-    assert len(catalog.search(material="graphite")) == 20
+    assert len(catalog.search(material="LFP")) == 10
+    assert len(catalog.search(material="graphite")) == 22
     assert len(catalog.search(representation="table")) == 57
-    assert len(catalog.search_parameters(cell_id="lg-m50")) == 38
+    assert len(catalog.search_parameters(cell_id="lg-m50")) == 90
     assert len(catalog.linked_tests("lg-m50")) == 3
     assert all(
         not c.record["quality"]["independent_validation"] for c in catalog.search()
@@ -116,7 +116,7 @@ def test_export_preserves_native_table_and_json_cli(catalog, tmp_path, capsys):
 
 
 def test_nonocp_scalar_and_kinetic_function(catalog):
-    diffusion = catalog.search_parameters(cell_id="lg-m50", category="diffusion")
+    diffusion = [p for p in catalog.search_parameters(cell_id="lg-m50", category="diffusion") if not p.id.startswith("model-completion-")]
     assert {p.record["name"] for p in diffusion} == {
         "Negative particle diffusivity [m2.s-1]",
         "Positive particle diffusivity [m2.s-1]",

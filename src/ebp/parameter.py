@@ -56,16 +56,19 @@ class Parameter:
         values = {k: np.asarray(v, dtype=float) for k, v in variables.items()}
         if any(not np.all(np.isfinite(v)) for v in values.values()):
             raise ValueError("Inputs must be finite")
-        concentration_invalid = "c_e" in values and (
-            np.any(values["c_e"] < 0)
-            or np.any(values["c_s_max"] <= 0)
+        concentration_invalid = "c_e" in values and np.any(values["c_e"] < 0)
+        solid_concentration_invalid = "c_s_max" in values and (
+            np.any(values["c_s_max"] <= 0)
             or np.any(values["c_s_surf"] < 0)
             or np.any(values["c_s_surf"] > values["c_s_max"])
         )
         stoichiometry_invalid = "sto" in values and (
             np.any(values["sto"] < 0) or np.any(values["sto"] > 1)
         )
-        if concentration_invalid or stoichiometry_invalid or np.any(values["T"] <= 0):
+        temperature_invalid = "T" in values and np.any(values["T"] <= 0)
+        plating_invalid = "c_Li" in values and np.any(values["c_Li"] < 0)
+        sei_invalid = "L_sei" in values and np.any(values["L_sei"] <= 0)
+        if concentration_invalid or solid_concentration_invalid or stoichiometry_invalid or temperature_invalid or plating_invalid or sei_invalid:
             raise ValueError(
                 "Inputs violate the stated concentration or temperature domain"
             )

@@ -10,7 +10,7 @@ Custom laboratory pouch. NMC532 label follows the PyBaMM implementation, not a c
 
 ## Parameters
 
-[All 71 parameter records (CSV)](../parameters/mohtat2020-nmc532-pouch.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/mohtat2020-nmc532-pouch.json)
+[All 138 parameter records (CSV)](../parameters/mohtat2020-nmc532-pouch.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/mohtat2020-nmc532-pouch.json)
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
@@ -19,11 +19,11 @@ CSV includes units, definitions, conditions, origins and variant labels. Express
 | Variant | Records | CSV |
 |---|---:|---|
 | `original_author_mpm` | 33 | [Download CSV](../parameters/mohtat2020-nmc532-pouch--original_author_mpm.csv) |
-| `pybamm_v25_4_2` | 38 | [Download CSV](../parameters/mohtat2020-nmc532-pouch--pybamm_v25_4_2.csv) |
+| `pybamm_v25_4_2` | 105 | [Download CSV](../parameters/mohtat2020-nmc532-pouch--pybamm_v25_4_2.csv) |
 
 ### Diffusion parameters
 
-[4 diffusion records (CSV)](../parameters/mohtat2020-nmc532-pouch--diffusion.csv)
+[9 diffusion records (CSV)](../parameters/mohtat2020-nmc532-pouch--diffusion.csv)
 
 Original author D_n=5e-15 and D_p=8e-15 m2/s; PyBaMM same reference values with added Arrhenius dependence.
 
@@ -31,7 +31,7 @@ Keep source units, variants and origins. A category can contain activation energ
 
 ### Kinetics parameters
 
-[4 kinetics records (CSV)](../parameters/mohtat2020-nmc532-pouch--kinetics.csv)
+[12 kinetics records (CSV)](../parameters/mohtat2020-nmc532-pouch--kinetics.csv)
 
 Original k0_n=1.1e-11 and k0_p=5e-11 with source i0 definition; PyBaMM exchange-current prefactors are rounded/unit-converted and have added temperature dependence.
 

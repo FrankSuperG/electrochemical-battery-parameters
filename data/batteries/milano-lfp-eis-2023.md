@@ -21,6 +21,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 |---|---|---|---|---|---|---|
 | [milano-lfp-eis-2023](../full-cell/milano-lfp-eis-2023.md#file-locations) | Not separately verified | Unverified | Not reported | [Not reported](../full-cell/milano-lfp-eis-2023.md#ageing-data) | Located / source-listed | unmatched |
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

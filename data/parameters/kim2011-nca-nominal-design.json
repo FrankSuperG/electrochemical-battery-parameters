@@ -60,7 +60,69 @@
       "nca-kim2011-negative-diffusivity",
       "nca-kim2011-negative-exchange-current-density",
       "nca-kim2011-positive-diffusivity",
-      "nca-kim2011-positive-exchange-current-density"
+      "nca-kim2011-positive-exchange-current-density",
+      "model-completion-nca-kim2011-ratio-of-lithium-moles-to-sei-moles",
+      "model-completion-nca-kim2011-sei-partial-molar-volume-m3-mol-1",
+      "model-completion-nca-kim2011-sei-reaction-exchange-current-density-a-m-2",
+      "model-completion-nca-kim2011-sei-resistivity-ohm-m",
+      "model-completion-nca-kim2011-sei-solvent-diffusivity-m2-s-1",
+      "model-completion-nca-kim2011-bulk-solvent-concentration-mol-m-3",
+      "model-completion-nca-kim2011-sei-open-circuit-potential-v",
+      "model-completion-nca-kim2011-sei-electron-conductivity-s-m-1",
+      "model-completion-nca-kim2011-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "model-completion-nca-kim2011-lithium-interstitial-reference-concentration-mol-m-3",
+      "model-completion-nca-kim2011-initial-sei-thickness-m",
+      "model-completion-nca-kim2011-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "model-completion-nca-kim2011-ec-diffusivity-m2-s-1",
+      "model-completion-nca-kim2011-sei-kinetic-rate-constant-m-s-1",
+      "model-completion-nca-kim2011-sei-growth-activation-energy-j-mol-1",
+      "model-completion-nca-kim2011-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-nca-kim2011-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-nca-kim2011-negative-tab-width-m",
+      "model-completion-nca-kim2011-negative-tab-centre-y-coordinate-m",
+      "model-completion-nca-kim2011-negative-tab-centre-z-coordinate-m",
+      "model-completion-nca-kim2011-positive-tab-width-m",
+      "model-completion-nca-kim2011-positive-tab-centre-y-coordinate-m",
+      "model-completion-nca-kim2011-positive-tab-centre-z-coordinate-m",
+      "model-completion-nca-kim2011-negative-current-collector-conductivity-s-m-1",
+      "model-completion-nca-kim2011-positive-current-collector-conductivity-s-m-1",
+      "model-completion-nca-kim2011-negative-current-collector-density-kg-m-3",
+      "model-completion-nca-kim2011-positive-current-collector-density-kg-m-3",
+      "model-completion-nca-kim2011-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-nca-kim2011-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-nca-kim2011-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-nca-kim2011-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-nca-kim2011-current-function-a",
+      "model-completion-nca-kim2011-contact-resistance-ohm",
+      "model-completion-nca-kim2011-negative-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-nca-kim2011-negative-electrode-bruggeman-coefficient-electrode",
+      "model-completion-nca-kim2011-negative-electrode-charge-transfer-coefficient",
+      "model-completion-nca-kim2011-negative-electrode-double-layer-capacity-f-m-2",
+      "model-completion-nca-kim2011-negative-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-nca-kim2011-positive-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-nca-kim2011-positive-electrode-bruggeman-coefficient-electrode",
+      "model-completion-nca-kim2011-positive-electrode-charge-transfer-coefficient",
+      "model-completion-nca-kim2011-positive-electrode-double-layer-capacity-f-m-2",
+      "model-completion-nca-kim2011-positive-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-nca-kim2011-separator-porosity",
+      "model-completion-nca-kim2011-separator-bruggeman-coefficient-electrolyte",
+      "model-completion-nca-kim2011-cation-transference-number",
+      "model-completion-nca-kim2011-thermodynamic-factor",
+      "model-completion-nca-kim2011-electrolyte-diffusivity-m2-s-1",
+      "model-completion-nca-kim2011-electrolyte-conductivity-s-m-1",
+      "model-completion-nca-kim2011-reference-temperature-k",
+      "model-completion-nca-kim2011-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-nca-kim2011-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-nca-kim2011-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-nca-kim2011-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-nca-kim2011-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-nca-kim2011-total-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-nca-kim2011-ambient-temperature-k",
+      "model-completion-nca-kim2011-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "model-completion-nca-kim2011-number-of-cells-connected-in-series-to-make-a-battery",
+      "model-completion-nca-kim2011-open-circuit-voltage-at-0-soc-v",
+      "model-completion-nca-kim2011-open-circuit-voltage-at-100-soc-v",
+      "model-completion-nca-kim2011-initial-temperature-k"
     ],
     "ocp_record_ids": [
       "nca-kim2011-graphite-ocp",
@@ -86,14 +148,18 @@
       "diffusion": {
         "record_ids": [
           "nca-kim2011-negative-diffusivity",
-          "nca-kim2011-positive-diffusivity"
+          "nca-kim2011-positive-diffusivity",
+          "model-completion-nca-kim2011-sei-solvent-diffusivity-m2-s-1",
+          "model-completion-nca-kim2011-sei-lithium-interstitial-diffusivity-m2-s-1",
+          "model-completion-nca-kim2011-ec-diffusivity-m2-s-1",
+          "model-completion-nca-kim2011-electrolyte-diffusivity-m2-s-1"
         ],
         "source_ids": [
           "kim-2011",
           "pybamm-25-4-2"
         ],
         "match_level": "unmatched",
-        "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
+        "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -101,14 +167,19 @@
       "kinetics": {
         "record_ids": [
           "nca-kim2011-negative-exchange-current-density",
-          "nca-kim2011-positive-exchange-current-density"
+          "nca-kim2011-positive-exchange-current-density",
+          "model-completion-nca-kim2011-sei-kinetic-rate-constant-m-s-1",
+          "model-completion-nca-kim2011-negative-electrode-charge-transfer-coefficient",
+          "model-completion-nca-kim2011-negative-electrode-double-layer-capacity-f-m-2",
+          "model-completion-nca-kim2011-positive-electrode-charge-transfer-coefficient",
+          "model-completion-nca-kim2011-positive-electrode-double-layer-capacity-f-m-2"
         ],
         "source_ids": [
           "kim-2011",
           "pybamm-25-4-2"
         ],
         "match_level": "unmatched",
-        "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
+        "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -137,7 +208,75 @@
       "Independent full-cell model reproduction not performed",
       "Commercial part number unresolved",
       "Matching full-cell charge/discharge observations not imported"
-    ]
+    ],
+    "implementation_completion": {
+      "source_asset_id": "pybamm-nca_kim2011-code",
+      "parameter_ids": [
+        "model-completion-nca-kim2011-ratio-of-lithium-moles-to-sei-moles",
+        "model-completion-nca-kim2011-sei-partial-molar-volume-m3-mol-1",
+        "model-completion-nca-kim2011-sei-reaction-exchange-current-density-a-m-2",
+        "model-completion-nca-kim2011-sei-resistivity-ohm-m",
+        "model-completion-nca-kim2011-sei-solvent-diffusivity-m2-s-1",
+        "model-completion-nca-kim2011-bulk-solvent-concentration-mol-m-3",
+        "model-completion-nca-kim2011-sei-open-circuit-potential-v",
+        "model-completion-nca-kim2011-sei-electron-conductivity-s-m-1",
+        "model-completion-nca-kim2011-sei-lithium-interstitial-diffusivity-m2-s-1",
+        "model-completion-nca-kim2011-lithium-interstitial-reference-concentration-mol-m-3",
+        "model-completion-nca-kim2011-initial-sei-thickness-m",
+        "model-completion-nca-kim2011-ec-initial-concentration-in-electrolyte-mol-m-3",
+        "model-completion-nca-kim2011-ec-diffusivity-m2-s-1",
+        "model-completion-nca-kim2011-sei-kinetic-rate-constant-m-s-1",
+        "model-completion-nca-kim2011-sei-growth-activation-energy-j-mol-1",
+        "model-completion-nca-kim2011-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-nca-kim2011-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-nca-kim2011-negative-tab-width-m",
+        "model-completion-nca-kim2011-negative-tab-centre-y-coordinate-m",
+        "model-completion-nca-kim2011-negative-tab-centre-z-coordinate-m",
+        "model-completion-nca-kim2011-positive-tab-width-m",
+        "model-completion-nca-kim2011-positive-tab-centre-y-coordinate-m",
+        "model-completion-nca-kim2011-positive-tab-centre-z-coordinate-m",
+        "model-completion-nca-kim2011-negative-current-collector-conductivity-s-m-1",
+        "model-completion-nca-kim2011-positive-current-collector-conductivity-s-m-1",
+        "model-completion-nca-kim2011-negative-current-collector-density-kg-m-3",
+        "model-completion-nca-kim2011-positive-current-collector-density-kg-m-3",
+        "model-completion-nca-kim2011-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-nca-kim2011-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-nca-kim2011-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-nca-kim2011-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-nca-kim2011-current-function-a",
+        "model-completion-nca-kim2011-contact-resistance-ohm",
+        "model-completion-nca-kim2011-negative-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-nca-kim2011-negative-electrode-bruggeman-coefficient-electrode",
+        "model-completion-nca-kim2011-negative-electrode-charge-transfer-coefficient",
+        "model-completion-nca-kim2011-negative-electrode-double-layer-capacity-f-m-2",
+        "model-completion-nca-kim2011-negative-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-nca-kim2011-positive-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-nca-kim2011-positive-electrode-bruggeman-coefficient-electrode",
+        "model-completion-nca-kim2011-positive-electrode-charge-transfer-coefficient",
+        "model-completion-nca-kim2011-positive-electrode-double-layer-capacity-f-m-2",
+        "model-completion-nca-kim2011-positive-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-nca-kim2011-separator-porosity",
+        "model-completion-nca-kim2011-separator-bruggeman-coefficient-electrolyte",
+        "model-completion-nca-kim2011-cation-transference-number",
+        "model-completion-nca-kim2011-thermodynamic-factor",
+        "model-completion-nca-kim2011-electrolyte-diffusivity-m2-s-1",
+        "model-completion-nca-kim2011-electrolyte-conductivity-s-m-1",
+        "model-completion-nca-kim2011-reference-temperature-k",
+        "model-completion-nca-kim2011-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-nca-kim2011-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-nca-kim2011-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-nca-kim2011-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-nca-kim2011-edge-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-nca-kim2011-total-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-nca-kim2011-ambient-temperature-k",
+        "model-completion-nca-kim2011-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+        "model-completion-nca-kim2011-number-of-cells-connected-in-series-to-make-a-battery",
+        "model-completion-nca-kim2011-open-circuit-voltage-at-0-soc-v",
+        "model-completion-nca-kim2011-open-circuit-voltage-at-100-soc-v",
+        "model-completion-nca-kim2011-initial-temperature-k"
+      ],
+      "status": "All non-OCP numeric and analytic entries in this pinned dictionary are represented, including explicitly labeled optional submodels; string/citation metadata excluded."
+    }
   },
   "parameters": [
     {
@@ -1319,6 +1458,2078 @@
         "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
         "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
       ]
+    },
+    {
+      "id": "model-completion-nca-kim2011-ratio-of-lithium-moles-to-sei-moles",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Ratio of lithium moles to SEI moles",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Ratio of lithium moles to SEI moles",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Ratio of lithium moles to SEI moles; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-partial-molar-volume-m3-mol-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI partial molar volume [m3.mol-1]",
+      "category": "geometry",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI partial molar volume [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI partial molar volume [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 9.585e-05
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-reaction-exchange-current-density-a-m-2",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI reaction exchange current density [A.m-2]",
+      "category": "thermal",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI reaction exchange current density [A.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI reaction exchange current density [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5e-07
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-resistivity-ohm-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI resistivity [Ohm.m]",
+      "category": "electrode",
+      "unit": "Ohm.m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI resistivity [Ohm.m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI resistivity [Ohm.m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 200000.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-solvent-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI solvent diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI solvent diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI solvent diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-22
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-bulk-solvent-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Bulk solvent concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Bulk solvent concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Bulk solvent concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2636.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-open-circuit-potential-v",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI open-circuit potential [V]",
+      "category": "electrode",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI open-circuit potential [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI open-circuit potential [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-electron-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI electron conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI electron conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI electron conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.95e-14
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI lithium interstitial diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI lithium interstitial diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI lithium interstitial diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-20
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-lithium-interstitial-reference-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Lithium interstitial reference concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Lithium interstitial reference concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium interstitial reference concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 15.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-initial-sei-thickness-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Initial SEI thickness [m]",
+      "category": "initial_state",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Initial SEI thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Initial SEI thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-09
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "EC initial concentration in electrolyte [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::EC initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC initial concentration in electrolyte [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4541.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-ec-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "EC diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::EC diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-18
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-kinetic-rate-constant-m-s-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI kinetic rate constant [m.s-1]",
+      "category": "kinetics",
+      "unit": "m.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI kinetic rate constant [m.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI kinetic rate constant [m.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-12
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-sei-growth-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "SEI growth activation energy [J.mol-1]",
+      "category": "electrode",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::SEI growth activation energy [J.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI growth activation energy [J.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Negative electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Positive electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-tab-width-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative tab width [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative tab width [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab width [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.044
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-tab-centre-y-coordinate-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative tab centre y-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative tab centre y-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab centre y-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.013
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-tab-centre-z-coordinate-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative tab centre z-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative tab centre z-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab centre z-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-tab-width-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive tab width [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive tab width [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab width [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.044
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-tab-centre-y-coordinate-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive tab centre y-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive tab centre y-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab centre y-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.137
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-tab-centre-z-coordinate-m",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive tab centre z-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive tab centre z-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab centre z-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 59600000.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 37800000.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 11544.75
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3490.24338
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 385.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 897.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 267.467
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 158.079
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-current-function-a",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Current function [A]",
+      "category": "operating_limits",
+      "unit": "A",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Current function [A]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Current function [A]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.43
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-contact-resistance-ohm",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Contact resistance [Ohm]",
+      "category": "operating_limits",
+      "unit": "Ohm",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Contact resistance [Ohm]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Contact resistance [Ohm]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-separator-porosity",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Separator porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Separator porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-separator-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Separator Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Separator Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-cation-transference-number",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Cation transference number",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Cation transference number; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-thermodynamic-factor",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Thermodynamic factor",
+      "category": "thermodynamics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Thermodynamic factor",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Thermodynamic factor; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-electrolyte-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Electrolyte diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::electrolyte_diffusivity_Kim2011",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_diffusivity_Kim2011",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Diffusivity of LiPF6 in EC as a function of ion concentration from [1].\n\n References\n----------\n.. [1] Kim, G. H., Smith, K., Lee, K. J., Santhanagopalan, S., & Pesaran, A.\n(2011). Multi-domain modeling of lithium-ion batteries encompassing\nmulti-physics in varied length scales. Journal of The Electrochemical\nSociety, 158(8), A955-A969.\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "5.839999999999999e-07 * exp(-2870 / T) * (c_e / 1000) ** 2 - 3.3899999999999997e-06 * exp(-2920 / T) * (c_e / 1000) + 1.29e-05 * exp(-3200 / T)",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-electrolyte-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Electrolyte conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::electrolyte_conductivity_Kim2011",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_conductivity_Kim2011",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Conductivity of LiPF6 in EC as a function of ion concentration from [1].\n\nReferences\n----------\n.. [1] Kim, G. H., Smith, K., Lee, K. J., Santhanagopalan, S., & Pesaran, A.\n(2011). Multi-domain modeling of lithium-ion batteries encompassing\nmulti-physics in varied length scales. Journal of The Electrochemical\nSociety, 158(8), A955-A969.\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "3.45 * exp(-798 / T) * (c_e / 1000) ** 3 - 48.5 * exp(-1080 / T) * (c_e / 1000) ** 2 + 244 * exp(-1440 / T) * (c_e / 1000)",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-reference-temperature-k",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Reference temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Reference temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Reference temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Negative tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Negative tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 25.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Positive tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Positive tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 25.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Edge heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Edge heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Edge heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-total-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Total heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Total heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Total heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 25.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Ambient temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Ambient temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Ambient temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Number of electrodes connected in parallel to make a cell",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Number of electrodes connected in parallel to make a cell",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of electrodes connected in parallel to make a cell; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-number-of-cells-connected-in-series-to-make-a-battery",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Number of cells connected in series to make a battery",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Number of cells connected in series to make a battery",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of cells connected in series to make a battery; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-open-circuit-voltage-at-0-soc-v",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Open-circuit voltage at 0% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Open-circuit voltage at 0% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 0% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.7
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-open-circuit-voltage-at-100-soc-v",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Open-circuit voltage at 100% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Open-circuit voltage at 100% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 100% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      }
+    },
+    {
+      "id": "model-completion-nca-kim2011-initial-temperature-k",
+      "version": "1",
+      "cell_id": "kim2011-nca-nominal-design",
+      "name": "Initial temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-nca_kim2011-code",
+        "location": "NCA_Kim2011.py::get_parameter_values::Initial temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "nca-kim2011-pybamm-v25-4-2",
+        "model_set": "NCA_Kim2011",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "A nominal design, not an identified commercial cell. Upstream thermal properties combine Marquis2019 material inputs with effective-heat-capacity scaling; they are not independently measured NCA-cell material properties. No matching raw test is assigned.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
     }
   ],
   "ocp_records": [
@@ -1501,7 +3712,7 @@
       "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
       "version": "v25.4.2",
       "license": "BSD-3-Clause",
-      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
     }
   },
   "upstream_assets": {
@@ -1510,7 +3721,8 @@
       "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/NCA_Kim2011.py",
       "sha256": "d0aebb43b776f4804a0d7ad7f0b9dc6b3d1c30ee145e11e7c02b34c0a6f6c37c",
       "source_id": "pybamm-25-4-2",
-      "license": "BSD-3-Clause"
+      "license": "BSD-3-Clause",
+      "path": "evidence/NCA_Kim2011-v25.4.2.py"
     }
   },
   "canonical_data_root": "../../src/ebp/data",

@@ -116,7 +116,7 @@
       "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
       "version": "v25.4.2",
       "license": "BSD-3-Clause",
-      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
     },
     "pybamm-data-1-0-2": {
       "kind": "dataset",
@@ -146,7 +146,8 @@
       "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ai2020.py",
       "sha256": "02b1c3edb2217154ae0b525a132b12fe8cb2c4718465ff4eecdcf0188830ef20",
       "license": "BSD-3-Clause",
-      "source_id": "pybamm-25-4-2"
+      "source_id": "pybamm-25-4-2",
+      "path": "evidence/Ai2020-v25.4.2.py"
     }
   },
   "export": {

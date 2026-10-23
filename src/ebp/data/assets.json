@@ -4,7 +4,8 @@
     "filename": "Prada2013-v25.4.2.py",
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Prada2013.py",
     "sha256": "9cec4ad9e6afac112b44c5ea4c73ee2c2c0882a7c6fc5398bd789b78617cb052",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "path": "evidence/Prada2013-v25.4.2.py"
   },
   "sintef-metadata": {
     "source_id": "sintef-2026-v3",
@@ -51,7 +52,8 @@
     "filename": "Chen2020-v25.4.2.py",
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Chen2020.py",
     "sha256": "eb6a13879cad6ae1bc86d222ce5189f3e3edb400e23f69331779b8aae2437906",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "path": "evidence/Chen2020-v25.4.2.py"
   },
   "chen-lgm50-cell02": {
     "source_id": "chen-validation-2020",
@@ -128,7 +130,8 @@
     "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json",
     "source_id": "bpx-lfp-2022",
     "license": "MIT",
-    "sha256": "fd6d0c992a641c30edad7a76dd988fac1162434c7f8302961fc8f587da1f62a5"
+    "sha256": "fd6d0c992a641c30edad7a76dd988fac1162434c7f8302961fc8f587da1f62a5",
+    "path": "evidence/bpx-lfp18650.json"
   },
   "bpx-license": {
     "filename": "bpx-license.txt",
@@ -283,21 +286,24 @@
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
     "sha256": "f200bede5ece656c0c88d2db9c314646986fb990978ae6b056eb263cd40283b6",
     "source_id": "pybamm-25-4-2",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "path": "evidence/Marquis2019-v25.4.2.py"
   },
   "pybamm-nca_kim2011-code": {
     "filename": "NCA_Kim2011-v25.4.2.py",
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/NCA_Kim2011.py",
     "sha256": "d0aebb43b776f4804a0d7ad7f0b9dc6b3d1c30ee145e11e7c02b34c0a6f6c37c",
     "source_id": "pybamm-25-4-2",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "path": "evidence/NCA_Kim2011-v25.4.2.py"
   },
   "pybamm-mohtat2020-code": {
     "filename": "Mohtat2020-v25.4.2.py",
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Mohtat2020.py",
     "sha256": "89c2acb9533912c54492063dad111c5feeff57402d8130f6b153f9f67d8df835",
     "source_id": "pybamm-25-4-2",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "path": "evidence/Mohtat2020-v25.4.2.py"
   },
   "pybamm-data-ecker-1c-csv": {
     "filename": "Ecker_1C.csv",
@@ -390,14 +396,16 @@
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ai2020.py",
     "sha256": "02b1c3edb2217154ae0b525a132b12fe8cb2c4718465ff4eecdcf0188830ef20",
     "license": "BSD-3-Clause",
-    "source_id": "pybamm-25-4-2"
+    "source_id": "pybamm-25-4-2",
+    "path": "evidence/Ai2020-v25.4.2.py"
   },
   "pybamm-ecker2015-code": {
     "filename": "Ecker2015-v25.4.2.py",
     "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Ecker2015.py",
     "sha256": "d8a1cfd49b4956c5af2d1ca5c7f1f3e507c20821591b2084cf6a1bf595d77d92",
     "license": "BSD-3-Clause",
-    "source_id": "pybamm-25-4-2"
+    "source_id": "pybamm-25-4-2",
+    "path": "evidence/Ecker2015-v25.4.2.py"
   },
   "pybamm-data-license": {
     "filename": "pybamm-data-LICENSE",
@@ -1179,5 +1187,45 @@
     "source_id": "aepy-p45b-2026",
     "license": "BSD-3-Clause",
     "sha256": "646468643dab43bcc4cea9acffb0178c922bc3196273ea4b280388a00dc6f4e8"
+  },
+  "aepy-func-code": {
+    "source_id": "aepy-p45b-2026",
+    "filename": "aepy-func.py",
+    "path": "evidence/aepy-func.py",
+    "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/src/aepybamm/func.py",
+    "license": "BSD-3-Clause",
+    "sha256": "bc671104aec28625e98fe8be01f7ad1a9e55513f86dee8feea7744454033ef44"
+  },
+  "aepy-params-code": {
+    "source_id": "aepy-p45b-2026",
+    "filename": "aepy-params.py",
+    "path": "evidence/aepy-params.py",
+    "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/src/aepybamm/params.py",
+    "license": "BSD-3-Clause",
+    "sha256": "8f4b52338c028142c84290be8b4b415f2e765ad312cbb26efac1f24cff89784f"
+  },
+  "oregan-data-archive": {
+    "source_id": "oregan-2021-data",
+    "filename": "oregan-2021-parameters.zip",
+    "path": "evidence/oregan-2021-parameters.zip",
+    "url": "https://zenodo.org/api/records/5171874/files/ORegan%202021%20Data%20Repository.zip/content",
+    "license": "CC-BY-4.0",
+    "sha256": "1c5052e8af198429c29b6784681e7b1b7d8a4e48dfca03c6fc23df639ce084de"
+  },
+  "oregan-data-metadata": {
+    "source_id": "oregan-2021-data",
+    "filename": "oregan-5171874-metadata.json",
+    "path": "evidence/oregan-5171874-metadata.json",
+    "url": "https://zenodo.org/api/records/5171874",
+    "license": "CC-BY-4.0",
+    "sha256": "641ffaca6ac90fbbc2ca8a3d162b0e31849ee922721537972a9114962d033ca1"
+  },
+  "oregan-pybamm-code": {
+    "source_id": "pybamm-25-4-2",
+    "filename": "ORegan2022-v25.4.2.py",
+    "path": "evidence/ORegan2022-v25.4.2.py",
+    "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/ORegan2022.py",
+    "license": "BSD-3-Clause",
+    "sha256": "52c12f0117d7c3e0679de8887bab6a7e9af2407d67a2f3ee04225e765cd6ff47"
   }
 }

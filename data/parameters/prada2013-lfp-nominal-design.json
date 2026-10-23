@@ -1,0 +1,2120 @@
+{
+  "cell_id": "prada2013-lfp-nominal-design",
+  "cell": {
+    "manufacturer": null,
+    "model": null,
+    "display_name": "LFP 2.3 Ah | Prada2013 implementation | part unresolved",
+    "format": "Not independently confirmed",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_Ah": 2.3,
+    "identity_level": "nominal_design_only",
+    "source_ids": [
+      "pybamm-25-4-2"
+    ],
+    "model_context": "Published Prada2013 LFP implementation inputs",
+    "match_level": "parameter_set_only",
+    "match_evidence": "One published implementation dictionary. Its LFP OCP is borrowed from Afshar2017 and negative OCP from Chen2020. No identified commercial cell or original same-study half-cell pair is established.",
+    "note": "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+    "coverage": {
+      "ocp": "Two explicitly borrowed OCP implementation expressions; not new measured points.",
+      "diffusion": "Two source scalar solid diffusivities; no cell-specific measurement claim.",
+      "kinetics": "Two source exchange-current laws; original convention retained.",
+      "full_cell_tests": "No matching full-cell test source established."
+    },
+    "parameter_ids": [
+      "model-completion-prada2013-negative-electrode-thickness-m",
+      "model-completion-prada2013-separator-thickness-m",
+      "model-completion-prada2013-positive-electrode-thickness-m",
+      "model-completion-prada2013-electrode-height-m",
+      "model-completion-prada2013-electrode-width-m",
+      "model-completion-prada2013-nominal-cell-capacity-a-h",
+      "model-completion-prada2013-current-function-a",
+      "model-completion-prada2013-contact-resistance-ohm",
+      "model-completion-prada2013-negative-electrode-conductivity-s-m-1",
+      "model-completion-prada2013-maximum-concentration-in-negative-electrode-mol-m-3",
+      "model-completion-prada2013-negative-particle-diffusivity-m2-s-1",
+      "model-completion-prada2013-negative-electrode-porosity",
+      "model-completion-prada2013-negative-electrode-active-material-volume-fraction",
+      "model-completion-prada2013-negative-particle-radius-m",
+      "model-completion-prada2013-negative-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-prada2013-negative-electrode-bruggeman-coefficient-electrode",
+      "model-completion-prada2013-negative-electrode-charge-transfer-coefficient",
+      "model-completion-prada2013-negative-electrode-double-layer-capacity-f-m-2",
+      "model-completion-prada2013-negative-electrode-exchange-current-density-a-m-2",
+      "model-completion-prada2013-negative-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-prada2013-positive-electrode-conductivity-s-m-1",
+      "model-completion-prada2013-maximum-concentration-in-positive-electrode-mol-m-3",
+      "model-completion-prada2013-positive-particle-diffusivity-m2-s-1",
+      "model-completion-prada2013-positive-electrode-porosity",
+      "model-completion-prada2013-positive-electrode-active-material-volume-fraction",
+      "model-completion-prada2013-positive-particle-radius-m",
+      "model-completion-prada2013-positive-electrode-bruggeman-coefficient-electrode",
+      "model-completion-prada2013-positive-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-prada2013-positive-electrode-charge-transfer-coefficient",
+      "model-completion-prada2013-positive-electrode-double-layer-capacity-f-m-2",
+      "model-completion-prada2013-positive-electrode-exchange-current-density-a-m-2",
+      "model-completion-prada2013-positive-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-prada2013-separator-porosity",
+      "model-completion-prada2013-separator-bruggeman-coefficient-electrolyte",
+      "model-completion-prada2013-initial-concentration-in-electrolyte-mol-m-3",
+      "model-completion-prada2013-cation-transference-number",
+      "model-completion-prada2013-thermodynamic-factor",
+      "model-completion-prada2013-electrolyte-diffusivity-m2-s-1",
+      "model-completion-prada2013-electrolyte-conductivity-s-m-1",
+      "model-completion-prada2013-reference-temperature-k",
+      "model-completion-prada2013-ambient-temperature-k",
+      "model-completion-prada2013-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "model-completion-prada2013-number-of-cells-connected-in-series-to-make-a-battery",
+      "model-completion-prada2013-lower-voltage-cut-off-v",
+      "model-completion-prada2013-upper-voltage-cut-off-v",
+      "model-completion-prada2013-open-circuit-voltage-at-0-soc-v",
+      "model-completion-prada2013-open-circuit-voltage-at-100-soc-v",
+      "model-completion-prada2013-initial-concentration-in-negative-electrode-mol-m-3",
+      "model-completion-prada2013-initial-concentration-in-positive-electrode-mol-m-3",
+      "model-completion-prada2013-initial-temperature-k"
+    ],
+    "implementation_completion": {
+      "source_asset_id": "pybamm-prada-code",
+      "parameter_ids": [
+        "model-completion-prada2013-negative-electrode-thickness-m",
+        "model-completion-prada2013-separator-thickness-m",
+        "model-completion-prada2013-positive-electrode-thickness-m",
+        "model-completion-prada2013-electrode-height-m",
+        "model-completion-prada2013-electrode-width-m",
+        "model-completion-prada2013-nominal-cell-capacity-a-h",
+        "model-completion-prada2013-current-function-a",
+        "model-completion-prada2013-contact-resistance-ohm",
+        "model-completion-prada2013-negative-electrode-conductivity-s-m-1",
+        "model-completion-prada2013-maximum-concentration-in-negative-electrode-mol-m-3",
+        "model-completion-prada2013-negative-particle-diffusivity-m2-s-1",
+        "model-completion-prada2013-negative-electrode-porosity",
+        "model-completion-prada2013-negative-electrode-active-material-volume-fraction",
+        "model-completion-prada2013-negative-particle-radius-m",
+        "model-completion-prada2013-negative-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-prada2013-negative-electrode-bruggeman-coefficient-electrode",
+        "model-completion-prada2013-negative-electrode-charge-transfer-coefficient",
+        "model-completion-prada2013-negative-electrode-double-layer-capacity-f-m-2",
+        "model-completion-prada2013-negative-electrode-exchange-current-density-a-m-2",
+        "model-completion-prada2013-negative-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-prada2013-positive-electrode-conductivity-s-m-1",
+        "model-completion-prada2013-maximum-concentration-in-positive-electrode-mol-m-3",
+        "model-completion-prada2013-positive-particle-diffusivity-m2-s-1",
+        "model-completion-prada2013-positive-electrode-porosity",
+        "model-completion-prada2013-positive-electrode-active-material-volume-fraction",
+        "model-completion-prada2013-positive-particle-radius-m",
+        "model-completion-prada2013-positive-electrode-bruggeman-coefficient-electrode",
+        "model-completion-prada2013-positive-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-prada2013-positive-electrode-charge-transfer-coefficient",
+        "model-completion-prada2013-positive-electrode-double-layer-capacity-f-m-2",
+        "model-completion-prada2013-positive-electrode-exchange-current-density-a-m-2",
+        "model-completion-prada2013-positive-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-prada2013-separator-porosity",
+        "model-completion-prada2013-separator-bruggeman-coefficient-electrolyte",
+        "model-completion-prada2013-initial-concentration-in-electrolyte-mol-m-3",
+        "model-completion-prada2013-cation-transference-number",
+        "model-completion-prada2013-thermodynamic-factor",
+        "model-completion-prada2013-electrolyte-diffusivity-m2-s-1",
+        "model-completion-prada2013-electrolyte-conductivity-s-m-1",
+        "model-completion-prada2013-reference-temperature-k",
+        "model-completion-prada2013-ambient-temperature-k",
+        "model-completion-prada2013-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+        "model-completion-prada2013-number-of-cells-connected-in-series-to-make-a-battery",
+        "model-completion-prada2013-lower-voltage-cut-off-v",
+        "model-completion-prada2013-upper-voltage-cut-off-v",
+        "model-completion-prada2013-open-circuit-voltage-at-0-soc-v",
+        "model-completion-prada2013-open-circuit-voltage-at-100-soc-v",
+        "model-completion-prada2013-initial-concentration-in-negative-electrode-mol-m-3",
+        "model-completion-prada2013-initial-concentration-in-positive-electrode-mol-m-3",
+        "model-completion-prada2013-initial-temperature-k"
+      ],
+      "status": "All non-OCP numeric and analytic entries in this pinned dictionary are represented, including explicitly labeled optional submodels; string/citation metadata excluded."
+    },
+    "ocp_record_ids": [
+      "prada2013-negative-borrowed-ocp",
+      "prada2013-positive-borrowed-ocp"
+    ],
+    "full_cell_test_ids": [],
+    "evidence_matrix": {
+      "ocp": {
+        "record_ids": [
+          "prada2013-negative-borrowed-ocp",
+          "prada2013-positive-borrowed-ocp"
+        ],
+        "source_ids": [
+          "afshar-2017",
+          "chen-2020",
+          "pybamm-25-4-2"
+        ],
+        "match_level": "parameter_set_only",
+        "evidence": "Two explicitly borrowed OCP implementation expressions; not new measured points.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "diffusion": {
+        "record_ids": [
+          "model-completion-prada2013-negative-particle-diffusivity-m2-s-1",
+          "model-completion-prada2013-positive-particle-diffusivity-m2-s-1",
+          "model-completion-prada2013-electrolyte-diffusivity-m2-s-1"
+        ],
+        "source_ids": [
+          "pybamm-25-4-2"
+        ],
+        "match_level": "parameter_set_only",
+        "evidence": "Two source scalar solid diffusivities; no cell-specific measurement claim. Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "kinetics": {
+        "record_ids": [
+          "model-completion-prada2013-negative-electrode-charge-transfer-coefficient",
+          "model-completion-prada2013-negative-electrode-double-layer-capacity-f-m-2",
+          "model-completion-prada2013-negative-electrode-exchange-current-density-a-m-2",
+          "model-completion-prada2013-positive-electrode-charge-transfer-coefficient",
+          "model-completion-prada2013-positive-electrode-double-layer-capacity-f-m-2",
+          "model-completion-prada2013-positive-electrode-exchange-current-density-a-m-2"
+        ],
+        "source_ids": [
+          "pybamm-25-4-2"
+        ],
+        "match_level": "parameter_set_only",
+        "evidence": "Two source exchange-current laws; original convention retained. Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
+        "missing_items": [
+          "Same-specimen measurement provenance unresolved"
+        ]
+      },
+      "full_cell_tests": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching full-cell test source established.",
+        "missing_items": [
+          "No matching imported records"
+        ]
+      },
+      "basic_charge_discharge": {
+        "record_ids": [],
+        "source_ids": [],
+        "match_level": "missing",
+        "evidence": "No matching imported basic test",
+        "missing_items": [
+          "Matching CC charge/discharge observations"
+        ]
+      }
+    },
+    "missing_items": [
+      "Identical characterization/validation specimen not established",
+      "Independent full-cell model reproduction not performed",
+      "Commercial part number unresolved",
+      "Matching full-cell charge/discharge observations not imported"
+    ]
+  },
+  "parameters": [
+    {
+      "id": "model-completion-prada2013-negative-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode thickness [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3.4e-05
+      }
+    },
+    {
+      "id": "model-completion-prada2013-separator-thickness-m",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Separator thickness [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Separator thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-05
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-thickness-m",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode thickness [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8e-05
+      }
+    },
+    {
+      "id": "model-completion-prada2013-electrode-height-m",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Electrode height [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Electrode height [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Electrode height [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.6
+      }
+    },
+    {
+      "id": "model-completion-prada2013-electrode-width-m",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Electrode width [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Electrode width [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Electrode width [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      }
+    },
+    {
+      "id": "model-completion-prada2013-nominal-cell-capacity-a-h",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Nominal cell capacity [A.h]",
+      "category": "operating_limits",
+      "unit": "A.h",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Nominal cell capacity [A.h]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Nominal cell capacity [A.h]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.3
+      }
+    },
+    {
+      "id": "model-completion-prada2013-current-function-a",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Current function [A]",
+      "category": "operating_limits",
+      "unit": "A",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Current function [A]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Current function [A]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.3
+      }
+    },
+    {
+      "id": "model-completion-prada2013-contact-resistance-ohm",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Contact resistance [Ohm]",
+      "category": "operating_limits",
+      "unit": "Ohm",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Contact resistance [Ohm]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Contact resistance [Ohm]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 215.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-maximum-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Maximum concentration in negative electrode [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Maximum concentration in negative electrode [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Maximum concentration in negative electrode [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 30555
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-particle-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative particle diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative particle diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3e-15
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-porosity",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.36
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode active material volume fraction",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode active material volume fraction",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode active material volume fraction; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.58
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-particle-radius-m",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative particle radius [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative particle radius [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative particle radius [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-06
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-exchange-current-density-a-m-2",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::graphite_LGM50_electrolyte_exchange_current_density_Chen2020",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "graphite_LGM50_electrolyte_exchange_current_density_Chen2020",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "c_s_surf": "c_s_surf",
+          "c_s_max": "c_s_max",
+          "T": "T"
+        },
+        "source_function_docstring": "Exchange-current density for Butler-Volmer reactions between graphite and LiPF6 in\nEC:DMC.\n\nReferences\n----------\n.. [1] Chang-Hui Chen, Ferran Brosa Planella, Kieran O\u2019Regan, Dominika Gastol, W.\nDhammika Widanage, and Emma Kendrick. \"Development of Experimental Techniques for\nParameterization of Multi-scale Lithium-ion Battery Models.\" Journal of the\nElectrochemical Society 167 (2020): 080534.\n\nParameters\n----------\nc_e : :class:`pybamm.Symbol`\n    Electrolyte concentration [mol.m-3]\nc_s_surf : :class:`pybamm.Symbol`\n    Particle concentration [mol.m-3]\nc_s_max : :class:`pybamm.Symbol`\n    Maximum particle concentration [mol.m-3]\nT : :class:`pybamm.Symbol`\n    Temperature [K]\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Exchange-current density [A.m-2]"
+      },
+      "definition": "Negative electrode exchange-current density [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "6.48e-07 * exp(4209.532426572995 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-prada2013-negative-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Negative electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Negative electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.33795074
+      }
+    },
+    {
+      "id": "model-completion-prada2013-maximum-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Maximum concentration in positive electrode [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Maximum concentration in positive electrode [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Maximum concentration in positive electrode [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 22806.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-particle-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive particle diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive particle diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive particle diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.9e-18
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-porosity",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.426
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-active-material-volume-fraction",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode active material volume fraction",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode active material volume fraction",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode active material volume fraction; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.374
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-particle-radius-m",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive particle radius [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive particle radius [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive particle radius [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-08
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-exchange-current-density-a-m-2",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode exchange-current density [A.m-2]",
+      "category": "kinetics",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::LFP_electrolyte_exchange_current_density_kashkooli2017",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "LFP_electrolyte_exchange_current_density_kashkooli2017",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "c_s_surf": "c_s_surf",
+          "c_s_max": "c_s_max",
+          "T": "T"
+        },
+        "source_function_docstring": "Exchange-current density for Butler-Volmer reactions between LFP and electrolyte\n\nReferences\n----------\n.. [1] Kashkooli, A. G., Amirfazli, A., Farhad, S., Lee, D. U., Felicelli, S., Park,\nH. W., ... & Chen, Z. (2017). Representative volume element model of lithium-ion\nbattery electrodes based on X-ray nano-tomography. Journal of Applied\nElectrochemistry, 47(3), 281-293.\n\nParameters\n----------\nc_e : :class:`pybamm.Symbol`\n    Electrolyte concentration [mol.m-3]\nc_s_surf : :class:`pybamm.Symbol`\n    Particle concentration [mol.m-3]\nc_s_max : :class:`pybamm.Symbol`\n    Maximum particle concentration [mol.m-3]\nT : :class:`pybamm.Symbol`\n    Temperature [K]\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Exchange-current density [A.m-2]"
+      },
+      "definition": "Positive electrode exchange-current density [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "6e-07 * exp(4759.177089128383 * (0.0033540164346805303 - 1 / T)) * c_e ** 0.5 * c_s_surf ** 0.5 * (c_s_max - c_s_surf) ** 0.5",
+        "variables": {
+          "c_e": "mol.m-3",
+          "c_s_surf": "mol.m-3",
+          "c_s_max": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-prada2013-positive-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Positive electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Positive electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-separator-porosity",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Separator porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Separator porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.45
+      }
+    },
+    {
+      "id": "model-completion-prada2013-separator-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Separator Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Separator Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-prada2013-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Initial concentration in electrolyte [mol.m-3]",
+      "category": "initial_state",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial concentration in electrolyte [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1200.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-cation-transference-number",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Cation transference number",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Cation transference number; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.36
+      }
+    },
+    {
+      "id": "model-completion-prada2013-thermodynamic-factor",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Thermodynamic factor",
+      "category": "thermodynamics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Thermodynamic factor",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Thermodynamic factor; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-electrolyte-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Electrolyte diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Electrolyte diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Electrolyte diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-10
+      }
+    },
+    {
+      "id": "model-completion-prada2013-electrolyte-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Electrolyte conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::electrolyte_conductivity_Prada2013",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_conductivity_Prada2013",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Conductivity of LiPF6 in EC:EMC (3:7) as a function of ion concentration. The data\ncomes from :footcite:`Prada2013`.\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid conductivity"
+      },
+      "definition": "Electrolyte conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "(0.00041253 + 5.007 * (c_e / 1000000.0) - 4721.2 * (c_e / 1000000.0) ** 2 + 1509400.0 * (c_e / 1000000.0) ** 3 - 160180000.0 * (c_e / 1000000.0) ** 4) * 1000.0",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-prada2013-reference-temperature-k",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Reference temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Reference temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Reference temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298
+      }
+    },
+    {
+      "id": "model-completion-prada2013-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Ambient temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Ambient temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Ambient temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298
+      }
+    },
+    {
+      "id": "model-completion-prada2013-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Number of electrodes connected in parallel to make a cell",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Number of electrodes connected in parallel to make a cell",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of electrodes connected in parallel to make a cell; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-number-of-cells-connected-in-series-to-make-a-battery",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Number of cells connected in series to make a battery",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Number of cells connected in series to make a battery",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of cells connected in series to make a battery; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-lower-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Lower voltage cut-off [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Lower voltage cut-off [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Lower voltage cut-off [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-upper-voltage-cut-off-v",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Upper voltage cut-off [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Upper voltage cut-off [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Upper voltage cut-off [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3.6
+      }
+    },
+    {
+      "id": "model-completion-prada2013-open-circuit-voltage-at-0-soc-v",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Open-circuit voltage at 0% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Open-circuit voltage at 0% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 0% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-prada2013-open-circuit-voltage-at-100-soc-v",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Open-circuit voltage at 100% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Open-circuit voltage at 100% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 100% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3.6
+      }
+    },
+    {
+      "id": "model-completion-prada2013-initial-concentration-in-negative-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Initial concentration in negative electrode [mol.m-3]",
+      "category": "initial_state",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Initial concentration in negative electrode [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial concentration in negative electrode [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 24749.550000000003
+      }
+    },
+    {
+      "id": "model-completion-prada2013-initial-concentration-in-positive-electrode-mol-m-3",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Initial concentration in positive electrode [mol.m-3]",
+      "category": "initial_state",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Initial concentration in positive electrode [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial concentration in positive electrode [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 86.6628
+      }
+    },
+    {
+      "id": "model-completion-prada2013-initial-temperature-k",
+      "version": "1",
+      "cell_id": "prada2013-lfp-nominal-design",
+      "name": "Initial temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-prada-code",
+        "location": "Prada2013.py::get_parameter_values::Initial temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "prada2013-pybamm-v25-4-2",
+        "model_set": "Prada2013",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Do not infer A123 18650M1A, AMP20, 26650 m1b or the undisclosed BPX 2 Ah cell from chemistry/capacity; this is a separate nominal parameter set.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298
+      }
+    }
+  ],
+  "ocp_records": [
+    {
+      "id": "prada2013-negative-borrowed-ocp",
+      "version": "1",
+      "title": "graphite | graphite_LGM50_ocp_Chen2020 | implementation expression",
+      "parameter": "electrode_ocp",
+      "material": "graphite",
+      "material_id": "prada2013-negative-borrowed-ocp-material",
+      "electrode_role": "negative",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+        "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "1.9793 * exp(-39.3631 * x) + 0.2482 - 0.0909 * tanh(29.8538 * (x - 0.1234)) - 0.04478 * tanh(14.9159 * (x - 0.2769)) - 0.0205 * tanh(30.4444 * (x - 0.6103))",
+        "functions": [
+          "exp",
+          "tanh"
+        ],
+        "source_function": "graphite_LGM50_ocp_Chen2020"
+      },
+      "source_ids": [
+        "pybamm-25-4-2",
+        "chen-2020"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "prada2013-lfp-nominal-design",
+        "relationship": "material_only",
+        "evidence": "Borrowed Chen2020 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-prada-code"
+        ],
+        "derivation": "borrowed_implementation_function",
+        "location": "graphite_LGM50_ocp_Chen2020",
+        "processing": {
+          "script": "scripts/seed_model_completeness.py",
+          "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "An implementation expression, not original measured points or a newly fitted curve.",
+        "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+        "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+        "Borrowed Chen2020 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "prada2013-positive-borrowed-ocp",
+      "version": "1",
+      "title": "LFP | LFP_ocp_Afshar2017 | implementation expression",
+      "parameter": "electrode_ocp",
+      "material": "LFP",
+      "material_id": "prada2013-positive-borrowed-ocp-material",
+      "electrode_role": "positive",
+      "direction": "unspecified",
+      "measurement": "literature_formula",
+      "temperature": {
+        "value_K": null,
+        "description": "Not established from the upstream OCP function; no temperature dependence supplied."
+      },
+      "reference": "Li/Li+",
+      "x": {
+        "kind": "stoichiometry",
+        "symbol": "theta",
+        "unit": "1",
+        "domain": [
+          0.0,
+          1.0
+        ],
+        "definition": "Electrode lithium fraction c_s/c_s,max in the upstream function; not whole-cell SOC.",
+        "domain_basis": "Mathematical 0..1 evaluation interval. Fit validity and usable operating stoichiometry limits have not been independently established; endpoint voltages may be outside cell operating limits."
+      },
+      "y": {
+        "unit": "V",
+        "definition": "Working electrode potential versus Li/Li+"
+      },
+      "representation": {
+        "kind": "expression",
+        "expression": "3.4077 - 0.020269 * x + 0.5 * exp(-150 * x) - 0.9 * exp(-30 * (1 - x))",
+        "functions": [
+          "exp"
+        ],
+        "source_function": "LFP_ocp_Afshar2017"
+      },
+      "source_ids": [
+        "pybamm-25-4-2",
+        "afshar-2017"
+      ],
+      "experiment_id": null,
+      "cell_link": {
+        "cell_id": "prada2013-lfp-nominal-design",
+        "relationship": "material_only",
+        "evidence": "Borrowed Afshar2017 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+      },
+      "provenance": {
+        "asset_ids": [
+          "pybamm-prada-code"
+        ],
+        "derivation": "borrowed_implementation_function",
+        "location": "LFP_ocp_Afshar2017",
+        "processing": {
+          "script": "scripts/seed_model_completeness.py",
+          "changes": "AST-checked local-variable substitution; sto renamed to x. Numeric constants and mathematical operations retained. No upstream function is executed by the importer."
+        }
+      },
+      "quality": {
+        "source_review": "upstream_code_checked",
+        "axis_status": "upstream_stoichiometry",
+        "raw_data": "not_deposited_with_formula",
+        "model_status": "ocp_component_only",
+        "independent_validation": false
+      },
+      "limitations": [
+        "An implementation expression, not original measured points or a newly fitted curve.",
+        "The mathematical domain is not an experimentally verified validity range; do not use endpoint values as operating cutoffs.",
+        "No separate lithiation/delithiation branch is supplied; no independent full-cell model validation is claimed.",
+        "Borrowed Afshar2017 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+      ],
+      "license": "BSD-3-Clause"
+    }
+  ],
+  "full_cell_tests": [],
+  "external_datasets": [],
+  "sources": {
+    "afshar-2017": {
+      "kind": "paper",
+      "title": "Efficient electrochemical model for lithium-ion cells",
+      "authors": [
+        "Sepideh Afshar",
+        "Kirsten Morris",
+        "Amir Khajepour"
+      ],
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1709.03970v1",
+      "doi": "10.48550/arXiv.1709.03970",
+      "role": "Scientific attribution supplied by the upstream implementation; original equation not independently checked."
+    },
+    "chen-2020": {
+      "kind": "paper",
+      "title": "Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models",
+      "authors": [
+        "Chang-Hui Chen",
+        "Ferran Brosa Planella",
+        "Kieran O'Regan",
+        "Dominika Gastol",
+        "W. Dhammika Widanage",
+        "Emma Kendrick"
+      ],
+      "year": 2020,
+      "doi": "10.1149/1945-7111/ab9050",
+      "url": "https://doi.org/10.1149/1945-7111/ab9050",
+      "role": "Scientific attribution of the LG M50 graphite OCP and non-OCP parameter implementations; individual measurement/fit/borrowing origins not independently audited."
+    },
+    "pybamm-25-4-2": {
+      "kind": "software",
+      "title": "PyBaMM v25.4.2: pinned lithium-ion parameter implementations",
+      "authors": [
+        "The PyBaMM team"
+      ],
+      "year": 2025,
+      "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
+      "version": "v25.4.2",
+      "license": "BSD-3-Clause",
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
+    }
+  },
+  "upstream_assets": {
+    "pybamm-prada-code": {
+      "source_id": "pybamm-25-4-2",
+      "filename": "Prada2013-v25.4.2.py",
+      "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Prada2013.py",
+      "sha256": "9cec4ad9e6afac112b44c5ea4c73ee2c2c0882a7c6fc5398bd789b78617cb052",
+      "license": "BSD-3-Clause",
+      "path": "evidence/Prada2013-v25.4.2.py"
+    }
+  },
+  "canonical_data_root": "../../src/ebp/data",
+  "independent_full_cell_validation": false
+}

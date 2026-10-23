@@ -10,13 +10,13 @@ Commercial capacity is 7.5 Ah; pinned implementation uses 0.15625 Ah. Do not app
 
 ## Parameters
 
-[All 38 parameter records (CSV)](../parameters/kokam-slpb75106100-ecker2015.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/kokam-slpb75106100-ecker2015.json)
+[All 105 parameter records (CSV)](../parameters/kokam-slpb75106100-ecker2015.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/kokam-slpb75106100-ecker2015.json)
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
 ### Diffusion parameters
 
-[2 diffusion records (CSV)](../parameters/kokam-slpb75106100-ecker2015--diffusion.csv)
+[6 diffusion records (CSV)](../parameters/kokam-slpb75106100-ecker2015--diffusion.csv)
 
 Two stoichiometry/temperature diffusivity fits; Ecker/Richardson lineage
 
@@ -24,7 +24,7 @@ Keep source units, variants and origins. A category can contain activation energ
 
 ### Kinetics parameters
 
-[2 kinetics records (CSV)](../parameters/kokam-slpb75106100-ecker2015--kinetics.csv)
+[6 kinetics records (CSV)](../parameters/kokam-slpb75106100-ecker2015--kinetics.csv)
 
 Two concentration/temperature exchange-current laws; Ecker/Richardson lineage
 

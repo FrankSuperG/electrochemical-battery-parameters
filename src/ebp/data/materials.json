@@ -200,5 +200,21 @@
     "label": "NCA",
     "cell_id": "molicel-p45b-aboutenergy2026",
     "note": "Source-specific phase/electrode; not a universal material curve."
+  },
+  "oregan-model-negative-electrode-ocp-v-material": {
+    "chemistry": "graphite",
+    "description": "Reused Chen2020 implementation function; not a new measured O'Regan electrode."
+  },
+  "oregan-model-positive-electrode-ocp-v-material": {
+    "chemistry": "NMC811",
+    "description": "Reused Chen2020 implementation function; not a new measured O'Regan electrode."
+  },
+  "prada2013-negative-borrowed-ocp-material": {
+    "chemistry": "graphite",
+    "description": "Borrowed Chen2020 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
+  },
+  "prada2013-positive-borrowed-ocp-material": {
+    "chemistry": "LFP",
+    "description": "Borrowed Afshar2017 function within the Prada2013 model; no common measured electrode pair or commercial specimen established."
   }
 }

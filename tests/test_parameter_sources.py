@@ -93,7 +93,7 @@ def test_p45b_fitted_nodes_obey_particle_bounds_and_keep_component_origin():
 def test_p45b_parameters_preserve_bpx_values_and_do_not_import_placeholders():
     c = Catalog()
     source = json.loads((c.root/c.assets["aepy-p45b-bpx"]["path"]).read_text())
-    params = c.search_parameters(cell_id="molicel-p45b-aboutenergy2026")
+    params = [p for p in c.search_parameters(cell_id="molicel-p45b-aboutenergy2026") if not p.id.startswith("aepy-p45b-user-")]
     assert len(params) == 60
     assert len([p for p in params if p.record["category"] == "diffusion"]) == 6
     assert len([p for p in params if p.record["category"] == "kinetics"]) == 6

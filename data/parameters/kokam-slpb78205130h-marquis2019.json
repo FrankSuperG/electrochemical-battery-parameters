@@ -61,7 +61,70 @@
       "marquis2019-negative-diffusivity",
       "marquis2019-negative-exchange-current-density",
       "marquis2019-positive-diffusivity",
-      "marquis2019-positive-exchange-current-density"
+      "marquis2019-positive-exchange-current-density",
+      "model-completion-marquis2019-ratio-of-lithium-moles-to-sei-moles",
+      "model-completion-marquis2019-sei-partial-molar-volume-m3-mol-1",
+      "model-completion-marquis2019-sei-growth-transfer-coefficient",
+      "model-completion-marquis2019-sei-reaction-exchange-current-density-a-m-2",
+      "model-completion-marquis2019-sei-resistivity-ohm-m",
+      "model-completion-marquis2019-sei-solvent-diffusivity-m2-s-1",
+      "model-completion-marquis2019-bulk-solvent-concentration-mol-m-3",
+      "model-completion-marquis2019-sei-open-circuit-potential-v",
+      "model-completion-marquis2019-sei-electron-conductivity-s-m-1",
+      "model-completion-marquis2019-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "model-completion-marquis2019-lithium-interstitial-reference-concentration-mol-m-3",
+      "model-completion-marquis2019-initial-sei-thickness-m",
+      "model-completion-marquis2019-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "model-completion-marquis2019-ec-diffusivity-m2-s-1",
+      "model-completion-marquis2019-sei-kinetic-rate-constant-m-s-1",
+      "model-completion-marquis2019-sei-growth-activation-energy-j-mol-1",
+      "model-completion-marquis2019-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-marquis2019-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-marquis2019-negative-tab-width-m",
+      "model-completion-marquis2019-negative-tab-centre-y-coordinate-m",
+      "model-completion-marquis2019-negative-tab-centre-z-coordinate-m",
+      "model-completion-marquis2019-positive-tab-width-m",
+      "model-completion-marquis2019-positive-tab-centre-y-coordinate-m",
+      "model-completion-marquis2019-positive-tab-centre-z-coordinate-m",
+      "model-completion-marquis2019-negative-current-collector-conductivity-s-m-1",
+      "model-completion-marquis2019-positive-current-collector-conductivity-s-m-1",
+      "model-completion-marquis2019-negative-current-collector-density-kg-m-3",
+      "model-completion-marquis2019-positive-current-collector-density-kg-m-3",
+      "model-completion-marquis2019-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-marquis2019-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-marquis2019-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-marquis2019-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-marquis2019-current-function-a",
+      "model-completion-marquis2019-contact-resistance-ohm",
+      "model-completion-marquis2019-negative-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-marquis2019-negative-electrode-bruggeman-coefficient-electrode",
+      "model-completion-marquis2019-negative-electrode-charge-transfer-coefficient",
+      "model-completion-marquis2019-negative-electrode-double-layer-capacity-f-m-2",
+      "model-completion-marquis2019-negative-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-marquis2019-positive-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-marquis2019-positive-electrode-bruggeman-coefficient-electrode",
+      "model-completion-marquis2019-positive-electrode-charge-transfer-coefficient",
+      "model-completion-marquis2019-positive-electrode-double-layer-capacity-f-m-2",
+      "model-completion-marquis2019-positive-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-marquis2019-separator-porosity",
+      "model-completion-marquis2019-separator-bruggeman-coefficient-electrolyte",
+      "model-completion-marquis2019-cation-transference-number",
+      "model-completion-marquis2019-thermodynamic-factor",
+      "model-completion-marquis2019-electrolyte-diffusivity-m2-s-1",
+      "model-completion-marquis2019-electrolyte-conductivity-s-m-1",
+      "model-completion-marquis2019-reference-temperature-k",
+      "model-completion-marquis2019-ambient-temperature-k",
+      "model-completion-marquis2019-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-marquis2019-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-marquis2019-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-marquis2019-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-marquis2019-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-marquis2019-total-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-marquis2019-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "model-completion-marquis2019-number-of-cells-connected-in-series-to-make-a-battery",
+      "model-completion-marquis2019-open-circuit-voltage-at-0-soc-v",
+      "model-completion-marquis2019-open-circuit-voltage-at-100-soc-v",
+      "model-completion-marquis2019-initial-temperature-k"
     ],
     "ocp_record_ids": [
       "marquis2019-graphite-ocp",
@@ -88,7 +151,11 @@
       "diffusion": {
         "record_ids": [
           "marquis2019-negative-diffusivity",
-          "marquis2019-positive-diffusivity"
+          "marquis2019-positive-diffusivity",
+          "model-completion-marquis2019-sei-solvent-diffusivity-m2-s-1",
+          "model-completion-marquis2019-sei-lithium-interstitial-diffusivity-m2-s-1",
+          "model-completion-marquis2019-ec-diffusivity-m2-s-1",
+          "model-completion-marquis2019-electrolyte-diffusivity-m2-s-1"
         ],
         "source_ids": [
           "dualfoil-attribution",
@@ -96,7 +163,7 @@
           "pybamm-25-4-2"
         ],
         "match_level": "borrowed_model_input",
-        "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained",
+        "evidence": "Two Arrhenius particle-diffusivity functions, with source stoichiometry/temperature inputs retained Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-cell measured values not established; borrowed functions retained"
         ]
@@ -104,7 +171,12 @@
       "kinetics": {
         "record_ids": [
           "marquis2019-negative-exchange-current-density",
-          "marquis2019-positive-exchange-current-density"
+          "marquis2019-positive-exchange-current-density",
+          "model-completion-marquis2019-sei-kinetic-rate-constant-m-s-1",
+          "model-completion-marquis2019-negative-electrode-charge-transfer-coefficient",
+          "model-completion-marquis2019-negative-electrode-double-layer-capacity-f-m-2",
+          "model-completion-marquis2019-positive-electrode-charge-transfer-coefficient",
+          "model-completion-marquis2019-positive-electrode-double-layer-capacity-f-m-2"
         ],
         "source_ids": [
           "dualfoil-attribution",
@@ -112,7 +184,7 @@
           "pybamm-25-4-2"
         ],
         "match_level": "borrowed_model_input",
-        "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained",
+        "evidence": "Two concentration/temperature exchange-current laws; source area and concentration convention retained Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-cell measured values not established; borrowed functions retained"
         ]
@@ -140,7 +212,76 @@
       "Identical characterization/validation specimen not established",
       "Independent full-cell model reproduction not performed",
       "Matching full-cell charge/discharge observations not imported"
-    ]
+    ],
+    "implementation_completion": {
+      "source_asset_id": "pybamm-marquis2019-code",
+      "parameter_ids": [
+        "model-completion-marquis2019-ratio-of-lithium-moles-to-sei-moles",
+        "model-completion-marquis2019-sei-partial-molar-volume-m3-mol-1",
+        "model-completion-marquis2019-sei-growth-transfer-coefficient",
+        "model-completion-marquis2019-sei-reaction-exchange-current-density-a-m-2",
+        "model-completion-marquis2019-sei-resistivity-ohm-m",
+        "model-completion-marquis2019-sei-solvent-diffusivity-m2-s-1",
+        "model-completion-marquis2019-bulk-solvent-concentration-mol-m-3",
+        "model-completion-marquis2019-sei-open-circuit-potential-v",
+        "model-completion-marquis2019-sei-electron-conductivity-s-m-1",
+        "model-completion-marquis2019-sei-lithium-interstitial-diffusivity-m2-s-1",
+        "model-completion-marquis2019-lithium-interstitial-reference-concentration-mol-m-3",
+        "model-completion-marquis2019-initial-sei-thickness-m",
+        "model-completion-marquis2019-ec-initial-concentration-in-electrolyte-mol-m-3",
+        "model-completion-marquis2019-ec-diffusivity-m2-s-1",
+        "model-completion-marquis2019-sei-kinetic-rate-constant-m-s-1",
+        "model-completion-marquis2019-sei-growth-activation-energy-j-mol-1",
+        "model-completion-marquis2019-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-marquis2019-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-marquis2019-negative-tab-width-m",
+        "model-completion-marquis2019-negative-tab-centre-y-coordinate-m",
+        "model-completion-marquis2019-negative-tab-centre-z-coordinate-m",
+        "model-completion-marquis2019-positive-tab-width-m",
+        "model-completion-marquis2019-positive-tab-centre-y-coordinate-m",
+        "model-completion-marquis2019-positive-tab-centre-z-coordinate-m",
+        "model-completion-marquis2019-negative-current-collector-conductivity-s-m-1",
+        "model-completion-marquis2019-positive-current-collector-conductivity-s-m-1",
+        "model-completion-marquis2019-negative-current-collector-density-kg-m-3",
+        "model-completion-marquis2019-positive-current-collector-density-kg-m-3",
+        "model-completion-marquis2019-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-marquis2019-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-marquis2019-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-marquis2019-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-marquis2019-current-function-a",
+        "model-completion-marquis2019-contact-resistance-ohm",
+        "model-completion-marquis2019-negative-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-marquis2019-negative-electrode-bruggeman-coefficient-electrode",
+        "model-completion-marquis2019-negative-electrode-charge-transfer-coefficient",
+        "model-completion-marquis2019-negative-electrode-double-layer-capacity-f-m-2",
+        "model-completion-marquis2019-negative-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-marquis2019-positive-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-marquis2019-positive-electrode-bruggeman-coefficient-electrode",
+        "model-completion-marquis2019-positive-electrode-charge-transfer-coefficient",
+        "model-completion-marquis2019-positive-electrode-double-layer-capacity-f-m-2",
+        "model-completion-marquis2019-positive-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-marquis2019-separator-porosity",
+        "model-completion-marquis2019-separator-bruggeman-coefficient-electrolyte",
+        "model-completion-marquis2019-cation-transference-number",
+        "model-completion-marquis2019-thermodynamic-factor",
+        "model-completion-marquis2019-electrolyte-diffusivity-m2-s-1",
+        "model-completion-marquis2019-electrolyte-conductivity-s-m-1",
+        "model-completion-marquis2019-reference-temperature-k",
+        "model-completion-marquis2019-ambient-temperature-k",
+        "model-completion-marquis2019-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-marquis2019-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-marquis2019-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-marquis2019-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-marquis2019-edge-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-marquis2019-total-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-marquis2019-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+        "model-completion-marquis2019-number-of-cells-connected-in-series-to-make-a-battery",
+        "model-completion-marquis2019-open-circuit-voltage-at-0-soc-v",
+        "model-completion-marquis2019-open-circuit-voltage-at-100-soc-v",
+        "model-completion-marquis2019-initial-temperature-k"
+      ],
+      "status": "All non-OCP numeric and analytic entries in this pinned dictionary are represented, including explicitly labeled optional submodels; string/citation metadata excluded."
+    }
   },
   "parameters": [
     {
@@ -1360,6 +1501,2133 @@
         "AST-local substitutions preserve coefficients. Gas constant fixed at 8.314462618 J/mol/K.",
         "Source parameters referenced within Kim kinetics are resolved from this same pinned set; this law is not an interchangeable rate constant."
       ]
+    },
+    {
+      "id": "model-completion-marquis2019-ratio-of-lithium-moles-to-sei-moles",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Ratio of lithium moles to SEI moles",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Ratio of lithium moles to SEI moles",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Ratio of lithium moles to SEI moles; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-partial-molar-volume-m3-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI partial molar volume [m3.mol-1]",
+      "category": "geometry",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI partial molar volume [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI partial molar volume [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 9.585e-05
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-growth-transfer-coefficient",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI growth transfer coefficient",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI growth transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI growth transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-reaction-exchange-current-density-a-m-2",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI reaction exchange current density [A.m-2]",
+      "category": "thermal",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI reaction exchange current density [A.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI reaction exchange current density [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5e-07
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-resistivity-ohm-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI resistivity [Ohm.m]",
+      "category": "electrode",
+      "unit": "Ohm.m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI resistivity [Ohm.m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI resistivity [Ohm.m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 200000.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-solvent-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI solvent diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI solvent diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI solvent diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-22
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-bulk-solvent-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Bulk solvent concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Bulk solvent concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Bulk solvent concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2636.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-open-circuit-potential-v",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI open-circuit potential [V]",
+      "category": "electrode",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI open-circuit potential [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI open-circuit potential [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-electron-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI electron conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI electron conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI electron conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.95e-14
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI lithium interstitial diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI lithium interstitial diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI lithium interstitial diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-20
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-lithium-interstitial-reference-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Lithium interstitial reference concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Lithium interstitial reference concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium interstitial reference concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 15.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-initial-sei-thickness-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Initial SEI thickness [m]",
+      "category": "initial_state",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Initial SEI thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Initial SEI thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-09
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "EC initial concentration in electrolyte [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::EC initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC initial concentration in electrolyte [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4541.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-ec-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "EC diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::EC diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-18
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-kinetic-rate-constant-m-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI kinetic rate constant [m.s-1]",
+      "category": "kinetics",
+      "unit": "m.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI kinetic rate constant [m.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI kinetic rate constant [m.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-12
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-sei-growth-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "SEI growth activation energy [J.mol-1]",
+      "category": "electrode",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::SEI growth activation energy [J.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI growth activation energy [J.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Negative electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Positive electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-tab-width-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative tab width [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative tab width [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab width [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.04
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-tab-centre-y-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative tab centre y-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative tab centre y-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab centre y-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.06
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-tab-centre-z-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative tab centre z-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative tab centre z-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab centre z-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.137
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-tab-width-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive tab width [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive tab width [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab width [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.04
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-tab-centre-y-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive tab centre y-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive tab centre y-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab centre y-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.147
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-tab-centre-z-coordinate-m",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive tab centre z-coordinate [m]",
+      "category": "geometry",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive tab centre z-coordinate [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab centre z-coordinate [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.137
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 59600000.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 35500000.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8954.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2707.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 385.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 897.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 401.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 237.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-current-function-a",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Current function [A]",
+      "category": "operating_limits",
+      "unit": "A",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Current function [A]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Current function [A]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.680616
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-contact-resistance-ohm",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Contact resistance [Ohm]",
+      "category": "operating_limits",
+      "unit": "Ohm",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Contact resistance [Ohm]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Contact resistance [Ohm]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::graphite_entropic_change_Moura2016",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "graphite_entropic_change_Moura2016",
+        "source_argument_aliases": {
+          "sto": "sto"
+        },
+        "source_function_docstring": "Graphite entropic change in open-circuit potential (OCP) at a temperature of\n298.15K as a function of the stoichiometry taken from Scott Moura's FastDFN code\n[1].\n\nReferences\n----------\n.. [1] https://github.com/scott-moura/fastDFN\n\nParameters\n----------\nsto : :class:`pybamm.Symbol`\n    stoichiometry of material (li-fraction)"
+      },
+      "definition": "Negative electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "-0.007204823775388301 * exp(-120 * sto) + 1.6926995616876127e-05 * (1 - tanh((sto - 0.286) / 0.083) ** 2) - 1.5136184402076262e-06 * (1 - tanh((sto - 0.849) / 0.119) ** 2) - 2.801875912651006e-05 * (1 - tanh((sto - 0.9233) / 0.05) ** 2) - 1.730570416637386e-05 * (1 - tanh((sto - 0.5) / 0.034) ** 2) - 2.8751644174084767e-05 * (1 - tanh((sto - 0.194) / 0.142) ** 2) - 5.3694486130942614e-05 * (1 - tanh((sto - 0.9) / 0.0164) ** 2) - 1.9482070189103072e-05 * (1 - tanh((sto - 0.124) / 0.0226) ** 2) + 2.139363381580817e-05 * (1 - tanh((sto - 0.105) / 0.029) ** 2)",
+        "variables": {
+          "sto": "1"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::lico2_entropic_change_Moura2016",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "lico2_entropic_change_Moura2016",
+        "source_argument_aliases": {
+          "sto": "sto"
+        },
+        "source_function_docstring": "Lithium Cobalt Oxide (LiCO2) entropic change in open-circuit potential (OCP) at\na temperature of 298.15K as a function of the stoichiometry. The fit is taken\nfrom Scott Moura's FastDFN code [1].\n\nReferences\n----------\n.. [1] https://github.com/scott-moura/fastDFN\n\nParameters\n----------\nsto : :class:`pybamm.Symbol`\n    stoichiometry of material (li-fraction)"
+      },
+      "definition": "Positive electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "-8.132000292009045e-05 * (1 - tanh(30.834 - 54.4806 * (1.062 * sto)) ** 2) + -0.0021191697994606485 * (1 - tanh(52.294 - 50.294 * (1.062 * sto)) ** 2) + 5.492438867553213e-05 * (1 - tanh(11.0923 - 19.8543 * (1.062 * sto)) ** 2) - 2.1979665594310157e-05 * (1 - tanh(1.4684 - 5.4888 * (1.062 * sto)) ** 2) - 3.755037425254259e-05 * (1 - tanh((-(1.062 * sto) + 0.56478) / 0.1316) ** 2) - 7.051567620368884e-05 * (1 - tanh((1.062 * sto - 0.525) / 0.006) ** 2)",
+        "variables": {
+          "sto": "1"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-separator-porosity",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Separator porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Separator porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-separator-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Separator Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Separator Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-cation-transference-number",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Cation transference number",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Cation transference number; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-thermodynamic-factor",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Thermodynamic factor",
+      "category": "thermodynamics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Thermodynamic factor",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Thermodynamic factor; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-electrolyte-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Electrolyte diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::electrolyte_diffusivity_Capiglia1999",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_diffusivity_Capiglia1999",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Diffusivity of LiPF6 in EC:DMC as a function of ion concentration. The original data\nis from [1]. The fit from Dualfoil [2].\n\nReferences\n----------\n.. [1] C Capiglia et al. 7Li and 19F diffusion coefficients and thermal\nproperties of non-aqueous electrolyte solutions for rechargeable lithium batteries.\nJournal of power sources 81 (1999): 859-862.\n.. [2] John Newman, Dualfoil\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "5.34e-10 * exp(-0.65 * c_e / 1000) * exp(4454.8880308646785 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-electrolyte-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Electrolyte conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::electrolyte_conductivity_Capiglia1999",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_conductivity_Capiglia1999",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Conductivity of LiPF6 in EC:DMC as a function of ion concentration. The original\ndata is from [1]. The fit is from Dualfoil [2].\n\nReferences\n----------\n.. [1] C Capiglia et al. 7Li and 19F diffusion coefficients and thermal\nproperties of non-aqueous electrolyte solutions for rechargeable lithium batteries.\nJournal of power sources 81 (1999): 859-862.\n.. [2] John Newman, Dualfoil\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "(0.0911 + 1.9101 * (c_e / 1000) - 1.052 * (c_e / 1000) ** 2 + 0.1554 * (c_e / 1000) ** 3) * exp(4173.450720059513 * (0.0033540164346805303 - 1 / T))",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-reference-temperature-k",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Reference temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Reference temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Reference temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Ambient temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Ambient temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Ambient temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-current-collector-surface-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive current collector surface heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector surface heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-negative-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Negative tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Negative tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-positive-tab-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Positive tab heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Positive tab heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive tab heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-edge-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Edge heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Edge heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Edge heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.3
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-total-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Total heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Total heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Total heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Number of electrodes connected in parallel to make a cell",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Number of electrodes connected in parallel to make a cell",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of electrodes connected in parallel to make a cell; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-number-of-cells-connected-in-series-to-make-a-battery",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Number of cells connected in series to make a battery",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Number of cells connected in series to make a battery",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of cells connected in series to make a battery; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-open-circuit-voltage-at-0-soc-v",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Open-circuit voltage at 0% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Open-circuit voltage at 0% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 0% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 3.105
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-open-circuit-voltage-at-100-soc-v",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Open-circuit voltage at 100% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Open-circuit voltage at 100% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 100% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.1
+      }
+    },
+    {
+      "id": "model-completion-marquis2019-initial-temperature-k",
+      "version": "1",
+      "cell_id": "kokam-slpb78205130h-marquis2019",
+      "name": "Initial temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-marquis2019-code",
+        "location": "Marquis2019.py::get_parameter_values::Initial temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "marquis2019-pybamm-v25-4-2",
+        "model_set": "Marquis2019",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "The upstream set names a Kokam model but borrows Dualfoil electrode functions. Model association does not establish that the OCP, diffusion or kinetics were measured on that commercial specimen.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
     }
   ],
   "ocp_records": [
@@ -1553,7 +3821,7 @@
       "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
       "version": "v25.4.2",
       "license": "BSD-3-Clause",
-      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
     }
   },
   "upstream_assets": {
@@ -1562,7 +3830,8 @@
       "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Marquis2019.py",
       "sha256": "f200bede5ece656c0c88d2db9c314646986fb990978ae6b056eb263cd40283b6",
       "source_id": "pybamm-25-4-2",
-      "license": "BSD-3-Clause"
+      "license": "BSD-3-Clause",
+      "path": "evidence/Marquis2019-v25.4.2.py"
     }
   },
   "canonical_data_root": "../../src/ebp/data",

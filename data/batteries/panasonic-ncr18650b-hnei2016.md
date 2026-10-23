@@ -31,6 +31,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 | [virtual-vehicle-ncr18650b-aging-2023](../full-cell/virtual-vehicle-ncr18650b-aging-2023.md#file-locations) | [Source rates / limits](../full-cell/virtual-vehicle-ncr18650b-aging-2023.md#requested-test-coverage) | 0/5/15/20/25/30/35/40/45 | Unnamed / staged | [Yes (cycle, calendar)](../full-cell/virtual-vehicle-ncr18650b-aging-2023.md#ageing-data) | Not reported | same_model_different_study |
 | [stanford-ncr18650b-rates-2021](../full-cell/stanford-ncr18650b-rates-2021.md#file-locations) | [Source rates / limits](../full-cell/stanford-ncr18650b-rates-2021.md#requested-test-coverage) | 5/25/35 | Not reported | [Not reported](../full-cell/stanford-ncr18650b-rates-2021.md#ageing-data) | Not reported | same_model_different_study |
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

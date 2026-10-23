@@ -439,6 +439,8 @@ class Catalog:
                                 "c_s_max": 30000,
                                 "T": 298.15,
                                 "sto": 0.5,
+                                "c_Li": 1000,
+                                "L_sei": 1e-9,
                             }[key]
                             for key in rep["variables"]
                         }

@@ -20,7 +20,7 @@ restricted, sign in with an account that has access.
 | Another material's OCP | [All OCP materials](../data/ocp/README.md) | Separate material, electrode and coordinate labels |
 | Parameters and tests for a particular battery | [Battery model index](../data/batteries/README.md) | OCP and category-specific parameter CSVs, existing test files and external full-cell sources, with matching and gaps |
 | Panasonic NCR18650B | [NCR18650B model hub](../data/batteries/panasonic-ncr18650b-hnei2016.md) | Four extracted HNEI half-cell branches plus four full-cell sources for CC, multi-temperature, dynamic, ageing and EIS |
-| A practical same-model/same-study starting case | [LG M50](../data/cells/lg-m50.md) | Two OCP expressions, 38 other inputs and three current/voltage/temperature test files |
+| A practical same-model/same-study starting case | [LG M50](../data/cells/lg-m50.md) | Two OCP expressions, 90 other inputs and three current/voltage/temperature test files |
 | LFP parameters with a full-cell discharge | [A123 AMP20](../data/cells/a123-amp20m1hd-a.md) | Fitted/derived inputs and one 4C trace; electrode OCP remains missing |
 | LFP CC charge/discharge tests | [A123 9 Ah study family](../data/cells/a123-high-power-pouch-9ah.md) | Ten files at 2/4/6/8/10C; finite diffusion/kinetic inputs and reusable electrode OCP remain missing |
 | LFP laboratory half/full-cell V-Q association | [ISU-UConn](../data/cells/isu-uconn-lfp-graphite-lab.md) | Four C/20 pseudo-OCP branches and 21 full-cell branches from 11 configurations; reference details and I/t/T remain unresolved |

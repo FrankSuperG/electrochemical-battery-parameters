@@ -85,5 +85,21 @@
     "source_id": "aepy-p45b-2026",
     "license": "BSD-3-Clause",
     "sha256": "646468643dab43bcc4cea9acffb0178c922bc3196273ea4b280388a00dc6f4e8"
+  },
+  "aepy-func-code": {
+    "source_id": "aepy-p45b-2026",
+    "filename": "aepy-func.py",
+    "path": "evidence/aepy-func.py",
+    "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/src/aepybamm/func.py",
+    "license": "BSD-3-Clause",
+    "sha256": "bc671104aec28625e98fe8be01f7ad1a9e55513f86dee8feea7744454033ef44"
+  },
+  "aepy-params-code": {
+    "source_id": "aepy-p45b-2026",
+    "filename": "aepy-params.py",
+    "path": "evidence/aepy-params.py",
+    "url": "https://raw.githubusercontent.com/About-Energy-OpenSource/AEPyBaMM/188bd62ee2347cc486b66dc43e31fb9597759db1/src/aepybamm/params.py",
+    "license": "BSD-3-Clause",
+    "sha256": "8f4b52338c028142c84290be8b4b415f2e765ad312cbb26efac1f24cff89784f"
   }
 }

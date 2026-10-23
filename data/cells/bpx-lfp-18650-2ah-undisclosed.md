@@ -10,13 +10,13 @@ Do not match this example to another 2 Ah LFP cell using nominal capacity alone.
 
 ## Parameters
 
-[All 46 parameter records (CSV)](../parameters/bpx-lfp-18650-2ah-undisclosed.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/bpx-lfp-18650-2ah-undisclosed.json)
+[All 49 parameter records (CSV)](../parameters/bpx-lfp-18650-2ah-undisclosed.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/bpx-lfp-18650-2ah-undisclosed.json)
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
 ### Diffusion parameters
 
-[5 diffusion records (CSV)](../parameters/bpx-lfp-18650-2ah-undisclosed--diffusion.csv)
+[6 diffusion records (CSV)](../parameters/bpx-lfp-18650-2ah-undisclosed--diffusion.csv)
 
 Two particle diffusivities and activation energies available
 

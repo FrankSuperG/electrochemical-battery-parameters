@@ -29,7 +29,7 @@ def test_material_families_specimens_and_cell_associations():
         "NCA",
         "NCO",
     }
-    assert len(c.search()) == 72
+    assert len(c.search()) == 76
     assert len(c.experiments) == 18
     assert len(c.search(representation="table")) == 57
     for material, role in [
@@ -73,7 +73,7 @@ def test_material_families_specimens_and_cell_associations():
         "kim2011-nca-nominal-design",
         "kokam-slpb78205130h-marquis2019",
     ]:
-        assert len(c.search_parameters(cell_id=cid)) == 38
+        assert len([p for p in c.search_parameters(cell_id=cid) if not p.id.startswith("model-completion-")]) == 38
         assert not c.linked_tests(cid)
 
 
@@ -127,7 +127,7 @@ def test_transcribed_ocp_and_functions_match_pinned_implementation(name, cid):
             curve(x), getattr(module, function)(x), rtol=2e-13, atol=2e-13
         )
     for p in c.search_parameters(cell_id=cid):
-        if p.record["id"].startswith("mohtat-author-"):
+        if p.record["id"].startswith(("mohtat-author-", "model-completion-")):
             continue
         r = p.record
         if r["representation"]["kind"] == "scalar":

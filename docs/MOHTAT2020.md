@@ -71,8 +71,9 @@ module; the deposit uses NMC without a composition assay.
   no automatic effective-radius or cooling-area substitution is performed.
 
 The 33 imported original-author scalar inputs have
-`conditions.parameterization_variant=original_author_mpm`; the 38 earlier
-implementation inputs have `pybamm_v25_4_2`. Inspect
+`conditions.parameterization_variant=original_author_mpm`; the PyBaMM variant
+now contains 105 inputs with `pybamm_v25_4_2` after the v0.13 dictionary completion
+(the earlier subset contained 38). Inspect
 `data/evidence/mohtat2020-parameter-crosswalk.json` and the viewer Variant filter.
 These are partial input collections, not two complete drop-in model sets.
 

@@ -21,6 +21,8 @@ New full-cell observations remain at their providers. Links below lead to descri
 |---|---|---|---|---|---|---|
 | [calce-a123-dynamic](../full-cell/calce-a123-dynamic.md#file-locations) | Not separately verified | -10/0/10/20/25/30/40/50 | DST, FUDS, US06 | [Not reported](../full-cell/calce-a123-dynamic.md#ageing-data) | Not reported | unmatched |
 
+[Parameter extraction audit: stored records, unresolved reuse and definitions](../../docs/PARAMETER_AUDIT.md)
+
 Multi-temperature labels apply to full-cell source conditions, not a complete temperature × rate × profile matrix or to half-cell OCP. Source-listed coverage is distinct from checked file contents. Not reported does not prove absence.
 
 ## Matching and gaps

@@ -10,13 +10,13 @@ Parameters and full-cell tests are linked at same-model/same-study level. No exa
 
 ## Parameters
 
-[All 38 parameter records (CSV)](../parameters/lg-m50.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/lg-m50.json)
+[All 90 parameter records (CSV)](../parameters/lg-m50.csv) · [Definitions, sources and linked-test metadata (JSON)](../parameters/lg-m50.json)
 
 CSV includes units, definitions, conditions, origins and variant labels. Expressions remain expressions. These are partial collections, not complete validated model inputs.
 
 ### Diffusion parameters
 
-[2 diffusion records (CSV)](../parameters/lg-m50--diffusion.csv)
+[6 diffusion records (CSV)](../parameters/lg-m50--diffusion.csv)
 
 Two scalar particle diffusivities in upstream implementation
 
@@ -24,7 +24,7 @@ Keep source units, variants and origins. A category can contain activation energ
 
 ### Kinetics parameters
 
-[2 kinetics records (CSV)](../parameters/lg-m50--kinetics.csv)
+[7 kinetics records (CSV)](../parameters/lg-m50--kinetics.csv)
 
 Two exchange-current density laws
 

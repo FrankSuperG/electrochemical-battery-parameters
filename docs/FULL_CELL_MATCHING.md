@@ -4,6 +4,10 @@ Audit date: 2026-10-16. This covers sources imported or investigated for v0.4,
 not all available literature. Machine-readable results are in
 `src/ebp/data/matching_audit.json` and each cell's `evidence_matrix`.
 
+For the v0.13 parameter completion and current per-model counts, see the
+[extraction audit](PARAMETER_AUDIT.md). The following table preserves the earlier
+full-cell association review; current parameter counts may be larger.
+
 ## Imported associations
 
 | Cell / study | OCP / diffusion / kinetics | Basic full-cell data | Match and remaining gaps |

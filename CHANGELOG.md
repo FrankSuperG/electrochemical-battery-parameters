@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.0 — 2026-10-23
+
+- Added 55 O'Regan LG M50 experimental parameter tables with native source rows, temperatures, specimens, directions, R-squared and explicit i0/entropy unit conversions. Three suspect Cp files remain quarantined; 73 separately labeled published model inputs and two reused Chen OCP expressions are stored.
+- Completed all non-OCP numeric/analytic dictionary entries for seven pinned PyBaMM sets: 446 additional records, including a distinct 2.3 Ah Prada nominal LFP package with two borrowed OCP expressions. Optional submodel defaults are labeled implementation inputs, not measured cell-specific properties.
+- Extracted three previously skipped MIT BPX LFP reference-temperature laws and seven About:Energy P45B custom-law/contact inputs after checking the pinned parser. Runtime supports temperature-only, stoichiometry-only, electrolyte and optional model inputs while retaining the bounded expression interpreter.
+- Added a generated per-model extraction audit; updated all README battery/model links and retained explicit reuse/definition/matching gaps. Native totals: 76 curves/fits, 1,041 other parameters and 18 cell/study entries. New full-cell observations remain external; the 61 existing packaged test files are unchanged.
+
 ## 0.12.0 — 2026-10-23
 
 - Added a generated README battery-model index and per-model pages combining OCP, separate diffusion/kinetics CSVs and full-cell source coverage, conditions, matching and missing items. All native packages and external sources remain reachable.

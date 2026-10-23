@@ -675,7 +675,7 @@ def extend(download=False):
         "coverage": {
             "ocp": "Full-cell pseudo-OCP referenced in the paper; electrode potentials are conventionally allocated, not electrode-resolved measurements",
             "diffusion": "Fast-diffusion model assumption; no finite fitted diffusivity imported",
-            "kinetics": "Not transcribed in this release; raw tests do not uniquely identify electrode kinetic laws",
+            "kinetics": "Related author code contains i0ref/Ei0 model constants, but no repository/file reuse grant is established; the CC BY full-cell deposit does not license that separate code. No native kinetic values imported.",
             "full_cell_tests": "Ten CC charge/discharge files at 2, 4, 6, 8 and 10C",
         },
         "note": "OCP workbooks in the related GitHub code repository have no explicit file-level reuse license located here; indexed as references rather than silently redistributed. Never substitute AMP20M1HD-A parameters.",

@@ -98,7 +98,7 @@ def test_battery_model_index_covers_every_package_and_external_source(index):
                 assert path not in index
     hubs = {name: body.decode() for name, body in index.items() if name.startswith("data/batteries/") and name.endswith(".md") and not name.endswith("README.md")}
     for source in catalog.external_datasets:
-        assert sum(f"{source['id']}.md#file-locations" in body for body in hubs.values()) == 1
+        assert sum(f"{source['id']}.md#file-locations" in body for body in hubs.values()) == (2 if source["id"] == "tec-lgm50-multitemperature-2021" else 1)
     ncr = hubs["data/batteries/panasonic-ncr18650b-hnei2016.md"]
     assert all(name in ncr for name in ["hnei-ncr18650b-2016", "bayreuth-ncr18650b-2023", "virtual-vehicle-ncr18650b-aging-2023", "stanford-ncr18650b-rates-2021"])
     assert "same_model_different_study" in ncr

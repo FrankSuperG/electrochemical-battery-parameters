@@ -8,7 +8,7 @@ Start here when browsing on GitHub. No Python installation or hosted website is 
 
 See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.
 
-Snapshot: 72 OCP records, 457 other parameter records, 61 full-cell test files.
+Snapshot: 76 OCP records, 1041 other parameter records, 61 full-cell test files.
 
 ## Choose a battery model
 
@@ -18,22 +18,24 @@ Snapshot: 72 OCP records, 457 other parameter records, 61 full-cell test files.
 
 | Cell / study entry | OCP | Other parameters | Full-cell tests | Match level |
 |---|---|---|---|---|
-| [LG M50 &#124; 5 Ah NMC811/graphite-SiOx](cells/lg-m50.md) | [2 records](cells/lg-m50.md#ocp-curves) | [38 records](cells/lg-m50.md#parameters) | [3 files](cells/lg-m50.md#full-cell-tests) | `same_model_same_study` |
-| [Undisclosed LFP/graphite 18650, 2 Ah (BPX)](cells/bpx-lfp-18650-2ah-undisclosed.md) | [2 records](cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [46 records](cells/bpx-lfp-18650-2ah-undisclosed.md#parameters) | Not imported | `unmatched` |
+| [LG M50 &#124; 5 Ah NMC811/graphite-SiOx](cells/lg-m50.md) | [2 records](cells/lg-m50.md#ocp-curves) | [90 records](cells/lg-m50.md#parameters) | [3 files](cells/lg-m50.md#full-cell-tests) | `same_model_same_study` |
+| [Undisclosed LFP/graphite 18650, 2 Ah (BPX)](cells/bpx-lfp-18650-2ah-undisclosed.md) | [2 records](cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [49 records](cells/bpx-lfp-18650-2ah-undisclosed.md#parameters) | Not imported | `unmatched` |
 | [A123 AMP20M1HD-A &#124; 20 Ah LFP pouch](cells/a123-amp20m1hd-a.md) | Not linked | [30 records](cells/a123-amp20m1hd-a.md#parameters) | [1 file](cells/a123-amp20m1hd-a.md#full-cell-tests) | `same_model_same_study` |
 | [A123 high-power LFP pouch &#124; 9 Ah &#124; part undisclosed](cells/a123-high-power-pouch-9ah.md) | Not linked | Not imported | [10 files](cells/a123-high-power-pouch-9ah.md#full-cell-tests) | `same_study_cell_family` |
-| [SLPB78205130H &#124; LCO/graphite &#124; 0.680616 Ah model input](cells/kokam-slpb78205130h-marquis2019.md) | [2 records](cells/kokam-slpb78205130h-marquis2019.md#ocp-curves) | [38 records](cells/kokam-slpb78205130h-marquis2019.md#parameters) | Not imported | `parameter_set_only` |
-| [UMBL Mohtat2020 &#124; 5 Ah NMC/graphite research pouch](cells/mohtat2020-nmc532-pouch.md) | [4 records](cells/mohtat2020-nmc532-pouch.md#ocp-curves) | [71 records](cells/mohtat2020-nmc532-pouch.md#parameters) | [5 files](cells/mohtat2020-nmc532-pouch.md#full-cell-tests) | `same_study_cell_family` |
-| [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](cells/kim2011-nca-nominal-design.md) | [2 records](cells/kim2011-nca-nominal-design.md#ocp-curves) | [38 records](cells/kim2011-nca-nominal-design.md#parameters) | Not imported | `unmatched` |
-| [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](cells/kokam-slpb75106100-ecker2015.md) | [2 records](cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [38 records](cells/kokam-slpb75106100-ecker2015.md#parameters) | [2 files](cells/kokam-slpb75106100-ecker2015.md#full-cell-tests) | `same_model_same_study` |
-| [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](cells/enertech-lco-pouch-ai2020.md) | [2 records](cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [38 records](cells/enertech-lco-pouch-ai2020.md#parameters) | [4 files](cells/enertech-lco-pouch-ai2020.md#full-cell-tests) | `same_study_cell_family` |
+| [SLPB78205130H &#124; LCO/graphite &#124; 0.680616 Ah model input](cells/kokam-slpb78205130h-marquis2019.md) | [2 records](cells/kokam-slpb78205130h-marquis2019.md#ocp-curves) | [101 records](cells/kokam-slpb78205130h-marquis2019.md#parameters) | Not imported | `parameter_set_only` |
+| [UMBL Mohtat2020 &#124; 5 Ah NMC/graphite research pouch](cells/mohtat2020-nmc532-pouch.md) | [4 records](cells/mohtat2020-nmc532-pouch.md#ocp-curves) | [138 records](cells/mohtat2020-nmc532-pouch.md#parameters) | [5 files](cells/mohtat2020-nmc532-pouch.md#full-cell-tests) | `same_study_cell_family` |
+| [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](cells/kim2011-nca-nominal-design.md) | [2 records](cells/kim2011-nca-nominal-design.md#ocp-curves) | [100 records](cells/kim2011-nca-nominal-design.md#parameters) | Not imported | `unmatched` |
+| [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](cells/kokam-slpb75106100-ecker2015.md) | [2 records](cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [105 records](cells/kokam-slpb75106100-ecker2015.md#parameters) | [2 files](cells/kokam-slpb75106100-ecker2015.md#full-cell-tests) | `same_model_same_study` |
+| [Enertech &#124; LCO/graphite &#124; 2.28 Ah model input](cells/enertech-lco-pouch-ai2020.md) | [2 records](cells/enertech-lco-pouch-ai2020.md#ocp-curves) | [123 records](cells/enertech-lco-pouch-ai2020.md#parameters) | [4 files](cells/enertech-lco-pouch-ai2020.md#full-cell-tests) | `same_study_cell_family` |
 | [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](cells/isu-uconn-lfp-graphite-lab.md) | [4 records](cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not imported | [21 files](cells/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | `same_study_cell_family` |
 | [A123 18650M1A &#124; Jahn2024 LFP/graphite](cells/a123-18650m1a-jahn2024.md) | [2 records](cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not imported | [14 files](cells/a123-18650m1a-jahn2024.md#full-cell-tests) | `same_model_same_study` |
 | [LG M50LT &#124; Hallemans2025 grouped SPMe](cells/lg-m50lt-hallemans2025.md) | Not linked | [18 records](cells/lg-m50lt-hallemans2025.md#parameters) | [1 file](cells/lg-m50lt-hallemans2025.md#full-cell-tests) | `same_model_same_study` |
 | [LG MJ1 &#124; DLR-SINTEF harvested-electrode characterization](cells/lg-mj1-dlr-sintef.md) | [4 records](cells/lg-mj1-dlr-sintef.md#ocp-curves) | [42 records](cells/lg-mj1-dlr-sintef.md#parameters) | Not imported | `same_model_same_study` |
 | [Panasonic NCR18650B &#124; HNEI2016](cells/panasonic-ncr18650b-hnei2016.md) | [4 records](cells/panasonic-ncr18650b-hnei2016.md#ocp-curves) | Not imported | Not imported | `same_model_same_study` |
 | [CALB generation 3b &#124; NEXTBMS2026](cells/calb-gen3b-nextbms2026.md) | [4 records](cells/calb-gen3b-nextbms2026.md#ocp-curves) | Not imported | Not imported | `same_model_same_study` |
-| [Molicel P45B &#124; About:Energy2026 BPX](cells/molicel-p45b-aboutenergy2026.md) | [5 records](cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [60 records](cells/molicel-p45b-aboutenergy2026.md#parameters) | Not imported | `same_model_same_study` |
+| [Molicel P45B &#124; About:Energy2026 BPX](cells/molicel-p45b-aboutenergy2026.md) | [5 records](cells/molicel-p45b-aboutenergy2026.md#ocp-curves) | [67 records](cells/molicel-p45b-aboutenergy2026.md#parameters) | Not imported | `same_model_same_study` |
+| [LG M50 &#124; O'Regan2022 characterization and model](cells/lg-m50-oregan2022.md) | [2 records](cells/lg-m50-oregan2022.md#ocp-curves) | [128 records](cells/lg-m50-oregan2022.md#parameters) | Not imported | `same_model_same_study` |
+| [LFP 2.3 Ah &#124; Prada2013 implementation &#124; part unresolved](cells/prada2013-lfp-nominal-design.md) | [2 records](cells/prada2013-lfp-nominal-design.md#ocp-curves) | [50 records](cells/prada2013-lfp-nominal-design.md#parameters) | Not imported | `parameter_set_only` |
 
 ## Find data by type
 

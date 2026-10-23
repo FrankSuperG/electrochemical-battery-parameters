@@ -47,7 +47,59 @@
       "lgm50-initial-concentration-in-negative-electrode-mol-m-3",
       "lgm50-initial-concentration-in-positive-electrode-mol-m-3",
       "lgm50-negative-exchange-current-density",
-      "lgm50-positive-exchange-current-density"
+      "lgm50-positive-exchange-current-density",
+      "model-completion-chen2020-ratio-of-lithium-moles-to-sei-moles",
+      "model-completion-chen2020-sei-partial-molar-volume-m3-mol-1",
+      "model-completion-chen2020-sei-reaction-exchange-current-density-a-m-2",
+      "model-completion-chen2020-sei-resistivity-ohm-m",
+      "model-completion-chen2020-sei-solvent-diffusivity-m2-s-1",
+      "model-completion-chen2020-bulk-solvent-concentration-mol-m-3",
+      "model-completion-chen2020-sei-open-circuit-potential-v",
+      "model-completion-chen2020-sei-electron-conductivity-s-m-1",
+      "model-completion-chen2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "model-completion-chen2020-lithium-interstitial-reference-concentration-mol-m-3",
+      "model-completion-chen2020-initial-sei-thickness-m",
+      "model-completion-chen2020-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "model-completion-chen2020-ec-diffusivity-m2-s-1",
+      "model-completion-chen2020-sei-kinetic-rate-constant-m-s-1",
+      "model-completion-chen2020-sei-growth-activation-energy-j-mol-1",
+      "model-completion-chen2020-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-chen2020-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "model-completion-chen2020-cell-thermal-expansion-coefficient-m-k-1",
+      "model-completion-chen2020-negative-current-collector-conductivity-s-m-1",
+      "model-completion-chen2020-positive-current-collector-conductivity-s-m-1",
+      "model-completion-chen2020-negative-current-collector-density-kg-m-3",
+      "model-completion-chen2020-positive-current-collector-density-kg-m-3",
+      "model-completion-chen2020-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-chen2020-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "model-completion-chen2020-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-chen2020-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "model-completion-chen2020-current-function-a",
+      "model-completion-chen2020-contact-resistance-ohm",
+      "model-completion-chen2020-negative-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-chen2020-negative-electrode-bruggeman-coefficient-electrode",
+      "model-completion-chen2020-negative-electrode-charge-transfer-coefficient",
+      "model-completion-chen2020-negative-electrode-double-layer-capacity-f-m-2",
+      "model-completion-chen2020-negative-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-chen2020-positive-electrode-bruggeman-coefficient-electrolyte",
+      "model-completion-chen2020-positive-electrode-bruggeman-coefficient-electrode",
+      "model-completion-chen2020-positive-electrode-charge-transfer-coefficient",
+      "model-completion-chen2020-positive-electrode-double-layer-capacity-f-m-2",
+      "model-completion-chen2020-positive-electrode-ocp-entropic-change-v-k-1",
+      "model-completion-chen2020-separator-porosity",
+      "model-completion-chen2020-separator-bruggeman-coefficient-electrolyte",
+      "model-completion-chen2020-cation-transference-number",
+      "model-completion-chen2020-thermodynamic-factor",
+      "model-completion-chen2020-electrolyte-diffusivity-m2-s-1",
+      "model-completion-chen2020-electrolyte-conductivity-s-m-1",
+      "model-completion-chen2020-reference-temperature-k",
+      "model-completion-chen2020-total-heat-transfer-coefficient-w-m-2-k-1",
+      "model-completion-chen2020-ambient-temperature-k",
+      "model-completion-chen2020-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "model-completion-chen2020-number-of-cells-connected-in-series-to-make-a-battery",
+      "model-completion-chen2020-open-circuit-voltage-at-0-soc-v",
+      "model-completion-chen2020-open-circuit-voltage-at-100-soc-v",
+      "model-completion-chen2020-initial-temperature-k"
     ],
     "full_cell_test_ids": [
       "chen-lgm50-cell02",
@@ -88,14 +140,18 @@
       "diffusion": {
         "record_ids": [
           "lgm50-negative-particle-diffusivity-m2-s-1",
-          "lgm50-positive-particle-diffusivity-m2-s-1"
+          "lgm50-positive-particle-diffusivity-m2-s-1",
+          "model-completion-chen2020-sei-solvent-diffusivity-m2-s-1",
+          "model-completion-chen2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+          "model-completion-chen2020-ec-diffusivity-m2-s-1",
+          "model-completion-chen2020-electrolyte-diffusivity-m2-s-1"
         ],
         "source_ids": [
           "chen-2020",
           "pybamm-25-4-2"
         ],
         "match_level": "same_model_same_study",
-        "evidence": "Two scalar particle diffusivities in upstream implementation",
+        "evidence": "Two scalar particle diffusivities in upstream implementation Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -103,14 +159,19 @@
       "kinetics": {
         "record_ids": [
           "lgm50-negative-exchange-current-density",
-          "lgm50-positive-exchange-current-density"
+          "lgm50-positive-exchange-current-density",
+          "model-completion-chen2020-sei-kinetic-rate-constant-m-s-1",
+          "model-completion-chen2020-negative-electrode-charge-transfer-coefficient",
+          "model-completion-chen2020-negative-electrode-double-layer-capacity-f-m-2",
+          "model-completion-chen2020-positive-electrode-charge-transfer-coefficient",
+          "model-completion-chen2020-positive-electrode-double-layer-capacity-f-m-2"
         ],
         "source_ids": [
           "chen-2020",
           "pybamm-25-4-2"
         ],
         "match_level": "same_model_same_study",
-        "evidence": "Two exchange-current density laws",
+        "evidence": "Two exchange-current density laws Completed dictionary inputs may also include separately labeled electrolyte or optional SEI/plating coefficients; their presence is not electrode-specific measured diffusion/kinetics.",
         "missing_items": [
           "Same-specimen measurement provenance unresolved"
         ]
@@ -147,7 +208,65 @@
     "missing_items": [
       "Identical characterization/validation specimen not established",
       "Independent full-cell model reproduction not performed"
-    ]
+    ],
+    "implementation_completion": {
+      "source_asset_id": "pybamm-chen-code",
+      "parameter_ids": [
+        "model-completion-chen2020-ratio-of-lithium-moles-to-sei-moles",
+        "model-completion-chen2020-sei-partial-molar-volume-m3-mol-1",
+        "model-completion-chen2020-sei-reaction-exchange-current-density-a-m-2",
+        "model-completion-chen2020-sei-resistivity-ohm-m",
+        "model-completion-chen2020-sei-solvent-diffusivity-m2-s-1",
+        "model-completion-chen2020-bulk-solvent-concentration-mol-m-3",
+        "model-completion-chen2020-sei-open-circuit-potential-v",
+        "model-completion-chen2020-sei-electron-conductivity-s-m-1",
+        "model-completion-chen2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+        "model-completion-chen2020-lithium-interstitial-reference-concentration-mol-m-3",
+        "model-completion-chen2020-initial-sei-thickness-m",
+        "model-completion-chen2020-ec-initial-concentration-in-electrolyte-mol-m-3",
+        "model-completion-chen2020-ec-diffusivity-m2-s-1",
+        "model-completion-chen2020-sei-kinetic-rate-constant-m-s-1",
+        "model-completion-chen2020-sei-growth-activation-energy-j-mol-1",
+        "model-completion-chen2020-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-chen2020-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+        "model-completion-chen2020-cell-thermal-expansion-coefficient-m-k-1",
+        "model-completion-chen2020-negative-current-collector-conductivity-s-m-1",
+        "model-completion-chen2020-positive-current-collector-conductivity-s-m-1",
+        "model-completion-chen2020-negative-current-collector-density-kg-m-3",
+        "model-completion-chen2020-positive-current-collector-density-kg-m-3",
+        "model-completion-chen2020-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-chen2020-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+        "model-completion-chen2020-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-chen2020-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+        "model-completion-chen2020-current-function-a",
+        "model-completion-chen2020-contact-resistance-ohm",
+        "model-completion-chen2020-negative-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-chen2020-negative-electrode-bruggeman-coefficient-electrode",
+        "model-completion-chen2020-negative-electrode-charge-transfer-coefficient",
+        "model-completion-chen2020-negative-electrode-double-layer-capacity-f-m-2",
+        "model-completion-chen2020-negative-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-chen2020-positive-electrode-bruggeman-coefficient-electrolyte",
+        "model-completion-chen2020-positive-electrode-bruggeman-coefficient-electrode",
+        "model-completion-chen2020-positive-electrode-charge-transfer-coefficient",
+        "model-completion-chen2020-positive-electrode-double-layer-capacity-f-m-2",
+        "model-completion-chen2020-positive-electrode-ocp-entropic-change-v-k-1",
+        "model-completion-chen2020-separator-porosity",
+        "model-completion-chen2020-separator-bruggeman-coefficient-electrolyte",
+        "model-completion-chen2020-cation-transference-number",
+        "model-completion-chen2020-thermodynamic-factor",
+        "model-completion-chen2020-electrolyte-diffusivity-m2-s-1",
+        "model-completion-chen2020-electrolyte-conductivity-s-m-1",
+        "model-completion-chen2020-reference-temperature-k",
+        "model-completion-chen2020-total-heat-transfer-coefficient-w-m-2-k-1",
+        "model-completion-chen2020-ambient-temperature-k",
+        "model-completion-chen2020-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+        "model-completion-chen2020-number-of-cells-connected-in-series-to-make-a-battery",
+        "model-completion-chen2020-open-circuit-voltage-at-0-soc-v",
+        "model-completion-chen2020-open-circuit-voltage-at-100-soc-v",
+        "model-completion-chen2020-initial-temperature-k"
+      ],
+      "status": "All non-OCP numeric and analytic entries in this pinned dictionary are represented, including explicitly labeled optional submodels; string/citation metadata excluded."
+    }
   },
   "parameters": [
     {
@@ -1231,6 +1350,1748 @@
         "Gas constant fixed to 8.314462618 J/mol/K for portable numerical evaluation.",
         "Mathematical input checks do not establish an experimentally validated temperature range."
       ]
+    },
+    {
+      "id": "model-completion-chen2020-ratio-of-lithium-moles-to-sei-moles",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Ratio of lithium moles to SEI moles",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Ratio of lithium moles to SEI moles",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Ratio of lithium moles to SEI moles; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-partial-molar-volume-m3-mol-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI partial molar volume [m3.mol-1]",
+      "category": "geometry",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI partial molar volume [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI partial molar volume [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 9.585e-05
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-reaction-exchange-current-density-a-m-2",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI reaction exchange current density [A.m-2]",
+      "category": "thermal",
+      "unit": "A.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI reaction exchange current density [A.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI reaction exchange current density [A.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5e-07
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-resistivity-ohm-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI resistivity [Ohm.m]",
+      "category": "electrode",
+      "unit": "Ohm.m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI resistivity [Ohm.m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI resistivity [Ohm.m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 200000.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-solvent-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI solvent diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI solvent diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI solvent diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5e-22
+      }
+    },
+    {
+      "id": "model-completion-chen2020-bulk-solvent-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Bulk solvent concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Bulk solvent concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Bulk solvent concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2636.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-open-circuit-potential-v",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI open-circuit potential [V]",
+      "category": "electrode",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI open-circuit potential [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI open-circuit potential [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.4
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-electron-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI electron conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI electron conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI electron conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8.95e-14
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-lithium-interstitial-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI lithium interstitial diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI lithium interstitial diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI lithium interstitial diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-20
+      }
+    },
+    {
+      "id": "model-completion-chen2020-lithium-interstitial-reference-concentration-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Lithium interstitial reference concentration [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Lithium interstitial reference concentration [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Lithium interstitial reference concentration [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 15.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-initial-sei-thickness-m",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Initial SEI thickness [m]",
+      "category": "initial_state",
+      "unit": "m",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Initial SEI thickness [m]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Initial SEI thickness [m]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5e-09
+      }
+    },
+    {
+      "id": "model-completion-chen2020-ec-initial-concentration-in-electrolyte-mol-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "EC initial concentration in electrolyte [mol.m-3]",
+      "category": "electrode",
+      "unit": "mol.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::EC initial concentration in electrolyte [mol.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC initial concentration in electrolyte [mol.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4541.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-ec-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "EC diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::EC diffusivity [m2.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "EC diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2e-18
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-kinetic-rate-constant-m-s-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI kinetic rate constant [m.s-1]",
+      "category": "kinetics",
+      "unit": "m.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI kinetic rate constant [m.s-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI kinetic rate constant [m.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1e-12
+      }
+    },
+    {
+      "id": "model-completion-chen2020-sei-growth-activation-energy-j-mol-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "SEI growth activation energy [J.mol-1]",
+      "category": "electrode",
+      "unit": "J.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::SEI growth activation energy [J.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "SEI growth activation energy [J.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Negative electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-electrode-reaction-driven-lam-factor-m3-mol-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive electrode reaction-driven LAM factor [m3.mol-1]",
+      "category": "electrode",
+      "unit": "m3.mol-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode reaction-driven LAM factor [m3.mol-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "optional degradation/mechanics input"
+      },
+      "definition": "Positive electrode reaction-driven LAM factor [m3.mol-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-cell-thermal-expansion-coefficient-m-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Cell thermal expansion coefficient [m.K-1]",
+      "category": "thermal",
+      "unit": "m.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Cell thermal expansion coefficient [m.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Cell thermal expansion coefficient [m.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.1e-06
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 58411000.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-current-collector-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive current collector conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive current collector conductivity [S.m-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 36914000.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 8960.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-current-collector-density-kg-m-3",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive current collector density [kg.m-3]",
+      "category": "thermal",
+      "unit": "kg.m-3",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive current collector density [kg.m-3]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector density [kg.m-3]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2700.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 385.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-current-collector-specific-heat-capacity-j-kg-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive current collector specific heat capacity [J.kg-1.K-1]",
+      "category": "thermal",
+      "unit": "J.kg-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive current collector specific heat capacity [J.kg-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector specific heat capacity [J.kg-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 897.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 401.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-current-collector-thermal-conductivity-w-m-1-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive current collector thermal conductivity [W.m-1.K-1]",
+      "category": "thermal",
+      "unit": "W.m-1.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive current collector thermal conductivity [W.m-1.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive current collector thermal conductivity [W.m-1.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 237.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-current-function-a",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Current function [A]",
+      "category": "operating_limits",
+      "unit": "A",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Current function [A]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Current function [A]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 5.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-contact-resistance-ohm",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Contact resistance [Ohm]",
+      "category": "operating_limits",
+      "unit": "Ohm",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Contact resistance [Ohm]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Contact resistance [Ohm]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-chen2020-negative-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Negative electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Negative electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Negative electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-electrode-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive electrode Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-electrode-bruggeman-coefficient-electrode",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive electrode Bruggeman coefficient (electrode)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode Bruggeman coefficient (electrode)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode Bruggeman coefficient (electrode); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-electrode-charge-transfer-coefficient",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive electrode charge transfer coefficient",
+      "category": "kinetics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode charge transfer coefficient",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode charge transfer coefficient; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.5
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-electrode-double-layer-capacity-f-m-2",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive electrode double-layer capacity [F.m-2]",
+      "category": "kinetics",
+      "unit": "F.m-2",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode double-layer capacity [F.m-2]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode double-layer capacity [F.m-2]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2
+      }
+    },
+    {
+      "id": "model-completion-chen2020-positive-electrode-ocp-entropic-change-v-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Positive electrode OCP entropic change [V.K-1]",
+      "category": "thermodynamics",
+      "unit": "V.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Positive electrode OCP entropic change [V.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Positive electrode OCP entropic change [V.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-separator-porosity",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Separator porosity",
+      "category": "electrode",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Separator porosity",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator porosity; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.47
+      }
+    },
+    {
+      "id": "model-completion-chen2020-separator-bruggeman-coefficient-electrolyte",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Separator Bruggeman coefficient (electrolyte)",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Separator Bruggeman coefficient (electrolyte)",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Separator Bruggeman coefficient (electrolyte); literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.5
+      }
+    },
+    {
+      "id": "model-completion-chen2020-cation-transference-number",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Cation transference number",
+      "category": "transport",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Cation transference number",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Cation transference number; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 0.2594
+      }
+    },
+    {
+      "id": "model-completion-chen2020-thermodynamic-factor",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Thermodynamic factor",
+      "category": "thermodynamics",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Thermodynamic factor",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Thermodynamic factor; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-electrolyte-diffusivity-m2-s-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Electrolyte diffusivity [m2.s-1]",
+      "category": "diffusion",
+      "unit": "m2.s-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::electrolyte_diffusivity_Nyman2008",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_diffusivity_Nyman2008",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Diffusivity of LiPF6 in EC:EMC (3:7) as a function of ion concentration. The data\ncomes from [1]\n\nReferences\n----------\n.. [1] A. Nyman, M. Behm, and G. Lindbergh, \"Electrochemical characterisation and\nmodelling of the mass transport phenomena in LiPF6-EC-EMC electrolyte,\"\nElectrochim. Acta, vol. 53, no. 22, pp. 6356\u20136365, 2008.\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte diffusivity [m2.s-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "8.794e-11 * (c_e / 1000) ** 2 - 3.972e-10 * (c_e / 1000) + 4.862e-10",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-chen2020-electrolyte-conductivity-s-m-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Electrolyte conductivity [S.m-1]",
+      "category": "transport",
+      "unit": "S.m-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::electrolyte_conductivity_Nyman2008",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input",
+        "source_function": "electrolyte_conductivity_Nyman2008",
+        "source_argument_aliases": {
+          "c_e": "c_e",
+          "T": "T"
+        },
+        "source_function_docstring": "Conductivity of LiPF6 in EC:EMC (3:7) as a function of ion concentration. The data\ncomes from [1].\n\nReferences\n----------\n.. [1] A. Nyman, M. Behm, and G. Lindbergh, \"Electrochemical characterisation and\nmodelling of the mass transport phenomena in LiPF6-EC-EMC electrolyte,\"\nElectrochim. Acta, vol. 53, no. 22, pp. 6356\u20136365, 2008.\n\nParameters\n----------\nc_e: :class:`pybamm.Symbol`\n    Dimensional electrolyte concentration\nT: :class:`pybamm.Symbol`\n    Dimensional temperature\n\nReturns\n-------\n:class:`pybamm.Symbol`\n    Solid diffusivity"
+      },
+      "definition": "Electrolyte conductivity [S.m-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model.",
+        "AST local substitution only. sech(z)^2 becomes 1-tanh(z)^2 (roundoff may zero negligible tails). Ecker electrolyte conductivity dependency is inlined from the same pinned module. No downloaded source is executed."
+      ],
+      "representation": {
+        "kind": "expression",
+        "expression": "0.1297 * (c_e / 1000) ** 3 - 2.51 * (c_e / 1000) ** 1.5 + 3.329 * (c_e / 1000)",
+        "variables": {
+          "c_e": "mol.m-3",
+          "T": "K"
+        },
+        "domain": "Mathematical input domain only: 0<=sto<=1, nonnegative concentrations, c_s_max>0, c_s_surf<=c_s_max, T>0 and L_sei>0 where present. Fit validity must be checked independently.",
+        "gas_constant_J_mol_K": 8.314462618
+      }
+    },
+    {
+      "id": "model-completion-chen2020-reference-temperature-k",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Reference temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Reference temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Reference temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-chen2020-total-heat-transfer-coefficient-w-m-2-k-1",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Total heat transfer coefficient [W.m-2.K-1]",
+      "category": "thermal",
+      "unit": "W.m-2.K-1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Total heat transfer coefficient [W.m-2.K-1]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Total heat transfer coefficient [W.m-2.K-1]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 10.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-ambient-temperature-k",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Ambient temperature [K]",
+      "category": "thermal",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Ambient temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Ambient temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
+    },
+    {
+      "id": "model-completion-chen2020-number-of-electrodes-connected-in-parallel-to-make-a-cell",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Number of electrodes connected in parallel to make a cell",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Number of electrodes connected in parallel to make a cell",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of electrodes connected in parallel to make a cell; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-number-of-cells-connected-in-series-to-make-a-battery",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Number of cells connected in series to make a battery",
+      "category": "geometry",
+      "unit": "1",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Number of cells connected in series to make a battery",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Number of cells connected in series to make a battery; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "model-completion-chen2020-open-circuit-voltage-at-0-soc-v",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Open-circuit voltage at 0% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Open-circuit voltage at 0% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 0% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 2.5
+      }
+    },
+    {
+      "id": "model-completion-chen2020-open-circuit-voltage-at-100-soc-v",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Open-circuit voltage at 100% SOC [V]",
+      "category": "operating_limits",
+      "unit": "V",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Open-circuit voltage at 100% SOC [V]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Open-circuit voltage at 100% SOC [V]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 4.2
+      }
+    },
+    {
+      "id": "model-completion-chen2020-initial-temperature-k",
+      "version": "1",
+      "cell_id": "lg-m50",
+      "name": "Initial temperature [K]",
+      "category": "initial_state",
+      "unit": "K",
+      "source_ids": [
+        "pybamm-25-4-2"
+      ],
+      "license": "BSD-3-Clause",
+      "independent_validation": false,
+      "provenance": {
+        "asset_id": "pybamm-chen-code",
+        "location": "Chen2020.py::get_parameter_values::Initial temperature [K]",
+        "origin_status": "published_implementation_input; individual measurement/fit/borrowed/assumed origin not independently established"
+      },
+      "conditions": {
+        "parameterization_variant": "chen2020-pybamm-v25-4-2",
+        "model_set": "Chen2020",
+        "submodel_scope": "electrochemical/thermal/circuit model input"
+      },
+      "definition": "Initial temperature [K]; literal value or function in the pinned upstream parameter dictionary. Native source units and conventions retained.",
+      "limitations": [
+        "Parameters and full-cell tests are linked at same-model/same-study level. No exact characterization-specimen match or independently reproduced full-cell fit is claimed. This is an intentionally partial parameter collection.",
+        "Implementation input, not an assertion that this number was measured on this commercial cell. Source defaults, assumptions and borrowed submodels remain distinct from measured characterization.",
+        "Optional degradation/mechanics entries require their corresponding model options; including a parameter does not establish cell-specific ageing evidence or a validated model."
+      ],
+      "representation": {
+        "kind": "scalar",
+        "value": 298.15
+      }
     }
   ],
   "ocp_records": [
@@ -2799,7 +4660,7 @@
       "url": "https://github.com/pybamm-team/PyBaMM/tree/v25.4.2/src/pybamm/input/parameters/lithium_ion",
       "version": "v25.4.2",
       "license": "BSD-3-Clause",
-      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately."
+      "role": "Redistributable software distribution for Prada2013, Chen2020, Marquis2019, Mohtat2020 and NCA_Kim2011. Scientific origin is recorded per function; shared software does not establish shared measurement origin. Prada2013 borrows its OCPs from Afshar2017 and Chen2020. Ecker2015 and Ai2020 modules are also pinned; original and borrowed function origins are recorded separately. ORegan2022 is also pinned; Chen OCP, CRC and Landesfeind origins remain explicit."
     }
   },
   "upstream_assets": {
@@ -2832,14 +4693,16 @@
       "filename": "Chen2020-v25.4.2.py",
       "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Chen2020.py",
       "sha256": "eb6a13879cad6ae1bc86d222ce5189f3e3edb400e23f69331779b8aae2437906",
-      "license": "BSD-3-Clause"
+      "license": "BSD-3-Clause",
+      "path": "evidence/Chen2020-v25.4.2.py"
     },
     "pybamm-prada-code": {
       "source_id": "pybamm-25-4-2",
       "filename": "Prada2013-v25.4.2.py",
       "url": "https://raw.githubusercontent.com/pybamm-team/PyBaMM/v25.4.2/src/pybamm/input/parameters/lithium_ion/Prada2013.py",
       "sha256": "9cec4ad9e6afac112b44c5ea4c73ee2c2c0882a7c6fc5398bd789b78617cb052",
-      "license": "BSD-3-Clause"
+      "license": "BSD-3-Clause",
+      "path": "evidence/Prada2013-v25.4.2.py"
     }
   },
   "canonical_data_root": "../../src/ebp/data",
