@@ -7,7 +7,7 @@ were partially imported in v0.6.0; see [LFP curation](LFP_STUDIES.md).
 LG MJ1 is partially imported in v0.8.0; [its review](LG_MJ1.md) documents
 four pseudo-OCP branches and 42 parameter records, without an intact-cell test.
 O'Regan is partially imported in v0.13; see [its review](OREGAN2022.md).
-Current counts are 76 electrode curves, 1,041 other parameters and 61 existing
+Historical v0.13 counts were 76 electrode curves, 1,041 other parameters and 61 existing
 full-cell exports. The [comprehensive extraction audit](PARAMETER_AUDIT.md)
 separates stored inputs from remaining reuse/definition gaps. Licenses, model definitions and specimen
 matching remain distinct from data availability.

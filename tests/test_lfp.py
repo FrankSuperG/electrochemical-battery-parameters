@@ -3,7 +3,6 @@
 import hashlib
 import json
 from pathlib import Path
-import zipfile
 
 import numpy as np
 import pytest
@@ -27,18 +26,15 @@ def cached(catalog, asset_id):
 def test_lfp_coverage_and_match_limits():
     c = Catalog()
     assert len(c.parameters) == 1041
-    assert len(c.full_cell_tests) == 61
-    assert len(c.cells) == 20
+    assert len(c.full_cell_tests) == 51
+    assert len(c.cells) == 19
     amp = c.cells["a123-amp20m1hd-a"]
     assert amp["model"] == "AMP20M1HD-A"
     assert amp["match_level"] == "same_model_same_study"
     assert len(c.search_parameters(cell_id="a123-amp20m1hd-a")) == 30
     assert len(c.linked_tests("a123-amp20m1hd-a")) == 1
-    family = c.cells["a123-high-power-pouch-9ah"]
-    assert family["model"] is None
-    assert family["match_level"] == "same_study_cell_family"
-    assert len(c.linked_tests("a123-high-power-pouch-9ah")) == 10
-    assert not c.search_parameters(cell_id="a123-high-power-pouch-9ah")
+    assert "a123-high-power-pouch-9ah" not in c.cells
+    assert not c.linked_tests("a123-high-power-pouch-9ah")
     bpx = c.cells["bpx-lfp-18650-2ah-undisclosed"]
     assert bpx["manufacturer"] is bpx["model"] is None
     assert bpx["match_level"] == "unmatched"
@@ -131,28 +127,6 @@ def test_amp20_normalized_values_match_original_mat():
     assert_column(rows, "current_charge_positive_A", raw["I"])
     assert_column(rows, "cell_temperature_K", np.mean(raw["A"], axis=(0, 1)) + 273.15)
     assert all(r["ambient_temperature_K"] == "" for r in rows)
-
-
-def test_9ah_all_rows_missing_fields_and_signed_current_match_mat_members():
-    c = Catalog()
-    with zipfile.ZipFile(cached(c, "oxford9ah-cc")) as archive:
-        for test in c.linked_tests("a123-high-power-pouch-9ah"):
-            raw = loadmat(archive.open(test["original_member"]), simplify_cells=True)[
-                "Expivium"
-            ]
-            rows = c.full_cell_data(test["id"])
-            assert len(rows) == len(raw) == test["row_count"]
-            for column, expected in [
-                ("time_s", raw[:, 0] - raw[0, 0]),
-                ("voltage_V", raw[:, 1]),
-                ("current_charge_positive_A", raw[:, 2]),
-                ("cell_temperature_K", raw[:, 3] + 273.15),
-            ]:
-                assert_column(rows, column, expected)
-            assert test["missing_values"]["voltage_V"] == int(np.isnan(raw[:, 1]).sum())
-            assert [int(r["source_record"]) for r in rows] == list(range(len(raw)))
-            assert all(r["ambient_temperature_K"] == "" for r in rows)
-            assert test["relationship_to_parameters"] == "same_study_cell_family"
 
 
 def test_catalog_rejects_cross_cell_links_duplicate_tests_and_wrong_missing_counts():

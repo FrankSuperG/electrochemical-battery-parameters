@@ -137,37 +137,6 @@
     "license": "BSD-2-Clause",
     "role": "Model geometry and assumed 5 micrometre particle radius. Optimizer initial guesses are not treated as final fitted parameters. Through-plane scaling is model specific."
   },
-  "oxford-9ah-data": {
-    "kind": "dataset",
-    "title": "Oxford high-power A123 LFP/graphite pouch-cell experiments",
-    "authors": [
-      "Malgorzata E. Wojtala",
-      "Volkan Kumtepeli",
-      "Eloise C. Tredenick",
-      "Charles W. Monroe",
-      "David A. Howey"
-    ],
-    "year": 2025,
-    "doi": "10.5287/ora-eonzaxjpm",
-    "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758",
-    "license": "CC-BY-4.0",
-    "role": "Ten CC charge/discharge experiments at 2/4/6/8/10C. The archive README supplies the 1 Hz timebase and license. The paper identifies A123 9 Ah; no part number is established."
-  },
-  "oxford-9ah-paper": {
-    "kind": "paper",
-    "title": "Electrochemical-thermal modelling of high power Li-ion pouch cells",
-    "authors": [
-      "Volkan Kumtepeli",
-      "Malgorzata E. Wojtala",
-      "Eloise C. Tredenick",
-      "Charles W. Monroe",
-      "David A. Howey"
-    ],
-    "year": 2026,
-    "doi": "10.1016/j.jpowsour.2025.238764",
-    "url": "https://doi.org/10.1016/j.jpowsour.2025.238764",
-    "role": "A123 9 Ah power pouch cell; the model assumes fast diffusion rather than identifying a finite diffusion coefficient. Its full-cell pseudo-OCP is allocated between electrodes as a modeling convention, not measured electrode OCPs."
-  },
   "marquis-2019": {
     "kind": "paper",
     "title": "An asymptotic derivation of a single particle model with electrolyte",

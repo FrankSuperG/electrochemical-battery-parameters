@@ -87,12 +87,7 @@ def battery_model_index(catalog):
     # Navigation may cross studies; scientific parameter joins remain separately explicit.
     extra = {"molicel-p45b-aboutenergy2026": ["tum-p45b-halfcell-aging-2026"],
              "lg-m50-oregan2022": ["tec-lgm50-multitemperature-2021"]}
-    names = {"uccs-a123-26650m1b-2021": "A123 26650 m1b / UCCS",
-             "calce-samsung-20r-dynamic": "Samsung INR18650-20R / CALCE",
-             "calce-a123-dynamic": "A123 cylindrical LFP / part unresolved",
-             "calb-l148n58a-2025": "CALB L148N58A",
-             "milano-lfp-eis-2023": "LFP IFR14500 labels / manufacturer unresolved",
-             "malaya-three-chemistries-2022": "Malaya three-model archive / per-model files unverified"}
+    names = {}
     for cid, cell in catalog.cells.items():
         sources = [r for r in catalog.external_datasets
                    if cid in r["parameter_link"]["cell_ids"] or r["id"] in extra.get(cid, [])]
@@ -156,7 +151,7 @@ def battery_model_index(catalog):
             for category in ["ocp", "diffusion", "kinetics"]:
                 lines += [f"- **{category.upper() if category == 'ocp' else category.title()}:** {cell['coverage'][category]}"]
         lines += ["", "## Full-cell tests", "",
-                  "New full-cell observations remain at their providers. Links below lead to descriptions, available file locations, source licenses and missing channels. Existing packaged tests are retained for compatibility.", ""]
+                  "New full-cell observations remain at their providers. Links below lead to descriptions, available file locations, source licenses and missing channels. Existing packaged tests support admitted parameter packages.", ""]
         local = catalog.linked_tests(group["id"]) if cell else []
         if local:
             lines += [link(page, f"data/cells/{group['id']}.md#full-cell-tests", f"{len(local)} existing packaged test files with per-file conditions"), "", cell["coverage"]["full_cell_tests"], ""]
@@ -184,7 +179,7 @@ def battery_model_index(catalog):
         output[str(page)] = "\n".join(lines).encode()
 
     def table(page, level):
-        lines = ["OCP and parameter links open repository data. Full-cell links open source descriptions and downloads. **Not extracted** means no reusable native record is curated; it is not a claim that no measurement exists.", "",
+        lines = ["OCP and parameter links open repository data. Every indexed package has stored OCP, diffusion or kinetics records; full-cell links are supporting references to source descriptions and downloads. **Not extracted** means no reusable native record is curated; it is not a claim that no measurement exists.", "",
                  "Coverage labels below are source-level discovery aids. Read each model page for study, temperature, profile, licence and specimen limits. Half-cell temperature is tracked separately.", "",
                  link(page,"docs/PARAMETER_AUDIT.md","Extraction audit for every battery/study: stored / reuse unresolved / definition unresolved / not located"), "",
                  "Record counts include published assumptions, borrowed functions, activation energies and optional submodel inputs, not a count of independent measurements or solid-electrode coefficients. Read parameter names and origin fields before selecting a model input.", ""]
@@ -309,7 +304,7 @@ def full_cell_index(catalog):
         lines += ["", "## Evidence", ""] + [f"- [Primary source {i + 1}]({url})" for i, url in enumerate(r["evidence_urls"])]
         lines += ["", "No external payload is fetched by the library, viewer or CI. Dataset coverage does not assert a complete cell × temperature × profile matrix. Whole-cell OCV is not electrode OCP; EIS is frequency-domain evidence, not a current/voltage drive-cycle trace.", ""]
         output[str(page)] = "\n".join(lines).encode()
-    overview = ["# Full-cell tests by material", "", "[All data](../README.md) · [How to use external links](../../docs/FULL_CELL_DATASETS.md)", "",
+    overview = ["# Supporting full-cell tests by material", "", "[All data](../README.md) · [How to use external links](../../docs/FULL_CELL_DATASETS.md)", "",
                 f"{len(catalog.full_cell_tests)} existing packaged branch/test files and {len(catalog.external_datasets)} external dataset-link records. External records are not imported files or independent specimens. One multi-chemistry dataset can appear under several materials.", "",
                 f"Large observations remain with the original provider. [Dataset metadata CSV](datasets.csv) · [Complete metadata JSON](datasets.json) · [{len(file_rows)} selected file/container locators (CSV)](files.csv). No automatic download occurs.", "",
                 "| Material family | Packaged test files | External datasets | Browse |", "|---|---:|---:|---|"]

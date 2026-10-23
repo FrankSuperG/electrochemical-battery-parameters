@@ -1,5 +1,7 @@
 # Data contribution: [study, cell or material]
 
+Active packages require at least one stored OCP, diffusion or kinetics record. Full-cell tests are supporting links to an admitted parameter package; test-only sources remain research leads. See [project scope](../docs/PROJECT_SCOPE.md).
+
 Copy this file and replace the placeholders. Fill applicable sections in English;
 write `unknown`, `not reported` or `not applicable` rather than guessing. A partial
 contribution is welcome when its limits are explicit. This is a submission form,

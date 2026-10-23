@@ -88,4 +88,4 @@ def test_haidi_same_study_conditions_do_not_become_verified_fullcell_files():
         assert source["test_coverage"][key]["status"] == "container_only"
     assert not any(f["dataset_id"] == source["id"] for f in c.search_dataset_files(test_type="eis"))
     assert not c.linked_tests(CID) and not c.search_parameters(cell_id=CID)
-    assert len(c.full_cell_tests) == 61
+    assert len(c.full_cell_tests) == 51

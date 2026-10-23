@@ -43,7 +43,7 @@ jobs:
           mkdir -p .cache/upstream
           gh release download upstream-lfp-v0.2.0 --repo "$GITHUB_REPOSITORY" \
             --dir .cache/upstream --pattern lin-full-discharge.mat \
-            --pattern lin-readme.txt --pattern pouch-cc.zip --pattern pouch-ora-readme.md
+            --pattern lin-readme.txt
       - run: python scripts/seed_v01.py --download
       - run: git diff --exit-code -- src/ebp/data
       - run: python -m pytest -q

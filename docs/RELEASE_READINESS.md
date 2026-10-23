@@ -1,6 +1,6 @@
 # Public-release readiness review - v0.8.0
 
-**Historical review.** See the [current v0.15 final project review](FINAL_REVIEW.md) for executed checks, current totals, license decisions and remaining limits.
+**Historical review.** See the [current v0.16 final project review](FINAL_REVIEW.md) for executed checks, current totals, license decisions and remaining limits.
 
 Reviewed 2026-10-17. **Suitable for publication as a traceable, partial parameter
 and observation catalog**, with the source, coordinate, variant and missing-item
@@ -12,7 +12,7 @@ exports, 13 material labels and 13 cell/study entries**. File, branch and parame
 counts are not independent-cell or independent-study counts. MJ1 adds no intact
 full-cell test; existing test counts are unchanged.
 
-For the current v0.14 inventory (83 curves/fits, 1,041 other parameters and
+For the historical v0.14 inventory (83 curves/fits, 1,041 other parameters and
 19 cell/study entries), see the [extraction and storage review](PARAMETER_STORAGE.md)
 and [current battery-model index](../data/batteries/README.md). This dated v0.8
 review is retained as history; current source-level gaps remain authoritative.

@@ -29,22 +29,6 @@
     "license": "BSD-2-Clause",
     "sha256": "e4b3eb232e8cce475937a19b5bbaf5c2f43ea209e45111b932b38d0aece36b50"
   },
-  "oxford9ah-cc": {
-    "filename": "pouch-cc.zip",
-    "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758/files/s47429c42x",
-    "source_id": "oxford-9ah-data",
-    "license": "CC-BY-4.0",
-    "sha256": "8684ea15ec06166bd95d218b521010e933e8d45100d6d22e292e7cff5739883e",
-    "mirror_url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/download/upstream-lfp-v0.2.0/pouch-cc.zip"
-  },
-  "oxford9ah-readme": {
-    "filename": "pouch-ora-readme.md",
-    "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758/files/r44558g94r",
-    "source_id": "oxford-9ah-data",
-    "license": "CC-BY-4.0",
-    "sha256": "da27c2107f4ba4fd0f79a6a7c465b8fdcc1008c0e8fbce786574ee063d9a4f5f",
-    "mirror_url": "https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/download/upstream-lfp-v0.2.0/pouch-ora-readme.md"
-  },
   "bpx-lfp-example": {
     "filename": "bpx-lfp18650.json",
     "url": "https://raw.githubusercontent.com/FaradayInstitution/BPX/0f591336937c2c57509f20ab23f9908e58f7a757/examples/lfp_18650_cell_BPX.json",

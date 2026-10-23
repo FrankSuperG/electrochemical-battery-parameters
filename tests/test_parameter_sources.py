@@ -110,4 +110,4 @@ def test_p45b_parameters_preserve_bpx_values_and_do_not_import_placeholders():
             np.testing.assert_array_equal(y, original["y"])
         if "Reaction rate constant [" in path:
             assert r["unit"] == "mol.m-2.s-1"
-    assert len(c.full_cell_tests) == 61
+    assert len(c.full_cell_tests) == 51

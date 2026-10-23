@@ -1,5 +1,7 @@
 # External file and parameter-link review — 2026-10-23
 
+**Historical source review.** Since v0.16, six of these test-only sources are excluded from the active parameter catalog. Only parameter-associated sources remain indexed. See [scope and removal decisions](PROJECT_SCOPE.md).
+
 [File locator CSV](../data/full-cell/files.csv) · [Seven source records](../data/full-cell/datasets.json) · [Archive directory evidence](../src/ebp/data/evidence/external-archive-directory-review.json)
 
 This review checks the seven existing external records. The unit is an external

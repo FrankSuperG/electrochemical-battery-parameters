@@ -366,3 +366,10 @@ record states the observed terms and evidence; `not-stated` is not permission
 to redistribute. The library, viewer and CI do not fetch these external payloads.
 Previously packaged source data and supporting evidence retain the notices
 listed above. See [the source review](docs/FULL_CELL_DATASETS.md).
+
+## v0.16 scope removal
+
+The ten `a123-9ah-*.csv` observations and their active cell/source records were
+removed because no electrode OCP, diffusion or kinetics records were admitted.
+The earlier Oxford 9 Ah attribution above and original notice are retained as
+historical license documentation, not as a current data-inventory claim.

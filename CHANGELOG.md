@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.16.0 — 2026-10-24
+
+- Focused admission on electrochemical model parameters: every active cell and supporting external source requires at least one stored OCP, diffusion or kinetics record. Validator rejects test-only additions. Full-cell OCV and measurement traces do not qualify as electrode parameters.
+- Removed six unmatched external test-only sources / 79 locators and the A123 9 Ah package / ten packaged CC files. Historical source audits remain traceable; reconstruction no longer imports those tests.
+- Retained all 90 OCP/fit records and 1,041 other parameter records, including partial packages such as M50LT grouped diffusion/kinetics and NCR18650B OCP. Active inventory: 19 cell/study packages, 51 legacy supporting tests, 11 external sources / 357 locators.
+- Updated English README/model indexes, viewer wording, contribution requirements and scope decisions. New whole-cell observations remain provider links.
+
 ## 0.15.0 — 2026-10-24
 
 - Added seven HAIDI HDCF18650-1800 author-processed pseudo-OCP branches / 98,695 unchanged source nodes, under dataset-specific CC BY 4.0 publisher-catalog evidence. Half-cell Li reference, 25 C, source capacity/rows and direction conventions are explicit.

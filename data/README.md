@@ -8,7 +8,7 @@ Start here when browsing on GitHub. No Python installation or hosted website is 
 
 See [how to download, interpret and use files](../docs/DATA_ACCESS.md) for Excel, Python and model examples. If repository access is restricted, sign in with an account that has access.
 
-Snapshot: 90 OCP records, 1041 other parameter records, 61 full-cell test files.
+Snapshot: 90 OCP records, 1041 other parameter records, 51 full-cell test files.
 
 ## Choose a battery model
 
@@ -21,7 +21,6 @@ Snapshot: 90 OCP records, 1041 other parameter records, 61 full-cell test files.
 | [LG M50 &#124; 5 Ah NMC811/graphite-SiOx](cells/lg-m50.md) | [2 records](cells/lg-m50.md#ocp-curves) | [90 records](cells/lg-m50.md#parameters) | [3 files](cells/lg-m50.md#full-cell-tests) | `same_model_same_study` |
 | [Undisclosed LFP/graphite 18650, 2 Ah (BPX)](cells/bpx-lfp-18650-2ah-undisclosed.md) | [2 records](cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [49 records](cells/bpx-lfp-18650-2ah-undisclosed.md#parameters) | Not imported | `unmatched` |
 | [A123 AMP20M1HD-A &#124; 20 Ah LFP pouch](cells/a123-amp20m1hd-a.md) | Not linked | [30 records](cells/a123-amp20m1hd-a.md#parameters) | [1 file](cells/a123-amp20m1hd-a.md#full-cell-tests) | `same_model_same_study` |
-| [A123 high-power LFP pouch &#124; 9 Ah &#124; part undisclosed](cells/a123-high-power-pouch-9ah.md) | Not linked | Not imported | [10 files](cells/a123-high-power-pouch-9ah.md#full-cell-tests) | `same_study_cell_family` |
 | [SLPB78205130H &#124; LCO/graphite &#124; 0.680616 Ah model input](cells/kokam-slpb78205130h-marquis2019.md) | [2 records](cells/kokam-slpb78205130h-marquis2019.md#ocp-curves) | [101 records](cells/kokam-slpb78205130h-marquis2019.md#parameters) | Not imported | `parameter_set_only` |
 | [UMBL Mohtat2020 &#124; 5 Ah NMC/graphite research pouch](cells/mohtat2020-nmc532-pouch.md) | [4 records](cells/mohtat2020-nmc532-pouch.md#ocp-curves) | [138 records](cells/mohtat2020-nmc532-pouch.md#parameters) | [5 files](cells/mohtat2020-nmc532-pouch.md#full-cell-tests) | `same_study_cell_family` |
 | [NCA_Kim2011 &#124; NCA/graphite &#124; 0.43 Ah model input](cells/kim2011-nca-nominal-design.md) | [2 records](cells/kim2011-nca-nominal-design.md#ocp-curves) | [100 records](cells/kim2011-nca-nominal-design.md#parameters) | Not imported | `unmatched` |

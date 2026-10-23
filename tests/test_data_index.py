@@ -149,7 +149,7 @@ def test_full_cell_material_index_preserves_grain_and_complete_file_links(index)
 def test_aging_column_preserves_unreported_unknown_and_source_level_grain(index):
     rows = list(csv.DictReader(io.StringIO(index["data/full-cell/datasets.csv"].decode())))
     catalog = Catalog()
-    assert {r["aging_data"] for r in rows} == {"available", "not_reported", "unverified"}
+    assert {r["aging_data"] for r in rows} == {"available", "not_reported"}
     for row, source in zip(rows, catalog.external_datasets):
         assert row["aging_data"] == source["aging_data"]["status"]
         assert row["aging_source_url"] == source["aging_data"]["source_url"]

@@ -4,22 +4,22 @@
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
-  <img src="https://img.shields.io/badge/version-0.15.0-287b78" alt="Version 0.15.0">
+  <img src="https://img.shields.io/badge/version-0.16.0-287b78" alt="Version 0.16.0">
   <img src="https://img.shields.io/badge/Python-3.10%2B-203c4c" alt="Python 3.10 or later">
   <a href="DATA_LICENSES.md"><img src="https://img.shields.io/badge/data-per--source%20licenses-758d89" alt="Per-source data licenses"></a>
 </p>
 
-E-BatP is a multi-material library of traceable lithium-ion battery parameters and experimental records for **Doyle-Fuller-Newman (DFN/P2D)**, **single-particle (SPM)** and **single-particle with electrolyte dynamics (SPMe)** models. It covers electrode **open-circuit potential (OCP)** curves, solid-state diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
+E-BatP is a multi-material library of traceable lithium-ion battery model parameters for **Doyle-Fuller-Newman (DFN/P2D)**, **single-particle (SPM)** and **single-particle with electrolyte dynamics (SPMe)** models. It covers electrode **open-circuit potential (OCP)** curves, solid-state diffusion, reaction kinetics, geometry, transport and thermal parameters. Records keep their original definitions, conditions, processing history and cell-match evidence. Parameters with different model conventions are not automatically interchangeable.
 
 Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-current data, **EIS** (electrochemical impedance spectroscopy) evidence, and full-cell tests including **constant-current charge/discharge** and drive cycles. Start with [OCP by material](data/ocp/README.md) for LFP, NMC, graphite and other electrodes, or [cell and study entries](data/README.md) for model-specific records. Source licenses, match levels and missing channels are explicit; entries can be partial references.
 
-**Project scope:** curate, document and export electrochemical parameters and associated experimental data. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
+**Project scope:** curate, document and export electrochemical model parameters. Full-cell tests provide supporting references for those parameters. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
-**v0.15.0: 90 electrode-curve records · 13 material labels · 1,041 other parameter records · 61 full-cell branch/test files · 20 cell or study entries.** Curves comprise 62 measured pseudo-OCP branches, 7 published tables/fits, 19 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
+**v0.16.0: 90 electrode-curve records · 13 material labels · 1,041 other parameter records · 51 supporting full-cell branch/test files · 19 cell or study entries.** Curves comprise 62 measured pseudo-OCP branches, 7 published tables/fits, 19 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
 File-level follow-up: **[OCP-first search: 21 source families and five additions](docs/OCP_FIRST_EXPANSION.md)** · [Panasonic NCR18650B: four sources, tests and ageing](docs/NCR18650B.md) · [original seven-source review](docs/EXTERNAL_FILE_REVIEW.md) · [selected file/container locations](data/full-cell/files.csv). Source-listed filenames, archive-directory evidence and reviewed contents remain separate. OCP, diffusion and kinetics associations are recorded independently.
 
-New full-cell discovery: **[LFP](data/full-cell/LFP.md) · [NMC](data/full-cell/NMC.md) · [NCA](data/full-cell/NCA.md) · [LCO](data/full-cell/LCO.md) · [NCO](data/full-cell/NCO.md)**. Seventeen external dataset-link records include 436 selected locators for electrode-source anchors and full-cell rate, temperature, dynamic, ageing and EIS data where verified. [The source table includes OCP anchor and Ageing data columns](data/full-cell/README.md). Large payloads stay with their providers; these links are separate from the 61 existing packaged test files. [Review sources, licenses and matching limits](docs/FULL_CELL_DATASETS.md).
+Supporting full-cell references: **[LFP](data/full-cell/LFP.md) · [NMC](data/full-cell/NMC.md) · [NCA](data/full-cell/NCA.md) · [LCO](data/full-cell/LCO.md) · [NCO](data/full-cell/NCO.md)**. Eleven parameter-linked external source records include 357 selected locators for electrode-source anchors and full-cell rate, temperature, dynamic, ageing and EIS data where verified. [The source table includes OCP anchor and Ageing data columns](data/full-cell/README.md). Large payloads stay with their providers; these links are separate from the 51 retained packaged test files. [Review sources, licenses and matching limits](docs/FULL_CELL_DATASETS.md).
 
 New characterization package: [LG MJ1 / DLR-SINTEF](data/cells/lg-mj1-dlr-sintef.md): four pseudo-OCP branches, 22 scalar/specification records and 20 native parameter tables, including model/direction-specific GITT fits. Read the [MJ1 source and matching review](docs/LG_MJ1.md). **Same-study intact-cell test data remain missing.** The [final project review](docs/FINAL_REVIEW.md) records checked boundaries and remaining gaps.
 
@@ -29,17 +29,19 @@ New LFP packages: [ISU-UConn laboratory half/full-cells](data/cells/isu-uconn-lf
 
 New LFP source: [HAIDI HDCF18650-1800 / Rehm2025](data/batteries/haidi-hdcf18650-1800-rehm2025.md): seven native pseudo-OCP branches at 25 C and same-study six-temperature charge/discharge/GEIS dataset links. One source cathode branch is quarantined; original full-cell filenames/headers remain unverified. [Read the rights and definitions](docs/HAIDI_REHM2025.md).
 
+**Admission rule:** each active cell/study package and supporting external source must contain or explicitly reference at least one stored electrode OCP, diffusion or kinetics record. Full-cell OCV, EIS spectra, cycling traces and geometry/thermal values alone do not meet this rule. Incomplete parameter sets remain welcome; match levels and missing components stay explicit. See [project scope](docs/PROJECT_SCOPE.md).
+
 ## Battery model index
 
 **[Browse by battery model](data/batteries/README.md) · [Browse all data](data/README.md) · [OCP by material](data/ocp/README.md) · [Full-cell tests by material](data/full-cell/README.md) · [How to download and use](docs/DATA_ACCESS.md)**
 
-**Storage rule:** extract reusable OCP and model parameters into source-traceable CSV/JSON records in this repository; retain new full-cell tests as descriptions and external download links. Permission or definition gaps remain explicit. Existing packaged full-cell tests are retained. [Fixed formats and extraction scope](docs/PARAMETER_STORAGE.md).
+**Storage rule:** extract reusable OCP and model parameters into source-traceable CSV/JSON records in this repository; retain new full-cell tests as descriptions and external download links. Permission or definition gaps remain explicit. Existing packaged full-cell tests are retained only for admitted parameter packages. [Fixed formats and extraction scope](docs/PARAMETER_STORAGE.md).
 
 No installation is needed to browse or download files from GitHub. Choose a battery below: OCP and category-specific diffusion/kinetics links open repository data; full-cell links open per-source conditions and file locations. For LFP and other material-level OCP measurements, use the **OCP by material** index. On a file page, use **Raw / download raw file** to save the complete file; keep its metadata and license. See the [download guide](docs/DATA_ACCESS.md) for examples.
 
 <!-- DATA_QUICKLINKS_START -->
 
-OCP and parameter links open repository data. Full-cell links open source descriptions and downloads. **Not extracted** means no reusable native record is curated; it is not a claim that no measurement exists.
+OCP and parameter links open repository data. Every indexed package has stored OCP, diffusion or kinetics records; full-cell links are supporting references to source descriptions and downloads. **Not extracted** means no reusable native record is curated; it is not a claim that no measurement exists.
 
 Coverage labels below are source-level discovery aids. Read each model page for study, temperature, profile, licence and specimen limits. Half-cell temperature is tracked separately.
 
@@ -52,14 +54,10 @@ Record counts include published assumptions, borrowed functions, activation ener
 | Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
 |---|---|---|---|---|---|
 | [A123 18650M1A &#124; Jahn2024 LFP/graphite](data/batteries/a123-18650m1a-jahn2024.md) | [2 modeled OCPn](data/cells/a123-18650m1a-jahn2024.md#ocp-curves) | Not extracted | Not extracted | [14 packaged](data/batteries/a123-18650m1a-jahn2024.md#full-cell-tests) | See test conditions / gaps<br>same model same study · [Match / gaps](data/batteries/a123-18650m1a-jahn2024.md#matching-and-gaps) |
-| [A123 26650 m1b / UCCS](data/batteries/uccs-a123-26650m1b-2021.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/uccs-a123-26650m1b-2021.md#full-cell-tests) | multi-T, dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/uccs-a123-26650m1b-2021.md#matching-and-gaps) |
 | [A123 AMP20M1HD-A &#124; 20 Ah LFP pouch](data/batteries/a123-amp20m1hd-a.md) | Not extracted | [6 records](data/parameters/a123-amp20m1hd-a--diffusion.csv) | [6 records](data/parameters/a123-amp20m1hd-a--kinetics.csv) | [1 packaged](data/batteries/a123-amp20m1hd-a.md#full-cell-tests) | See test conditions / gaps<br>same model same study · [Match / gaps](data/batteries/a123-amp20m1hd-a.md#matching-and-gaps) |
-| [A123 cylindrical LFP / part unresolved](data/batteries/calce-a123-dynamic.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/calce-a123-dynamic.md#full-cell-tests) | multi-T, dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/calce-a123-dynamic.md#matching-and-gaps) |
-| [A123 high-power LFP pouch &#124; 9 Ah &#124; part undisclosed](data/batteries/a123-high-power-pouch-9ah.md) | Not extracted | Not extracted | Not extracted | [10 packaged](data/batteries/a123-high-power-pouch-9ah.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/a123-high-power-pouch-9ah.md#matching-and-gaps) |
 | [HAIDI HDCF18650-1800 &#124; Rehm2025 LFP/graphite](data/batteries/haidi-hdcf18650-1800-rehm2025.md) | [7 pseudo-OCP](data/cells/haidi-hdcf18650-1800-rehm2025.md#ocp-curves) | Not extracted | Not extracted | [1 external source](data/batteries/haidi-hdcf18650-1800-rehm2025.md#full-cell-tests) | multi-T, EIS<br>same model same study · [Match / gaps](data/batteries/haidi-hdcf18650-1800-rehm2025.md#matching-and-gaps) |
 | [ISU-UConn &#124; laboratory LFP/graphite CR2032 family](data/batteries/isu-uconn-lfp-graphite-lab.md) | [4 pseudo-OCP](data/cells/isu-uconn-lfp-graphite-lab.md#ocp-curves) | Not extracted | Not extracted | [21 packaged](data/batteries/isu-uconn-lfp-graphite-lab.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/isu-uconn-lfp-graphite-lab.md#matching-and-gaps) |
 | [LFP 2.3 Ah &#124; Prada2013 implementation &#124; part unresolved](data/batteries/prada2013-lfp-nominal-design.md) | [2 reused expressions](data/cells/prada2013-lfp-nominal-design.md#ocp-curves) | [3 records](data/parameters/prada2013-lfp-nominal-design--diffusion.csv) | [6 records](data/parameters/prada2013-lfp-nominal-design--kinetics.csv) | [Not linked](data/batteries/prada2013-lfp-nominal-design.md#full-cell-tests) | See test conditions / gaps<br>parameter set only · [Match / gaps](data/batteries/prada2013-lfp-nominal-design.md#matching-and-gaps) |
-| [LFP IFR14500 labels / manufacturer unresolved](data/batteries/milano-lfp-eis-2023.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/milano-lfp-eis-2023.md#full-cell-tests) | EIS<br>Parameters unmatched · [Match / gaps](data/batteries/milano-lfp-eis-2023.md#matching-and-gaps) |
 | [Undisclosed LFP/graphite 18650, 2 Ah (BPX)](data/batteries/bpx-lfp-18650-2ah-undisclosed.md) | [2 expressions](data/cells/bpx-lfp-18650-2ah-undisclosed.md#ocp-curves) | [6 records](data/parameters/bpx-lfp-18650-2ah-undisclosed--diffusion.csv) | [4 records](data/parameters/bpx-lfp-18650-2ah-undisclosed--kinetics.csv) | [Not linked](data/batteries/bpx-lfp-18650-2ah-undisclosed.md#full-cell-tests) | See test conditions / gaps<br>unmatched · [Match / gaps](data/batteries/bpx-lfp-18650-2ah-undisclosed.md#matching-and-gaps) |
 
 ### NMC
@@ -67,12 +65,10 @@ Record counts include published assumptions, borrowed functions, activation ener
 | Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
 |---|---|---|---|---|---|
 | [CALB generation 3b &#124; NEXTBMS2026](data/batteries/calb-gen3b-nextbms2026.md) | [4 pseudo-OCP](data/cells/calb-gen3b-nextbms2026.md#ocp-curves) | Not extracted | Not extracted | [1 external source](data/batteries/calb-gen3b-nextbms2026.md#full-cell-tests) | multi-T, dynamic, ageing, EIS<br>same model same study · [Match / gaps](data/batteries/calb-gen3b-nextbms2026.md#matching-and-gaps) |
-| [CALB L148N58A](data/batteries/calb-l148n58a-2025.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/calb-l148n58a-2025.md#full-cell-tests) | multi-T, dynamic, EIS<br>Parameters unmatched · [Match / gaps](data/batteries/calb-l148n58a-2025.md#matching-and-gaps) |
 | [LG M50 &#124; 5 Ah NMC811/graphite-SiOx](data/batteries/lg-m50.md) | [2 expressions](data/cells/lg-m50.md#ocp-curves) | [6 records](data/parameters/lg-m50--diffusion.csv) | [7 records](data/parameters/lg-m50--kinetics.csv) | [3 packaged + 1 external source](data/batteries/lg-m50.md#full-cell-tests) | multi-T<br>Cross-study / mixed sources · [Match / gaps](data/batteries/lg-m50.md#matching-and-gaps) |
 | [LG M50 &#124; O'Regan2022 characterization and model](data/batteries/lg-m50-oregan2022.md) | [2 reused expressions](data/cells/lg-m50-oregan2022.md#ocp-curves) | [43 records](data/parameters/lg-m50-oregan2022--diffusion.csv) | [14 records](data/parameters/lg-m50-oregan2022--kinetics.csv) | [1 external source](data/batteries/lg-m50-oregan2022.md#full-cell-tests) | multi-T<br>Cross-study / mixed sources · [Match / gaps](data/batteries/lg-m50-oregan2022.md#matching-and-gaps) |
 | [LG M50LT &#124; Hallemans2025 grouped SPMe](data/batteries/lg-m50lt-hallemans2025.md) | [Reuse unresolved](data/cells/lg-m50lt-hallemans2025.md#ocp-curves) | [2 records (groups)](data/parameters/lg-m50lt-hallemans2025--diffusion.csv) | [4 records (groups)](data/parameters/lg-m50lt-hallemans2025--kinetics.csv) | [1 packaged + 1 external source](data/batteries/lg-m50lt-hallemans2025.md#full-cell-tests) | dynamic, EIS<br>same model same study · [Match / gaps](data/batteries/lg-m50lt-hallemans2025.md#matching-and-gaps) |
 | [LG MJ1 &#124; DLR-SINTEF harvested-electrode characterization](data/batteries/lg-mj1-dlr-sintef.md) | [4 pseudo-OCP](data/cells/lg-mj1-dlr-sintef.md#ocp-curves) | [18 records](data/parameters/lg-mj1-dlr-sintef--diffusion.csv) | [6 records](data/parameters/lg-mj1-dlr-sintef--kinetics.csv) | [1 external source](data/batteries/lg-mj1-dlr-sintef.md#full-cell-tests) | dynamic, ageing<br>Cross-study / mixed sources · [Match / gaps](data/batteries/lg-mj1-dlr-sintef.md#matching-and-gaps) |
-| [Samsung INR18650-20R / CALCE](data/batteries/calce-samsung-20r-dynamic.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/calce-samsung-20r-dynamic.md#full-cell-tests) | multi-T, dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/calce-samsung-20r-dynamic.md#matching-and-gaps) |
 | [UMBL Mohtat2020 &#124; 5 Ah NMC/graphite research pouch](data/batteries/mohtat2020-nmc532-pouch.md) | [4 expressions](data/cells/mohtat2020-nmc532-pouch.md#ocp-curves) | [9 records](data/parameters/mohtat2020-nmc532-pouch--diffusion.csv) | [12 records](data/parameters/mohtat2020-nmc532-pouch--kinetics.csv) | [5 packaged](data/batteries/mohtat2020-nmc532-pouch.md#full-cell-tests) | See test conditions / gaps<br>same study cell family · [Match / gaps](data/batteries/mohtat2020-nmc532-pouch.md#matching-and-gaps) |
 
 ### NCA
@@ -96,12 +92,6 @@ Record counts include published assumptions, borrowed functions, activation ener
 | Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
 |---|---|---|---|---|---|
 | [Kokam SLPB75106100 &#124; 7.5 Ah NCO/graphite](data/batteries/kokam-slpb75106100-ecker2015.md) | [2 expressions](data/cells/kokam-slpb75106100-ecker2015.md#ocp-curves) | [6 records](data/parameters/kokam-slpb75106100-ecker2015--diffusion.csv) | [6 records](data/parameters/kokam-slpb75106100-ecker2015--kinetics.csv) | [2 packaged](data/batteries/kokam-slpb75106100-ecker2015.md#full-cell-tests) | See test conditions / gaps<br>same model same study · [Match / gaps](data/batteries/kokam-slpb75106100-ecker2015.md#matching-and-gaps) |
-
-### LFP/NMC/NCA
-
-| Battery / study | OCP | Diffusion | Kinetics | Full-cell tests | Coverage / matching |
-|---|---|---|---|---|---|
-| [Malaya three-model archive / per-model files unverified](data/batteries/malaya-three-chemistries-2022.md) | Not extracted | Not extracted | Not extracted | [1 external source](data/batteries/malaya-three-chemistries-2022.md#full-cell-tests) | dynamic<br>Parameters unmatched · [Match / gaps](data/batteries/malaya-three-chemistries-2022.md#matching-and-gaps) |
 
 Material-only curves without a verified battery model remain in [the OCP material index](data/ocp/README.md); no commercial-cell assignment is inferred.
 
@@ -140,7 +130,7 @@ LMO and LTO are deferred until a reusable source and its definitions can be veri
 
 Use the [battery model index](data/batteries/README.md) for OCP, diffusion,
 kinetics and full-cell links together. The [per-model extraction audit](docs/PARAMETER_AUDIT.md)
-shows all 20 native packages, remaining source-only leads and why a component
+shows all 19 native parameter packages, remaining source-only leads and why a component
 has not been admitted. Each cell page carries its definitions, provenance,
 parameter variants, full-cell association and missing items.
 
@@ -159,9 +149,9 @@ The strongest LFP association is [Lin et al. (2022)](https://pmc.ncbi.nlm.nih.go
 
 Each cell package now includes an **evidence matrix** for OCP, diffusion, kinetics, full-cell observations and basic charge/discharge tests. Each component has record IDs, source IDs, its own match level and missing items. Test metadata separately records available channels and whether the data are instrument series, published experimental series or figure digitizations. See the [matching ledger and remaining gaps](docs/FULL_CELL_MATCHING.md).
 
-Existing **A123 9 Ah** files cover CC charge and discharge at 2/4/6/8/10C. **LG M50** files include CCCV charging and C/10, C/2, 1C and 1.5C CC discharge; preconditioning remains labeled. These measured-current files remain distinct from the new time/voltage-only files. A nominal C-rate never becomes a manufactured measured-current trace.
+**LG M50** files include CCCV charging and C/10, C/2, 1C and 1.5C CC discharge; preconditioning remains labeled. These measured-current files remain distinct from the new time/voltage-only files. A nominal C-rate never becomes a manufactured measured-current trace.
 
-The [official PyBaMM release notes](https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0) establish the experimental attribution and Ecker digitization history. Enertech temperature files contain **temperature rise**, not absolute temperature. Their own timebases are retained in sidecars; no alignment, interpolation or addition of an assumed ambient temperature is performed. The 25 test files are not 25 independently identified specimens.
+The [official PyBaMM release notes](https://github.com/pybamm-team/pybamm-data/releases/tag/v1.0.0) establish the experimental attribution and Ecker digitization history. Enertech temperature files contain **temperature rise**, not absolute temperature. Their own timebases are retained in sidecars; no alignment, interpolation or addition of an assumed ambient temperature is performed. Test-file counts do not represent independently identified specimens.
 
 **Mohtat data are now available in the catalog.** The [official open-access page](https://deepblue.lib.umich.edu/data/concern/data_sets/kp78gg60j) was accessible through a normal browser, and all ten original files were downloaded. Earlier HTTP 403 responses described an automated-access failure. The five charging exports contain measured voltage and temperature against capacity, but no exported current or original timestamps. Author/PyBaMM differences and source protocol conflicts are detailed in [the Mohtat audit](docs/MOHTAT2020.md).
 
@@ -213,11 +203,11 @@ rows = catalog.full_cell_data(tests[0]["id"], normalized=True)
 ebp search --material LFP
 ebp search --cell bpx-lfp-18650-2ah-undisclosed
 ebp parameters --cell a123-amp20m1hd-a --category kinetics --json
-ebp tests --cell a123-high-power-pouch-9ah
-ebp datasets --material NMC --test-type dynamic --profile US06
+ebp tests --cell a123-amp20m1hd-a
+ebp datasets --cell molicel-p45b-aboutenergy2026 --profile WLTP
 ebp datasets --material LFP --test-type cccv
 ebp datasets --test-type eis --json
-ebp datasets --files --material NMC --profile US06
+ebp datasets --files --cell lg-m50 --test-type constant_current
 ebp datasets --files --material LFP --test-type cccv --json
 ebp show a123-amp20-effective-diffusivity-soc50
 ebp export bpx-lfp18650-lfp-ocp --output formula.csv --count 2001
@@ -253,7 +243,7 @@ PYBAMM_DISABLE_TELEMETRY=true python examples/pybamm_ocp.py
 - **Unknown information stays unknown.** Room temperature does not become 298.15 K; nominal capacity does not create a commercial identity; a study link does not establish the same specimen.
 - **Data checks establish catalog consistency.** Schema, source-value and export checks do not establish model-prediction accuracy.
 
-PyBaMM's `Prada2013` file borrows its LFP OCP from Afshar2017 and its graphite OCP from Chen2020. Scientific attribution is recorded per function. BPX electrolyte and entropy sources are disclosed in its header; those non-OCP functions/tables are not yet imported.
+PyBaMM's `Prada2013` file borrows its LFP OCP from Afshar2017 and its graphite OCP from Chen2020. Scientific attribution is recorded per function. BPX electrolyte and entropy sources are disclosed in its header; stored laws retain their original source and temperature conventions.
 
 ## Reproduction and layout
 
@@ -266,7 +256,7 @@ ebp build-site
 python -m build
 ```
 
-Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Working source caches are ignored by Git; the small Mohtat author originals are committed and hash-pinned for reliable offline reconstruction. ORA returns HTTP 403 to GitHub-hosted runners, so CI restores the four Oxford inputs from an attributed [source-cache release](https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/tag/upstream-lfp-v0.2.0) and verifies the same primary-source SHA-256 pins. Primary URLs remain authoritative. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
+Upstream commits, URLs and SHA-256 hashes are pinned; Zenodo originals also retain source MD5 checks where supplied. Working source caches are ignored by Git; the small Mohtat author originals are committed and hash-pinned for reliable offline reconstruction. ORA returns HTTP 403 to GitHub-hosted runners, so CI restores the two retained AMP20 Oxford inputs from an attributed [source-cache release](https://github.com/FrankSuperG/electrochemical-battery-parameters/releases/tag/upstream-lfp-v0.2.0) and verifies the same primary-source SHA-256 pins. Primary URLs remain authoritative. Only the selected observations, transcribed evidence, metadata and source notices are packaged. `requirements-lock-py312.txt` documents one Python 3.12 verification environment, not a universal lock.
 
 ```text
 src/ebp/data/             Authoritative packaged catalog
@@ -274,7 +264,7 @@ src/ebp/data/             Authoritative packaged catalog
   parameters.json        Scalars and kinetic functions
   cells.json             Identities, coverage and match evidence
   full_cell_tests.json    Packaged-test metadata, channels, processing and links
-  external_datasets.json Metadata-only links to large external full-cell datasets
+  external_datasets.json Parameter-linked metadata for external full-cell tests
   matching_audit.json     Component match matrix, open gaps and research leads
   sources.json           Papers, datasets and software roles
   assets.json            Original URLs, versions and checksums
@@ -298,7 +288,7 @@ See [data definitions](docs/DATA_MODEL.md), [curation and match decisions](docs/
 
 ## Contribute data
 
-Help extend the library with OCP curves, diffusion and kinetic parameters, other electrochemical inputs, and matching full-cell tests. **Partial datasets and source suggestions are welcome.** Start with the [data contribution template](templates/data-contribution.md) and [CSV templates](templates/README.md), or use the [short source suggestion template](.github/ISSUE_TEMPLATE/source-suggestion.md) to recommend a paper or dataset. The templates ask for sources, reuse terms, definitions, cell-match evidence and missing items; they do not require an already complete parameter set.
+Help extend the library with OCP curves, diffusion and kinetic parameters, other electrochemical inputs, and matching full-cell tests. **Partial parameter packages and source suggestions are welcome.** Start with the [data contribution template](templates/data-contribution.md) and [CSV templates](templates/README.md), or use the [short source suggestion template](.github/ISSUE_TEMPLATE/source-suggestion.md) to recommend a paper or dataset. The templates ask for sources, reuse terms, definitions, cell-match evidence and missing items; they do not require an already complete parameter set.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and import workflow. Open an issue or pull request when repository access permits, or contact the maintainer by email with a contribution or source suggestion.
 

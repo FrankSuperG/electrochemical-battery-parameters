@@ -341,6 +341,9 @@ class Catalog:
         archive_members = {review["source_url"]: {item["path"]: item for item in review["files"]}
                            for review in archive_reviews}
         for dataset in self.external_datasets:
+            if not any(dataset["parameter_components"][kind]["record_ids"]
+                       for kind in ("ocp", "diffusion", "kinetics")):
+                errors.append(f"{dataset['id']}: active dataset requires stored OCP, diffusion or kinetics records")
             joined = dataset["parameter_link"]["cell_ids"]
             level = dataset["parameter_link"]["match_level"]
             if bool(joined) == (level == "unmatched"):
@@ -562,6 +565,10 @@ class Catalog:
             except (ValueError, KeyError, OSError) as exc:
                 errors.append(f"{test['id']}: {exc}")
         for cid, cell in self.cells.items():
+            if not (any(r["cell_link"]["cell_id"] == cid for r in self._records)
+                    or any(p["cell_id"] == cid and p["category"] in ("diffusion", "kinetics")
+                           for p in self.parameters)):
+                errors.append(f"cell {cid}: active cell requires stored OCP, diffusion or kinetics records")
             if any(aid not in self.assets for aid in cell.get("supporting_asset_ids", [])):
                 errors.append(f"cell {cid}: unknown supporting asset")
             for item in cell.get("supporting_files", []):

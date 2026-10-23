@@ -4,13 +4,12 @@
 def render(catalog):
     lines=["# OCP and parameter extraction audit — 2026-10-24", "",
         "[Battery model index](../data/batteries/README.md) · [Formats and storage](PARAMETER_STORAGE.md) · [O'Regan source review](OREGAN2022.md)", "",
-        "This audit covers every current native cell/study entry, every external-only model group, and the remaining half-cell leads from the earlier source screen. It checks what is actually stored, source reuse scope, definitions, coordinate/units, and test associations. It is not a claim to have found every published measurement.", "",
-        f"**Current inventory: {len(catalog.search())} electrode curve/fit records, {len(catalog.parameters):,} non-OCP records, {len(catalog.cells)} cell/study entries.** Counts include borrowed expressions, assumptions, activation energies and optional model inputs, not independent experiments. v0.15 adds seven HAIDI author-processed pseudo-OCP branches with one source branch quarantined. Earlier reused expressions and model inputs retain their separate origins.", "",
+        "This audit covers every current native cell/study entry, every parameter-associated external group, and the remaining half-cell leads from the earlier source screen. It checks what is actually stored, source reuse scope, definitions, coordinate/units, and test associations. It is not a claim to have found every published measurement.", "",
+        f"**Current inventory: {len(catalog.search())} electrode curve/fit records, {len(catalog.parameters):,} non-OCP records, {len(catalog.cells)} cell/study entries.** Counts include borrowed expressions, assumptions, activation energies and optional model inputs, not independent experiments. v0.16 excludes test-only packages; v0.15 added seven HAIDI author-processed pseudo-OCP branches with one source branch quarantined. Earlier reused expressions and model inputs retain their separate origins.", "",
         "## Native inventory by battery or study", "",
         "Every nonzero count below links to actual versioned repository data. A zero means no admitted native record; it does not prove that no measurement exists. A stored OCP can still be a fitted, borrowed or modeled quantity: inspect its measurement/origin fields.", "",
         "| Battery / study | Stored OCP | Diffusion | Kinetics | All non-OCP inputs | Key remaining limit |", "|---|---|---|---|---|---|"]
     limits={"lg-m50lt-hallemans2025":"OCP third-party reuse unresolved; stored diffusion/kinetics are grouped quantities, not intrinsic coefficients.",
-        "a123-high-power-pouch-9ah":"Author parameter code/workbooks have no reuse grant established. Workbooks are whole-cell pseudo-OCV, not measured electrode OCP.",
         "a123-amp20m1hd-a":"No measured electrode OCP source established. Effective D depends on an assumed radius; kinetics include volumetric fitted quantities.",
         "lg-m50-oregan2022":"Three Cp tables quarantined. OCP reused from Chen2020; linked TEC/Chen full-cell tests are cross-study.",
         "prada2013-lfp-nominal-design":"Borrowed Afshar/Chen OCP; exact commercial identity and matching tests unresolved.",
@@ -50,8 +49,8 @@ def render(catalog):
         "| O'Regan three Specific_Heat_Capacity CSVs | Definition unresolved; quarantined | Header states J/kg/K, but some values are negative and the magnitude is inconsistent with physical Cp. Original bytes stay in the licensed archive; no native physical Cp table or undocumented rescaling. Published model Cp laws are separate records. |",
         "| [NEXTBMS GITT files](../data/full-cell/nextbms-calb-nmc532-2026.md) | Observation links only | A current/voltage/time GITT trace is not itself a defined D(sto,T) estimate. Electrode geometry, analysis definition and derived coefficients must be established before conversion. |",
         "| [Other candidates from the 21-family source screen](OCP_FIRST_EXPANSION.md) | Not admitted where primary data/reuse/identity is unresolved | Sordi2024 deposit is documentation-only; Sordi2026 matching payload unresolved; Folkson P45B is request-only; confidential 49 Ah LFP does not supply reusable public electrode data. These decisions remain qualified leads, not imported measurements. |", "",
-        "## External-only full-cell groups", "",
-        "These sources remain descriptions and links. No same-study, reusable electrode OCP/D/kinetics package has been established for the identities below. Whole-cell OCV, EIS and a shared chemistry do not fill that gap.", ""]
+        "## Parameter admission boundary", "",
+        "Every active external source explicitly references stored OCP, diffusion or kinetics records. Six test-only sources and the unsupported A123 9 Ah package are excluded. Historical reviews remain leads, not active parameter packages. [Scope and removal decisions](PROJECT_SCOPE.md).", ""]
     assigned={r["id"] for r in catalog.external_datasets if r["parameter_link"]["cell_ids"]}
     assigned.add("tum-p45b-halfcell-aging-2026")
     for r in catalog.external_datasets:

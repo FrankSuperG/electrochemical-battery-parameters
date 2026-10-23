@@ -6,7 +6,7 @@ temperature, dynamic, ageing and EIS coverage. OCP and reusable parameters are
 stored as CSV/JSON; new full-cell observations stay external. Read the
 [fixed formats and extraction rules](PARAMETER_STORAGE.md).
 
-For material-based discovery, use [full-cell tests by material](../data/full-cell/README.md). Sixteen external dataset links are metadata-only; [the source review](FULL_CELL_DATASETS.md) documents license and matching gaps.
+For material-based discovery, use [full-cell tests by material](../data/full-cell/README.md). Eleven parameter-associated external sources are metadata-only; [the source review](FULL_CELL_DATASETS.md) documents license and matching gaps.
 
 Start at **[Browse all data](../data/README.md)**. You can use the GitHub file
 links without installing Python or running a website. If repository access is
@@ -22,7 +22,6 @@ restricted, sign in with an account that has access.
 | Panasonic NCR18650B | [NCR18650B model hub](../data/batteries/panasonic-ncr18650b-hnei2016.md) | Four extracted HNEI half-cell branches plus four full-cell sources for CC, multi-temperature, dynamic, ageing and EIS |
 | A practical same-model/same-study starting case | [LG M50](../data/cells/lg-m50.md) | Two OCP expressions, 90 other inputs and three current/voltage/temperature test files |
 | LFP parameters with a full-cell discharge | [A123 AMP20](../data/cells/a123-amp20m1hd-a.md) | Fitted/derived inputs and one 4C trace; electrode OCP remains missing |
-| LFP CC charge/discharge tests | [A123 9 Ah study family](../data/cells/a123-high-power-pouch-9ah.md) | Ten files at 2/4/6/8/10C; finite diffusion/kinetic inputs and reusable electrode OCP remain missing |
 | LFP laboratory half/full-cell V-Q association | [ISU-UConn](../data/cells/isu-uconn-lfp-graphite-lab.md) | Four C/20 pseudo-OCP branches and 21 full-cell branches from 11 configurations; reference details and I/t/T remain unresolved |
 | A123 electrode-model potentials and current/voltage tests | [18650M1A / Jahn2024](../data/cells/a123-18650m1a-jahn2024.md) | Two modeled OCPn tables and 14 full-cell branch/array exports; current only in power/loop files, no temperature trace |
 | Mohtat author inputs and charge data | [Mohtat2020](../data/cells/mohtat2020-nmc532-pouch.md) | Separate author/PyBaMM parameter variants and five V–Q/T–Q files; measured current and original time are absent |

@@ -1,5 +1,7 @@
 # Contributing to E-BatP
 
+Active packages require at least one stored OCP, diffusion or kinetics record. Full-cell tests are supporting links to an admitted parameter package; test-only sources remain research leads. See [project scope](docs/PROJECT_SCOPE.md).
+
 **Storage rule:** OCP and reusable electrochemical parameters should be extracted
 into the native CSV/JSON records after permission and definitions are confirmed.
 New full-cell observations should use descriptions and external file links.

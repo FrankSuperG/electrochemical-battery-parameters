@@ -1,5 +1,7 @@
 # Data contribution templates
 
+Active packages require at least one stored OCP, diffusion or kinetics record. Full-cell tests are supporting links to an admitted parameter package; test-only sources remain research leads. See [project scope](../docs/PROJECT_SCOPE.md).
+
 For large full-cell datasets, use [the external-link JSON template](external-dataset.json) and [the source-review guide](../docs/FULL_CELL_DATASETS.md). Submit metadata and provider links without adding raw payloads. The placeholder template is not an imported record.
 
 Use these files to propose electrochemical parameters and associated full-cell

@@ -10,7 +10,6 @@ import hashlib
 import json
 import re
 import shutil
-import zipfile
 from pathlib import Path
 
 import numpy as np
@@ -198,7 +197,6 @@ def extend(download=False):
     extension_cells = {
         "bpx-lfp-18650-2ah-undisclosed",
         "a123-amp20m1hd-a",
-        "a123-high-power-pouch-9ah",
     }
     parameters = [p for p in parameters if p["cell_id"] not in extension_cells]
     tests = [t for t in tests if t["cell_id"] not in extension_cells]
@@ -217,9 +215,6 @@ def extend(download=False):
     # The dataset's copyright/attribution notice supplements the CC license text.
     shutil.copyfile(
         CACHE / "lin-readme.txt", license_dir / "Oxford-Lin2022-data-notice.txt"
-    )
-    shutil.copyfile(
-        CACHE / "pouch-ora-readme.md", license_dir / "Oxford-9Ah-data-notice.txt"
     )
     sources.update(
         {
@@ -275,37 +270,6 @@ def extend(download=False):
                 "version": "dba3649f2eeb4228d2849e4d4e748c91ed6ad7a4",
                 "license": "BSD-2-Clause",
                 "role": "Model geometry and assumed 5 micrometre particle radius. Optimizer initial guesses are not treated as final fitted parameters. Through-plane scaling is model specific.",
-            },
-            "oxford-9ah-data": {
-                "kind": "dataset",
-                "title": "Oxford high-power A123 LFP/graphite pouch-cell experiments",
-                "authors": [
-                    "Malgorzata E. Wojtala",
-                    "Volkan Kumtepeli",
-                    "Eloise C. Tredenick",
-                    "Charles W. Monroe",
-                    "David A. Howey",
-                ],
-                "year": 2025,
-                "doi": "10.5287/ora-eonzaxjpm",
-                "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758",
-                "license": "CC-BY-4.0",
-                "role": "Ten CC charge/discharge experiments at 2/4/6/8/10C. The archive README supplies the 1 Hz timebase and license. The paper identifies A123 9 Ah; no part number is established.",
-            },
-            "oxford-9ah-paper": {
-                "kind": "paper",
-                "title": "Electrochemical-thermal modelling of high power Li-ion pouch cells",
-                "authors": [
-                    "Volkan Kumtepeli",
-                    "Malgorzata E. Wojtala",
-                    "Eloise C. Tredenick",
-                    "Charles W. Monroe",
-                    "David A. Howey",
-                ],
-                "year": 2026,
-                "doi": "10.1016/j.jpowsour.2025.238764",
-                "url": "https://doi.org/10.1016/j.jpowsour.2025.238764",
-                "role": "A123 9 Ah power pouch cell; the model assumes fast diffusion rather than identifying a finite diffusion coefficient. Its full-cell pseudo-OCP is allocated between electrodes as a modeling convention, not measured electrode OCPs.",
             },
         }
     )
@@ -658,64 +622,8 @@ def extend(download=False):
             temperature_definition="Arithmetic mean of every pixel in the deposited calibrated thermal grid A, no additional ROI mask; degrees Celsius in source. Ambient temperature is not available as a separate trace.",
         )
     )
-    # The 9 Ah dataset is a different cell: never merge it with AMP20 or BPX.
-    cid = "a123-high-power-pouch-9ah"
-    cells[cid] = {
-        "manufacturer": "A123 Systems",
-        "model": None,
-        "display_name": "A123 high-power LFP pouch | 9 Ah | part undisclosed",
-        "format": "pouch",
-        "chemistry": "LFP/graphite",
-        "nominal_capacity_Ah": 9,
-        "identity_level": "manufacturer_capacity_format_only",
-        "source_ids": ["oxford-9ah-paper", "oxford-9ah-data"],
-        "model_context": "High-power thermal model assumes fast solid and electrolyte diffusion",
-        "match_level": "same_study_cell_family",
-        "match_evidence": "Paper identifies a 9 Ah A123 power pouch; the linked ORA archive supplies this study's CC tests. Exact part number and per-file cell serial are not disclosed.",
-        "coverage": {
-            "ocp": "Full-cell pseudo-OCP referenced in the paper; electrode potentials are conventionally allocated, not electrode-resolved measurements",
-            "diffusion": "Fast-diffusion model assumption; no finite fitted diffusivity imported",
-            "kinetics": "Related author code contains i0ref/Ei0 model constants, but no repository/file reuse grant is established; the CC BY full-cell deposit does not license that separate code. No native kinetic values imported.",
-            "full_cell_tests": "Ten CC charge/discharge files at 2, 4, 6, 8 and 10C",
-        },
-        "note": "OCP workbooks in the related GitHub code repository have no explicit file-level reuse license located here; indexed as references rather than silently redistributed. Never substitute AMP20M1HD-A parameters.",
-    }
-    cells[cid]["external_ocp_references"] = [
-        {
-            "url": f"https://github.com/Battery-Intelligence-Lab/pouch-cell-thermal/blob/83054d013b288f01e1afa2da7935e0a6a67c6bc6/data/param/{branch}/U_OCP_{branch}.xlsx",
-            "status": "reference_only; redistribution license not established",
-            "quantity": "full_cell_pseudo_ocv",
-        }
-        for branch in ["ch", "dch"]
-    ]
-    with zipfile.ZipFile(CACHE / "pouch-cc.zip") as archive:
-        for rate in [2, 4, 6, 8, 10]:
-            for direction in ["ch", "dch"]:
-                member = f"CC{rate}C{direction}.mat"
-                matrix = loadmat(archive.open(member), simplify_cells=True)["Expivium"]
-                if matrix.ndim != 2 or matrix.shape[1] != 4:
-                    raise ValueError("Unexpected Oxford Expivium matrix layout")
-                sign = 1 if direction == "ch" else -1
-                if np.sign(np.nanmedian(matrix[1:, 2])) != sign:
-                    raise ValueError("Oxford current sign disagrees with CC protocol")
-                test = normalized_test(
-                    f"a123-9ah-{rate}c-{direction}",
-                    cid,
-                    "not supplied per file",
-                    "oxford9ah-cc",
-                    "oxford-9ah-data",
-                    matrix[:, 0] - matrix[0, 0],
-                    matrix[:, 2],
-                    matrix[:, 1],
-                    matrix[:, 3],
-                    f"{rate}C constant-current {'charge' if direction=='ch' else 'discharge'}; source index at 1 Hz",
-                    rate,
-                    cells[cid]["match_evidence"],
-                    original_member=member,
-                    temperature_definition="Fourth Expivium column; archive README calls this reference temperature, related repository calls it mean temperature. Retained as a source-reported temperature; exact sensor/ROI identity is unresolved.",
-                )
-                test["relationship_to_parameters"] = "same_study_cell_family"
-                tests.append(test)
+    # Full-cell-only Oxford 9 Ah data were removed in v0.16: no admitted
+    # electrode OCP, diffusion or kinetics records support that cell package.
     # Coverage and explicit identities for the pre-existing NMC reference case.
     cells["lg-m50"].update(
         display_name="LG M50 | 5 Ah NMC811/graphite-SiOx",

@@ -113,7 +113,7 @@ inputs remained held where permission or definitions cannot be established.
 
 ## v0.15 HAIDI follow-up
 
-Current native inventory: 90 OCP/fit records, 1,041 non-OCP records and
+At the v0.15 review: 90 OCP/fit records, 1,041 non-OCP records and
 20 cell/study packages. HAIDI adds seven author-processed pseudo-OCP branches
 with 98,695 unchanged source nodes. One additional cathode original is
 quarantined for a protocol mismatch. CC BY 4.0 data terms come from exact-DOI
@@ -123,3 +123,12 @@ The [HAIDI source review](HAIDI_REHM2025.md) distinguishes half-cell 25 C from
 six whole-cell temperatures, source protocols from actual file/header checks,
 and same-study association from identical specimen identity. All new whole-cell
 observations stay external; no D/kinetic law is inferred from GITT or GEIS.
+
+## v0.16 parameter admission rule
+
+The active inventory is 90 OCP/fit records, 1,041 other parameters and 19
+cell/study packages. Every cell and external supporting source has at least
+one stored OCP, diffusion or kinetics record. Six unmatched test-only sources
+and the A123 9 Ah package were removed. Its ten packaged CC files are no
+longer included; 51 supporting legacy test files remain. New full-cell
+observations stay external. [Scope and removal decisions](PROJECT_SCOPE.md).

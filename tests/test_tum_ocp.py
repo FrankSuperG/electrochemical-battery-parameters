@@ -99,4 +99,4 @@ def test_tum_study_join_does_not_transfer_aboutenergy_parameters_or_channels():
     assert len(whole) == 1 and whole[0]["content_review"] == "not_read"
     assert source["storage"] == "external_link"
     assert all("aboutenergy" not in rid for rid in source["parameter_components"]["ocp"]["record_ids"])
-    assert len(c.full_cell_tests) == 61
+    assert len(c.full_cell_tests) == 51

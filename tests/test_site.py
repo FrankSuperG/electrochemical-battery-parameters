@@ -12,7 +12,7 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
     data = json.loads(script.removeprefix("window.EBP_DATA = ").removesuffix(";\n"))
     assert len(data["records"]) == 90
     assert len(data["parameters"]) == 1041
-    assert len(data["full_cell_tests"]) == 61
+    assert len(data["full_cell_tests"]) == 51
     assert data["external_datasets"] == c.external_datasets
     assert data["cell_material_families"] == {cid: c.cell_material_family(cid) for cid in c.cells}
     assert json.loads((tmp_path / "downloads/external-datasets.json").read_text()) == c.external_document
@@ -62,9 +62,6 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
                 assert (
                     tmp_path / "downloads" / test[key].split("/")[-1]
                 ).read_bytes() == (c.root / test[key]).read_bytes()
-        if test["id"] == "a123-9ah-2c-ch":
-            points = test["preview_segments"][0]["points"]
-            assert points[-1][1] > points[0][1]
     for filename in ["index.html", "app.js", "style.css"]:
         source = (tmp_path / filename).read_text()
         assert "cdn." not in source

@@ -1,5 +1,7 @@
 ## Contribution
 
+Active packages require at least one stored OCP, diffusion or kinetics record. Full-cell tests are supporting links to those parameters; test-only sources remain research leads.
+
 What changed, and how can a modeler use it? Link the related issue if applicable.
 
 ## Sources, identity and reuse
