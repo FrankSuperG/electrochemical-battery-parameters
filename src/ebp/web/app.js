@@ -1,6 +1,12 @@
 "use strict";
-const data = window.EBP_DATA;
+(() => {
 const $ = id => document.getElementById(id);
+const data = window.EBP_DATA;
+if (!data || !window.EBP_UI) { $("load-status").hidden = false; return; }
+const ui = window.EBP_UI;
+const saved = new URLSearchParams(window.location.search);
+const plotStates = new Map();
+let nextPlot = 0;
 const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safeUrl = value => /^https?:\/\//.test(value || "") ? esc(value) : "#";
 const words = value => value.replaceAll("_", " ");
@@ -9,7 +15,11 @@ const coordinateLabel = {stoichiometry:"Stoichiometry θ",normalized_branch_capa
 const directionLabel = {lithiation:"Lithiation", delithiation:"Delithiation", unspecified:"Direction unspecified"};
 const colors = ["#287b78","#c39042","#718db0","#ab7489","#5a9c91","#889a51","#bc7560","#8080ae"];
 const selected = new Set(["bpx-lfp18650-lfp-ocp", "lfp-afshar2017-formula", "sintef-lfp-d07eb6-c3-delithiation"]);
-let detailId = "bpx-lfp18650-lfp-ocp";
+let detailId = data.records.some(r => r.id === saved.get("ocp")) ? saved.get("ocp") : "bpx-lfp18650-lfp-ocp";
+if (saved.has("compare")) {
+  selected.clear();
+  for (const id of saved.get("compare").split(",")) if (data.records.some(r => r.id === id)) selected.add(id);
+}
 const sourceLinks = ids => ids.map(id => `<a href="${safeUrl(data.sources[id].url)}" target="_blank" rel="noopener noreferrer">${esc(id)} ↗</a>`).join(" · ");
 const channelLabels={time_s:"Original time coordinate",voltage_V:"Voltage",current_charge_positive_A:"Measured current",cell_temperature_K:"Absolute cell temperature",ambient_temperature_K:"Ambient temperature"};
 const number = value => Math.abs(value) !== 0 && (Math.abs(value) < .001 || Math.abs(value) >= 1e5) ? value.toExponential(5) : String(value);
@@ -19,7 +29,7 @@ $("stats").innerHTML = [[data.records.filter(r=>r.representation.kind==="table")
 
 function filtered() {
   const query = $("query").value.toLowerCase().trim();
-  return data.records.filter(r=>(!$("material").value||r.material===$("material").value)&&(!$("representation").value||r.representation.kind===$("representation").value)&&(!$("direction").value||r.direction===$("direction").value)&&(!query||JSON.stringify({...r,display_points:undefined}).toLowerCase().includes(query)));
+  return data.records.filter(r=>(!$("material").value||r.material===$("material").value)&&(!$("ocp-cell").value||($("ocp-cell").value==="material-only"?!r.cell_link.cell_id:r.cell_link.cell_id===$("ocp-cell").value))&&(!$("representation").value||r.representation.kind===$("representation").value)&&(!$("direction").value||r.direction===$("direction").value)&&(!query||JSON.stringify({...r,display_points:undefined}).toLowerCase().includes(query)));
 }
 function render() {
   const rows = filtered();
@@ -29,26 +39,61 @@ function render() {
 }
 $("records").addEventListener("click",event=>{const button=event.target.closest("[data-detail]");if(button){detailId=button.dataset.detail;renderDetail();$("detail").scrollIntoView({behavior:"smooth",block:"nearest"});}});
 $("records").addEventListener("change",event=>{const target=event.target;if(target.dataset.compare){target.checked?selected.add(target.dataset.compare):selected.delete(target.dataset.compare);render();}});
-for(const id of ["query","representation","direction"]) $(id).addEventListener(id==="query"?"input":"change",render);
+for(const id of ["query","ocp-cell","representation","direction"]) $(id).addEventListener(id==="query"?"input":"change",render);
 $("material").addEventListener("change",()=>{selected.clear();const rows=filtered();for(const r of rows.filter(r=>r.representation.kind==="expression")) selected.add(r.id);const table=rows.find(r=>r.representation.kind==="table");if(table)selected.add(table.id);if(rows.length){detailId=rows[0].id;renderDetail();}render();});
-$("reset").addEventListener("click",()=>{for(const id of ["query","material","representation","direction"]) $(id).value="";render();});
+$("reset").addEventListener("click",()=>{for(const id of ["query","material","ocp-cell","representation","direction"]) $(id).value="";render();});
 $("clear-selection").addEventListener("click",()=>{selected.clear();render();});
 
 // Each plot uses its actual data domain; BPX operating bounds are not 0..1.
+function forgetPlots(container) {
+  for (const svg of container.querySelectorAll("[data-plot]")) plotStates.delete(svg.dataset.plot);
+}
 function plot(series, xLabel, yLabel) {
   const all=series.flatMap(s=>s.points);
   if(!all.length)return '<p class="empty">No valid observations to plot.</p>';
   const xmin=Math.min(...all.map(p=>p[0])),xmax=Math.max(...all.map(p=>p[0]));
   const lo=Math.min(...all.map(p=>p[1])),hi=Math.max(...all.map(p=>p[1])),pad=Math.max((hi-lo)*.08,.025),ymin=lo-pad,ymax=hi+pad;
   const X=x=>48+(x-xmin)/(xmax-xmin||1)*356,Y=y=>190-(y-ymin)/(ymax-ymin)*156;
-  let svg=`<svg viewBox="0 0 430 238" role="img" aria-label="${esc(yLabel+" versus "+xLabel)}"><text x="48" y="20">${esc(yLabel)}</text>`;
+  const id=String(++nextPlot);
+  plotStates.set(id,{series,xmin,xmax,X,Y,xLabel,yLabel,focusX:null});
+  let svg=`<svg class="interactive-plot" data-plot="${id}" viewBox="0 0 430 238" tabindex="0" role="img" aria-label="${esc(yLabel+" versus "+xLabel)}. Use left and right arrows to inspect preview points." aria-describedby="plot-hint-${id}"><text x="48" y="20">${esc(yLabel)}</text>`;
   for(let i=0;i<=4;i++){const x=xmin+(xmax-xmin)*i/4,y=ymin+(ymax-ymin)*i/4;svg+=`<line class="grid" x1="48" x2="404" y1="${Y(y)}" y2="${Y(y)}"/><text x="40" y="${Y(y)+3}" text-anchor="end">${y.toFixed(2)}</text><text x="${X(x)}" y="209" text-anchor="middle">${x.toFixed(2)}</text>`;}
   svg+='<line class="axis" x1="48" x2="404" y1="190" y2="190"/>';
   svg+=series.map((s,i)=>`<path class="curve" stroke="${colors[i%colors.length]}" d="${s.points.map((p,j)=>`${j?"L":"M"}${X(p[0]).toFixed(2)},${Y(p[1]).toFixed(2)}`).join(" ")}"><title>${esc(s.label)}</title></path>`).join("");
+  svg+='<g class="plot-cursor" hidden><line class="plot-crosshair" y1="34" y2="190"/><g class="plot-markers"></g></g>';
   svg+=`<text x="225" y="232" text-anchor="middle">${esc(xLabel)}</text></svg>`;
-  return svg+'<div class="legend">'+series.map((s,i)=>`<span><i style="background:${colors[i%colors.length]}"></i>${esc(s.label)}</span>`).join("")+"</div>";
+  return '<div class="plot-inspector">'+svg+'<div class="legend">'+series.map((s,i)=>`<span><i style="background:${colors[i%colors.length]}"></i>${esc(s.label)}</span>`).join("")+`</div><p id="plot-hint-${id}" class="axis-note">Move the pointer or tap the chart. Keyboard: left/right arrows, Home, End; Escape clears. Readings are sampled preview points; downloads retain native data.</p><div class="plot-readout" aria-live="off">Inspect a preview point to see its coordinates.</div></div>`;
 }
+function inspectPlot(svg,x,announce=false) {
+  const state=plotStates.get(svg.dataset.plot);
+  if(!state)return;
+  x=Math.max(state.xmin,Math.min(state.xmax,x));state.focusX=x;
+  const cursor=svg.querySelector(".plot-cursor");cursor.removeAttribute("hidden");
+  const line=cursor.querySelector("line");line.setAttribute("x1",state.X(x));line.setAttribute("x2",state.X(x));
+  const points=state.series.map(s=>ui.nearestPreviewPoint(s.points,x));
+  cursor.querySelector(".plot-markers").innerHTML=points.map((p,i)=>p?`<circle cx="${state.X(p[0])}" cy="${state.Y(p[1])}" r="4" fill="${colors[i%colors.length]}"/>`:"").join("");
+  const readout=svg.parentElement.querySelector(".plot-readout");readout.setAttribute("aria-live",announce?"polite":"off");
+  readout.innerHTML=state.series.map((s,i)=>`<span><b>${esc(s.label)}</b>: ${points[i]?`${esc(state.xLabel)} = ${points[i][0].toPrecision(6)}; ${esc(state.yLabel)} = ${points[i][1].toPrecision(6)}`:"outside this curve's domain"}</span>`).join("");
+}
+document.addEventListener("pointermove",event=>{
+  const svg=event.target.closest("[data-plot]");if(!svg)return;
+  const state=plotStates.get(svg.dataset.plot),box=svg.getBoundingClientRect();
+  if(state&&box.width)inspectPlot(svg,state.xmin+((event.clientX-box.left)*430/box.width-48)/356*(state.xmax-state.xmin));
+});
+document.addEventListener("pointerdown",event=>{
+  const svg=event.target.closest("[data-plot]");if(!svg)return;
+  const state=plotStates.get(svg.dataset.plot),box=svg.getBoundingClientRect();
+  if(state&&box.width)inspectPlot(svg,state.xmin+((event.clientX-box.left)*430/box.width-48)/356*(state.xmax-state.xmin));
+});
+document.addEventListener("keydown",event=>{
+  const svg=event.target.closest("[data-plot]");if(!svg||!["ArrowLeft","ArrowRight","Home","End","Escape"].includes(event.key))return;
+  const state=plotStates.get(svg.dataset.plot);if(!state)return;event.preventDefault();
+  if(event.key==="Escape"){svg.querySelector(".plot-cursor").setAttribute("hidden","");svg.parentElement.querySelector(".plot-readout").textContent="Inspect a preview point to see its coordinates.";state.focusX=null;return;}
+  const x=event.key==="Home"?state.xmin:event.key==="End"?state.xmax:(state.focusX??state.xmin)+(event.key==="ArrowRight"?1:-1)*(state.xmax-state.xmin)/200;
+  inspectPlot(svg,x,true);
+});
 function renderCharts() {
+  forgetPlots($("charts"));
   const rows=data.records.filter(r=>selected.has(r.id));
   $("selected-count").textContent=`${rows.length} selected`;
   if(!rows.length){$("charts").innerHTML='<p class="empty">Select records to start comparing.</p>';return;}
@@ -59,15 +104,16 @@ function renderCharts() {
 function renderDetail() {
   const r=data.records.find(r=>r.id===detailId),experiment=data.experiments[r.experiment_id];
   const field=(label,value)=>`<div class="field"><strong>${esc(label)}</strong>${value}</div>`;
-  $("detail").innerHTML=`<div class="detail-top"><div><div class="eyebrow">RECORD / ${esc(r.id)}</div><h2>${esc(r.title)}</h2></div><div class="actions"><a class="button" href="downloads/${esc(r.id)}.csv" download>${r.representation.kind==="expression"?"Sampled formula CSV":"Retained points CSV"}</a><a class="button" href="downloads/${esc(r.id)}.json" download>Metadata JSON</a></div></div><div class="detail-grid">${field("Coordinate & domain",esc(r.x.definition)+`<br>[${r.x.domain.join(", ")}] · `+esc(r.x.domain_basis))}${field("Cell match",esc(r.cell_link.evidence))}${field("Conditions",esc(experiment?experiment.protocol+(experiment.cycle_selected!==null&&experiment.cycle_selected!==undefined?" · Cycle "+experiment.cycle_selected:"")+" · "+r.temperature.description:r.temperature.description))}${field("Data representation",esc((r.representation.kind==="table"?r.representation.point_count+" retained table points ("+words(r.measurement)+")":"Expression; original measured points not supplied")))}${field("Sources",sourceLinks(r.source_ids))}${field("License",`<a href="${esc(r.license_url)}">${esc(r.license)}</a>`)}${field("Limits",'<ul>'+r.limitations.map(v=>`<li>${esc(v)}</li>`).join("")+"</ul>")}${field("Provenance",`<code>${esc(r.provenance.location)}</code><br>${esc(r.provenance.derivation)}`)}</div>${r.representation.kind==="expression"?`<div class="formula-text">${esc(r.representation.expression)}<br><small>x = θ; the 2001-point CSV is a numerical sample, not experimental data.</small></div>`:""}`;
+  $("detail").innerHTML=`<div class="detail-top"><div><div class="eyebrow">RECORD / ${esc(r.id)}</div><h2>${esc(r.title)}</h2></div><div class="actions"><a class="button" href="downloads/${esc(r.id)}.csv" download>${r.representation.kind==="expression"?"Sampled formula CSV":"Retained points CSV"}</a><a class="button" href="downloads/${esc(r.id)}.json" download>Metadata JSON</a></div></div><div class="detail-grid">${field("Coordinate & domain",esc(r.x.definition)+`<br>[${r.x.domain.join(", ")}] · `+esc(r.x.domain_basis))}${field("Cell match",esc(r.cell_link.evidence)+(r.cell_link.cell_id?`<br><button class="text-button" data-open-cell="${esc(r.cell_link.cell_id)}">Open cell parameters &amp; supporting tests →</button>`:""))}${field("Conditions",esc(experiment?experiment.protocol+(experiment.cycle_selected!==null&&experiment.cycle_selected!==undefined?" · Cycle "+experiment.cycle_selected:"")+" · "+r.temperature.description:r.temperature.description))}${field("Data representation",esc((r.representation.kind==="table"?r.representation.point_count+" retained table points ("+words(r.measurement)+")":"Expression; original measured points not supplied")))}${field("Sources",sourceLinks(r.source_ids))}${field("License",`<a href="${esc(r.license_url)}">${esc(r.license)}</a>`)}${field("Limits",'<ul>'+r.limitations.map(v=>`<li>${esc(v)}</li>`).join("")+"</ul>")}${field("Provenance",`<code>${esc(r.provenance.location)}</code><br>${esc(r.provenance.derivation)}`)}</div>${r.representation.kind==="expression"?`<div class="formula-text">${esc(r.representation.expression)}<br><small>x = θ; the 2001-point CSV is a numerical sample, not experimental data.</small></div>`:""}`;
 }
 $("source-cards").innerHTML=Object.entries(data.sources).map(([id,s])=>`<article class="source-card"><span class="tag">${esc(s.kind)} · ${esc(s.year)}</span><h3>${esc(s.title)}</h3><p>${esc(s.authors.join(", "))}</p><p>${esc(s.role)}</p><a href="${safeUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(id)} ↗</a></article>`).join("");
 
-const preferredCells=["a123-amp20m1hd-a","a123-high-power-pouch-9ah","bpx-lfp-18650-2ah-undisclosed","lg-m50"];
+const preferredCells=["a123-amp20m1hd-a","haidi-hdcf18650-1800-rehm2025","bpx-lfp-18650-2ah-undisclosed","lg-m50"];
 const cellOrder=[...preferredCells.filter(id=>data.cells[id]),...Object.keys(data.cells).filter(id=>!preferredCells.includes(id)).sort()];
 const materialNames=[...new Set(data.records.map(r=>r.material))].sort((a,b)=>a.localeCompare(b));
 $("material").innerHTML='<option value="">All materials</option>'+materialNames.map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join("");
 $("material").value="LFP";
+$("ocp-cell").innerHTML+='<option value="material-only">Material-only studies</option>'+Object.entries(data.cells).filter(([id])=>data.records.some(r=>r.cell_link.cell_id===id)).map(([id,cell])=>`<option value="${esc(id)}">${esc(cell.display_name)}</option>`).join("");
 const cellFamilies=[...new Set(Object.values(data.cell_material_families))].sort();
 $("cell-material").innerHTML='<option value="">All materials</option>'+cellFamilies.map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join("");
 function renderCellChoices() {
@@ -84,9 +130,13 @@ function renderCell() {
   $("cell-context").textContent=cell.model_context||"DFN / SPM / SPMe reference parameterization";
   $("cell-match").innerHTML=`<b>Match: ${esc(words(cell.match_level))}.</b> ${esc(cell.match_evidence)}`;
   $("cell-note").innerHTML=esc(cell.note)+(cell.external_ocp_references?'<br>'+cell.external_ocp_references.map(r=>`<a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">External pseudo-OCV workbook ↗</a> · ${esc(r.status)}`).join("<br>"):"");
+  const ocp=data.records.filter(r=>r.cell_link.cell_id===id),sources=ui.linkedSources(data.external_datasets,id);
+  $("cell-ocp-links").innerHTML=`<h3>Electrode OCP · ${ocp.length} records</h3>`+(ocp.length?'<div class="record-links">'+ocp.map(r=>`<button class="secondary" data-open-ocp="${esc(r.id)}">${esc(r.material)} · ${esc(words(r.direction))}<small>${esc(r.id)}</small></button>`).join("")+"</div>":'<p class="muted compact">No electrode OCP admitted for this package. Read the source and permission gaps below.</p>');
+  $("cell-test-references").innerHTML=`<h3>Linked external test sources · ${sources.length}</h3>`+(sources.length?'<div class="source-shortcuts">'+sources.map(source=>`<button class="source-shortcut" data-open-source="${esc(source.id)}"><b>${esc(source.title)}</b><span>${esc(words(source.parameter_link.match_level))} · ${esc(source.test_types.map(words).join(", "))}</span><span>Inspect source files, matching and gaps →</span></button>`).join("")+"</div>":'<p class="muted compact">No reviewed external test source is associated with these parameter records. Retained local observations, when available, appear below.</p>');
+  $("parameter-query").value="";
   $("cell-coverage").innerHTML=Object.entries(cell.coverage).map(([k,v])=>`<div><b>${esc(k==="ocp"?"OCP":words(k))}</b><span>${esc(v)}</span></div>`).join("");
   $("cell-evidence").innerHTML=`<details open><summary>Evidence and missing items</summary><div class="evidence-scroll"><table class="parameter-table"><thead><tr><th>Component</th><th>Match / origin</th><th>Sources and gaps</th></tr></thead><tbody>${Object.entries(cell.evidence_matrix||{}).map(([key,row])=>`<tr><td>${esc(words(key))}<small class="condition">${row.record_ids.length} records</small></td><td><b>${esc(words(row.match_level))}</b><br>${esc(row.evidence)}</td><td>${sourceLinks(row.source_ids)}<br>${row.missing_items.map(esc).join("<br>")}</td></tr>`).join("")}</tbody></table></div><p class="compact">Cell gaps: ${(cell.missing_items||[]).map(esc).join(" · ")}</p></details>`;
-  $("cell-downloads").innerHTML=`<a class="button" href="downloads/${id}-parameters.csv" download>Parameters CSV · all variants</a><a class="button" href="downloads/${id}-parameters.json" download>Cell package JSON</a><a class="button" href="downloads/${id}-bundle.zip" download>Offline bundle ZIP</a>`;
+  $("cell-downloads").innerHTML=(parameters.length?`<a class="button" href="downloads/${id}-parameters.csv" download>Parameters CSV · all variants</a>`:"")+`<a class="button" href="downloads/${id}-parameters.json" download>Cell package JSON</a><a class="button" href="downloads/${id}-bundle.zip" download>Offline bundle ZIP</a>`;
   $("parameter-category").innerHTML='<option value="">All parameters</option>'+[...new Set(parameters.map(p=>p.category))].sort().map(c=>`<option value="${esc(c)}">${esc(words(c))}</option>`).join("");
   $("parameter-variant").innerHTML='<option value="">All variants</option>'+[...new Set(parameters.map(p=>p.conditions?.parameterization_variant).filter(Boolean))].map(v=>`<option value="${esc(v)}">${esc(words(v))}</option>`).join("");
   if(parameters.some(p=>p.conditions?.parameterization_variant==="original_author_mpm")) $("parameter-variant").value="original_author_mpm";
@@ -95,15 +145,21 @@ function renderCell() {
   $("test-sample").disabled=!tests.length;
   renderParameters();renderFullCell();
 }
+function visibleParameters() {
+  return ui.filterParameters(data.parameters,{cell:$("cell-select").value,variant:$("parameter-variant").value,category:$("parameter-category").value,query:$("parameter-query").value});
+}
 function renderParameters() {
-  const rows=data.parameters.filter(p=>p.cell_id===$("cell-select").value&&(!$("parameter-variant").value||p.conditions?.parameterization_variant===$("parameter-variant").value)&&(!$("parameter-category").value||p.category===$("parameter-category").value));
+  const rows=visibleParameters();
+  $("export-parameters").disabled=!rows.length;
+  $("parameter-detail").textContent="";
   $("parameter-count").textContent=`${rows.length} records`;
   $("parameter-rows").innerHTML=rows.map(p=>`<tr><td><button data-parameter="${esc(p.id)}">${esc(p.name)}</button>${p.conditions?.cell_SOC_fraction!==undefined?`<small class="condition">Cell SOC ${(p.conditions.cell_SOC_fraction*100).toFixed(0)}%</small>`:""}</td><td>${p.representation.kind==="scalar"?esc(number(p.representation.value)):p.representation.kind==="table"?`Table · ${p.representation.point_count} nodes`:"Function"}</td><td>${esc(p.unit)}</td></tr>`).join("")||'<tr><td colspan="3">No parameter values imported for this family. See coverage gaps above.</td></tr>';
 }
 $("parameter-rows").addEventListener("click",event=>{const button=event.target.closest("[data-parameter]");if(!button)return;const p=data.parameters.find(p=>p.id===button.dataset.parameter);$("parameter-detail").innerHTML=`<b>${esc(p.name)}</b><p>${esc(p.definition||p.name)}</p><p>Origin: ${esc(p.provenance.origin_status)}</p><code>${esc(p.representation.kind==="expression"?p.representation.expression:p.provenance.location)}</code>${p.representation.kind==="expression"?`<p>Inputs: ${esc(JSON.stringify(p.representation.variables))}</p><p>Domain: ${esc(p.representation.domain)}</p>`:""}${p.representation.kind==="table"?`<p>${esc(p.representation.x.definition)}<br>Input: ${esc(p.representation.x.variable)} / ${esc(p.representation.x.unit)} · Domain: ${esc(p.representation.x.domain.join(" to "))}<br>Linear interpolation; extrapolation disabled.</p><a class="button" href="downloads/${esc(p.representation.path.split("/").pop())}" download>Native parameter table CSV</a>`:""}<p>Conditions: ${esc(JSON.stringify(p.conditions||{}))}</p><p>${sourceLinks(p.source_ids)}</p><p>${p.limitations.map(esc).join("<br>")}</p>`;});
 function renderFullCell() {
+  forgetPlots($("fullcell-chart"));
   const test=data.full_cell_tests.find(t=>t.id===$("test-sample").value);
-  if(!test){$("test-description").textContent="No matching raw full-cell experiments imported for this cell or parameter set.";$("fullcell-chart").innerHTML='<p class="empty">Full-cell test coverage gap</p>';$("test-downloads").innerHTML="";$("test-note").textContent="This package retains an explicit test coverage gap.";return;}
+  if(!test){$("test-description").textContent="No retained local full-cell observations for this parameter package. Check its linked external test sources above.";$("fullcell-chart").innerHTML='<p class="empty">Full-cell test coverage gap</p>';$("test-downloads").innerHTML="";$("test-note").textContent="This package retains an explicit test coverage gap.";return;}
   $("test-description").textContent=test.protocol+". "+words(test.observation_kind)+". Voltage observations; no model prediction overlay.";
   $("fullcell-chart").innerHTML=plot(test.preview_segments,test.independent_variable?.label||"Time from trace / segment start / h","Full-cell voltage / V");
   const asset=data.assets[test.asset_id];
@@ -113,11 +169,26 @@ function renderFullCell() {
 $("cell-select").addEventListener("change",renderCell);
 $("parameter-category").addEventListener("change",renderParameters);
 $("parameter-variant").addEventListener("change",renderParameters);
+$("parameter-query").addEventListener("input",renderParameters);
+$("export-parameters").addEventListener("click",()=>{
+  const rows=visibleParameters();if(!rows.length)return;
+  const url=URL.createObjectURL(new Blob([ui.parameterCSV(rows)],{type:"text/csv;charset=utf-8"}));
+  const a=document.createElement("a");a.href=url;a.download=$("cell-select").value+"-filtered-parameters.csv";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
 $("test-sample").addEventListener("change",renderFullCell);
+function restoreSelect(id,key) { const value=saved.get(key);if(value!==null&&[...$(id).options].some(option=>option.value===value))$(id).value=value; }
+restoreSelect("material","material");restoreSelect("ocp-cell","ocp_cell");restoreSelect("representation","repr");restoreSelect("direction","direction");
+if(saved.has("ocp")&&!saved.has("material"))$("material").value=data.records.find(r=>r.id===detailId).material;
+$("query").value=saved.get("query")||"";
+restoreSelect("cell-material","cell_family");renderCellChoices();restoreSelect("cell-select","cell");
 render();renderDetail();renderCell();
+restoreSelect("parameter-category","category");restoreSelect("parameter-variant","variant");$("parameter-query").value=saved.get("pq")||"";renderParameters();
+restoreSelect("test-sample","sample");renderFullCell();
 
 // External dataset filters inspect metadata only. No remote payload is fetched.
 const datasets=data.external_datasets;
+$("dataset-cell").innerHTML+=cellOrder.filter(id=>ui.linkedSources(datasets,id).length).map(id=>`<option value="${esc(id)}">${esc(data.cells[id].display_name)}</option>`).join("");
+$("dataset-cell").addEventListener("change",renderDatasets);
 for(const [id,values] of [
   ["dataset-material",[...new Set(datasets.flatMap(r=>r.material_families))]],
   ["dataset-type",[...new Set(datasets.flatMap(r=>r.test_types))]],
@@ -130,14 +201,42 @@ for(const [id,values] of [
 function renderDatasetFileLocations(record) {
   const components=Object.entries(record.parameter_components).map(([name,item])=>`<p><b>${esc(words(name))}:</b> ${esc(words(item.match_level))} · ${esc(words(item.quantity_kind))}<br>${esc(item.evidence)}<br>Records: ${esc(item.record_ids.join(", ")||"None")}</p>`).join("");
   const coverage=Object.entries(record.test_coverage).map(([name,item])=>`<p><b>${esc(words(name))}:</b> ${esc(words(item.status))}<br>${esc(item.evidence)}</p>`).join("");
-  const files=record.file_links.map(item=>`<li><code>${esc(item.source_path)}</code><br>${esc(item.cell_model||"Model unresolved")} · ${esc(item.source_sample_id||"Sample unresolved")}<br>${esc(item.test_types.join(", "))} ${esc(item.profiles.join(", "))} · ${esc(item.verification)} · content: ${esc(item.content_review)}<br>${esc(item.note)}<br><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">${item.kind==="archive_member"?"Open parent archive":"Open source file"} ↗</a></li>`).join("");
-  return `<details><summary>OCP / diffusion / kinetics association</summary>${components}</details><details><summary>Multi-rate / US06 / EIS coverage</summary>${coverage}</details><details><summary>File locations (${record.file_links.length})</summary><p>${esc(record.inventory_scope)}</p><div class="dataset-file-list"><ul>${files}</ul></div></details>`;
+  const files=record.file_links.map(item=>`<li><code>${esc(item.source_path)}</code><br>${esc(item.cell_model||"Model unresolved")} · ${esc(item.source_sample_id||"Sample unresolved")}<br>${esc(item.test_types.join(", "))} ${esc(item.profiles.join(", "))} · ${esc(item.verification)} · content: ${esc(item.content_review)}<br>${esc(item.note)}<br><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">${item.kind==="archive_member"?"Open parent archive":item.kind==="documentation"?"Open dataset / documentation":"Open source file"} ↗</a></li>`).join("");
+  return `<details><summary>OCP / diffusion / kinetics association</summary>${components}</details><details><summary>Multi-rate / US06 / EIS coverage</summary>${coverage}</details><details data-files><summary>File locations (${record.file_links.length})</summary><p>${esc(record.inventory_scope)}</p><div class="dataset-file-list"><ul>${files}</ul></div></details>`;
 }
 function renderDatasets() {
   const material=$("dataset-material").value,type=$("dataset-type").value,profile=$("dataset-profile").value,aging=$("dataset-aging").value,query=$("dataset-query").value.trim().toLowerCase();
-  const rows=datasets.filter(r=>(!material||r.material_families.includes(material))&&(!type||r.test_types.includes(type))&&(!profile||r.profiles.includes(profile))&&(!aging||r.aging_data.status===aging)&&(!query||JSON.stringify(r).toLowerCase().includes(query)));
+  const rows=datasets.filter(r=>(!$("dataset-cell").value||r.parameter_link.cell_ids.includes($("dataset-cell").value))&&(!material||r.material_families.includes(material))&&(!type||r.test_types.includes(type))&&(!profile||r.profiles.includes(profile))&&(!aging||r.aging_data.status===aging)&&(!query||JSON.stringify(r).toLowerCase().includes(query)));
   $("dataset-count").textContent=`${rows.length} / ${datasets.length} parameter-linked external sources. Counts describe source references.`;
-  $("dataset-cards").innerHTML=rows.map(r=>`<article class="source-card"><span class="tag">${esc(r.material_families.join(" / "))} · external link</span><h3>${esc(r.title)}</h3><p>${esc(r.cell_identity)}</p><p><b>Electrode OCP anchor:</b> ${esc(words(r.ocp_anchor.kind))}<br>${esc(r.ocp_anchor.evidence)}<br>Half-cell temperature labels / °C: ${esc(r.ocp_anchor.half_cell_temperatures_C.length?r.ocp_anchor.half_cell_temperatures_C.join(", "):"Not independently verified")}</p><p><b>Tests:</b> ${esc(r.test_types.map(words).join(", "))}<br><b>Profiles:</b> ${esc(r.profiles.join(", ")||"No named drive profile verified")}</p><p>${esc(r.rate_summary)}<br>Source temperature labels / °C: ${esc(r.temperatures_C.length?r.temperatures_C.join(", "):"Not verified")}</p><p><b>Ageing data:</b> ${esc(words(r.aging_data.status))}${r.aging_data.kinds.length?" ("+esc(r.aging_data.kinds.join(", "))+")":""}<br>${esc(r.aging_data.evidence)} <a href="${safeUrl(r.aging_data.source_url)}" target="_blank" rel="noopener noreferrer">Coverage evidence ↗</a></p><p><b>Parameter match:</b> ${esc(words(r.parameter_link.match_level))}<br>${esc(r.parameter_link.evidence)}</p><p><b>License:</b> <a href="${safeUrl(r.license.evidence_url)}" target="_blank" rel="noopener noreferrer">${esc(r.license.identifier)}</a><br>${esc(r.license.note)}</p><details><summary>Source review and missing items</summary><p>Version: ${esc(r.source.version)} · Checked: ${esc(r.review.checked_on)} · ${esc(words(r.review.level))}</p><p>${esc(r.review.note)}</p><p>${esc(r.channels.note)}</p><p>Components without a native catalog join: ${esc(r.parameter_link.missing_components.join(", "))}</p><ul>${r.missing_items.map(item=>`<li>${esc(item)}</li>`).join("")}</ul></details><p><a class="button" href="${safeUrl(r.source.url)}" target="_blank" rel="noopener noreferrer">Open original dataset ↗</a></p>${renderDatasetFileLocations(r)}</article>`).join("")||'<p class="empty">No parameter-linked source matches these filters.</p>';
+  $("dataset-cards").innerHTML=rows.map(r=>`<article class="source-card" id="source-${esc(r.id)}"><span class="tag">${esc(r.material_families.join(" / "))} · external link</span><h3>${esc(r.title)}</h3><p>${esc(r.cell_identity)}</p><p><b>Electrode OCP anchor:</b> ${esc(words(r.ocp_anchor.kind))}<br>${esc(r.ocp_anchor.evidence)}<br>Half-cell temperature labels / °C: ${esc(r.ocp_anchor.half_cell_temperatures_C.length?r.ocp_anchor.half_cell_temperatures_C.join(", "):"Not independently verified")}</p><p><b>Tests:</b> ${esc(r.test_types.map(words).join(", "))}<br><b>Profiles:</b> ${esc(r.profiles.join(", ")||"No named drive profile verified")}</p><p>${esc(r.rate_summary)}<br>Source temperature labels / °C: ${esc(r.temperatures_C.length?r.temperatures_C.join(", "):"Not verified")}</p><p><b>Ageing data:</b> ${esc(words(r.aging_data.status))}${r.aging_data.kinds.length?" ("+esc(r.aging_data.kinds.join(", "))+")":""}<br>${esc(r.aging_data.evidence)} <a href="${safeUrl(r.aging_data.source_url)}" target="_blank" rel="noopener noreferrer">Coverage evidence ↗</a></p><p><b>Parameter match:</b> ${esc(words(r.parameter_link.match_level))}<br>${esc(r.parameter_link.evidence)}</p><p><b>License:</b> <a href="${safeUrl(r.license.evidence_url)}" target="_blank" rel="noopener noreferrer">${esc(r.license.identifier)}</a><br>${esc(r.license.note)}</p><details><summary>Source review and missing items</summary><p>Version: ${esc(r.source.version)} · Checked: ${esc(r.review.checked_on)} · ${esc(words(r.review.level))}</p><p>${esc(r.review.note)}</p><p>${esc(r.channels.note)}</p><p>Components without a native catalog join: ${esc(r.parameter_link.missing_components.join(", "))}</p><ul>${r.missing_items.map(item=>`<li>${esc(item)}</li>`).join("")}</ul></details><p><a class="button" href="${safeUrl(r.source.url)}" target="_blank" rel="noopener noreferrer">Open original dataset ↗</a></p>${renderDatasetFileLocations(r)}</article>`).join("")||'<p class="empty">No parameter-linked source matches these filters.</p>';
 }
 $("dataset-query").addEventListener("input",renderDatasets);
+restoreSelect("dataset-cell","source_cell");restoreSelect("dataset-material","source_material");restoreSelect("dataset-type","test_type");restoreSelect("dataset-profile","profile");restoreSelect("dataset-aging","ageing");$("dataset-query").value=saved.get("source_query")||"";
 renderDatasets();
+$("reset-datasets").addEventListener("click",()=>{for(const id of ["dataset-cell","dataset-material","dataset-type","dataset-profile","dataset-aging","dataset-query"])$(id).value="";renderDatasets();});
+function goTo(section) { window.location.hash=section;$(section).scrollIntoView({behavior:"smooth",block:"start"}); }
+document.addEventListener("click",event=>{
+  const button=event.target.closest("[data-open-ocp],[data-open-cell],[data-open-source]");if(!button)return;
+  if(button.dataset.openOcp){
+    const record=data.records.find(r=>r.id===button.dataset.openOcp);if(!record)return;
+    for(const id of ["query","representation","direction"])$(id).value="";
+    $("material").value=record.material;$("ocp-cell").value=record.cell_link.cell_id||"material-only";detailId=record.id;selected.clear();selected.add(record.id);render();renderDetail();goTo("library");
+  }else if(button.dataset.openCell){
+    $("cell-material").value="";renderCellChoices();$("cell-select").value=button.dataset.openCell;renderCell();goTo("cell-package");
+  }else{
+    const source=datasets.find(r=>r.id===button.dataset.openSource);if(!source)return;
+    for(const id of ["dataset-material","dataset-type","dataset-profile","dataset-aging"])$(id).value="";
+    $("dataset-cell").value=source.parameter_link.cell_ids[0]||"";$("dataset-query").value=source.id;renderDatasets();goTo("test-datasets");
+    $("source-"+source.id)?.querySelector("details[data-files]")?.setAttribute("open","");
+  }
+});
+$("copy-view").addEventListener("click",async()=>{
+  const state={cell:$("cell-select").value,cell_family:$("cell-material").value,ocp:detailId,compare:[...selected].join(","),material:$("material").value,ocp_cell:$("ocp-cell").value,query:$("query").value,repr:$("representation").value,direction:$("direction").value,category:$("parameter-category").value,variant:$("parameter-variant").value,pq:$("parameter-query").value,sample:$("test-sample").value,source_cell:$("dataset-cell").value,source_material:$("dataset-material").value,test_type:$("dataset-type").value,profile:$("dataset-profile").value,ageing:$("dataset-aging").value,source_query:$("dataset-query").value};
+  const section=window.location.hash.slice(1)||"library",url=ui.viewURL(window.location.href,state,section);
+  $("view-link").value=url;$("view-link-label").hidden=false;
+  try { if(!navigator.clipboard?.writeText)throw new Error("Clipboard unavailable");await navigator.clipboard.writeText(url);$("view-status").textContent="View link copied. Local links work on this computer; repository access is unchanged."; }
+  catch { $("view-link").focus();$("view-link").select();$("view-status").textContent="Select and copy the view link. Local links work on this computer."; }
+});
+function updateNavigation() { const section=window.location.hash||"#library";for(const link of document.querySelectorAll("nav a")){const active=link.getAttribute("href")===section;link.classList.toggle("active",active);if(active)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current");} }
+window.addEventListener("hashchange",updateNavigation);updateNavigation();
+})();

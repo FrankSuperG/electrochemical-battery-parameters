@@ -7,6 +7,9 @@ import csv
 import copy
 import math
 import zipfile
+import hashlib
+import shutil
+from tempfile import TemporaryDirectory
 
 
 def _ocp_license_url(record):
@@ -73,6 +76,46 @@ def _preview(test, samples):
 
 
 def build_site(catalog, output):
+    """Refresh generated files; retire only unchanged files from our manifest."""
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=True)
+    root = output.resolve()
+    manifest = output / ".ebp-site-files.json"
+    if not manifest.resolve().is_relative_to(root):
+        raise ValueError("Generated site manifest escapes output directory")
+    previous = json.loads(manifest.read_text()) if manifest.is_file() else {}
+
+    def target(relative):
+        path = output / relative
+        if Path(relative).is_absolute() or not path.resolve().is_relative_to(root):
+            raise ValueError("Generated site path escapes output directory")
+        return path
+
+    # Validate a prior manifest before copying or removing any files.
+    for relative in previous:
+        target(relative)
+    with TemporaryDirectory(prefix="ebp-viewer-") as folder:
+        staging = Path(folder)
+        _build_site(catalog, staging)
+        generated = {}
+        for source in staging.rglob("*"):
+            if not source.is_file():
+                continue
+            relative = source.relative_to(staging).as_posix()
+            path = target(relative)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, path)
+            generated[relative] = hashlib.sha256(source.read_bytes()).hexdigest()
+        for relative, digest in previous.items():
+            path = target(relative)
+            if relative not in generated and path.is_file():
+                if hashlib.sha256(path.read_bytes()).hexdigest() == digest:
+                    path.unlink()
+        manifest.write_text(json.dumps(generated, indent=2) + "\n", encoding="utf-8")
+    return output
+
+
+def _build_site(catalog, output):
     errors = catalog.validate()
     if errors:
         raise ValueError("Catalog validation failed: " + "; ".join(errors))
@@ -223,7 +266,7 @@ def build_site(catalog, output):
         "window.EBP_DATA = " + json.dumps(data, allow_nan=False) + ";\n",
         encoding="utf-8",
     )
-    for name in ("index.html", "style.css", "app.js", "logo.png"):
+    for name in ("index.html", "style.css", "viewer-utils.js", "app.js", "logo.png"):
         (output / name).write_bytes(files("ebp").joinpath("web", name).read_bytes())
     license_dir = output / "licenses"
     license_dir.mkdir(exist_ok=True)

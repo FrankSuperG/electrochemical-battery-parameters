@@ -19,6 +19,7 @@ jobs:
       - run: python -m pip install -e '.[dev]'
       - run: ebp validate
       - run: python scripts/build_data_index.py --check
+      - run: node --test tests/test_viewer_utils.cjs
       - run: python -m pytest -q
       - run: ebp build-site
       - run: python -m build

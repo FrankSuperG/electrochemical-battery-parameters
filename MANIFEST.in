@@ -8,7 +8,7 @@ recursive-include .github *.md *.yml
 recursive-include scripts *.py
 recursive-include scripts *.json
 recursive-include examples *.py
-recursive-include tests *.py
+recursive-include tests *.py *.cjs
 recursive-include src/ebp/data *.json *.csv
 recursive-include src/ebp/licenses *.txt
 recursive-include src/ebp/web *.html *.css *.js

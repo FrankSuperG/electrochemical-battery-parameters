@@ -12,3 +12,55 @@
 .dataset-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,2fr);gap:16px;margin:24px 0}.dataset-filters label{display:flex;flex-direction:column;gap:6px;font-size:12px}.dataset-filters select,.dataset-filters input{width:100%;box-sizing:border-box;padding:9px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);font:inherit}#dataset-cards .source-card{overflow-wrap:anywhere}#dataset-cards details{font-size:12px}#cell-material{margin-bottom:12px}@media(max-width:800px){.dataset-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.dataset-filters{grid-template-columns:1fr}}
 
 .dataset-file-list{max-height:360px;overflow:auto}.dataset-file-list li{margin-bottom:16px}.dataset-file-list code{overflow-wrap:anywhere}
+
+/* Parameter discovery, linked studies and accessible point inspection. */
+[hidden]{display:none!important}
+.topbar{height:auto;min-height:100px;flex-wrap:wrap;gap:16px;padding-top:8px;padding-bottom:8px}
+.topbar nav{flex:1;justify-content:center;gap:20px;flex-wrap:wrap}
+.topbar nav a{padding:18px 0;white-space:nowrap}
+.header-actions{display:flex;align-items:center;gap:12px}
+.github-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 13px;border:1px solid var(--green);border-radius:5px;text-decoration:none;font-weight:600;white-space:nowrap}
+.github-link:hover,.button:hover,.secondary:hover{background:var(--cream)}
+.load-status{padding:18px;background:#fff2de;border:1px solid #d5aa69;border-radius:8px}
+.view-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin:-12px 0 26px;font-size:12px;color:var(--muted)}
+.view-toolbar>span:first-child{margin-right:auto}
+.view-toolbar label{display:flex;align-items:center;gap:12px;width:100%}
+#view-link{flex:1;min-width:0;border:1px solid var(--line);padding:8px;border-radius:4px;background:#fff;color:var(--ink)}
+#view-status{width:100%;color:var(--green)}
+.parameter-search{display:flex;align-items:end;gap:12px;margin:12px 0}
+.parameter-search label{flex:1;min-width:0;font-size:11px;color:var(--muted)}
+.parameter-search input{display:block;width:100%;margin-top:4px;padding:9px 11px;border:1px solid var(--line);border-radius:5px;color:var(--ink);background:#fff}
+.parameter-search button{white-space:nowrap;font-size:11px}
+button:disabled{opacity:.5;cursor:default}
+.cell-related{padding:15px 0;border-top:1px solid var(--line)}
+.cell-related h3{font-size:13px;margin:0 0 10px}
+.record-links,.source-shortcuts{display:flex;gap:9px;flex-wrap:wrap}
+.record-links button{text-align:left;max-width:100%;overflow-wrap:anywhere}
+.record-links small{display:block;font-size:10px;color:var(--muted)}
+.source-shortcut{flex:1 1 280px;max-width:100%;text-align:left;border:1px solid var(--line);border-radius:6px;background:#f8fbfa;padding:12px 14px;color:var(--ink)}
+.source-shortcut:hover{border-color:var(--green);background:var(--cream)}
+.source-shortcut span{display:block;font-size:11px;color:var(--muted);margin-top:5px}
+.source-shortcut span:last-child{color:var(--green)}
+.interactive-plot{width:100%;height:auto;display:block;touch-action:pan-y;cursor:crosshair;border-radius:5px}
+.interactive-plot:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.plot-crosshair{stroke:var(--muted);stroke-dasharray:3 3;stroke-width:1}
+.plot-markers circle{stroke:#fff;stroke-width:1.5}
+.plot-cursor{pointer-events:none}
+.plot-readout{font:11px/1.7 ui-monospace,monospace;background:#f1f6f4;border:1px solid var(--line);border-radius:5px;padding:9px 11px;min-height:40px;overflow-wrap:anywhere}
+.plot-readout span{display:block}
+.plot-readout b{font-weight:500;color:var(--green)}
+.dataset-filters{grid-template-columns:repeat(3,minmax(0,1fr))}
+.about-panel{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.5fr);gap:45px;padding:34px;margin:35px 0;background:#fff;border:1px solid var(--line);border-radius:10px}
+.about-identity{border-right:1px solid var(--line);padding-right:24px}
+.profile-monogram{width:68px;height:68px;display:grid;place-items:center;border-radius:50%;background:var(--cream);border:1px solid #b8d2c9;font:27px Georgia,serif;letter-spacing:2px;margin-bottom:18px}
+.about-identity h2{margin:8px 0;font-size:28px}
+.about-identity p{font-size:12px;color:var(--muted)}
+.about-story h3{font-size:20px;line-height:1.4;margin:0 0 16px;font-weight:500}
+.about-story p{color:var(--muted);font-size:13px}
+.research-tags{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.research-tags span{padding:4px 9px;background:var(--cream);border-radius:15px;font-size:10px;color:var(--ink)}
+.project-links{margin-bottom:0}
+@media(max-width:1150px){.topbar nav{order:3;flex-basis:100%;gap:25px}.topbar nav a{padding:5px 0 10px}.header-actions{margin-left:auto}}
+@media(max-width:800px){.dataset-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.about-panel{grid-template-columns:1fr;gap:24px;padding:24px}.about-identity{border-right:0;border-bottom:1px solid var(--line);padding:0 0 24px}.parameter-search{align-items:stretch;flex-direction:column}}
+@media(max-width:480px){.topbar .version{display:none}.topbar nav{gap:15px}.topbar nav a{font-size:12px}.dataset-filters{grid-template-columns:1fr}.about-story .actions{display:flex;align-items:stretch}.view-toolbar{align-items:stretch;flex-direction:column}.view-toolbar label{flex-direction:column;align-items:stretch}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

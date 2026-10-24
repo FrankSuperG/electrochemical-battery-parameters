@@ -1,8 +1,43 @@
 import json
 import re
+import hashlib
+
+import pytest
 
 from ebp import Catalog
 from ebp.site import build_site
+
+
+def test_rebuild_retires_old_outputs_but_preserves_user_changes(tmp_path, monkeypatch):
+    import ebp.site as site
+
+    phase = {"first": True}
+
+    def generate(_catalog, output):
+        (output / "index.html").write_text("current")
+        if phase["first"]:
+            (output / "retired.csv").write_text("generated")
+            (output / "edited.csv").write_text("generated")
+
+    monkeypatch.setattr(site, "_build_site", generate)
+    build_site(None, tmp_path)
+    (tmp_path / "edited.csv").write_text("user changes")
+    (tmp_path / "notes.txt").write_text("unmanaged")
+    phase["first"] = False
+    build_site(None, tmp_path)
+    assert not (tmp_path / "retired.csv").exists()
+    assert (tmp_path / "edited.csv").read_text() == "user changes"
+    assert (tmp_path / "notes.txt").read_text() == "unmanaged"
+    manifest = json.loads((tmp_path / ".ebp-site-files.json").read_text())
+    assert manifest == {"index.html": hashlib.sha256(b"current").hexdigest()}
+
+
+def test_rebuild_rejects_manifest_paths_outside_output(tmp_path):
+    output = tmp_path / "site"
+    output.mkdir()
+    (output / ".ebp-site-files.json").write_text(json.dumps({"../outside.txt": "digest"}))
+    with pytest.raises(ValueError, match="escapes output"):
+        build_site(None, output)
 
 
 def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
@@ -62,7 +97,7 @@ def test_viewer_downloads_are_cell_scoped_and_source_faithful(tmp_path):
                 assert (
                     tmp_path / "downloads" / test[key].split("/")[-1]
                 ).read_bytes() == (c.root / test[key]).read_bytes()
-    for filename in ["index.html", "app.js", "style.css"]:
+    for filename in ["index.html", "app.js", "viewer-utils.js", "style.css"]:
         source = (tmp_path / filename).read_text()
         assert "cdn." not in source
         assert not re.search(r"[\u4e00-\u9fff]", source)
