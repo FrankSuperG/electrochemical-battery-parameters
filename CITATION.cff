@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the scientific sources of each record and upstream software implementations as appropriate; this citation describes the catalog software."
-title: "Electrochemical Battery Parameters"
+title: "E-BatP — Electrochemical Battery Parameters"
 type: software
 abstract: >-
   E-BatP is a traceable reference catalog of lithium-ion battery model parameters for DFN/P2D, SPM and SPMe modeling. It includes electrode

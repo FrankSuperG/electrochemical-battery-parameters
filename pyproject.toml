@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "electrochemical-battery-parameters"
 version = "0.16.0"
-description = "Traceable lithium-ion battery model parameters with linked experiments for DFN/P2D, SPM and SPMe models"
+description = "E-BatP — Electrochemical Battery Parameters for DFN/P2D, SPM and SPMe models, with traceable sources and supporting experiment links"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT AND BSD-3-Clause AND CC-BY-4.0 AND CC0-1.0"

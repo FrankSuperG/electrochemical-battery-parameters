@@ -1,6 +1,7 @@
 <p align="center">
   <img src="assets/logo.png" width="640" alt="E-BatP — Electrochemical Battery Parameters">
 </p>
+<h1 align="center">E-BatP — Electrochemical Battery Parameters</h1>
 <p align="center"><strong>Traceable electrochemical parameters, connected to the cells and experiments behind them.</strong></p>
 <p align="center">
   <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions"><img src="https://github.com/FrankSuperG/electrochemical-battery-parameters/actions/workflows/ci.yml/badge.svg" alt="Catalog and package checks"></a>
