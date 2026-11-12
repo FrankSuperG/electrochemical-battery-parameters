@@ -9,8 +9,7 @@ stored as CSV/JSON; new full-cell observations stay external. Read the
 For material-based discovery, use [full-cell tests by material](../data/full-cell/README.md). Eleven parameter-associated external sources are metadata-only; [the source review](FULL_CELL_DATASETS.md) documents license and matching gaps.
 
 Start at **[Browse all data](../data/README.md)**. You can use the GitHub file
-links without installing Python or running a website. If repository access is
-restricted, sign in with an account that has access.
+links without installing Python or running the local viewer.
 
 ## 1. Find the right file
 
@@ -47,10 +46,8 @@ values and are not zeros.
 These controls are described in the
 [official GitHub file guide](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-and-understanding-files#viewing-or-copying-the-raw-file-content).
 For the full repository, use **Code → Download ZIP**, or
-[download the repository ZIP](https://github.com/FrankSuperG/electrochemical-battery-parameters/archive/refs/heads/main.zip)
-while signed in. Extract it before using the relative paths in the examples.
-The navigation uses authenticated GitHub file links, so a private repository
-does not need anonymous raw-file URLs.
+[download the repository ZIP](https://github.com/FrankSuperG/electrochemical-battery-parameters/archive/refs/heads/main.zip).
+Extract it before using the relative paths in the examples.
 
 ### Which representation did I download?
 

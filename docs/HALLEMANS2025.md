@@ -3,7 +3,6 @@
 Reviewed 2026-10-17. **18 jointly fitted grouped-SPMe values, one measured
 drive cycle (164,953 rows) and an EIS evidence table (585 rows) are imported.**
 Electrode OCP reuse remains unresolved and no OCP data are redistributed.
-Repository visibility remains private; no site or public release is deployed.
 
 **[Open the cell package](../data/cells/lg-m50lt-hallemans2025.md)** ·
 [Parameter CSV](../data/parameters/lg-m50lt-hallemans2025.csv) ·
@@ -159,7 +158,7 @@ rows = c.full_cell_data(test["id"], normalized=True)
 ```
 
 The local viewer's cell ZIP includes original MATs, script evidence, EIS CSV,
-normalized drive cycle, parameter metadata and license notice. GitHub direct
-links above work for signed-in users with repository access. Reproduction:
+normalized drive cycle, parameter metadata and license notice. The GitHub
+links above point to the repository files. Reproduction:
 `python scripts/seed_hallemans.py` uses packaged evidence; a full catalog rebuild
 uses `python scripts/seed_v01.py --download` with checksum-pinned sources.

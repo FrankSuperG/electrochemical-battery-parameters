@@ -24,10 +24,10 @@ The project curates parameters and associated experiments. Model simulation,
 parameter fitting and model validation are outside its scope. Published fitted
 values are welcome when their source definitions and evidence are retained.
 
-Open an issue or pull request when repository access permits. If access is
-restricted, invited collaborators can use those routes and other researchers
-can email [Feng Guo](mailto:feng.guo@vito.be) with a source link or contribution
-inquiry. The same templates support either workflow.
+Open an issue or pull request on GitHub for a source suggestion or a proposed
+change. For collaboration or a question about unpublished material, email
+[Feng Guo](mailto:feng.guo@vito.be) before sharing files. The same templates
+support either route.
 
 ## Choose a contribution route
 

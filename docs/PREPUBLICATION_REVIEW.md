@@ -9,7 +9,7 @@ Scope: repository content, data lineage and matching, distribution completeness,
 GitHub data navigation, usage examples and a new source search. The reviewed
 baseline was `a2916ae8aa67d8989cdc0aa4746b312cecc58b9e`. Visibility changes,
 website deployment and independent electrochemical model validation are outside
-this review. The repository remains restricted until its owner changes access.
+this review. At that point the repository was restricted.
 
 ## Assessment
 

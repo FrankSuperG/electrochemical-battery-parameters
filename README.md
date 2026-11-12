@@ -16,6 +16,8 @@ Find **GITT** (galvanostatic intermittent titration) diffusion and exchange-curr
 
 **Project scope:** curate, document and export electrochemical model parameters. Full-cell tests provide supporting references for those parameters. Model simulation, parameter fitting and model validation are outside this repository's scope. Full-cell tests are retained as source observations with matching evidence; no model-performance results are reported.
 
+**Reuse:** original E-BatP code and documentation are [MIT licensed](LICENSE). Bundled data and third-party implementations retain their [source-specific licenses](DATA_LICENSES.md).
+
 **v0.16.0: 90 electrode-curve records · 13 material labels · 1,041 other parameter records · 51 supporting full-cell branch/test files · 19 cell or study entries.** Curves comprise 62 measured pseudo-OCP branches, 7 published tables/fits, 19 expressions and **2 modeled PD-ECM OCPn tables**. Exported branches/files are not independent cells. Three temperature-rise sidecars and the M50LT frequency-domain evidence table remain additional data. The viewer runs locally; no public hosting workflow is configured.
 
 File-level follow-up: **[OCP-first search: 21 source families and five additions](docs/OCP_FIRST_EXPANSION.md)** · [Panasonic NCR18650B: four sources, tests and ageing](docs/NCR18650B.md) · [original seven-source review](docs/EXTERNAL_FILE_REVIEW.md) · [selected file/container locations](data/full-cell/files.csv). Source-listed filenames, archive-directory evidence and reviewed contents remain separate. OCP, diffusion and kinetics associations are recorded independently.
@@ -178,7 +180,7 @@ The [local viewer guide](docs/VIEWER.md) explains cell-to-OCP/test navigation, p
 
 Run `ebp cells` to find stable cell IDs. Open [the local viewer](http://127.0.0.1:8765). Filter and compare OCPs, switch between cell packages, inspect coverage and parameter origins, and download data with metadata. Choose **Offline bundle ZIP** to download a cell's data, metadata, available originals and licenses together. Use the **Variant** filter to distinguish the Mohtat author model from PyBaMM inputs. The viewer uses local assets, without CDNs, analytics or remote fonts. `ebp serve` binds to `127.0.0.1`; `ebp build-site --output site` only writes static files.
 
-Hosting is optional. Your existing personal GitHub site can coexist with a separate project site. For a private source repository, see [local/offline use and free hosting choices](docs/HOSTING.md); no public deployment has been enabled.
+Website hosting is optional and separate from access to the GitHub repository. See [local/offline use and hosting choices](docs/HOSTING.md). The viewer runs locally; no public website is deployed.
 
 ## Python and CLI
 
@@ -293,7 +295,7 @@ See [data definitions](docs/DATA_MODEL.md), [curation and match decisions](docs/
 
 Help extend the library with OCP curves, diffusion and kinetic parameters, other electrochemical inputs, and matching full-cell tests. **Partial parameter packages and source suggestions are welcome.** Start with the [data contribution template](templates/data-contribution.md) and [CSV templates](templates/README.md), or use the [short source suggestion template](.github/ISSUE_TEMPLATE/source-suggestion.md) to recommend a paper or dataset. The templates ask for sources, reuse terms, definitions, cell-match evidence and missing items; they do not require an already complete parameter set.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and import workflow. Open an issue or pull request when repository access permits, or contact the maintainer by email with a contribution or source suggestion.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and import workflow. Open an issue or pull request on GitHub, or contact the maintainer by email with a contribution or source suggestion.
 
 See the [prepublication review](docs/PREPUBLICATION_REVIEW.md) for the current audit scope and remaining limits, and [candidate data sources](docs/DATA_CANDIDATES.md) for newly reviewed leads. Candidate sources are separate from imported catalog records.
 

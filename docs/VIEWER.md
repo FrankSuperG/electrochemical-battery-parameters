@@ -44,8 +44,8 @@ or upload any data.
 
 ## Repository and maintainer
 
-The header and footer link to the GitHub repository. GitHub sign-in and repository
-permission may be required while it remains private. **About Feng** contains the
+The header and footer link to the GitHub repository. Sign in to GitHub to
+submit issues or pull requests. **About Feng** contains the
 maintainer introduction, email, Google Scholar, academic homepage and related
 research projects. Links open their original providers; no background tracking,
 remote fonts or third-party chart libraries are added.

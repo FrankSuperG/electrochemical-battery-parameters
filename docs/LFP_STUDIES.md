@@ -3,7 +3,7 @@
 Curated on 2026-10-17. These are partial source packages with explicit matching
 boundaries. They add **six electrode curves and 35 full-cell branch/array files**,
 not 35 independent cells. No diffusion or intrinsic reaction-kinetic values were
-added. Repository access remains restricted; this import does not publish a site.
+added.
 
 | Package | Electrode curves | Full-cell observations | Association |
 |---|---|---|---|

@@ -6,7 +6,7 @@
 Five belong to harvested Molicel P45B electrodes; two are laboratory graphite
 comparators without a commercial-cell assignment. M50LT third-party OCP and
 the other unresolved TUM inputs remain excluded. No full-cell observations
-are added. Repository visibility remains private.
+are added in this review.
 
 [P45B model index](../data/batteries/molicel-p45b-tum-rehm2026.md) ·
 [Native curve index](../data/ocp/README.md) ·

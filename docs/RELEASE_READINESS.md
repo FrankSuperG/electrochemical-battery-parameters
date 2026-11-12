@@ -115,6 +115,5 @@ scope; this review covers data and software consistency.
   specimen boundaries. Read the [cell index](../data/README.md) and matching
   matrix before assembling a model.
 
-These are stated coverage limits of the public catalog, not hidden replacements
-with invented data. The publication decision belongs to the owner; this task
-keeps the repository private and prepares the reviewed content for that decision.
+These are stated coverage limits of the catalog. This historical review assessed
+the then-private repository before the owner's publication decision.

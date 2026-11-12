@@ -1,7 +1,7 @@
 # Final project review — v0.16.0
 
-Reviewed 2026-10-24. Repository visibility remains **private**. No Pages,
-public deployment or model-performance release is created by this review.
+Reviewed 2026-10-24, while the repository was private. This review records data
+and software checks. The local viewer is separate from GitHub visibility.
 The deliverable is a traceable, partial electrochemical parameter catalog.
 
 Current inventory: **90 OCP/fit records, 1,041 non-OCP records, 19 native

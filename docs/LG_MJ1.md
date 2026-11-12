@@ -2,8 +2,7 @@
 
 Reviewed 2026-10-17 for v0.8.0. **Four pseudo-OCP tables and 42 parameter
 records** are imported. No same-study intact commercial MJ1 full-cell test was
-verified. This is a partial characterization package; repository access remains
-private.
+verified. This is a partial characterization package.
 
 **[Cell and download index](../data/cells/lg-mj1-dlr-sintef.md)** ·
 [Parameters CSV](../data/parameters/lg-mj1-dlr-sintef.csv) ·
