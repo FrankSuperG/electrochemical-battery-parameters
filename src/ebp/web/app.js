@@ -2,7 +2,14 @@
 (() => {
 const $ = id => document.getElementById(id);
 const data = window.EBP_DATA;
-if (!data || !window.EBP_UI) { $("load-status").hidden = false; return; }
+if (!data || !window.EBP_UI) {
+  $("load-status").hidden = false;
+  if (window.location.protocol === "file:" && window.location.pathname.endsWith("/src/ebp/web/index.html")) {
+    $("generated-viewer").href = "../../../site/index.html";
+    $("generated-viewer").hidden = false;
+  }
+  return;
+}
 const ui = window.EBP_UI;
 const saved = new URLSearchParams(window.location.search);
 const plotStates = new Map();
@@ -14,12 +21,9 @@ const measurementLabel = r => r.representation.kind==="expression" ? "Expression
 const coordinateLabel = {stoichiometry:"Stoichiometry θ",normalized_branch_capacity:"Branch throughput",model_soc:"Author model SOC/DOL",source_reported_stoichiometry:"Source-reported electrode coordinate"};
 const directionLabel = {lithiation:"Lithiation", delithiation:"Delithiation", unspecified:"Direction unspecified"};
 const colors = ["#287b78","#c39042","#718db0","#ab7489","#5a9c91","#889a51","#bc7560","#8080ae"];
-const selected = new Set(["bpx-lfp18650-lfp-ocp", "lfp-afshar2017-formula", "sintef-lfp-d07eb6-c3-delithiation"]);
-let detailId = data.records.some(r => r.id === saved.get("ocp")) ? saved.get("ocp") : "bpx-lfp18650-lfp-ocp";
-if (saved.has("compare")) {
-  selected.clear();
-  for (const id of saved.get("compare").split(",")) if (data.records.some(r => r.id === id)) selected.add(id);
-}
+const recordById = new Map(data.records.map(record => [record.id, record]));
+const selected = new Set((saved.get("compare") || "").split(",").filter(id => recordById.has(id)));
+let detailId = recordById.has(saved.get("ocp")) ? saved.get("ocp") : "";
 const sourceLinks = ids => ids.map(id => `<a href="${safeUrl(data.sources[id].url)}" target="_blank" rel="noopener noreferrer">${esc(id)} ↗</a>`).join(" · ");
 const channelLabels={time_s:"Original time coordinate",voltage_V:"Voltage",current_charge_positive_A:"Measured current",cell_temperature_K:"Absolute cell temperature",ambient_temperature_K:"Ambient temperature"};
 const number = value => Math.abs(value) !== 0 && (Math.abs(value) < .001 || Math.abs(value) >= 1e5) ? value.toExponential(5) : String(value);
@@ -27,22 +31,73 @@ const number = value => Math.abs(value) !== 0 && (Math.abs(value) < .001 || Math
 $("total").textContent = data.records.length;
 $("stats").innerHTML = [[data.records.filter(r=>r.representation.kind==="table").length,"Tabulated electrode curves / model potentials"],[data.records.filter(r=>r.representation.kind==="expression").length,"OCP expressions"],[data.parameters.length,"Model parameter records"],[data.full_cell_tests.length,"Full-cell experiment files"]].map(([n,label])=>`<div class="stat"><strong>${n}</strong><span>${esc(label)}</span></div>`).join("");
 
+const ocpFilterIds = ["query", "material", "ocp-cell", "representation", "direction"];
+const ocpSearchText = new Map(data.records.map(r => [r.id, [
+  r.id, r.title, r.material, r.direction, r.reference,
+  data.cells[r.cell_link.cell_id]?.display_name,
+  ...r.source_ids.map(id => `${id} ${data.sources[id]?.title || ""}`),
+].filter(Boolean).join(" ")]));
 function filtered() {
-  const query = $("query").value.toLowerCase().trim();
-  return data.records.filter(r=>(!$("material").value||r.material===$("material").value)&&(!$("ocp-cell").value||($("ocp-cell").value==="material-only"?!r.cell_link.cell_id:r.cell_link.cell_id===$("ocp-cell").value))&&(!$("representation").value||r.representation.kind===$("representation").value)&&(!$("direction").value||r.direction===$("direction").value)&&(!query||JSON.stringify({...r,display_points:undefined}).toLowerCase().includes(query)));
+  const material = $("material").value, cell = $("ocp-cell").value;
+  const kind = $("representation").value, direction = $("direction").value, query = $("query").value;
+  return data.records.filter(r => (!material || r.material === material)
+    && (!cell || (cell === "material-only" ? !r.cell_link.cell_id : r.cell_link.cell_id === cell))
+    && (!kind || r.representation.kind === kind) && (!direction || r.direction === direction)
+    && ui.matchesSearch(ocpSearchText.get(r.id), query));
 }
-function render() {
+function markOcpDetail() {
+  for (const button of $("records").querySelectorAll("[data-detail]")) {
+    const active = button.dataset.detail === detailId;
+    button.setAttribute("aria-pressed", String(active));
+    button.closest(".record").classList.toggle("active-record", active);
+  }
+}
+function renderOcpResults() {
   const rows = filtered();
+  const next = rows.some(r => r.id === detailId) ? detailId : rows[0]?.id || "";
   $("result-count").textContent = `${rows.length} / ${data.records.length}`;
-  $("records").innerHTML = rows.map(r=>`<article class="record ${selected.has(r.id)?"selected":""}"><div class="record-head"><button class="record-title" data-detail="${esc(r.id)}">${esc(r.title)}</button><input aria-label="Compare ${esc(r.id)}" type="checkbox" data-compare="${esc(r.id)}" ${selected.has(r.id)?"checked":""}></div><div class="record-tags"><span class="tag ${r.representation.kind==="expression"?"formula":""}">${esc(measurementLabel(r))}</span><span class="tag">${directionLabel[r.direction]}</span><span class="tag">${esc(coordinateLabel[r.x.kind]||words(r.x.kind))}</span></div><small>${esc(r.id)}</small></article>`).join("")||'<p class="empty">No matching records. Adjust the search or filters.</p>';
-  renderCharts();
+  $("records").innerHTML = rows.map(r => `<article class="record ${selected.has(r.id) ? "selected" : ""}"><div class="record-head"><button class="record-title" data-detail="${esc(r.id)}" aria-controls="detail">${esc(r.title)}</button><label class="compare-choice"><input aria-label="Compare ${esc(r.title)}" type="checkbox" data-compare="${esc(r.id)}" ${selected.has(r.id) ? "checked" : ""}> Compare</label></div><div class="record-tags"><span class="tag ${r.representation.kind === "expression" ? "formula" : ""}">${esc(measurementLabel(r))}</span><span class="tag">${esc(directionLabel[r.direction])}</span><span class="tag">${esc(coordinateLabel[r.x.kind] || words(r.x.kind))}</span></div><small>${esc(r.id)}</small></article>`).join("") || '<p class="empty">No curves match these filters. Try clearing a filter or broadening your search.</p>';
+  if (next !== detailId || !$("detail").hasChildNodes()) {
+    detailId = next;
+    renderDetail();
+  }
+  markOcpDetail();
 }
-$("records").addEventListener("click",event=>{const button=event.target.closest("[data-detail]");if(button){detailId=button.dataset.detail;renderDetail();$("detail").scrollIntoView({behavior:"smooth",block:"nearest"});}});
-$("records").addEventListener("change",event=>{const target=event.target;if(target.dataset.compare){target.checked?selected.add(target.dataset.compare):selected.delete(target.dataset.compare);render();}});
-for(const id of ["query","ocp-cell","representation","direction"]) $(id).addEventListener(id==="query"?"input":"change",render);
-$("material").addEventListener("change",()=>{selected.clear();const rows=filtered();for(const r of rows.filter(r=>r.representation.kind==="expression")) selected.add(r.id);const table=rows.find(r=>r.representation.kind==="table");if(table)selected.add(table.id);if(rows.length){detailId=rows[0].id;renderDetail();}render();});
-$("reset").addEventListener("click",()=>{for(const id of ["query","material","ocp-cell","representation","direction"]) $(id).value="";render();});
-$("clear-selection").addEventListener("click",()=>{selected.clear();render();});
+function focusOnNarrowScreen(element) {
+  if (window.matchMedia("(max-width: 800px)").matches) element.scrollIntoView({block: "nearest"});
+}
+$("records").addEventListener("click", event => {
+  const button = event.target.closest("[data-detail]");
+  if (!button) return;
+  detailId = button.dataset.detail;
+  renderDetail();
+  markOcpDetail();
+  focusOnNarrowScreen($("detail"));
+});
+$("records").addEventListener("change", event => {
+  const input = event.target;
+  if (!input.dataset.compare) return;
+  if (input.checked) selected.add(input.dataset.compare);
+  else selected.delete(input.dataset.compare);
+  refreshComparison();
+});
+for (const id of ocpFilterIds) $(id).addEventListener(id === "query" ? "input" : "change", renderOcpResults);
+$("reset").addEventListener("click", () => {
+  for (const id of ocpFilterIds) $(id).value = "";
+  renderOcpResults();
+});
+$("clear-selection").addEventListener("click", () => {
+  selected.clear();
+  refreshComparison();
+  $("query").focus({preventScroll: true});
+});
+$("selected-curves").addEventListener("click", event => {
+  const button = event.target.closest("[data-remove-curve]");
+  if (!button) return;
+  selected.delete(button.dataset.removeCurve);
+  refreshComparison();
+  ($("selected-curves").querySelector("button") || $("query")).focus({preventScroll: true});
+});
 
 // Each plot uses its actual data domain; BPX operating bounds are not 0..1.
 function forgetPlots(container) {
@@ -92,151 +147,416 @@ document.addEventListener("keydown",event=>{
   const x=event.key==="Home"?state.xmin:event.key==="End"?state.xmax:(state.focusX??state.xmin)+(event.key==="ArrowRight"?1:-1)*(state.xmax-state.xmin)/200;
   inspectPlot(svg,x,true);
 });
-function renderCharts() {
+function refreshComparison() {
+  for (const input of $("records").querySelectorAll("[data-compare]")) {
+    input.checked = selected.has(input.dataset.compare);
+    input.closest(".record").classList.toggle("selected", input.checked);
+  }
   forgetPlots($("charts"));
-  const rows=data.records.filter(r=>selected.has(r.id));
-  $("selected-count").textContent=`${rows.length} selected`;
-  if(!rows.length){$("charts").innerHTML='<p class="empty">Select records to start comparing.</p>';return;}
+  const rows = [...selected].map(id => recordById.get(id)).filter(Boolean);
+  $("selected-count").textContent = `${rows.length} selected`;
+  $("clear-selection").disabled = !rows.length;
+  $("selected-curves").innerHTML = rows.map(r => `<button class="compare-chip" data-remove-curve="${esc(r.id)}" aria-label="Remove ${esc(r.title)} from comparison" title="${esc(r.title)}">${esc(r.id)} <span aria-hidden="true">×</span></button>`).join("");
+  if (!rows.length) {
+    $("charts").innerHTML = '<p class="empty">Tick Compare beside a curve to plot it here.</p>';
+    return;
+  }
   const groups=new Map();
   for(const r of rows){const key=r.x.kind+":"+r.direction+":"+r.material+":"+r.reference+":"+(r.measurement==="model_ocp"?r.id:"observations");if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r);}
   $("charts").innerHTML=[...groups.values()].map(group=>{const first=group[0],stoich=first.x.kind==="stoichiometry";return `<section class="plot"><h3>${esc(first.material)} / ${esc(directionLabel[first.direction])}</h3>${plot(group.map(r=>({label:r.id,points:r.display_points})),coordinateLabel[first.x.kind],first.reference==="Li/Li+"?"Potential / V vs Li/Li⁺":"Half-cell voltage / V (reference unresolved)")}<div class="axis-note">${first.x.kind==="source_reported_stoichiometry"?"Source-reported coordinate; absolute lithium-fraction calibration requires explicit evidence. Native charging/discharging labels do not establish lithiation direction.":first.x.kind==="model_soc"?"Parameterized PD-ECM OCPn on its source model coordinate; not raw measured OCP or verified lithium fraction.":stoich?"Each fit is plotted only inside its catalog domain. Domain limits and validity are documented per record.":"0 → 1 follows the record's defined branch coordinate. Branch endpoints do not establish equal lithium content or chronological acquisition order."}</div></section>`;}).join("");
 }
+const ocpYLabel = r => r.reference === "Li/Li+" ? "Potential / V vs Li/Li⁺" : "Half-cell voltage / V (reference unresolved)";
+function recordDetails(r, showCellLink = false) {
+  const experiment = data.experiments[r.experiment_id];
+  const field = (label, value) => `<div class="field"><strong>${esc(label)}</strong>${value}</div>`;
+  const isTable = r.representation.kind === "table";
+  const jump = showCellLink && r.cell_link.cell_id
+    ? `<button class="text-button" data-open-cell="${esc(r.cell_link.cell_id)}">Open cell package →</button>` : "";
+  return `<h3>${esc(r.title)}</h3><p class="muted compact">${esc(measurementLabel(r))} · ${esc(directionLabel[r.direction])}</p>
+    <div class="actions"><a class="button" href="downloads/${esc(r.id)}.csv" download>${isTable ? "Retained points CSV" : "Sampled formula CSV"}</a><a class="button" href="downloads/${esc(r.id)}.json" download>Metadata JSON</a>${jump}</div>
+    <details class="record-evidence"><summary>Coordinate, source and limitations</summary><div class="detail-grid">
+    ${field("Coordinate & domain", esc(r.x.definition) + `<br>[${esc(r.x.domain.join(", "))}] · ${esc(r.x.domain_basis)}`)}
+    ${field("Cell match", esc(r.cell_link.evidence))}
+    ${field("Conditions", esc(experiment ? experiment.protocol + (experiment.cycle_selected != null ? " · Cycle " + experiment.cycle_selected : "") + " · " + r.temperature.description : r.temperature.description))}
+    ${field("Data representation", esc(isTable ? `${r.representation.point_count} retained table points (${words(r.measurement)})` : "Expression; original measured points not supplied"))}
+    ${field("Sources", sourceLinks(r.source_ids))}
+    ${field("License", `<a href="${esc(r.license_url)}">${esc(r.license)}</a>`)}
+    ${field("Limits", '<ul>' + r.limitations.map(v => `<li>${esc(v)}</li>`).join("") + "</ul>")}
+    ${field("Provenance", `<code>${esc(r.provenance.location)}</code><br>${esc(r.provenance.derivation)}`)}</div>
+    ${isTable ? "" : `<div class="formula-text">${esc(r.representation.expression)}<br><small>x follows the coordinate definition above. The 2001-point CSV is a numerical sample.</small></div>`}</details>`;
+}
 function renderDetail() {
-  const r=data.records.find(r=>r.id===detailId),experiment=data.experiments[r.experiment_id];
-  const field=(label,value)=>`<div class="field"><strong>${esc(label)}</strong>${value}</div>`;
-  $("detail").innerHTML=`<div class="detail-top"><div><div class="eyebrow">RECORD / ${esc(r.id)}</div><h2>${esc(r.title)}</h2></div><div class="actions"><a class="button" href="downloads/${esc(r.id)}.csv" download>${r.representation.kind==="expression"?"Sampled formula CSV":"Retained points CSV"}</a><a class="button" href="downloads/${esc(r.id)}.json" download>Metadata JSON</a></div></div><div class="detail-grid">${field("Coordinate & domain",esc(r.x.definition)+`<br>[${r.x.domain.join(", ")}] · `+esc(r.x.domain_basis))}${field("Cell match",esc(r.cell_link.evidence)+(r.cell_link.cell_id?`<br><button class="text-button" data-open-cell="${esc(r.cell_link.cell_id)}">Open cell parameters &amp; supporting tests →</button>`:""))}${field("Conditions",esc(experiment?experiment.protocol+(experiment.cycle_selected!==null&&experiment.cycle_selected!==undefined?" · Cycle "+experiment.cycle_selected:"")+" · "+r.temperature.description:r.temperature.description))}${field("Data representation",esc((r.representation.kind==="table"?r.representation.point_count+" retained table points ("+words(r.measurement)+")":"Expression; original measured points not supplied")))}${field("Sources",sourceLinks(r.source_ids))}${field("License",`<a href="${esc(r.license_url)}">${esc(r.license)}</a>`)}${field("Limits",'<ul>'+r.limitations.map(v=>`<li>${esc(v)}</li>`).join("")+"</ul>")}${field("Provenance",`<code>${esc(r.provenance.location)}</code><br>${esc(r.provenance.derivation)}`)}</div>${r.representation.kind==="expression"?`<div class="formula-text">${esc(r.representation.expression)}<br><small>x = θ; the 2001-point CSV is a numerical sample, not experimental data.</small></div>`:""}`;
+  const record = recordById.get(detailId);
+  $("detail").hidden = !record;
+  $("detail").innerHTML = record ? recordDetails(record, true) : "";
 }
 $("source-cards").innerHTML=Object.entries(data.sources).map(([id,s])=>`<article class="source-card"><span class="tag">${esc(s.kind)} · ${esc(s.year)}</span><h3>${esc(s.title)}</h3><p>${esc(s.authors.join(", "))}</p><p>${esc(s.role)}</p><a href="${safeUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(id)} ↗</a></article>`).join("");
 
-const preferredCells=["a123-amp20m1hd-a","haidi-hdcf18650-1800-rehm2025","bpx-lfp-18650-2ah-undisclosed","lg-m50"];
-const cellOrder=[...preferredCells.filter(id=>data.cells[id]),...Object.keys(data.cells).filter(id=>!preferredCells.includes(id)).sort()];
-const materialNames=[...new Set(data.records.map(r=>r.material))].sort((a,b)=>a.localeCompare(b));
-$("material").innerHTML='<option value="">All materials</option>'+materialNames.map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join("");
-$("material").value="LFP";
-$("ocp-cell").innerHTML+='<option value="material-only">Material-only studies</option>'+Object.entries(data.cells).filter(([id])=>data.records.some(r=>r.cell_link.cell_id===id)).map(([id,cell])=>`<option value="${esc(id)}">${esc(cell.display_name)}</option>`).join("");
-const cellFamilies=[...new Set(Object.values(data.cell_material_families))].sort();
-$("cell-material").innerHTML='<option value="">All materials</option>'+cellFamilies.map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join("");
+const cellTabs = ["parameters", "ocp", "experiments", "evidence"];
+const cells = Object.entries(data.cells).map(([id, value]) => ({
+  id, name: value.display_name, family: data.cell_material_families[id],
+})).sort((a, b) => a.name.localeCompare(b.name));
+const cellPackages = new Map(cells.map(({id}) => [id, {
+  cell: data.cells[id],
+  parameters: data.parameters.filter(p => p.cell_id === id),
+  curves: data.records.filter(r => r.cell_link.cell_id === id),
+  traces: data.full_cell_tests.filter(t => t.cell_id === id),
+  sources: ui.linkedSources(data.external_datasets, id),
+}]));
+const parameterById = new Map(data.parameters.map(p => [p.id, p]));
+const savedCell = saved.get("cell");
+let activeCell = cellPackages.has(savedCell) ? savedCell : cellPackages.has("lg-m50") ? "lg-m50" : cells[0]?.id;
+let activeTab = cellTabs.includes(saved.get("cell_tab")) ? saved.get("cell_tab") : "parameters";
+let activeParameter = "";
+const cellViews = new Map();
+if (activeCell && activeCell === savedCell) cellViews.set(activeCell, {
+  category: saved.get("category"), variant: saved.get("variant"), query: saved.get("pq") || "",
+  parameter: saved.get("parameter") || "", curve: saved.get("cell_ocp"), sample: saved.get("sample"),
+});
+const optionsMarkup = (values, label) => values.map(value => `<option value="${esc(value)}">${esc(label(value))}</option>`).join("");
+function restoreSelect(id, value) {
+  if (value != null && [...$(id).options].some(option => option.value === value)) $(id).value = value;
+}
+const materialNames = [...new Set(data.records.map(r => r.material))].sort((a, b) => a.localeCompare(b));
+$("material").innerHTML += optionsMarkup(materialNames, x => x);
+$("ocp-cell").innerHTML += '<option value="material-only">Material-only studies</option>'
+  + optionsMarkup(cells.filter(x => cellPackages.get(x.id).curves.length).map(x => x.id), id => data.cells[id].display_name);
+$("cell-material").innerHTML += optionsMarkup([...new Set(cells.map(x => x.family))].sort(), x => x);
 function renderCellChoices() {
-  const prior=$("cell-select").value,family=$("cell-material").value;
-  const ids=cellOrder.filter(id=>!family||data.cell_material_families[id]===family);
-  $("cell-select").innerHTML=ids.map(id=>`<option value="${esc(id)}">${esc(data.cells[id].display_name)}</option>`).join("");
-  if(ids.includes(prior))$("cell-select").value=prior;
+  const matches = ui.filterCells(cells, {family: $("cell-material").value, query: $("cell-query").value});
+  const available = matches.some(x => x.id === activeCell);
+  $("cell-select").innerHTML = `<option value="" disabled>${matches.length ? "Choose a matching cell or study" : "No matching cells"}</option>`
+    + matches.map(x => `<option value="${esc(x.id)}">${esc(x.name)}</option>`).join("");
+  $("cell-select").value = available ? activeCell : "";
+  $("cell-select").disabled = !matches.length;
+  $("cell-content").hidden = !available;
+  $("cell-choice-status").textContent = !matches.length ? "No matching cells or studies. Clear a filter or broaden your search."
+    : matches.length === 1 && !available ? "1 match · press Enter or choose the cell to open it"
+    : `${matches.length} ${matches.length === 1 ? "match" : "matches"}${available ? "" : " · choose a cell to open its package"}`;
 }
-$("cell-material").addEventListener("change",()=>{renderCellChoices();renderCell();});
-renderCellChoices();
+function showCellTab(tab, focus = false) {
+  if (!cellTabs.includes(tab)) return;
+  activeTab = tab;
+  for (const name of cellTabs) {
+    const button = $("cell-tab-" + name), on = name === tab;
+    button.setAttribute("aria-selected", String(on));
+    button.tabIndex = on ? 0 : -1;
+    $("cell-panel-" + name).hidden = !on;
+  }
+  if (focus) $("cell-tab-" + tab).focus({preventScroll: true});
+}
+$("cell-tabs").addEventListener("click", event => {
+  const tab = event.target.closest("[data-cell-tab]");
+  if (tab) showCellTab(tab.dataset.cellTab);
+});
+$("cell-tabs").addEventListener("keydown", event => {
+  const tab = event.target.closest("[data-cell-tab]");
+  const next = tab && ui.nextTab(cellTabs, tab.dataset.cellTab, event.key);
+  if (!next) return;
+  event.preventDefault();
+  showCellTab(next, true);
+});
+function currentCellView() {
+  return {
+    category: $("parameter-category").value, variant: $("parameter-variant").value,
+    query: $("parameter-query").value, parameter: activeParameter,
+    curve: $("cell-ocp-select").value, sample: $("test-sample").value,
+  };
+}
+function openCell(id) {
+  if (!cellPackages.has(id) || id === activeCell) return;
+  if (activeCell) cellViews.set(activeCell, currentCellView());
+  activeCell = id;
+  renderCell();
+  renderCellChoices();
+}
+$("cell-query").addEventListener("input", renderCellChoices);
+$("cell-query").addEventListener("keydown", event => {
+  if (event.key !== "Enter" || event.isComposing) return;
+  const choices = [...$("cell-select").options].filter(option => !option.disabled);
+  if (!choices.length) return;
+  event.preventDefault();
+  if (choices.length === 1) {
+    openCell(choices[0].value);
+    showCellTab(activeTab, true);
+  } else {
+    $("cell-select").focus();
+  }
+});
+$("cell-material").addEventListener("change", renderCellChoices);
+$("cell-select").addEventListener("change", event => openCell(event.target.value));
+function defaultVariant(parameters) {
+  return parameters.some(p => p.conditions?.parameterization_variant === "original_author_mpm") ? "original_author_mpm" : "";
+}
 function renderCell() {
-  const id=$("cell-select").value,cell=data.cells[id],parameters=data.parameters.filter(p=>p.cell_id===id),tests=data.full_cell_tests.filter(t=>t.cell_id===id);
-  $("cell-title").textContent=cell.display_name;
-  $("cell-context").textContent=cell.model_context||"DFN / SPM / SPMe reference parameterization";
-  $("cell-match").innerHTML=`<b>Match: ${esc(words(cell.match_level))}.</b> ${esc(cell.match_evidence)}`;
-  $("cell-note").innerHTML=esc(cell.note)+(cell.external_ocp_references?'<br>'+cell.external_ocp_references.map(r=>`<a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">External pseudo-OCV workbook ↗</a> · ${esc(r.status)}`).join("<br>"):"");
-  const ocp=data.records.filter(r=>r.cell_link.cell_id===id),sources=ui.linkedSources(data.external_datasets,id);
-  $("cell-ocp-links").innerHTML=`<h3>Electrode OCP · ${ocp.length} records</h3>`+(ocp.length?'<div class="record-links">'+ocp.map(r=>`<button class="secondary" data-open-ocp="${esc(r.id)}">${esc(r.material)} · ${esc(words(r.direction))}<small>${esc(r.id)}</small></button>`).join("")+"</div>":'<p class="muted compact">No electrode OCP admitted for this package. Read the source and permission gaps below.</p>');
-  $("cell-test-references").innerHTML=`<h3>Linked external test sources · ${sources.length}</h3>`+(sources.length?'<div class="source-shortcuts">'+sources.map(source=>`<button class="source-shortcut" data-open-source="${esc(source.id)}"><b>${esc(source.title)}</b><span>${esc(words(source.parameter_link.match_level))} · ${esc(source.test_types.map(words).join(", "))}</span><span>Inspect source files, matching and gaps →</span></button>`).join("")+"</div>":'<p class="muted compact">No reviewed external test source is associated with these parameter records. Retained local observations, when available, appear below.</p>');
-  $("parameter-query").value="";
-  $("cell-coverage").innerHTML=Object.entries(cell.coverage).map(([k,v])=>`<div><b>${esc(k==="ocp"?"OCP":words(k))}</b><span>${esc(v)}</span></div>`).join("");
-  $("cell-evidence").innerHTML=`<details open><summary>Evidence and missing items</summary><div class="evidence-scroll"><table class="parameter-table"><thead><tr><th>Component</th><th>Match / origin</th><th>Sources and gaps</th></tr></thead><tbody>${Object.entries(cell.evidence_matrix||{}).map(([key,row])=>`<tr><td>${esc(words(key))}<small class="condition">${row.record_ids.length} records</small></td><td><b>${esc(words(row.match_level))}</b><br>${esc(row.evidence)}</td><td>${sourceLinks(row.source_ids)}<br>${row.missing_items.map(esc).join("<br>")}</td></tr>`).join("")}</tbody></table></div><p class="compact">Cell gaps: ${(cell.missing_items||[]).map(esc).join(" · ")}</p></details>`;
-  $("cell-downloads").innerHTML=(parameters.length?`<a class="button" href="downloads/${id}-parameters.csv" download>Parameters CSV · all variants</a>`:"")+`<a class="button" href="downloads/${id}-parameters.json" download>Cell package JSON</a><a class="button" href="downloads/${id}-bundle.zip" download>Offline bundle ZIP</a>`;
-  $("parameter-category").innerHTML='<option value="">All parameters</option>'+[...new Set(parameters.map(p=>p.category))].sort().map(c=>`<option value="${esc(c)}">${esc(words(c))}</option>`).join("");
-  $("parameter-variant").innerHTML='<option value="">All variants</option>'+[...new Set(parameters.map(p=>p.conditions?.parameterization_variant).filter(Boolean))].map(v=>`<option value="${esc(v)}">${esc(words(v))}</option>`).join("");
-  if(parameters.some(p=>p.conditions?.parameterization_variant==="original_author_mpm")) $("parameter-variant").value="original_author_mpm";
-  $("parameter-detail").innerHTML="";
-  $("test-sample").innerHTML=tests.map(t=>`<option value="${esc(t.id)}">${esc(t.id)}</option>`).join("");
-  $("test-sample").disabled=!tests.length;
-  renderParameters();renderFullCell();
+  const {cell, parameters, curves, traces, sources} = cellPackages.get(activeCell);
+  const view = cellViews.get(activeCell) || {};
+  $("cell-title").textContent = cell.display_name;
+  $("cell-context").textContent = cell.model_context || "DFN / SPM / SPMe reference parameterization";
+  $("tab-count-parameters").textContent = parameters.length;
+  $("tab-count-ocp").textContent = curves.length;
+  $("tab-count-experiments").textContent = traces.length + sources.length;
+  $("cell-tab-experiments").setAttribute("aria-label", `Experiments: ${traces.length} stored trace files, ${sources.length} external sources`);
+  $("cell-match").innerHTML = `<b>Match: ${esc(words(cell.match_level))}.</b> ${esc(cell.match_evidence)}`;
+  $("cell-note").innerHTML = esc(cell.note) + (cell.external_ocp_references ? '<br>' + cell.external_ocp_references.map(r => `<a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">External pseudo-OCV workbook ↗</a> · ${esc(r.status)}`).join("<br>") : "");
+  $("cell-coverage").innerHTML = Object.entries(cell.coverage).map(([k, v]) => `<div><b>${esc(k === "ocp" ? "OCP" : words(k))}</b><span>${esc(v)}</span></div>`).join("");
+  $("cell-evidence").innerHTML = `<h4>Evidence and missing items</h4><div class="evidence-scroll"><table class="parameter-table"><thead><tr><th scope="col">Component</th><th scope="col">Match / origin</th><th scope="col">Sources and gaps</th></tr></thead><tbody>${Object.entries(cell.evidence_matrix || {}).map(([key, row]) => `<tr><td>${esc(words(key))}<small class="condition">${row.record_ids.length} records</small></td><td><b>${esc(words(row.match_level))}</b><br>${esc(row.evidence)}</td><td>${sourceLinks(row.source_ids)}<br>${row.missing_items.map(esc).join("<br>")}</td></tr>`).join("")}</tbody></table></div><p class="compact">Cell gaps: ${(cell.missing_items || []).map(esc).join(" · ")}</p>`;
+  $("cell-downloads").innerHTML = (parameters.length ? `<a class="button" href="downloads/${esc(activeCell)}-parameters.csv" download>All parameters CSV</a>` : "") + `<a class="button" href="downloads/${esc(activeCell)}-parameters.json" download>Cell package JSON</a><a class="button" href="downloads/${esc(activeCell)}-bundle.zip" download>Offline bundle ZIP</a>`;
+  $("cell-downloads").parentElement.open = false;
+  const categories = [...new Set(parameters.map(p => p.category))].sort();
+  const variants = [...new Set(parameters.map(p => p.conditions?.parameterization_variant).filter(Boolean))];
+  $("parameter-category").innerHTML = '<option value="">All categories</option>' + optionsMarkup(categories, words);
+  $("parameter-variant").innerHTML = '<option value="">All variants</option>' + optionsMarkup(variants, words);
+  $("parameter-category").disabled = !categories.length;
+  $("parameter-variant").disabled = !variants.length;
+  $("parameter-query").disabled = !parameters.length;
+  $("parameter-variant").value = defaultVariant(parameters);
+  restoreSelect("parameter-category", view.category);
+  restoreSelect("parameter-variant", view.variant);
+  $("parameter-query").value = view.query || "";
+  activeParameter = view.parameter || "";
+  $("cell-ocp-select").innerHTML = optionsMarkup(curves.map(r => r.id), id => {
+    const r = recordById.get(id);
+    return `${r.material} · ${directionLabel[r.direction]} · ${r.title}`;
+  });
+  restoreSelect("cell-ocp-select", view.curve);
+  $("test-sample").innerHTML = traces.map(t => `<option value="${esc(t.id)}">${esc(t.sample_id || t.id)} · ${esc(t.protocol.split(";")[0])}</option>`).join("");
+  restoreSelect("test-sample", view.sample);
+  $("cell-test-references").innerHTML = `<h4>External test references · ${sources.length}</h4>` + (sources.length
+    ? sources.map(source => `<details class="linked-experiment"><summary>${esc(source.title)} <span class="tag">${esc(words(source.parameter_link.match_level))}</span></summary><p>${esc(source.parameter_link.evidence)}</p><p><b>Tests:</b> ${esc(source.test_types.map(words).join(", "))} · <b>Temperature labels:</b> ${esc(source.temperatures_C.length ? source.temperatures_C.join(", ") + " °C" : "Not verified")}</p><div class="actions"><a class="button" href="${safeUrl(source.source.url)}" target="_blank" rel="noopener noreferrer">Open original dataset ↗</a><a class="button" href="${safeUrl(source.license.evidence_url)}" target="_blank" rel="noopener noreferrer">${esc(source.license.identifier)} ↗</a></div>${renderDatasetFileLocations(source)}</details>`).join("")
+    : '<p class="muted compact">No reviewed external test source is linked to this package.</p>');
+  renderParameters();
+  renderCellOcp();
+  renderFullCell();
+  showCellTab(activeTab);
 }
+function renderCellOcp() {
+  forgetPlots($("cell-ocp-chart"));
+  const record = recordById.get($("cell-ocp-select").value);
+  $("cell-ocp-control").hidden = !record;
+  $("cell-ocp-chart").innerHTML = record
+    ? plot([{label: record.id, points: record.display_points}], coordinateLabel[record.x.kind] || words(record.x.kind), ocpYLabel(record))
+    : '<p class="empty">No electrode OCP is stored for this package. See Evidence for source and reuse gaps.</p>';
+  $("cell-ocp-detail").innerHTML = record ? recordDetails(record) : "";
+}
+$("cell-ocp-select").addEventListener("change", renderCellOcp);
+$("compare-cell-ocp").addEventListener("click", () => {
+  const r = recordById.get($("cell-ocp-select").value);
+  if (!r) return;
+  selected.add(r.id);
+  for (const id of ocpFilterIds) $(id).value = "";
+  $("ocp-cell").value = r.cell_link.cell_id;
+  detailId = r.id;
+  renderOcpResults();
+  renderDetail();
+  refreshComparison();
+  goTo("library");
+});
 function visibleParameters() {
-  return ui.filterParameters(data.parameters,{cell:$("cell-select").value,variant:$("parameter-variant").value,category:$("parameter-category").value,query:$("parameter-query").value});
+  return ui.filterParameters(cellPackages.get(activeCell).parameters, {
+    cell: activeCell, variant: $("parameter-variant").value,
+    category: $("parameter-category").value, query: $("parameter-query").value,
+  });
+}
+function renderParameterDetail(p) {
+  const target = $("parameter-detail");
+  if (target.dataset.parameter === (p?.id || "")) return;
+  target.dataset.parameter = p?.id || "";
+  if (!p) {
+    target.innerHTML = '<h4>Parameter details</h4><p>Choose a parameter to see its definition, conditions, sources and limitations.</p>';
+    return;
+  }
+  const rep = p.representation;
+  const conditions = Object.entries(p.conditions || {}).map(([key, value]) => `<dt>${esc(words(key))}</dt><dd>${esc(value && typeof value === "object" ? JSON.stringify(value) : value)}</dd>`).join("");
+  target.innerHTML = `<h4>${esc(p.name)}</h4><p>${esc(p.definition || p.name)}</p><p><b>Origin:</b> ${esc(words(p.provenance.origin_status))} · <b>License:</b> ${esc(p.license)}</p><code>${esc(rep.kind === "expression" ? rep.expression : p.provenance.location)}</code>
+    ${rep.kind === "expression" ? `<p><b>Inputs:</b> ${esc(JSON.stringify(rep.variables))}<br><b>Domain:</b> ${esc(rep.domain)}</p>` : ""}
+    ${rep.kind === "table" ? `<p>${esc(rep.x.definition)}<br>Input: ${esc(rep.x.variable)} / ${esc(rep.x.unit)} · Domain: ${esc(rep.x.domain.join(" to "))}<br>Linear interpolation; extrapolation disabled.</p><a class="button" href="downloads/${esc(rep.path.split("/").pop())}" download>Native parameter table CSV</a>` : ""}
+    ${conditions ? `<dl>${conditions}</dl>` : ""}<p>${sourceLinks(p.source_ids)}</p><p>${p.limitations.map(esc).join("<br>")}</p>`;
+}
+function markParameter() {
+  for (const button of $("parameter-rows").querySelectorAll("[data-parameter]")) {
+    const active = button.dataset.parameter === activeParameter;
+    button.setAttribute("aria-pressed", String(active));
+    button.closest("tr").classList.toggle("active-parameter", active);
+  }
 }
 function renderParameters() {
-  const rows=visibleParameters();
-  $("export-parameters").disabled=!rows.length;
-  $("parameter-detail").textContent="";
-  $("parameter-count").textContent=`${rows.length} records`;
-  $("parameter-rows").innerHTML=rows.map(p=>`<tr><td><button data-parameter="${esc(p.id)}">${esc(p.name)}</button>${p.conditions?.cell_SOC_fraction!==undefined?`<small class="condition">Cell SOC ${(p.conditions.cell_SOC_fraction*100).toFixed(0)}%</small>`:""}</td><td>${p.representation.kind==="scalar"?esc(number(p.representation.value)):p.representation.kind==="table"?`Table · ${p.representation.point_count} nodes`:"Function"}</td><td>${esc(p.unit)}</td></tr>`).join("")||'<tr><td colspan="3">No parameter values imported for this family. See coverage gaps above.</td></tr>';
+  const rows = visibleParameters(), {parameters} = cellPackages.get(activeCell);
+  if (!rows.some(p => p.id === activeParameter)) activeParameter = "";
+  $("export-parameters").disabled = !rows.length;
+  $("export-parameters").textContent = rows.length ? `Export ${rows.length} matching ${rows.length === 1 ? "row" : "rows"} (CSV)` : "Export matching CSV";
+  $("reset-parameters").disabled = !parameters.length || (!$("parameter-query").value && !$("parameter-category").value && $("parameter-variant").value === defaultVariant(parameters));
+  $("parameter-count").textContent = `${rows.length} of ${parameters.length} parameter rows`;
+  $("parameter-rows").innerHTML = rows.map(p => `<tr><td><button data-parameter="${esc(p.id)}" aria-controls="parameter-detail">${esc(p.name)}</button>${p.conditions?.cell_SOC_fraction !== undefined ? `<small class="condition">Cell SOC ${(p.conditions.cell_SOC_fraction * 100).toFixed(0)}%</small>` : ""}</td><td>${p.representation.kind === "scalar" ? esc(number(p.representation.value)) : p.representation.kind === "table" ? `Table · ${p.representation.point_count} nodes` : "Function"}</td><td>${esc(p.unit)}</td></tr>`).join("")
+    || `<tr><td colspan="3">${parameters.length ? "No rows match these filters. Try Reset filters." : "No model parameters are stored. See the OCP or Evidence tab."}</td></tr>`;
+  markParameter();
+  renderParameterDetail(parameterById.get(activeParameter));
 }
-$("parameter-rows").addEventListener("click",event=>{const button=event.target.closest("[data-parameter]");if(!button)return;const p=data.parameters.find(p=>p.id===button.dataset.parameter);$("parameter-detail").innerHTML=`<b>${esc(p.name)}</b><p>${esc(p.definition||p.name)}</p><p>Origin: ${esc(p.provenance.origin_status)}</p><code>${esc(p.representation.kind==="expression"?p.representation.expression:p.provenance.location)}</code>${p.representation.kind==="expression"?`<p>Inputs: ${esc(JSON.stringify(p.representation.variables))}</p><p>Domain: ${esc(p.representation.domain)}</p>`:""}${p.representation.kind==="table"?`<p>${esc(p.representation.x.definition)}<br>Input: ${esc(p.representation.x.variable)} / ${esc(p.representation.x.unit)} · Domain: ${esc(p.representation.x.domain.join(" to "))}<br>Linear interpolation; extrapolation disabled.</p><a class="button" href="downloads/${esc(p.representation.path.split("/").pop())}" download>Native parameter table CSV</a>`:""}<p>Conditions: ${esc(JSON.stringify(p.conditions||{}))}</p><p>${sourceLinks(p.source_ids)}</p><p>${p.limitations.map(esc).join("<br>")}</p>`;});
+$("parameter-rows").addEventListener("click", event => {
+  const button = event.target.closest("[data-parameter]");
+  if (!button) return;
+  activeParameter = button.dataset.parameter;
+  markParameter();
+  renderParameterDetail(parameterById.get(activeParameter));
+  focusOnNarrowScreen($("parameter-detail"));
+});
+for (const id of ["parameter-category", "parameter-variant", "parameter-query"]) {
+  $(id).addEventListener(id === "parameter-query" ? "input" : "change", renderParameters);
+}
+$("reset-parameters").addEventListener("click", () => {
+  $("parameter-query").value = "";
+  $("parameter-category").value = "";
+  $("parameter-variant").value = defaultVariant(cellPackages.get(activeCell).parameters);
+  renderParameters();
+  $("parameter-query").focus({preventScroll: true});
+});
+$("export-parameters").addEventListener("click", () => {
+  const rows = visibleParameters();
+  if (!rows.length) return;
+  const url = URL.createObjectURL(new Blob([ui.parameterCSV(rows)], {type: "text/csv;charset=utf-8"}));
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = activeCell + "-filtered-parameters.csv";
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+
 function renderFullCell() {
   forgetPlots($("fullcell-chart"));
   const test=data.full_cell_tests.find(t=>t.id===$("test-sample").value);
-  if(!test){$("test-description").textContent="No retained local full-cell observations for this parameter package. Check its linked external test sources above.";$("fullcell-chart").innerHTML='<p class="empty">Full-cell test coverage gap</p>';$("test-downloads").innerHTML="";$("test-note").textContent="This package retains an explicit test coverage gap.";return;}
+  $("test-toolbar").hidden = !test;
+  $("test-note-panel").hidden = !test;
+  $("test-note-panel").open = false;
+  if (!test) {
+    $("test-description").textContent = "No full-cell trace is stored for this package. Any reviewed external sources are listed separately.";
+    $("fullcell-chart").replaceChildren();
+    $("test-downloads").replaceChildren();
+    $("test-note").textContent = "";
+    return;
+  }
   $("test-description").textContent=test.protocol+". "+words(test.observation_kind)+". Voltage observations; no model prediction overlay.";
   $("fullcell-chart").innerHTML=plot(test.preview_segments,test.independent_variable?.label||"Time from trace / segment start / h","Full-cell voltage / V");
   const asset=data.assets[test.asset_id];
   $("test-downloads").innerHTML=(test.original_download_path?`<a class="button" href="downloads/${esc(test.original_download_path.split("/").pop())}" download>Original ${esc(test.original_format)}</a>`:test.path?`<a class="button" href="downloads/${esc(test.path.split("/").pop())}" download>Original CSV</a>`:`<a class="button" href="${safeUrl(asset.url)}" target="_blank" rel="noopener noreferrer">Original ${test.original_member?"ZIP":"MAT"} ↗</a>`)+`<a class="button" href="downloads/${esc(test.normalized_path.split("/").pop())}" download>Normalized CSV</a>`+(test.sidecars||[]).map(side=>`<a class="button" href="downloads/${esc(side.path.split("/").pop())}" download>Temperature rise CSV</a><a class="button" href="downloads/${esc(side.original_download_path.split("/").pop())}" download>Original rise TXT</a>`).join("");
   $("test-note").innerHTML=`${test.row_count.toLocaleString()} source rows retained. Display is decimated; valid voltage points only. Current: ${esc(words(test.basic_test.current_measurement))}. ${esc(test.temperature_definition||"Cell and ambient temperature retained from the instrument file.")}<br>${esc(test.missing_values?"Missing rows: "+Object.entries(test.missing_values).map(([key,value])=>(channelLabels[key]||words(key))+": "+value.toLocaleString()).join(" · "):"No missing values introduced.")}<br>${(test.source_issues||[]).map(esc).join("<br>")}<br>Missing items: ${(test.missing_items||[]).map(esc).join(" · ")||"See cell evidence matrix"}<br>Channels: ${Object.entries(test.channel_availability).map(([key,value])=>esc((channelLabels[key]||words(key))+": "+value.present_rows.toLocaleString()+"/"+value.total_rows.toLocaleString()+" rows")).join(" · ")}<br>${sourceLinks([test.source_id,...(test.scientific_source_ids||[])])}${test.source_id==="pybamm-data-1-0-2"?' · <a href="licenses/PyBaMM-data-BSD-3-Clause.txt">Data license notice</a>':""} · Original SHA-256: <code>${esc(asset.sha256)}</code>`;
 }
-$("cell-select").addEventListener("change",renderCell);
-$("parameter-category").addEventListener("change",renderParameters);
-$("parameter-variant").addEventListener("change",renderParameters);
-$("parameter-query").addEventListener("input",renderParameters);
-$("export-parameters").addEventListener("click",()=>{
-  const rows=visibleParameters();if(!rows.length)return;
-  const url=URL.createObjectURL(new Blob([ui.parameterCSV(rows)],{type:"text/csv;charset=utf-8"}));
-  const a=document.createElement("a");a.href=url;a.download=$("cell-select").value+"-filtered-parameters.csv";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-});
-$("test-sample").addEventListener("change",renderFullCell);
-function restoreSelect(id,key) { const value=saved.get(key);if(value!==null&&[...$(id).options].some(option=>option.value===value))$(id).value=value; }
-restoreSelect("material","material");restoreSelect("ocp-cell","ocp_cell");restoreSelect("representation","repr");restoreSelect("direction","direction");
-if(saved.has("ocp")&&!saved.has("material"))$("material").value=data.records.find(r=>r.id===detailId).material;
-$("query").value=saved.get("query")||"";
-restoreSelect("cell-material","cell_family");renderCellChoices();restoreSelect("cell-select","cell");
-render();renderDetail();renderCell();
-restoreSelect("parameter-category","category");restoreSelect("parameter-variant","variant");$("parameter-query").value=saved.get("pq")||"";renderParameters();
-restoreSelect("test-sample","sample");renderFullCell();
+$("test-sample").addEventListener("change", renderFullCell);
 
 // External dataset filters inspect metadata only. No remote payload is fetched.
-const datasets=data.external_datasets;
-$("dataset-cell").innerHTML+=cellOrder.filter(id=>ui.linkedSources(datasets,id).length).map(id=>`<option value="${esc(id)}">${esc(data.cells[id].display_name)}</option>`).join("");
-$("dataset-cell").addEventListener("change",renderDatasets);
-for(const [id,values] of [
-  ["dataset-material",[...new Set(datasets.flatMap(r=>r.material_families))]],
-  ["dataset-type",[...new Set(datasets.flatMap(r=>r.test_types))]],
-  ["dataset-profile",[...new Set(datasets.flatMap(r=>r.profiles))]],
-  ["dataset-aging",[...new Set(datasets.map(r=>r.aging_data.status))]],
+const datasets = data.external_datasets;
+const datasetById = new Map(datasets.map(r => [r.id, r]));
+const datasetSearchText = new Map(datasets.map(r => [r.id, JSON.stringify(r)]));
+const datasetFilterIds = ["dataset-cell", "dataset-material", "dataset-type", "dataset-profile", "dataset-aging", "dataset-query"];
+$("dataset-cell").innerHTML += optionsMarkup(cells.filter(x => cellPackages.get(x.id).sources.length).map(x => x.id), id => data.cells[id].display_name);
+for (const [id, values] of [
+  ["dataset-material", datasets.flatMap(r => r.material_families)],
+  ["dataset-type", datasets.flatMap(r => r.test_types)],
+  ["dataset-profile", datasets.flatMap(r => r.profiles)],
+  ["dataset-aging", datasets.map(r => r.aging_data.status)],
 ]) {
-  $(id).innerHTML+=[...values].sort().map(v=>`<option value="${esc(v)}">${esc(words(v))}</option>`).join("");
-  $(id).addEventListener("change",renderDatasets);
+  $(id).innerHTML += optionsMarkup([...new Set(values)].sort(), words);
 }
 function renderDatasetFileLocations(record) {
-  const components=Object.entries(record.parameter_components).map(([name,item])=>`<p><b>${esc(words(name))}:</b> ${esc(words(item.match_level))} · ${esc(words(item.quantity_kind))}<br>${esc(item.evidence)}<br>Records: ${esc(item.record_ids.join(", ")||"None")}</p>`).join("");
-  const coverage=Object.entries(record.test_coverage).map(([name,item])=>`<p><b>${esc(words(name))}:</b> ${esc(words(item.status))}<br>${esc(item.evidence)}</p>`).join("");
-  const files=record.file_links.map(item=>`<li><code>${esc(item.source_path)}</code><br>${esc(item.cell_model||"Model unresolved")} · ${esc(item.source_sample_id||"Sample unresolved")}<br>${esc(item.test_types.join(", "))} ${esc(item.profiles.join(", "))} · ${esc(item.verification)} · content: ${esc(item.content_review)}<br>${esc(item.note)}<br><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">${item.kind==="archive_member"?"Open parent archive":item.kind==="documentation"?"Open dataset / documentation":"Open source file"} ↗</a></li>`).join("");
-  return `<details><summary>OCP / diffusion / kinetics association</summary>${components}</details><details><summary>Multi-rate / US06 / EIS coverage</summary>${coverage}</details><details data-files><summary>File locations (${record.file_links.length})</summary><p>${esc(record.inventory_scope)}</p><div class="dataset-file-list"><ul>${files}</ul></div></details>`;
+  const components = Object.entries(record.parameter_components).map(([name, item]) => `<p><b>${esc(words(name))}:</b> ${esc(words(item.match_level))} · ${esc(words(item.quantity_kind))}<br>${esc(item.evidence)}<br>Records: ${esc(item.record_ids.join(", ") || "None")}</p>`).join("");
+  const coverage = Object.entries(record.test_coverage).map(([name, item]) => `<p><b>${esc(words(name))}:</b> ${esc(words(item.status))}<br>${esc(item.evidence)}</p>`).join("");
+  return `<details><summary>OCP / diffusion / kinetics association</summary>${components}</details><details><summary>Multi-rate / US06 / EIS coverage</summary>${coverage}</details><details data-source-files="${esc(record.id)}"><summary>File locations (${record.file_links.length})</summary><p>${esc(record.inventory_scope)}</p><div class="dataset-file-list"></div></details>`;
 }
+document.addEventListener("toggle", event => {
+  const details = event.target;
+  if (!details.matches("[data-source-files]") || !details.open || details.dataset.loaded) return;
+  const record = datasetById.get(details.dataset.sourceFiles);
+  if (!record) return;
+  const files = record.file_links.map(item => `<li><code>${esc(item.source_path)}</code><br>${esc(item.cell_model || "Model unresolved")} · ${esc(item.source_sample_id || "Sample unresolved")}<br>${esc(item.test_types.join(", "))} ${esc(item.profiles.join(", "))} · ${esc(item.verification)} · content: ${esc(item.content_review)}<br>${esc(item.note)}<br><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">${item.kind === "archive_member" ? "Open parent archive" : item.kind === "documentation" ? "Open dataset / documentation" : "Open source file"} ↗</a></li>`).join("");
+  details.querySelector(".dataset-file-list").innerHTML = files ? `<ul>${files}</ul>` : "No individual file locations were verified.";
+  details.dataset.loaded = "true";
+}, true);
 function renderDatasets() {
-  const material=$("dataset-material").value,type=$("dataset-type").value,profile=$("dataset-profile").value,aging=$("dataset-aging").value,query=$("dataset-query").value.trim().toLowerCase();
-  const rows=datasets.filter(r=>(!$("dataset-cell").value||r.parameter_link.cell_ids.includes($("dataset-cell").value))&&(!material||r.material_families.includes(material))&&(!type||r.test_types.includes(type))&&(!profile||r.profiles.includes(profile))&&(!aging||r.aging_data.status===aging)&&(!query||JSON.stringify(r).toLowerCase().includes(query)));
-  $("dataset-count").textContent=`${rows.length} / ${datasets.length} parameter-linked external sources. Counts describe source references.`;
-  $("dataset-cards").innerHTML=rows.map(r=>`<article class="source-card" id="source-${esc(r.id)}"><span class="tag">${esc(r.material_families.join(" / "))} · external link</span><h3>${esc(r.title)}</h3><p>${esc(r.cell_identity)}</p><p><b>Electrode OCP anchor:</b> ${esc(words(r.ocp_anchor.kind))}<br>${esc(r.ocp_anchor.evidence)}<br>Half-cell temperature labels / °C: ${esc(r.ocp_anchor.half_cell_temperatures_C.length?r.ocp_anchor.half_cell_temperatures_C.join(", "):"Not independently verified")}</p><p><b>Tests:</b> ${esc(r.test_types.map(words).join(", "))}<br><b>Profiles:</b> ${esc(r.profiles.join(", ")||"No named drive profile verified")}</p><p>${esc(r.rate_summary)}<br>Source temperature labels / °C: ${esc(r.temperatures_C.length?r.temperatures_C.join(", "):"Not verified")}</p><p><b>Ageing data:</b> ${esc(words(r.aging_data.status))}${r.aging_data.kinds.length?" ("+esc(r.aging_data.kinds.join(", "))+")":""}<br>${esc(r.aging_data.evidence)} <a href="${safeUrl(r.aging_data.source_url)}" target="_blank" rel="noopener noreferrer">Coverage evidence ↗</a></p><p><b>Parameter match:</b> ${esc(words(r.parameter_link.match_level))}<br>${esc(r.parameter_link.evidence)}</p><p><b>License:</b> <a href="${safeUrl(r.license.evidence_url)}" target="_blank" rel="noopener noreferrer">${esc(r.license.identifier)}</a><br>${esc(r.license.note)}</p><details><summary>Source review and missing items</summary><p>Version: ${esc(r.source.version)} · Checked: ${esc(r.review.checked_on)} · ${esc(words(r.review.level))}</p><p>${esc(r.review.note)}</p><p>${esc(r.channels.note)}</p><p>Components without a native catalog join: ${esc(r.parameter_link.missing_components.join(", "))}</p><ul>${r.missing_items.map(item=>`<li>${esc(item)}</li>`).join("")}</ul></details><p><a class="button" href="${safeUrl(r.source.url)}" target="_blank" rel="noopener noreferrer">Open original dataset ↗</a></p>${renderDatasetFileLocations(r)}</article>`).join("")||'<p class="empty">No parameter-linked source matches these filters.</p>';
+  const cell = $("dataset-cell").value, material = $("dataset-material").value, type = $("dataset-type").value;
+  const profile = $("dataset-profile").value, aging = $("dataset-aging").value, query = $("dataset-query").value;
+  const rows = datasets.filter(r => (!cell || r.parameter_link.cell_ids.includes(cell))
+    && (!material || r.material_families.includes(material)) && (!type || r.test_types.includes(type))
+    && (!profile || r.profiles.includes(profile)) && (!aging || r.aging_data.status === aging)
+    && ui.matchesSearch(datasetSearchText.get(r.id), query));
+  $("dataset-count").textContent = `${rows.length} of ${datasets.length} parameter-linked external sources`;
+  $("dataset-cards").innerHTML = rows.map(r => `<article class="source-card" id="source-${esc(r.id)}"><span class="tag">${esc(r.material_families.join(" / "))} · external link</span><h3>${esc(r.title)}</h3><p>${esc(r.cell_identity)}</p><p><b>Tests:</b> ${esc(r.test_types.map(words).join(", "))}<br><b>Parameter match:</b> ${esc(words(r.parameter_link.match_level))}</p><div class="actions"><a class="button" href="${safeUrl(r.source.url)}" target="_blank" rel="noopener noreferrer">Open original dataset ↗</a><a class="button" href="${safeUrl(r.license.evidence_url)}" target="_blank" rel="noopener noreferrer">${esc(r.license.identifier)} ↗</a></div><details><summary>Conditions, source review and missing items</summary><p><b>Electrode OCP anchor:</b> ${esc(words(r.ocp_anchor.kind))}<br>${esc(r.ocp_anchor.evidence)}<br>Half-cell temperature labels / °C: ${esc(r.ocp_anchor.half_cell_temperatures_C.length ? r.ocp_anchor.half_cell_temperatures_C.join(", ") : "Not independently verified")}</p><p><b>Profiles:</b> ${esc(r.profiles.join(", ") || "No named drive profile verified")}</p><p>${esc(r.rate_summary)}<br>Source temperature labels / °C: ${esc(r.temperatures_C.length ? r.temperatures_C.join(", ") : "Not verified")}</p><p><b>Ageing data:</b> ${esc(words(r.aging_data.status))}${r.aging_data.kinds.length ? " (" + esc(r.aging_data.kinds.join(", ")) + ")" : ""}<br>${esc(r.aging_data.evidence)} <a href="${safeUrl(r.aging_data.source_url)}" target="_blank" rel="noopener noreferrer">Coverage evidence ↗</a></p><p>${esc(r.parameter_link.evidence)}</p><p>${esc(r.license.note)}</p><p>Version: ${esc(r.source.version)} · Checked: ${esc(r.review.checked_on)} · ${esc(words(r.review.level))}</p><p>${esc(r.review.note)}</p><p>${esc(r.channels.note)}</p><p>Components without a native catalog join: ${esc(r.parameter_link.missing_components.join(", "))}</p><ul>${r.missing_items.map(item => `<li>${esc(item)}</li>`).join("")}</ul></details>${renderDatasetFileLocations(r)}</article>`).join("") || '<p class="empty">No parameter-linked source matches these filters. Try resetting the filters.</p>';
 }
-$("dataset-query").addEventListener("input",renderDatasets);
-restoreSelect("dataset-cell","source_cell");restoreSelect("dataset-material","source_material");restoreSelect("dataset-type","test_type");restoreSelect("dataset-profile","profile");restoreSelect("dataset-aging","ageing");$("dataset-query").value=saved.get("source_query")||"";
-renderDatasets();
-$("reset-datasets").addEventListener("click",()=>{for(const id of ["dataset-cell","dataset-material","dataset-type","dataset-profile","dataset-aging","dataset-query"])$(id).value="";renderDatasets();});
-function goTo(section) { window.location.hash=section;$(section).scrollIntoView({behavior:"smooth",block:"start"}); }
-document.addEventListener("click",event=>{
-  const button=event.target.closest("[data-open-ocp],[data-open-cell],[data-open-source]");if(!button)return;
-  if(button.dataset.openOcp){
-    const record=data.records.find(r=>r.id===button.dataset.openOcp);if(!record)return;
-    for(const id of ["query","representation","direction"])$(id).value="";
-    $("material").value=record.material;$("ocp-cell").value=record.cell_link.cell_id||"material-only";detailId=record.id;selected.clear();selected.add(record.id);render();renderDetail();goTo("library");
-  }else if(button.dataset.openCell){
-    $("cell-material").value="";renderCellChoices();$("cell-select").value=button.dataset.openCell;renderCell();goTo("cell-package");
-  }else{
-    const source=datasets.find(r=>r.id===button.dataset.openSource);if(!source)return;
-    for(const id of ["dataset-material","dataset-type","dataset-profile","dataset-aging"])$(id).value="";
-    $("dataset-cell").value=source.parameter_link.cell_ids[0]||"";$("dataset-query").value=source.id;renderDatasets();goTo("test-datasets");
-    $("source-"+source.id)?.querySelector("details[data-files]")?.setAttribute("open","");
+for (const id of datasetFilterIds) $(id).addEventListener(id === "dataset-query" ? "input" : "change", renderDatasets);
+$("reset-datasets").addEventListener("click", () => {
+  for (const id of datasetFilterIds) $(id).value = "";
+  renderDatasets();
+});
+function goTo(section) {
+  if (window.location.hash !== "#" + section) window.location.hash = section;
+  else $(section).scrollIntoView({block: "start"});
+}
+$("detail").addEventListener("click", event => {
+  const button = event.target.closest("[data-open-cell]");
+  if (!button) return;
+  $("cell-query").value = "";
+  $("cell-material").value = "";
+  openCell(button.dataset.openCell);
+  renderCellChoices();
+  restoreSelect("cell-ocp-select", detailId);
+  renderCellOcp();
+  showCellTab("ocp");
+  goTo("cell-package");
+});
+$("copy-view").addEventListener("click", async () => {
+  const cellView = currentCellView();
+  const state = {
+    cell: activeCell, cell_family: $("cell-material").value, cq: $("cell-query").value, cell_tab: activeTab,
+    cell_ocp: cellView.curve, parameter: cellView.parameter, category: cellView.category, variant: cellView.variant,
+    pq: cellView.query, sample: cellView.sample, ocp: detailId, compare: [...selected].join(","),
+    material: $("material").value, ocp_cell: $("ocp-cell").value, query: $("query").value,
+    repr: $("representation").value, direction: $("direction").value,
+    source_cell: $("dataset-cell").value, source_material: $("dataset-material").value,
+    test_type: $("dataset-type").value, profile: $("dataset-profile").value, ageing: $("dataset-aging").value,
+    source_query: $("dataset-query").value,
+  };
+  const section = window.location.hash.slice(1) || "cell-package";
+  const url = ui.viewURL(window.location.href, state, section);
+  $("view-link").value = url;
+  $("view-link-label").hidden = false;
+  try {
+    if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+    await navigator.clipboard.writeText(url);
+    $("view-status").textContent = "View link copied. Local links work on this computer; repository access is unchanged.";
+  } catch {
+    $("view-link").focus();
+    $("view-link").select();
+    $("view-status").textContent = "Select and copy the view link. Local links work on this computer.";
   }
 });
-$("copy-view").addEventListener("click",async()=>{
-  const state={cell:$("cell-select").value,cell_family:$("cell-material").value,ocp:detailId,compare:[...selected].join(","),material:$("material").value,ocp_cell:$("ocp-cell").value,query:$("query").value,repr:$("representation").value,direction:$("direction").value,category:$("parameter-category").value,variant:$("parameter-variant").value,pq:$("parameter-query").value,sample:$("test-sample").value,source_cell:$("dataset-cell").value,source_material:$("dataset-material").value,test_type:$("dataset-type").value,profile:$("dataset-profile").value,ageing:$("dataset-aging").value,source_query:$("dataset-query").value};
-  const section=window.location.hash.slice(1)||"library",url=ui.viewURL(window.location.href,state,section);
-  $("view-link").value=url;$("view-link-label").hidden=false;
-  try { if(!navigator.clipboard?.writeText)throw new Error("Clipboard unavailable");await navigator.clipboard.writeText(url);$("view-status").textContent="View link copied. Local links work on this computer; repository access is unchanged."; }
-  catch { $("view-link").focus();$("view-link").select();$("view-status").textContent="Select and copy the view link. Local links work on this computer."; }
-});
-function updateNavigation() { const section=window.location.hash||"#library";for(const link of document.querySelectorAll("nav a")){const active=link.getAttribute("href")===section;link.classList.toggle("active",active);if(active)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current");} }
-window.addEventListener("hashchange",updateNavigation);updateNavigation();
+function updateNavigation() {
+  const section = window.location.hash || "#cell-package";
+  for (const link of document.querySelectorAll("nav a")) {
+    const active = link.getAttribute("href") === section;
+    link.classList.toggle("active", active);
+    if (active) link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  }
+}
+
+restoreSelect("material", saved.get("material"));
+restoreSelect("ocp-cell", saved.get("ocp_cell"));
+restoreSelect("representation", saved.get("repr"));
+restoreSelect("direction", saved.get("direction"));
+$("query").value = saved.get("query") || "";
+restoreSelect("cell-material", saved.get("cell_family"));
+$("cell-query").value = saved.get("cq") || "";
+restoreSelect("dataset-cell", saved.get("source_cell"));
+restoreSelect("dataset-material", saved.get("source_material"));
+restoreSelect("dataset-type", saved.get("test_type"));
+restoreSelect("dataset-profile", saved.get("profile"));
+restoreSelect("dataset-aging", saved.get("ageing"));
+$("dataset-query").value = saved.get("source_query") || "";
+if (activeCell) renderCell();
+renderCellChoices();
+renderOcpResults();
+refreshComparison();
+renderDatasets();
+window.addEventListener("hashchange", updateNavigation);
+updateNavigation();
 })();

@@ -1,14 +1,32 @@
 "use strict";
 
 // Pure helpers shared by the static viewer and offline interaction checks.
+const ebpSearchText = value => String(value ?? "").normalize("NFKC").toLowerCase().replace(/[-_]+/g, " ");
+const ebpMatchesSearch = (text, query) => {
+  const candidate = ebpSearchText(text);
+  return ebpSearchText(query).trim().split(/\s+/).filter(Boolean).every(term => candidate.includes(term));
+};
+
 window.EBP_UI = Object.freeze({
+  matchesSearch: ebpMatchesSearch,
+  filterCells(cells, {family = "", query = ""}) {
+    return cells.filter(cell => (!family || cell.family === family)
+      && ebpMatchesSearch([cell.id, cell.name, cell.family].join(" "), query));
+  },
+  nextTab(tabs, current, key) {
+    const index = tabs.indexOf(current);
+    if (index < 0) return null;
+    if (key === "Home") return tabs[0];
+    if (key === "End") return tabs[tabs.length - 1];
+    if (key === "ArrowRight") return tabs[(index + 1) % tabs.length];
+    if (key === "ArrowLeft") return tabs[(index + tabs.length - 1) % tabs.length];
+    return null;
+  },
   filterParameters(parameters, {cell, category = "", variant = "", query = ""}) {
-    const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return parameters.filter(p => p.cell_id === cell
       && (!category || p.category === category)
       && (!variant || p.conditions?.parameterization_variant === variant)
-      && terms.every(term => [p.id, p.name, p.definition, p.unit, p.category]
-        .filter(Boolean).join(" ").toLowerCase().includes(term)));
+      && ebpMatchesSearch([p.id, p.name, p.definition, p.unit, p.category].filter(Boolean).join(" "), query));
   },
   parameterCSV(parameters) {
     const headers = ["id", "cell_id", "name", "category", "value_or_expression",

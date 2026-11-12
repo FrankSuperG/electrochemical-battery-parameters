@@ -7,18 +7,27 @@ HTML template alone does not include the catalog or downloads.
 
 ## Follow a parameter package
 
-1. Select a material family and cell/study in **Cell packages**.
-2. Use **Electrode OCP** buttons to inspect that cell's stored curves. The curve
-   detail links back to its parameter package. Material-only measurements remain
-   searchable without assigning them to a commercial cell.
-3. Search parameter names, definitions or units, and combine category and model
-   variant filters. **Export filtered CSV** retains the selected source values,
-   expressions/table references, units, conditions, origin and license. It does
-   not combine model variants or fit new parameters. Native parameter tables
-   remain separate downloads from the parameter detail.
-4. Open **Linked external test sources** to inspect associated file/container
-   locations and matching gaps. The source filter uses explicit parameter-cell
-   links. A common chemistry or cell name does not imply identical specimens.
+1. Start in **Cell explorer**. Search for a model or study, optionally narrow by
+   material family, and choose a matching package. Searching narrows the options
+   without silently changing the selected package. Press Enter to open a single
+   match or focus the results selector when several match.
+2. Switch between **Parameters**, **OCP**, **Experiments**, and **Evidence** in
+   the package. Use the left/right arrow keys, Home or End to move between tabs.
+   Parameter filters, the selected curve, and the stored trace are remembered
+   for each cell while you explore other packages.
+3. In **Parameters**, search names, definitions or units, and combine category
+   and model variant filters. The export button states how many matching rows
+   will be saved. The CSV retains source values, expressions/table references,
+   units, conditions, origin and license. Use **Package downloads** for the
+   whole package or the row detail for a native parameter table.
+4. In **OCP**, choose a curve to plot it and download its data without leaving
+   the package. **Add to OCP comparison** adds the curve to the cross-study
+   comparison, where selections stay in place as you change the filters.
+   Material-only studies remain searchable in the comparison library.
+5. In **Experiments**, inspect stored full-cell traces and expand linked test
+   sources for file/container locations. The **Evidence** tab explains the
+   matching limits. A common chemistry or cell name does not establish an
+   identical specimen.
 
 For example, HAIDI links seven native pseudo-OCP branches to its same-study
 external references. M50LT has grouped diffusion/kinetics but no admitted OCP;
@@ -36,8 +45,8 @@ expressions, as labeled. OCP and full-cell coordinates keep their own definition
 
 ## Keep a view
 
-**Copy current view link** records the selected cell, OCP, comparisons, filters,
-parameter variant and retained test selection in the URL. If clipboard access is
+**Copy current view link** records the selected cell and tab, OCP, comparisons,
+filters, parameter variant and retained test selection in the URL. If clipboard access is
 unavailable, select and copy the displayed link manually. A local link works
 only where its local files are available; it does not grant repository access
 or upload any data.

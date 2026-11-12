@@ -176,7 +176,7 @@ ebp serve
 
 `ebp validate` checks data schemas, references, coordinates, values and checksums. It does not run an electrochemical model.
 
-The [local viewer guide](docs/VIEWER.md) explains cell-to-OCP/test navigation, parameter search and filtered CSV export, pointer/keyboard plot inspection, and saved view links. The header links to GitHub; **About Feng** provides the maintainer introduction and collaboration contacts.
+The [local viewer guide](docs/VIEWER.md) explains the **Cell explorer** tabs for parameters, OCP, experiments and evidence, plus filtered CSV export and cross-study curve comparison. The header links to GitHub; **About Feng** provides the maintainer introduction and collaboration contacts.
 
 Run `ebp cells` to find stable cell IDs. Open [the local viewer](http://127.0.0.1:8765). Filter and compare OCPs, switch between cell packages, inspect coverage and parameter origins, and download data with metadata. Choose **Offline bundle ZIP** to download a cell's data, metadata, available originals and licenses together. Use the **Variant** filter to distinguish the Mohtat author model from PyBaMM inputs. The viewer uses local assets, without CDNs, analytics or remote fonts. `ebp serve` binds to `127.0.0.1`; `ebp build-site --output site` only writes static files.
 

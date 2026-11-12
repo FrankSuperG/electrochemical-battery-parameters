@@ -25,6 +25,26 @@ test("parameter search combines cell, category, variant and all query terms", ()
   assert.equal(rows.length, 4);
 });
 
+test("cell search matches model aliases and requires the selected material family", () => {
+  const cells = [
+    {id: "lg-m50", name: "LG M50 | 5 Ah", family: "NMC"},
+    {id: "lg-m50-oregan2022", name: "LG M50 | O'Regan2022", family: "NMC"},
+    {id: "panasonic-ncr18650b-hnei2016", name: "Panasonic NCR18650B", family: "NCA"},
+  ];
+  assert.equal(ui.filterCells(cells, {family: "NMC", query: "m50-lg"}).length, 2);
+  assert.equal(ui.filterCells(cells, {family: "NCA", query: "LG M50"}).length, 0);
+  assert.strictEqual(ui.filterCells(cells, {query: "panasonic hnei2016"})[0], cells[2]);
+});
+
+test("cell tabs support wrap-around and leave scrolling keys alone", () => {
+  const tabs = ["parameters", "ocp", "experiments", "evidence"];
+  assert.equal(ui.nextTab(tabs, "parameters", "ArrowLeft"), "evidence");
+  assert.equal(ui.nextTab(tabs, "evidence", "ArrowRight"), "parameters");
+  assert.equal(ui.nextTab(tabs, "experiments", "Home"), "parameters");
+  assert.equal(ui.nextTab(tabs, "ocp", "End"), "evidence");
+  assert.equal(ui.nextTab(tabs, "ocp", "ArrowDown"), null);
+});
+
 test("CSV preserves zero, quoted definitions, conditions, source and license", () => {
   const csv = ui.parameterCSV([parameter("a", {definition: 'Source says "effective",\nnot intrinsic'})]);
   assert.ok(csv.includes('"0"'));
@@ -62,13 +82,15 @@ test("chart inspection returns retained preview points and never extrapolates", 
 
 test("view links preserve all-material/all-variant and empty comparison states", () => {
   const link = new URL(ui.viewURL("https://example.org/viewer/?discard=old#library", {
-    cell: "cell-a", material: "", variant: "", compare: "", query: "LFP / graphite", category: "diffusion",
+    cell: "cell-a", cell_tab: "ocp", cell_ocp: "curve-a", material: "", variant: "", compare: "", query: "LFP / graphite", category: "diffusion",
   }, "cell-package"));
   assert.equal(link.searchParams.get("material"), "");
   assert.equal(link.searchParams.get("variant"), "");
   assert.equal(link.searchParams.get("compare"), "");
   assert.equal(link.searchParams.get("query"), "LFP / graphite");
   assert.equal(link.searchParams.get("cell"), "cell-a");
+  assert.equal(link.searchParams.get("cell_tab"), "ocp");
+  assert.equal(link.searchParams.get("cell_ocp"), "curve-a");
   assert.equal(link.searchParams.has("discard"), false);
   assert.equal(link.hash, "#cell-package");
 });

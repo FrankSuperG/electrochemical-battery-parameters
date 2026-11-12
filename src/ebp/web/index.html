@@ -10,36 +10,71 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#library"><img src="logo.png" alt="E-BatP — Electrochemical Battery Parameters"></a>
-    <nav aria-label="Main navigation"><a href="#library" class="active">OCP curves</a><a href="#cell-package">Cell packages</a><a href="#test-datasets">Supporting tests</a><a href="#sources">Sources</a><a href="#guide">Guide</a><a href="#about">About Feng</a></nav>
+    <a class="brand" href="#cell-package"><img src="logo.png" alt="E-BatP — Electrochemical Battery Parameters"></a>
+    <nav aria-label="Main navigation"><a href="#cell-package" class="active">Cell explorer</a><a href="#library">Compare OCP</a><a href="#test-datasets">Supporting tests</a><a href="#sources">Sources</a><a href="#guide">Guide</a><a href="#about">About Feng</a></nav>
     <div class="header-actions"><a class="github-link" href="https://github.com/FrankSuperG/electrochemical-battery-parameters" target="_blank" rel="noopener noreferrer" title="Browse the repository on GitHub">GitHub ↗</a><span class="version">Local viewer <i></i> v0.16.0</span></div>
   </header>
   <main>
-    <p id="load-status" class="load-status" role="alert" hidden>Catalog data could not be loaded. Open the complete generated viewer in <code>site/index.html</code>, then reload. The source template does not include the catalog or downloads.</p>
-    <section class="intro"><div><div class="eyebrow">ELECTRODES → PARAMETERS → FULL-CELL TESTS</div><h1>Find the parameter.<br>Know the cell behind it.</h1><p>Explore electrochemical data across LFP, layered oxides, spinels and silicon-based anodes with source definitions, model assumptions and explicit evidence for every cell match.</p><p>This catalog curates electrochemical model parameters. Each active cell or linked source has stored OCP, diffusion or kinetics records; full-cell tests are supporting references. Model simulation, fitting and validation are outside its scope.</p></div><div class="intro-aside"><span class="large-number" id="total">—</span><span>OCP records<br><small>Inspect · compare · download</small></span></div></section>
+    <p id="load-status" class="load-status" role="alert" hidden>Catalog data could not be loaded. For local use, run <code>ebp build-site</code> and open <code>site/index.html</code>. The source template does not contain the catalog or downloads. <a id="generated-viewer" hidden>Open the built local viewer</a></p>
+    <section class="intro"><div><div class="eyebrow">ELECTRODES → PARAMETERS → EXPERIMENTS</div><h1>Explore electrochemical parameters by cell.</h1><p>Choose a cell or study to see its curves, model inputs and supporting tests together. Each record keeps its source, definition and match evidence.</p></div><div class="intro-aside"><span class="large-number" id="total">—</span><span>OCP records<br><small>Inspect · compare · download</small></span></div></section>
     <div class="stats" id="stats"></div>
-    <div class="view-toolbar"><span>Start with an electrode curve or a cell parameter package.</span><button id="copy-view" class="secondary">Copy current view link</button><label id="view-link-label" hidden>View link<input id="view-link" type="text" readonly aria-describedby="view-status"></label><span id="view-status" role="status"></span></div>
-    <section class="workspace" id="library">
-      <aside class="filters"><div class="section-label">Find OCP curves <span>01</span></div>
-        <label for="query">Search</label><input id="query" type="search" placeholder="Author, specimen, cell…">
-        <label for="material">Material</label><select id="material"><option value="LFP">LFP</option><option value="graphite">Graphite</option><option value="">All materials</option></select>
+    <div class="view-toolbar"><span>Use the cell explorer for a package, or compare curves across studies.</span><button id="copy-view" class="secondary">Copy current view link</button><label id="view-link-label" hidden>View link<input id="view-link" type="text" readonly aria-describedby="view-status"></label><span id="view-status" role="status"></span></div>
+    <section id="cell-package" class="cell-package" aria-labelledby="explorer-title">
+      <div class="section-label">Cells · parameters · experiments <span>01</span></div>
+      <h2 id="explorer-title">Cell explorer</h2>
+      <div class="cell-picker">
+        <label for="cell-query">Find a cell or study<input id="cell-query" type="search" placeholder="e.g. LG M50, Panasonic, HAIDI…" aria-describedby="cell-choice-status"></label>
+        <label for="cell-material">Material family<select id="cell-material"><option value="">All materials</option></select></label>
+        <label for="cell-select">Cell or study<select id="cell-select"></select></label>
+      </div>
+      <p id="cell-choice-status" class="muted compact" role="status"></p>
+      <div id="cell-content" hidden>
+        <div class="detail-top cell-heading"><div><h3 id="cell-title"></h3><p class="muted compact" id="cell-context"></p></div><details class="cell-package-downloads"><summary>Package downloads</summary><div class="actions" id="cell-downloads"></div></details></div>
+        <div id="cell-tabs" class="cell-tabs" role="tablist" aria-label="Cell package contents">
+          <button id="cell-tab-parameters" role="tab" aria-controls="cell-panel-parameters" aria-selected="true" data-cell-tab="parameters">Parameters <span id="tab-count-parameters"></span></button>
+          <button id="cell-tab-ocp" role="tab" aria-controls="cell-panel-ocp" aria-selected="false" tabindex="-1" data-cell-tab="ocp">OCP <span id="tab-count-ocp"></span></button>
+          <button id="cell-tab-experiments" role="tab" aria-controls="cell-panel-experiments" aria-selected="false" tabindex="-1" data-cell-tab="experiments">Experiments <span id="tab-count-experiments"></span></button>
+          <button id="cell-tab-evidence" role="tab" aria-controls="cell-panel-evidence" aria-selected="false" tabindex="-1" data-cell-tab="evidence">Evidence</button>
+        </div>
+        <section id="cell-panel-parameters" class="cell-tab-panel" role="tabpanel" aria-labelledby="cell-tab-parameters" tabindex="0">
+          <div class="parameter-filters">
+            <label for="parameter-query">Find a parameter<input id="parameter-query" type="search" placeholder="Name, definition or unit…"></label>
+            <label for="parameter-category">Category<select id="parameter-category"><option value="">All categories</option></select></label>
+            <label for="parameter-variant">Variant<select id="parameter-variant"><option value="">All variants</option></select></label>
+            <button id="reset-parameters" class="secondary">Reset filters</button>
+          </div>
+          <div class="parameter-results-bar"><span id="parameter-count" class="muted" role="status"></span><button id="export-parameters" class="button primary-button">Export matching CSV</button></div>
+          <div class="parameter-workspace">
+            <div class="parameter-scroll" tabindex="0" aria-label="Matching parameter rows"><table class="parameter-table"><thead><tr><th scope="col">Parameter</th><th scope="col">Value</th><th scope="col">Unit</th></tr></thead><tbody id="parameter-rows"></tbody></table></div>
+            <aside id="parameter-detail" class="parameter-detail" aria-label="Selected parameter details" aria-live="polite"></aside>
+          </div>
+        </section>
+        <section id="cell-panel-ocp" class="cell-tab-panel" role="tabpanel" aria-labelledby="cell-tab-ocp" tabindex="0" hidden>
+          <div id="cell-ocp-control" class="cell-ocp-control"><label for="cell-ocp-select">Electrode curve<select id="cell-ocp-select"></select></label><button id="compare-cell-ocp" class="secondary">Add to OCP comparison</button></div>
+          <div class="cell-ocp-grid"><div id="cell-ocp-chart"></div><div id="cell-ocp-detail"></div></div>
+        </section>
+        <section id="cell-panel-experiments" class="cell-tab-panel" role="tabpanel" aria-labelledby="cell-tab-experiments" tabindex="0" hidden>
+          <div class="cell-experiments-grid">
+            <div><h4>Stored full-cell traces</h4><div id="test-toolbar" class="test-toolbar"><label for="test-sample">Full-cell test</label><select id="test-sample"></select></div><p class="muted compact" id="test-description"></p><div id="fullcell-chart"></div><div id="test-downloads" class="actions"></div><details id="test-note-panel"><summary>Channels, provenance and limits</summary><p class="axis-note" id="test-note"></p></details></div>
+            <div id="cell-test-references"></div>
+          </div>
+        </section>
+        <section id="cell-panel-evidence" class="cell-tab-panel" role="tabpanel" aria-labelledby="cell-tab-evidence" tabindex="0" hidden>
+          <p class="link-note" id="cell-match"></p><div id="cell-coverage" class="coverage"></div><div id="cell-evidence"></div><p class="muted compact" id="cell-note"></p>
+        </section>
+      </div>
+    </section>
+    <section class="workspace" id="library" aria-label="Compare electrode curves across studies">
+      <aside class="filters"><div class="section-label">Find OCP curves <span>02</span></div>
+        <label for="query">Search</label><input id="query" type="search" placeholder="Author, material or cell…">
+        <label for="material">Material</label><select id="material"><option value="">All materials</option></select>
         <label for="ocp-cell">Cell / study</label><select id="ocp-cell"><option value="">All cells and material studies</option></select>
         <label for="representation">Representation</label><select id="representation"><option value="">All types</option><option value="table">Tabulated points</option><option value="expression">Analytical expression</option></select>
-        <label for="direction">Electrode direction</label><select id="direction"><option value="">All directions</option><option value="lithiation">Lithiation</option><option value="delithiation">Delithiation</option><option value="unspecified">Unspecified</option></select>
-        <button id="reset" class="secondary">Reset filters</button><div class="filter-note"><b>Check coordinate and reference.</b><p>Branch throughput, model SOC/DOL and lithium fraction are different. Modeled OCPn and unresolved-reference curves retain their own labels.</p></div>
+        <label for="direction">Electrode direction</label><select id="direction"><option value="">All directions</option><option value="lithiation">Lithiation</option><option value="delithiation">Delithiation</option><option value="unspecified">Direction unspecified</option></select>
+        <button id="reset" class="secondary">Reset OCP filters</button>
       </aside>
-      <div class="results"><div class="section-label">OCP records <span id="result-count"></span></div><div id="records" class="records" aria-live="polite"></div></div>
-      <div class="comparison"><div class="section-label">Compare curves <span id="selected-count"></span></div><p class="muted compact">Select records to compare. Material, coordinate type and electrode direction define separate plots. Downloads preserve the retained measurements.</p><button class="text-button" id="clear-selection">Clear selection</button><div id="charts"></div></div>
-    </section>
-    <section class="detail" id="detail" aria-live="polite"></section>
-    <section id="cell-package" class="cell-package"><div class="section-label">Cells · parameters · experiments <span>02</span></div>
-      <label for="cell-material">Material family</label><select id="cell-material"><option value="">All materials</option></select>
-      <label for="cell-select">Cell or study family</label><select id="cell-select"></select>
-      <div class="detail-top"><div><h2 id="cell-title"></h2><p class="muted compact" id="cell-context"></p></div><div class="actions" id="cell-downloads"></div></div>
-      <p class="link-note" id="cell-match"></p><div id="cell-coverage" class="coverage"></div><div id="cell-ocp-links" class="cell-related"></div><div id="cell-test-references" class="cell-related"></div><div id="cell-evidence"></div><p class="muted compact" id="cell-note"></p>
-      <div class="cell-grid"><div><div class="parameter-toolbar"><label for="parameter-category">Category</label><select id="parameter-category"><option value="">All parameters</option></select><label for="parameter-variant">Variant</label><select id="parameter-variant"><option value="">All variants</option></select><span id="parameter-count"></span></div>
-      <div class="parameter-search"><label for="parameter-query">Find a parameter<input id="parameter-query" type="search" placeholder="Name, definition or unit…"></label><button id="export-parameters" class="secondary">Export filtered CSV</button></div><div class="parameter-scroll"><table class="parameter-table"><thead><tr><th>Parameter / upstream definition</th><th>Value</th><th>Unit</th></tr></thead><tbody id="parameter-rows"></tbody></table></div><div id="parameter-detail" class="parameter-detail" role="status"></div></div>
-      <div><div class="test-toolbar"><label for="test-sample">Full-cell test</label><select id="test-sample"></select></div><p class="muted compact" id="test-description"></p><div id="fullcell-chart"></div><div id="test-downloads" class="actions"></div><p class="axis-note" id="test-note"></p></div></div>
+      <div class="results"><div class="section-label">OCP records <span id="result-count" role="status"></span></div><div id="records" class="records"></div></div>
+      <div class="comparison"><div class="section-label">Compare curves <span id="selected-count" role="status"></span></div><p class="muted compact">Selections stay in the comparison when you change filters. Different coordinates, references or directions are plotted separately.</p><div id="selected-curves" class="selected-curves" aria-label="Selected curves"></div><button class="text-button" id="clear-selection">Clear comparison</button><section class="detail" id="detail" aria-label="Selected electrode curve details"></section><div id="charts"></div></div>
     </section>
     <section id="test-datasets" class="guide">
       <div class="section-label">Parameter-linked test references <span>03</span></div>
