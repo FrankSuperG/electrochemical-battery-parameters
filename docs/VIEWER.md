@@ -7,10 +7,11 @@ HTML template alone does not include the catalog or downloads.
 
 ## Follow a parameter package
 
-1. Start in **Cell explorer**. Search for a model or study, optionally narrow by
-   material family, and choose a matching package. Searching narrows the options
-   without silently changing the selected package. Press Enter to open a single
-   match or focus the results selector when several match.
+1. Start in **Cell explorer**. Search the list of models and studies, or filter by
+   material and available records. Each result shows counts for its stored OCP,
+   diffusion, kinetics, and supporting tests. The open package stays visible
+   until you select another result. Press Enter in search to open a single match,
+   or use the arrow keys to move through the list.
 2. Switch between **Parameters**, **OCP**, **Experiments**, and **Evidence** in
    the package. Use the left/right arrow keys, Home or End to move between tabs.
    Parameter filters, the selected curve, and the stored trace are remembered
@@ -20,10 +21,10 @@ HTML template alone does not include the catalog or downloads.
    will be saved. The CSV retains source values, expressions/table references,
    units, conditions, origin and license. Use **Package downloads** for the
    whole package or the row detail for a native parameter table.
-4. In **OCP**, choose a curve to plot it and download its data without leaving
-   the package. **Add to OCP comparison** adds the curve to the cross-study
-   comparison, where selections stay in place as you change the filters.
-   Material-only studies remain searchable in the comparison library.
+4. In **OCP**, choose a curve to plot it and download its data within the package.
+   Toggle **Include in comparison** on the curves you want, then select
+   **View comparison** when ready. The selection stays in place across packages
+   and filters. Material-only studies remain searchable in the comparison library.
 5. In **Experiments**, inspect stored full-cell traces and expand linked test
    sources for file/container locations. The **Evidence** tab explains the
    matching limits. A common chemistry or cell name does not establish an

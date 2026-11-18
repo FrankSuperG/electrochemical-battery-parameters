@@ -9,8 +9,9 @@ const ebpMatchesSearch = (text, query) => {
 
 window.EBP_UI = Object.freeze({
   matchesSearch: ebpMatchesSearch,
-  filterCells(cells, {family = "", query = ""}) {
+  filterCells(cells, {family = "", query = "", contains = ""}) {
     return cells.filter(cell => (!family || cell.family === family)
+      && (!contains || cell.counts?.[contains] > 0)
       && ebpMatchesSearch([cell.id, cell.name, cell.family].join(" "), query));
   },
   nextTab(tabs, current, key) {

@@ -36,6 +36,17 @@ test("cell search matches model aliases and requires the selected material famil
   assert.strictEqual(ui.filterCells(cells, {query: "panasonic hnei2016"})[0], cells[2]);
 });
 
+test("cell coverage filters distinguish stored traces from external test links", () => {
+  const cells = [
+    {id: "m50", name: "LG M50 | Chen2020", family: "NMC", counts: {ocp: 2, diffusion: 9, traces: 3, sources: 1}},
+    {id: "m50-oregan", name: "LG M50 | O'Regan2022", family: "NMC", counts: {ocp: 2, diffusion: 48, traces: 0, sources: 0}},
+    {id: "haidi", name: "HAIDI", family: "LFP", counts: {ocp: 7, diffusion: 0, traces: 0, sources: 1}},
+  ];
+  assert.deepEqual([...ui.filterCells(cells, {family: "NMC", query: "LG M50", contains: "traces"})], [cells[0]]);
+  assert.deepEqual([...ui.filterCells(cells, {family: "LFP", contains: "sources"})], [cells[2]]);
+  assert.equal(ui.filterCells(cells, {family: "LFP", contains: "diffusion"}).length, 0);
+});
+
 test("cell tabs support wrap-around and leave scrolling keys alone", () => {
   const tabs = ["parameters", "ocp", "experiments", "evidence"];
   assert.equal(ui.nextTab(tabs, "parameters", "ArrowLeft"), "evidence");

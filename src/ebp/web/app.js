@@ -28,8 +28,13 @@ const sourceLinks = ids => ids.map(id => `<a href="${safeUrl(data.sources[id].ur
 const channelLabels={time_s:"Original time coordinate",voltage_V:"Voltage",current_charge_positive_A:"Measured current",cell_temperature_K:"Absolute cell temperature",ambient_temperature_K:"Ambient temperature"};
 const number = value => Math.abs(value) !== 0 && (Math.abs(value) < .001 || Math.abs(value) >= 1e5) ? value.toExponential(5) : String(value);
 
-$("total").textContent = data.records.length;
-$("stats").innerHTML = [[data.records.filter(r=>r.representation.kind==="table").length,"Tabulated electrode curves / model potentials"],[data.records.filter(r=>r.representation.kind==="expression").length,"OCP expressions"],[data.parameters.length,"Model parameter records"],[data.full_cell_tests.length,"Full-cell experiment files"]].map(([n,label])=>`<div class="stat"><strong>${n}</strong><span>${esc(label)}</span></div>`).join("");
+const catalogTotals = [
+  [Object.keys(data.cells).length, "Cell and study packages"],
+  [data.records.length, "Electrode curve records"],
+  [data.parameters.length, "Parameter records"],
+  [data.full_cell_tests.length, "Stored trace files"],
+];
+$("stats").innerHTML = catalogTotals.map(([count, label]) => `<div class="stat"><strong>${count.toLocaleString()}</strong><span>${esc(label)}</span></div>`).join("");
 
 const ocpFilterIds = ["query", "material", "ocp-cell", "representation", "direction"];
 const ocpSearchText = new Map(data.records.map(r => [r.id, [
@@ -156,6 +161,7 @@ function refreshComparison() {
   const rows = [...selected].map(id => recordById.get(id)).filter(Boolean);
   $("selected-count").textContent = `${rows.length} selected`;
   $("clear-selection").disabled = !rows.length;
+  updateCellComparison();
   $("selected-curves").innerHTML = rows.map(r => `<button class="compare-chip" data-remove-curve="${esc(r.id)}" aria-label="Remove ${esc(r.title)} from comparison" title="${esc(r.title)}">${esc(r.id)} <span aria-hidden="true">×</span></button>`).join("");
   if (!rows.length) {
     $("charts").innerHTML = '<p class="empty">Tick Compare beside a curve to plot it here.</p>';
@@ -193,16 +199,21 @@ function renderDetail() {
 $("source-cards").innerHTML=Object.entries(data.sources).map(([id,s])=>`<article class="source-card"><span class="tag">${esc(s.kind)} · ${esc(s.year)}</span><h3>${esc(s.title)}</h3><p>${esc(s.authors.join(", "))}</p><p>${esc(s.role)}</p><a href="${safeUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(id)} ↗</a></article>`).join("");
 
 const cellTabs = ["parameters", "ocp", "experiments", "evidence"];
-const cells = Object.entries(data.cells).map(([id, value]) => ({
-  id, name: value.display_name, family: data.cell_material_families[id],
-})).sort((a, b) => a.name.localeCompare(b.name));
-const cellPackages = new Map(cells.map(({id}) => [id, {
-  cell: data.cells[id],
+const cellPackages = new Map(Object.entries(data.cells).map(([id, cell]) => [id, {
+  cell,
   parameters: data.parameters.filter(p => p.cell_id === id),
   curves: data.records.filter(r => r.cell_link.cell_id === id),
   traces: data.full_cell_tests.filter(t => t.cell_id === id),
   sources: ui.linkedSources(data.external_datasets, id),
 }]));
+const cells = [...cellPackages].map(([id, {cell, parameters, curves, traces, sources}]) => ({
+  id, name: cell.display_name, family: data.cell_material_families[id],
+  counts: {
+    ocp: curves.length, traces: traces.length, sources: sources.length,
+    diffusion: parameters.filter(p => p.category === "diffusion").length,
+    kinetics: parameters.filter(p => p.category === "kinetics").length,
+  },
+})).sort((a, b) => a.name.localeCompare(b.name));
 const parameterById = new Map(data.parameters.map(p => [p.id, p]));
 const savedCell = saved.get("cell");
 let activeCell = cellPackages.has(savedCell) ? savedCell : cellPackages.has("lg-m50") ? "lg-m50" : cells[0]?.id;
@@ -223,16 +234,30 @@ $("ocp-cell").innerHTML += '<option value="material-only">Material-only studies<
   + optionsMarkup(cells.filter(x => cellPackages.get(x.id).curves.length).map(x => x.id), id => data.cells[id].display_name);
 $("cell-material").innerHTML += optionsMarkup([...new Set(cells.map(x => x.family))].sort(), x => x);
 function renderCellChoices() {
-  const matches = ui.filterCells(cells, {family: $("cell-material").value, query: $("cell-query").value});
-  const available = matches.some(x => x.id === activeCell);
-  $("cell-select").innerHTML = `<option value="" disabled>${matches.length ? "Choose a matching cell or study" : "No matching cells"}</option>`
-    + matches.map(x => `<option value="${esc(x.id)}">${esc(x.name)}</option>`).join("");
-  $("cell-select").value = available ? activeCell : "";
-  $("cell-select").disabled = !matches.length;
-  $("cell-content").hidden = !available;
-  $("cell-choice-status").textContent = !matches.length ? "No matching cells or studies. Clear a filter or broaden your search."
-    : matches.length === 1 && !available ? "1 match · press Enter or choose the cell to open it"
-    : `${matches.length} ${matches.length === 1 ? "match" : "matches"}${available ? "" : " · choose a cell to open its package"}`;
+  const filters = {family: $("cell-material").value, query: $("cell-query").value, contains: $("cell-coverage-filter").value};
+  const matches = ui.filterCells(cells, filters);
+  $("clear-cell-filters").hidden = !Object.values(filters).some(Boolean);
+  $("cell-choice-status").textContent = matches.length ? `${matches.length} of ${cells.length} packages`
+    : "No matches. Clear a filter or try another search.";
+  $("cell-choices").innerHTML = matches.map(({id, name, family, counts}) => {
+    const coverage = [
+      [counts.ocp, "OCP"], [counts.diffusion, "diffusion"], [counts.kinetics, "kinetics"],
+      [counts.traces, counts.traces === 1 ? "trace" : "traces"],
+      [counts.sources, counts.sources === 1 ? "test source" : "test sources"],
+    ].filter(([count]) => count).map(([count, label]) => `${count} ${label}`).join(" · ");
+    return `<li><button type="button" class="cell-choice" data-cell-choice="${esc(id)}" aria-controls="cell-content"><span class="cell-choice-name">${esc(name)}</span><span class="cell-choice-coverage">${esc([family, coverage].filter(Boolean).join(" · "))}</span></button></li>`;
+  }).join("");
+  markCellChoice();
+}
+function markCellChoice() {
+  for (const button of $("cell-choices").querySelectorAll("[data-cell-choice]")) {
+    if (button.dataset.cellChoice === activeCell) button.setAttribute("aria-current", "true");
+    else button.removeAttribute("aria-current");
+  }
+}
+function clearCellFilters() {
+  for (const id of ["cell-query", "cell-material", "cell-coverage-filter"]) $(id).value = "";
+  renderCellChoices();
 }
 function showCellTab(tab, focus = false) {
   if (!cellTabs.includes(tab)) return;
@@ -264,33 +289,54 @@ function currentCellView() {
   };
 }
 function openCell(id) {
-  if (!cellPackages.has(id) || id === activeCell) return;
-  if (activeCell) cellViews.set(activeCell, currentCellView());
-  activeCell = id;
-  renderCell();
-  renderCellChoices();
+  if (!cellPackages.has(id)) return;
+  if (id !== activeCell) {
+    if (activeCell) cellViews.set(activeCell, currentCellView());
+    activeCell = id;
+    renderCell();
+  }
+  markCellChoice();
 }
 $("cell-query").addEventListener("input", renderCellChoices);
 $("cell-query").addEventListener("keydown", event => {
-  if (event.key !== "Enter" || event.isComposing) return;
-  const choices = [...$("cell-select").options].filter(option => !option.disabled);
+  if (event.isComposing || !["Enter", "ArrowDown"].includes(event.key)) return;
+  const choices = $("cell-choices").querySelectorAll("[data-cell-choice]");
   if (!choices.length) return;
   event.preventDefault();
-  if (choices.length === 1) {
-    openCell(choices[0].value);
-    showCellTab(activeTab, true);
-  } else {
-    $("cell-select").focus();
-  }
+  if (event.key === "Enter" && choices.length === 1) choices[0].click();
+  else choices[0].focus();
 });
 $("cell-material").addEventListener("change", renderCellChoices);
-$("cell-select").addEventListener("change", event => openCell(event.target.value));
+$("cell-coverage-filter").addEventListener("change", renderCellChoices);
+$("clear-cell-filters").addEventListener("click", () => {
+  clearCellFilters();
+  $("cell-query").focus();
+});
+$("cell-choices").addEventListener("click", event => {
+  const choice = event.target.closest("[data-cell-choice]");
+  if (!choice) return;
+  openCell(choice.dataset.cellChoice);
+  if (window.matchMedia("(max-width: 800px)").matches) {
+    showCellTab(activeTab, true);
+    $("cell-content").scrollIntoView({block: "start"});
+  }
+});
+$("cell-choices").addEventListener("keydown", event => {
+  const choice = event.target.closest("[data-cell-choice]");
+  if (!choice || !["ArrowUp", "ArrowDown"].includes(event.key)) return;
+  const choices = [...$("cell-choices").querySelectorAll("[data-cell-choice]")];
+  const index = choices.indexOf(choice) + (event.key === "ArrowUp" ? -1 : 1);
+  event.preventDefault();
+  if (index < 0) $("cell-query").focus();
+  else choices[index]?.focus();
+});
 function defaultVariant(parameters) {
   return parameters.some(p => p.conditions?.parameterization_variant === "original_author_mpm") ? "original_author_mpm" : "";
 }
 function renderCell() {
   const {cell, parameters, curves, traces, sources} = cellPackages.get(activeCell);
   const view = cellViews.get(activeCell) || {};
+  $("cell-content").hidden = false;
   $("cell-title").textContent = cell.display_name;
   $("cell-context").textContent = cell.model_context || "DFN / SPM / SPMe reference parameterization";
   $("tab-count-parameters").textContent = parameters.length;
@@ -338,20 +384,22 @@ function renderCellOcp() {
     ? plot([{label: record.id, points: record.display_points}], coordinateLabel[record.x.kind] || words(record.x.kind), ocpYLabel(record))
     : '<p class="empty">No electrode OCP is stored for this package. See Evidence for source and reuse gaps.</p>';
   $("cell-ocp-detail").innerHTML = record ? recordDetails(record) : "";
+  updateCellComparison();
 }
 $("cell-ocp-select").addEventListener("change", renderCellOcp);
+function updateCellComparison() {
+  $("compare-cell-ocp").setAttribute("aria-pressed", String(selected.has($("cell-ocp-select").value)));
+  $("open-comparison").hidden = !selected.size;
+  $("open-comparison").textContent = `View comparison (${selected.size})`;
+}
 $("compare-cell-ocp").addEventListener("click", () => {
-  const r = recordById.get($("cell-ocp-select").value);
-  if (!r) return;
-  selected.add(r.id);
-  for (const id of ocpFilterIds) $(id).value = "";
-  $("ocp-cell").value = r.cell_link.cell_id;
-  detailId = r.id;
-  renderOcpResults();
-  renderDetail();
+  const id = $("cell-ocp-select").value;
+  if (!recordById.has(id)) return;
+  if (selected.has(id)) selected.delete(id);
+  else selected.add(id);
   refreshComparison();
-  goTo("library");
 });
+$("open-comparison").addEventListener("click", () => $("comparison-title").focus({preventScroll: true}));
 function visibleParameters() {
   return ui.filterParameters(cellPackages.get(activeCell).parameters, {
     cell: activeCell, variant: $("parameter-variant").value,
@@ -494,19 +542,18 @@ function goTo(section) {
 $("detail").addEventListener("click", event => {
   const button = event.target.closest("[data-open-cell]");
   if (!button) return;
-  $("cell-query").value = "";
-  $("cell-material").value = "";
+  clearCellFilters();
   openCell(button.dataset.openCell);
-  renderCellChoices();
   restoreSelect("cell-ocp-select", detailId);
   renderCellOcp();
-  showCellTab("ocp");
+  showCellTab("ocp", true);
   goTo("cell-package");
 });
 $("copy-view").addEventListener("click", async () => {
   const cellView = currentCellView();
   const state = {
     cell: activeCell, cell_family: $("cell-material").value, cq: $("cell-query").value, cell_tab: activeTab,
+    cell_has: $("cell-coverage-filter").value,
     cell_ocp: cellView.curve, parameter: cellView.parameter, category: cellView.category, variant: cellView.variant,
     pq: cellView.query, sample: cellView.sample, ocp: detailId, compare: [...selected].join(","),
     material: $("material").value, ocp_cell: $("ocp-cell").value, query: $("query").value,
@@ -530,7 +577,8 @@ $("copy-view").addEventListener("click", async () => {
   }
 });
 function updateNavigation() {
-  const section = window.location.hash || "#cell-package";
+  const hash = window.location.hash;
+  const section = hash === "#comparison" ? "#library" : hash || "#cell-package";
   for (const link of document.querySelectorAll("nav a")) {
     const active = link.getAttribute("href") === section;
     link.classList.toggle("active", active);
@@ -545,6 +593,7 @@ restoreSelect("representation", saved.get("repr"));
 restoreSelect("direction", saved.get("direction"));
 $("query").value = saved.get("query") || "";
 restoreSelect("cell-material", saved.get("cell_family"));
+restoreSelect("cell-coverage-filter", saved.get("cell_has"));
 $("cell-query").value = saved.get("cq") || "";
 restoreSelect("dataset-cell", saved.get("source_cell"));
 restoreSelect("dataset-material", saved.get("source_material"));

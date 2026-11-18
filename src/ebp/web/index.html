@@ -16,18 +16,21 @@
   </header>
   <main>
     <p id="load-status" class="load-status" role="alert" hidden>Catalog data could not be loaded. For local use, run <code>ebp build-site</code> and open <code>site/index.html</code>. The source template does not contain the catalog or downloads. <a id="generated-viewer" hidden>Open the built local viewer</a></p>
-    <section class="intro"><div><div class="eyebrow">ELECTRODES → PARAMETERS → EXPERIMENTS</div><h1>Explore electrochemical parameters by cell.</h1><p>Choose a cell or study to see its curves, model inputs and supporting tests together. Each record keeps its source, definition and match evidence.</p></div><div class="intro-aside"><span class="large-number" id="total">—</span><span>OCP records<br><small>Inspect · compare · download</small></span></div></section>
+    <section class="intro"><div><h1>Explore electrochemical parameters by cell</h1><p>Browse material curves, model parameters and the experiments that support them.</p></div></section>
     <div class="stats" id="stats"></div>
-    <div class="view-toolbar"><span>Use the cell explorer for a package, or compare curves across studies.</span><button id="copy-view" class="secondary">Copy current view link</button><label id="view-link-label" hidden>View link<input id="view-link" type="text" readonly aria-describedby="view-status"></label><span id="view-status" role="status"></span></div>
+    <div class="view-toolbar"><button id="copy-view" class="secondary">Copy current view link</button><label id="view-link-label" hidden>View link<input id="view-link" type="text" readonly aria-describedby="view-status"></label><span id="view-status" role="status"></span></div>
     <section id="cell-package" class="cell-package" aria-labelledby="explorer-title">
-      <div class="section-label">Cells · parameters · experiments <span>01</span></div>
       <h2 id="explorer-title">Cell explorer</h2>
-      <div class="cell-picker">
-        <label for="cell-query">Find a cell or study<input id="cell-query" type="search" placeholder="e.g. LG M50, Panasonic, HAIDI…" aria-describedby="cell-choice-status"></label>
-        <label for="cell-material">Material family<select id="cell-material"><option value="">All materials</option></select></label>
-        <label for="cell-select">Cell or study<select id="cell-select"></select></label>
-      </div>
-      <p id="cell-choice-status" class="muted compact" role="status"></p>
+      <div class="cell-explorer-layout">
+        <aside class="cell-picker" aria-label="Browse cell packages">
+          <label for="cell-query">Find a cell or study<input id="cell-query" type="search" placeholder="e.g. LG M50, Panasonic, HAIDI…" aria-describedby="cell-choice-status"></label>
+          <div class="cell-picker-filters">
+            <label for="cell-material">Material<select id="cell-material"><option value="">All materials</option></select></label>
+            <label for="cell-coverage-filter">Contains<select id="cell-coverage-filter"><option value="">Any records</option><option value="ocp">Electrode OCP</option><option value="diffusion">Diffusion</option><option value="kinetics">Kinetics</option><option value="traces">Stored test traces</option><option value="sources">External test links</option></select></label>
+          </div>
+          <div class="cell-picker-summary"><p id="cell-choice-status" class="muted compact" role="status"></p><button id="clear-cell-filters" class="text-button" hidden>Clear filters</button></div>
+          <ul id="cell-choices" class="cell-choices" aria-label="Matching cells and studies"></ul>
+        </aside>
       <div id="cell-content" hidden>
         <div class="detail-top cell-heading"><div><h3 id="cell-title"></h3><p class="muted compact" id="cell-context"></p></div><details class="cell-package-downloads"><summary>Package downloads</summary><div class="actions" id="cell-downloads"></div></details></div>
         <div id="cell-tabs" class="cell-tabs" role="tablist" aria-label="Cell package contents">
@@ -50,7 +53,7 @@
           </div>
         </section>
         <section id="cell-panel-ocp" class="cell-tab-panel" role="tabpanel" aria-labelledby="cell-tab-ocp" tabindex="0" hidden>
-          <div id="cell-ocp-control" class="cell-ocp-control"><label for="cell-ocp-select">Electrode curve<select id="cell-ocp-select"></select></label><button id="compare-cell-ocp" class="secondary">Add to OCP comparison</button></div>
+          <div id="cell-ocp-control" class="cell-ocp-control"><label for="cell-ocp-select">Electrode curve<select id="cell-ocp-select"></select></label><button id="compare-cell-ocp" class="secondary" aria-pressed="false">Include in comparison</button><a id="open-comparison" class="text-button" href="#comparison" hidden>View comparison</a></div>
           <div class="cell-ocp-grid"><div id="cell-ocp-chart"></div><div id="cell-ocp-detail"></div></div>
         </section>
         <section id="cell-panel-experiments" class="cell-tab-panel" role="tabpanel" aria-labelledby="cell-tab-experiments" tabindex="0" hidden>
@@ -63,9 +66,10 @@
           <p class="link-note" id="cell-match"></p><div id="cell-coverage" class="coverage"></div><div id="cell-evidence"></div><p class="muted compact" id="cell-note"></p>
         </section>
       </div>
+      </div>
     </section>
     <section class="workspace" id="library" aria-label="Compare electrode curves across studies">
-      <aside class="filters"><div class="section-label">Find OCP curves <span>02</span></div>
+      <aside class="filters"><div class="section-label">Find OCP curves</div>
         <label for="query">Search</label><input id="query" type="search" placeholder="Author, material or cell…">
         <label for="material">Material</label><select id="material"><option value="">All materials</option></select>
         <label for="ocp-cell">Cell / study</label><select id="ocp-cell"><option value="">All cells and material studies</option></select>
@@ -74,7 +78,7 @@
         <button id="reset" class="secondary">Reset OCP filters</button>
       </aside>
       <div class="results"><div class="section-label">OCP records <span id="result-count" role="status"></span></div><div id="records" class="records"></div></div>
-      <div class="comparison"><div class="section-label">Compare curves <span id="selected-count" role="status"></span></div><p class="muted compact">Selections stay in the comparison when you change filters. Different coordinates, references or directions are plotted separately.</p><div id="selected-curves" class="selected-curves" aria-label="Selected curves"></div><button class="text-button" id="clear-selection">Clear comparison</button><section class="detail" id="detail" aria-label="Selected electrode curve details"></section><div id="charts"></div></div>
+      <div class="comparison" id="comparison" aria-labelledby="comparison-title"><div class="section-label"><h2 id="comparison-title" tabindex="-1">Compare curves</h2><span id="selected-count" role="status"></span></div><p class="muted compact">Different coordinates, references or directions are plotted separately.</p><div id="selected-curves" class="selected-curves" aria-label="Selected curves"></div><button class="text-button" id="clear-selection">Clear comparison</button><div id="charts"></div><section class="detail" id="detail" aria-label="Selected electrode curve details"></section></div>
     </section>
     <section id="test-datasets" class="guide">
       <div class="section-label">Parameter-linked test references <span>03</span></div>
